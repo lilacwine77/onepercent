@@ -1,0 +1,32 @@
+[
+  {
+    "path": "public/assets/crt-screen.png",
+    "bytes": 1181424,
+    "sha256": "AA55223F301BE952BF5B499A257CE31E021E3AB24258B2FCFA5EEF8B213FAB78"
+  },
+  {
+    "path": "public/assets/crt-poster.png",
+    "bytes": 1407233,
+    "sha256": "0A450E18714728B385B2EE6D8F35B4EF2727852D0245B7C7E6414765E91C6353"
+  },
+  {
+    "path": "public/assets/crt-poster.webp",
+    "bytes": 72066,
+    "sha256": "C6C14B7D9987767C3A76901296099799E2A77616F3445B6BCDD626BE45093C39"
+  },
+  {
+    "path": "public/models/onepercent-crt.glb",
+    "bytes": 555440,
+    "sha256": "7FA8C3732C37A34E27C937746D1A9321D4F81C0BA75768D4DDEA9C6F54AC499E"
+  },
+  {
+    "path": "assets/blender/crt/onepercent-crt-master.glb",
+    "bytes": 2330048,
+    "sha256": "95D8F4197740233A2DDF49F04FC98C7D997454F269279B8827089F795396681C"
+  },
+  {
+    "path": "assets/blender/crt/onepercent-crt-source.blend",
+    "bytes": 1679874,
+    "sha256": "48E22039059289A441F31317172EEC420C3615363686765DB0C75B3A7C4DE040"
+  }
+]

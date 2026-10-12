@@ -1,0 +1,36 @@
+{
+  "name": "damm-customizable",
+  "address": "A8gMrEPJkacWkcb3DGwtJwTe16HktSEfvwtuDh2MCtck",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848238,
+  "owner": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+  "bytes": 328,
+  "sha256": "988089b8bacd1967ad85e4acd2bb520c847c872a74fed0614b01a89c57ae73a5",
+  "pubkey": "A8gMrEPJkacWkcb3DGwtJwTe16HktSEfvwtuDh2MCtck",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "mwyq4B76zIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANpjaB9yhrzIBnGeLCtQogFXJDv8lmixFSC8U4Q+3NsIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACZOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 2887848,
+    "owner": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+    "rentEpoch": 0,
+    "space": 328
+  },
+  "observations": [
+    {
+      "observedAt": "2026-10-09T10:49:54.263Z",
+      "readSlot": 454844314
+    },
+    {
+      "readSlot": 454847493
+    },
+    {
+      "observedAt": "2026-10-09T11:07:31.795Z",
+      "readSlot": 454848238
+    }
+  ]
+}

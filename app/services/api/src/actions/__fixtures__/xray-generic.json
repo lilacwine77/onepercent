@@ -1,0 +1,16 @@
+{
+  "type": "action",
+  "icon": "https://onepercent.test/assets/pack-3d.png",
+  "title": "X-ray any wallet",
+  "description": "Bags, bids and rent back for any Solana wallet. No connection, no keys.",
+  "label": "X-ray your wallet",
+  "links": {
+    "actions": [
+      {
+        "type": "external-link",
+        "label": "X-ray your wallet",
+        "href": "/api/actions/xray"
+      }
+    ]
+  }
+}

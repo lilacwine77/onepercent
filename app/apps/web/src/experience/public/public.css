@@ -1,0 +1,236 @@
+/* The Feed paper panels, shell controls and foil palette, arranged for public data. */
+.public-page {
+  display: grid;
+  gap: 28px;
+}
+.public-head h1 {
+  max-width: 18ch;
+  margin-bottom: 14px;
+  font-size: clamp(42px, 6vw, 80px);
+}
+.public-head > p {
+  max-width: 58ch;
+  margin: 0;
+  font-size: 18px;
+}
+.public-page .feed-panel {
+  min-width: 0;
+}
+.public-page h2 {
+  margin: 0 0 20px;
+  font-size: clamp(28px, 3vw, 42px);
+}
+.public-page h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+.public-toolbar,
+.public-stamp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+}
+.public-toolbar {
+  margin: 0 0 24px;
+}
+.public-toolbar button[aria-pressed="true"] {
+  color: var(--cream);
+  background: var(--ink);
+}
+.public-stamp {
+  font-size: 14px;
+  color: var(--mauve);
+}
+.public-stamp p {
+  margin: 0;
+}
+.public-columns,
+.public-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.public-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.public-stats > div,
+.public-slot {
+  padding: 20px;
+  border-radius: var(--corner);
+  background: var(--blush);
+}
+.public-stats dt {
+  font-size: 14px;
+}
+.public-stats dd {
+  margin: 8px 0 0;
+  font:
+    700 clamp(22px, 3vw, 34px)/1.1 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  overflow-wrap: anywhere;
+}
+.public-table-scroll {
+  overflow-x: auto;
+}
+.public-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.public-table th,
+.public-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--paper-edge);
+  vertical-align: top;
+}
+.public-table th {
+  font-weight: 500;
+}
+.public-table thead th {
+  color: var(--mauve);
+  font-size: 14px;
+}
+.public-table td small,
+.public-table th small {
+  display: block;
+  max-width: 30ch;
+  margin-top: 5px;
+  color: var(--mauve);
+  font-size: 13px;
+  font-weight: 400;
+}
+.public-evidence {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+.public-evidence > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr);
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--paper-edge);
+}
+.public-evidence dt {
+  color: var(--mauve);
+}
+.public-evidence dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.public-status {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--blush);
+  font-weight: 500;
+}
+.public-disclosures p {
+  max-width: 76ch;
+}
+.public-disclosures p:last-child {
+  margin-bottom: 0;
+}
+.public-links,
+.public-events {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+.public-events li {
+  padding: 12px 14px;
+  border-radius: 12px 12px 24px 12px;
+  background: var(--cream);
+}
+.public-events small {
+  display: block;
+  margin-top: 5px;
+  color: var(--mauve);
+}
+.public-tv {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 28px;
+}
+.public-tv-art img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+.public-tv .public-toolbar {
+  margin-bottom: 12px;
+}
+.public-tv h2 {
+  margin: 0 auto 0 0;
+}
+.public-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mauve);
+  font-size: 14px;
+}
+.public-signal::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+.public-signal[data-on-air="true"] {
+  color: var(--ink);
+}
+.public-slot[data-live="true"] {
+  background: linear-gradient(125deg, var(--blush), var(--lilac), var(--cream));
+}
+.public-slot p {
+  margin: 8px 0;
+}
+.public-address {
+  display: block;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .public-columns,
+  .public-tv {
+    grid-template-columns: 1fr;
+  }
+  .public-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .public-tv-art img {
+    max-height: 220px;
+  }
+  .public-evidence > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .public-table th,
+  .public-table td {
+    padding: 12px 8px;
+  }
+}
+
+.public-disclosure-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.public-disclosure-list summary {
+  cursor: pointer;
+}
+.public-disclosure-list summary:focus-visible {
+  outline: none;
+  background: #26062e12;
+  border-radius: 4px;
+}
+.public-disclosure-list details p {
+  margin: 8px 0 0;
+}

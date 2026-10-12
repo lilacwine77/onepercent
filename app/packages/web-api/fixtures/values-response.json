@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "mint": "So11111111111111111111111111111111111111112",
+      "amount": "1000000",
+      "symbol": "SOL",
+      "name": "Wrapped SOL",
+      "decimals": 9,
+      "logo": null,
+      "value": {
+        "status": "unavailable",
+        "reason": "CAP_UNAVAILABLE"
+      }
+    }
+  ]
+}

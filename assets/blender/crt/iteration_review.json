@@ -1,0 +1,43 @@
+{
+  "revision": "remove_background_screen_wordmark",
+  "contract": "Remove only the oversized 1% 1% text behind Pepe; preserve original mascot, small branding, header/footer, geometry, UVs, material parameters, camera, lights, hierarchy and export behavior.",
+  "candidate_directory": "artifacts/crt-v2/before",
+  "candidate_evidence": [
+    "artifacts/crt-v2/before/public/assets/crt-screen.png",
+    "artifacts/crt-v2/before/public/assets/crt-poster.png",
+    "artifacts/crt-v2/before/assets/blender/crt/evidence-final-v2/contact_sheet.png"
+  ],
+  "before_ledger": [
+    {"requirement":"No oversized text behind Pepe","status":"fail","evidence":"Before screen PNG and poster visibly contain a repeated large 1% wordmark."},
+    {"requirement":"Pepe remains intact and readable","status":"pass","evidence":"Before screen PNG retains original white mascot and held card/pack illustration."},
+    {"requirement":"Small header logo, Onepercent label and footer remain","status":"pass","evidence":"Before screen PNG and poster show all three."},
+    {"requirement":"No geometry or material parameter changes","status":"pass","evidence":"Before Blender builder, GLBs and final metrics preserved; exact comparison follows rebuild."}
+  ],
+  "selected_defect": "Oversized background wordmark was no longer wanted.",
+  "source_cause": "One SVG text element in scripts/build-crt-screen.mjs.",
+  "repair": "Delete exactly that SVG text element and regenerate screen PNG, packed blend, master/runtime GLBs and poster.",
+  "invariant_results": {
+    "report": "assets/blender/crt/texture-revision-invariants.json",
+    "modelingSourceByteIdentical": true,
+    "positionsNormalsIndicesTransformsHierarchyMaterialParametersScreenUvsExact": true,
+    "boundsCountsNamesUnchanged": true,
+    "unusedSolidMaterialUvRoundoffMaximum": 1.1920928955078125e-7,
+    "packedAndEmbeddedTextureMatchesPng": true,
+    "freshImportInspectionIssues": [],
+    "webValidationErrors": 0,
+    "webValidationWarnings": 0
+  },
+  "after_ledger": [
+    {"requirement":"No oversized text behind Pepe","status":"pass","evidence":"Current screen PNG, authored poster and texture-revision-fresh-import.png opened; the large wordmark is absent."},
+    {"requirement":"Pepe remains intact and readable","status":"pass","evidence":"Same mascot input, position and SVG image element; current PNG and both matching hero views show the original character."},
+    {"requirement":"Small header logo, Onepercent label and footer remain","status":"pass","evidence":"Current screen PNG and matching hero views retain all three."},
+    {"requirement":"No geometry or material parameter changes","status":"pass","evidence":"Exact GLB geometry/normal/index/material/transform/screen-UV comparison and byte-identical Blender builder; bounds and counts match."}
+  ],
+  "final_evidence": [
+    "public/assets/crt-screen.png",
+    "public/assets/crt-poster.png",
+    "assets/blender/crt/texture-revision-fresh-import.png",
+    "assets/blender/crt/texture-revision-file-manifest.json"
+  ],
+  "decision": "retain_repair"
+}

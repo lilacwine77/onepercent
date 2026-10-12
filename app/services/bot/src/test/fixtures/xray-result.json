@@ -1,0 +1,33 @@
+{
+  "address": "7xKp111111111111111111111111111111111111d2Qa",
+  "chain": "solana",
+  "scannedAt": "2026-10-08T12:00:00.000Z",
+  "cached": false,
+  "counts": {
+    "bags": 37,
+    "feedable": 16,
+    "checkAtFeed": 12,
+    "notFeedable": 9,
+    "sellable": 12,
+    "empty": 104,
+    "notInSet": 3
+  },
+  "totals": { "sellValueSol": "0.7912", "rentBackSol": "0.2121" },
+  "worst": {
+    "symbol": "WIFHAT",
+    "mint": "11111111111111111111111111111111",
+    "drawdownPct": 99.6
+  },
+  "bags": [],
+  "emptyAccounts": [],
+  "card": {
+    "condition": "Heavily Played",
+    "title": "Certified Bagholder",
+    "oneLiner": "Dust in, Packs out."
+  },
+  "share": {
+    "landscapeUrl": "https://onepercent.test/og/x/7xKp111111111111111111111111111111111111d2Qa?ref=7xKp111111111111111111111111111111111111d2Qa",
+    "squareUrl": "https://onepercent.test/og/x/7xKp111111111111111111111111111111111111d2Qa?square=1&ref=7xKp111111111111111111111111111111111111d2Qa",
+    "xIntentUrl": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fonepercent.test%2Fx%2F7xKp111111111111111111111111111111111111d2Qa%3Fref%3D7xKp111111111111111111111111111111111111d2Qa"
+  }
+}

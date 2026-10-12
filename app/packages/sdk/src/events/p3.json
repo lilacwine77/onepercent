@@ -1,0 +1,69 @@
+{
+  "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "metadata": {
+    "name": "onepercent",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "The 1% Machine program scaffold"
+  },
+  "instructions": [],
+  "events": [
+    {
+      "name": "BucketListed",
+      "discriminator": [98, 4, 175, 69, 38, 20, 230, 227]
+    },
+    {
+      "name": "KeeperHistoryStarted",
+      "discriminator": [35, 52, 4, 79, 178, 247, 209, 172]
+    },
+    {
+      "name": "RevealTimestamped",
+      "discriminator": [246, 194, 28, 16, 94, 99, 66, 14]
+    },
+    {
+      "name": "SellHistoryUpdated",
+      "discriminator": [177, 7, 109, 242, 50, 48, 45, 83]
+    }
+  ],
+  "types": [
+    {
+      "name": "BucketListed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "bucket", "type": "u8" },
+          { "name": "mint", "type": "pubkey" },
+          { "name": "listed_ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "KeeperHistoryStarted",
+      "type": { "kind": "struct", "fields": [{ "name": "ts", "type": "i64" }] }
+    },
+    {
+      "name": "RevealTimestamped",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "SellHistoryUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "bucket", "type": "u8" },
+          { "name": "hour_index", "type": "u64" },
+          { "name": "sb_paid_hour", "type": "u64" },
+          { "name": "sb_paid_prev_hour", "type": "u64" },
+          { "name": "sb_inflow_hour", "type": "u64" },
+          { "name": "sb_inflow_prev_hour", "type": "u64" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "clean",
+  "owner": "B1pJf9WRo7Z3GDARsYXTyZfobWsPtgBuHF9ZMaLxBznC",
+  "source": "synthetic",
+  "note": "Owner = PublicKey(SHA256(\"xray-synthetic:clean\")). Token accounts use AccountLayout; this is not a real wallet scan.",
+  "slot": 454620967,
+  "slotS": 454619967,
+  "solUsd": 100,
+  "tokenAccounts": [],
+  "mints": {},
+  "curves": {},
+  "prices": {},
+  "exitCaps": {},
+  "exitCapsSource": "synthetic: fee-adjusted X2 getExitCap seam inputs; no live reserve claim",
+  "snapshot": {},
+  "metadata": {},
+  "expected": {
+    "counts": {
+      "bags": 0,
+      "feedable": 0,
+      "checkAtFeed": 0,
+      "notFeedable": 0,
+      "sellable": 0,
+      "empty": 0,
+      "notInSet": 0
+    },
+    "mints": {}
+  }
+}

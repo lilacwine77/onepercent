@@ -1,0 +1,170 @@
+{
+  "baseline": "artifacts/crt-v2/before/assets/blender/crt/onepercent-crt-master.glb",
+  "current": "assets/blender/crt/onepercent-crt-master.glb",
+  "allAccessorBytesExact": false,
+  "geometryNormalsIndicesTransformsHierarchyMaterialsAndScreenUvExact": true,
+  "unusedUvRoundoff": [
+    {
+      "accessor": 8,
+      "meshes": [
+        "Cube.013"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 12,
+      "meshes": [
+        "Cube.011"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 16,
+      "meshes": [
+        "Cube.012"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 26,
+      "meshes": [
+        "Cube.008"
+      ],
+      "maxDelta": 1.1920928955078125e-7
+    },
+    {
+      "accessor": 33,
+      "meshes": [
+        "Cylinder.017"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 40,
+      "meshes": [
+        "Cube.100"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 44,
+      "meshes": [
+        "Cube.002"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 60,
+      "meshes": [
+        "Cylinder"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 63,
+      "meshes": [
+        "Cube.006"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 66,
+      "meshes": [
+        "Cube.102"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 77,
+      "meshes": [
+        "Cube.087"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 81,
+      "meshes": [
+        "CRT_RearShellMesh"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 85,
+      "meshes": [
+        "Cube.086"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 89,
+      "meshes": [
+        "Cube.004"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 93,
+      "meshes": [
+        "Cube.003"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 104,
+      "meshes": [
+        "Cube.085"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 107,
+      "meshes": [
+        "Cube.075"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 110,
+      "meshes": [
+        "Cylinder.002"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 114,
+      "meshes": [
+        "Cube.106"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    },
+    {
+      "accessor": 117,
+      "meshes": [
+        "Cube.105"
+      ],
+      "maxDelta": 5.960464477539063e-8
+    }
+  ],
+  "blenderBuilderByteIdentical": true,
+  "textureChanged": true,
+  "currentEmbeddedTextureMatchesPng": true,
+  "baselineTextureHashes": [
+    "2c9ba692b19f6a4d34cb0855e8b4e840626fc82fd1927341d2fb42b514f3e86e"
+  ],
+  "currentTextureHashes": [
+    "aa55223f301be952bf5b499a257ce31e021e3ab24258b2fcfa5eef8b213fab78"
+  ],
+  "nodeCount": 33,
+  "meshCount": 32,
+  "materialNames": [
+    "CRT_Case",
+    "CRT_Recess",
+    "CRT_RearCase",
+    "CRT_Seam",
+    "CRT_Logo",
+    "CRT_Graphite",
+    "CRT_StatusLED",
+    "CRT_Metal",
+    "CRT_ScreenMaterial"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "recordedAt": "2026-10-08T18:42:40.355Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "118M5HFLZskcZo1jYuaswq2s2zy5XPpgFs4EBLNjfe9",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628034,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 1691280,
+          "data": [
+            "F7f4N2DYrGBsEWe0RdADAO4TMD4AAAAAbHlUaLTRAgCwMg4AAAAAAACAxqR+jQMAABhZarrzpjd8k8AyCtiL7sQmDKPvFeUQPVd1+BFTZJ8DAQDG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYQ==",
+            "base64"
+          ],
+          "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 115
+        }
+      },
+      "id": 1
+    }
+  },
+  "provenance": {
+    "mint": "8XuSJqe3Ki9iAHeKHH6g2D7Qrsw8UxgucWXGfdpkpump",
+    "length": 115,
+    "layoutSource": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump.json",
+    "layoutSha256": "b84cd997c1d7fc87a7db022290a31e1ebfa5d133b2a61787790e984f39c63369",
+    "offsets": {
+      "virtual_token_reserves": 8,
+      "virtual_quote_reserves": 16,
+      "real_token_reserves": 24,
+      "real_quote_reserves": 32,
+      "token_total_supply": 40,
+      "complete": 48,
+      "creator": 49,
+      "is_mayhem_mode": 81,
+      "is_cashback_coin": 82,
+      "quote_mint": 83,
+      "creator_fee_bps": 115,
+      "can_edit_creator_fee": 123,
+      "is_holder_reward": 124,
+      "creator_fee": 125,
+      "protocol_fees": 133,
+      "depth": 141,
+      "initial_virtual_quote_reserves": 142,
+      "post_complete_base_out": 150,
+      "post_complete_quote_in": 158
+    },
+    "expectedDecoded": {
+      "virtualTokenReserves": "1073422728106348",
+      "virtualQuoteReserves": "1043338222",
+      "realTokenReserves": "793522728106348",
+      "realQuoteReserves": "930480",
+      "tokenTotalSupply": "1000000000000000",
+      "complete": false,
+      "creator": "2e3sCcCxnz1io8gxd6oTKMKLhfRL9QnDXbKDj3yNq6qY",
+      "mayhem": true,
+      "cashback": false,
+      "quoteMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "creatorFeeBps": "0"
+    }
+  }
+}

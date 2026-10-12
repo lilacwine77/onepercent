@@ -1,0 +1,52 @@
+{
+  "name": "@onepercent/service-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./safe-cause": {
+      "types": "./src/safe-cause.ts",
+      "development": "./src/safe-cause.ts",
+      "import": "./dist/safe-cause.js"
+    },
+    "./landing": {
+      "types": "./src/landing.ts",
+      "development": "./src/landing.ts",
+      "import": "./dist/landing.js"
+    },
+    "./intake": {
+      "types": "./src/intake/index.ts",
+      "development": "./src/intake/index.ts",
+      "import": "./dist/intake/index.js"
+    },
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --preserve-symlinks ../../scripts/test.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.1",
+    "@onepercent/config": "workspace:*",
+    "@onepercent/db": "workspace:*",
+    "@solana/web3.js": "1.99.0",
+    "bs58": "6.0.0",
+    "hono": "4.13.9",
+    "ioredis": "5.11.1",
+    "pg": "8.23.0",
+    "pino": "10.3.1",
+    "prom-client": "15.1.3",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/pg": "8.23.1"
+  },
+  "files": [
+    "dist"
+  ]
+}

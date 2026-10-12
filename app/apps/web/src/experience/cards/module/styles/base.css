@@ -1,0 +1,367 @@
+/* Synced from experience/cards-lab/src/cards/styles/base.css by experience/sync-lab.mjs. */
+/* Tokens (da-direction.md §4.1) and shared controls. Scoped to .mc-root; no global rules. */
+.mc-root {
+  --cream: #fff1e7;
+  --ink: #26062e;
+  --lilac: #d5a2f1;
+  --plum: #2c1235;
+  --mauve: #773e83;
+  --orchid: #4c2459;
+  --studio: #856096;
+  --blush: #efddee;
+  --paper: #fff9ee;
+  --paper-edge: #f1dfd5;
+  --xray-deep: #120d30;
+  --xray-mid: #243969;
+  --xray-cyan: #94f5ed;
+  --xray-rim: #92ebf0;
+  --xray-glint: #efffff;
+  --xray-scan: #b3fbff;
+  --gold-hi: #f6d272;
+  --gold: #d9a441;
+  --gold-lo: #a8701f;
+  --gold-ink: #3a2208;
+  --corner: 18px 18px 48px 18px;
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.6);
+  --ease-arrive: cubic-bezier(0.22, 1, 0.36, 1);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mc-z: 50;
+  --mc-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .47 0 0 0 0 .31 0 0 0 0 .36 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23n)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font: 500 15px / 1.4 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+.mc-root *,
+.mc-root *::before,
+.mc-root *::after {
+  box-sizing: border-box;
+}
+.mc-root :where(p, h1, h2, h3, ul, li, figure) {
+  margin: 0;
+  padding: 0;
+}
+.mc-root :where(ul) {
+  list-style: none;
+}
+.mc-root :where(button) {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.mc-root [hidden] {
+  display: none !important;
+}
+.mc-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.mc-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mc-icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+/* Pill (secondary actions, tabs' siblings) */
+.mc-pill {
+  position: relative;
+  isolation: isolate;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font: 500 15px / 1 var(--sans);
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.mc-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  transition: background-color 0.18s ease;
+}
+.mc-pill:hover::before,
+.mc-pill[data-pressed]::before {
+  background: var(--lilac);
+}
+.mc-pill:focus-visible {
+  outline: none;
+}
+.mc-pill:focus-visible::before {
+  background: var(--blush);
+  box-shadow: inset 0 0 0 2.5px var(--ink);
+}
+.mc-pill:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+.mc-pill:disabled::before {
+  background: var(--cream);
+}
+.mc-pill[data-state="signing"] > span::after,
+.mc-pill[data-state="sending"] > span::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  vertical-align: -1px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px currentColor;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+  animation: mc-spin 0.7s linear infinite;
+}
+.mc-pill.is-money .mc-chipish,
+.mc-pill.is-money > span {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Round icon button (36 px, tilts −10° on hover like the landing) */
+.mc-round {
+  position: relative;
+  isolation: isolate;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.mc-round::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  z-index: -1;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1px var(--ink);
+  transition: background-color 0.18s ease;
+}
+.mc-round:hover::before,
+.mc-round[data-pressed]::before {
+  background: var(--lilac);
+}
+.mc-round .mc-icon {
+  transition: rotate 0.3s var(--ease-spring);
+}
+.mc-round:hover .mc-icon {
+  rotate: -10deg;
+}
+.mc-round:focus-visible {
+  outline: none;
+}
+.mc-round:focus-visible::before {
+  box-shadow: inset 0 0 0 2px var(--ink);
+  background: var(--blush);
+}
+.mc-round-dark {
+  color: var(--cream);
+  width: 32px;
+  height: 32px;
+}
+.mc-round-dark::before {
+  background: rgb(255 241 231 / 0.06);
+  box-shadow: inset 0 0 0 1px rgb(213 162 241 / 0.55);
+}
+.mc-round-dark:hover::before,
+.mc-round-dark[data-pressed]::before {
+  background: rgb(213 162 241 / 0.24);
+}
+.mc-round-dark:focus-visible::before {
+  background: rgb(213 162 241 / 0.3);
+  box-shadow: inset 0 0 0 2px var(--cream);
+}
+.mc-round-dark .mc-icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* Oval: the primary action (ink face, lilac arrow chip, the 1% corner) */
+/* The DA oval (§1, §4.4) exactly as the Rip lab's .oval: the "1% corner" 9/9/25/9, a lilac arrow chip at 6/6/19/6. */
+.mc-oval {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  height: 58px;
+  min-width: 236px;
+  border-radius: 9px 9px 25px 9px;
+  color: var(--cream);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.mc-oval-face {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 0 7px 0 23px;
+  border-radius: inherit;
+  background: var(--ink);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+.mc-oval:hover .mc-oval-face,
+.mc-oval[data-pressed] .mc-oval-face {
+  background: var(--orchid);
+}
+.mc-oval-label {
+  font: 500 17px / 1.15 var(--sans);
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mc-oval-chip {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 6px 6px 19px 6px;
+  background: var(--lilac);
+  color: var(--ink);
+  font: 400 24px / 1 var(--sans);
+  transition: translate 0.3s var(--ease-spring);
+}
+.mc-oval:hover .mc-oval-chip {
+  translate: 3px 0;
+}
+.mc-oval:focus-visible {
+  outline: none;
+}
+.mc-oval:focus-visible .mc-oval-face {
+  box-shadow: inset 0 0 0 2px var(--lilac);
+}
+.mc-oval:disabled {
+  cursor: default;
+}
+.mc-oval:disabled .mc-oval-face {
+  background: #4a3550;
+}
+.mc-oval:disabled .mc-oval-chip {
+  background: #b393c7;
+}
+.mc-oval[data-state="signing"] .mc-oval-chip,
+.mc-oval[data-state="sending"] .mc-oval-chip {
+  font-size: 0;
+}
+.mc-oval[data-state="signing"] .mc-oval-chip::after,
+.mc-oval[data-state="sending"] .mc-oval-chip::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--ink);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+  animation: mc-spin 0.7s linear infinite;
+}
+.mc-oval-sm {
+  height: 52px;
+  min-width: 180px;
+}
+.mc-oval-sm .mc-oval-chip {
+  width: 36px;
+  height: 36px;
+}
+
+.mc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 2px;
+  border-radius: 6px;
+  font: 500 15px / 1 var(--sans);
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.mc-link:hover {
+  text-decoration-thickness: 2px;
+}
+.mc-link:focus-visible {
+  outline: none;
+  background: var(--blush);
+  box-shadow: inset 0 0 0 2px var(--ink);
+  text-decoration: none;
+}
+.mc-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px currentColor;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+  animation: mc-spin 0.7s linear infinite;
+}
+@keyframes mc-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes mc-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+@media (max-width: 719px) {
+  .mc-root {
+    font-size: 14px;
+  }
+  .mc-pill {
+    height: 44px;
+    font-size: 15px;
+  }
+  .mc-oval {
+    height: 52px;
+  }
+  .mc-oval-chip {
+    width: 36px;
+    height: 36px;
+  }
+  .mc-oval-face {
+    gap: 16px;
+    padding: 0 8px 0 18px;
+  }
+  .mc-oval-label {
+    font-size: 16px;
+  }
+}

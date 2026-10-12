@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-09T03:42:32.979Z",
+  "pinnedCommit": "2293f9a66c654e9fe82dc5e8f4618538f24bb35f",
+  "files": [
+    {
+      "name": "pump",
+      "upstreamUrl": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/2293f9a66c654e9fe82dc5e8f4618538f24bb35f/idl/pump.json",
+      "upstreamSha256": "6a19bad7758fb822cee79a91575e51a7bd60391c670200408676643e00a79a6d",
+      "storedSha256": "52d78f668849bd302c77b5e42edffac3664e208a906738124f700ff91798ad5e",
+      "mainSha256": "6a19bad7758fb822cee79a91575e51a7bd60391c670200408676643e00a79a6d",
+      "matchesMain": true
+    },
+    {
+      "name": "pump_amm",
+      "upstreamUrl": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/2293f9a66c654e9fe82dc5e8f4618538f24bb35f/idl/pump_amm.json",
+      "upstreamSha256": "b7d8c57a4d9c4dd0109a9ab893052352333252d4eedced10ac091d4d66cab89b",
+      "storedSha256": "23680454afae086898e8d17f67912aa14663de84507616fb328d0afbe84ff626",
+      "mainSha256": "b7d8c57a4d9c4dd0109a9ab893052352333252d4eedced10ac091d4d66cab89b",
+      "matchesMain": true
+    },
+    {
+      "name": "pump_fees",
+      "upstreamUrl": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/2293f9a66c654e9fe82dc5e8f4618538f24bb35f/idl/pump_fees.json",
+      "upstreamSha256": "f111d2e5c9aa3d4e64d6a4e6b6f34300ccb1eaf6abc46834fe491836dc90aa74",
+      "storedSha256": "b8f55682a574849e3a8e2bf20a67feeab2a80424edb4a6ea7b5542fd1dcfbe79",
+      "mainSha256": "f111d2e5c9aa3d4e64d6a4e6b6f34300ccb1eaf6abc46834fe491836dc90aa74",
+      "matchesMain": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-10-08T18:44:24.023Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "HYdTodMngpgXxJAMxqiN5E8p1SMzTy24eNM2Y3yWpuj2",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628403,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 1122000004,
+          "data": ["", "base64"],
+          "owner": "11111111111111111111111111111111",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 0
+        }
+      },
+      "id": 1
+    }
+  }
+}

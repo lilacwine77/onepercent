@@ -1,0 +1,404 @@
+name: App
+
+# Runs on the founder's Mac (self-hosted runner `onepercent-mac`): GitHub-hosted
+# minutes are exhausted. Toolchains, Postgres and Redis come from the Mac.
+
+on:
+  # Heavy suites (10,000-case properties, full-history secret scan) run on demand only.
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "app/**"
+      - ".github/workflows/app.yml"
+  push:
+    # Branch pushes are covered by their pull request; only main runs on push.
+    branches: [main]
+    paths:
+      - "app/**"
+      - ".github/workflows/app.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: app-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+    working-directory: app
+
+jobs:
+  ts:
+    if: github.event_name != 'workflow_dispatch'
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm release:mainnet:check --allow-pending
+      - run: pnpm params:rs --check
+      - run: pnpm lint:words
+      - run: pnpm lint
+      - run: pnpm format:check
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - name: Build service containers and check disabled bot
+        run: |
+          if ! docker info > /dev/null 2>&1; then
+            echo "No Docker daemon on this runner: checking the disabled bot without a container."
+            (cd services/bot && env -i PATH="$PATH" HOME="$HOME" node dist/index.js) | tee "$RUNNER_TEMP/onepercent-bot.log"
+            grep -q '"msg":"bot disabled"' "$RUNNER_TEMP/onepercent-bot.log"
+            exit 0
+          fi
+          for service in api worker bot; do
+            docker build -f "services/$service/Dockerfile" -t "onepercent-$service" .
+            test "$(docker inspect -f '{{.Config.User}}' "onepercent-$service")" = node
+          done
+          docker run --rm onepercent-bot | tee "$RUNNER_TEMP/onepercent-bot.log"
+          grep -q '"msg":"bot disabled"' "$RUNNER_TEMP/onepercent-bot.log"
+
+  changes:
+    if: github.event_name == 'pull_request'
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 5
+    outputs:
+      program: ${{ steps.diff.outputs.program }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - id: diff
+        working-directory: .
+        run: |
+          if [[ "${{ github.event_name }}" == pull_request ]]; then
+            git diff --name-only "origin/${{ github.base_ref }}...HEAD" > "$RUNNER_TEMP/changed"
+          elif [[ "${{ github.event.before }}" =~ ^0+$ ]]; then
+            echo ".github/workflows/app.yml" > "$RUNNER_TEMP/changed"
+          else
+            git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" > "$RUNNER_TEMP/changed"
+          fi
+          if grep -qE '^(app/programs/|app/test-programs/|app/Cargo\.|app/Anchor\.toml|app/rust-toolchain|app/packages/(sdk|config)/|app/release/|app/scripts/(anchor|mainnet|program|params-rs|copy-idl|devnet-deploy|e2e-|check-sbf)|app/fixtures/vectors/|\.github/workflows/app\.yml)' "$RUNNER_TEMP/changed"; then
+            echo "program=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "program=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  program:
+    # The 30-minute program job runs on demand and on pull requests that touch the
+    # program, its SDK, its parameters or this workflow.
+    needs: changes
+    if: always() && (github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && needs.changes.outputs.program == 'true'))
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 90
+    env:
+      RUSTUP_TOOLCHAIN: "1.95.0"
+      PROPTEST_CASES: "1000"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - name: Use the runner's pinned toolchains (Rust 1.95.0, Agave 4.3.0, Anchor 0.32.2)
+        run: |
+          for dir in "$HOME/.local/share/solana/install/active_release/bin" "$HOME/.avm/bin" "$HOME/.cargo/bin"; do
+            echo "$dir" >> "$GITHUB_PATH"
+          done
+          export PATH="$HOME/.local/share/solana/install/active_release/bin:$HOME/.avm/bin:$HOME/.cargo/bin:$PATH"
+          solana --version | grep -F 'solana-cli 4.3.0'
+          anchor --version | grep -F 'anchor-cli 0.32.2'
+          rustup toolchain list | grep -F '1.95.0'
+      - run: pnpm install --frozen-lockfile
+      - name: Prepare local test wallet
+        run: node scripts/prepare-local-wallet.mjs
+      - run: pnpm program:build
+      - name: Check final event projection against the built IDL
+        run: node --test scripts/event-idl.test.mjs
+      - run: pnpm program:clippy
+      - name: Verify compiled cluster identities and the supplied mainnet release
+        run: |
+          pnpm release:mainnet:check --allow-pending
+          pnpm program:release:check --cluster localnet
+          pnpm program:release:check --cluster devnet
+          if cargo check --lib --profile test --features devnet,mainnet > "$RUNNER_TEMP/cluster-conflict.log" 2>&1; then
+            echo "Unexpected successful build with conflicting cluster features"
+            exit 1
+          fi
+          grep -F 'devnet and mainnet features are mutually exclusive' "$RUNNER_TEMP/cluster-conflict.log"
+          if node --input-type=module -e 'import { MAINNET_RELEASE } from "./scripts/mainnet-pins.mjs"; process.exit([MAINNET_RELEASE.programId, MAINNET_RELEASE.dbcConfig, ...Object.values(MAINNET_RELEASE.landing)].includes(null) ? 1 : 0)'; then
+            pnpm program:release:check --cluster mainnet
+            ONEPERCENT_CLUSTER=mainnet pnpm program:build
+          else
+            if pnpm program:release:check --cluster mainnet > "$RUNNER_TEMP/release-mainnet.log" 2>&1; then
+              echo "Unexpected successful release check without every public mainnet input"
+              exit 1
+            fi
+            grep -F 'Mainnet release is PENDING' "$RUNNER_TEMP/release-mainnet.log"
+            if cargo check --lib --profile test --features mainnet > "$RUNNER_TEMP/cluster-mainnet.log" 2>&1; then
+              echo "Unexpected successful mainnet compile without release input"
+              exit 1
+            fi
+            grep -F 'PENDING' "$RUNNER_TEMP/cluster-mainnet.log"
+          fi
+          # Validator suites use the localnet identity and canonical fixtures.
+          pnpm program:build
+      - run: pnpm program:test
+      - run: pnpm test:e2e
+      - run: pnpm e2e:validator rip
+      - run: pnpm e2e:validator feed
+      - run: pnpm e2e:validator season
+      - run: pnpm e2e:validator proxima
+      - run: pnpm program:report
+      - name: Verify dependency lock, IDL and Rust vectors
+        run: git diff --exit-code -- Cargo.lock packages/sdk/src/idl fixtures/vectors
+      - run: anchor test --skip-build
+      - name: Web transaction-engine chain checks
+        run: pnpm --filter web test:chain
+      - name: Nightly web validator scenarios
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          pnpm --filter web exec playwright install --with-deps chromium
+          pnpm --filter web test:e2e:validator
+      - name: Reproducible sBPFv3 builds
+        run: |
+          if ! docker info >/dev/null 2>&1; then
+            echo "Verified builds unavailable: this runner has no usable Docker daemon."
+            exit 0
+          fi
+          cargo +1.95.0 install solana-verify --version 0.5.2 --locked
+          verify_image="onepercent-verifiable-build:agave-4.3.0-rust-1.95.0"
+          docker build --tag "$verify_image" - <<'DOCKERFILE'
+          FROM solanafoundation/solana-verifiable-build@sha256:12fd4c0a0790f0fc41ef74b0cdb6bccc167ba6137eb1adb749bac649481c86bd
+          RUN rustup toolchain install 1.95.0 --profile minimal \
+              && rustup default 1.95.0 \
+              && test "$(rustup show active-toolchain)" = "1.95.0-x86_64-unknown-linux-gnu (default)"
+          ENV RUST_VERSION=1.95.0
+          DOCKERFILE
+          verify_image="$(docker image inspect --format '{{.Id}}' "$verify_image")"
+          verify_root="$(mktemp -d target/verify.XXXXXX)"
+          trap 'sudo rm -rf -- "$verify_root"' EXIT
+          solana-verify build --base-image "$verify_image" --cargo-build-sbf-args="--arch v3 --tools-version v1.57" -- --target-dir "$verify_root/first"
+          solana-verify build --base-image "$verify_image" --cargo-build-sbf-args="--arch v3 --tools-version v1.57" -- --target-dir "$verify_root/second"
+          cmp "$verify_root/first/deploy/onepercent.so" "$verify_root/second/deploy/onepercent.so"
+          sha256sum "$verify_root/first/deploy/onepercent.so" "$verify_root/second/deploy/onepercent.so"
+          node scripts/check-sbf-flags.mjs "$verify_root/first/deploy/onepercent.so" "$verify_root/second/deploy/onepercent.so"
+
+  services:
+    # Pull requests carry the full validation; main pushes run only the light ts job.
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 20
+    env:
+      SERVICES_INTEGRATION: "1"
+      # Share the Mac with other work without multiplying CPU-sized Vitest pools.
+      VITEST_MAX_WORKERS: "2"
+      DATABASE_URL: postgresql://onepercent:local-ci-only@127.0.0.1:5433/onepercent
+      TEST_DATABASE_URL: postgresql://onepercent:local-ci-only@127.0.0.1:5433/onepercent
+      REDIS_URL: redis://127.0.0.1:6380
+      TEST_REDIS_URL: redis://127.0.0.1:6380
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - name: Start a throwaway Postgres 17 and Redis for this job
+        working-directory: .
+        run: |
+          export LC_ALL=en_US.UTF-8
+          pg=/opt/homebrew/opt/postgresql@17/bin
+          data="$RUNNER_TEMP/pg"
+          rm -rf "$data"
+          "$pg/initdb" -D "$data" -U postgres -A trust --locale=C.UTF-8 > /dev/null
+          "$pg/pg_ctl" -D "$data" -w -l "$RUNNER_TEMP/pg.log" \
+            -o "-p 5433 -c listen_addresses=127.0.0.1 -c unix_socket_directories=''" start
+          "$pg/psql" -h 127.0.0.1 -p 5433 -U postgres -d postgres \
+            -c "CREATE ROLE onepercent LOGIN SUPERUSER PASSWORD 'local-ci-only'" \
+            -c "CREATE DATABASE onepercent OWNER onepercent"
+          /opt/homebrew/bin/redis-server --port 6380 --bind 127.0.0.1 --save '' \
+            --appendonly no --daemonize yes --dir "$RUNNER_TEMP"
+          /opt/homebrew/bin/redis-cli -p 6380 ping
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:libs
+      - run: pnpm --filter @onepercent/db migrate
+      - run: pnpm --filter @onepercent/db generate
+      - name: Verify generated migration stability (including untracked files)
+        run: test -z "$(git status --porcelain -- packages/db/drizzle)"
+      - run: pnpm --filter @onepercent/db test
+      - run: pnpm --filter @onepercent/service-kit test
+      - run: pnpm --workspace-concurrency=1 --filter "./services/*" test
+      - name: Stop the job's Postgres and Redis
+        if: always()
+        working-directory: .
+        run: |
+          LC_ALL=en_US.UTF-8 /opt/homebrew/opt/postgresql@17/bin/pg_ctl -D "$RUNNER_TEMP/pg" stop -m fast || true
+          /opt/homebrew/bin/redis-cli -p 6380 shutdown nosave || true
+
+  web:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:libs
+      - run: pnpm --filter web assets:landing
+      - run: pnpm --filter web exec playwright install --with-deps chromium
+      - run: pnpm --filter web test:static
+      - run: pnpm --filter web lint:words
+      - run: pnpm --filter web build
+        env:
+          VITE_TURNSTILE_SITE_KEY: fixture-site-key
+      - run: pnpm --filter web test:e2e:fixtures
+      - run: pnpm --filter web budget
+      - run: pnpm --filter web lcp
+      - run: pnpm --filter web dist:check
+      - name: Build web with repository-root context
+        run: |
+          if ! docker info > /dev/null 2>&1; then
+            echo "No Docker daemon on this runner: the image asset list is covered by the web static test."
+            exit 0
+          fi
+          docker build -f apps/web/Dockerfile -t onepercent-web ..
+
+  nightly:
+    if: github.event_name == 'workflow_dispatch'
+    name: nightly (${{ matrix.suite }}, 10000 cases)
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        suite:
+          - prop_p1_feed
+          - prop_p2_packs
+          - prop_p2_reservations
+          - prop_cr1_callback
+          - prop_m_ref
+          - prop_p4_season
+    env:
+      RUSTUP_TOOLCHAIN: "1.95.0"
+      PROPTEST_CASES: "10000"
+      M1_PROPTEST_THREADS: "2"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - name: Use the runner's pinned toolchains (Rust 1.95.0, Agave 4.3.0, Anchor 0.32.2)
+        run: |
+          for dir in "$HOME/.local/share/solana/install/active_release/bin" "$HOME/.avm/bin" "$HOME/.cargo/bin"; do
+            echo "$dir" >> "$GITHUB_PATH"
+          done
+          export PATH="$HOME/.local/share/solana/install/active_release/bin:$HOME/.avm/bin:$HOME/.cargo/bin:$PATH"
+          solana --version | grep -F 'solana-cli 4.3.0'
+          anchor --version | grep -F 'anchor-cli 0.32.2'
+          rustup toolchain list | grep -F '1.95.0'
+      - run: pnpm install --frozen-lockfile
+      - run: node scripts/prepare-local-wallet.mjs
+      - run: pnpm program:build
+      - name: Run the full nightly property count
+        env:
+          PROPERTY_SUITE: ${{ matrix.suite }}
+        run: pnpm program:test --test "$PROPERTY_SUITE" -- --nocapture
+      - name: Nightly Rip Blink validator (blinks:e2e)
+        if: matrix.suite == 'prop_p1_feed'
+        run: pnpm --filter api blinks:e2e
+
+  hygiene:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: [self-hosted, onepercent-mac]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+      - name: Install verified Gitleaks CLI 8.24.3
+        run: |
+          curl --fail --location --retry 3 https://github.com/gitleaks/gitleaks/releases/download/v8.24.3/gitleaks_8.24.3_darwin_arm64.tar.gz -o "$RUNNER_TEMP/gitleaks.tar.gz"
+          echo "b90f13bb8c90ab72083d9b0c842e39dafb82c0e5c3f872f407366b7a58909013  $RUNNER_TEMP/gitleaks.tar.gz" | shasum -a 256 --check --strict
+          rm -rf "$RUNNER_TEMP/gitleaks-bin"
+          mkdir "$RUNNER_TEMP/gitleaks-bin"
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP/gitleaks-bin" gitleaks
+          echo "$RUNNER_TEMP/gitleaks-bin" >> "$GITHUB_PATH"
+      - name: Check secret-scanner exception boundaries
+        run: node scripts/check-gitleaks-config.mjs "$RUNNER_TEMP/gitleaks-bin/gitleaks"
+      - name: Check repository history for secrets
+        env:
+          SCAN_EVENT: ${{ github.event_name }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          if [[ "$SCAN_EVENT" == workflow_dispatch ]]; then
+            scan_range="--all"
+          elif [[ "$SCAN_EVENT" == pull_request ]]; then
+            scan_range="origin/main..HEAD"
+          elif [[ "$PUSH_BEFORE" =~ ^[0-9a-f]{40}$ && ! "$PUSH_BEFORE" =~ ^0+$ ]] \
+            && git cat-file -e "$PUSH_BEFORE^{commit}" 2>/dev/null; then
+            scan_range="$PUSH_BEFORE..HEAD"
+          else
+            scan_range="origin/main..HEAD"
+          fi
+          gitleaks git --redact --no-banner --config scripts/gitleaks.toml \
+            --report-format json --report-path "$RUNNER_TEMP/gitleaks.json" \
+            --log-opts="$scan_range" "$GITHUB_WORKSPACE"
+      - name: Upload redacted secret-scan report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gitleaks-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/gitleaks.json
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Check dependency age and version documentation
+        env:
+          DEPENDENCY_BASE: ${{ github.event.pull_request.base.sha || github.event.before || github.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          baseline_dir="$RUNNER_TEMP/dependency-baseline"
+          mkdir -p "$baseline_dir/test-programs/mock-vrf"
+          if [[ "$DEPENDENCY_BASE" =~ ^0+$ ]]; then
+            DEPENDENCY_BASE="$(git merge-base "$GITHUB_SHA" "origin/$DEFAULT_BRANCH")"
+          fi
+          for lock in Cargo.lock pnpm-lock.yaml test-programs/mock-vrf/Cargo.lock; do
+            if git cat-file -e "$DEPENDENCY_BASE:app/$lock" 2>/dev/null; then
+              git show "$DEPENDENCY_BASE:app/$lock" > "$baseline_dir/$lock"
+            else
+              : > "$baseline_dir/$lock"
+            fi
+          done
+          node scripts/audit-dependency-age.mjs "$baseline_dir" "$RUNNER_TEMP/dependency-age.json"

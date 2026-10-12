@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-10-08T18:42:42.042Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+        {
+          "encoding": "jsonParsed",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628039,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 8426655782,
+          "data": {
+            "program": "spl-token-2022",
+            "parsed": {
+              "info": {
+                "decimals": 6,
+                "extensions": [
+                  {
+                    "extension": "transferHook",
+                    "state": {
+                      "authority": "DMdBa812dBW1CHVhmTyUyVcrBnSbZbfoFC7U14k4riH1",
+                      "programId": null
+                    }
+                  },
+                  {
+                    "extension": "metadataPointer",
+                    "state": {
+                      "authority": null,
+                      "metadataAddress": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn"
+                    }
+                  },
+                  {
+                    "extension": "tokenMetadata",
+                    "state": {
+                      "additionalMetadata": [],
+                      "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+                      "name": "Pump",
+                      "symbol": "PUMP",
+                      "updateAuthority": null,
+                      "uri": "https://ipfs.io/ipfs/bafkreibcglldkfdekdkxgumlveoe6qv3pbiceypkwtli33clbzul7leo4m"
+                    }
+                  }
+                ],
+                "freezeAuthority": null,
+                "isInitialized": true,
+                "mintAuthority": null,
+                "supply": "829188247152109035"
+              },
+              "type": "mint"
+            },
+            "space": 474
+          },
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 474
+        }
+      },
+      "id": 1
+    }
+  }
+}

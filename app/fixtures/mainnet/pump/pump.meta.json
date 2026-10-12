@@ -1,0 +1,17 @@
+{
+  "name": "pump",
+  "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "lamports": 9393912471,
+  "executable": true,
+  "slot": 454747012,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 36,
+  "sha256": "8101492b544ce08703d5de95363bf796e7e4cd17d03639cfe603071fb59652eb",
+  "programDataAddress": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+  "deploySlot": 454596459,
+  "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+  "binaryBytes": 10485715,
+  "binarySha256": "a4b32d322295a15666b1293e0028b9b75d688bfce10b574e1094f249f2ce9f16",
+  "programDataReadSlot": 454747012
+}

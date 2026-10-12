@@ -1,0 +1,396 @@
+{
+  "cluster": "devnet",
+  "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "programId": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+  "app": "https://web-dev-744e.up.railway.app",
+  "createdAt": "2026-10-11T20:56:55.062Z",
+  "wallet": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+  "snapshotSlot": "509605276",
+  "transactions": {
+    "fund": {
+      "signature": "5vgCa5kxbNv3NEzM6nQbxxhmyohR9PVUAeSSUPZZqhxwu7AJnRJaftYrTMF6pguBxB7A8ycEFN6edXM4m32WWPiq",
+      "lastValidBlockHeight": 497257803,
+      "unitsConsumed": 450,
+      "feeLamports": 5000,
+      "finalized": true,
+      "slot": 510029903,
+      "walletDebitLamports": 500005000
+    },
+    "buy:8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV": {
+      "signature": "5THbLV3wW2s4zJjxiEDbK8jRcPVQWXK7xEyuLueGNgbGEsAPAKuNYK5xu6Rd4C4nrPrqzBfLMmNNv8KTHULoCgFZ",
+      "lastValidBlockHeight": 497258032,
+      "unitsConsumed": 89864,
+      "feeLamports": 5000,
+      "finalized": true,
+      "slot": 510030133,
+      "walletDebitLamports": 2888633
+    },
+    "buy:5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf": {
+      "signature": "SLFWcLrEPw5J6hUDKyA4T65JWDReNvvzme5HbDQbXhTcfmCGyu8KeoxcT8ANAWofqhACienihnUGoD46SSJTX6m",
+      "lastValidBlockHeight": 497258043,
+      "unitsConsumed": 85440,
+      "feeLamports": 5000,
+      "finalized": true,
+      "slot": 510030143,
+      "walletDebitLamports": 1542433
+    }
+  },
+  "holdings": {
+    "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV": {
+      "amount": "25000000000",
+      "source": "13TsLWMd7f1mXvinawy97c1Qf3ViLE7ZRyP52zXFhL9r"
+    },
+    "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf": {
+      "amount": "25000000000",
+      "source": "Gg1pq1PFVQhorCPqE7ehvGNVm3o9doHAryRUUH44Pd8y"
+    }
+  },
+  "onChain": {
+    "slot": 510030377,
+    "deckLength": 50,
+    "userEntries": [],
+    "balanceLamports": 495568934,
+    "tokenAccounts": [
+      {
+        "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+        "address": "13TsLWMd7f1mXvinawy97c1Qf3ViLE7ZRyP52zXFhL9r",
+        "amount": "25000000000"
+      },
+      {
+        "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+        "address": "Gg1pq1PFVQhorCPqE7ehvGNVm3o9doHAryRUUH44Pd8y",
+        "amount": "25000000000"
+      }
+    ]
+  },
+  "xray": {
+    "executed": false,
+    "reason": "HELIUS_RPC_URL absent; deployed resolver selects mainnet.helius-rpc.com"
+  },
+  "status": "blocked_before_feed",
+  "fundingLamports": 500000000,
+  "buyAmountPerMint": "25000000000",
+  "buyMaxSolCostLamportsPerMint": 2000000,
+  "intake": {
+    "request": {
+      "method": "POST",
+      "path": "/api/feed/attest",
+      "body": {
+        "wallet": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+        "chunks": [
+          [
+            {
+              "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV"
+            }
+          ],
+          [
+            {
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf"
+            }
+          ]
+        ]
+      }
+    },
+    "response": {
+      "startedAt": "2026-10-11T20:58:22.720Z",
+      "path": "/api/feed/attest",
+      "status": 503,
+      "requestId": "Lu82Wpl8TBa7hAJz8u2xcg",
+      "body": {
+        "asOfSlot": null,
+        "error": {
+          "code": "evidence_unavailable"
+        }
+      }
+    },
+    "loggedCause": {
+      "reason": "intake_request_failed",
+      "cause": {
+        "code": "RpcError",
+        "detail": "rpc_error:-32602"
+      },
+      "service": "intake-signer",
+      "timestamp": "2026-10-11T20:58:26.912897484Z"
+    },
+    "devnetRpcReproduction": {
+      "method": "getTransactionsForAddress",
+      "commitment": "confirmed",
+      "filter": "tokenTransfer",
+      "code": -32602,
+      "message": "Invalid params: tokenTransfer filter requires finalized commitment"
+    },
+    "source": "services/api/src/intake/history.ts:60",
+    "logCorrelation": "Time window only; the HTTP request ID was not present in extracted service logs."
+  },
+  "subsequentEligibilityBlock": {
+    "observedHttpRefusal": false,
+    "expectedRefusal": "snapshot_not_held",
+    "reason": "Both first purchases occurred after the frozen snapshot; this wallet had no balance at the snapshot.",
+    "source": "packages/service-kit/src/intake/provenance.ts:248"
+  },
+  "feed": {
+    "signed": false,
+    "sent": false,
+    "signature": null
+  },
+  "takeBack": {
+    "signed": false,
+    "sent": false,
+    "signature": null
+  },
+  "operationalChanges": {
+    "serviceConfiguration": false,
+    "programConfiguration": false,
+    "roleKeysUsed": false,
+    "scope": "Initial remote attempt"
+  },
+  "browserObservation": {
+    "timestamp": "2026-10-11T21:03:48.456Z",
+    "purpose": "Read-only local production UI against real Railway devnet RPC; no successful Feed cycle is claimed",
+    "guardPolicy": "Only config, web/config, machine, me, royalties and read-only get* RPC are allowed. X-ray, values, value, logo, other API paths and all external origins are blocked before navigation.",
+    "snapshots": [
+      {
+        "slot": 510031624,
+        "label": "before browser",
+        "walletEntries": 0
+      },
+      {
+        "slot": 510031657,
+        "label": "after reload",
+        "walletEntries": 0
+      }
+    ],
+    "signingRequests": 0,
+    "httpFailures": [
+      {
+        "path": "/api/rpc",
+        "status": 503,
+        "rpcMethod": "getBlockTime"
+      },
+      {
+        "path": "/api/royalties/77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+        "status": 404
+      },
+      {
+        "path": "/api/rpc",
+        "status": 503,
+        "rpcMethod": "getMinimumBalanceForRentExemption"
+      },
+      {
+        "path": "/api/rpc",
+        "status": 503,
+        "rpcMethod": "getMinimumBalanceForRentExemption"
+      },
+      {
+        "path": "/api/royalties/77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+        "status": 404
+      }
+    ],
+    "uiState": "The machine didn’t answer. Try again.",
+    "inTheMachineValidated": false,
+    "conclusion": "Real Deck read is empty for this owner. Degraded Feed UI and absence of rows do not positively validate In the machine."
+  },
+  "localReplay": {
+    "api": "http://127.0.0.1:4100",
+    "sourceRevision": "879f7da plus working-tree Helius finality fix",
+    "actualServices": ["public API S4", "intake signer S2", "indexer S1"],
+    "database": "onepercent_m32_live_20261011",
+    "redisDatabase": 13,
+    "chainSnapshotSlot": "509605276",
+    "snapshotOverride": false,
+    "indexerOverride": false,
+    "attestResponses": [
+      {
+        "startedAt": "2026-10-11T21:13:45.235Z",
+        "status": 200,
+        "path": "/api/feed/attest",
+        "body": {
+          "asOfSlot": 510034127,
+          "wallet": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+          "signer": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si",
+          "snapshotSlot": 509605276,
+          "attestations": [],
+          "refused": [
+            {
+              "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+              "reason": "snapshot_not_held",
+              "date": "2026-10-10T16:46:10.000Z"
+            },
+            {
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+              "reason": "snapshot_not_held",
+              "date": "2026-10-10T16:46:10.000Z"
+            }
+          ]
+        }
+      }
+    ],
+    "signedTransactions": {},
+    "historyProbe": {
+      "at": "2026-10-11T21:12:58.734Z",
+      "snapshotSlot": 510033907,
+      "results": [
+        {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "snapshot": 510033907,
+          "current": 510033909,
+          "evidence": {
+            "wallet": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "snapshotSlot": 510033907,
+            "balanceAtS": "25000000000",
+            "first": {
+              "slot": 510030133,
+              "signature": "5THbLV3wW2s4zJjxiEDbK8jRcPVQWXK7xEyuLueGNgbGEsAPAKuNYK5xu6Rd4C4nrPrqzBfLMmNNv8KTHULoCgFZ",
+              "date": "2026-10-11T20:57:52.000Z",
+              "kind": "swap",
+              "sender": null
+            }
+          }
+        },
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "snapshot": 510033907,
+          "current": 510033912,
+          "evidence": {
+            "wallet": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "snapshotSlot": 510033907,
+            "balanceAtS": "25000000000",
+            "first": {
+              "slot": 510030143,
+              "signature": "SLFWcLrEPw5J6hUDKyA4T65JWDReNvvzme5HbDQbXhTcfmCGyu8KeoxcT8ANAWofqhACienihnUGoD46SSJTX6m",
+              "date": "2026-10-11T20:57:54.000Z",
+              "kind": "swap",
+              "sender": null
+            }
+          }
+        }
+      ]
+    },
+    "conclusion": "The real local API returns HTTP 200 with snapshot_not_held for both bags. The provider error is fixed. No Feed or take-back was signed.",
+    "configVerification": {
+      "observedAt": "2026-10-11T21:15:33.248Z",
+      "chainConfig": {
+        "programId": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+        "address": "B5FNEXw35wcDFe8kcb9MkG8sF9SswdW21hG8guaXpGRH",
+        "contextSlot": 510034564,
+        "owner": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+        "dataBytes": 872,
+        "snapshotSlot": "509605276",
+        "snapshotTs": "1791650770",
+        "intakeSigner": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si"
+      },
+      "apiStatus": 200,
+      "feedEnabled": true
+    },
+    "runtimeVerification": {
+      "observedAt": "2026-10-11T21:16:26.646Z",
+      "services": [
+        {
+          "role": "intake-signer",
+          "port": 4101,
+          "status": 200,
+          "body": {
+            "ok": true,
+            "checks": {
+              "db": true,
+              "redis": true,
+              "rpc": true
+            },
+            "key": {
+              "ok": true
+            }
+          }
+        },
+        {
+          "role": "public",
+          "port": 4102,
+          "status": 200,
+          "body": {
+            "ok": true,
+            "checks": {
+              "db": true,
+              "redis": true,
+              "rpc": true
+            },
+            "key": {
+              "ok": true
+            }
+          }
+        },
+        {
+          "role": "indexer",
+          "port": 4103,
+          "status": 200,
+          "body": {
+            "ok": true,
+            "checks": {
+              "db": true,
+              "redis": true,
+              "rpc": true
+            },
+            "key": {
+              "ok": true
+            }
+          }
+        }
+      ],
+      "indexerStatus": {
+        "asOfSlot": "510034781",
+        "scanSlot": "510034781",
+        "confirmedSlot": "510034783",
+        "lastEventSlot": "509697692",
+        "lagSlots": "2",
+        "lagSeconds": 0,
+        "checkedAt": "2026-10-11T21:16:25.652Z",
+        "chainTime": 1791753384,
+        "confirmedTime": 1791753384
+      },
+      "counts": [
+        {
+          "table": "chain_txs",
+          "count": 44
+        },
+        {
+          "table": "attestation_log",
+          "count": 0
+        },
+        {
+          "table": "deck_entries",
+          "count": 50
+        },
+        {
+          "table": "intake_consumption",
+          "count": 54
+        }
+      ]
+    },
+    "shutdownVerification": {
+      "stoppedAt": "2026-10-11T21:17:01.494Z",
+      "exitCode": 0,
+      "listenersRemaining": [],
+      "roleProcessesRemaining": 0
+    },
+    "roleKeyLoaded": true,
+    "userKeyLoaded": false,
+    "validation": {
+      "pnpm": "10.34.5",
+      "commands": {
+        "build:libs": "pass",
+        "lint": "pass",
+        "format:check": "pass",
+        "typecheck": "pass",
+        "test with SERVICES_INTEGRATION=1": "pass",
+        "lint:words": "pass"
+      },
+      "focusedTestsPassed": 62,
+      "testsPassed": 3796,
+      "testsSkipped": 3,
+      "vitestPassed": 3746,
+      "nodePassed": 50,
+      "testDatabase": "onepercent_m32_helius_20261011",
+      "testRedisDatabase": 12
+    }
+  }
+}

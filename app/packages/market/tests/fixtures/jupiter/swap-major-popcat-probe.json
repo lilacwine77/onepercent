@@ -1,0 +1,123 @@
+{
+  "recordedAt": "2026-10-08T18:43:07.804Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr&outputMint=So11111111111111111111111111111111111111112&amount=357464510693933&swapMode=ExactIn&excludeRouters=jupiterz%2Cdflow%2Cokx"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "6",
+      "x-ratelimit-remaining": "4",
+      "x-ratelimit-reset": "1791484988"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "357464510693933",
+      "outAmount": "148905238593",
+      "otherAmountThreshold": "148905238593",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.013369604218508557",
+      "routePlan": [
+        {
+          "percent": 14.77,
+          "bps": 1477,
+          "usdValue": 2371.033836999034,
+          "swapInfo": {
+            "ammKey": "HBS7a3br8GMMWuqVa7VB3SMFa7xVi1tSFdoF5w4ZZ3kS",
+            "label": "Raydium",
+            "inputMint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "52780822622484",
+            "outAmount": "2374663461"
+          }
+        },
+        {
+          "percent": 39.83,
+          "bps": 3983,
+          "usdValue": 944.3827772767153,
+          "swapInfo": {
+            "ammKey": "FLckHLGMJy5gEoXWwcE68Nprde1D4araK4TGLw4pQq2n",
+            "label": "TesseraV",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "945736224",
+            "outAmount": "8768167249"
+          }
+        },
+        {
+          "percent": 60.17,
+          "bps": 6017,
+          "usdValue": 1426.651059722319,
+          "swapInfo": {
+            "ammKey": "Pi9nzTjPxD8DsRfRBGfKYzmefJoJM8TcXu2jyaQjSHm",
+            "label": "AlphaQ",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+            "inAmount": "1428927237",
+            "outAmount": "1429783456"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 1426.651059722319,
+          "swapInfo": {
+            "ammKey": "GUoa6mRgTyoE8NgXEyLnYXMWdS71KrcXG2nnx9u41Fmd",
+            "label": "Scorch",
+            "inputMint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "1429783456",
+            "outAmount": "13247910000"
+          }
+        },
+        {
+          "percent": 85.23,
+          "bps": 8523,
+          "usdValue": 13682.005005242225,
+          "swapInfo": {
+            "ammKey": "FRhB8L7Y9Qq41qZXYLtC2nw8An1RJfLLxRF2x9RwLLMo",
+            "label": "Raydium",
+            "inputMint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "304683688071449",
+            "outAmount": "127038215636"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-883e-75b9-931b-d3908b3edbe2",
+      "inUsdValue": 16270.569922514853,
+      "outUsdValue": 16053.03884224126,
+      "swapUsdValue": 16053.03884224126,
+      "priceImpact": -1.3369604218508557,
+      "mode": "manual",
+      "totalTime": 390
+    }
+  },
+  "provenance": {
+    "note": "Real quote for the exact bigint probe amount computed from the approved synthetic Pyth snapshots; not live oracle evidence.",
+    "solFixture": "../pyth/latest-sol.json",
+    "tokenFixture": "../pyth/latest-popcat.json"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "recordedAt": "2026-10-08T18:42:23.326Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/tokens/v2/search?query=EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "1",
+      "x-ratelimit-remaining": "9",
+      "x-ratelimit-reset": "1791484953"
+    },
+    "body": [
+      {
+        "id": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+        "name": "dogwifhat",
+        "symbol": "$WIF",
+        "icon": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link",
+        "decimals": 6,
+        "dev": "wifq4CRwpXCK8NYtKNsQAYoDethT1aR7R1DaKCLFgAd",
+        "circSupply": 998837286.538094,
+        "totalSupply": 998837286.538094,
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "holderCount": 265457,
+        "fdv": 205267990.59705892,
+        "mcap": 205267990.59705892,
+        "usdPrice": 0.20550693627838484,
+        "priceBlockId": 454627963,
+        "liquidity": 6232265.999298669,
+        "stats5m": {
+          "priceChange": -0.36891592146531743,
+          "holderChange": 0.0041439690181807225,
+          "liquidityChange": 0.018088783614864906,
+          "volumeChange": 87.0048407960871,
+          "buyVolume": 24861.930926093286,
+          "sellVolume": 26858.43145478234,
+          "buyOrganicVolume": 449.79455139630807,
+          "sellOrganicVolume": 2506.111130056456,
+          "numBuys": 253,
+          "numSells": 251,
+          "numTraders": 103,
+          "numOrganicBuyers": 1,
+          "numNetBuyers": 85
+        },
+        "stats1h": {
+          "priceChange": 1.1414811457476373,
+          "holderChange": 0.009041829764950101,
+          "liquidityChange": 0.9958602997556181,
+          "volumeChange": 114.83594578359646,
+          "buyVolume": 60357.019736530274,
+          "sellVolume": 59455.54570958513,
+          "buyOrganicVolume": 1436.2206113626917,
+          "sellOrganicVolume": 3363.4378536287822,
+          "numBuys": 902,
+          "numSells": 869,
+          "numTraders": 286,
+          "numOrganicBuyers": 7,
+          "numNetBuyers": 165
+        },
+        "stats6h": {
+          "priceChange": -7.183801015608679,
+          "holderChange": -0.021091246003020567,
+          "liquidityChange": -5.934784064749186,
+          "volumeChange": 273.1388204675224,
+          "buyVolume": 245624.75707812837,
+          "sellVolume": 288910.3756554289,
+          "buyOrganicVolume": 15916.48300058712,
+          "sellOrganicVolume": 10552.249198737436,
+          "numBuys": 5317,
+          "numSells": 5658,
+          "numTraders": 926,
+          "numOrganicBuyers": 29,
+          "numNetBuyers": 303
+        },
+        "stats24h": {
+          "priceChange": -10.38503997729733,
+          "holderChange": -0.06512818582238451,
+          "liquidityChange": -8.935902942586015,
+          "volumeChange": -59.36693688344836,
+          "buyVolume": 440565.2932192869,
+          "sellVolume": 487084.8429853036,
+          "buyOrganicVolume": 27770.490860212467,
+          "sellOrganicVolume": 45284.134628448024,
+          "numBuys": 11088,
+          "numSells": 11346,
+          "numTraders": 2157,
+          "numOrganicBuyers": 39,
+          "numNetBuyers": 475
+        },
+        "firstPool": {
+          "id": "6ojSigXF7nDPyhFRgmn3V9ywhYseKF9J32ZrranMGVSX",
+          "createdAt": "2023-12-19T18:33:23Z"
+        },
+        "audit": {
+          "mintAuthorityDisabled": true,
+          "freezeAuthorityDisabled": true,
+          "topHoldersPercentage": 31.08838100406009,
+          "devBalancePercentage": 0.000003820141730216111,
+          "devMigrations": 3,
+          "devMints": 15
+        },
+        "organicScore": 79.83518276245533,
+        "organicScoreLabel": "medium",
+        "isVerified": true,
+        "tags": [
+          "community",
+          "moonshot-verified",
+          "strict",
+          "verified",
+          "meme"
+        ],
+        "createdAt": "2024-06-07T10:51:21.979Z",
+        "updatedAt": "2026-10-08T18:42:22.9535808Z"
+      }
+    ]
+  }
+}

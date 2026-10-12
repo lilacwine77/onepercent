@@ -1,0 +1,10 @@
+{
+  "address": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "lamports": "290080440506",
+  "dataBase64": "AAAAAAbFwc5jjSVn0mRosF65UdGijcxuEjSCtcZ1FJdw5ivy5pvT7mqNAwAKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "source": "synthetic",
+  "note": "Public fartcoin mint.",
+  "derivedFrom": "mainnet/fartcoin.json",
+  "change": "Set decimals to 10."
+}

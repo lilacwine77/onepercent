@@ -1,0 +1,17 @@
+{
+  "name": "mayhem",
+  "address": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+  "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "lamports": 11149834,
+  "executable": true,
+  "slot": 454747029,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 36,
+  "sha256": "c06afe39a901bccfcff73e60c84e27c49dddf8dad28c592a16f11305a993f45d",
+  "programDataAddress": "4TXghKDfUy26yBMjicyfSfAp995GbLtNvW1d1uPSknub",
+  "deploySlot": 452655053,
+  "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+  "binaryBytes": 777408,
+  "binarySha256": "a87fa9f866272514e6acb852b668c4a08aeb173d56c883039991d114d1199bdb",
+  "programDataReadSlot": 454747029
+}

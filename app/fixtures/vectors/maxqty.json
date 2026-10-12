@@ -1,0 +1,2314 @@
+[
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000000",
+          "class": 1,
+          "cost": "15000000000",
+          "enabled": false,
+          "reserved": "0"
+        },
+        {
+          "amount": "2000000",
+          "class": 1,
+          "cost": "30000000000",
+          "enabled": false,
+          "reserved": "0"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 50,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000001",
+          "class": 1,
+          "cost": "15000000001",
+          "enabled": true,
+          "reserved": "111"
+        },
+        {
+          "amount": "2000001",
+          "class": 1,
+          "cost": "30000000001",
+          "enabled": true,
+          "reserved": "222"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 51,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000002",
+          "class": 1,
+          "cost": "15000000002",
+          "enabled": true,
+          "reserved": "222"
+        },
+        {
+          "amount": "2000002",
+          "class": 1,
+          "cost": "30000000002",
+          "enabled": true,
+          "reserved": "444"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 52,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000003",
+          "class": 1,
+          "cost": "15000000003",
+          "enabled": true,
+          "reserved": "333"
+        },
+        {
+          "amount": "2000003",
+          "class": 1,
+          "cost": "30000000003",
+          "enabled": true,
+          "reserved": "666"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 53,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000004",
+          "class": 1,
+          "cost": "15000000004",
+          "enabled": true,
+          "reserved": "444"
+        },
+        {
+          "amount": "2000004",
+          "class": 1,
+          "cost": "30000000004",
+          "enabled": true,
+          "reserved": "888"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 54,
+      "edition": 0,
+      "reservedDust": 4
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000005",
+          "class": 1,
+          "cost": "15000000005",
+          "enabled": false,
+          "reserved": "555"
+        },
+        {
+          "amount": "2000005",
+          "class": 1,
+          "cost": "30000000005",
+          "enabled": true,
+          "reserved": "1110"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 55,
+      "edition": 1,
+      "reservedDust": 5
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000006",
+          "class": 1,
+          "cost": "15000000006",
+          "enabled": true,
+          "reserved": "666"
+        },
+        {
+          "amount": "2000006",
+          "class": 1,
+          "cost": "30000000006",
+          "enabled": true,
+          "reserved": "1332"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 56,
+      "edition": 2,
+      "reservedDust": 6
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000007",
+          "class": 1,
+          "cost": "15000000007",
+          "enabled": true,
+          "reserved": "777"
+        },
+        {
+          "amount": "2000007",
+          "class": 1,
+          "cost": "30000000007",
+          "enabled": false,
+          "reserved": "1554"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 57,
+      "edition": 3,
+      "reservedDust": 7
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000008",
+          "class": 1,
+          "cost": "15000000008",
+          "enabled": true,
+          "reserved": "888"
+        },
+        {
+          "amount": "2000008",
+          "class": 1,
+          "cost": "30000000008",
+          "enabled": true,
+          "reserved": "1776"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 58,
+      "edition": 0,
+      "reservedDust": 8
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000009",
+          "class": 1,
+          "cost": "15000000009",
+          "enabled": true,
+          "reserved": "999"
+        },
+        {
+          "amount": "2000009",
+          "class": 1,
+          "cost": "30000000009",
+          "enabled": true,
+          "reserved": "1998"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 59,
+      "edition": 1,
+      "reservedDust": 9
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000010",
+          "class": 1,
+          "cost": "15000000010",
+          "enabled": false,
+          "reserved": "1110"
+        },
+        {
+          "amount": "2000010",
+          "class": 1,
+          "cost": "30000000010",
+          "enabled": true,
+          "reserved": "2220"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 60,
+      "edition": 2,
+      "reservedDust": 10
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000011",
+          "class": 1,
+          "cost": "15000000011",
+          "enabled": true,
+          "reserved": "1221"
+        },
+        {
+          "amount": "2000011",
+          "class": 1,
+          "cost": "30000000011",
+          "enabled": true,
+          "reserved": "2442"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 61,
+      "edition": 3,
+      "reservedDust": 11
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000012",
+          "class": 1,
+          "cost": "15000000012",
+          "enabled": true,
+          "reserved": "1332"
+        },
+        {
+          "amount": "2000012",
+          "class": 1,
+          "cost": "30000000012",
+          "enabled": true,
+          "reserved": "2664"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 62,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000013",
+          "class": 1,
+          "cost": "15000000013",
+          "enabled": true,
+          "reserved": "1443"
+        },
+        {
+          "amount": "2000013",
+          "class": 1,
+          "cost": "30000000013",
+          "enabled": true,
+          "reserved": "2886"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 63,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000014",
+          "class": 1,
+          "cost": "15000000014",
+          "enabled": true,
+          "reserved": "1554"
+        },
+        {
+          "amount": "2000014",
+          "class": 1,
+          "cost": "30000000014",
+          "enabled": false,
+          "reserved": "3108"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 64,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000015",
+          "class": 1,
+          "cost": "15000000015",
+          "enabled": false,
+          "reserved": "1665"
+        },
+        {
+          "amount": "2000015",
+          "class": 1,
+          "cost": "30000000015",
+          "enabled": true,
+          "reserved": "3330"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 65,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000016",
+          "class": 1,
+          "cost": "15000000016",
+          "enabled": true,
+          "reserved": "1776"
+        },
+        {
+          "amount": "2000016",
+          "class": 1,
+          "cost": "30000000016",
+          "enabled": true,
+          "reserved": "3552"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 66,
+      "edition": 0,
+      "reservedDust": 4
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000017",
+          "class": 1,
+          "cost": "15000000017",
+          "enabled": true,
+          "reserved": "1887"
+        },
+        {
+          "amount": "2000017",
+          "class": 1,
+          "cost": "30000000017",
+          "enabled": true,
+          "reserved": "3774"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 67,
+      "edition": 1,
+      "reservedDust": 5
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000018",
+          "class": 1,
+          "cost": "15000000018",
+          "enabled": true,
+          "reserved": "1998"
+        },
+        {
+          "amount": "2000018",
+          "class": 1,
+          "cost": "30000000018",
+          "enabled": true,
+          "reserved": "3996"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 68,
+      "edition": 2,
+      "reservedDust": 6
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000019",
+          "class": 1,
+          "cost": "15000000019",
+          "enabled": true,
+          "reserved": "2109"
+        },
+        {
+          "amount": "2000019",
+          "class": 1,
+          "cost": "30000000019",
+          "enabled": true,
+          "reserved": "4218"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 69,
+      "edition": 3,
+      "reservedDust": 7
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000020",
+          "class": 1,
+          "cost": "15000000020",
+          "enabled": false,
+          "reserved": "2220"
+        },
+        {
+          "amount": "2000020",
+          "class": 1,
+          "cost": "30000000020",
+          "enabled": true,
+          "reserved": "4440"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 70,
+      "edition": 0,
+      "reservedDust": 8
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000021",
+          "class": 1,
+          "cost": "15000000021",
+          "enabled": true,
+          "reserved": "2331"
+        },
+        {
+          "amount": "2000021",
+          "class": 1,
+          "cost": "30000000021",
+          "enabled": false,
+          "reserved": "4662"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 71,
+      "edition": 1,
+      "reservedDust": 9
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000022",
+          "class": 1,
+          "cost": "15000000022",
+          "enabled": true,
+          "reserved": "2442"
+        },
+        {
+          "amount": "2000022",
+          "class": 1,
+          "cost": "30000000022",
+          "enabled": true,
+          "reserved": "4884"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 72,
+      "edition": 2,
+      "reservedDust": 10
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000023",
+          "class": 1,
+          "cost": "15000000023",
+          "enabled": true,
+          "reserved": "2553"
+        },
+        {
+          "amount": "2000023",
+          "class": 1,
+          "cost": "30000000023",
+          "enabled": true,
+          "reserved": "5106"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 73,
+      "edition": 3,
+      "reservedDust": 11
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000024",
+          "class": 1,
+          "cost": "15000000024",
+          "enabled": true,
+          "reserved": "2664"
+        },
+        {
+          "amount": "2000024",
+          "class": 1,
+          "cost": "30000000024",
+          "enabled": true,
+          "reserved": "5328"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 74,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000025",
+          "class": 1,
+          "cost": "15000000025",
+          "enabled": false,
+          "reserved": "2775"
+        },
+        {
+          "amount": "2000025",
+          "class": 1,
+          "cost": "30000000025",
+          "enabled": true,
+          "reserved": "5550"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 75,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000026",
+          "class": 1,
+          "cost": "15000000026",
+          "enabled": true,
+          "reserved": "2886"
+        },
+        {
+          "amount": "2000026",
+          "class": 1,
+          "cost": "30000000026",
+          "enabled": true,
+          "reserved": "5772"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 76,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000027",
+          "class": 1,
+          "cost": "15000000027",
+          "enabled": true,
+          "reserved": "2997"
+        },
+        {
+          "amount": "2000027",
+          "class": 1,
+          "cost": "30000000027",
+          "enabled": true,
+          "reserved": "5994"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 77,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000028",
+          "class": 1,
+          "cost": "15000000028",
+          "enabled": true,
+          "reserved": "3108"
+        },
+        {
+          "amount": "2000028",
+          "class": 1,
+          "cost": "30000000028",
+          "enabled": false,
+          "reserved": "6216"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 78,
+      "edition": 0,
+      "reservedDust": 4
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000029",
+          "class": 1,
+          "cost": "15000000029",
+          "enabled": true,
+          "reserved": "3219"
+        },
+        {
+          "amount": "2000029",
+          "class": 1,
+          "cost": "30000000029",
+          "enabled": true,
+          "reserved": "6438"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 79,
+      "edition": 1,
+      "reservedDust": 5
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000030",
+          "class": 1,
+          "cost": "15000000030",
+          "enabled": false,
+          "reserved": "3330"
+        },
+        {
+          "amount": "2000030",
+          "class": 1,
+          "cost": "30000000030",
+          "enabled": true,
+          "reserved": "6660"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 80,
+      "edition": 2,
+      "reservedDust": 6
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000031",
+          "class": 1,
+          "cost": "15000000031",
+          "enabled": true,
+          "reserved": "3441"
+        },
+        {
+          "amount": "2000031",
+          "class": 1,
+          "cost": "30000000031",
+          "enabled": true,
+          "reserved": "6882"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 81,
+      "edition": 3,
+      "reservedDust": 7
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000032",
+          "class": 1,
+          "cost": "15000000032",
+          "enabled": true,
+          "reserved": "3552"
+        },
+        {
+          "amount": "2000032",
+          "class": 1,
+          "cost": "30000000032",
+          "enabled": true,
+          "reserved": "7104"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 82,
+      "edition": 0,
+      "reservedDust": 8
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000033",
+          "class": 1,
+          "cost": "15000000033",
+          "enabled": true,
+          "reserved": "3663"
+        },
+        {
+          "amount": "2000033",
+          "class": 1,
+          "cost": "30000000033",
+          "enabled": true,
+          "reserved": "7326"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 83,
+      "edition": 1,
+      "reservedDust": 9
+    },
+    "output": 6
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000034",
+          "class": 1,
+          "cost": "15000000034",
+          "enabled": true,
+          "reserved": "3774"
+        },
+        {
+          "amount": "2000034",
+          "class": 1,
+          "cost": "30000000034",
+          "enabled": true,
+          "reserved": "7548"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 84,
+      "edition": 2,
+      "reservedDust": 10
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000035",
+          "class": 1,
+          "cost": "15000000035",
+          "enabled": false,
+          "reserved": "3885"
+        },
+        {
+          "amount": "2000035",
+          "class": 1,
+          "cost": "30000000035",
+          "enabled": false,
+          "reserved": "7770"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 85,
+      "edition": 3,
+      "reservedDust": 11
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000036",
+          "class": 1,
+          "cost": "15000000036",
+          "enabled": true,
+          "reserved": "3996"
+        },
+        {
+          "amount": "2000036",
+          "class": 1,
+          "cost": "30000000036",
+          "enabled": true,
+          "reserved": "7992"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 86,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000037",
+          "class": 1,
+          "cost": "15000000037",
+          "enabled": true,
+          "reserved": "4107"
+        },
+        {
+          "amount": "2000037",
+          "class": 1,
+          "cost": "30000000037",
+          "enabled": true,
+          "reserved": "8214"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 87,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000038",
+          "class": 1,
+          "cost": "15000000038",
+          "enabled": true,
+          "reserved": "4218"
+        },
+        {
+          "amount": "2000038",
+          "class": 1,
+          "cost": "30000000038",
+          "enabled": true,
+          "reserved": "8436"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 88,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000039",
+          "class": 1,
+          "cost": "15000000039",
+          "enabled": true,
+          "reserved": "4329"
+        },
+        {
+          "amount": "2000039",
+          "class": 1,
+          "cost": "30000000039",
+          "enabled": true,
+          "reserved": "8658"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 89,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000040",
+          "class": 1,
+          "cost": "15000000040",
+          "enabled": false,
+          "reserved": "4440"
+        },
+        {
+          "amount": "2000040",
+          "class": 1,
+          "cost": "30000000040",
+          "enabled": true,
+          "reserved": "8880"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 90,
+      "edition": 0,
+      "reservedDust": 4
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000041",
+          "class": 1,
+          "cost": "15000000041",
+          "enabled": true,
+          "reserved": "4551"
+        },
+        {
+          "amount": "2000041",
+          "class": 1,
+          "cost": "30000000041",
+          "enabled": true,
+          "reserved": "9102"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 91,
+      "edition": 1,
+      "reservedDust": 5
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000042",
+          "class": 1,
+          "cost": "15000000042",
+          "enabled": true,
+          "reserved": "4662"
+        },
+        {
+          "amount": "2000042",
+          "class": 1,
+          "cost": "30000000042",
+          "enabled": false,
+          "reserved": "9324"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 92,
+      "edition": 2,
+      "reservedDust": 6
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000043",
+          "class": 1,
+          "cost": "15000000043",
+          "enabled": true,
+          "reserved": "4773"
+        },
+        {
+          "amount": "2000043",
+          "class": 1,
+          "cost": "30000000043",
+          "enabled": true,
+          "reserved": "9546"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 93,
+      "edition": 3,
+      "reservedDust": 7
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000044",
+          "class": 1,
+          "cost": "15000000044",
+          "enabled": true,
+          "reserved": "4884"
+        },
+        {
+          "amount": "2000044",
+          "class": 1,
+          "cost": "30000000044",
+          "enabled": true,
+          "reserved": "9768"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 94,
+      "edition": 0,
+      "reservedDust": 8
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000045",
+          "class": 1,
+          "cost": "15000000045",
+          "enabled": false,
+          "reserved": "4995"
+        },
+        {
+          "amount": "2000045",
+          "class": 1,
+          "cost": "30000000045",
+          "enabled": true,
+          "reserved": "9990"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 95,
+      "edition": 1,
+      "reservedDust": 9
+    },
+    "output": 7
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000046",
+          "class": 1,
+          "cost": "15000000046",
+          "enabled": true,
+          "reserved": "5106"
+        },
+        {
+          "amount": "2000046",
+          "class": 1,
+          "cost": "30000000046",
+          "enabled": true,
+          "reserved": "10212"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 96,
+      "edition": 2,
+      "reservedDust": 10
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000047",
+          "class": 1,
+          "cost": "15000000047",
+          "enabled": true,
+          "reserved": "5217"
+        },
+        {
+          "amount": "2000047",
+          "class": 1,
+          "cost": "30000000047",
+          "enabled": true,
+          "reserved": "10434"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 97,
+      "edition": 3,
+      "reservedDust": 11
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000048",
+          "class": 1,
+          "cost": "15000000048",
+          "enabled": true,
+          "reserved": "5328"
+        },
+        {
+          "amount": "2000048",
+          "class": 1,
+          "cost": "30000000048",
+          "enabled": true,
+          "reserved": "10656"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 98,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000049",
+          "class": 1,
+          "cost": "15000000049",
+          "enabled": true,
+          "reserved": "5439"
+        },
+        {
+          "amount": "2000049",
+          "class": 1,
+          "cost": "30000000049",
+          "enabled": false,
+          "reserved": "10878"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 99,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000050",
+          "class": 1,
+          "cost": "15000000050",
+          "enabled": false,
+          "reserved": "5550"
+        },
+        {
+          "amount": "2000050",
+          "class": 1,
+          "cost": "30000000050",
+          "enabled": true,
+          "reserved": "11100"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000051",
+          "class": 1,
+          "cost": "15000000051",
+          "enabled": true,
+          "reserved": "5661"
+        },
+        {
+          "amount": "2000051",
+          "class": 1,
+          "cost": "30000000051",
+          "enabled": true,
+          "reserved": "11322"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 101,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000052",
+          "class": 1,
+          "cost": "15000000052",
+          "enabled": true,
+          "reserved": "5772"
+        },
+        {
+          "amount": "2000052",
+          "class": 1,
+          "cost": "30000000052",
+          "enabled": true,
+          "reserved": "11544"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 102,
+      "edition": 0,
+      "reservedDust": 4
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000053",
+          "class": 1,
+          "cost": "15000000053",
+          "enabled": true,
+          "reserved": "5883"
+        },
+        {
+          "amount": "2000053",
+          "class": 1,
+          "cost": "30000000053",
+          "enabled": true,
+          "reserved": "11766"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 103,
+      "edition": 1,
+      "reservedDust": 5
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000054",
+          "class": 1,
+          "cost": "15000000054",
+          "enabled": true,
+          "reserved": "5994"
+        },
+        {
+          "amount": "2000054",
+          "class": 1,
+          "cost": "30000000054",
+          "enabled": true,
+          "reserved": "11988"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 104,
+      "edition": 2,
+      "reservedDust": 6
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000055",
+          "class": 1,
+          "cost": "15000000055",
+          "enabled": false,
+          "reserved": "6105"
+        },
+        {
+          "amount": "2000055",
+          "class": 1,
+          "cost": "30000000055",
+          "enabled": true,
+          "reserved": "12210"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 105,
+      "edition": 3,
+      "reservedDust": 7
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000056",
+          "class": 1,
+          "cost": "15000000056",
+          "enabled": true,
+          "reserved": "6216"
+        },
+        {
+          "amount": "2000056",
+          "class": 1,
+          "cost": "30000000056",
+          "enabled": false,
+          "reserved": "12432"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 106,
+      "edition": 0,
+      "reservedDust": 8
+    },
+    "output": 9
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000057",
+          "class": 1,
+          "cost": "15000000057",
+          "enabled": true,
+          "reserved": "6327"
+        },
+        {
+          "amount": "2000057",
+          "class": 1,
+          "cost": "30000000057",
+          "enabled": true,
+          "reserved": "12654"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 107,
+      "edition": 1,
+      "reservedDust": 9
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000058",
+          "class": 1,
+          "cost": "15000000058",
+          "enabled": true,
+          "reserved": "6438"
+        },
+        {
+          "amount": "2000058",
+          "class": 1,
+          "cost": "30000000058",
+          "enabled": true,
+          "reserved": "12876"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 108,
+      "edition": 2,
+      "reservedDust": 10
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000059",
+          "class": 1,
+          "cost": "15000000059",
+          "enabled": true,
+          "reserved": "6549"
+        },
+        {
+          "amount": "2000059",
+          "class": 1,
+          "cost": "30000000059",
+          "enabled": true,
+          "reserved": "13098"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 109,
+      "edition": 3,
+      "reservedDust": 11
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000060",
+          "class": 1,
+          "cost": "15000000060",
+          "enabled": false,
+          "reserved": "6660"
+        },
+        {
+          "amount": "2000060",
+          "class": 1,
+          "cost": "30000000060",
+          "enabled": true,
+          "reserved": "13320"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 110,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000061",
+          "class": 1,
+          "cost": "15000000061",
+          "enabled": true,
+          "reserved": "6771"
+        },
+        {
+          "amount": "2000061",
+          "class": 1,
+          "cost": "30000000061",
+          "enabled": true,
+          "reserved": "13542"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 111,
+      "edition": 1,
+      "reservedDust": 1
+    },
+    "output": 10
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000062",
+          "class": 1,
+          "cost": "15000000062",
+          "enabled": true,
+          "reserved": "6882"
+        },
+        {
+          "amount": "2000062",
+          "class": 1,
+          "cost": "30000000062",
+          "enabled": true,
+          "reserved": "13764"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 112,
+      "edition": 2,
+      "reservedDust": 2
+    },
+    "output": 4
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1000063",
+          "class": 1,
+          "cost": "15000000063",
+          "enabled": true,
+          "reserved": "6993"
+        },
+        {
+          "amount": "2000063",
+          "class": 1,
+          "cost": "30000000063",
+          "enabled": false,
+          "reserved": "13986"
+        },
+        {
+          "amount": "3000000",
+          "class": 2,
+          "cost": "18446744073709551615",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 113,
+      "edition": 3,
+      "reservedDust": 3
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 1,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 2,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 3,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 1
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 1,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 2,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 3,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 2
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 1,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 2,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 3,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 0,
+      "reservedDust": 0
+    },
+    "output": 3
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 1,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 2,
+      "reservedDust": 0
+    },
+    "output": 0
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "deckLen": 100,
+      "edition": 3,
+      "reservedDust": 0
+    },
+    "output": 0
+  }
+]

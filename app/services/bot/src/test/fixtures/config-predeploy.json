@@ -1,0 +1,30 @@
+{
+  "cluster": "devnet",
+  "programId": "11111111111111111111111111111111",
+  "flags": {
+    "XRAY": true,
+    "TV_LIVE": false,
+    "FEED": false,
+    "PACKS": false,
+    "SELL_BACK": false,
+    "HOLDER_BOOST": false,
+    "BOARDS": false,
+    "SOUND": false,
+    "BOT_ALERTS": false,
+    "BLINKS_XRAY": true,
+    "BLINKS_FEED": false,
+    "BLINKS_RIP": false,
+    "SPOTLIGHT": false,
+    "KEEPER_STOCK_LIVE": false,
+    "CROSSCHAIN": false,
+    "CROSSCHAIN_RH_TWO_STEP": false,
+    "ZK_REDEEM": false
+  },
+  "paramsHash": null,
+  "asOfSlot": null,
+  "phase": null,
+  "roles": null,
+  "vrf": null,
+  "season": null,
+  "paused": null
+}

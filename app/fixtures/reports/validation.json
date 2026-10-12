@@ -1,0 +1,1285 @@
+{
+  "status": "ready_for_review",
+  "milestone": "M1",
+  "pr": "https://github.com/lilacwine77/onepercent/pull/14",
+  "publication": "The architect can mark PR #14 ready for review after creating these commits. No Git or PR mutation was performed here; a new CI run is still required before merge.",
+  "auditStatus": "G1 program validated by the architect; this follow-up changes no production program source or economic parameters.",
+  "auditBaselineProvidedByArchitect": "81b3df5",
+  "integrationBaselineProvidedByArchitect": "30a8293",
+  "scope": "Final S0/S1/S4/M3.1 integration, event ABI generation, narrow secret-scanner exceptions, measured closed-Binder Settle CU limits, and COPY-key-only SDK outputs.",
+  "checkedAt": "2026-10-09T02:46:08.793977+00:00",
+  "toolchain": {
+    "anchor": "0.32.2",
+    "solana": "4.3.0",
+    "rustHost": "1.95.0",
+    "anchorClient": "0.32.2",
+    "web3": "1.99.0",
+    "pnpmWorkspace": "10.34.5"
+  },
+  "artifacts": [
+    {
+      "name": "onepercent.so",
+      "bytes": 662112,
+      "flags": 3,
+      "sha256": "a99e0e928f469e89caedaafe5944ca46c2f48d278aa0823ba754fbd1740fe8fd"
+    },
+    {
+      "name": "mock_vrf.so",
+      "bytes": 78024,
+      "flags": 3,
+      "sha256": "0441521d6f43879bdce7c95af5078b674532c1a35b5023e4bba3a34af8728c6e"
+    }
+  ],
+  "checks": [
+    {
+      "command": "pnpm install --frozen-lockfile",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm lint",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm format:check",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm lint:words",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm typecheck",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm build",
+      "status": "pass"
+    },
+    {
+      "command": "cargo +1.95.0 fmt --all -- --check",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm program:clippy",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm test",
+      "status": "pass",
+      "scriptTests": 35,
+      "workspaceTests": 1603,
+      "totalPassed": 1638,
+      "skippedServiceIntegrations": 36
+    },
+    {
+      "command": "pnpm program:build",
+      "status": "pass",
+      "notes": "Final copy-idl hook executed; both sBPFv3 artifacts match their prior G1 hashes."
+    },
+    {
+      "command": "pnpm params:rs --check",
+      "status": "pass",
+      "parameters": 122
+    },
+    {
+      "command": "node --test scripts/event-idl.test.mjs",
+      "status": "pass",
+      "tests": 3,
+      "targetIdlComparisonExecuted": true
+    },
+    {
+      "command": "CARGO_BUILD_JOBS=2 PROPTEST_CASES=1000 PROPTEST_RNG_SEED=120261008 M1_PROPTEST_THREADS=4 pnpm program:test -- --nocapture --test-threads=1",
+      "status": "pass",
+      "noFailFast": true,
+      "tests": 187,
+      "namedSuites": 11,
+      "namedTests": 135,
+      "rentRegressions": 13,
+      "failures": 0,
+      "filtered": 0
+    },
+    {
+      "command": "pnpm program:report",
+      "status": "pass",
+      "corpora": 5,
+      "samplesPerVariantPerCorpus": 32,
+      "closedBinderSettleSamples": 128,
+      "callbackCases": 44,
+      "reportMatchesStoredFixture": true,
+      "notes": "Dry replay without UPDATE_REPORT or UPDATE_GOLDEN."
+    },
+    {
+      "command": "pnpm test:e2e",
+      "status": "pass",
+      "tests": 4,
+      "scenarios": [
+        "E1 Feed/TakeBack",
+        "E2 Rip/Settle/Redeem",
+        "E3 timed-out refund",
+        "E4 closed-Binder Settle x1/x2"
+      ],
+      "seconds": 25.65,
+      "runtime": "solana-test-validator 4.3.0",
+      "notes": "Includes the same Feed/Rip functions as their standalone validator commands."
+    },
+    {
+      "command": "node scripts/anchor.mjs test --skip-build",
+      "status": "pass",
+      "tests": 1,
+      "notes": "Preceded by prepare-local-wallet; no rebuild."
+    },
+    {
+      "command": "pnpm --filter web test:chain",
+      "status": "pass",
+      "tests": 32,
+      "files": 6
+    },
+    {
+      "command": "pnpm --filter web test:static",
+      "status": "pass",
+      "tests": 7
+    },
+    {
+      "command": "VITE_TURNSTILE_SITE_KEY=fixture-site-key pnpm --filter web build",
+      "status": "pass"
+    },
+    {
+      "command": "pnpm --filter web budget",
+      "status": "pass",
+      "entryGzipBytes": 116848,
+      "entryGzipLimit": 120000
+    },
+    {
+      "command": "pnpm --filter web dist:check",
+      "status": "pass",
+      "files": 15
+    },
+    {
+      "command": "pnpm --filter web test:e2e:fixtures --max-failures=1",
+      "status": "blocked_by_sandbox",
+      "launchesBlocked": 1,
+      "testsNotRun": 9,
+      "notes": "Chromium aborts before navigation with MachPortRendezvousServer Permission denied (1100), then SIGTRAP. No product assertion reached."
+    },
+    {
+      "command": "pnpm --filter web lcp",
+      "status": "not_run",
+      "notes": "Same blocked Chromium launcher; no bypass or repeated launch attempted."
+    },
+    {
+      "command": "actionlint .github/workflows/app.yml and bash -n on extracted run steps",
+      "status": "pass",
+      "shellSteps": 58
+    },
+    {
+      "command": "node scripts/audit-dependency-age.mjs <origin/main baseline> /tmp/m1-final-dependency-age.json",
+      "status": "pass",
+      "versions": 446,
+      "errors": 0
+    },
+    {
+      "command": "gitleaks git --redact --config app/scripts/gitleaks.toml --log-opts=origin/main..HEAD .",
+      "status": "pass",
+      "commits": 5,
+      "findings": 0
+    },
+    {
+      "command": "gitleaks git --redact --config app/scripts/gitleaks.toml --log-opts=--all .",
+      "status": "pass",
+      "commits": 164,
+      "findings": 0
+    },
+    {
+      "command": "node scripts/check-gitleaks-config.mjs <gitleaks binary>",
+      "status": "pass",
+      "publicFamilies": 9,
+      "placeholders": 2,
+      "negativeControls": 29,
+      "ruleScopeCanaries": 11
+    },
+    {
+      "command": "S0/S1/S4 PostgreSQL and Redis integrations",
+      "status": "not_run",
+      "conditionalTestsSkipped": 36,
+      "notes": "Require the external services supplied by the CI services job; Docker is unavailable in this sandbox."
+    },
+    {
+      "command": "Remote CI on this uncommitted integration follow-up and 10000-case nightly",
+      "status": "not_run",
+      "notes": "The architect owns publication. Five 10000-case nightly suites remain configured."
+    },
+    {
+      "command": "Gitleaks 8.24.3 dir --redact on final tracked/untracked source snapshot",
+      "status": "pass",
+      "files": 997,
+      "findings": 0,
+      "scope": [
+        "app",
+        ".github"
+      ],
+      "notes": "Includes current uncommitted source and report changes; excludes ignored build outputs, credentials and private run journals."
+    }
+  ],
+  "configIntegration": {
+    "canonicalServicesObject": true,
+    "groups": [
+      "transport",
+      "indexer",
+      "api"
+    ],
+    "strictServicesSchemaUsedByValidateParams": true,
+    "webSseReadsServicesApi": true,
+    "serviceValueOrArithmeticChanges": false,
+    "generatedOnchainParametersUnchanged": 122
+  },
+  "eventIntegration": {
+    "finalM1Events": 21,
+    "provisionalM2Events": 6,
+    "source": "target/idl/onepercent.json",
+    "snapshot": "packages/sdk/src/events/m1.json",
+    "missingEventAdded": "ReferralRedirected",
+    "sharedStream": "settle",
+    "sharedNameTable": "ONEPERCENT_EVENT_STREAM_EVENTS",
+    "idlParityTests": 3,
+    "s4BorshPayloadParityEvents": 27
+  },
+  "properties": {
+    "P1": {
+      "status": "pass",
+      "cases": 1000,
+      "stepsEach": 200,
+      "seed": 120261008,
+      "workers": 4,
+      "seconds": 75.734017833,
+      "checksFailedTransactions": true,
+      "everyLiveEntrySimulatedAfterEveryStep": true,
+      "finalDrain": true,
+      "userFeePayer": true,
+      "rentPayeeAtomicRejectionAndTopUp": true
+    },
+    "P2": {
+      "status": "pass",
+      "cases": 1000,
+      "stepsEach": 200,
+      "seed": 120261008,
+      "workers": 4,
+      "seconds": 54.612490208,
+      "checksFailedTransactions": true,
+      "finalDrain": true,
+      "userFeePayer": true,
+      "thirdPartyPayeeWritability": true,
+      "randomReferrers": true,
+      "independentPaymentOracle": true
+    },
+    "D12": {
+      "status": "pass",
+      "cases": 1000,
+      "stepsEach": 200,
+      "seed": 120261008,
+      "workers": 4,
+      "seconds": 15.337932167,
+      "checksFailedTransactions": true
+    },
+    "CR1": {
+      "status": "pass",
+      "cases": 1000,
+      "stepsEach": 200,
+      "seedBaseHex": "0x4352315f4d31",
+      "seedRule": "base + shard index",
+      "workers": 8,
+      "seconds": 9.84
+    },
+    "D17 supplemental P2": {
+      "status": "pass",
+      "cases": 1000,
+      "scenarios": 4,
+      "stepsEach": null,
+      "seed": 120261008,
+      "workers": 4,
+      "seconds": 7.792267792
+    },
+    "D20 P2 matrix": {
+      "status": "pass",
+      "scenarios": 58,
+      "featureSets": [
+        "all",
+        "mainnet snapshot"
+      ],
+      "rentRates": [
+        5080,
+        6960
+      ],
+      "notes": "Third-party fee payer preserves read-only account metas; historical buyer/depositor refusals are atomic; referrer credits, redirects and events follow an independent balance oracle."
+    },
+    "M-REF": {
+      "status": "pass",
+      "properties": 7,
+      "casesEach": 1000,
+      "seed": 120261008,
+      "seconds": 0.02,
+      "regressionPersistence": "tests/prop_m_ref.proptest-regressions",
+      "priorRun": {
+        "casesEach": 10000,
+        "status": "pass",
+        "rerunThisFollowUp": false
+      }
+    }
+  },
+  "cuLimits": {
+    "buyPacks": {
+      "x1": 107000,
+      "x10": 110000
+    },
+    "feed": [
+      96000,
+      175000,
+      230000,
+      313000,
+      363000,
+      419000
+    ],
+    "redeem": {
+      "x1": 90000,
+      "x8": 482000
+    },
+    "refundPull": 13000,
+    "settle": [
+      50000,
+      82000
+    ],
+    "takeBack": 87000
+  },
+  "closedBinderSettle": {
+    "report": "fixtures/reports/cu.json",
+    "samples": 128,
+    "samplesPerShape": 32,
+    "forms": [
+      {
+        "packs": 1,
+        "pullQty": 1,
+        "maximumCu": 36615
+      },
+      {
+        "packs": 1,
+        "pullQty": 2,
+        "maximumCu": 39299
+      },
+      {
+        "packs": 2,
+        "pullQty": 1,
+        "maximumCu": 65430
+      },
+      {
+        "packs": 2,
+        "pullQty": 2,
+        "maximumCu": 64827
+      }
+    ],
+    "maxima": [
+      39299,
+      65430
+    ],
+    "limits": [
+      50000,
+      82000
+    ],
+    "rounding": "ceil(maximum * 1.25 / 1000) * 1000",
+    "sdkValidatorProof": "E4 sends x1 and x2 with actual builder limits and buyer fee payer; all 12 distinct depositor credits, 3 referral credits and 3 Pull closes checked."
+  },
+  "callback": {
+    "cases": 44,
+    "maxCu": 101854,
+    "maxFulfillmentCuWithProvider": 208052,
+    "maxAllocationUpperBoundBytes": 17376,
+    "og10LogBytes": 7078,
+    "spreads": [
+      {
+        "callbackCuSpread": 1098,
+        "edition": 0,
+        "qty": 1
+      },
+      {
+        "callbackCuSpread": 20788,
+        "edition": 0,
+        "qty": 10
+      },
+      {
+        "callbackCuSpread": 9847,
+        "edition": 3,
+        "qty": 5
+      }
+    ]
+  },
+  "signedSettleSizes": {
+    "cases": 48,
+    "maximumBytes": 1119
+  },
+  "realVrf": {
+    "report": "fixtures/reports/real-vrf.json",
+    "localSimulations": 3072,
+    "snapshotSlot": 508985211,
+    "observedQueueItems": 52,
+    "measured": {
+      "buyPacks": [
+        85502,
+        87392
+      ]
+    },
+    "devnetBuyPacksExecuted": false,
+    "evidenceFromPriorG1Run": true,
+    "rerunThisFollowUp": false,
+    "m1Gate": "accepted_by_architect",
+    "actualDevnetBuyGate": "M4 after power_on"
+  },
+  "devnet": {
+    "report": "fixtures/reports/devnet.json",
+    "runId": "m1-d17-20261009",
+    "s1": "pass",
+    "programDeployed": true,
+    "feedAndTakeBackPassed": true,
+    "programId": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+    "deployedElfSha256": "99201a1c6573f840790cbe6d86f1628f1abb08e0e9d3f4eaccb27b3aa4eff413",
+    "returnedTokenAmount": "1000000000000",
+    "fundingLamports": "6900000000",
+    "newFundingThisFollowUp": false,
+    "accounting": {
+      "sourceBalanceLamports": "99990000",
+      "disposableBalanceLamports": "3440932023",
+      "netDisposableDebitLamports": "3459067977",
+      "trackedRentStillFundedLamports": "3404773480",
+      "deployment": {
+        "method": "Funding minus current disposable balance, less journaled S1/application debits; retained loader accounts are separated from fees",
+        "netDisposableDebitLamports": "3368535920",
+        "retainedAccountLamports": "3365240920",
+        "networkFeesByBalanceReconciliationLamports": "3295000",
+        "bufferRemainingLamports": "0"
+      },
+      "machineAboveRentLamports": "50000000"
+    },
+    "notes": "Prior G1 devnet evidence is retained without a new transaction or balance query. Private signers remain only in ignored target/devnet-m1. Canonical source and ELF hashes are unchanged.",
+    "evidenceFromPriorG1Run": true,
+    "transactionsThisFollowUp": 0
+  },
+  "auditFixes": [
+    {
+      "id": "M-1",
+      "status": "implemented",
+      "tests": [
+        "T08.07",
+        "T07.12",
+        "P2 D20 matrix"
+      ],
+      "change": "Empty System-owned buyers and depositors must be writable; only referrers keep the prior empty-account exception."
+    },
+    {
+      "id": "L-2",
+      "status": "implemented",
+      "tests": [
+        "T07.13",
+        "P2"
+      ],
+      "change": "Uncreditable referral goes through credit_stock with ReferralRedirected; existing referral_to_team field remains zero."
+    },
+    {
+      "id": "L-3",
+      "status": "implemented",
+      "tests": [
+        "T07.14"
+      ],
+      "change": "A correct closed Binder PDA skips the decrement; a wrong PDA still fails."
+    },
+    {
+      "id": "L-1",
+      "status": "implemented",
+      "change": "One canonical M3.1 scanner imports the config vocabulary, preserves the approved X3 test exclusion, and uses git ls-files. The M1 duplicate is removed."
+    },
+    {
+      "id": "L-4",
+      "status": "accepted_for_m1",
+      "change": "The architect accepted local full buy transaction calibration with the real MagicBlock provider and queue. Limits remain 107000 / 110000. Actual devnet buy_packs is deferred to M4 after power_on. Compute exhaustion keeps its separate SDK key."
+    },
+    {
+      "id": "L-5",
+      "status": "implemented",
+      "tests": [
+        "T11.04"
+      ],
+      "change": "All six implemented exits scanned for the nine concrete forbidden identifiers; team_withdraw included."
+    },
+    {
+      "id": "L-6",
+      "status": "implemented",
+      "tests": [
+        "T01.15",
+        "SDK golden"
+      ],
+      "change": "Both Spotlight stubs restored as NotImplemented; no enabled flow."
+    },
+    {
+      "id": "I-1",
+      "status": "implemented",
+      "tests": [
+        "T06.23",
+        "CR1"
+      ],
+      "change": "All fallible checks and borrows precede reveal commit; remaining writes and shrink/refund operations are total."
+    },
+    {
+      "id": "D17 TakeBack",
+      "status": "implemented",
+      "tests": [
+        "review_rent_payee",
+        "P1",
+        "SDK rent precheck"
+      ],
+      "change": "No rent rejection for a zero projected refund; positive refunds retain the precheck. CloseVault stays permissionless."
+    },
+    {
+      "id": "CI no-fail-fast",
+      "status": "implemented",
+      "change": "program:test always passes --no-fail-fast."
+    }
+  ],
+  "nodeTests": {
+    "command": "pnpm test",
+    "status": "pass",
+    "scriptTests": 35,
+    "workspaceTests": 1603,
+    "totalPassed": 1638,
+    "failed": 0,
+    "skipped": 36,
+    "workspaces": [
+      {
+        "name": "config",
+        "passed": 55,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "copy",
+        "passed": 21,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "db",
+        "passed": 5,
+        "skipped": 9,
+        "status": "pass"
+      },
+      {
+        "name": "eligibility",
+        "passed": 107,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "market",
+        "passed": 177,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "sdk",
+        "passed": 231,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "service-kit",
+        "passed": 122,
+        "skipped": 3,
+        "status": "pass"
+      },
+      {
+        "name": "web-api",
+        "passed": 24,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "web",
+        "passed": 147,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "api",
+        "passed": 398,
+        "skipped": 10,
+        "status": "pass"
+      },
+      {
+        "name": "bot",
+        "passed": 161,
+        "skipped": 0,
+        "status": "pass"
+      },
+      {
+        "name": "worker",
+        "passed": 155,
+        "skipped": 14,
+        "status": "pass"
+      }
+    ]
+  },
+  "rustTests": {
+    "status": "pass",
+    "exitCode": 0,
+    "completedSuites": 24,
+    "totals": {
+      "passed": 187,
+      "failed": 0,
+      "ignored": 0,
+      "measured": 0,
+      "filtered": 0,
+      "durationSeconds": 197.34
+    },
+    "namedSuitesCompleted": 11,
+    "namedTestsPassed": 135,
+    "suites": [
+      {
+        "name": "unit",
+        "status": "pass",
+        "passed": 18,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.0
+      },
+      {
+        "name": "bench_cu_sizes",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 25.45
+      },
+      {
+        "name": "export_fixtures",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.0
+      },
+      {
+        "name": "golden",
+        "status": "pass",
+        "passed": 4,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.01
+      },
+      {
+        "name": "golden_math",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.01
+      },
+      {
+        "name": "mock_vrf_conformance",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.0
+      },
+      {
+        "name": "prop_cr1_callback",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 9.84
+      },
+      {
+        "name": "prop_m_ref",
+        "status": "pass",
+        "passed": 7,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.02
+      },
+      {
+        "name": "prop_p1_feed",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 75.73
+      },
+      {
+        "name": "prop_p2_packs",
+        "status": "pass",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 62.78
+      },
+      {
+        "name": "prop_p2_reservations",
+        "status": "pass",
+        "passed": 1,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 15.34
+      },
+      {
+        "name": "review_rent_payee",
+        "status": "pass",
+        "passed": 13,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.17
+      },
+      {
+        "name": "t01_init_admin",
+        "status": "pass",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.08
+      },
+      {
+        "name": "t02_mint_safety",
+        "status": "pass",
+        "passed": 10,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.02
+      },
+      {
+        "name": "t03_feed",
+        "status": "pass",
+        "passed": 21,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.2
+      },
+      {
+        "name": "t04_take_back",
+        "status": "pass",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.09
+      },
+      {
+        "name": "t05_buy_packs",
+        "status": "pass",
+        "passed": 18,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.13
+      },
+      {
+        "name": "t06_fulfill_randomness",
+        "status": "pass",
+        "passed": 23,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 6.6
+      },
+      {
+        "name": "t07_settle",
+        "status": "pass",
+        "passed": 14,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.3
+      },
+      {
+        "name": "t08_refund",
+        "status": "pass",
+        "passed": 7,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.13
+      },
+      {
+        "name": "t09_redeem",
+        "status": "pass",
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.23
+      },
+      {
+        "name": "t10_team_vault",
+        "status": "pass",
+        "passed": 4,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.03
+      },
+      {
+        "name": "t11_hygiene_donations_rent",
+        "status": "pass",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.18
+      },
+      {
+        "name": "doc_onepercent",
+        "status": "pass",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "durationSeconds": 0.0
+      }
+    ],
+    "updatedAt": "2026-10-09T02:45:16.802180+00:00"
+  },
+  "webBudget": {
+    "entryGzipBytes": 116848,
+    "limitBytes": 120000,
+    "status": "pass"
+  },
+  "ci": {
+    "status": "locally_validated_publication_pending",
+    "workflow": ".github/workflows/app.yml",
+    "actionlint": "pass",
+    "shellStepsChecked": 58,
+    "preservation": {
+      "ts": true,
+      "web": true,
+      "services": true,
+      "nightly": true,
+      "programWithOnlyNewEventGate": true,
+      "schedule": true
+    },
+    "schedule": "23 3 * * *",
+    "nightlySuites": [
+      "prop_p1_feed",
+      "prop_p2_packs",
+      "prop_p2_reservations",
+      "prop_cr1_callback",
+      "prop_m_ref"
+    ],
+    "propertyCases": 10000,
+    "s7Reproducibility": {
+      "status": "pass",
+      "observedInExistingCiRun": true,
+      "run": 37870549757,
+      "job": 113627393865,
+      "url": "https://github.com/lilacwine77/onepercent/actions/runs/37870549757/job/113627393865",
+      "cleanBuilds": 2,
+      "sha256": "ec93b842c89939f04f195af8af31a2afadf0c8f2764136f51a85971303c05c8d",
+      "verifiedAt": "2026-10-09T02:05:53Z",
+      "notes": "Existing Linux CI pair; separate from the unchanged local macOS artifact hash and the disposable devnet artifact."
+    }
+  },
+  "secretScan": {
+    "report": "fixtures/reports/gitleaks.json",
+    "reviewedFindings": 72,
+    "realSecretsFound": 0,
+    "classes": {
+      "public-spl-mint": 1,
+      "public-solana-fixture-address": 1,
+      "public-evm-fixture-address": 62,
+      "public-relay-recording-identifier": 8
+    },
+    "prRange": "origin/main..HEAD",
+    "nightlyRange": "--all",
+    "artifact": "Redacted JSON is uploaded even on failure.",
+    "originalCiLimitation": "The prior 35-finding/144-commit run had no JSON artifact. Every fingerprint from the available 72-finding full-history replay was individually classified; the updated scan passes across 164 commits.",
+    "finalSourceSnapshot": {
+      "files": 997,
+      "findings": 0,
+      "status": "pass"
+    }
+  },
+  "gateConditions": [
+    {
+      "kind": "publication",
+      "item": "The architect must create/push the listed commits, mark the PR ready and obtain green CI on that revision."
+    },
+    {
+      "kind": "sandbox_browser",
+      "item": "W1 cannot launch Chromium here; no product assertion or LCP measurement was reached. The CI web job is preserved."
+    },
+    {
+      "kind": "external_services",
+      "item": "36 conditional PostgreSQL/Redis integration tests require the preserved CI services job; Docker is unavailable locally."
+    },
+    {
+      "kind": "existing_m3_1_nightly_gate",
+      "item": "The preserved scheduled web validator step requires WEB_VALIDATOR_URL and W2/W3 scenarios; only W1 exists in this checkout. No placeholder pass or skip was introduced."
+    }
+  ],
+  "decisions": [
+    "Use the canonical SERVICES schema inside the M1 recursive PARAMS schema; reuse SERVICES.api.ssePingSeconds without a numeric mirror.",
+    "Generate the final 21-event M1 snapshot and types from the IDL; retain the six provisional M2 events in their separate existing file. S1 and S4 share one exhaustive name table.",
+    "Keep S1/S4 values and calculations unchanged while replacing temporary imports; Verify retains its independent arithmetic with M1 parity checks.",
+    "Raise the unconditional SDK Settle limits to 50000 / 82000 from the measured closed-Binder maxima and prescribed 25 percent margin; no ABI or economic change.",
+    "Return COPY keys and numerical precheck data from the SDK; keep display text in packages/copy.",
+    "Allow only reviewed public content or explicit reserved-domain placeholders, constrained by rule and path. Do not add blanket signature or base64 exceptions without a finding.",
+    "Keep one daily schedule and all main web/services gates. PR secret scans cover origin/main..HEAD, nightly scans cover all refs, and redacted reports survive failures.",
+    "Retain the accepted local real-provider M1 buy_packs calibration at 107000 / 110000; actual devnet buy_packs remains an M4 gate after power_on.",
+    "No economic constants, production program code, ABI, production ID or M0.1 toolchain pins changed. No new devnet transaction or funding in this follow-up."
+  ],
+  "git": "Read-only Git inspection only. The architect owns commits, rebase, push and PR publication.",
+  "suggestedCommits": [
+    {
+      "message": "fix(m1): integrate shared config and final event ABI",
+      "files": [
+        "app/packages/config/src/index.ts",
+        "app/packages/config/src/services.test.ts",
+        "app/packages/sdk/src/api/event-payloads.test.ts",
+        "app/packages/sdk/src/api/event-payloads.ts",
+        "app/packages/sdk/src/errors.ts",
+        "app/packages/sdk/src/events/README.md",
+        "app/packages/sdk/src/events/decoder.ts",
+        "app/packages/sdk/src/events/events.test.mts",
+        "app/packages/sdk/src/events/m1-draft.json",
+        "app/packages/sdk/src/events/m1.json",
+        "app/packages/sdk/src/events/names.ts",
+        "app/packages/sdk/src/events/types.ts",
+        "app/packages/sdk/src/fetch.ts",
+        "app/packages/sdk/src/verify/README.md",
+        "app/packages/sdk/src/verify/math.ts",
+        "app/packages/sdk/src/verify/verify.test.ts",
+        "app/packages/sdk/tests/payee-rent.test.ts",
+        "app/scripts/copy-idl.mjs",
+        "app/scripts/event-idl.mjs",
+        "app/scripts/event-idl.test.mjs",
+        "app/services/api/src/public/README.md",
+        "app/services/api/src/public/entry.integration.test.ts",
+        "app/services/api/src/public/events.test.ts",
+        "app/services/api/src/public/events.ts",
+        "app/services/api/src/public/value.test.ts",
+        "app/services/api/src/public/value.ts",
+        "app/services/api/src/public/vrf.ts",
+        "app/services/worker/src/indexer/README.md",
+        "app/services/worker/src/indexer/feed-proof.test-data.mts",
+        "app/services/worker/src/indexer/feed-proof.ts"
+      ],
+      "note": "In config/src/index.ts, include SERVICES validation and web SSE binding only; reserve the CU_LIMITS hunk for the next commit. Includes COPY-key-only SDK rent prechecks and removal of events/m1-draft.json."
+    },
+    {
+      "message": "fix(sdk): calibrate settle budget for closed Binders",
+      "files": [
+        "app/fixtures/reports/cu.json",
+        "app/packages/config/src/index.ts",
+        "app/packages/config/tests/cu-limits.test.ts",
+        "app/programs/onepercent/tests/bench_cu_sizes.rs",
+        "app/programs/onepercent/tests/export_fixtures.rs",
+        "app/scripts/e2e-validator.ts",
+        "app/tests/e2e/sdk.e2e.test.ts"
+      ],
+      "note": "Include only the CU_LIMITS.settle hunk from config/src/index.ts."
+    },
+    {
+      "message": "ci(app): scope secret scans and retain reviewed findings",
+      "files": [
+        ".github/workflows/app.yml",
+        "app/fixtures/reports/gitleaks.json",
+        "app/scripts/check-gitleaks-config.mjs",
+        "app/scripts/gitleaks.toml"
+      ],
+      "note": "Also includes the post-build event-IDL parity gate."
+    },
+    {
+      "message": "docs(m1): record G1 integration and final validation",
+      "files": [
+        "app/README.md",
+        "app/VERSIONS.md",
+        "app/fixtures/reports/validation.json"
+      ]
+    }
+  ],
+  "localEvidenceLogs": "/tmp/m1-final-*.log (not committed; durable metrics and limitations are recorded here)",
+  "latestValidationSection": "mergeIntegration",
+  "mergeIntegration": {
+    "checkedAt": "2026-10-09T02:59:31.732477+00:00",
+    "status": "ready_for_architect_merge_commit",
+    "head": "0c2f9fc3d921b4f5dd375ac79140fb9f770148c7",
+    "mergeHead": "d792589a2b325ca418319ee772659431469e27d3",
+    "gitState": "MERGE_HEAD retained. All four conflicted working-tree files have no conflict markers; unmerged index entries remain until the architect stages them. No Git write performed.",
+    "mergeCommitMessage": "merge: integrate main S2 and S3 with the M1 config and SDK",
+    "config": {
+      "schema": "M1 strict recursive schema retained",
+      "governanceKeys": [
+        "maxTeamWallets",
+        "guardianCount",
+        "multisigThreshold",
+        "multisigMembers",
+        "timelockSeconds",
+        "opsWalletMaxLamports",
+        "initRentBufferMaxLamports"
+      ],
+      "opsWalletMaxLamports": "5000000000",
+      "initRentBufferMaxLamports": "50000000",
+      "s3LimitsRequireExactApprovedValues": true,
+      "singleServicesObject": true,
+      "serviceGroups": [
+        "transport",
+        "indexer",
+        "api",
+        "signers",
+        "quote"
+      ],
+      "burnAndCreatorFeeSplitsUnchanged": true,
+      "compiledRustParametersUnchanged": 122
+    },
+    "checks": [
+      {
+        "command": "pnpm install",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm dedupe",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm install --frozen-lockfile",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm lint",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm format:check",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm lint:words",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm typecheck",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm test",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm build",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm params:rs --check",
+        "status": "pass"
+      },
+      {
+        "command": "git diff --check",
+        "status": "pass"
+      },
+      {
+        "command": "pnpm program:test",
+        "status": "not_run_unchanged",
+        "reason": "No merged or local program, mock program, Cargo, Anchor or generated params.rs changes versus HEAD. The prior complete G1 test run remains separate evidence."
+      }
+    ],
+    "nodeTests": {
+      "scriptTestsPassed": 35,
+      "workspaceTestExecutionsPassed": 2114,
+      "totalPassed": 2149,
+      "failed": 0,
+      "externalIntegrationTestsSkipped": 41,
+      "workspaces": [
+        {
+          "workspace": "@onepercent/config",
+          "passed": 65
+        },
+        {
+          "workspace": "@onepercent/copy",
+          "passed": 21
+        },
+        {
+          "workspace": "@onepercent/db",
+          "passed": 5,
+          "skipped": 9
+        },
+        {
+          "workspace": "@onepercent/cli",
+          "passed": 106
+        },
+        {
+          "workspace": "@onepercent/eligibility",
+          "passed": 107
+        },
+        {
+          "workspace": "@onepercent/market",
+          "passed": 177
+        },
+        {
+          "workspace": "@onepercent/sdk",
+          "passed": 232
+        },
+        {
+          "workspace": "@onepercent/service-kit",
+          "passed": 190,
+          "skipped": 3
+        },
+        {
+          "workspace": "@onepercent/web-api",
+          "passed": 24
+        },
+        {
+          "workspace": "web",
+          "passed": 147
+        },
+        {
+          "workspace": "api",
+          "passed": 633,
+          "skipped": 13
+        },
+        {
+          "workspace": "bot",
+          "passed": 161
+        },
+        {
+          "workspace": "worker",
+          "passed": 246,
+          "skipped": 16
+        }
+      ]
+    },
+    "replacedAdapters": [
+      "Feed feedNonces, bagsHash and attestationExpiry use canonical SDK exports.",
+      "Quote rotateHour and attestationExpiry use canonical SDK exports.",
+      "Merge program identities and transaction budget defaults use canonical SDK/config exports; wire serialization and ordering are unchanged.",
+      "Keeper account sizes/offsets, Payee, SettleInput and RESERVED_KEYS use canonical SDK exports.",
+      "Temporary X2_PENDING_M1 imports use final named config exports."
+    ],
+    "retainedAdapters": [
+      {
+        "files": [
+          "services/api/src/intake/sdk-adapter.ts"
+        ],
+        "adapter": "feedMessage",
+        "reason": "Explicit validated domain argument; SDK binds the compiled domain."
+      },
+      {
+        "files": [
+          "services/api/src/intake/chain.ts",
+          "services/api/src/quote/draft-sdk.ts",
+          "services/worker/src/keeper/adapter.ts",
+          "packages/cli/src/lut-lifecycle.ts"
+        ],
+        "adapter": "Account decoders and projections",
+        "reason": "Existing owner, exact-size, version, role/status/PDA checks and projected outputs differ from raw SDK decoders."
+      },
+      {
+        "files": [
+          "services/api/src/intake/chain.ts",
+          "services/api/src/quote/adapters.ts",
+          "services/worker/src/keeper/adapter.ts",
+          "packages/cli/src/m1-adapter.ts"
+        ],
+        "adapter": "PDA/instruction/transaction/governance builders",
+        "reason": "Accept runtime programId, injected limits, legacy transaction output or validated string addresses; canonical builders have different signatures. CLI intent verifier also has no matching export."
+      },
+      {
+        "files": [
+          "packages/sdk/src/tx/merge.ts"
+        ],
+        "adapter": "Merge SPL wire serialization and packing",
+        "reason": "No identical helper with its config/compute injection and full-balance ordering contract; existing serialization remains byte-identical to MERGE_HEAD."
+      },
+      {
+        "files": [
+          "services/api/src/quote/encoder.ts",
+          "services/api/src/internal/runtime.ts"
+        ],
+        "adapter": "sellBackMessage",
+        "reason": "Canonical encoder belongs to P0 and is not exported yet; missing encoder still refuses."
+      },
+      {
+        "files": [
+          "services/worker/src/keeper/adapter.ts"
+        ],
+        "adapter": "parsePullRevealedLogs",
+        "reason": "Logs-only rescan trigger differs from SDK transaction-result/event-parser contract."
+      },
+      {
+        "files": [
+          "packages/service-kit/src/intake/constants.ts"
+        ],
+        "adapter": "Token-2022 native mint constant",
+        "reason": "No config export; preserve the existing external identity without adding SDK dependency to service-kit solely for it."
+      },
+      {
+        "files": [
+          "services/api/src/internal/startup.ts"
+        ],
+        "adapter": "Indexer status reader",
+        "reason": "No exported shared S1 schema with the same completed scanSlot boundary."
+      }
+    ],
+    "integrationRegressionsResolved": [
+      {
+        "failure": "Four worker entrypoint isolation cases emitted a native dependency warning before the environment guard.",
+        "fix": "Expose existing SDK constants/layouts as focused package subpaths and use them in keeper. No guard relocation, log suppression or weaker assertion.",
+        "tests": "Original seven entrypoint tests and full workspace suite pass."
+      },
+      {
+        "failure": "S4 missing-parameter bootstrap test retained a settings module bound to a previous case config; new S2 quote parameters exposed the stale mock.",
+        "fix": "Re-register settings mock after resetModules for each case and unmock it afterward. Production logic and assertions unchanged.",
+        "tests": "All ten public entry integration tests and full workspace suite pass."
+      }
+    ],
+    "decisions": [
+      "Reuse exact SDK helpers and keep incompatible adapters with explicit reasons.",
+      "Additive SDK constants/layouts subpaths avoid eager transaction dependencies before worker role validation.",
+      "Keep one GOVERNANCE object and exact S3 operational caps; retain all M1 economics and schemas.",
+      "Regenerate and deduplicate the lockfile only with pnpm; dependency version pins unchanged."
+    ],
+    "logs": "/tmp/m1-merge-*.log",
+    "remoteCi": "Not rerun here; architect owns merge commit, push and PR publication."
+  }
+}

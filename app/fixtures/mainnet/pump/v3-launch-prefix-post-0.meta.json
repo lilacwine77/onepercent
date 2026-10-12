@@ -1,0 +1,11 @@
+{
+  "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+  "slot": 454748210,
+  "checkedAt": "2026-10-09T03:41:00.871Z",
+  "simulated": true,
+  "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+  "lamports": 2540000,
+  "executable": false,
+  "bytes": 372,
+  "sha256": "f8619dc7fc03a97977a1498ae7cfee26aece1a48455db19ddea09619e9ee8611"
+}

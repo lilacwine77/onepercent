@@ -1,0 +1,322 @@
+{
+  "milestone": "M2 P2",
+  "measurement": {
+    "command": "pnpm program:test --test t13_sell_back --test t14_feed_back --test t15_binder -- --nocapture",
+    "samplesPerShape": 32,
+    "seed": 20261009,
+    "transaction": "Owner fee payer, compute limit and price, Ed25519 for Sell back; SPL and Token-2022; reservation and donation variants.",
+    "rounding": "ceil(maximum * 1.25 / 1000) * 1000",
+    "additionalCases": "Largest Binder (65,535 slots), Deck up to 120,000 entries, all bucket slots occupied, reservations and hour rollover."
+  },
+  "measured": {
+    "sellBack": {
+      "x1": 32153,
+      "x8": 44473
+    },
+    "feedBack": {
+      "x1": 68584,
+      "x8": 83665
+    },
+    "closeBinder": 13072,
+    "withdrawOwed": 13519
+  },
+  "limits": {
+    "sellBack": {
+      "x1": 41000,
+      "x8": 56000
+    },
+    "feedBack": {
+      "x1": 86000,
+      "x8": 105000
+    },
+    "closeBinder": 17000,
+    "withdrawOwed": 17000
+  },
+  "legacyBytesWithPriority": {
+    "sellBack": {
+      "x1": 789,
+      "x8": 929
+    },
+    "feedBack": {
+      "x1": 401,
+      "x8": 415
+    },
+    "closeBinder": 263,
+    "withdrawOwed": 263
+  },
+  "artifacts": [
+    {
+      "name": "onepercent.so",
+      "bytes": 960208,
+      "flags": 3,
+      "sha256": "d5204f9d8df27db85bfcdb9e062e1dfdf6f27d8e9138113a959717d182821e71"
+    },
+    {
+      "name": "mock_vrf.so",
+      "bytes": 78024,
+      "flags": 3,
+      "sha256": "0441521d6f43879bdce7c95af5078b674532c1a35b5023e4bba3a34af8728c6e"
+    }
+  ],
+  "signedTransactionSizes": [
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "legacy",
+      "computeBudget": false,
+      "priorityFee": false,
+      "bytes": 737
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "legacy",
+      "computeBudget": false,
+      "priorityFee": false,
+      "bytes": 877
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "v0",
+      "computeBudget": false,
+      "priorityFee": false,
+      "bytes": 556
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "v0",
+      "computeBudget": false,
+      "priorityFee": false,
+      "bytes": 696
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "legacy",
+      "computeBudget": false,
+      "priorityFee": true,
+      "bytes": 737
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "legacy",
+      "computeBudget": false,
+      "priorityFee": true,
+      "bytes": 877
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "v0",
+      "computeBudget": false,
+      "priorityFee": true,
+      "bytes": 556
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "v0",
+      "computeBudget": false,
+      "priorityFee": true,
+      "bytes": 696
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": false,
+      "bytes": 777
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": false,
+      "bytes": 917
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": false,
+      "bytes": 596
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": false,
+      "bytes": 736
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 789
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 929
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 1,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 608
+    },
+    {
+      "instruction": "sellBack",
+      "cards": 8,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 748
+    },
+    {
+      "instruction": "feedBack",
+      "cards": 1,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 401
+    },
+    {
+      "instruction": "feedBack",
+      "cards": 8,
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 415
+    },
+    {
+      "instruction": "feedBack",
+      "cards": 1,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 282
+    },
+    {
+      "instruction": "feedBack",
+      "cards": 8,
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 296
+    },
+    {
+      "instruction": "closeBinder",
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 263
+    },
+    {
+      "instruction": "closeBinder",
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 268
+    },
+    {
+      "instruction": "withdrawOwed",
+      "version": "legacy",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 263
+    },
+    {
+      "instruction": "withdrawOwed",
+      "version": "v0",
+      "computeBudget": true,
+      "priorityFee": true,
+      "bytes": 268
+    }
+  ],
+  "corpora": [
+    {
+      "name": "initial_full_suite",
+      "samplesPerShape": 32,
+      "measured": {
+        "sellBack": {
+          "x1": 32592,
+          "x8": 42957
+        },
+        "feedBack": {
+          "x1": 15503,
+          "x8": 30581
+        },
+        "closeBinder": 13072,
+        "withdrawOwed": 13517
+      }
+    },
+    {
+      "name": "deterministic_mints_and_maximum_accounts",
+      "seed": 20261009,
+      "normalSamplesPerShape": 32,
+      "additionalSamples": {
+        "sellBack": {
+          "x1": 4,
+          "x8": 4
+        },
+        "feedBack": {
+          "x1": 3,
+          "x8": 3
+        },
+        "closeBinder": 1,
+        "withdrawOwed": 1
+      },
+      "measured": {
+        "sellBack": {
+          "x1": 32151,
+          "x8": 44471
+        },
+        "feedBack": {
+          "x1": 68583,
+          "x8": 83664
+        },
+        "closeBinder": 13072,
+        "withdrawOwed": 13517
+      },
+      "cases": [
+        "sell_back x1 normal: max_cu=32151, samples=32",
+        "sell_back x1 last_bucket_reserved_rollover: token2022=false, binder_cards=1, cu=25219, bytes=789",
+        "sell_back x1 last_bucket_reserved_rollover: token2022=false, binder_cards=65535, cu=25220, bytes=789",
+        "sell_back x1 last_bucket_reserved_rollover: token2022=true, binder_cards=1, cu=23733, bytes=789",
+        "sell_back x1 last_bucket_reserved_rollover: token2022=true, binder_cards=65535, cu=23734, bytes=789",
+        "sell_back x8 normal: max_cu=44471, samples=32",
+        "sell_back x8 last_bucket_reserved_rollover: token2022=false, binder_cards=8, cu=31539, bytes=929",
+        "sell_back x8 last_bucket_reserved_rollover: token2022=false, binder_cards=65535, cu=31547, bytes=929",
+        "sell_back x8 last_bucket_reserved_rollover: token2022=true, binder_cards=8, cu=33053, bytes=929",
+        "sell_back x8 last_bucket_reserved_rollover: token2022=true, binder_cards=65535, cu=33061, bytes=929",
+        "feed_back x1 normal: max_cu=15503, samples=32",
+        "feed_back x1 account_sizes: deck_entries=119999, binder_cards=1, cu=53902, bytes=401",
+        "feed_back x1 account_sizes: deck_entries=0, binder_cards=65535, cu=30184, bytes=401",
+        "feed_back x1 account_sizes: deck_entries=119999, binder_cards=65535, cu=68583, bytes=401",
+        "feed_back x8 normal: max_cu=30581, samples=32",
+        "feed_back x8 account_sizes: deck_entries=119992, binder_cards=8, cu=68978, bytes=415",
+        "feed_back x8 account_sizes: deck_entries=0, binder_cards=65535, cu=45267, bytes=415",
+        "feed_back x8 account_sizes: deck_entries=119992, binder_cards=65535, cu=83664, bytes=415",
+        "binder normal: withdraw_owed_max_cu=13517, close_binder_max_cu=13072, samples=32",
+        "withdraw_owed maximum_binder: binder_cards=65535, cu=6017, bytes=263",
+        "close_binder maximum_binder: binder_capacity=65535, cu=5575, bytes=263"
+      ]
+    }
+  ],
+  "integration": "P1 executor #46 and cluster deployment #47 merged into P2"
+}

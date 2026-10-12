@@ -1,0 +1,143 @@
+{
+  "name": "mixed",
+  "owner": "7dkYCYwNvpcNcAjdWFYR7nQ4pXpYtPfz9AFbVp7XcGzo",
+  "source": "synthetic",
+  "note": "Owner = PublicKey(SHA256(\"xray-synthetic:mixed\")). Token accounts use AccountLayout; this is not a real wallet scan.",
+  "slot": 454620967,
+  "slotS": 454619967,
+  "solUsd": 100,
+  "tokenAccounts": [
+    {
+      "address": "2fpKAzfpBBAL6yhbuF7K6vFojyvFopjPud6whiUKXF5f",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "vAfFbmCtPT8Xc4LqxlSPuh/TLP2QygKz58+hhf3Oc5hikEJYjucoU0Ve/zTkM19Iy+XgzrBEoomdqK+meVidDADh9QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "gNGXrBDBhCAG4oAb5K4MkywuQH1Bepvgu8VGkYEyGNk",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "xvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWFikEJYjucoU0Ve/zTkM19Iy+XgzrBEoomdqK+meVidDADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "HnHPBkfe65UHorbRWcZkm8JmGxseqMC1qGRSSri5YFYn",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "DEX3342ecpVihJM/bZi3VwMug9+EYE+14Rf/9h1bEvlikEJYjucoU0Ve/zTkM19Iy+XgzrBEoomdqK+meVidDADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "5bdfNQstsVyLYPZ1jNqquJyBGFK9T4LcUaw1K9hSujy8",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "AAF2ygXJ5/h+TYSO3ER2cC2YvqV/q5EIUDDG/jJJotFikEJYjucoU0Ve/zTkM19Iy+XgzrBEoomdqK+meVidDADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    }
+  ],
+  "mints": {
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": "mainnet/bonk.json",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": "mainnet/usdc.json",
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": "mainnet/transfer-hook.json",
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": "mainnet/permanent-delegate.json"
+  },
+  "curves": {},
+  "prices": {
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    }
+  },
+  "exitCaps": {
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": "1000000000",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": "1000000000",
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": "1000000000",
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": "1000000000"
+  },
+  "exitCapsSource": "synthetic: fee-adjusted X2 getExitCap seam inputs; no live reserve claim",
+  "snapshot": {
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "balanceAtS": "1000"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "balanceAtS": "1000"
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "balanceAtS": "0"
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "balanceAtS": null
+    }
+  },
+  "metadata": {
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "symbol": "BONK",
+      "name": "bonk",
+      "image": "https://example.com/coin.png"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "symbol": "USDC",
+      "name": "usdc",
+      "image": "https://example.com/coin.png"
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "symbol": "TRANSFERHOOK",
+      "name": "transfer-hook",
+      "image": "https://example.com/coin.png"
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "symbol": "PERMANENTDELEGAT",
+      "name": "permanent-delegate",
+      "image": "https://example.com/coin.png"
+    }
+  },
+  "expected": {
+    "counts": {
+      "bags": 0,
+      "feedable": 0,
+      "checkAtFeed": 0,
+      "notFeedable": 0,
+      "sellable": 0,
+      "empty": 0,
+      "notInSet": 4
+    },
+    "mints": {
+      "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      }
+    }
+  }
+}

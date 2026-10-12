@@ -1,0 +1,16 @@
+[
+  {
+    "address": "A8gMrEPJkacWkcb3DGwtJwTe16HktSEfvwtuDh2MCtck",
+    "file": "damm-customizable-config.bin",
+    "contextSlot": 454847493,
+    "dataSha256": "988089b8bacd1967ad85e4acd2bb520c847c872a74fed0614b01a89c57ae73a5",
+    "metadataFile": "damm-customizable-config.meta.json"
+  },
+  {
+    "address": "So11111111111111111111111111111111111111112",
+    "file": "wsol-mint.bin",
+    "contextSlot": 454847493,
+    "dataSha256": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3",
+    "metadataFile": "wsol-mint.meta.json"
+  }
+]

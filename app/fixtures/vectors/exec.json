@@ -1,0 +1,5347 @@
+{
+  "book": [
+    {
+      "input": {
+        "amount": "208269813985374491",
+        "bucketAmount": "617935535247747480",
+        "cost": "11206175590719010740"
+      },
+      "output": "3776944313181089408"
+    },
+    {
+      "input": {
+        "amount": "546695646912238273",
+        "bucketAmount": "16810303321591298667",
+        "cost": "4177602323631758976"
+      },
+      "output": "135861736767503946"
+    },
+    {
+      "input": {
+        "amount": "11116340345792789826",
+        "bucketAmount": "17190793460065499616",
+        "cost": "13680271881314581568"
+      },
+      "output": "8846279178965395306"
+    },
+    {
+      "input": {
+        "amount": "8448579093703296215",
+        "bucketAmount": "17967785348336008695",
+        "cost": "7798925224112332109"
+      },
+      "output": "3667109514300424424"
+    },
+    {
+      "input": {
+        "amount": "6655331506302993328",
+        "bucketAmount": "8666834113488546799",
+        "cost": "909734776836709674"
+      },
+      "output": "698592639870408614"
+    },
+    {
+      "input": {
+        "amount": "2037179781410163130",
+        "bucketAmount": "7534686451758351135",
+        "cost": "699169067845357850"
+      },
+      "output": "189036809682977654"
+    },
+    {
+      "input": {
+        "amount": "2760184722567454585",
+        "bucketAmount": "5613745130048858763",
+        "cost": "14156560504165965997"
+      },
+      "output": "6960544364321833448"
+    },
+    {
+      "input": {
+        "amount": "2769582265362806136",
+        "bucketAmount": "15278316679189411325",
+        "cost": "11628361013151533793"
+      },
+      "output": "2107935259721912566"
+    },
+    {
+      "input": {
+        "amount": "220823120345269420",
+        "bucketAmount": "13191664419187651923",
+        "cost": "8018834468227445143"
+      },
+      "output": "134232041730123602"
+    },
+    {
+      "input": {
+        "amount": "2000855684242904696",
+        "bucketAmount": "16255919938430506925",
+        "cost": "11771583403744284779"
+      },
+      "output": "1448902286375017301"
+    },
+    {
+      "input": {
+        "amount": "3737685471837658020",
+        "bucketAmount": "4890478741927189867",
+        "cost": "11203898651597485663"
+      },
+      "output": "8562893620004802811"
+    },
+    {
+      "input": {
+        "amount": "5017452412641533133",
+        "bucketAmount": "15640797553752774736",
+        "cost": "4643538122212853001"
+      },
+      "output": "1489612756281704605"
+    },
+    {
+      "input": {
+        "amount": "8633562954090949298",
+        "bucketAmount": "9320658106930174709",
+        "cost": "8532904552718924760"
+      },
+      "output": "7903880583536567781"
+    },
+    {
+      "input": {
+        "amount": "4176227788419663754",
+        "bucketAmount": "8034216451502609077",
+        "cost": "8421569657070250653"
+      },
+      "output": "4377576013326209742"
+    },
+    {
+      "input": {
+        "amount": "12794257319837306792",
+        "bucketAmount": "13820768758852675665",
+        "cost": "10716404398693222164"
+      },
+      "output": "9920463746453671175"
+    },
+    {
+      "input": {
+        "amount": "5864972299793838634",
+        "bucketAmount": "12281464504276436884",
+        "cost": "18050055877448965871"
+      },
+      "output": "8619743817531481276"
+    },
+    {
+      "input": {
+        "amount": "923558746202191545",
+        "bucketAmount": "6330067941098915442",
+        "cost": "17956602523338583220"
+      },
+      "output": "2619873509545092086"
+    },
+    {
+      "input": {
+        "amount": "176775297574900628",
+        "bucketAmount": "1877172165404243634",
+        "cost": "5549161371394695401"
+      },
+      "output": "522570423106713376"
+    },
+    {
+      "input": {
+        "amount": "9225789416075465699",
+        "bucketAmount": "16051498123293191128",
+        "cost": "7261087763900676818"
+      },
+      "output": "4173396534506533754"
+    },
+    {
+      "input": {
+        "amount": "2153207482327171688",
+        "bucketAmount": "9737253828453166988",
+        "cost": "4832795962569912419"
+      },
+      "output": "1068680411386497821"
+    },
+    {
+      "input": {
+        "amount": "1628863235359711900",
+        "bucketAmount": "2212505484786515335",
+        "cost": "16429906205144543079"
+      },
+      "output": "12095820942360565104"
+    },
+    {
+      "input": {
+        "amount": "6529439090010561765",
+        "bucketAmount": "8377900188691240948",
+        "cost": "2315635826823428350"
+      },
+      "output": "1804724661950379541"
+    },
+    {
+      "input": {
+        "amount": "5727240014179231186",
+        "bucketAmount": "15822230976059997867",
+        "cost": "18164213147753411423"
+      },
+      "output": "6574977228135450331"
+    },
+    {
+      "input": {
+        "amount": "3923149220766150607",
+        "bucketAmount": "13705392149998992071",
+        "cost": "9819650748236999914"
+      },
+      "output": "2810861211376908111"
+    },
+    {
+      "input": {
+        "amount": "3103937044924720053",
+        "bucketAmount": "3792525157438373965",
+        "cost": "9128428819762863548"
+      },
+      "output": "7471029775517264340"
+    },
+    {
+      "input": {
+        "amount": "569066099682685144",
+        "bucketAmount": "8499440271916716753",
+        "cost": "6879079894243425496"
+      },
+      "output": "460577525058586910"
+    },
+    {
+      "input": {
+        "amount": "15437212711954827430",
+        "bucketAmount": "17219442453209572362",
+        "cost": "4949240203592111436"
+      },
+      "output": "4436988827775268885"
+    },
+    {
+      "input": {
+        "amount": "7457197406524471770",
+        "bucketAmount": "14454231807743023899",
+        "cost": "13348394169912986786"
+      },
+      "output": "6886675937479970942"
+    },
+    {
+      "input": {
+        "amount": "7090326403191618850",
+        "bucketAmount": "7653275178066501647",
+        "cost": "10648029432710292393"
+      },
+      "output": "9864796766367001252"
+    },
+    {
+      "input": {
+        "amount": "1035437776992333394",
+        "bucketAmount": "4980338293230824043",
+        "cost": "17176907376550286093"
+      },
+      "output": "3571166804823740197"
+    },
+    {
+      "input": {
+        "amount": "277821639837509797",
+        "bucketAmount": "1775168040995975783",
+        "cost": "8612655239472994216"
+      },
+      "output": "1347918589522946581"
+    },
+    {
+      "input": {
+        "amount": "317657331016372325",
+        "bucketAmount": "8145115534061553405",
+        "cost": "7770224512486586364"
+      },
+      "output": "303036681273897434"
+    },
+    {
+      "input": {
+        "amount": "9038885509414208821",
+        "bucketAmount": "15803060849419257536",
+        "cost": "16799574008596358417"
+      },
+      "output": "9608861695689381040"
+    },
+    {
+      "input": {
+        "amount": "7066630420983773331",
+        "bucketAmount": "9161995934566848001",
+        "cost": "15208232111987271887"
+      },
+      "output": "11730081137285776740"
+    },
+    {
+      "input": {
+        "amount": "3272244267154982369",
+        "bucketAmount": "4446552781285583412",
+        "cost": "13544341522719148892"
+      },
+      "output": "9967360353089758268"
+    },
+    {
+      "input": {
+        "amount": "2867803501787988983",
+        "bucketAmount": "13952453066568338949",
+        "cost": "13575848806835960713"
+      },
+      "output": "2790395822314287334"
+    },
+    {
+      "input": {
+        "amount": "2683542479462550223",
+        "bucketAmount": "12217723088607834685",
+        "cost": "15153259254090771148"
+      },
+      "output": "3328313681342007335"
+    },
+    {
+      "input": {
+        "amount": "8476499072599968218",
+        "bucketAmount": "16080016874598511775",
+        "cost": "15472037350786512566"
+      },
+      "output": "8156005760314134197"
+    },
+    {
+      "input": {
+        "amount": "10108722101561726173",
+        "bucketAmount": "14456439046435074660",
+        "cost": "9101944639493458697"
+      },
+      "output": "6364570738955802771"
+    },
+    {
+      "input": {
+        "amount": "524621039500454428",
+        "bucketAmount": "3041330258771201792",
+        "cost": "8689223987349919052"
+      },
+      "output": "1498867052517211056"
+    },
+    {
+      "input": {
+        "amount": "3372885985274285005",
+        "bucketAmount": "11784162381282333760",
+        "cost": "2810385031442865720"
+      },
+      "output": "804393895728613605"
+    },
+    {
+      "input": {
+        "amount": "2407533066358339570",
+        "bucketAmount": "5454058948191259426",
+        "cost": "10271590959945769460"
+      },
+      "output": "4534090136370424053"
+    },
+    {
+      "input": {
+        "amount": "186354052738372494",
+        "bucketAmount": "2204167921098780140",
+        "cost": "18214595416029795055"
+      },
+      "output": "1539975081877990615"
+    },
+    {
+      "input": {
+        "amount": "1240660384777870781",
+        "bucketAmount": "15569648871912773627",
+        "cost": "5842854389519772851"
+      },
+      "output": "465585193008409417"
+    },
+    {
+      "input": {
+        "amount": "3247733584336289905",
+        "bucketAmount": "8523100485902242228",
+        "cost": "1582937940777550614"
+      },
+      "output": "603179643450978990"
+    },
+    {
+      "input": {
+        "amount": "2932897653321246214",
+        "bucketAmount": "11799314424502003996",
+        "cost": "9383458148724120622"
+      },
+      "output": "2332400120407218037"
+    },
+    {
+      "input": {
+        "amount": "2667049718917833067",
+        "bucketAmount": "7525068304253826919",
+        "cost": "50952426734475534"
+      },
+      "output": "18058660719869617"
+    },
+    {
+      "input": {
+        "amount": "16165711790402630375",
+        "bucketAmount": "17435641042998232325",
+        "cost": "496229650644088183"
+      },
+      "output": "460086640599081060"
+    },
+    {
+      "input": {
+        "amount": "5293775986432518605",
+        "bucketAmount": "10037447084193229283",
+        "cost": "14236352273977822783"
+      },
+      "output": "7508289624864831491"
+    },
+    {
+      "input": {
+        "amount": "10216630428430875389",
+        "bucketAmount": "16263860972865644935",
+        "cost": "18375542004741435980"
+      },
+      "output": "11543145990842326173"
+    },
+    {
+      "input": {
+        "amount": "3619853813945926449",
+        "bucketAmount": "9143696463500382872",
+        "cost": "6324542159367351966"
+      },
+      "output": "2503792437602798794"
+    },
+    {
+      "input": {
+        "amount": "1232625722904779691",
+        "bucketAmount": "6267620502870235391",
+        "cost": "13606644452324188783"
+      },
+      "output": "2675959711771601211"
+    },
+    {
+      "input": {
+        "amount": "966594100329227464",
+        "bucketAmount": "15159294794566673719",
+        "cost": "5408745387976538052"
+      },
+      "output": "344874972948930210"
+    },
+    {
+      "input": {
+        "amount": "8615383097488322302",
+        "bucketAmount": "14930289821477632077",
+        "cost": "14298980297379081491"
+      },
+      "output": "8251091883571099024"
+    },
+    {
+      "input": {
+        "amount": "1296669762147749335",
+        "bucketAmount": "2479888721296814203",
+        "cost": "15459403824610061636"
+      },
+      "output": "8083322976573145167"
+    },
+    {
+      "input": {
+        "amount": "10403198075170095701",
+        "bucketAmount": "17796489816816394627",
+        "cost": "7646236048878983160"
+      },
+      "output": "4469718970694404989"
+    },
+    {
+      "input": {
+        "amount": "2655696499133906510",
+        "bucketAmount": "10672472736730101955",
+        "cost": "1873475654385568533"
+      },
+      "output": "466188376330183757"
+    },
+    {
+      "input": {
+        "amount": "2309291643518019599",
+        "bucketAmount": "2519194685310887401",
+        "cost": "2087885274295721738"
+      },
+      "output": "1913919573056111354"
+    },
+    {
+      "input": {
+        "amount": "5648222316809815021",
+        "bucketAmount": "6184895459323116148",
+        "cost": "1834939348006080060"
+      },
+      "output": "1675718764134884814"
+    },
+    {
+      "input": {
+        "amount": "4134771507083859306",
+        "bucketAmount": "15831200488204810300",
+        "cost": "16209301791591285820"
+      },
+      "output": "4233523493529768276"
+    },
+    {
+      "input": {
+        "amount": "1988864807594083744",
+        "bucketAmount": "14864013284410551351",
+        "cost": "18131223822158276896"
+      },
+      "output": "2426030728613689446"
+    },
+    {
+      "input": {
+        "amount": "2057222403287146119",
+        "bucketAmount": "13737190598818090451",
+        "cost": "9054003615886583895"
+      },
+      "output": "1355888523498192322"
+    },
+    {
+      "input": {
+        "amount": "4482446084977455200",
+        "bucketAmount": "14216445454047904677",
+        "cost": "790104560046025504"
+      },
+      "output": "249120014095557734"
+    },
+    {
+      "input": {
+        "amount": "2909817673728619898",
+        "bucketAmount": "14311406540175800303",
+        "cost": "17638190620536196751"
+      },
+      "output": "3586224642291528342"
+    },
+    {
+      "input": {
+        "amount": "3767898150479729380",
+        "bucketAmount": "7704929795791215945",
+        "cost": "5200968529688587353"
+      },
+      "output": "2543400163674629173"
+    }
+  ],
+  "errors": [
+    {
+      "error": "MathOverflow",
+      "formula": "majorBuy",
+      "input": {
+        "amount": "18446744073709551615",
+        "decimals": 18,
+        "solExponent": 0,
+        "solPrice": "9223372036854775807",
+        "tokenExponent": -18,
+        "tokenPrice": "85000000"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "majorBuy",
+      "input": {
+        "amount": "5000000000",
+        "decimals": 255,
+        "solExponent": -8,
+        "solPrice": "10901000000",
+        "tokenExponent": -8,
+        "tokenPrice": "85000000"
+      }
+    },
+    {
+      "error": "OracleInvalid",
+      "formula": "majorBuy",
+      "input": {
+        "amount": "5000000000",
+        "decimals": 6,
+        "solExponent": -8,
+        "solPrice": "0",
+        "tokenExponent": -8,
+        "tokenPrice": "85000000"
+      }
+    },
+    {
+      "error": "OracleInvalid",
+      "formula": "poolBuy",
+      "input": {
+        "amount": "1500000000",
+        "baseReserve": "500000000000000",
+        "quoteReserve": "400000000000",
+        "virtualQuoteReserve": "-400000000000"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "poolBuy",
+      "input": {
+        "amount": "1500000000",
+        "baseReserve": "500000000000000",
+        "quoteReserve": "400000000000",
+        "virtualQuoteReserve": "170141183460469231731687303715884105727"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "poolSell",
+      "input": {
+        "amount": "18446744073709551615",
+        "baseReserve": "500000000000000",
+        "quoteReserve": "400000000000",
+        "virtualQuoteReserve": "170141183460469231731687303315884105727"
+      }
+    },
+    {
+      "error": "InvalidArgument",
+      "formula": "book",
+      "input": {
+        "amount": "0",
+        "bucketAmount": "1",
+        "cost": "1"
+      }
+    },
+    {
+      "error": "InvalidArgument",
+      "formula": "book",
+      "input": {
+        "amount": "2",
+        "bucketAmount": "1",
+        "cost": "1"
+      }
+    },
+    {
+      "error": "OracleInvalid",
+      "formula": "poolSell",
+      "input": {
+        "amount": "0",
+        "baseReserve": "0",
+        "quoteReserve": "1",
+        "virtualQuoteReserve": "0"
+      }
+    },
+    {
+      "error": "OracleInvalid",
+      "formula": "meteoraBuy",
+      "input": {
+        "amount": "0",
+        "slipBps": 0,
+        "sqrtPrice": "0"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "meteoraBuy",
+      "input": {
+        "amount": "2",
+        "slipBps": 0,
+        "sqrtPrice": "1"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "meteoraBuy",
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 150,
+        "sqrtPrice": "9223372036854775808"
+      }
+    },
+    {
+      "error": "MathOverflow",
+      "formula": "meteoraBuy",
+      "input": {
+        "amount": "10000",
+        "slipBps": 10001,
+        "sqrtPrice": "18446744073709551616"
+      }
+    }
+  ],
+  "majorBuy": [
+    {
+      "input": {
+        "amount": "5000000000",
+        "decimals": 6,
+        "solExponent": -8,
+        "solPrice": "10901000000",
+        "tokenExponent": -8,
+        "tokenPrice": "85000000"
+      },
+      "output": {
+        "expected": "641235294",
+        "minOut": "631616764"
+      }
+    },
+    {
+      "input": {
+        "amount": "9932095101788700388",
+        "decimals": 6,
+        "solExponent": -6,
+        "solPrice": "475115935019",
+        "tokenExponent": -3,
+        "tokenPrice": "409081557962"
+      },
+      "output": {
+        "expected": "11535344380942",
+        "minOut": "11362314215227"
+      }
+    },
+    {
+      "input": {
+        "amount": "15180560314229007755",
+        "decimals": 9,
+        "solExponent": -18,
+        "solPrice": "513082907594",
+        "tokenExponent": -15,
+        "tokenPrice": "937631027868"
+      },
+      "output": {
+        "expected": "8306984083751148",
+        "minOut": "8182379322494880"
+      }
+    },
+    {
+      "input": {
+        "amount": "8139920813796722659",
+        "decimals": 16,
+        "solExponent": -18,
+        "solPrice": "300233451067",
+        "tokenExponent": -11,
+        "tokenPrice": "513927133872"
+      },
+      "output": {
+        "expected": "4755297699356289011",
+        "minOut": "4683968233865944675"
+      }
+    },
+    {
+      "input": {
+        "amount": "12378438489119618690",
+        "decimals": 1,
+        "solExponent": -10,
+        "solPrice": "748048139702",
+        "tokenExponent": -12,
+        "tokenPrice": "479319534091"
+      },
+      "output": {
+        "expected": "19318361188349",
+        "minOut": "19028585770523"
+      }
+    },
+    {
+      "input": {
+        "amount": "12889152708416612617",
+        "decimals": 4,
+        "solExponent": -10,
+        "solPrice": "817373040598",
+        "tokenExponent": -7,
+        "tokenPrice": "754274842092"
+      },
+      "output": {
+        "expected": "139673834418",
+        "minOut": "137578726901"
+      }
+    },
+    {
+      "input": {
+        "amount": "17032267625901757172",
+        "decimals": 10,
+        "solExponent": -15,
+        "solPrice": "615733539383",
+        "tokenExponent": -5,
+        "tokenPrice": "643571754907"
+      },
+      "output": {
+        "expected": "16295523147",
+        "minOut": "16051090299"
+      }
+    },
+    {
+      "input": {
+        "amount": "630770818928973760",
+        "decimals": 1,
+        "solExponent": -5,
+        "solPrice": "537686297524",
+        "tokenExponent": -8,
+        "tokenPrice": "78583440271"
+      },
+      "output": {
+        "expected": "43158816290874",
+        "minOut": "42511434046510"
+      }
+    },
+    {
+      "input": {
+        "amount": "7856471589386020152",
+        "decimals": 5,
+        "solExponent": -16,
+        "solPrice": "16013759986",
+        "tokenExponent": -14,
+        "tokenPrice": "127112674700"
+      },
+      "output": {
+        "expected": "989764794629",
+        "minOut": "974918322709"
+      }
+    },
+    {
+      "input": {
+        "amount": "17844933393892568663",
+        "decimals": 6,
+        "solExponent": -18,
+        "solPrice": "157998112604",
+        "tokenExponent": -3,
+        "tokenPrice": "770967817525"
+      },
+      "output": {
+        "expected": "3",
+        "minOut": "2"
+      }
+    },
+    {
+      "input": {
+        "amount": "1557066262131682986",
+        "decimals": 3,
+        "solExponent": -15,
+        "solPrice": "869257330384",
+        "tokenExponent": 0,
+        "tokenPrice": "759942411198"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "12308708235075347000",
+        "decimals": 0,
+        "solExponent": -4,
+        "solPrice": "602112834243",
+        "tokenExponent": -13,
+        "tokenPrice": "597775872358"
+      },
+      "output": {
+        "expected": "12398009929803396166",
+        "minOut": "12212039780856345223"
+      }
+    },
+    {
+      "input": {
+        "amount": "9823093727884602977",
+        "decimals": 7,
+        "solExponent": -11,
+        "solPrice": "570693267577",
+        "tokenExponent": -2,
+        "tokenPrice": "317325636236"
+      },
+      "output": {
+        "expected": "176663112",
+        "minOut": "174013165"
+      }
+    },
+    {
+      "input": {
+        "amount": "17785890070320464617",
+        "decimals": 10,
+        "solExponent": -10,
+        "solPrice": "7335090103",
+        "tokenExponent": -3,
+        "tokenPrice": "590522211191"
+      },
+      "output": {
+        "expected": "220924977512",
+        "minOut": "217611102849"
+      }
+    },
+    {
+      "input": {
+        "amount": "3023906352697459318",
+        "decimals": 10,
+        "solExponent": -5,
+        "solPrice": "586268088554",
+        "tokenExponent": -4,
+        "tokenPrice": "308961095414"
+      },
+      "output": {
+        "expected": "5738003339827313382",
+        "minOut": "5651933289729903681"
+      }
+    },
+    {
+      "input": {
+        "amount": "14937439218931580178",
+        "decimals": 2,
+        "solExponent": -12,
+        "solPrice": "351873451296",
+        "tokenExponent": -5,
+        "tokenPrice": "50871081317"
+      },
+      "output": {
+        "expected": "1033217",
+        "minOut": "1017718"
+      }
+    },
+    {
+      "input": {
+        "amount": "15047219096347102373",
+        "decimals": 2,
+        "solExponent": -1,
+        "solPrice": "190014442692",
+        "tokenExponent": -5,
+        "tokenPrice": "71752136085"
+      },
+      "output": {
+        "expected": "39848137026467377",
+        "minOut": "39250414971070366"
+      }
+    },
+    {
+      "input": {
+        "amount": "18318436277788396437",
+        "decimals": 1,
+        "solExponent": -15,
+        "solPrice": "824508751459",
+        "tokenExponent": -7,
+        "tokenPrice": "846792357976"
+      },
+      "output": {
+        "expected": "1783",
+        "minOut": "1756"
+      }
+    },
+    {
+      "input": {
+        "amount": "14939412943571510785",
+        "decimals": 12,
+        "solExponent": -9,
+        "solPrice": "491781741729",
+        "tokenExponent": -2,
+        "tokenPrice": "696626594595"
+      },
+      "output": {
+        "expected": "1054643990740788",
+        "minOut": "1038824330879676"
+      }
+    },
+    {
+      "input": {
+        "amount": "8649260032153369716",
+        "decimals": 3,
+        "solExponent": -2,
+        "solPrice": "904353698285",
+        "tokenExponent": -4,
+        "tokenPrice": "709798798079"
+      },
+      "output": {
+        "expected": "1102001062649863",
+        "minOut": "1085471046710115"
+      }
+    },
+    {
+      "input": {
+        "amount": "17017366876052407316",
+        "decimals": 10,
+        "solExponent": -13,
+        "solPrice": "904493388881",
+        "tokenExponent": -10,
+        "tokenPrice": "257446284709"
+      },
+      "output": {
+        "expected": "597876013357509127",
+        "minOut": "588907873157146490"
+      }
+    },
+    {
+      "input": {
+        "amount": "8458542893344618067",
+        "decimals": 15,
+        "solExponent": -14,
+        "solPrice": "240630336533",
+        "tokenExponent": -6,
+        "tokenPrice": "411036922486"
+      },
+      "output": {
+        "expected": "49518228452424647",
+        "minOut": "48775455025638277"
+      }
+    },
+    {
+      "input": {
+        "amount": "3143584145091847265",
+        "decimals": 6,
+        "solExponent": -18,
+        "solPrice": "610302594157",
+        "tokenExponent": -1,
+        "tokenPrice": "82448659220"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "10007393258870975279",
+        "decimals": 8,
+        "solExponent": -15,
+        "solPrice": "520986918230",
+        "tokenExponent": -10,
+        "tokenPrice": "488098912755"
+      },
+      "output": {
+        "expected": "10681689381414",
+        "minOut": "10521464040692"
+      }
+    },
+    {
+      "input": {
+        "amount": "10360022457450790119",
+        "decimals": 6,
+        "solExponent": -12,
+        "solPrice": "571368879128",
+        "tokenExponent": -8,
+        "tokenPrice": "783969202190"
+      },
+      "output": {
+        "expected": "755054459118",
+        "minOut": "743728642231"
+      }
+    },
+    {
+      "input": {
+        "amount": "15878010302056269705",
+        "decimals": 4,
+        "solExponent": -4,
+        "solPrice": "119306775526",
+        "tokenExponent": -4,
+        "tokenPrice": "797494143942"
+      },
+      "output": {
+        "expected": "23753832241866",
+        "minOut": "23397524758238"
+      }
+    },
+    {
+      "input": {
+        "amount": "4046575080041969074",
+        "decimals": 3,
+        "solExponent": -13,
+        "solPrice": "225523471605",
+        "tokenExponent": -14,
+        "tokenPrice": "538646119807"
+      },
+      "output": {
+        "expected": "16942434496480",
+        "minOut": "16688297979032"
+      }
+    },
+    {
+      "input": {
+        "amount": "16938501256753870719",
+        "decimals": 0,
+        "solExponent": -14,
+        "solPrice": "385914068447",
+        "tokenExponent": -16,
+        "tokenPrice": "741101860708"
+      },
+      "output": {
+        "expected": "882038796548",
+        "minOut": "868808214599"
+      }
+    },
+    {
+      "input": {
+        "amount": "15603181907166970262",
+        "decimals": 6,
+        "solExponent": -4,
+        "solPrice": "497128927240",
+        "tokenExponent": 0,
+        "tokenPrice": "259539844638"
+      },
+      "output": {
+        "expected": "2988671390267",
+        "minOut": "2943841319412"
+      }
+    },
+    {
+      "input": {
+        "amount": "13825368802853837088",
+        "decimals": 13,
+        "solExponent": -14,
+        "solPrice": "748322217200",
+        "tokenExponent": -9,
+        "tokenPrice": "465069727903"
+      },
+      "output": {
+        "expected": "2224576233505598541",
+        "minOut": "2191207590003014562"
+      }
+    },
+    {
+      "input": {
+        "amount": "16948795961655265861",
+        "decimals": 5,
+        "solExponent": -18,
+        "solPrice": "812885638193",
+        "tokenExponent": -15,
+        "tokenPrice": "547626276827"
+      },
+      "output": {
+        "expected": "2515845824952",
+        "minOut": "2478108137577"
+      }
+    },
+    {
+      "input": {
+        "amount": "4596753598446703100",
+        "decimals": 6,
+        "solExponent": -5,
+        "solPrice": "720912375677",
+        "tokenExponent": 0,
+        "tokenPrice": "899864205205"
+      },
+      "output": {
+        "expected": "36826184860",
+        "minOut": "36273792087"
+      }
+    },
+    {
+      "input": {
+        "amount": "18030345162603879860",
+        "decimals": 12,
+        "solExponent": -12,
+        "solPrice": "330597357875",
+        "tokenExponent": -1,
+        "tokenPrice": "475355396345"
+      },
+      "output": {
+        "expected": "125396377492",
+        "minOut": "123515431829"
+      }
+    },
+    {
+      "input": {
+        "amount": "2358939752172401766",
+        "decimals": 3,
+        "solExponent": -14,
+        "solPrice": "169175820008",
+        "tokenExponent": -12,
+        "tokenPrice": "291690757095"
+      },
+      "output": {
+        "expected": "13681460835",
+        "minOut": "13476238922"
+      }
+    },
+    {
+      "input": {
+        "amount": "14657094799452915662",
+        "decimals": 10,
+        "solExponent": -17,
+        "solPrice": "56210087262",
+        "tokenExponent": -2,
+        "tokenPrice": "167443309770"
+      },
+      "output": {
+        "expected": "49203",
+        "minOut": "48464"
+      }
+    },
+    {
+      "input": {
+        "amount": "18284868941107981583",
+        "decimals": 4,
+        "solExponent": -6,
+        "solPrice": "831454305339",
+        "tokenExponent": -7,
+        "tokenPrice": "189756570817"
+      },
+      "output": {
+        "expected": "8011861164114996",
+        "minOut": "7891683246653271"
+      }
+    },
+    {
+      "input": {
+        "amount": "14776581988025117175",
+        "decimals": 10,
+        "solExponent": -12,
+        "solPrice": "883351435425",
+        "tokenExponent": -1,
+        "tokenPrice": "836046207475"
+      },
+      "output": {
+        "expected": "1561267163",
+        "minOut": "1537848155"
+      }
+    },
+    {
+      "input": {
+        "amount": "18272620642186840317",
+        "decimals": 4,
+        "solExponent": -15,
+        "solPrice": "635649256196",
+        "tokenExponent": -16,
+        "tokenPrice": "775518529293"
+      },
+      "output": {
+        "expected": "1497704733186260",
+        "minOut": "1475239162188466"
+      }
+    },
+    {
+      "input": {
+        "amount": "8483537961506265242",
+        "decimals": 4,
+        "solExponent": -7,
+        "solPrice": "53074993516",
+        "tokenExponent": -5,
+        "tokenPrice": "248039550869"
+      },
+      "output": {
+        "expected": "181529002420",
+        "minOut": "178806067383"
+      }
+    },
+    {
+      "input": {
+        "amount": "13489129116946533383",
+        "decimals": 2,
+        "solExponent": -15,
+        "solPrice": "537986121678",
+        "tokenExponent": -1,
+        "tokenPrice": "668580193420"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "8617411733709645175",
+        "decimals": 4,
+        "solExponent": -9,
+        "solPrice": "500631036766",
+        "tokenExponent": -8,
+        "tokenPrice": "969471565462"
+      },
+      "output": {
+        "expected": "4449995156310",
+        "minOut": "4383245228965"
+      }
+    },
+    {
+      "input": {
+        "amount": "12876948544226059672",
+        "decimals": 1,
+        "solExponent": -13,
+        "solPrice": "835060749439",
+        "tokenExponent": -1,
+        "tokenPrice": "267992409058"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "10490600478624408037",
+        "decimals": 10,
+        "solExponent": -17,
+        "solPrice": "414675811379",
+        "tokenExponent": -7,
+        "tokenPrice": "242568363252"
+      },
+      "output": {
+        "expected": "17933906165",
+        "minOut": "17664897572"
+      }
+    },
+    {
+      "input": {
+        "amount": "12997415197616573225",
+        "decimals": 6,
+        "solExponent": -17,
+        "solPrice": "595565036723",
+        "tokenExponent": -1,
+        "tokenPrice": "492424222961"
+      },
+      "output": {
+        "expected": "1",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "12448808004067625200",
+        "decimals": 7,
+        "solExponent": -17,
+        "solPrice": "366219561078",
+        "tokenExponent": -8,
+        "tokenPrice": "761122477224"
+      },
+      "output": {
+        "expected": "59898336",
+        "minOut": "58999860"
+      }
+    },
+    {
+      "input": {
+        "amount": "14675103948022817355",
+        "decimals": 17,
+        "solExponent": -14,
+        "solPrice": "157297196745",
+        "tokenExponent": -4,
+        "tokenPrice": "819049468023"
+      },
+      "output": {
+        "expected": "28183312523690568",
+        "minOut": "27760562835835209"
+      }
+    },
+    {
+      "input": {
+        "amount": "16783383312591730746",
+        "decimals": 1,
+        "solExponent": -17,
+        "solPrice": "303988059115",
+        "tokenExponent": -1,
+        "tokenPrice": "403129397859"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "2334183549057307266",
+        "decimals": 2,
+        "solExponent": -17,
+        "solPrice": "289950194402",
+        "tokenExponent": -3,
+        "tokenPrice": "89189280704"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "15040592710661858452",
+        "decimals": 9,
+        "solExponent": -3,
+        "solPrice": "599679186777",
+        "tokenExponent": 0,
+        "tokenPrice": "403445920419"
+      },
+      "output": {
+        "expected": "22356231526660416",
+        "minOut": "22020888053760509"
+      }
+    },
+    {
+      "input": {
+        "amount": "2097846466453208036",
+        "decimals": 11,
+        "solExponent": -15,
+        "solPrice": "340164737732",
+        "tokenExponent": -13,
+        "tokenPrice": "380698381301"
+      },
+      "output": {
+        "expected": "1874484967927506033",
+        "minOut": "1846367693408593442"
+      }
+    },
+    {
+      "input": {
+        "amount": "10232779250324538754",
+        "decimals": 0,
+        "solExponent": -16,
+        "solPrice": "584209596200",
+        "tokenExponent": -13,
+        "tokenPrice": "183735934317"
+      },
+      "output": {
+        "expected": "32536301",
+        "minOut": "32048256"
+      }
+    },
+    {
+      "input": {
+        "amount": "6019688106522660558",
+        "decimals": 6,
+        "solExponent": -7,
+        "solPrice": "76815847305",
+        "tokenExponent": -11,
+        "tokenPrice": "388068674865"
+      },
+      "output": {
+        "expected": "11915608560140289177",
+        "minOut": "11736874431738184839"
+      }
+    },
+    {
+      "input": {
+        "amount": "17360687760062510269",
+        "decimals": 15,
+        "solExponent": -16,
+        "solPrice": "891473877006",
+        "tokenExponent": -2,
+        "tokenPrice": "704469212081"
+      },
+      "output": {
+        "expected": "219691639599",
+        "minOut": "216396265005"
+      }
+    },
+    {
+      "input": {
+        "amount": "10893831097792949484",
+        "decimals": 5,
+        "solExponent": -7,
+        "solPrice": "799174132840",
+        "tokenExponent": -1,
+        "tokenPrice": "668915334128"
+      },
+      "output": {
+        "expected": "1301520174",
+        "minOut": "1281997371"
+      }
+    },
+    {
+      "input": {
+        "amount": "6492728342036781103",
+        "decimals": 11,
+        "solExponent": -15,
+        "solPrice": "432276574793",
+        "tokenExponent": -8,
+        "tokenPrice": "289606054990"
+      },
+      "output": {
+        "expected": "96912834534968",
+        "minOut": "95459142016943"
+      }
+    },
+    {
+      "input": {
+        "amount": "3079928442732189343",
+        "decimals": 8,
+        "solExponent": -11,
+        "solPrice": "93957952831",
+        "tokenExponent": -5,
+        "tokenPrice": "192390675012"
+      },
+      "output": {
+        "expected": "150414655661",
+        "minOut": "148158435826"
+      }
+    },
+    {
+      "input": {
+        "amount": "8471038340630443297",
+        "decimals": 4,
+        "solExponent": -7,
+        "solPrice": "788106545747",
+        "tokenExponent": -12,
+        "tokenPrice": "999348653210"
+      },
+      "output": {
+        "expected": "6680432043491999083",
+        "minOut": "6580225562839619096"
+      }
+    },
+    {
+      "input": {
+        "amount": "6546254148268586133",
+        "decimals": 11,
+        "solExponent": -18,
+        "solPrice": "648489819280",
+        "tokenExponent": -2,
+        "tokenPrice": "16188721237"
+      },
+      "output": {
+        "expected": "2622306",
+        "minOut": "2582971"
+      }
+    },
+    {
+      "input": {
+        "amount": "10091247982955287164",
+        "decimals": 3,
+        "solExponent": -2,
+        "solPrice": "295811645995",
+        "tokenExponent": -8,
+        "tokenPrice": "730634785479"
+      },
+      "output": {
+        "expected": "4085637223013830323",
+        "minOut": "4024352664668622868"
+      }
+    },
+    {
+      "input": {
+        "amount": "17424966409513376767",
+        "decimals": 3,
+        "solExponent": -15,
+        "solPrice": "190259523080",
+        "tokenExponent": -8,
+        "tokenPrice": "839672340601"
+      },
+      "output": {
+        "expected": "394828",
+        "minOut": "388905"
+      }
+    },
+    {
+      "input": {
+        "amount": "14521862387201838746",
+        "decimals": 2,
+        "solExponent": -10,
+        "solPrice": "741470100884",
+        "tokenExponent": -8,
+        "tokenPrice": "545636453794"
+      },
+      "output": {
+        "expected": "19733884520",
+        "minOut": "19437876252"
+      }
+    },
+    {
+      "input": {
+        "amount": "3089995620664082718",
+        "decimals": 6,
+        "solExponent": -4,
+        "solPrice": "742643762696",
+        "tokenExponent": -4,
+        "tokenPrice": "282506324377"
+      },
+      "output": {
+        "expected": "8122883547845141",
+        "minOut": "8001040294627463"
+      }
+    },
+    {
+      "input": {
+        "amount": "17431576687248097265",
+        "decimals": 0,
+        "solExponent": -3,
+        "solPrice": "428182513469",
+        "tokenExponent": -9,
+        "tokenPrice": "108593414952"
+      },
+      "output": {
+        "expected": "68732494718696106",
+        "minOut": "67701507297915664"
+      }
+    },
+    {
+      "input": {
+        "amount": "12089286142548903767",
+        "decimals": 10,
+        "solExponent": -15,
+        "solPrice": "141555633795",
+        "tokenExponent": -2,
+        "tokenPrice": "318699272350"
+      },
+      "output": {
+        "expected": "5369659",
+        "minOut": "5289114"
+      }
+    },
+    {
+      "input": {
+        "amount": "10601939233634478355",
+        "decimals": 2,
+        "solExponent": -18,
+        "solPrice": "930794187113",
+        "tokenExponent": -4,
+        "tokenPrice": "645225475148"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    }
+  ],
+  "majorSell": [
+    {
+      "input": {
+        "amount": "641235294",
+        "decimals": 6,
+        "solExponent": -8,
+        "solPrice": "10901000000",
+        "tokenExponent": -8,
+        "tokenPrice": "85000000"
+      },
+      "output": {
+        "expected": "4999999999",
+        "minOut": "4924999999"
+      }
+    },
+    {
+      "input": {
+        "amount": "1756481314934970848",
+        "decimals": 14,
+        "solExponent": 0,
+        "solPrice": "519270158302",
+        "tokenExponent": 0,
+        "tokenPrice": "129034543389"
+      },
+      "output": {
+        "expected": "4364717687322",
+        "minOut": "4299246922012"
+      }
+    },
+    {
+      "input": {
+        "amount": "9466545242891655096",
+        "decimals": 17,
+        "solExponent": -6,
+        "solPrice": "376113869155",
+        "tokenExponent": -1,
+        "tokenPrice": "566341633732"
+      },
+      "output": {
+        "expected": "14254456265338388",
+        "minOut": "14040639421358312"
+      }
+    },
+    {
+      "input": {
+        "amount": "12660431694564670693",
+        "decimals": 16,
+        "solExponent": 0,
+        "solPrice": "605018858835",
+        "tokenExponent": -17,
+        "tokenPrice": "569205947617"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "4546020264542739074",
+        "decimals": 16,
+        "solExponent": -6,
+        "solPrice": "616857099271",
+        "tokenExponent": -13,
+        "tokenPrice": "822208049150"
+      },
+      "output": {
+        "expected": "60593",
+        "minOut": "59684"
+      }
+    },
+    {
+      "input": {
+        "amount": "1881948191176676047",
+        "decimals": 13,
+        "solExponent": -5,
+        "solPrice": "816885078812",
+        "tokenExponent": -1,
+        "tokenPrice": "729020024390"
+      },
+      "output": {
+        "expected": "1679523781028796616",
+        "minOut": "1654330924313364666"
+      }
+    },
+    {
+      "input": {
+        "amount": "9784282532200351985",
+        "decimals": 13,
+        "solExponent": -2,
+        "solPrice": "108403444332",
+        "tokenExponent": -1,
+        "tokenPrice": "966928159890"
+      },
+      "output": {
+        "expected": "87273041580945585",
+        "minOut": "85963945957231401"
+      }
+    },
+    {
+      "input": {
+        "amount": "14935794348328466824",
+        "decimals": 7,
+        "solExponent": -5,
+        "solPrice": "537077796080",
+        "tokenExponent": -10,
+        "tokenPrice": "173545148026"
+      },
+      "output": {
+        "expected": "4826180974125512",
+        "minOut": "4753788259513629"
+      }
+    },
+    {
+      "input": {
+        "amount": "13594913220691691615",
+        "decimals": 6,
+        "solExponent": -7,
+        "solPrice": "943530866763",
+        "tokenExponent": -11,
+        "tokenPrice": "794492128922"
+      },
+      "output": {
+        "expected": "1144748086967486423",
+        "minOut": "1127576865662974126"
+      }
+    },
+    {
+      "input": {
+        "amount": "2015526413755018897",
+        "decimals": 14,
+        "solExponent": -10,
+        "solPrice": "914836217544",
+        "tokenExponent": -13,
+        "tokenPrice": "998893976988"
+      },
+      "output": {
+        "expected": "22007187259",
+        "minOut": "21677079450"
+      }
+    },
+    {
+      "input": {
+        "amount": "13546787764621117436",
+        "decimals": 8,
+        "solExponent": -2,
+        "solPrice": "628558647457",
+        "tokenExponent": -3,
+        "tokenPrice": "720945989093"
+      },
+      "output": {
+        "expected": "15537933243796241164",
+        "minOut": "15304864245139297546"
+      }
+    },
+    {
+      "input": {
+        "amount": "18260463320336755345",
+        "decimals": 17,
+        "solExponent": -9,
+        "solPrice": "197268019255",
+        "tokenExponent": -9,
+        "tokenPrice": "556150022113"
+      },
+      "output": {
+        "expected": "514810110516",
+        "minOut": "507087958858"
+      }
+    },
+    {
+      "input": {
+        "amount": "13186809042536325857",
+        "decimals": 10,
+        "solExponent": -13,
+        "solPrice": "213614382886",
+        "tokenExponent": -18,
+        "tokenPrice": "484892956224"
+      },
+      "output": {
+        "expected": "29933334700637",
+        "minOut": "29484334680127"
+      }
+    },
+    {
+      "input": {
+        "amount": "4696507228525535389",
+        "decimals": 0,
+        "solExponent": -6,
+        "solPrice": "504619097138",
+        "tokenExponent": -17,
+        "tokenPrice": "646077058311"
+      },
+      "output": {
+        "expected": "60130613204127763",
+        "minOut": "59228654006065846"
+      }
+    },
+    {
+      "input": {
+        "amount": "13081986050652138815",
+        "decimals": 14,
+        "solExponent": -16,
+        "solPrice": "941113035077",
+        "tokenExponent": -15,
+        "tokenPrice": "156331232889"
+      },
+      "output": {
+        "expected": "217308966267566",
+        "minOut": "214049331773552"
+      }
+    },
+    {
+      "input": {
+        "amount": "9916321497105172147",
+        "decimals": 13,
+        "solExponent": -12,
+        "solPrice": "415476588135",
+        "tokenExponent": -10,
+        "tokenPrice": "574123345372"
+      },
+      "output": {
+        "expected": "137027977852085931",
+        "minOut": "134972558184304642"
+      }
+    },
+    {
+      "input": {
+        "amount": "3489640255546065520",
+        "decimals": 13,
+        "solExponent": -2,
+        "solPrice": "790518758905",
+        "tokenExponent": -12,
+        "tokenPrice": "829597915542"
+      },
+      "output": {
+        "expected": "36621",
+        "minOut": "36071"
+      }
+    },
+    {
+      "input": {
+        "amount": "5552142677815811467",
+        "decimals": 10,
+        "solExponent": -7,
+        "solPrice": "634612482984",
+        "tokenExponent": -14,
+        "tokenPrice": "18155213213"
+      },
+      "output": {
+        "expected": "1588376163",
+        "minOut": "1564550520"
+      }
+    },
+    {
+      "input": {
+        "amount": "10067043083072569587",
+        "decimals": 6,
+        "solExponent": 0,
+        "solPrice": "527384547232",
+        "tokenExponent": -8,
+        "tokenPrice": "662991601520"
+      },
+      "output": {
+        "expected": "126555945775199",
+        "minOut": "124657606588571"
+      }
+    },
+    {
+      "input": {
+        "amount": "2235965332044228234",
+        "decimals": 15,
+        "solExponent": -1,
+        "solPrice": "73159669516",
+        "tokenExponent": -16,
+        "tokenPrice": "180399201833"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "4346697822345376640",
+        "decimals": 17,
+        "solExponent": -5,
+        "solPrice": "166995710584",
+        "tokenExponent": -11,
+        "tokenPrice": "757252809116"
+      },
+      "output": {
+        "expected": "197103",
+        "minOut": "194146"
+      }
+    },
+    {
+      "input": {
+        "amount": "807379441810087362",
+        "decimals": 18,
+        "solExponent": -5,
+        "solPrice": "357877195843",
+        "tokenExponent": -6,
+        "tokenPrice": "942571695232"
+      },
+      "output": {
+        "expected": "212646409",
+        "minOut": "209456712"
+      }
+    },
+    {
+      "input": {
+        "amount": "13237354091385090716",
+        "decimals": 9,
+        "solExponent": -3,
+        "solPrice": "742311121783",
+        "tokenExponent": -5,
+        "tokenPrice": "250524913533"
+      },
+      "output": {
+        "expected": "44675162365671851",
+        "minOut": "44005034930186773"
+      }
+    },
+    {
+      "input": {
+        "amount": "4547531275174312917",
+        "decimals": 15,
+        "solExponent": -4,
+        "solPrice": "378291299771",
+        "tokenExponent": -18,
+        "tokenPrice": "445146158607"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "7080654857370084936",
+        "decimals": 15,
+        "solExponent": -8,
+        "solPrice": "131893939170",
+        "tokenExponent": -11,
+        "tokenPrice": "115006720455"
+      },
+      "output": {
+        "expected": "6174073645",
+        "minOut": "6081462540"
+      }
+    },
+    {
+      "input": {
+        "amount": "9442165650005237995",
+        "decimals": 4,
+        "solExponent": -10,
+        "solPrice": "248503857144",
+        "tokenExponent": -15,
+        "tokenPrice": "130965296486"
+      },
+      "output": {
+        "expected": "4976164305998249521",
+        "minOut": "4901521841408275778"
+      }
+    },
+    {
+      "input": {
+        "amount": "17967373779063331103",
+        "decimals": 14,
+        "solExponent": -4,
+        "solPrice": "444050401832",
+        "tokenExponent": -7,
+        "tokenPrice": "254064508404"
+      },
+      "output": {
+        "expected": "102800762428",
+        "minOut": "101258750991"
+      }
+    },
+    {
+      "input": {
+        "amount": "4617361257244617235",
+        "decimals": 17,
+        "solExponent": -6,
+        "solPrice": "376616163378",
+        "tokenExponent": -9,
+        "tokenPrice": "557216715955"
+      },
+      "output": {
+        "expected": "68315466",
+        "minOut": "67290734"
+      }
+    },
+    {
+      "input": {
+        "amount": "4486333940388321800",
+        "decimals": 14,
+        "solExponent": -12,
+        "solPrice": "301657491747",
+        "tokenExponent": -17,
+        "tokenPrice": "213980021999"
+      },
+      "output": {
+        "expected": "318237027",
+        "minOut": "313463471"
+      }
+    },
+    {
+      "input": {
+        "amount": "4513773203845857060",
+        "decimals": 1,
+        "solExponent": -5,
+        "solPrice": "347716329044",
+        "tokenExponent": -16,
+        "tokenPrice": "669182295483"
+      },
+      "output": {
+        "expected": "8686785352139753",
+        "minOut": "8556483571857656"
+      }
+    },
+    {
+      "input": {
+        "amount": "2548232157327276483",
+        "decimals": 17,
+        "solExponent": -16,
+        "solPrice": "320888406877",
+        "tokenExponent": -15,
+        "tokenPrice": "190030898909"
+      },
+      "output": {
+        "expected": "150906931228",
+        "minOut": "148643327259"
+      }
+    },
+    {
+      "input": {
+        "amount": "7277247781684658259",
+        "decimals": 12,
+        "solExponent": -18,
+        "solPrice": "340840877163",
+        "tokenExponent": -17,
+        "tokenPrice": "752622296670"
+      },
+      "output": {
+        "expected": "160691375532075656",
+        "minOut": "158281004899094521"
+      }
+    },
+    {
+      "input": {
+        "amount": "16639830922795905187",
+        "decimals": 9,
+        "solExponent": -17,
+        "solPrice": "764509450396",
+        "tokenExponent": -18,
+        "tokenPrice": "775768007187"
+      },
+      "output": {
+        "expected": "1688487757505101748",
+        "minOut": "1663160441142525221"
+      }
+    },
+    {
+      "input": {
+        "amount": "16910011526125116929",
+        "decimals": 10,
+        "solExponent": -1,
+        "solPrice": "17476207843",
+        "tokenExponent": -17,
+        "tokenPrice": "317202458995"
+      },
+      "output": {
+        "expected": "3069",
+        "minOut": "3022"
+      }
+    },
+    {
+      "input": {
+        "amount": "2164100957073561801",
+        "decimals": 16,
+        "solExponent": -8,
+        "solPrice": "844062288913",
+        "tokenExponent": -6,
+        "tokenPrice": "550283478648"
+      },
+      "output": {
+        "expected": "14108781051426",
+        "minOut": "13897149335654"
+      }
+    },
+    {
+      "input": {
+        "amount": "13617325649306957594",
+        "decimals": 14,
+        "solExponent": -5,
+        "solPrice": "194581269643",
+        "tokenExponent": -15,
+        "tokenPrice": "376573568899"
+      },
+      "output": {
+        "expected": "26353",
+        "minOut": "25957"
+      }
+    },
+    {
+      "input": {
+        "amount": "10934877843702819408",
+        "decimals": 18,
+        "solExponent": 0,
+        "solPrice": "682203526573",
+        "tokenExponent": -7,
+        "tokenPrice": "495362307471"
+      },
+      "output": {
+        "expected": "794",
+        "minOut": "782"
+      }
+    },
+    {
+      "input": {
+        "amount": "2399095135768900180",
+        "decimals": 18,
+        "solExponent": -9,
+        "solPrice": "394501920180",
+        "tokenExponent": 0,
+        "tokenPrice": "632065113388"
+      },
+      "output": {
+        "expected": "3843794570952876792",
+        "minOut": "3786137652388583640"
+      }
+    },
+    {
+      "input": {
+        "amount": "18352295339821259605",
+        "decimals": 14,
+        "solExponent": -14,
+        "solPrice": "38431099412",
+        "tokenExponent": -11,
+        "tokenPrice": "713446460715"
+      },
+      "output": {
+        "expected": "3406975172847513089",
+        "minOut": "3355870545254800392"
+      }
+    },
+    {
+      "input": {
+        "amount": "12369251701729841546",
+        "decimals": 18,
+        "solExponent": -2,
+        "solPrice": "266367525767",
+        "tokenExponent": -1,
+        "tokenPrice": "552576321781"
+      },
+      "output": {
+        "expected": "256598682172",
+        "minOut": "252749701939"
+      }
+    },
+    {
+      "input": {
+        "amount": "12322088097332081062",
+        "decimals": 9,
+        "solExponent": -3,
+        "solPrice": "339359362648",
+        "tokenExponent": -16,
+        "tokenPrice": "696715609021"
+      },
+      "output": {
+        "expected": "2529764",
+        "minOut": "2491817"
+      }
+    },
+    {
+      "input": {
+        "amount": "1593073306439445041",
+        "decimals": 14,
+        "solExponent": -18,
+        "solPrice": "791644788538",
+        "tokenExponent": -18,
+        "tokenPrice": "138670195389"
+      },
+      "output": {
+        "expected": "2790541791867",
+        "minOut": "2748683664988"
+      }
+    },
+    {
+      "input": {
+        "amount": "6864790449103359516",
+        "decimals": 0,
+        "solExponent": -5,
+        "solPrice": "430333039860",
+        "tokenExponent": -15,
+        "tokenPrice": "445846566966"
+      },
+      "output": {
+        "expected": "711226648009512702",
+        "minOut": "700558248289370011"
+      }
+    },
+    {
+      "input": {
+        "amount": "8988948996916376199",
+        "decimals": 12,
+        "solExponent": -6,
+        "solPrice": "501374595048",
+        "tokenExponent": -17,
+        "tokenPrice": "544692670301"
+      },
+      "output": {
+        "expected": "97655",
+        "minOut": "96190"
+      }
+    },
+    {
+      "input": {
+        "amount": "14147197063183085685",
+        "decimals": 15,
+        "solExponent": -4,
+        "solPrice": "479964816366",
+        "tokenExponent": -17,
+        "tokenPrice": "692139018578"
+      },
+      "output": {
+        "expected": "2",
+        "minOut": "1"
+      }
+    },
+    {
+      "input": {
+        "amount": "15709966594682200283",
+        "decimals": 2,
+        "solExponent": -8,
+        "solPrice": "762652778836",
+        "tokenExponent": -15,
+        "tokenPrice": "125023729562"
+      },
+      "output": {
+        "expected": "2575377248292913313",
+        "minOut": "2536746589568519613"
+      }
+    },
+    {
+      "input": {
+        "amount": "9077153706150648211",
+        "decimals": 17,
+        "solExponent": -15,
+        "solPrice": "964655726447",
+        "tokenExponent": -14,
+        "tokenPrice": "377202450136"
+      },
+      "output": {
+        "expected": "354937468814",
+        "minOut": "349613406781"
+      }
+    },
+    {
+      "input": {
+        "amount": "4360834543203317152",
+        "decimals": 16,
+        "solExponent": -14,
+        "solPrice": "809784828208",
+        "tokenExponent": -8,
+        "tokenPrice": "81454932515"
+      },
+      "output": {
+        "expected": "43864922020305869",
+        "minOut": "43206948190001280"
+      }
+    },
+    {
+      "input": {
+        "amount": "14066364415193494084",
+        "decimals": 6,
+        "solExponent": -3,
+        "solPrice": "292931380179",
+        "tokenExponent": -11,
+        "tokenPrice": "735173488955"
+      },
+      "output": {
+        "expected": "353025278401757",
+        "minOut": "347729899225730"
+      }
+    },
+    {
+      "input": {
+        "amount": "12943819681056075777",
+        "decimals": 16,
+        "solExponent": -5,
+        "solPrice": "317164811943",
+        "tokenExponent": -7,
+        "tokenPrice": "634667554689"
+      },
+      "output": {
+        "expected": "25901430663",
+        "minOut": "25512909203"
+      }
+    },
+    {
+      "input": {
+        "amount": "17007678888652535692",
+        "decimals": 11,
+        "solExponent": -12,
+        "solPrice": "891353232372",
+        "tokenExponent": -17,
+        "tokenPrice": "899581930755"
+      },
+      "output": {
+        "expected": "1716468853946",
+        "minOut": "1690721821136"
+      }
+    },
+    {
+      "input": {
+        "amount": "10929328390057951284",
+        "decimals": 15,
+        "solExponent": -18,
+        "solPrice": "502831245971",
+        "tokenExponent": -17,
+        "tokenPrice": "752326628622"
+      },
+      "output": {
+        "expected": "163522550491407",
+        "minOut": "161069712234035"
+      }
+    },
+    {
+      "input": {
+        "amount": "15980856408197346935",
+        "decimals": 14,
+        "solExponent": -10,
+        "solPrice": "132206748567",
+        "tokenExponent": -15,
+        "tokenPrice": "527696248566"
+      },
+      "output": {
+        "expected": "6378674361",
+        "minOut": "6282994245"
+      }
+    },
+    {
+      "input": {
+        "amount": "14886479912676486148",
+        "decimals": 14,
+        "solExponent": -9,
+        "solPrice": "981752181950",
+        "tokenExponent": -13,
+        "tokenPrice": "42791542299"
+      },
+      "output": {
+        "expected": "648855634",
+        "minOut": "639122799"
+      }
+    },
+    {
+      "input": {
+        "amount": "13691067628211747203",
+        "decimals": 14,
+        "solExponent": -12,
+        "solPrice": "738271188358",
+        "tokenExponent": -14,
+        "tokenPrice": "387319097254"
+      },
+      "output": {
+        "expected": "718274265313",
+        "minOut": "707500151333"
+      }
+    },
+    {
+      "input": {
+        "amount": "7664852575419514975",
+        "decimals": 12,
+        "solExponent": -10,
+        "solPrice": "280088363784",
+        "tokenExponent": -8,
+        "tokenPrice": "393068524187"
+      },
+      "output": {
+        "expected": "1075664925607017042",
+        "minOut": "1059529951722911786"
+      }
+    },
+    {
+      "input": {
+        "amount": "16234982250994923395",
+        "decimals": 9,
+        "solExponent": -4,
+        "solPrice": "63451030901",
+        "tokenExponent": -7,
+        "tokenPrice": "13706733380"
+      },
+      "output": {
+        "expected": "3507091531587906",
+        "minOut": "3454485158614087"
+      }
+    },
+    {
+      "input": {
+        "amount": "12387497302005220618",
+        "decimals": 16,
+        "solExponent": 0,
+        "solPrice": "16660294075",
+        "tokenExponent": -14,
+        "tokenPrice": "418721456367"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "1341610507034532713",
+        "decimals": 3,
+        "solExponent": 0,
+        "solPrice": "62119321509",
+        "tokenExponent": -13,
+        "tokenPrice": "207085647393"
+      },
+      "output": {
+        "expected": "447249380143",
+        "minOut": "440540639440"
+      }
+    },
+    {
+      "input": {
+        "amount": "8627480673752699060",
+        "decimals": 13,
+        "solExponent": -6,
+        "solPrice": "734262024876",
+        "tokenExponent": -14,
+        "tokenPrice": "713742700392"
+      },
+      "output": {
+        "expected": "8386381",
+        "minOut": "8260585"
+      }
+    },
+    {
+      "input": {
+        "amount": "6178338418088782769",
+        "decimals": 5,
+        "solExponent": 0,
+        "solPrice": "916385088412",
+        "tokenExponent": -4,
+        "tokenPrice": "974942508074"
+      },
+      "output": {
+        "expected": "6573137024195329364",
+        "minOut": "6474539968832399423"
+      }
+    },
+    {
+      "input": {
+        "amount": "17761438521891147038",
+        "decimals": 3,
+        "solExponent": -3,
+        "solPrice": "697782779498",
+        "tokenExponent": -18,
+        "tokenPrice": "114650532344"
+      },
+      "output": {
+        "expected": "2918327080",
+        "minOut": "2874552173"
+      }
+    },
+    {
+      "input": {
+        "amount": "8267730203071129035",
+        "decimals": 12,
+        "solExponent": -8,
+        "solPrice": "810381710650",
+        "tokenExponent": -9,
+        "tokenPrice": "366373392048"
+      },
+      "output": {
+        "expected": "373783899516596",
+        "minOut": "368177141023847"
+      }
+    },
+    {
+      "input": {
+        "amount": "16646121292228193178",
+        "decimals": 17,
+        "solExponent": -7,
+        "solPrice": "609120871120",
+        "tokenExponent": 0,
+        "tokenPrice": "388161460898"
+      },
+      "output": {
+        "expected": "1060771854229186773",
+        "minOut": "1044860276415748971"
+      }
+    },
+    {
+      "input": {
+        "amount": "5647527151544107768",
+        "decimals": 15,
+        "solExponent": -16,
+        "solPrice": "34241735517",
+        "tokenExponent": -12,
+        "tokenPrice": "696245293501"
+      },
+      "output": {
+        "expected": "1148325030788682210",
+        "minOut": "1131100155326851976"
+      }
+    }
+  ],
+  "meteoraBuy": [
+    {
+      "input": {
+        "amount": "50000000",
+        "slipBps": 150,
+        "sqrtPrice": "128794468968736475"
+      },
+      "output": {
+        "expected": "994916785397",
+        "minOut": "979993033616"
+      }
+    },
+    {
+      "input": {
+        "amount": "50000000",
+        "slipBps": 100,
+        "sqrtPrice": "128794468968736475"
+      },
+      "output": {
+        "expected": "994916785397",
+        "minOut": "984967617543"
+      }
+    },
+    {
+      "input": {
+        "amount": "1",
+        "slipBps": 0,
+        "sqrtPrice": "128794468968736475"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "34",
+        "slipBps": 100,
+        "sqrtPrice": "128794468968736475"
+      },
+      "output": {
+        "expected": "656439",
+        "minOut": "649874"
+      }
+    },
+    {
+      "input": {
+        "amount": "300000000",
+        "slipBps": 150,
+        "sqrtPrice": "128794468968736475"
+      },
+      "output": {
+        "expected": "5969500712387",
+        "minOut": "5879958201701"
+      }
+    },
+    {
+      "input": {
+        "amount": "50000000",
+        "slipBps": 150,
+        "sqrtPrice": "125545362027818175"
+      },
+      "output": {
+        "expected": "1047079933723",
+        "minOut": "1031373734717"
+      }
+    },
+    {
+      "input": {
+        "amount": "50000000",
+        "slipBps": 100,
+        "sqrtPrice": "125545362027818175"
+      },
+      "output": {
+        "expected": "1047079933723",
+        "minOut": "1036609134385"
+      }
+    },
+    {
+      "input": {
+        "amount": "1",
+        "slipBps": 0,
+        "sqrtPrice": "125545362027818175"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "34",
+        "slipBps": 100,
+        "sqrtPrice": "125545362027818175"
+      },
+      "output": {
+        "expected": "690856",
+        "minOut": "683947"
+      }
+    },
+    {
+      "input": {
+        "amount": "300000000",
+        "slipBps": 150,
+        "sqrtPrice": "125545362027818175"
+      },
+      "output": {
+        "expected": "6282479602343",
+        "minOut": "6188242408307"
+      }
+    },
+    {
+      "input": {
+        "amount": "0",
+        "slipBps": 0,
+        "sqrtPrice": "1"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "1",
+        "slipBps": 0,
+        "sqrtPrice": "1"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "34",
+        "slipBps": 150,
+        "sqrtPrice": "9223372036854775808"
+      },
+      "output": {
+        "expected": "128",
+        "minOut": "126"
+      }
+    },
+    {
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 0,
+        "sqrtPrice": "18446744073709551616"
+      },
+      "output": {
+        "expected": "17893341751498265066",
+        "minOut": "17893341751498265066"
+      }
+    },
+    {
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 0,
+        "sqrtPrice": "340282366920938463463374607431768211455"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 10000,
+        "sqrtPrice": "170141183460469231731687303715884105728"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 150,
+        "sqrtPrice": "18446744073709551615"
+      },
+      "output": {
+        "expected": "17893341751498265067",
+        "minOut": "17624941625225791090"
+      }
+    },
+    {
+      "input": {
+        "amount": "18446744073709551615",
+        "slipBps": 100,
+        "sqrtPrice": "36893488147419103233"
+      },
+      "output": {
+        "expected": "4473335437874566266",
+        "minOut": "4428602083495820603"
+      }
+    },
+    {
+      "input": {
+        "amount": "10000",
+        "slipBps": 1,
+        "sqrtPrice": "18446744073709551617"
+      },
+      "output": {
+        "expected": "9699",
+        "minOut": "9698"
+      }
+    },
+    {
+      "input": {
+        "amount": "10000",
+        "slipBps": 9999,
+        "sqrtPrice": "18446744073709551615"
+      },
+      "output": {
+        "expected": "9700",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "10000",
+        "slipBps": 10000,
+        "sqrtPrice": "18446744073709551616"
+      },
+      "output": {
+        "expected": "9700",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "42127878869207",
+        "slipBps": 10000,
+        "sqrtPrice": "51098771681630930444868531"
+      },
+      "output": {
+        "expected": "5",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "40661",
+        "slipBps": 100,
+        "sqrtPrice": "64538007778331375295676596"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "267181623497555",
+        "slipBps": 1,
+        "sqrtPrice": "435724823173722433818160420"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "14908599075885217588",
+        "slipBps": 1,
+        "sqrtPrice": "5013701838850350826761"
+      },
+      "output": {
+        "expected": "195763178865416",
+        "minOut": "195743602547529"
+      }
+    },
+    {
+      "input": {
+        "amount": "49451460595480",
+        "slipBps": 1,
+        "sqrtPrice": "132497774826158964498567"
+      },
+      "output": {
+        "expected": "929764",
+        "minOut": "929671"
+      }
+    },
+    {
+      "input": {
+        "amount": "14325332423680291566",
+        "slipBps": 1,
+        "sqrtPrice": "25027210172500788659782048"
+      },
+      "output": {
+        "expected": "7549027",
+        "minOut": "7548272"
+      }
+    },
+    {
+      "input": {
+        "amount": "261042099898223",
+        "slipBps": 100,
+        "sqrtPrice": "58309028123497562083953521398"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "52052",
+        "slipBps": 10000,
+        "sqrtPrice": "54543451192072413"
+      },
+      "output": {
+        "expected": "5775101046",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "3897398108",
+        "slipBps": 10000,
+        "sqrtPrice": "70962750168385072040660530"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "7941574286017809104",
+        "slipBps": 9999,
+        "sqrtPrice": "4376833504447242968981"
+      },
+      "output": {
+        "expected": "136835167881893",
+        "minOut": "13683516788"
+      }
+    },
+    {
+      "input": {
+        "amount": "2795845836",
+        "slipBps": 0,
+        "sqrtPrice": "2036677130921118002"
+      },
+      "output": {
+        "expected": "222474390633",
+        "minOut": "222474390633"
+      }
+    },
+    {
+      "input": {
+        "amount": "10795993068281",
+        "slipBps": 10000,
+        "sqrtPrice": "9013819744853452834481"
+      },
+      "output": {
+        "expected": "43858728",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "188336812919369",
+        "slipBps": 0,
+        "sqrtPrice": "4016528780931811403144706118"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "104519831343495",
+        "slipBps": 9999,
+        "sqrtPrice": "838463873695434568741169"
+      },
+      "output": {
+        "expected": "49072",
+        "minOut": "4"
+      }
+    },
+    {
+      "input": {
+        "amount": "3002094953",
+        "slipBps": 100,
+        "sqrtPrice": "13214882947075720468"
+      },
+      "output": {
+        "expected": "5674256479",
+        "minOut": "5617513914"
+      }
+    },
+    {
+      "input": {
+        "amount": "207839953317928",
+        "slipBps": 1,
+        "sqrtPrice": "2908771863057084028"
+      },
+      "output": {
+        "expected": "8108133566791617",
+        "minOut": "8107322753434937"
+      }
+    },
+    {
+      "input": {
+        "amount": "98621005792552",
+        "slipBps": 9999,
+        "sqrtPrice": "5854458574313532531"
+      },
+      "output": {
+        "expected": "949745254039580",
+        "minOut": "94974525403"
+      }
+    },
+    {
+      "input": {
+        "amount": "194908316645720982",
+        "slipBps": 10000,
+        "sqrtPrice": "248244290634901026066971163"
+      },
+      "output": {
+        "expected": "1043",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "28480027867202",
+        "slipBps": 150,
+        "sqrtPrice": "27791162079984857386"
+      },
+      "output": {
+        "expected": "12171333852869",
+        "minOut": "11988763845075"
+      }
+    },
+    {
+      "input": {
+        "amount": "51244",
+        "slipBps": 10000,
+        "sqrtPrice": "419524644015130958159"
+      },
+      "output": {
+        "expected": "96",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "11434",
+        "slipBps": 150,
+        "sqrtPrice": "6079214427130403386952507"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "251016315",
+        "slipBps": 10000,
+        "sqrtPrice": "1043668276934270483594601533"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "113870469465933",
+        "slipBps": 150,
+        "sqrtPrice": "511115475757583728864002110"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "5931217315758558927",
+        "slipBps": 150,
+        "sqrtPrice": "11431279423838061177497150935"
+      },
+      "output": {
+        "expected": "14",
+        "minOut": "13"
+      }
+    },
+    {
+      "input": {
+        "amount": "31111",
+        "slipBps": 150,
+        "sqrtPrice": "529182530500572"
+      },
+      "output": {
+        "expected": "36669459653576",
+        "minOut": "36119417758772"
+      }
+    },
+    {
+      "input": {
+        "amount": "174200157084750",
+        "slipBps": 9999,
+        "sqrtPrice": "63751868885155782016224"
+      },
+      "output": {
+        "expected": "14147310",
+        "minOut": "1414"
+      }
+    },
+    {
+      "input": {
+        "amount": "1574440419",
+        "slipBps": 9999,
+        "sqrtPrice": "2017012931291303269433"
+      },
+      "output": {
+        "expected": "127737",
+        "minOut": "12"
+      }
+    },
+    {
+      "input": {
+        "amount": "121168716428357",
+        "slipBps": 0,
+        "sqrtPrice": "22893893851125646051926522"
+      },
+      "output": {
+        "expected": "76",
+        "minOut": "76"
+      }
+    },
+    {
+      "input": {
+        "amount": "3041635157",
+        "slipBps": 9999,
+        "sqrtPrice": "17373295448102022"
+      },
+      "output": {
+        "expected": "3326242344760472",
+        "minOut": "332624234476"
+      }
+    },
+    {
+      "input": {
+        "amount": "51034",
+        "slipBps": 100,
+        "sqrtPrice": "494396827398473"
+      },
+      "output": {
+        "expected": "68914536646366",
+        "minOut": "68225391279902"
+      }
+    },
+    {
+      "input": {
+        "amount": "7173260233836314861",
+        "slipBps": 150,
+        "sqrtPrice": "2144970122475911325557257"
+      },
+      "output": {
+        "expected": "514618354",
+        "minOut": "506899078"
+      }
+    },
+    {
+      "input": {
+        "amount": "43433",
+        "slipBps": 150,
+        "sqrtPrice": "704577567848465"
+      },
+      "output": {
+        "expected": "28878410126732",
+        "minOut": "28445233974831"
+      }
+    },
+    {
+      "input": {
+        "amount": "244987198451365",
+        "slipBps": 1,
+        "sqrtPrice": "2044919409214890144925043"
+      },
+      "output": {
+        "expected": "19337",
+        "minOut": "19335"
+      }
+    },
+    {
+      "input": {
+        "amount": "5479",
+        "slipBps": 1,
+        "sqrtPrice": "2675458675941966"
+      },
+      "output": {
+        "expected": "252618120841",
+        "minOut": "252592859028"
+      }
+    },
+    {
+      "input": {
+        "amount": "3951820754",
+        "slipBps": 100,
+        "sqrtPrice": "162491172272504838088"
+      },
+      "output": {
+        "expected": "49402493",
+        "minOut": "48908468"
+      }
+    },
+    {
+      "input": {
+        "amount": "39116",
+        "slipBps": 150,
+        "sqrtPrice": "11031452665147437571712629"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "2413844649",
+        "slipBps": 100,
+        "sqrtPrice": "15644523322990350"
+      },
+      "output": {
+        "expected": "3255336031909697",
+        "minOut": "3222782671590600"
+      }
+    },
+    {
+      "input": {
+        "amount": "412178699",
+        "slipBps": 9999,
+        "sqrtPrice": "571519038119269519321492956"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "1890989704209757006",
+        "slipBps": 150,
+        "sqrtPrice": "42211083349905614641605"
+      },
+      "output": {
+        "expected": "350305814976",
+        "minOut": "345051227751"
+      }
+    },
+    {
+      "input": {
+        "amount": "10316773689496488961",
+        "slipBps": 10000,
+        "sqrtPrice": "4194372959773562294657"
+      },
+      "output": {
+        "expected": "193562397767413",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "9671041307647239356",
+        "slipBps": 1,
+        "sqrtPrice": "15972547611851038019989914"
+      },
+      "output": {
+        "expected": "12512267",
+        "minOut": "12511015"
+      }
+    },
+    {
+      "input": {
+        "amount": "1547712960",
+        "slipBps": 0,
+        "sqrtPrice": "4532322094246844175"
+      },
+      "output": {
+        "expected": "24869099885",
+        "minOut": "24869099885"
+      }
+    },
+    {
+      "input": {
+        "amount": "8511162616905955759",
+        "slipBps": 9999,
+        "sqrtPrice": "572294388460937205759424200"
+      },
+      "output": {
+        "expected": "8577",
+        "minOut": "0"
+      }
+    },
+    {
+      "input": {
+        "amount": "45147",
+        "slipBps": 100,
+        "sqrtPrice": "1007433118226449966764906631"
+      },
+      "output": {
+        "expected": "0",
+        "minOut": "0"
+      }
+    }
+  ],
+  "poolBuy": [
+    {
+      "input": {
+        "amount": "1500000000",
+        "baseReserve": "500000000000000",
+        "quoteReserve": "400000000000",
+        "virtualQuoteReserve": "-2000000000"
+      },
+      "output": {
+        "expected": "1853966863275",
+        "minOut": "1835427194642"
+      }
+    },
+    {
+      "input": {
+        "amount": "18016602886711804648",
+        "baseReserve": "7580164203238980774",
+        "quoteReserve": "6259519087345210570",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4404371570210865999"
+      },
+      "output": {
+        "expected": "4739425150171209607",
+        "minOut": "4692030898669497510"
+      }
+    },
+    {
+      "input": {
+        "amount": "7470895844218431740",
+        "baseReserve": "15977580671376562773",
+        "quoteReserve": "17147515190134919607",
+        "slipBps": 100,
+        "virtualQuoteReserve": "40717584813059318885"
+      },
+      "output": {
+        "expected": "1806714295442467181",
+        "minOut": "1788647152488042509"
+      }
+    },
+    {
+      "input": {
+        "amount": "7204100800072646536",
+        "baseReserve": "4854139372512435047",
+        "quoteReserve": "16632302323337817533",
+        "slipBps": 150,
+        "virtualQuoteReserve": "7642472511048555064"
+      },
+      "output": {
+        "expected": "1100155506256113733",
+        "minOut": "1083653173662272027"
+      }
+    },
+    {
+      "input": {
+        "amount": "17681896358642148071",
+        "baseReserve": "4108144689818519249",
+        "quoteReserve": "8663712890252313515",
+        "slipBps": 150,
+        "virtualQuoteReserve": "8623648756565058767"
+      },
+      "output": {
+        "expected": "2064329100939824848",
+        "minOut": "2033364164425727475"
+      }
+    },
+    {
+      "input": {
+        "amount": "1717308945399014833",
+        "baseReserve": "1781641975719255045",
+        "quoteReserve": "11214264083786751175",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-8966562128075783282"
+      },
+      "output": {
+        "expected": "766159555449854160",
+        "minOut": "754667162118106347"
+      }
+    },
+    {
+      "input": {
+        "amount": "12369434685065122001",
+        "baseReserve": "16581040485467950620",
+        "quoteReserve": "17910252237648335842",
+        "slipBps": 100,
+        "virtualQuoteReserve": "50919899852124276755"
+      },
+      "output": {
+        "expected": "2499036941773457649",
+        "minOut": "2474046572355723072"
+      }
+    },
+    {
+      "input": {
+        "amount": "12641682356767455070",
+        "baseReserve": "18072050531343745684",
+        "quoteReserve": "4381125621005877420",
+        "slipBps": 150,
+        "virtualQuoteReserve": "6966410734119142989"
+      },
+      "output": {
+        "expected": "9466807389609039018",
+        "minOut": "9324805278764903432"
+      }
+    },
+    {
+      "input": {
+        "amount": "8376990699885826",
+        "baseReserve": "18122209770222530019",
+        "quoteReserve": "13196270865331374610",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-12144244423922873765"
+      },
+      "output": {
+        "expected": "141386535826087737",
+        "minOut": "139972670467826859"
+      }
+    },
+    {
+      "input": {
+        "amount": "6383487937218152975",
+        "baseReserve": "16973117113894545711",
+        "quoteReserve": "5664408390494304620",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-4001638393940909376"
+      },
+      "output": {
+        "expected": "13430467740250848145",
+        "minOut": "13296163062848339663"
+      }
+    },
+    {
+      "input": {
+        "amount": "13405015021726995669",
+        "baseReserve": "8668537236245230619",
+        "quoteReserve": "3060618293657815219",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-639967621796673730"
+      },
+      "output": {
+        "expected": "7328432341215765469",
+        "minOut": "7218505856097528986"
+      }
+    },
+    {
+      "input": {
+        "amount": "1436842651989650440",
+        "baseReserve": "11708174360035555266",
+        "quoteReserve": "305663309398907713",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-221891966159441810"
+      },
+      "output": {
+        "expected": "11055456006953074957",
+        "minOut": "10944901446883544207"
+      }
+    },
+    {
+      "input": {
+        "amount": "9779363676001553903",
+        "baseReserve": "7541081388376018375",
+        "quoteReserve": "18226108590602199174",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1079180814250672699"
+      },
+      "output": {
+        "expected": "2514470915487629421",
+        "minOut": "2476753851755314979"
+      }
+    },
+    {
+      "input": {
+        "amount": "17585301862277635635",
+        "baseReserve": "1898272127226787457",
+        "quoteReserve": "7680358310037830840",
+        "slipBps": 150,
+        "virtualQuoteReserve": "5211312205745848033"
+      },
+      "output": {
+        "expected": "1089475070135384536",
+        "minOut": "1073132944083353767"
+      }
+    },
+    {
+      "input": {
+        "amount": "13239395675569979420",
+        "baseReserve": "8041609480685612898",
+        "quoteReserve": "11611635474798879803",
+        "slipBps": 100,
+        "virtualQuoteReserve": "28369215645275318469"
+      },
+      "output": {
+        "expected": "1981636244471969409",
+        "minOut": "1961819882027249714"
+      }
+    },
+    {
+      "input": {
+        "amount": "2233937588709826768",
+        "baseReserve": "13559980295550202713",
+        "quoteReserve": "1215362016371770986",
+        "slipBps": 150,
+        "virtualQuoteReserve": "733422905959172044"
+      },
+      "output": {
+        "expected": "7199747308269421952",
+        "minOut": "7091751098645380622"
+      }
+    },
+    {
+      "input": {
+        "amount": "1450628837344202809",
+        "baseReserve": "4443163921920562740",
+        "quoteReserve": "3282500306075920771",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4764446029273349297"
+      },
+      "output": {
+        "expected": "671433427528602856",
+        "minOut": "664719093253316827"
+      }
+    },
+    {
+      "input": {
+        "amount": "9677573203825999346",
+        "baseReserve": "12052894945912657707",
+        "quoteReserve": "12649582257578626771",
+        "slipBps": 150,
+        "virtualQuoteReserve": "9629819011397652087"
+      },
+      "output": {
+        "expected": "3618065118038126453",
+        "minOut": "3563794141267554556"
+      }
+    },
+    {
+      "input": {
+        "amount": "1883825712756277537",
+        "baseReserve": "10482328574250840116",
+        "quoteReserve": "11875514098913456299",
+        "slipBps": 100,
+        "virtualQuoteReserve": "7071678314543661380"
+      },
+      "output": {
+        "expected": "937165537706418109",
+        "minOut": "927793882329353927"
+      }
+    },
+    {
+      "input": {
+        "amount": "1674427115248860163",
+        "baseReserve": "4227402615787856022",
+        "quoteReserve": "2977186913307913837",
+        "slipBps": 150,
+        "virtualQuoteReserve": "50803433756555991"
+      },
+      "output": {
+        "expected": "1493114562350098868",
+        "minOut": "1470717843914847384"
+      }
+    },
+    {
+      "input": {
+        "amount": "4720586216398290037",
+        "baseReserve": "478703139087602775",
+        "quoteReserve": "9632196823031273508",
+        "slipBps": 100,
+        "virtualQuoteReserve": "25306283069809513262"
+      },
+      "output": {
+        "expected": "56351240775495098",
+        "minOut": "55787728367740147"
+      }
+    },
+    {
+      "input": {
+        "amount": "16125097443041709262",
+        "baseReserve": "811198611402145221",
+        "quoteReserve": "16045401112840010870",
+        "slipBps": 100,
+        "virtualQuoteReserve": "19007735732177266131"
+      },
+      "output": {
+        "expected": "253393332712762692",
+        "minOut": "250859399385635065"
+      }
+    },
+    {
+      "input": {
+        "amount": "16896042316092850542",
+        "baseReserve": "14410676121192606578",
+        "quoteReserve": "8913509964583997813",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-4207511755622754103"
+      },
+      "output": {
+        "expected": "11240318340544064310",
+        "minOut": "11071713565435903345"
+      }
+    },
+    {
+      "input": {
+        "amount": "6468686357189705557",
+        "baseReserve": "13684298006000008529",
+        "quoteReserve": "11428562749975854704",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-7976117289954085859"
+      },
+      "output": {
+        "expected": "8883182083408158488",
+        "minOut": "8794350262574076903"
+      }
+    },
+    {
+      "input": {
+        "amount": "4256183401748540635",
+        "baseReserve": "6938300840091038095",
+        "quoteReserve": "11946223801229855033",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4536276085385523138"
+      },
+      "output": {
+        "expected": "1409759210670322590",
+        "minOut": "1395661618563619364"
+      }
+    },
+    {
+      "input": {
+        "amount": "16784684995318788449",
+        "baseReserve": "12172342213743046654",
+        "quoteReserve": "2826547746491191852",
+        "slipBps": 150,
+        "virtualQuoteReserve": "6451883894088262706"
+      },
+      "output": {
+        "expected": "7803839551915074675",
+        "minOut": "7686781958636348554"
+      }
+    },
+    {
+      "input": {
+        "amount": "15600300972256725021",
+        "baseReserve": "6891186402901639917",
+        "quoteReserve": "6146176083769473477",
+        "slipBps": 100,
+        "virtualQuoteReserve": "7689783805428893205"
+      },
+      "output": {
+        "expected": "3630513363581022017",
+        "minOut": "3594208229945211796"
+      }
+    },
+    {
+      "input": {
+        "amount": "15444798584201957099",
+        "baseReserve": "17262268733870071187",
+        "quoteReserve": "964764512733592428",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-374492391159720490"
+      },
+      "output": {
+        "expected": "16619077906229613345",
+        "minOut": "16452887127167317211"
+      }
+    },
+    {
+      "input": {
+        "amount": "9195897546726545504",
+        "baseReserve": "547057446891105368",
+        "quoteReserve": "1766536429277345592",
+        "slipBps": 150,
+        "virtualQuoteReserve": "4479354133192107571"
+      },
+      "output": {
+        "expected": "324124273406824965",
+        "minOut": "319262409305722590"
+      }
+    },
+    {
+      "input": {
+        "amount": "15400680914878624338",
+        "baseReserve": "13701911621752883772",
+        "quoteReserve": "9868379247064285513",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-8515549488614165307"
+      },
+      "output": {
+        "expected": "12582634321480958481",
+        "minOut": "12456807978266148896"
+      }
+    },
+    {
+      "input": {
+        "amount": "1689297296572332870",
+        "baseReserve": "3602302476878317401",
+        "quoteReserve": "6735906452425659279",
+        "slipBps": 100,
+        "virtualQuoteReserve": "840333005783740374"
+      },
+      "output": {
+        "expected": "650045377382584919",
+        "minOut": "643544923608759069"
+      }
+    },
+    {
+      "input": {
+        "amount": "6128573901397276507",
+        "baseReserve": "1356400637703411926",
+        "quoteReserve": "10777542121836707841",
+        "slipBps": 100,
+        "virtualQuoteReserve": "6104238943001145246"
+      },
+      "output": {
+        "expected": "357939382738525882",
+        "minOut": "354359988911140623"
+      }
+    },
+    {
+      "input": {
+        "amount": "12200669655033261960",
+        "baseReserve": "15613486166632999578",
+        "quoteReserve": "4527542572584531930",
+        "slipBps": 100,
+        "virtualQuoteReserve": "13024990251429929618"
+      },
+      "output": {
+        "expected": "6355046907273784696",
+        "minOut": "6291496438201046849"
+      }
+    },
+    {
+      "input": {
+        "amount": "11454315378291317601",
+        "baseReserve": "10719267501476342104",
+        "quoteReserve": "4602235806503481714",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-4064472523387182615"
+      },
+      "output": {
+        "expected": "10232772668975962858",
+        "minOut": "10079281078941323415"
+      }
+    },
+    {
+      "input": {
+        "amount": "16844276746561486882",
+        "baseReserve": "9107909344715174244",
+        "quoteReserve": "4216065490368372958",
+        "slipBps": 150,
+        "virtualQuoteReserve": "10878663712959330745"
+      },
+      "output": {
+        "expected": "4774845032554037137",
+        "minOut": "4703222357065726579"
+      }
+    },
+    {
+      "input": {
+        "amount": "7010559777771187667",
+        "baseReserve": "4671246529998761236",
+        "quoteReserve": "15372063984022122405",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-11324244422794733711"
+      },
+      "output": {
+        "expected": "2947721004309021487",
+        "minOut": "2903505189244386164"
+      }
+    },
+    {
+      "input": {
+        "amount": "8977441561882362324",
+        "baseReserve": "9364430153725952888",
+        "quoteReserve": "4707616226020818628",
+        "slipBps": 100,
+        "virtualQuoteReserve": "1065687257401687374"
+      },
+      "output": {
+        "expected": "5671183071450807110",
+        "minOut": "5614471240736299038"
+      }
+    },
+    {
+      "input": {
+        "amount": "6793485323251374366",
+        "baseReserve": "15897908341386229377",
+        "quoteReserve": "3634029602003472690",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1709467289677310966"
+      },
+      "output": {
+        "expected": "8849287766123924485",
+        "minOut": "8716548449632065617"
+      }
+    },
+    {
+      "input": {
+        "amount": "1759473877383595528",
+        "baseReserve": "17722487010538888899",
+        "quoteReserve": "10912110997116686210",
+        "slipBps": 150,
+        "virtualQuoteReserve": "32355366672993857187"
+      },
+      "output": {
+        "expected": "684201831512373721",
+        "minOut": "673938804039688115"
+      }
+    },
+    {
+      "input": {
+        "amount": "12395048917272562668",
+        "baseReserve": "15766522660337420846",
+        "quoteReserve": "11644990380406678366",
+        "slipBps": 150,
+        "virtualQuoteReserve": "30178028297859817510"
+      },
+      "output": {
+        "expected": "3569604390764025461",
+        "minOut": "3516060324902565079"
+      }
+    },
+    {
+      "input": {
+        "amount": "6639276752154008775",
+        "baseReserve": "17438542783102795670",
+        "quoteReserve": "8425713989298437584",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-4007602848209478594"
+      },
+      "output": {
+        "expected": "10418073173806733875",
+        "minOut": "10313892442068666536"
+      }
+    },
+    {
+      "input": {
+        "amount": "17254627733269240487",
+        "baseReserve": "16988781355796101742",
+        "quoteReserve": "6252744319047966698",
+        "slipBps": 150,
+        "virtualQuoteReserve": "18292727532503069672"
+      },
+      "output": {
+        "expected": "6961042907844135885",
+        "minOut": "6856627264226473846"
+      }
+    },
+    {
+      "input": {
+        "amount": "5545497903357987771",
+        "baseReserve": "1601425294886419211",
+        "quoteReserve": "14673910717199583509",
+        "slipBps": 100,
+        "virtualQuoteReserve": "18254528315728854110"
+      },
+      "output": {
+        "expected": "228349929400789214",
+        "minOut": "226066430106781321"
+      }
+    },
+    {
+      "input": {
+        "amount": "17035835453917677706",
+        "baseReserve": "16272455441853278979",
+        "quoteReserve": "9551132674668914072",
+        "slipBps": 150,
+        "virtualQuoteReserve": "26731110727453840515"
+      },
+      "output": {
+        "expected": "5154863244213604684",
+        "minOut": "5077540295550400613"
+      }
+    },
+    {
+      "input": {
+        "amount": "3770048009942215435",
+        "baseReserve": "9331860509060465838",
+        "quoteReserve": "8212012311051071694",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1624468702567941519"
+      },
+      "output": {
+        "expected": "2562191825816338833",
+        "minOut": "2523758948429093750"
+      }
+    },
+    {
+      "input": {
+        "amount": "11696271591402305335",
+        "baseReserve": "17227247966600263526",
+        "quoteReserve": "5052340300764853466",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1199143108850067237"
+      },
+      "output": {
+        "expected": "11177446396524162848",
+        "minOut": "11009784700576300405"
+      }
+    },
+    {
+      "input": {
+        "amount": "18251540799144585314",
+        "baseReserve": "16661100399598761694",
+        "quoteReserve": "18104852691143900808",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-1569848208440918621"
+      },
+      "output": {
+        "expected": "8689337770306940271",
+        "minOut": "8558997703752336166"
+      }
+    },
+    {
+      "input": {
+        "amount": "14612832848610297123",
+        "baseReserve": "15526851319048560190",
+        "quoteReserve": "2285073722983897140",
+        "slipBps": 150,
+        "virtualQuoteReserve": "886387956639727122"
+      },
+      "output": {
+        "expected": "12729223914996101607",
+        "minOut": "12538285556271160082"
+      }
+    },
+    {
+      "input": {
+        "amount": "5109606661113651330",
+        "baseReserve": "420721981120400355",
+        "quoteReserve": "4389513248967541917",
+        "slipBps": 100,
+        "virtualQuoteReserve": "10377178362660440190"
+      },
+      "output": {
+        "expected": "107147507056810165",
+        "minOut": "106076031986242063"
+      }
+    },
+    {
+      "input": {
+        "amount": "16623439677583063293",
+        "baseReserve": "325952378978474443",
+        "quoteReserve": "12752514261458778145",
+        "slipBps": 100,
+        "virtualQuoteReserve": "38168555543474518519"
+      },
+      "output": {
+        "expected": "79462132511480340",
+        "minOut": "78667511186365536"
+      }
+    },
+    {
+      "input": {
+        "amount": "11768564155727772558",
+        "baseReserve": "15148754445950137816",
+        "quoteReserve": "13596843593132048158",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-8751459873524855881"
+      },
+      "output": {
+        "expected": "10691218908199667193",
+        "minOut": "10530850624576672185"
+      }
+    },
+    {
+      "input": {
+        "amount": "10464240662919850335",
+        "baseReserve": "8359039322474206984",
+        "quoteReserve": "9255615795349405851",
+        "slipBps": 100,
+        "virtualQuoteReserve": "2904057372964497433"
+      },
+      "output": {
+        "expected": "3840180772296476909",
+        "minOut": "3801778964573512139"
+      }
+    },
+    {
+      "input": {
+        "amount": "10325816599999927974",
+        "baseReserve": "7434423964513691909",
+        "quoteReserve": "3070965741342760210",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-1678871655414820028"
+      },
+      "output": {
+        "expected": "6541373457418376260",
+        "minOut": "6443252855557100616"
+      }
+    },
+    {
+      "input": {
+        "amount": "11808362772981628136",
+        "baseReserve": "13230024370337863626",
+        "quoteReserve": "12610294741883205185",
+        "slipBps": 150,
+        "virtualQuoteReserve": "155677050753827322"
+      },
+      "output": {
+        "expected": "6315708876057972903",
+        "minOut": "6220973242917103309"
+      }
+    },
+    {
+      "input": {
+        "amount": "4710835302933945100",
+        "baseReserve": "1856694220606019400",
+        "quoteReserve": "10970942275786744556",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-7637474888854524793"
+      },
+      "output": {
+        "expected": "1081627691302658175",
+        "minOut": "1065403275933118302"
+      }
+    },
+    {
+      "input": {
+        "amount": "6069406305011065894",
+        "baseReserve": "13234789049418260414",
+        "quoteReserve": "10840874769041619280",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-60201814174913823"
+      },
+      "output": {
+        "expected": "4728879199151630902",
+        "minOut": "4681590407160114592"
+      }
+    },
+    {
+      "input": {
+        "amount": "15544950275889640948",
+        "baseReserve": "353038034211205589",
+        "quoteReserve": "16226895909178237817",
+        "slipBps": 150,
+        "virtualQuoteReserve": "30104576640870227423"
+      },
+      "output": {
+        "expected": "87859496383532925",
+        "minOut": "86541603937779931"
+      }
+    },
+    {
+      "input": {
+        "amount": "14189185729686271873",
+        "baseReserve": "2186318721944506528",
+        "quoteReserve": "9011653195134931837",
+        "slipBps": 150,
+        "virtualQuoteReserve": "17238451511117372423"
+      },
+      "output": {
+        "expected": "760875340968355913",
+        "minOut": "749462210853830574"
+      }
+    },
+    {
+      "input": {
+        "amount": "349694322304767456",
+        "baseReserve": "10521270639933751395",
+        "quoteReserve": "9459309683940117570",
+        "slipBps": 150,
+        "virtualQuoteReserve": "12882484934664188609"
+      },
+      "output": {
+        "expected": "160145430846384252",
+        "minOut": "157743249383688488"
+      }
+    },
+    {
+      "input": {
+        "amount": "3868422995462653277",
+        "baseReserve": "12885719944183156040",
+        "quoteReserve": "1042968285226562142",
+        "slipBps": 100,
+        "virtualQuoteReserve": "97700665856810146"
+      },
+      "output": {
+        "expected": "9922784867652807193",
+        "minOut": "9823557018976279121"
+      }
+    },
+    {
+      "input": {
+        "amount": "7886468576143887202",
+        "baseReserve": "7782358838260827750",
+        "quoteReserve": "7788571177851937298",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-1351219269500065076"
+      },
+      "output": {
+        "expected": "4260605684603239713",
+        "minOut": "4196696599334191117"
+      }
+    },
+    {
+      "input": {
+        "amount": "8992597386125662599",
+        "baseReserve": "14917664053424667983",
+        "quoteReserve": "12717021680101182215",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-2057180662735693719"
+      },
+      "output": {
+        "expected": "6779502569470116247",
+        "minOut": "6677810030928064503"
+      }
+    },
+    {
+      "input": {
+        "amount": "16604015723834142760",
+        "baseReserve": "16704524761404890860",
+        "quoteReserve": "11007852018607409672",
+        "slipBps": 150,
+        "virtualQuoteReserve": "3606339468921952178"
+      },
+      "output": {
+        "expected": "8832291565742021907",
+        "minOut": "8699807192255891578"
+      }
+    },
+    {
+      "input": {
+        "amount": "12555894806522167650",
+        "baseReserve": "10676634446302371635",
+        "quoteReserve": "12986149267871204119",
+        "slipBps": 150,
+        "virtualQuoteReserve": "8335962911023169530"
+      },
+      "output": {
+        "expected": "3925707612109705462",
+        "minOut": "3866821997928059880"
+      }
+    },
+    {
+      "input": {
+        "amount": "13528247058020295873",
+        "baseReserve": "6917149297821085187",
+        "quoteReserve": "10851960643076282525",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4286342903850810322"
+      },
+      "output": {
+        "expected": "3242648074917396075",
+        "minOut": "3210221594168222114"
+      }
+    }
+  ],
+  "poolSell": [
+    {
+      "input": {
+        "amount": "1000000000000",
+        "baseReserve": "500000000000000",
+        "quoteReserve": "400000000000",
+        "virtualQuoteReserve": "-2000000000"
+      },
+      "output": {
+        "expected": "784481037",
+        "minOut": "776636226"
+      }
+    },
+    {
+      "input": {
+        "amount": "561474222895199247",
+        "baseReserve": "6063395507548482874",
+        "quoteReserve": "3550156363192434381",
+        "slipBps": 100,
+        "virtualQuoteReserve": "3556327015237663383"
+      },
+      "output": {
+        "expected": "594763527788271276",
+        "minOut": "588815892510388563"
+      }
+    },
+    {
+      "input": {
+        "amount": "7927909157187236009",
+        "baseReserve": "11552394948929273393",
+        "quoteReserve": "3057818174303911425",
+        "slipBps": 150,
+        "virtualQuoteReserve": "5328036241446842747"
+      },
+      "output": {
+        "expected": "3057818174303911425",
+        "minOut": "3011950901689352753"
+      }
+    },
+    {
+      "input": {
+        "amount": "11589201241110219376",
+        "baseReserve": "4092959405231288986",
+        "quoteReserve": "3898085693814085304",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-2819198899286129830"
+      },
+      "output": {
+        "expected": "787336866671765860",
+        "minOut": "775526813671689372"
+      }
+    },
+    {
+      "input": {
+        "amount": "16778619454866923890",
+        "baseReserve": "17749131030661341333",
+        "quoteReserve": "5153413195580888950",
+        "slipBps": 100,
+        "virtualQuoteReserve": "8002583377421034596"
+      },
+      "output": {
+        "expected": "5153413195580888950",
+        "minOut": "5101879063625080060"
+      }
+    },
+    {
+      "input": {
+        "amount": "11832554452132583264",
+        "baseReserve": "15096612009744954981",
+        "quoteReserve": "1438528159289627280",
+        "slipBps": 150,
+        "virtualQuoteReserve": "3949704035902832410"
+      },
+      "output": {
+        "expected": "1438528159289627280",
+        "minOut": "1416950236900282870"
+      }
+    },
+    {
+      "input": {
+        "amount": "9570402296776624809",
+        "baseReserve": "10648613877477603132",
+        "quoteReserve": "8252707440981301535",
+        "slipBps": 100,
+        "virtualQuoteReserve": "3780115941982569148"
+      },
+      "output": {
+        "expected": "5624382143729928549",
+        "minOut": "5568138322292629263"
+      }
+    },
+    {
+      "input": {
+        "amount": "12166327098905294819",
+        "baseReserve": "14517934232673607529",
+        "quoteReserve": "1589088487735923193",
+        "slipBps": 150,
+        "virtualQuoteReserve": "619316662966667499"
+      },
+      "output": {
+        "expected": "994306226347604547",
+        "minOut": "979391632952390478"
+      }
+    },
+    {
+      "input": {
+        "amount": "1082137543230715189",
+        "baseReserve": "2748643476725982970",
+        "quoteReserve": "4907454790610775439",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-1212039413004015720"
+      },
+      "output": {
+        "expected": "1030850067099572174",
+        "minOut": "1020541566428576452"
+      }
+    },
+    {
+      "input": {
+        "amount": "4333704205089678281",
+        "baseReserve": "3948076190288950415",
+        "quoteReserve": "8973653033550403188",
+        "slipBps": 100,
+        "virtualQuoteReserve": "25276112348959746804"
+      },
+      "output": {
+        "expected": "8973653033550403188",
+        "minOut": "8883916503214899156"
+      }
+    },
+    {
+      "input": {
+        "amount": "11972746976244096842",
+        "baseReserve": "17039389455718127795",
+        "quoteReserve": "12636083251700610963",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-11989501394113608824"
+      },
+      "output": {
+        "expected": "263496415922101864",
+        "minOut": "260861451762880845"
+      }
+    },
+    {
+      "input": {
+        "amount": "15679621490231624186",
+        "baseReserve": "15280827644481311187",
+        "quoteReserve": "6362322907328209765",
+        "slipBps": 100,
+        "virtualQuoteReserve": "2538818755965424107"
+      },
+      "output": {
+        "expected": "4451548808620363741",
+        "minOut": "4407033320534160103"
+      }
+    },
+    {
+      "input": {
+        "amount": "13319073108438901259",
+        "baseReserve": "800636383305319895",
+        "quoteReserve": "12379808746111118622",
+        "slipBps": 150,
+        "virtualQuoteReserve": "4227057127510068282"
+      },
+      "output": {
+        "expected": "12379808746111118622",
+        "minOut": "12194111614919451842"
+      }
+    },
+    {
+      "input": {
+        "amount": "6436287068202583127",
+        "baseReserve": "568532417935644290",
+        "quoteReserve": "15095789844584149290",
+        "slipBps": 150,
+        "virtualQuoteReserve": "14388718275449704730"
+      },
+      "output": {
+        "expected": "15095789844584149290",
+        "minOut": "14869352996915387050"
+      }
+    },
+    {
+      "input": {
+        "amount": "17107479211725906987",
+        "baseReserve": "16254416558783627139",
+        "quoteReserve": "2416336177735996028",
+        "slipBps": 150,
+        "virtualQuoteReserve": "806401368177352867"
+      },
+      "output": {
+        "expected": "1631914280334230272",
+        "minOut": "1607435566129216817"
+      }
+    },
+    {
+      "input": {
+        "amount": "4712778463092474263",
+        "baseReserve": "3500291364890106964",
+        "quoteReserve": "4389616522756688637",
+        "slipBps": 150,
+        "virtualQuoteReserve": "538445293622026267"
+      },
+      "output": {
+        "expected": "2792445855015796813",
+        "minOut": "2750559167190559860"
+      }
+    },
+    {
+      "input": {
+        "amount": "4568097797430047163",
+        "baseReserve": "1785438060539516301",
+        "quoteReserve": "2994709322508944497",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-621165585046727074"
+      },
+      "output": {
+        "expected": "1685210866762415388",
+        "minOut": "1668358758094791234"
+      }
+    },
+    {
+      "input": {
+        "amount": "12702031079436619985",
+        "baseReserve": "13298851381078293387",
+        "quoteReserve": "16176183439988179716",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4646415101069309048"
+      },
+      "output": {
+        "expected": "10045165891849585868",
+        "minOut": "9944714232931090009"
+      }
+    },
+    {
+      "input": {
+        "amount": "17891599864008251800",
+        "baseReserve": "13011670587914658196",
+        "quoteReserve": "16928218148144659527",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-2545603652150870470"
+      },
+      "output": {
+        "expected": "8222799077574209137",
+        "minOut": "8140571086798467045"
+      }
+    },
+    {
+      "input": {
+        "amount": "1385009807205468116",
+        "baseReserve": "9977824167587938799",
+        "quoteReserve": "335201290093665301",
+        "slipBps": 100,
+        "virtualQuoteReserve": "796543140886657430"
+      },
+      "output": {
+        "expected": "136223381894839998",
+        "minOut": "134861148075891598"
+      }
+    },
+    {
+      "input": {
+        "amount": "8341200011472290709",
+        "baseReserve": "5068299645466474341",
+        "quoteReserve": "16781853008109973554",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-7367619496917293273"
+      },
+      "output": {
+        "expected": "5782798135428057578",
+        "minOut": "5724970154073777002"
+      }
+    },
+    {
+      "input": {
+        "amount": "17390069022024957167",
+        "baseReserve": "7065425574033021077",
+        "quoteReserve": "11072627840819007837",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-5058489941535351969"
+      },
+      "output": {
+        "expected": "4223138663425771535",
+        "minOut": "4180907276791513819"
+      }
+    },
+    {
+      "input": {
+        "amount": "14594056811764014167",
+        "baseReserve": "5380272311269764729",
+        "quoteReserve": "8931049483090968162",
+        "slipBps": 150,
+        "virtualQuoteReserve": "3196059785292385100"
+      },
+      "output": {
+        "expected": "8749802009790650475",
+        "minOut": "8618554979643790717"
+      }
+    },
+    {
+      "input": {
+        "amount": "17646468868251822367",
+        "baseReserve": "1038385090935811753",
+        "quoteReserve": "9381084107663223411",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-3497773477763154306"
+      },
+      "output": {
+        "expected": "5486899302146545973",
+        "minOut": "5404595812614347783"
+      }
+    },
+    {
+      "input": {
+        "amount": "4830709513696116285",
+        "baseReserve": "491190009994652685",
+        "quoteReserve": "3546036230670508711",
+        "slipBps": 100,
+        "virtualQuoteReserve": "6037212154479968822"
+      },
+      "output": {
+        "expected": "3546036230670508711",
+        "minOut": "3510575868363803623"
+      }
+    },
+    {
+      "input": {
+        "amount": "16946403495290680254",
+        "baseReserve": "12993148696835252333",
+        "quoteReserve": "3614681328865041278",
+        "slipBps": 100,
+        "virtualQuoteReserve": "1576556135518660847"
+      },
+      "output": {
+        "expected": "2901618036734430023",
+        "minOut": "2872601856367085722"
+      }
+    },
+    {
+      "input": {
+        "amount": "601422148854736689",
+        "baseReserve": "5233576310733814014",
+        "quoteReserve": "17522648663802526318",
+        "slipBps": 100,
+        "virtualQuoteReserve": "47600839231143270122"
+      },
+      "output": {
+        "expected": "6628472046424043468",
+        "minOut": "6562187325959803033"
+      }
+    },
+    {
+      "input": {
+        "amount": "3941806900717343960",
+        "baseReserve": "8649866555959289634",
+        "quoteReserve": "10066489038192427710",
+        "slipBps": 100,
+        "virtualQuoteReserve": "7357621722277925945"
+      },
+      "output": {
+        "expected": "5386412637479190442",
+        "minOut": "5332548511104398537"
+      }
+    },
+    {
+      "input": {
+        "amount": "16090234747159542346",
+        "baseReserve": "1624064579068932936",
+        "quoteReserve": "15188143313494408934",
+        "slipBps": 100,
+        "virtualQuoteReserve": "3935455156756975656"
+      },
+      "output": {
+        "expected": "15188143313494408934",
+        "minOut": "15036261880359464844"
+      }
+    },
+    {
+      "input": {
+        "amount": "3757981616399272440",
+        "baseReserve": "3767170664341171025",
+        "quoteReserve": "2294329198935409799",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1186296327654988468"
+      },
+      "output": {
+        "expected": "1716460302241830840",
+        "minOut": "1690713397708203377"
+      }
+    },
+    {
+      "input": {
+        "amount": "15847347579965449554",
+        "baseReserve": "9989800853829482868",
+        "quoteReserve": "5201998631099449419",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-719506944690374391"
+      },
+      "output": {
+        "expected": "2714992287610259063",
+        "minOut": "2674267403296105177"
+      }
+    },
+    {
+      "input": {
+        "amount": "7831997517127922046",
+        "baseReserve": "3201625102119350001",
+        "quoteReserve": "9316558999194157872",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-7505454082803827060"
+      },
+      "output": {
+        "expected": "1269507085450553200",
+        "minOut": "1250464479168794902"
+      }
+    },
+    {
+      "input": {
+        "amount": "10375255124165376395",
+        "baseReserve": "17805942563648122062",
+        "quoteReserve": "6854334606512590403",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-1995701047384571117"
+      },
+      "output": {
+        "expected": "1766406231136739234",
+        "minOut": "1739910137669688145"
+      }
+    },
+    {
+      "input": {
+        "amount": "9211983344693237349",
+        "baseReserve": "13984247305469245565",
+        "quoteReserve": "6385557592455263737",
+        "slipBps": 100,
+        "virtualQuoteReserve": "17684084936139851138"
+      },
+      "output": {
+        "expected": "6385557592455263737",
+        "minOut": "6321702016530711099"
+      }
+    },
+    {
+      "input": {
+        "amount": "4852312479727622869",
+        "baseReserve": "6289937573213867955",
+        "quoteReserve": "14747506808490559439",
+        "slipBps": 100,
+        "virtualQuoteReserve": "13740453406273837020"
+      },
+      "output": {
+        "expected": "12251078387452612545",
+        "minOut": "12128567603578086419"
+      }
+    },
+    {
+      "input": {
+        "amount": "156637276494238922",
+        "baseReserve": "17498805167925267886",
+        "quoteReserve": "12885712855501846449",
+        "slipBps": 150,
+        "virtualQuoteReserve": "26776260839967578505"
+      },
+      "output": {
+        "expected": "347478505005294890",
+        "minOut": "342266327430215466"
+      }
+    },
+    {
+      "input": {
+        "amount": "2222353226593808526",
+        "baseReserve": "17460822752202849346",
+        "quoteReserve": "1990815517006382202",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-852738660395317900"
+      },
+      "output": {
+        "expected": "126889769588597306",
+        "minOut": "125620871892711332"
+      }
+    },
+    {
+      "input": {
+        "amount": "17099750568105509268",
+        "baseReserve": "12579179797910888852",
+        "quoteReserve": "16720992029440381533",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-3945717869706911800"
+      },
+      "output": {
+        "expected": "7268568101699028238",
+        "minOut": "7159539580173542814"
+      }
+    },
+    {
+      "input": {
+        "amount": "11857763474199322175",
+        "baseReserve": "18305084571546098534",
+        "quoteReserve": "7993315672816494568",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-2310055293214755093"
+      },
+      "output": {
+        "expected": "2206302693163535647",
+        "minOut": "2184239666231900290"
+      }
+    },
+    {
+      "input": {
+        "amount": "13088524068658412866",
+        "baseReserve": "12124423077488791671",
+        "quoteReserve": "10171777156338634810",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-3532260761829255894"
+      },
+      "output": {
+        "expected": "3403616453867401946",
+        "minOut": "3369580289328727926"
+      }
+    },
+    {
+      "input": {
+        "amount": "14732847989106136992",
+        "baseReserve": "1997002053718616488",
+        "quoteReserve": "3597022185998986729",
+        "slipBps": 150,
+        "virtualQuoteReserve": "8227128905082081645"
+      },
+      "output": {
+        "expected": "3597022185998986729",
+        "minOut": "3543066853209001928"
+      }
+    },
+    {
+      "input": {
+        "amount": "11178848485044868322",
+        "baseReserve": "6653338148447333296",
+        "quoteReserve": "11146583557367817229",
+        "slipBps": 100,
+        "virtualQuoteReserve": "4436913666567478747"
+      },
+      "output": {
+        "expected": "9647049374260162066",
+        "minOut": "9550578880517560445"
+      }
+    },
+    {
+      "input": {
+        "amount": "14622982709184078021",
+        "baseReserve": "5279190433925504694",
+        "quoteReserve": "11226627363655896733",
+        "slipBps": 100,
+        "virtualQuoteReserve": "6286832967510931972"
+      },
+      "output": {
+        "expected": "11226627363655896733",
+        "minOut": "11114361090019337765"
+      }
+    },
+    {
+      "input": {
+        "amount": "16086504054220877711",
+        "baseReserve": "14918295484778630780",
+        "quoteReserve": "13843508456984173385",
+        "slipBps": 100,
+        "virtualQuoteReserve": "885527970850513750"
+      },
+      "output": {
+        "expected": "7546475832368524733",
+        "minOut": "7471011074044839485"
+      }
+    },
+    {
+      "input": {
+        "amount": "2370394286481981425",
+        "baseReserve": "12142495496764977599",
+        "quoteReserve": "5762767876880040492",
+        "slipBps": 100,
+        "virtualQuoteReserve": "11238264675735010819"
+      },
+      "output": {
+        "expected": "2742073538835339537",
+        "minOut": "2714652803446986141"
+      }
+    },
+    {
+      "input": {
+        "amount": "3994894953613168590",
+        "baseReserve": "14023886206140501899",
+        "quoteReserve": "14465965923814192701",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-7660493402845986490"
+      },
+      "output": {
+        "expected": "1489962514392892775",
+        "minOut": "1475062889248963847"
+      }
+    },
+    {
+      "input": {
+        "amount": "9096866114387896678",
+        "baseReserve": "17579996345952680861",
+        "quoteReserve": "15376624592137758130",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-4543403297965359808"
+      },
+      "output": {
+        "expected": "3647974318533188171",
+        "minOut": "3593254703755190348"
+      }
+    },
+    {
+      "input": {
+        "amount": "10789838181718993917",
+        "baseReserve": "1124632950156075297",
+        "quoteReserve": "10085952849290031515",
+        "slipBps": 100,
+        "virtualQuoteReserve": "18261973725849813786"
+      },
+      "output": {
+        "expected": "10085952849290031515",
+        "minOut": "9985093320797131199"
+      }
+    },
+    {
+      "input": {
+        "amount": "3998038564665234670",
+        "baseReserve": "988028121565488607",
+        "quoteReserve": "12573642951718307849",
+        "slipBps": 100,
+        "virtualQuoteReserve": "30913533305361874036"
+      },
+      "output": {
+        "expected": "12573642951718307849",
+        "minOut": "12447906522201124770"
+      }
+    },
+    {
+      "input": {
+        "amount": "16707447807047717649",
+        "baseReserve": "17001636756044593702",
+        "quoteReserve": "15953726342055022116",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-6386341881808095104"
+      },
+      "output": {
+        "expected": "4682669267318734759",
+        "minOut": "4635842574645547411"
+      }
+    },
+    {
+      "input": {
+        "amount": "1823077487571955815",
+        "baseReserve": "16199196766558507082",
+        "quoteReserve": "10192096166967488580",
+        "slipBps": 100,
+        "virtualQuoteReserve": "13134008441718529214"
+      },
+      "output": {
+        "expected": "2330101594858871798",
+        "minOut": "2306800578910283080"
+      }
+    },
+    {
+      "input": {
+        "amount": "16320917815634414994",
+        "baseReserve": "1890123689068725488",
+        "quoteReserve": "8831466266697782248",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-22744413593344979"
+      },
+      "output": {
+        "expected": "7795783951775601977",
+        "minOut": "7717826112257845957"
+      }
+    },
+    {
+      "input": {
+        "amount": "12858950952192483364",
+        "baseReserve": "16276952318994672411",
+        "quoteReserve": "11429778458974385091",
+        "slipBps": 150,
+        "virtualQuoteReserve": "-4464552217178837161"
+      },
+      "output": {
+        "expected": "3035633836654071287",
+        "minOut": "2990099329104260217"
+      }
+    },
+    {
+      "input": {
+        "amount": "3459051136166156267",
+        "baseReserve": "13200562995086405166",
+        "quoteReserve": "5159744516192774572",
+        "slipBps": 100,
+        "virtualQuoteReserve": "14999067726241087755"
+      },
+      "output": {
+        "expected": "4133272974905752222",
+        "minOut": "4091940245156694699"
+      }
+    },
+    {
+      "input": {
+        "amount": "2794521185124360135",
+        "baseReserve": "16819811578969642059",
+        "quoteReserve": "7056500472441475016",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-308326083080458707"
+      },
+      "output": {
+        "expected": "949417579598883962",
+        "minOut": "939923403802895122"
+      }
+    },
+    {
+      "input": {
+        "amount": "3969662307856746992",
+        "baseReserve": "7010027178223422701",
+        "quoteReserve": "1590122865085785634",
+        "slipBps": 150,
+        "virtualQuoteReserve": "1066825977297267597"
+      },
+      "output": {
+        "expected": "948601489668455547",
+        "minOut": "934372467323428713"
+      }
+    },
+    {
+      "input": {
+        "amount": "12255484574465637606",
+        "baseReserve": "2268079658494050191",
+        "quoteReserve": "2795941627149522956",
+        "slipBps": 150,
+        "virtualQuoteReserve": "5223398659393297593"
+      },
+      "output": {
+        "expected": "2795941627149522956",
+        "minOut": "2754002502742280111"
+      }
+    },
+    {
+      "input": {
+        "amount": "17665294345452261798",
+        "baseReserve": "9150731268614336470",
+        "quoteReserve": "9101059212881063675",
+        "slipBps": 100,
+        "virtualQuoteReserve": "-2879815709540880119"
+      },
+      "output": {
+        "expected": "4047070510079352954",
+        "minOut": "4006599804978559424"
+      }
+    },
+    {
+      "input": {
+        "amount": "8683741851848798116",
+        "baseReserve": "13341623244344003659",
+        "quoteReserve": "13272449297881840810",
+        "slipBps": 150,
+        "virtualQuoteReserve": "5635957293136554713"
+      },
+      "output": {
+        "expected": "7361661177339571269",
+        "minOut": "7251236259679477699"
+      }
+    },
+    {
+      "input": {
+        "amount": "1131927533665685225",
+        "baseReserve": "6515356205577195967",
+        "quoteReserve": "17075683783885228354",
+        "slipBps": 100,
+        "virtualQuoteReserve": "13869917194139462034"
+      },
+      "output": {
+        "expected": "4523217229791423089",
+        "minOut": "4477985057493508858"
+      }
+    },
+    {
+      "input": {
+        "amount": "11885621923471606634",
+        "baseReserve": "2546106656424684296",
+        "quoteReserve": "9567640527580121888",
+        "slipBps": 100,
+        "virtualQuoteReserve": "11186094895901988783"
+      },
+      "output": {
+        "expected": "9567640527580121888",
+        "minOut": "9471964122304320669"
+      }
+    },
+    {
+      "input": {
+        "amount": "6026151404824739860",
+        "baseReserve": "15713022958406327483",
+        "quoteReserve": "16513914989719748059",
+        "slipBps": 100,
+        "virtualQuoteReserve": "37937293233256975881"
+      },
+      "output": {
+        "expected": "14905330772991890627",
+        "minOut": "14756277465261971720"
+      }
+    },
+    {
+      "input": {
+        "amount": "6884723871981645601",
+        "baseReserve": "16014215260951183538",
+        "quoteReserve": "2612591234076314702",
+        "slipBps": 100,
+        "virtualQuoteReserve": "3930814558360283526"
+      },
+      "output": {
+        "expected": "1942728548654947814",
+        "minOut": "1923301263168398335"
+      }
+    },
+    {
+      "input": {
+        "amount": "12938408976216376117",
+        "baseReserve": "1080103145447282986",
+        "quoteReserve": "6202551745239491445",
+        "slipBps": 150,
+        "virtualQuoteReserve": "15395788263493671504"
+      },
+      "output": {
+        "expected": "6202551745239491445",
+        "minOut": "6109513469060899073"
+      }
+    },
+    {
+      "input": {
+        "amount": "5412408535582105787",
+        "baseReserve": "9352070987008327232",
+        "quoteReserve": "3128749575216059630",
+        "slipBps": 100,
+        "virtualQuoteReserve": "8526361019098721622"
+      },
+      "output": {
+        "expected": "3128749575216059630",
+        "minOut": "3097462079463899033"
+      }
+    }
+  ],
+  "source": "02-M2-BRIEF.md section 6.4 and D29-METEORA-LAUNCH.md section 3b; independent integer reference, deterministic seeds 102409 and 102429",
+  "stockCap": [
+    {
+      "input": {
+        "hitOutLastHour": "0",
+        "hitOutThisHour": "0"
+      },
+      "output": "30000000000"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "10000000000",
+        "hitOutThisHour": "22000000000"
+      },
+      "output": "44000000000"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "18446744073709551615",
+        "hitOutThisHour": "18446744073709551615"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "17738900237181937448",
+        "hitOutThisHour": "9282851358514302726"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "14536199428945624338",
+        "hitOutThisHour": "14596960189683511183"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "5311915852163295417",
+        "hitOutThisHour": "1326673400762971089"
+      },
+      "output": "10623831704326590834"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "9449884296929970244",
+        "hitOutThisHour": "5762744659192000563"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "17377036061909377792",
+        "hitOutThisHour": "2776180964659677189"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "18294449248500116809",
+        "hitOutThisHour": "2803989166480431868"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13539930510211809707",
+        "hitOutThisHour": "764470640270264434"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "7297981528361447592",
+        "hitOutThisHour": "11331294094602612940"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13071282327279590155",
+        "hitOutThisHour": "576097521109843850"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "5451921109846770249",
+        "hitOutThisHour": "3777714250899694217"
+      },
+      "output": "10903842219693540498"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "16442691526768950613",
+        "hitOutThisHour": "292283951543678697"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "1234689809494248579",
+        "hitOutThisHour": "3599223790700667695"
+      },
+      "output": "7198447581401335390"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "11277131833202919549",
+        "hitOutThisHour": "11208747752328308640"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "11681487427951161213",
+        "hitOutThisHour": "12131749028026460623"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "15438560474494277489",
+        "hitOutThisHour": "11246410688899371085"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "2511654623112143376",
+        "hitOutThisHour": "8758207735074960761"
+      },
+      "output": "17516415470149921522"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "15171897291002510744",
+        "hitOutThisHour": "17546361493634000607"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "1817981510623646167",
+        "hitOutThisHour": "16488272330806882959"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "672350816688702476",
+        "hitOutThisHour": "10229251719017881190"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "16093847643195022490",
+        "hitOutThisHour": "8064879096176623520"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "6484192681998523067",
+        "hitOutThisHour": "7173609121812609429"
+      },
+      "output": "14347218243625218858"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "14014779691105001946",
+        "hitOutThisHour": "6610350172214268239"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "10119573167391724165",
+        "hitOutThisHour": "7528902439274805253"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "12242177036679592713",
+        "hitOutThisHour": "5167608126177967091"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "6859226837675641646",
+        "hitOutThisHour": "13282789983900683771"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "8692315646424347034",
+        "hitOutThisHour": "9817800739419055915"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "5106393316698994471",
+        "hitOutThisHour": "4732545035250464316"
+      },
+      "output": "10212786633397988942"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "5086471297023852627",
+        "hitOutThisHour": "2137067730043628837"
+      },
+      "output": "10172942594047705254"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "10737514836717347648",
+        "hitOutThisHour": "16062558189577318093"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "1511426355309708534",
+        "hitOutThisHour": "2474735133921056734"
+      },
+      "output": "4949470267842113468"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "6099320028329004157",
+        "hitOutThisHour": "16917033630545092612"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "1025080455788420121",
+        "hitOutThisHour": "8999821521025083942"
+      },
+      "output": "17999643042050167884"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "12224313966410389633",
+        "hitOutThisHour": "14161338524284423325"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "7149736015357234929",
+        "hitOutThisHour": "12417860366663835590"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "14688000624987553881",
+        "hitOutThisHour": "927155018875686235"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "8435460015083618503",
+        "hitOutThisHour": "7927380789103698919"
+      },
+      "output": "16870920030167237006"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "2862670121058630730",
+        "hitOutThisHour": "15349675455563794967"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "12100184709703629921",
+        "hitOutThisHour": "9898970408281922309"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "16873354187282577464",
+        "hitOutThisHour": "16121454112640050884"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "12570290003306897497",
+        "hitOutThisHour": "5614632366349298834"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13731048533014796512",
+        "hitOutThisHour": "2516095471963803325"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13268831492931218010",
+        "hitOutThisHour": "14989019583744445982"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "11027299645259497413",
+        "hitOutThisHour": "6195705330618759394"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "14877343412978304070",
+        "hitOutThisHour": "12863686047937995994"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "4991396390907711889",
+        "hitOutThisHour": "1247983896513754641"
+      },
+      "output": "9982792781815423778"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13429568406969899835",
+        "hitOutThisHour": "6894379805854168657"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "17479436233233696687",
+        "hitOutThisHour": "5291810885556108454"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "1420668636563441480",
+        "hitOutThisHour": "7515999709574008066"
+      },
+      "output": "15031999419148016132"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "17226114721211558199",
+        "hitOutThisHour": "2194014531755656399"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "16135699248793539476",
+        "hitOutThisHour": "17590070787243088985"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "8858778844699641363",
+        "hitOutThisHour": "1418113825711970141"
+      },
+      "output": "17717557689399282726"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "13666628195128407251",
+        "hitOutThisHour": "2584639277749925785"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "7820195375408646987",
+        "hitOutThisHour": "6838008184868719772"
+      },
+      "output": "15640390750817293974"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "5728818501404202640",
+        "hitOutThisHour": "14967441516834006632"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "8806896324284726272",
+        "hitOutThisHour": "6021617153569805184"
+      },
+      "output": "17613792648569452544"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "12265207517045519096",
+        "hitOutThisHour": "7571752100943414543"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "9467498094366907025",
+        "hitOutThisHour": "591573456860234141"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "2703834164143224962",
+        "hitOutThisHour": "712002529797916015"
+      },
+      "output": "5407668328286449924"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "11738879749490841527",
+        "hitOutThisHour": "11969990974255045946"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "8578663497176905558",
+        "hitOutThisHour": "11395004124543070471"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "4618611213311980245",
+        "hitOutThisHour": "16985673402223178420"
+      },
+      "output": "18446744073709551615"
+    },
+    {
+      "input": {
+        "hitOutLastHour": "4622132097122877412",
+        "hitOutThisHour": "11137655790548539931"
+      },
+      "output": "18446744073709551615"
+    }
+  ]
+}

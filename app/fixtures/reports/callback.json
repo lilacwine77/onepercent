@@ -1,0 +1,464 @@
+{
+  "allocationMethod": "qty-sized scratch buffers plus all retained Anchor event allocations and a conservative 4096-byte entrypoint/fixed-allocation allowance",
+  "cases": [
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25280,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 116792,
+      "outcome": "silver",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 24187,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 77299,
+      "outcome": "house",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25283,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 116795,
+      "outcome": "blue",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25038,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 116550,
+      "outcome": "holo",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 24613,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 116125,
+      "outcome": "black",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25280,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 131471,
+      "outcome": "silver",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 24187,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 91978,
+      "outcome": "house",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25283,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 131474,
+      "outcome": "blue",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25038,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 131229,
+      "outcome": "holo",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 24613,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 130804,
+      "outcome": "black",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 104386,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 195915,
+      "outcome": "silver",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 83636,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 136765,
+      "outcome": "house",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 101919,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 193448,
+      "outcome": "heavy",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 104386,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 210584,
+      "outcome": "silver",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 83636,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 151434,
+      "outcome": "house",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 101919,
+      "edition": 0,
+      "features": "all",
+      "fulfillmentCuWithProvider": 208117,
+      "outcome": "heavy",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 59310,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 150830,
+      "outcome": "silver",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 49481,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 102601,
+      "outcome": "house",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 57567,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 149087,
+      "outcome": "heavy",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 59310,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 165504,
+      "outcome": "silver",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 49481,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 117275,
+      "outcome": "house",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 57567,
+      "edition": 3,
+      "features": "all",
+      "fulfillmentCuWithProvider": 163761,
+      "outcome": "heavy",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25280,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 116792,
+      "outcome": "silver",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 24187,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 77299,
+      "outcome": "house",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25283,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 116795,
+      "outcome": "blue",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 25038,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 116550,
+      "outcome": "holo",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "small",
+      "callbackCu": 24613,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 116125,
+      "outcome": "black",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25280,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 131471,
+      "outcome": "silver",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 24187,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 91978,
+      "outcome": "house",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25283,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 131474,
+      "outcome": "blue",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 25038,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 131229,
+      "outcome": "holo",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 5424,
+      "binder": "65535",
+      "callbackCu": 24613,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 130804,
+      "outcome": "black",
+      "qty": 1
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 104386,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 195915,
+      "outcome": "silver",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 83636,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 136765,
+      "outcome": "house",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "small",
+      "callbackCu": 101919,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 193448,
+      "outcome": "heavy",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 104386,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 210584,
+      "outcome": "silver",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 83636,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 151434,
+      "outcome": "house",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 17376,
+      "binder": "65535",
+      "callbackCu": 101919,
+      "edition": 0,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 208117,
+      "outcome": "heavy",
+      "qty": 10
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 59310,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 150830,
+      "outcome": "silver",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 49481,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 102601,
+      "outcome": "house",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "small",
+      "callbackCu": 57567,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 149087,
+      "outcome": "heavy",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 59310,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 165504,
+      "outcome": "silver",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 49481,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 117275,
+      "outcome": "house",
+      "qty": 5
+    },
+    {
+      "allocationUpperBound": 10736,
+      "binder": "65535",
+      "callbackCu": 57567,
+      "edition": 3,
+      "features": "mainnet",
+      "fulfillmentCuWithProvider": 163761,
+      "outcome": "heavy",
+      "qty": 5
+    }
+  ],
+  "og10LogBytes": 7078,
+  "providerAllowanceCu": 45000,
+  "spreads": [
+    {
+      "callbackCuSpread": 1096,
+      "edition": 0,
+      "qty": 1
+    },
+    {
+      "callbackCuSpread": 20750,
+      "edition": 0,
+      "qty": 10
+    },
+    {
+      "callbackCuSpread": 9829,
+      "edition": 3,
+      "qty": 5
+    }
+  ]
+}

@@ -1,0 +1,3694 @@
+[
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793290499",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793290500",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793441699",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793441700",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793490500",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793290500",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793290500",
+      "onAirTs": "1793290500",
+      "states": [
+        7,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793895305",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "0",
+      "jackpotTokens": "0",
+      "nowTs": "1793895305",
+      "onAirTs": "1793290500",
+      "states": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "1",
+      "nowTs": "1793290500",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "1",
+      "nowTs": "1793290500",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "18446744073709551615",
+      "jackpotTokens": "18446744073709551615",
+      "nowTs": "9223372036854775807",
+      "onAirTs": "0",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "0",
+        "151200",
+        "302400",
+        "453600"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "18446744073709551615",
+      "jackpotTokens": "1",
+      "nowTs": "9223372036854775807",
+      "onAirTs": "9223372036854775806",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "9223372036854775806",
+        "9223372036854775807",
+        "9223372036854775807",
+        "9223372036854775807"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "18446744073709551615",
+      "jackpotTokens": "0",
+      "nowTs": "-9223372036854775808",
+      "onAirTs": "-9223372036854775808",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "-9223372036854775808",
+        "-9223372036854624608",
+        "-9223372036854473408",
+        "-9223372036854322208"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "11967341137850600045",
+      "nowTs": "1793773558",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "8172187029962567921",
+      "nowTs": "1793604874",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "6610109892375197621",
+      "jackpotTokens": "4506337107579043774",
+      "nowTs": "1793398571",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "15470439278739202745",
+      "nowTs": "1793429490",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "16873186724149868029",
+      "nowTs": "1793341894",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "8975704296255891452",
+      "jackpotTokens": "16829762966332765569",
+      "nowTs": "1793764314",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "9710682172117469552",
+      "nowTs": "1793874661",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "13874918397101611556",
+      "nowTs": "1793613545",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1352451023934262808",
+      "jackpotTokens": "2035326127258674573",
+      "nowTs": "1793809558",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "8661046011961982481",
+      "nowTs": "1793696938",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "12971787091468736213",
+      "nowTs": "1793441790",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "4829080177995875700",
+      "jackpotTokens": "17749853965056996313",
+      "nowTs": "1793905298",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "2873932753580382493",
+      "nowTs": "1793510758",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "4647676875836000929",
+      "nowTs": "1793599610",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "3238680099582052880",
+      "jackpotTokens": "12009682535786171493",
+      "nowTs": "1793743822",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "9027485610008486505",
+      "nowTs": "1793548386",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "6302365977041459094",
+      "nowTs": "1793792099",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "1367198336893042346",
+      "jackpotTokens": "11877255962151863207",
+      "nowTs": "1793305176",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "18343634567989456638",
+      "nowTs": "1793463147",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "17652865013852568722",
+      "nowTs": "1793372367",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "13194790371361983549",
+      "jackpotTokens": "13634341729025604454",
+      "nowTs": "1793583219",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "14177622193572097985",
+      "nowTs": "1793400346",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "13656289189380359045",
+      "nowTs": "1794061166",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "7004256270229110628",
+      "jackpotTokens": "10450046919389318025",
+      "nowTs": "1794078978",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "322154205520578392",
+      "nowTs": "1794009453",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "9979971915981530764",
+      "nowTs": "1793544689",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "17633648346286030415",
+      "jackpotTokens": "11348737131926982912",
+      "nowTs": "1793721525",
+      "onAirTs": "1793290500",
+      "states": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "5680606442887683827",
+      "nowTs": "1794062676",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "11513022215125768104",
+      "nowTs": "1794035197",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "13655914893732924155",
+      "jackpotTokens": "2737636019528096732",
+      "nowTs": "1793736577",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "9112783264407641695",
+      "nowTs": "1794052592",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "15967643945675218947",
+      "nowTs": "1793301924",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "268349717041263591",
+      "jackpotTokens": "1701188239282199544",
+      "nowTs": "1793477005",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "10077916888938923308",
+      "nowTs": "1793632017",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "4146859369440532896",
+      "nowTs": "1793662677",
+      "onAirTs": "1793290500",
+      "states": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "10096964160676154708",
+      "jackpotTokens": "3831994983999850297",
+      "nowTs": "1793982066",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "2359078346947400776",
+      "nowTs": "1793326621",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "15453029340231819900",
+      "nowTs": "1793538977",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "14106401749702257648",
+      "jackpotTokens": "1657569665127195077",
+      "nowTs": "1793861294",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "6984979449700361380",
+      "nowTs": "1793431913",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "1767514472166441112",
+      "nowTs": "1793637037",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "12831539959547900876",
+      "jackpotTokens": "9788717846799159953",
+      "nowTs": "1793667370",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "4131173514970461013",
+      "nowTs": "1793669758",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "12396412212912314457",
+      "nowTs": "1793840658",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "5162582105298854120",
+      "jackpotTokens": "16899339338910139805",
+      "nowTs": "1793365222",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "2936050257995446556",
+      "nowTs": "1793473985",
+      "onAirTs": "1793290500",
+      "states": [
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "5135317992517807248",
+      "nowTs": "1793786245",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14892112763379371075",
+      "jackpotTokens": "15536800077273657156",
+      "nowTs": "1793415305",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "9908622788291650599",
+      "nowTs": "1793791448",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "17730183972592857675",
+      "nowTs": "1793524492",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "16500083479078896402",
+      "jackpotTokens": "16303966933468715695",
+      "nowTs": "1793903232",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "18168490306412358118",
+      "nowTs": "1793496307",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "3879194853994534394",
+      "nowTs": "1794080983",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "13810565331409403909",
+      "jackpotTokens": "6222396425565870926",
+      "nowTs": "1793388795",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "4233881294684933602",
+      "nowTs": "1794052959",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "15144466399605096886",
+      "nowTs": "1793617155",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "4997804103425678545",
+      "jackpotTokens": "8091794787353414346",
+      "nowTs": "1793654503",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "6975204030563279253",
+      "nowTs": "1793940670",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "8400424658898135705",
+      "nowTs": "1793917266",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "5722714419842476584",
+      "jackpotTokens": "7416143112395881437",
+      "nowTs": "1793644838",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "12706508113401370204",
+      "nowTs": "1793531137",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "3734577923389038032",
+      "nowTs": "1794022853",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "15526428814548826243",
+      "jackpotTokens": "4991562924929152132",
+      "nowTs": "1793363913",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "18394983226883036263",
+      "nowTs": "1793408792",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "12987281342443413420",
+      "nowTs": "1793712273",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "8234390971235062511",
+      "jackpotTokens": "5708871429546449952",
+      "nowTs": "1793777493",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "1206006239489129875",
+      "nowTs": "1793311604",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "12797969625663474295",
+      "nowTs": "1793923944",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "7414954248960875150",
+      "jackpotTokens": "14554877479624678811",
+      "nowTs": "1793609884",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "1123329782751805730",
+      "nowTs": "1793664927",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        4,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "5980783608594540790",
+      "nowTs": "1793569347",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "303286188132624145",
+      "jackpotTokens": "7307237730854856202",
+      "nowTs": "1793451815",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "9826131427911339989",
+      "nowTs": "1793924862",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "7782484827885845721",
+      "nowTs": "1793865106",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "10635990662521565725",
+      "jackpotTokens": "2044440407508919494",
+      "nowTs": "1793958227",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "8776672515976557473",
+      "nowTs": "1793730938",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "6328589228713362789",
+      "nowTs": "1793381326",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "17288832197857028969",
+      "jackpotTokens": "9863775854148596418",
+      "nowTs": "1793468095",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "13683007831666583981",
+      "nowTs": "1794083382",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "8142752604665381937",
+      "nowTs": "1794072138",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "18180612317841169760",
+      "jackpotTokens": "1484458413986332405",
+      "nowTs": "1793799326",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "13200949104083684628",
+      "nowTs": "1793831833",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "1895027697463955464",
+      "nowTs": "1793651933",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "1489996761503424987",
+      "jackpotTokens": "6478647896979610172",
+      "nowTs": "1793355105",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "6190940885681316671",
+      "nowTs": "1793949008",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "6717587278211035875",
+      "nowTs": "1793551620",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "6697399969865351498",
+      "jackpotTokens": "16745342085047645383",
+      "nowTs": "1793623288",
+      "onAirTs": "1793290500",
+      "states": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "16869883393397198059",
+      "nowTs": "1793964588",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "16690021150164082511",
+      "nowTs": "1793704864",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 1,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "15775407702473871347",
+      "jackpotTokens": "10171489621548601268",
+      "nowTs": "1793575097",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "8233532720462987991",
+      "nowTs": "1793870408",
+      "onAirTs": "1793290500",
+      "states": [
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "14102746662895374556",
+      "nowTs": "1793456257",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "13669760193428946783",
+      "jackpotTokens": "5629352730344898640",
+      "nowTs": "1794072133",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "17821113990840488195",
+      "nowTs": "1793921700",
+      "onAirTs": "1793290500",
+      "states": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "2623586932189983975",
+      "nowTs": "1793685400",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "2843926036555520830",
+      "jackpotTokens": "17863284727259320075",
+      "nowTs": "1793818060",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "8721508758450176879",
+      "nowTs": "1793378880",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "3509304422084949523",
+      "nowTs": "1793924596",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "13521588794032568250",
+      "jackpotTokens": "2464425163686988535",
+      "nowTs": "1793955816",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 3,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "855027575794656795",
+      "nowTs": "1793405980",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "10944424015477631871",
+      "nowTs": "1793959312",
+      "onAirTs": "1793290500",
+      "states": [
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "18421790689464072054",
+      "jackpotTokens": "661743794341412643",
+      "nowTs": "1793436996",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        4,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "8701654514913795210",
+      "nowTs": "1793826471",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "6600512736482730283",
+      "nowTs": "1794022508",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "12095097730679256690",
+      "jackpotTokens": "4876488961801664399",
+      "nowTs": "1794015712",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "5963663356654375750",
+      "nowTs": "1793514451",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "14895125780489934170",
+      "nowTs": "1793847735",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "13782560136393785829",
+      "jackpotTokens": "6811968012909039790",
+      "nowTs": "1793651931",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "10774894652651149634",
+      "nowTs": "1793745727",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "5414194560563430166",
+      "nowTs": "1793947107",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "13107151245658331313",
+      "jackpotTokens": "15738418981250753066",
+      "nowTs": "1793465799",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "8391395550755822453",
+      "nowTs": "1793797150",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "3795512512862306937",
+      "nowTs": "1794035378",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    "output": {
+      "flags": 5,
+      "jackpotLive": true,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "14218659231894196669",
+      "jackpotTokens": "8449295201449215718",
+      "nowTs": "1793366259",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "15442724971368140097",
+      "nowTs": "1794026906",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 2,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "8171240046265465093",
+      "nowTs": "1793844462",
+      "onAirTs": "1793290500",
+      "states": [
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "4656089073251294948",
+      "jackpotTokens": "10120438209270601993",
+      "nowTs": "1793824130",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3749999999",
+      "jackpotTokens": "8109980797326995789",
+      "nowTs": "1794003542",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7500000000",
+      "jackpotTokens": "8520825932113446353",
+      "nowTs": "1793949802",
+      "onAirTs": "1793290500",
+      "states": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "1726436710807246976",
+      "jackpotTokens": "12068430797410081429",
+      "nowTs": "1793299134",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1499999999",
+      "jackpotTokens": "6483856391716813364",
+      "nowTs": "1793697081",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "3750000000",
+      "jackpotTokens": "8938298980773400360",
+      "nowTs": "1793915261",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "8633441267378578555",
+      "jackpotTokens": "16292217599862590300",
+      "nowTs": "1793541377",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "14999999999",
+      "jackpotTokens": "5816891341154324447",
+      "nowTs": "1793570160",
+      "onAirTs": "1793290500",
+      "states": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "output": {
+      "flags": 1,
+      "jackpotLive": false,
+      "onePctIndex": 0,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 0,
+      "jackpotCost": "1500000000",
+      "jackpotTokens": "3014851954169743748",
+      "nowTs": "1793512905",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 1,
+      "jackpotCost": "12485691497750730087",
+      "jackpotTokens": "6556479995093922680",
+      "nowTs": "1793410317",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 2,
+      "jackpotCost": "7499999999",
+      "jackpotTokens": "7670097957542040748",
+      "nowTs": "1793734289",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "output": {
+      "flags": 0,
+      "jackpotLive": false,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  },
+  {
+    "input": {
+      "edition": 3,
+      "jackpotCost": "15000000000",
+      "jackpotTokens": "6762009385837240608",
+      "nowTs": "1793408853",
+      "onAirTs": "1793290500",
+      "states": [
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "output": {
+      "flags": 4,
+      "jackpotLive": true,
+      "onePctIndex": null,
+      "releaseTimes": [
+        "1793290500",
+        "1793441700",
+        "1793592900",
+        "1793744100"
+      ]
+    }
+  }
+]

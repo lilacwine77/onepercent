@@ -1,0 +1,23 @@
+{
+  "name": "damm-migrated-base-vault",
+  "address": "JDEyu2DdcHv5aC3q19aCGA85CcHMAqkRX1s3exbNArEd",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848239,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "62240abfbab7980e521c866dfaeef609d53ad01c57697d51b45802c61b8ced76",
+  "pubkey": "JDEyu2DdcHv5aC3q19aCGA85CcHMAqkRX1s3exbNArEd",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "zD5IuK3YExyjR7d8S0kKdy9ArACEIZXLWN1mBcLOtqPyzNU1rKXxc2rIIt0Hc+TZL72KWbKUA1AClakBHHOp5bR/HWo9Vw0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 2039280,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

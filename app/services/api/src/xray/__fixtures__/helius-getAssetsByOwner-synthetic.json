@@ -1,0 +1,225 @@
+{
+  "source": "synthetic-rekeyed",
+  "note": "Provider response envelope derived from recorded public account bytes and synthetic wallet fixtures; never a real wallet scan.",
+  "derivedFrom": "packages/eligibility/fixtures/wallets/trencher.json",
+  "wallet": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "total": 16,
+      "limit": 1000,
+      "page": 1,
+      "items": [
+        {
+          "id": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "FARTCOIN",
+              "name": "fartcoin"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "CATCRAFT",
+              "name": "catcraft"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "NOSUFFIX",
+              "name": "no-suffix"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "INCOMPLETE",
+              "name": "incomplete"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA1",
+              "name": "pump-extra-1"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA2",
+              "name": "pump-extra-2"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA3",
+              "name": "pump-extra-3"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA4",
+              "name": "pump-extra-4"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA5",
+              "name": "pump-extra-5"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA6",
+              "name": "pump-extra-6"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PUMPEXTRA7",
+              "name": "pump-extra-7"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PNUT",
+              "name": "pnut"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "BONK",
+              "name": "bonk"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "USDC",
+              "name": "usdc"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "TRANSFERHOOK",
+              "name": "transfer-hook"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        },
+        {
+          "id": "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ",
+          "interface": "FungibleToken",
+          "content": {
+            "metadata": {
+              "symbol": "PERMANENTDELEGAT",
+              "name": "permanent-delegate"
+            },
+            "links": {
+              "image": "https://example.com/coin.png"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,734 @@
+/* Synced from experience/cards-lab/src/cards/styles/sheet.css by experience/sync-lab.mjs. */
+/* Sheet: a dialog on desktop, a bottom sheet on phones. Header and confirm button stay put; only the actions scroll. */
+.mc-layer {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--mc-z) + 30);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.mc-layer.is-warm {
+  visibility: hidden;
+  pointer-events: none;
+}
+.mc-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(38 6 46 / 0.42);
+  -webkit-backdrop-filter: blur(6px) saturate(0.9);
+  backdrop-filter: blur(6px) saturate(0.9);
+}
+.mc-sheet {
+  --sheet-max: min(760px, calc(100vh - 48px));
+  position: relative;
+  width: min(940px, 100%);
+  max-height: var(--sheet-max);
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  border-radius: 22px 22px 56px 22px;
+  background: var(--paper);
+  overflow: hidden;
+  color: var(--ink);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ink),
+    0 50px 100px -40px rgb(20 4 26 / 0.75);
+}
+.mc-grab {
+  display: none;
+}
+.mc-sheet-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 40px 36px;
+  overflow: hidden;
+  perspective: 1100px;
+  background: radial-gradient(
+    80% 70% at 50% 38%,
+    #ffffff 0%,
+    #fbeff6 45%,
+    #efddee 100%
+  );
+}
+.mc-sheet-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--mc-grain);
+  background-size: 96px;
+  opacity: 0.6;
+}
+.mc-sheet[data-kind="black"] .mc-sheet-stage,
+.mc-sheet[data-kind="final"] .mc-sheet-stage {
+  background: radial-gradient(
+    80% 70% at 50% 38%,
+    #4a2d52 0%,
+    #2c1235 55%,
+    #190a1e 100%
+  );
+}
+.mc-sheet[data-kind="jackpot"] .mc-sheet-stage {
+  background: radial-gradient(
+    80% 70% at 50% 38%,
+    #fff6dc 0%,
+    #f6e1b0 50%,
+    #e9c98a 100%
+  );
+}
+.mc-sheet[data-kind="holo"] .mc-sheet-stage,
+.mc-sheet[data-kind="one_pct"] .mc-sheet-stage {
+  background: radial-gradient(
+    80% 70% at 50% 38%,
+    #ffffff 0%,
+    #f6ecff 45%,
+    #e8dcf6 100%
+  );
+}
+.mc-sheet[data-kind="blue"] .mc-sheet-stage {
+  background: radial-gradient(
+    80% 70% at 50% 38%,
+    #f3f7ff 0%,
+    #e2e9fb 50%,
+    #cfd9f3 100%
+  );
+}
+.mc-sheet-slot {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+}
+.mc-sheet-slot > .mc-card {
+  box-shadow:
+    0 2px 0 rgb(38 6 46 / 0.06),
+    0 34px 50px -26px rgb(38 6 46 / 0.65);
+}
+.mc-sheet-floor {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  width: 64%;
+  height: 30px;
+  translate: -50% 0;
+  border-radius: 50%;
+  z-index: 0;
+  background: radial-gradient(
+    closest-side,
+    rgb(38 6 46 / 0.3),
+    rgb(38 6 46 / 0)
+  );
+  filter: blur(6px);
+}
+
+/* Right column: fixed header · scrolling options · fixed confirm */
+.mc-sheet-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: var(--sheet-max);
+}
+.mc-sheet-top {
+  flex: none;
+  padding: 30px 32px 6px;
+}
+.mc-sheet-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px 32px 18px;
+  scroll-padding: 12px 0 18px;
+}
+.mc-sheet-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+.mc-sheet-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 48px;
+}
+.mc-sheet-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 8px;
+  font: 500 15px / 1.3 var(--sans);
+  color: var(--mauve);
+}
+.mc-sheet-eyebrow .mc-link {
+  color: var(--ink);
+  padding: 3px 2px;
+}
+.mc-dotsep {
+  color: rgb(119 62 131 / 0.6);
+}
+.mc-sheet-title {
+  margin-top: 2px;
+  font: 700 36px / 1.04 var(--serif);
+  letter-spacing: -0.05em;
+  outline: none;
+  text-wrap: balance;
+}
+.mc-sheet-amount {
+  font: 700 22px / 1.2 var(--serif);
+  letter-spacing: -0.035em;
+}
+.mc-sheet-note {
+  font: 500 15px / 1.4 var(--sans);
+  color: var(--mauve);
+  text-wrap: pretty;
+}
+/* "Cards stay here until you choose.": closing the sheet keeps the card. */
+.mc-sheet-stay {
+  margin-top: -4px;
+  padding: 0 4px;
+  font: 500 14px / 1.35 var(--sans);
+  color: var(--mauve);
+}
+
+/* Actions (at most two): name and figure on the first line, the description across the whole text column */
+.mc-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mc-choice {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  grid-template-areas: "ico name fig" "ico line line";
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 2px;
+  padding: 11px 14px 12px 10px;
+  border-radius: 14px 14px 30px 14px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1.5px rgb(38 6 46 / 0.15);
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+.mc-choice:hover {
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.mc-choice.is-on {
+  background: var(--blush);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+.mc-choice:has(.mc-choice-input:focus-visible) {
+  box-shadow: inset 0 0 0 3px var(--ink);
+  background: var(--blush);
+}
+.mc-choice.is-off {
+  cursor: default;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgb(38 6 46 / 0.1);
+}
+.mc-choice.is-off .mc-choice-name,
+.mc-choice.is-off .mc-choice-ico {
+  opacity: 0.55;
+}
+.mc-choice-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+.mc-choice-ico {
+  grid-area: ico;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px 12px 22px 12px;
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px rgb(38 6 46 / 0.14);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.mc-choice.is-on .mc-choice-ico {
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: none;
+}
+.mc-choice-name {
+  grid-area: name;
+  font: 500 16px / 1.25 var(--sans);
+  align-self: center;
+}
+.mc-choice-line {
+  grid-area: line;
+  font: 500 15px / 1.35 var(--sans);
+  color: var(--mauve);
+  text-wrap: pretty;
+  align-self: start;
+}
+.mc-choice-fig {
+  grid-area: fig;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+.mc-choice-fig:empty {
+  display: none;
+}
+.mc-fig {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.mc-fig.is-gold {
+  height: 28px;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px 5px 14px 5px;
+  font: 700 15px / 1 var(--sans);
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  box-shadow: inset 0 0 0 1px rgb(168 112 31 / 0.5);
+}
+.mc-fig.is-lilac {
+  height: 28px;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px 5px 14px 5px;
+  font: 700 15px / 1 var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1.5px var(--lilac);
+}
+
+.mc-presign {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px 15px;
+  border-radius: 12px 12px 28px 12px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1px rgb(38 6 46 / 0.12);
+}
+.mc-presign:empty {
+  display: none;
+}
+/* One sentence on what the action does and when it pays, then the technical details in one small row */
+.mc-presign-lead {
+  font: 500 16px / 1.4 var(--sans);
+  text-wrap: pretty;
+}
+.mc-presign-details {
+  font: 500 13px / 1.45 var(--sans);
+  color: var(--mauve);
+  font-variant-numeric: tabular-nums;
+  text-wrap: pretty;
+}
+.mc-presign-details.is-quoting {
+  width: fit-content;
+  background: linear-gradient(
+      100deg,
+      var(--mauve) 35%,
+      var(--lilac) 50%,
+      var(--mauve) 65%
+    )
+    0 0 / 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: mc-shimmer 1.6s linear infinite;
+}
+.mc-presign-ttl {
+  font: 500 14px / 1.3 var(--sans);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  color: var(--mauve);
+}
+.mc-presign-ttl:empty {
+  display: none;
+}
+.mc-presign-ttl.is-expired {
+  font-weight: 700;
+  color: var(--ink);
+}
+.mc-sheet-foot {
+  flex: none;
+  position: relative;
+  padding: 14px 32px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  background: var(--paper);
+  box-shadow: 0 -1px 0 rgb(38 6 46 / 0.08);
+}
+.mc-sheet-foot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 18px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgb(255 249 238 / 0),
+    rgb(255 249 238 / 0.95)
+  );
+}
+.mc-sheet-foot .mc-oval {
+  width: 100%;
+}
+.mc-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 12px 12px 26px 12px;
+  background: var(--blush);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.mc-confirm-title {
+  font: 700 18px / 1.2 var(--serif);
+  letter-spacing: -0.03em;
+}
+.mc-confirm-body {
+  font: 500 15px / 1.4 var(--sans);
+  text-wrap: pretty;
+}
+.mc-flowmsg {
+  font: 500 15px / 1.35 var(--sans);
+  text-align: center;
+  text-wrap: balance;
+}
+.mc-flowmsg:empty {
+  display: none;
+}
+.mc-flowmsg.is-error {
+  font-weight: 700;
+}
+.mc-flowmsg.is-error::before {
+  content: "−";
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 13px;
+  vertical-align: 1px;
+}
+.mc-trust {
+  font: 500 14px / 1.3 var(--sans);
+  text-align: center;
+}
+
+/* Bulk fan */
+.mc-fan {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 5 / 6;
+}
+.mc-fan-card {
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  width: 156px;
+  translate: -50% 0;
+  transform: translate(var(--x), var(--y)) rotate(var(--r));
+  transform-origin: 50% 110%;
+}
+.mc-fan-card > .mc-card {
+  box-shadow: 0 24px 40px -24px rgb(38 6 46 / 0.7);
+}
+.mc-fan-more {
+  position: absolute;
+  right: 2%;
+  bottom: 8%;
+  z-index: 20;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--cream);
+  font: 700 15px / 1 var(--sans);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.mc-sheet[data-mode="machine"] {
+  grid-template-columns: 1fr;
+  width: min(560px, 100%);
+}
+.mc-sheet[data-mode="machine"] .mc-sheet-stage {
+  display: none;
+}
+.mc-sheet[data-mode="machine"] .mc-sheet-scroll {
+  padding-bottom: 26px;
+}
+
+/* In the machine */
+.mc-mlist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mc-mrow {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 14px 14px 30px 14px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1px rgb(38 6 46 / 0.12);
+}
+.mc-mcoin .mc-coin {
+  width: 44px;
+  font-size: 44px;
+}
+.mc-mtext {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.mc-mname {
+  font: 700 16px / 1.2 var(--serif);
+  letter-spacing: -0.02em;
+}
+.mc-mline {
+  font: 500 14px / 1.3 var(--sans);
+  color: var(--mauve);
+  text-wrap: pretty;
+}
+.mc-mempty {
+  padding: 20px 0;
+  font: 500 15px / 1.4 var(--sans);
+  color: var(--mauve);
+}
+.mc-mbtn {
+  height: 40px;
+}
+.mc-vaults {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mc-vaults-title {
+  margin-top: 6px;
+  font: 700 18px / 1.2 var(--serif);
+  letter-spacing: -0.03em;
+}
+.mc-vault {
+  font: 500 15px / 1.4 var(--sans);
+}
+
+/* Phones: a bottom sheet. The card sits inside the sheet's top area (never over the page header), the page is dimmed and blurred. */
+@media (max-width: 719px) {
+  .mc-backdrop {
+    background: rgb(38 6 46 / 0.55);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+  .mc-backdrop.is-leaving {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .mc-layer {
+    padding: 0;
+    place-items: end stretch;
+  }
+  .mc-sheet {
+    --sheet-max: calc(100dvh - 56px - env(safe-area-inset-top));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px 24px 0 0;
+    box-shadow:
+      inset 0 1.5px 0 var(--ink),
+      0 -20px 50px -20px rgb(20 4 26 / 0.6);
+  }
+  .mc-sheet-stage {
+    flex: none;
+  }
+  .mc-sheet-body {
+    position: static;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+  }
+  .mc-grab {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    z-index: 3;
+    width: 40px;
+    height: 5px;
+    translate: -50% 0;
+    border-radius: 3px;
+    background: rgb(38 6 46 / 0.22);
+  }
+  .mc-sheet-stage::after,
+  .mc-sheet-floor {
+    display: none;
+  }
+  .mc-sheet-close {
+    top: 14px;
+    right: 14px;
+  }
+  .mc-sheet-top {
+    padding: 22px 16px 4px;
+  }
+  .mc-sheet-scroll {
+    padding: 10px 16px 16px;
+    gap: 12px;
+  }
+  .mc-sheet-foot {
+    padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
+  }
+  .mc-sheet-title {
+    font-size: 26px;
+  }
+  .mc-sheet-amount {
+    font-size: 18px;
+  }
+  .mc-sheet-note {
+    font-size: 14px;
+  }
+
+  /* Card sheet: the card at the top left, its name and figures beside it */
+  .mc-sheet[data-mode="card"] .mc-sheet-stage {
+    position: absolute;
+    left: 16px;
+    top: 24px;
+    z-index: 2;
+    width: 104px;
+    padding: 0;
+    overflow: visible;
+    background: none;
+    display: block;
+    perspective: 700px;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-slot {
+    width: 104px;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-slot > .mc-card {
+    box-shadow:
+      0 1px 0 rgb(38 6 46 / 0.06),
+      0 16px 26px -14px rgb(38 6 46 / 0.6);
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-top {
+    min-height: 180px;
+    padding: 24px 16px 6px 136px;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-head {
+    padding-right: 0;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-eyebrow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 46px;
+    font-size: 14px;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-eyebrow .mc-dotsep {
+    display: none;
+  }
+  .mc-sheet[data-mode="card"] .mc-sheet-eyebrow .mc-link {
+    min-height: 28px;
+    padding: 2px 0;
+  }
+  .mc-sheet-eyebrow .mc-link {
+    min-height: 32px;
+  }
+
+  /* Bulk: the fan across the top, centred */
+  .mc-sheet[data-mode="bulk"] .mc-sheet-stage {
+    padding: 18px 0 0;
+    height: 186px;
+    background: none;
+    overflow: visible;
+    place-items: start center;
+  }
+  .mc-sheet[data-mode="bulk"] .mc-sheet-head {
+    padding-right: 0;
+    text-align: center;
+    align-items: center;
+  }
+  /* The fan's box ends with its cards, so the "+N" badge sits on them, never on the text below. */
+  .mc-fan {
+    width: 260px;
+    aspect-ratio: auto;
+    height: 168px;
+  }
+  .mc-fan-card {
+    width: 108px;
+  }
+
+  .mc-sheet[data-mode="machine"] .mc-sheet-head {
+    padding-right: 44px;
+  }
+  .mc-choice {
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+    padding: 10px 12px 11px 9px;
+    column-gap: 10px;
+  }
+  /* Feed back's figure ("≈0.0057 SOL when it’s pulled") takes its own line under the name. */
+  .mc-choice[data-choice="feed_back"] {
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-areas: "ico name" "ico fig" "ico line";
+    row-gap: 4px;
+  }
+  .mc-choice[data-choice="feed_back"] .mc-choice-fig {
+    justify-content: flex-start;
+  }
+  .mc-choice-ico {
+    width: 38px;
+    height: 38px;
+  }
+  .mc-choice-line {
+    font-size: 14px;
+  }
+  .mc-fig.is-gold,
+  .mc-fig.is-lilac {
+    height: 26px;
+    padding: 0 8px;
+    font-size: 14px;
+  }
+  .mc-presign {
+    padding: 11px 13px;
+  }
+  .mc-presign-lead {
+    font-size: 15px;
+  }
+  .mc-mrow {
+    grid-template-columns: 38px minmax(0, 1fr);
+    row-gap: 10px;
+  }
+  .mc-mcoin .mc-coin {
+    width: 38px;
+    font-size: 38px;
+  }
+  .mc-mrow .mc-mbtn {
+    grid-column: 2;
+    justify-self: start;
+    height: 40px;
+  }
+}

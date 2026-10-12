@@ -1,0 +1,21 @@
+{
+  "capturedAt": "2026-10-09T09:50:02.845Z",
+  "kind": "synthetic-serialization-measurement",
+  "sent": false,
+  "source": "SDK buildLaunchCandidates with fixed public keys, Onepercent/1PCT metadata, an 80-byte HTTPS URI and one frozen 24-address table; verified by packages/sdk/src/pump/pump.test.ts",
+  "single": {
+    "v0Bytes": 838,
+    "v0WithoutLookupBytes": 1548,
+    "staticKeys": 9,
+    "tableKeys": 24,
+    "requiredSigners": 2
+  },
+  "maximumMetadata": {
+    "nameBytes": 32,
+    "symbolBytes": 13,
+    "uriBytes": 200,
+    "v0Bytes": 989
+  },
+  "maxBytes": 1232,
+  "note": "D28 uses one atomic v0 transaction through Helius Sender. Both supported metadata cases fit the wire limit."
+}

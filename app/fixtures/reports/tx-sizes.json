@@ -1,0 +1,1058 @@
+{
+  "feed": [
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 1,
+      "bytes": 964
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 2,
+      "bytes": 1170
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 3,
+      "bytes": 1376
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 4,
+      "bytes": 1582
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 5,
+      "bytes": 1788
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 6,
+      "bytes": 1994
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 1,
+      "bytes": 1016
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 2,
+      "bytes": 1222
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 3,
+      "bytes": 1428
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 4,
+      "bytes": 1634
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 5,
+      "bytes": 1840
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 6,
+      "bytes": 2046
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 1,
+      "bytes": 890
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 2,
+      "bytes": 1086
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 3,
+      "bytes": 1282
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 4,
+      "bytes": 1478
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 5,
+      "bytes": 1674
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 6,
+      "bytes": 1870
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 1,
+      "bytes": 942
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 2,
+      "bytes": 1138
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 3,
+      "bytes": 1334
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 4,
+      "bytes": 1530
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 5,
+      "bytes": 1726
+    },
+    {
+      "kind": "feed",
+      "format": "legacy",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 6,
+      "bytes": 1922
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 1,
+      "bytes": 814
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 2,
+      "bytes": 1020
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 3,
+      "bytes": 1226
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 4,
+      "bytes": 1432
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 5,
+      "bytes": 1638
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": false,
+      "bags": 6,
+      "bytes": 1844
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 1,
+      "bytes": 866
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 2,
+      "bytes": 1072
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 3,
+      "bytes": 1278
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 4,
+      "bytes": 1484
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 5,
+      "bytes": 1690
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": false,
+      "computeBudget": true,
+      "bags": 6,
+      "bytes": 1896
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 1,
+      "bytes": 771
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 2,
+      "bytes": 967
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 3,
+      "bytes": 1163
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 4,
+      "bytes": 1359
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 5,
+      "bytes": 1555
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": false,
+      "bags": 6,
+      "bytes": 1751
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 1,
+      "bytes": 823
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 2,
+      "bytes": 1019
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 3,
+      "bytes": 1215
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 4,
+      "bytes": 1411
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 5,
+      "bytes": 1607
+    },
+    {
+      "kind": "feed",
+      "format": "v0",
+      "vaultExists": true,
+      "computeBudget": true,
+      "bags": 6,
+      "bytes": 1803
+    }
+  ],
+  "exits": [
+    {
+      "kind": "takeBack",
+      "count": 4,
+      "bytes": 1078
+    },
+    {
+      "kind": "takeBack",
+      "count": 4,
+      "bytes": 1078
+    },
+    {
+      "kind": "takeBack",
+      "count": 4,
+      "bytes": 1078
+    },
+    {
+      "kind": "takeBack",
+      "count": 4,
+      "bytes": 1078
+    },
+    {
+      "kind": "takeBack",
+      "count": 3,
+      "bytes": 908
+    },
+    {
+      "kind": "redeem",
+      "count": 5,
+      "bytes": 1201
+    },
+    {
+      "kind": "redeem",
+      "count": 5,
+      "bytes": 1201
+    },
+    {
+      "kind": "redeem",
+      "count": 5,
+      "bytes": 1201
+    },
+    {
+      "kind": "redeem",
+      "count": 4,
+      "bytes": 1034
+    }
+  ],
+  "redeemSameMint8": 736,
+  "other": [
+    {
+      "kind": "settle2",
+      "bytes": 923
+    },
+    {
+      "kind": "refund",
+      "bytes": 325
+    },
+    {
+      "kind": "buy10",
+      "bytes": 590
+    },
+    {
+      "kind": "buy10Hold",
+      "bytes": 831
+    }
+  ],
+  "settle": [
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 635
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 640
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 647
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 652
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 654
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 659
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 666
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 671
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 667
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 672
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 679
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 684
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 686
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 691
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 698
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 703
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 923
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 928
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 935
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 940
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 942
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 947
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 954
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 959
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 955
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 960
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 967
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 972
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 974
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 979
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 986
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 991
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 968
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 973
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 980
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 985
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1006
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1011
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1018
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1023
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1064
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1069
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1076
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 1,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1081
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1102
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": false,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1107
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1114
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1119
+    }
+  ],
+  "settleMaxima": [
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 666
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 671
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 698
+    },
+    {
+      "packs": 1,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 703
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 954
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 959
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 1,
+      "bytes": 986
+    },
+    {
+      "packs": 2,
+      "pulls": 1,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 1,
+      "bytes": 991
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1018
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": false,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1023
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "legacy",
+      "memos": 2,
+      "bytes": 1114
+    },
+    {
+      "packs": 2,
+      "pulls": 2,
+      "independentBuyers": true,
+      "sequenceDigits": 20,
+      "priorityFee": true,
+      "format": "v0",
+      "memos": 2,
+      "bytes": 1119
+    }
+  ]
+}

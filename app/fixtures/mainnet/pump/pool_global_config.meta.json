@@ -1,0 +1,11 @@
+{
+  "name": "pool_global_config",
+  "address": "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+  "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+  "lamports": 9272823,
+  "executable": false,
+  "slot": 454747050,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 949,
+  "sha256": "a698009a419d0b8c56ff257626d15cba305c4989a602fa86e65ca252b2c200f4"
+}

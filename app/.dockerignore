@@ -1,0 +1,11 @@
+**/node_modules
+**/dist
+**/coverage
+**/.vitest
+target
+.anchor
+test-ledger
+**/.env*
+!**/.env.example
+**/*.keypair.json
+.DS_Store

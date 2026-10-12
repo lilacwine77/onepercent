@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791493003785,
+      "tag": "0000_m2_core",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791500275031,
+      "tag": "0001_m5_bot",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791567352182,
+      "tag": "0002_m4_season_services",
+      "breakpoints": true
+    }
+  ]
+}

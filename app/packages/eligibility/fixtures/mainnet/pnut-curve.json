@@ -1,0 +1,10 @@
+{
+  "address": "2JUXSuq1A1EdBzZj757cXFYuALPxv6vee4X981ajpzo8",
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": "1934880",
+  "dataBase64": "F7f4N2DYrGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAxqR+jQMAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "slot": 454620967,
+  "recordedAt": "2026-10-08T18:10:35.661Z",
+  "source": "mainnet",
+  "note": "PNUT canonical pump.fun curve, verified owner and discriminator during fixture derivation."
+}

@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - services/*
+  - packages/*
+
+minimumReleaseAge: 20160
+
+onlyBuiltDependencies:
+  - esbuild

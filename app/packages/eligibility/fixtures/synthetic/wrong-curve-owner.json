@@ -1,0 +1,10 @@
+{
+  "address": "TBHe5tJnuT4CQbHorJ1uVdfUoaYGPKgfCpiv2jgesVN",
+  "owner": "11111111111111111111111111111111",
+  "lamports": "3934883",
+  "dataBase64": "F7f4N2DYrGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAxqR+jQMAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "source": "synthetic",
+  "note": "fartcoin canonical pump.fun curve.",
+  "derivedFrom": "mainnet/fartcoin-curve.json",
+  "change": "Replace owner with system program."
+}

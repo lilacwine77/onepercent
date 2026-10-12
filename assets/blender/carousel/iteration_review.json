@@ -1,0 +1,53 @@
+{
+  "request": "Repair visible pack overlap and preserve the exact edition artwork/logo in the interactive carousel.",
+  "contract": {
+    "critical": ["No overlap between the projected pack silhouettes through a complete cycle, including hover", "Native edition artwork and logo proportions remain identifiable and sharp", "Keep the closed-volume foil model and interaction"],
+    "invariants": ["Eight logical slots and existing drag/keyboard contract", "Original GLB geometry and image assets retained", "Three source meshes, names and hierarchy retained", "Asset review does not itself trigger site deployment"]
+  },
+  "candidate_evidence": ["artifacts/carousel-repair/before/production-desktop.png", "artifacts/carousel-repair/before/production-mobile.png", "artifacts/quality-v4/baseline"],
+  "candidate_ledger": [
+    {"requirement": "Separate pack silhouettes", "result": "fail", "evidence": "User screenshot and preserved production mobile view show front/back copies crossing at equal projected X"},
+    {"requirement": "Native logo appearance", "result": "fail", "evidence": "Production close-up and native thumbnails differ: synthesized emboss lighting plus ACES changes the already-lit artwork"},
+    {"requirement": "Retain 3D volume", "result": "pass", "evidence": "Existing closed front/reverse/edge GLB retained unchanged"}
+  ],
+  "source_causes": [
+    "Sine placement makes front and rear slots share the same X, compounded by narrow-screen radius",
+    "Strong metallic studio illumination and ACES grade a photograph that already contains foil and logo lighting",
+    "Alternate edition UVs were remapped while the physical XY silhouette stayed Signature-shaped"
+  ],
+  "repair": [
+    "Shared pure front-arc placement, monotone X and an explicit silhouette envelope; recycle only beyond the viewport",
+    "Load the exact thumbnail URL for every edition front; keep native sRGB print and add a bounded specular contribution with no tone mapping",
+    "Move all shell XY positions with the fitted native UV coordinates while preserving Z, so the logo and silhouette keep their image proportions",
+    "Compile programs asynchronously, reveal only after first rendered frame, and suppress offscreen drawing"
+  ],
+  "invariants": {
+    "runtime_glb_bytes": 4690396,
+    "runtime_glb_sha256": "135EDCB299B191AFB5F953C7B2D53DF454AF6CB352A1779471710EFEC2AD9EA9",
+    "runtime_glb_modified": false,
+    "native_image_assets_modified": false,
+    "existing_uv_tests": "3/3 pass",
+    "fresh_blender_import": "Not repeated: GLB/source asset bytes unchanged; browser deformation and appearance are checked in their actual runtime instead"
+  },
+  "final_evidence": ["artifacts/carousel-repair/edition-0.png", "artifacts/carousel-repair/edition-1.png", "artifacts/carousel-repair/edition-2.png", "artifacts/carousel-repair/edition-3.png", "artifacts/carousel-repair/half-step.png", "artifacts/carousel-repair/mobile-half-step.png", "artifacts/quality-v4/final/carousel-report.json", "artifacts/quality-v4/final/carousel-910-blue.png", "artifacts/quality-v4/final/carousel-390-signature.png"],
+  "final_checks": {
+    "browser": "Chrome headless / ANGLE SwiftShader; emulated viewport sizes, not physical mobile GPU performance",
+    "audit_at": "2026-10-02T14:08:07.539Z",
+    "viewport_widths": [1190, 1440, 910, 390],
+    "rotation_phases": 64,
+    "poses_per_phase": "rest and two extreme hover poses",
+    "editions": 4,
+    "projected_silhouette_overlaps": 0,
+    "front_clips": 0,
+    "horizontal_overflow": 0,
+    "browser_errors": 0,
+    "minimum_gap_desktop_px": 40.91,
+    "minimum_gap_mobile_px": 29.50,
+    "native_texture_url_identity": "pass for all four editions",
+    "front_texture_orientation_and_color": "flipY true, sRGB, toneMapped false",
+    "maximum_xy_uv_affine_residual": 1.1920928955078125e-7,
+    "harness_gate": "Wait for material compilation and assert that the sweep changes the actual pose before measuring or capturing",
+    "visual_review": "All four isolated edition renders opened and inspected. Final real-page Blue Shift at 910px and Signature at 390px also opened: correct finish, native logo proportions and visible gaps. Independent QA agent inspected the same final evidence."
+  },
+  "decision": "retain_repair"
+}

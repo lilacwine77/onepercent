@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-10-08T18:43:40.777Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump&outputMint=So11111111111111111111111111111111111111112&amount=184189758208&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791485021"
+    },
+    "body": {
+      "inputMint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "inAmount": "184189758208",
+      "outAmount": "255558522618",
+      "otherAmountThreshold": "255558522618",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.0030573238633740886",
+      "routePlan": [
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 27557.942356027655,
+          "swapInfo": {
+            "ammKey": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+            "label": "JupiterZ",
+            "inputMint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "184189758208",
+            "outAmount": "255558522618"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "transaction": null,
+      "gasless": true,
+      "jitOptimized": false,
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "requestId": "01a11cd4-08c2-7723-a82f-77495c852dc3",
+      "swapType": "rfq",
+      "router": "jupiterz",
+      "guaranteedPrice": true,
+      "quoteId": "60a547f7-2855-590b-93c8-5f6b9af85779",
+      "maker": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+      "taker": null,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "inUsdValue": 27642.454291174294,
+      "outUsdValue": 27557.94235602766,
+      "swapUsdValue": 27557.94235602766,
+      "priceImpact": -0.30573238633740885,
+      "mode": "ultra",
+      "totalTime": 472
+    }
+  }
+}

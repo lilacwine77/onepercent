@@ -1,0 +1,67 @@
+{
+  "name": "@onepercent/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./src/browser.ts",
+      "development": "./src/browser.ts",
+      "import": "./dist/browser.js"
+    },
+    "./constants": {
+      "types": "./src/constants.ts",
+      "development": "./src/constants.ts",
+      "import": "./dist/constants.js"
+    },
+    "./layouts": {
+      "types": "./src/layouts.ts",
+      "development": "./src/layouts.ts",
+      "import": "./dist/layouts.js"
+    },
+    "./events": {
+      "types": "./src/events/index.ts",
+      "development": "./src/events/index.ts",
+      "import": "./dist/events/index.js"
+    },
+    "./api": {
+      "types": "./src/api/index.ts",
+      "development": "./src/api/index.ts",
+      "import": "./dist/api/index.js"
+    },
+    "./rescue": {
+      "types": "./src/rescue/compose.ts",
+      "development": "./src/rescue/compose.ts",
+      "import": "./dist/rescue/compose.js"
+    },
+    "./verify": {
+      "types": "./src/verify/index.ts",
+      "development": "./src/verify/index.ts",
+      "import": "./dist/verify/index.js"
+    },
+    "./server": {
+      "types": "./src/server/index.ts",
+      "development": "./src/server/index.ts",
+      "import": "./dist/server/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --preserve-symlinks ../../scripts/test.mjs"
+  },
+  "dependencies": {
+    "@solana/web3.js": "1.99.0",
+    "@anchor-lang/core": "0.32.2",
+    "zod": "4.6.5",
+    "@onepercent/config": "workspace:*",
+    "@solana/spl-token": "0.4.15",
+    "@noble/hashes": "1.8.0",
+    "buffer": "6.0.3"
+  }
+}

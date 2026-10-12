@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d5a2f1" />
+    <meta
+      name="description"
+      content="X-ray any Solana wallet. Feed your bags to the machine. Rip foil packs with real tokens inside. Go for the 1%."
+    />
+    <title>Onepercent · Dust in, Packs out.</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Onepercent" />
+    <meta property="og:url" content="https://www.onepercent.fun/" />
+    <meta property="og:title" content="Onepercent · Dust in, Packs out." />
+    <meta
+      property="og:description"
+      content="X-ray any Solana wallet. Feed your bags to the machine. Rip foil packs with real tokens inside. Go for the 1%."
+    />
+    <meta property="og:image" content="https://www.onepercent.fun/assets/og-onepercent.jpg?v=3" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A cream 3D TV showing white Pepe with a foil pack, beside the words Dust in, Packs out." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.onepercent.fun/assets/og-onepercent.jpg?v=3" />
+    <meta name="twitter:image:alt" content="A cream 3D TV showing white Pepe with a foil pack, beside the words Dust in, Packs out." />
+    <meta name="twitter:title" content="Onepercent · Dust in, Packs out." />
+    <meta
+      name="twitter:description"
+      content="X-ray any Solana wallet. Feed your bags to the machine. Rip foil packs with real tokens inside. Go for the 1%."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%232c1235'/%3E%3Ctext x='50' y='68' fill='%23d5a2f1' font-size='54' font-family='Georgia' font-weight='bold' text-anchor='middle'%3E1%25%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="/assets/hero-studio-clean.webp" as="image" />
+    <link rel="preload" href="/assets/crt-poster.webp?v=4" as="image" />
+    <script>
+      try {
+        if (
+          !sessionStorage.getItem("onepercent-v2-seen") &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          document.documentElement.classList.add("is-loading");
+      } catch {}
+    </script>
+    <style>
+      html.is-loading::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 2999;
+        background: #d5a2f1;
+      }
+      html.is-loader-live::before {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#packs">Skip to packs</a>
+    <header class="site-header">
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#packs">Packs</a
+        ><a href="#about">Feed</a>
+      </nav>
+      <a class="wordmark" href="#home" aria-label="Onepercent home"
+        >1<span>%</span></a
+      >
+      <div class="header-actions">
+        <button class="round-button" type="button" data-info="packs" aria-label="How packs work"
+          ><span>?</span></button
+        ><button class="round-button replay" aria-label="Replay the television effect">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 10a8 8 0 1 1 1.2 6.7M4 4v6h6" />
+          </svg></button
+        ><button
+          class="round-button menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="#home">Home</a><a href="#packs">The packs</a
+        ><a href="#about">Feed</a>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="hero hero--crt"
+        id="home"
+        aria-label="Onepercent: the 1% Machine on Solana"
+      >
+        <div class="hero-frame">
+          <div class="hero-backdrop" aria-hidden="true"></div>
+          <div class="hero-art" role="img" aria-label="A cream 3D television displaying 1% and all-white Pepe holding a card">
+            <img
+              class="crt-poster"
+              src="/assets/crt-poster.webp?v=4"
+              alt=""
+              fetchpriority="high"
+            />
+            <div id="crt-stage" aria-hidden="true"></div>
+          </div>
+          <div class="hero-copy">
+            <h1 data-title>Dust in,<br />Packs out.</h1>
+            <p data-copy>Feed your dust to the machine. Rip foil packs with real Solana tokens inside.</p>
+            <a class="hero-deposit" href="#about">Feed your dust <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-actions">
+            <a class="oval hero-cta" href="#packs"
+              ><span>Pick a pack <b>→</b></span></a
+            >
+            <button class="crt-watch" type="button" data-watch-film aria-haspopup="dialog" aria-controls="concept-video-dialog">
+              Watch the film <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="products" id="packs" aria-labelledby="products-title">
+        <div class="section-intro">
+          <h2 id="products-title" data-title>
+            Pick a pack.
+          </h2>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+      <section class="story" id="about">
+        <div class="story-machine" data-pop>
+          <img
+            src="/assets/onepercent-machine.webp"
+            alt="The Onepercent machine, a lilac gumball machine full of gold coins and foil packs"
+            width="718"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="story-copy">
+          <h2 data-title>Got dust?<br />Feed the machine.</h2>
+          <p data-copy>
+            Each bag you feed becomes a Dust Card. When a pack pulls it, you get
+            2% of that pack’s price in&nbsp;SOL.
+          </p>
+          <button class="oval" type="button" data-info="supply"
+            ><span>How Feed works <b>→</b></span></button
+          >
+        </div>
+      </section>
+      <section class="dust-pays" id="how-dust-pays" aria-labelledby="dust-pays-title">
+        <div class="dust-pays-head">
+          <h2 id="dust-pays-title" data-title>How dust pays.</h2>
+          <p data-copy>Most dust sells for next to nothing. In the machine, it can still pay.</p>
+        </div>
+        <figure class="dust-demo" data-dust-demo>
+          <div class="dust-demo-before">
+            <span class="dust-coin" data-dust-from><img src="/assets/tokens/ansem.webp" alt="ANSEM logo" width="384" height="384" loading="lazy" decoding="async" /></span>
+            <p class="dust-coin-name">$ANSEM</p>
+            <p class="dust-sold">sells for <b>≈0.00027 SOL</b></p>
+          </div>
+          <div class="dust-demo-host" data-pop aria-hidden="true">
+            <img src="/assets/pepe-mascot-white.webp" alt="" width="1254" height="1254" loading="lazy" decoding="async" />
+          </div>
+          <div class="dust-demo-after">
+            <div class="dust-card" data-dust-to>
+              <span class="dust-card-strip">$ANSEM</span>
+              <span class="dust-coin dust-coin--card"><img src="/assets/tokens/ansem.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></span>
+              <span class="dust-card-amount">0.2175</span>
+              <span class="dust-card-ticker">$ANSEM</span>
+              <span class="dust-card-chain">pump.fun ✳︎ Solana</span>
+              <span class="dust-card-foot"><span>Fed by you</span><b>Dust Card</b></span>
+              <span class="dust-card-foil"></span>
+            </div>
+          </div>
+          <p class="dust-payoff" data-dust-payoff>
+            <span class="dust-payoff-upto">up to</span>
+            <span class="dust-payoff-x"><span data-dust-count>75</span>×</span>
+            <span class="dust-payoff-when">when a pack pulls it</span>
+            <span class="dust-payoff-range">0.002–0.02 SOL</span>
+          </p>
+          <svg class="dust-demo-path" aria-hidden="true">
+            <defs>
+              <marker id="dust-arc-head" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M2 1.5 7 5 2 8.5" /></marker>
+              <mask id="dust-arc-reveal" maskUnits="userSpaceOnUse"><path data-dust-trace /></mask>
+            </defs>
+            <path data-dust-path mask="url(#dust-arc-reveal)" marker-end="url(#dust-arc-head)" />
+          </svg>
+          <span class="dust-demo-feed" aria-hidden="true">Feed</span>
+          <span class="dust-coin dust-demo-ghost" aria-hidden="true"><img src="/assets/tokens/ansem.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></span>
+          <figcaption class="sr-only">Example: an ANSEM bag that sells for about 0.00027 SOL becomes a Dust Card. When a pack pulls it, it pays 0.002 to 0.02 SOL, up to 75 times what the bag sells for.</figcaption>
+        </figure>
+        <ol class="dust-steps">
+          <li>
+            <span class="dust-step-icon" data-pop aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M5 11V7.5A2.5 2.5 0 0 1 7.5 5H11M21 5h3.5A2.5 2.5 0 0 1 27 7.5V11M27 21v3.5a2.5 2.5 0 0 1-2.5 2.5H21M11 27H7.5A2.5 2.5 0 0 1 5 24.5V21" /><circle cx="16" cy="16" r="6" /><path class="dust-step-accent" d="M3.5 16h25" /></svg>
+            </span>
+            <h3 data-copy>X-ray</h3>
+            <p data-copy>See what each bag sells for.</p>
+          </li>
+          <li>
+            <span class="dust-step-icon" data-pop aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="8.5" y="11.5" width="15" height="17.5" rx="3" /><path d="M8.5 16.5h15" /><circle class="dust-step-accent" cx="16" cy="6.5" r="3.5" /><path d="M16 19.5v5M13.5 22.5 16 25l2.5-2.5" /></svg>
+            </span>
+            <h3 data-copy>Feed</h3>
+            <p data-copy>Each bag becomes a Dust Card.</p>
+          </li>
+          <li>
+            <span class="dust-step-icon" data-pop aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M8 8l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2v16l-2 2-2-2-2 2-2-2-2 2-2-2-2 2-2-2Z" /><circle class="dust-step-accent" cx="13" cy="13" r="1.7" /><circle class="dust-step-accent" cx="19" cy="19" r="1.7" /><path class="dust-step-accent" d="M19.5 12.5l-7 7" /></svg>
+            </span>
+            <h3 data-copy>Get paid</h3>
+            <p data-copy>2% of the pack that pulls it.</p>
+          </li>
+        </ol>
+        <p class="dust-pays-back" data-copy>Changed your mind? Take your bag back any time before it’s pulled.</p>
+        <p class="dust-pays-note">Example: 0.2175 ANSEM, Jupiter quote on 10 Oct 2026.</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div>
+          <h2 data-title>Find your<br />1%.</h2>
+          <a class="oval" href="#packs">
+            <span>Pick a pack <b>→</b></span>
+          </a>
+        </div>
+        <nav aria-label="Footer">
+          <a href="#packs">The packs</a><button type="button" data-info="packs">How packs work</button
+          ><a href="#about">Feed your dust</a><button class="replay">Replay the TV effect</button
+          ><button id="replay-intro">Replay the intro</button
+          ><a href="https://x.com/1percentfun" rel="external noopener" target="_blank">Follow on X ↗</a>
+        </nav>
+        <img src="/assets/pepe-mascot-white.webp" alt="" loading="lazy" />
+      </div>
+      <div class="footer-logo" aria-label="Onepercent">Onepercent.</div>
+      <div class="footer-bottom">
+        <span>Dust in, Packs out.</span
+        ><span>© 2026 Onepercent</span>
+      </div>
+    </footer>
+    <dialog class="pack-detail" id="pack-detail" aria-labelledby="detail-title">
+      <button class="detail-close round-button" aria-label="Close details">
+        ×
+      </button>
+      <div class="detail-art"><img id="detail-image" alt="" /></div>
+      <div class="detail-copy">
+        <span class="detail-brand">Onepercent.</span>
+        <h2 id="detail-title"></h2>
+        <p id="detail-price"></p>
+        <p id="detail-description"></p>
+        <div class="detail-rule">
+          <h3 id="detail-rule-title">Your cards, your call.</h3>
+          <p id="detail-rule-copy">
+            Redeem: the tokens go to your wallet. Sell: the machine buys a hit
+            now, in SOL. Feed back: a Dust Card goes back in and pays you when
+            it’s pulled. Cards stay in My cards until you choose.
+          </p>
+        </div>
+        <button class="oval detail-preview">
+          <span>Back to the TV <b>→</b></span>
+        </button>
+      </div>
+    </dialog>
+    <dialog class="concept-video" id="concept-video-dialog" aria-labelledby="concept-video-title" data-lenis-prevent>
+      <h2 id="concept-video-title" class="sr-only">Onepercent TV</h2>
+      <button class="concept-video__close" type="button" data-concept-close autofocus>
+        Close <span aria-hidden="true">×</span>
+      </button>
+      <div class="concept-video__viewport" data-film-viewport>
+        <div class="concept-video__fallback" data-film-fallback>
+          <div class="concept-video__glass">
+            <img class="concept-video__idle" data-film-idle alt="" />
+            <video id="concept-film" playsinline preload="none" tabindex="-1" aria-label="How Onepercent works, a short film">
+              <track kind="captions" srclang="en" label="English" />
+            </video>
+          </div>
+        </div>
+        <p class="concept-video__caption" data-film-caption hidden></p>
+      </div>
+      <div class="concept-video__controls">
+        <input class="concept-video__progress" type="range" min="0" max="25" step="0.01" value="0" aria-label="Film position" data-film-seek />
+        <div class="concept-video__buttons">
+          <button type="button" data-film-play>Pause</button>
+          <button type="button" data-film-replay aria-label="Replay the film">Replay</button>
+          <span class="concept-video__time" data-film-time aria-live="off">0:00 / 0:25</span>
+          <button type="button" data-film-mute aria-label="Mute sound" aria-pressed="false">Sound on</button>
+          <button type="button" data-film-captions aria-label="Show English captions" aria-pressed="false">CC</button>
+        </div>
+      </div>
+      <p class="concept-video__error" data-concept-error role="status" hidden>The film couldn’t load. Use Play to try again.</p>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

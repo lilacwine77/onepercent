@@ -1,0 +1,79 @@
+{
+  "recordedAt": "2026-10-08T18:42:47.715Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&outputMint=So11111111111111111111111111111111111111112&amount=3360457118443&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484968"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "3360457118443",
+      "outAmount": "998439046",
+      "otherAmountThreshold": "998439046",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.001270921233774769",
+      "routePlan": [
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 107.65961490266253,
+          "swapInfo": {
+            "ammKey": "5Dp922oSaj9rdLHTxZzq1B7QV7KmwY7U7K1JNCRhc45J",
+            "label": "ZeroFi",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "3360457118443",
+            "outAmount": "107810306"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 107.65961490266253,
+          "swapInfo": {
+            "ammKey": "FLckHLGMJy5gEoXWwcE68Nprde1D4araK4TGLw4pQq2n",
+            "label": "TesseraV",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "107810306",
+            "outAmount": "999438484"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-3b0b-71b8-8614-24cc6b459005",
+      "inUsdValue": 107.79661591075256,
+      "outUsdValue": 107.65961490266253,
+      "swapUsdValue": 107.65961490266253,
+      "priceImpact": -0.1270921233774769,
+      "mode": "ultra",
+      "totalTime": 67
+    }
+  }
+}

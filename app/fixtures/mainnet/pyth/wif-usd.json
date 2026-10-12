@@ -1,0 +1,42 @@
+{
+  "capturedAtUtc": "2026-10-09T10:53:53.774053+00:00",
+  "cluster": "mainnet-beta",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "symbol": "WIF/USD",
+  "shard": 0,
+  "feedId": "4ca4beeca86f0d164160323817a4e42b10010a724c2217c6ee41b54cd4cc61fc",
+  "address": "9Sn9FVu6WpufA8yZFSRuxYyFgpBrhc5PpTgB3mq2DcsG",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getAccountInfo",
+    "params": [
+      "9Sn9FVu6WpufA8yZFSRuxYyFgpBrhc5PpTgB3mq2DcsG",
+      {
+        "encoding": "base64",
+        "commitment": "finalized"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "result": {
+      "context": {
+        "apiVersion": "4.3.0",
+        "slot": 454845183
+      },
+      "value": {
+        "data": [
+          "IvEjY51+9M19eA7hv8i0BvnEBmYzlBYHOWlusjdBQ3XS77HxNL20PwFMpL7sqG8NFkFgMjgXpOQrEAEKckwiF8buQbVM1Mxh/NXTQAEAAAAAxBYAAAAAAAD4////m8fIagAAAACax8hqAAAAANGoQwEAAAAAxxoAAAAAAACTYhwbAAAAAAA=",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1823520,
+        "owner": "rec2HHDDnjLfj4kE7VyEtFA1HPGQLK33259532cRyHp",
+        "rentEpoch": 18446744073709551615,
+        "space": 134
+      }
+    },
+    "id": 1
+  }
+}

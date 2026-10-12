@@ -1,0 +1,42 @@
+{
+  "capturedAtUtc": "2026-10-09T11:02:35.405352+00:00",
+  "cluster": "mainnet-beta",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "symbol": "FARTCOIN/USD",
+  "shard": 0,
+  "feedId": "58cd29ef0e714c5affc44f269b2c1899a52da4169d7acc147b9da692e6953608",
+  "address": "65g8gPGkHH5Ss5YPJNCxRAa9dnvp37khzeY7tbbe3ntw",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getAccountInfo",
+    "params": [
+      "65g8gPGkHH5Ss5YPJNCxRAa9dnvp37khzeY7tbbe3ntw",
+      {
+        "encoding": "base64",
+        "commitment": "finalized"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "result": {
+      "context": {
+        "apiVersion": "4.3.0",
+        "slot": 454847144
+      },
+      "value": {
+        "data": [
+          "IvEjY51+9M1LfQFIX33E4NdHYkxUmXEexb+doP2Gg4aBXPI4F0KF+AFYzSnvDnFMWv/ETyabLBiZpS2kFp16zBR7naaS5pU2CDa3+AAAAAAAuBgAAAAAAAD4////uMnIagAAAAC3ychqAAAAAJfz+QAAAAAAzRAAAAAAAACCahwbAAAAAAA=",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1823520,
+        "owner": "rec2HHDDnjLfj4kE7VyEtFA1HPGQLK33259532cRyHp",
+        "rentEpoch": 18446744073709551615,
+        "space": 134
+      }
+    },
+    "id": 1
+  }
+}

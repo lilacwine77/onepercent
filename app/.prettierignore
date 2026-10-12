@@ -1,0 +1,21 @@
+node_modules/
+dist/
+dist-preview/
+coverage/
+.vitest/
+target/
+.anchor/
+test-ledger/
+# Generated operational reports are ignored by git and may contain JSONL logs.
+reports/
+pnpm-lock.yaml
+Cargo.lock
+packages/sdk/src/idl/
+
+# Rust and measurement generators own these JSON layouts.
+fixtures/vectors/*.json
+fixtures/reports/*.json
+
+# Pinned upstream IDLs retain their source bytes and hashes.
+fixtures/meteora/dbc.json
+fixtures/meteora/damm-v2.json

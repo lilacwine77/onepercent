@@ -1,0 +1,11 @@
+{
+  "name": "global",
+  "address": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": 4089842911,
+  "executable": false,
+  "slot": 454747034,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 1088,
+  "sha256": "32729edb5b0dca0257e24f7bb9655008092456b7e22e512a9e6039decc450032"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "buyback_recipient",
+  "address": "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+  "owner": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+  "lamports": 8903802823,
+  "executable": false,
+  "slot": 454747053,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 208,
+  "sha256": "53d61380e3505653e0f108d60538061a412af5a055bb760181e3ac89338cffde"
+}

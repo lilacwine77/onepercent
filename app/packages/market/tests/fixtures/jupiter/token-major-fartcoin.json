@@ -1,0 +1,120 @@
+{
+  "recordedAt": "2026-10-08T18:43:26.274Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/tokens/v2/search?query=9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "7",
+      "x-ratelimit-remaining": "3",
+      "x-ratelimit-reset": "1791485008"
+    },
+    "body": [
+      {
+        "id": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+        "name": "Fartcoin",
+        "symbol": "Fartcoin",
+        "icon": "https://ipfs.io/ipfs/QmQr3Fz4h1etNsF7oLGMRHiCzhB5y9a7GjyodnF7zLHK1g",
+        "decimals": 6,
+        "dev": "HyYNVYmnFmi87NsQqWzLJhUTPBKQUfgfhdbBa554nMFF",
+        "circSupply": 999915343.027172,
+        "totalSupply": 999915343.027172,
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "launchpad": "pump.fun",
+        "graduatedPool": "Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw",
+        "graduatedAt": "2024-10-18T06:09:47Z",
+        "holderCount": 191930,
+        "fdv": 150063252.34142125,
+        "mcap": 150063252.34142125,
+        "usdPrice": 0.15007595731766202,
+        "priceBlockId": 454628134,
+        "liquidity": 6029536.071593938,
+        "stats5m": {
+          "priceChange": 0.6774526453476655,
+          "holderChange": 0.0015630943014792082,
+          "liquidityChange": 0.11187667922510439,
+          "volumeChange": 524.2457733092031,
+          "buyVolume": 22243.14267451391,
+          "sellVolume": 3988.8915302828545,
+          "buyOrganicVolume": 0.732854678422105,
+          "sellOrganicVolume": 0.7342470664917073,
+          "numBuys": 272,
+          "numSells": 206,
+          "numTraders": 91,
+          "numOrganicBuyers": 4,
+          "numNetBuyers": 13
+        },
+        "stats1h": {
+          "priceChange": 3.429908093102021,
+          "holderChange": 0.008858180529719196,
+          "liquidityChange": 1.7615882752410483,
+          "volumeChange": 27.583018921519326,
+          "buyVolume": 262813.6164421605,
+          "sellVolume": 102374.38030148622,
+          "buyOrganicVolume": 22317.368406564994,
+          "sellOrganicVolume": 4581.649621284603,
+          "numBuys": 1502,
+          "numSells": 1236,
+          "numTraders": 336,
+          "numOrganicBuyers": 13,
+          "numNetBuyers": 72
+        },
+        "stats6h": {
+          "priceChange": -4.578497367062469,
+          "holderChange": -0.02708587263389276,
+          "liquidityChange": -3.2542798124236207,
+          "volumeChange": 390.3956761733077,
+          "buyVolume": 1204428.8416186238,
+          "sellVolume": 1265965.6807699585,
+          "buyOrganicVolume": 68524.96467676979,
+          "sellOrganicVolume": 286929.502439582,
+          "numBuys": 11043,
+          "numSells": 10765,
+          "numTraders": 1323,
+          "numOrganicBuyers": 38,
+          "numNetBuyers": 282
+        },
+        "stats24h": {
+          "priceChange": -5.926042476732642,
+          "holderChange": -0.12748796669702092,
+          "liquidityChange": -4.78486454655142,
+          "volumeChange": 19.193679489399393,
+          "buyVolume": 1955914.2200189144,
+          "sellVolume": 1942787.1651617186,
+          "buyOrganicVolume": 107180.30094542871,
+          "sellOrganicVolume": 348065.80453401734,
+          "numBuys": 21057,
+          "numSells": 21188,
+          "numTraders": 3443,
+          "numOrganicBuyers": 84,
+          "numNetBuyers": 680
+        },
+        "firstPool": {
+          "id": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "createdAt": "2024-10-18T06:05:05Z"
+        },
+        "audit": {
+          "mintAuthorityDisabled": true,
+          "freezeAuthorityDisabled": true,
+          "topHoldersPercentage": 33.852931242924484,
+          "devMigrations": 263,
+          "devMints": 495
+        },
+        "organicScore": 87.87190802689955,
+        "organicScoreLabel": "high",
+        "isVerified": true,
+        "tags": [
+          "meme",
+          "community",
+          "launchpad",
+          "moonshot-verified",
+          "verified"
+        ],
+        "createdAt": "2024-10-18T06:05:05Z",
+        "updatedAt": "2026-10-08T18:43:19.597849689Z"
+      }
+    ]
+  }
+}

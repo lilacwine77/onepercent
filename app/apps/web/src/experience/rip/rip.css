@@ -1,0 +1,540 @@
+/* The Rip page: the machine stage under the shell header, and the dock
+   (ported from the lab host, experience/lab/src/demo.css). */
+.rip-page {
+  position: relative;
+  height: 100svh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--cream);
+}
+.rip-stage {
+  position: absolute;
+  inset: 0;
+}
+.rip-dock,
+.rip-dock button {
+  -webkit-tap-highlight-color: transparent;
+}
+.rip-dock {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 5;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 12px 16px 12px 12px;
+  border-radius: 18px 18px 48px 18px;
+  transform: translateX(-50%);
+  transition:
+    opacity 0.28s ease,
+    transform 0.5s var(--ease-arrive);
+}
+.rip-dock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--cream) 86%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  backdrop-filter: blur(16px) saturate(1.1);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ink),
+    0 18px 40px -26px #26062e88;
+}
+.rip-dock.is-hidden {
+  opacity: 0;
+  transform: translate(-50%, 28px) scale(0.98);
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.3s ease-in;
+}
+.rip-dock.is-compact {
+  gap: 0;
+  padding: 10px;
+}
+.rip-dock button {
+  min-height: 0;
+  box-shadow: none;
+  background: none;
+}
+.rip-editions {
+  display: flex;
+  gap: 4px;
+}
+.rip-edition {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: auto;
+  padding: 6px 12px 6px 6px;
+  border-radius: 14px;
+  text-align: left;
+}
+.rip-dock .rip-edition:hover,
+.rip-dock .rip-edition:focus-visible {
+  background: #26062e0f;
+}
+.rip-dock .rip-edition:focus-visible {
+  background: var(--blush);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+.rip-edition img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 3px #26062e26);
+  transition: transform 0.3s var(--ease-spring);
+}
+.rip-edition:hover img {
+  transform: translateY(-3px) rotate(-5deg);
+}
+.rip-edition[aria-checked="true"] img {
+  transform: translateY(-3px);
+}
+.rip-edition span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.rip-edition b {
+  font:
+    700 17px/1.05 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.rip-edition small {
+  font:
+    500 14px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.rip-edition::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transition: transform 0.3s var(--ease-arrive);
+}
+.rip-edition[aria-checked="true"]::after {
+  transform: scaleX(1);
+}
+.rip-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+/* The Rip oval: ink face over a slow lilac→gold light travelling its border. */
+.rip-dock .rip-oval {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: stretch;
+  min-width: 236px;
+  height: 58px;
+  padding: 1.5px;
+  overflow: hidden;
+  border-radius: 9px 9px 25px 9px;
+  color: var(--cream);
+  font-size: 17px;
+  white-space: nowrap;
+}
+.rip-oval::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -2;
+  width: 360px;
+  height: 360px;
+  margin: -180px 0 0 -180px;
+  background: conic-gradient(
+    from 0deg,
+    #26062e 0 58%,
+    #d5a2f1 70%,
+    #f6d272 78%,
+    #fff3c4 80%,
+    #d5a2f1 86%,
+    #26062e 96%
+  );
+  animation: rip-beam 3.6s linear infinite;
+}
+@keyframes rip-beam {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rip-oval-face {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 0 7px 0 23px;
+  border-radius: 8px 8px 24px 8px;
+  background: var(--ink);
+  transition: background 0.2s ease;
+}
+.rip-oval:hover .rip-oval-face {
+  background: var(--orchid);
+}
+.rip-oval em {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+}
+/* The arrow chip always shows, whatever the room: the label gives way first. */
+.rip-oval b {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px 6px 19px 6px;
+  color: var(--ink);
+  background: var(--lilac);
+  font-size: 24px;
+  font-weight: 400;
+}
+.rip-dock .rip-oval:focus-visible {
+  box-shadow: none;
+}
+.rip-oval:focus-visible .rip-oval-face {
+  box-shadow: inset 0 0 0 2px var(--lilac);
+}
+.rip-oval:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.rip-oval:disabled::before {
+  animation: none;
+}
+.rip-trust {
+  margin: 0;
+  font:
+    500 14px/1.25 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  text-align: center;
+}
+.rip-trust span {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.rip-modes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rip-seg {
+  display: flex;
+  padding: 2px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.rip-dock .rip-seg button,
+.rip-dock .rip-toggle {
+  position: relative;
+  isolation: isolate;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font:
+    500 14px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  white-space: nowrap;
+}
+.rip-dock .rip-toggle {
+  height: 36px;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.rip-seg button::before,
+.rip-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--ink);
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.2s ease,
+    transform 0.4s var(--ease-spring);
+}
+.rip-dock .rip-seg button[aria-checked="true"],
+.rip-dock .rip-toggle[aria-pressed="true"] {
+  color: var(--cream);
+}
+.rip-seg button[aria-checked="true"]::before,
+.rip-toggle[aria-pressed="true"]::before {
+  opacity: 1;
+  transform: none;
+}
+.rip-dock .rip-seg button:focus-visible,
+.rip-dock .rip-toggle:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+.rip-dock .rip-pill {
+  height: 44px;
+  margin-left: 10px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  font:
+    500 15px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.rip-dock .rip-pill:hover {
+  background: var(--lilac);
+}
+.rip-dock.is-compact .rip-cta {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rip-dock.is-compact .rip-trust {
+  flex-basis: 100%;
+}
+@media (max-width: 899px) {
+  .rip-dock {
+    flex-direction: column;
+    gap: 6px;
+    width: calc(100% - 24px);
+    max-width: none;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    padding: 8px 10px;
+  }
+  .rip-editions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .rip-edition {
+    flex: 1;
+    flex-direction: column;
+    gap: 1px;
+    padding: 3px 2px 7px;
+    text-align: center;
+  }
+  .rip-edition::after {
+    left: 18%;
+    right: 18%;
+  }
+  .rip-edition img {
+    width: 34px;
+    height: 34px;
+  }
+  .rip-edition span {
+    gap: 1px;
+  }
+  .rip-edition b {
+    font-size: 13px;
+  }
+  .rip-edition small {
+    font-size: 12px;
+  }
+  .rip-cta {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 10px;
+  }
+  .rip-dock .rip-oval {
+    flex: 1 0 100%;
+    height: 50px;
+  }
+  .rip-oval b {
+    width: 36px;
+    height: 36px;
+  }
+  .rip-modes {
+    gap: 6px;
+  }
+  .rip-dock .rip-seg button,
+  .rip-dock .rip-toggle {
+    padding: 0 12px;
+  }
+  .rip-trust {
+    font-size: 13px;
+  }
+  .rip-dock.is-compact {
+    width: calc(100% - 24px);
+    padding: 8px;
+  }
+  /* After a pull: "Rip again · 0.10 SOL" and its arrow fit beside Change pack. */
+  .rip-dock.is-compact .rip-oval {
+    flex: 1;
+    min-width: 0;
+    font-size: 16px;
+  }
+  .rip-dock.is-compact .rip-oval-face {
+    min-width: 0;
+    gap: 10px;
+    padding: 0 6px 0 16px;
+  }
+  .rip-dock.is-compact .rip-pill {
+    height: 50px;
+    margin-left: 0;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .rip-dock.is-compact .rip-oval {
+    font-size: 15px;
+  }
+}
+[data-motion="reduced"] .rip-oval::before {
+  animation: none;
+}
+/* Lab issue (remove once the lab centres it): pressable() writes an inline
+   transform, which drops the module's translateX(-50%) on Reveal all. The
+   independent translate centres it and keeps the press effect. */
+.rip-root .rip-btn.rip-reveal-all {
+  translate: -50% 0 !important;
+}
+/* The same cream control surface and ink/lilac focus treatment as the dock. */
+.rip-preview {
+  width: min(480px, calc(100% - 32px));
+  max-height: calc(100svh - 48px);
+  overflow: auto;
+  margin: auto;
+  padding: 24px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 18px 18px 36px 18px;
+  box-shadow: 0 18px 40px -26px #26062e88;
+}
+.rip-preview::backdrop {
+  background: #26062e88;
+}
+.rip-preview h2 {
+  margin: 0 0 18px;
+}
+.rip-preview ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rip-preview li {
+  overflow-wrap: anywhere;
+  padding: 10px 0;
+  border-bottom: 1px solid #26062e22;
+}
+.rip-preview li b,
+.rip-preview li small {
+  display: block;
+}
+.rip-preview li b {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.rip-preview li small {
+  margin-top: 3px;
+  opacity: 0.75;
+}
+.rip-preview-total {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.rip-preview-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.rip-preview-actions button {
+  border-radius: 999px;
+}
+.rip-line {
+  flex-basis: 100%;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  max-width: min(720px, 85vw);
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0 0 4px;
+}
+.rip-dock .rip-line .rip-pill {
+  height: auto;
+  min-width: 92px;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 14px;
+  display: grid;
+  gap: 3px;
+}
+.rip-line b,
+.rip-line span {
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rip-line small {
+  opacity: 0.65;
+}
+.rip-seg button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.rip-static {
+  position: absolute;
+  top: max(96px, 18%);
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 50%;
+}
+
+.rip-preview-details {
+  margin: 0 0 18px;
+  font-size: 0.85rem;
+}
+.rip-preview-details summary {
+  cursor: pointer;
+  width: fit-content;
+}
+.rip-preview-details summary:focus-visible {
+  outline: none;
+  background: #26062e12;
+  border-radius: 4px;
+}
+.rip-preview-program {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 0;
+}
+.rip-preview-program button {
+  font: inherit;
+}
+.rip-page .rip-notice:not(.is-on) {
+  visibility: hidden;
+}

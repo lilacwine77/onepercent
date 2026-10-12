@@ -1,0 +1,11 @@
+{
+  "name": "curve_fee_config",
+  "address": "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+  "owner": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+  "lamports": 37292293,
+  "executable": false,
+  "slot": 454747034,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 4097,
+  "sha256": "3504fae20640e15bd441257ab118aa96fb4e99190defc06a01aae26b307bf204"
+}

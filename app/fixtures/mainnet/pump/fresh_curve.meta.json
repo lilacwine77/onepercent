@@ -1,0 +1,11 @@
+{
+  "address": "3NzkNJGqUeS3Lmwz9AsRogrjPSWLvuh9GWtV2sA9xs2y",
+  "slot": 454748214,
+  "checkedAt": "2026-10-09T03:41:00.871Z",
+  "simulated": false,
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": 1972204631,
+  "executable": false,
+  "bytes": 166,
+  "sha256": "759050a1cd3e8c5fa7bdd66bcceaedda1141a64164d68ae330de0714de2700b0"
+}

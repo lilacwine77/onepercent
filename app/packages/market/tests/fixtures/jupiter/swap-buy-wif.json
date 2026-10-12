@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-10-08T18:37:16.104Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=So11111111111111111111111111111111111111112&outputMint=EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm&amount=1000000000&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "2",
+      "x-ratelimit-remaining": "8",
+      "x-ratelimit-reset": "1791484645"
+    },
+    "body": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "inAmount": "1000000000",
+      "outAmount": "521813174",
+      "otherAmountThreshold": "521813174",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.001510852488619606",
+      "routePlan": [
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 107.65612934544865,
+          "swapInfo": {
+            "ammKey": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+            "label": "JupiterZ",
+            "inputMint": "So11111111111111111111111111111111111111112",
+            "outputMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+            "inAmount": "1000000000",
+            "outAmount": "521813174"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "transaction": null,
+      "gasless": true,
+      "jitOptimized": false,
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "requestId": "01a11cce-2b2f-7200-8931-005c65461fec",
+      "swapType": "rfq",
+      "router": "jupiterz",
+      "guaranteedPrice": true,
+      "quoteId": "82e63c8e-15af-5154-9438-9bdbac7002e9",
+      "maker": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+      "taker": null,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "inUsdValue": 107.65612934544865,
+      "outUsdValue": 107.49347681451192,
+      "swapUsdValue": 107.65612934544865,
+      "priceImpact": -0.1510852488619606,
+      "mode": "ultra",
+      "totalTime": 179
+    }
+  }
+}

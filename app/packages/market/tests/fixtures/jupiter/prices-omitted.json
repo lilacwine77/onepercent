@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.517Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=11111111111111111111111111111111"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484098"
+    },
+    "body": {}
+  }
+}

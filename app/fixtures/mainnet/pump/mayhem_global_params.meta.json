@@ -1,0 +1,11 @@
+{
+  "name": "mayhem_global_params",
+  "address": "13ec7XdrjF3h3YcqBTFDSReRcUFwbCnJaAQspM4j6DDJ",
+  "owner": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+  "lamports": 3104160,
+  "executable": false,
+  "slot": 454747042,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 318,
+  "sha256": "d625022012261bc4b5425e4a3ec128ca30b6ba4299923983f492f09fca5386d8"
+}

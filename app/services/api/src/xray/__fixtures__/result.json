@@ -1,0 +1,248 @@
+{
+  "address": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+  "chain": "solana",
+  "scannedAt": "2026-10-08T12:00:00.000Z",
+  "cached": false,
+  "counts": {
+    "bags": 12,
+    "feedable": 8,
+    "checkAtFeed": 2,
+    "notFeedable": 2,
+    "sellable": 4,
+    "empty": 6,
+    "notInSet": 4
+  },
+  "totals": {
+    "sellValueSol": "0.04",
+    "rentBackSol": "0.01008312"
+  },
+  "worst": null,
+  "bags": [
+    {
+      "mint": "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump",
+      "symbol": "STONKED",
+      "name": "Stonked",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable", "sell"],
+      "valueSol": "0.01"
+    },
+    {
+      "mint": "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump",
+      "symbol": "VВUCКS",
+      "name": "V-ВUСKS",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable", "sell"],
+      "valueSol": "0.01"
+    },
+    {
+      "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "symbol": "FARTCOIN",
+      "name": "fartcoin",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "spl",
+      "buckets": ["feedable", "sell"],
+      "valueSol": "0.01"
+    },
+    {
+      "mint": "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump",
+      "symbol": "NOKKK",
+      "name": "NOKIA3315",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"],
+      "valueSol": "0.00001"
+    },
+    {
+      "mint": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+      "symbol": "PNUT",
+      "name": "pnut",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "spl",
+      "buckets": ["feedable"],
+      "valueSol": "0.00001"
+    },
+    {
+      "mint": "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump",
+      "symbol": "PAID",
+      "name": "iPaid - Launch w Apple Cash",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"],
+      "reason": "Final check when you Feed",
+      "reasonCode": "snapshot_at_feed",
+      "valueSol": "0.00001"
+    },
+    {
+      "mint": "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump",
+      "symbol": "ASI",
+      "name": "American Super Intelligence",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"],
+      "reason": "Final check when you Feed",
+      "reasonCode": "snapshot_at_feed",
+      "valueSol": "0.00001"
+    },
+    {
+      "mint": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+      "symbol": "CATCRAFT",
+      "name": "CATCRAFT",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"]
+    },
+    {
+      "mint": "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump",
+      "symbol": "F1 Haas",
+      "name": "F1 HAAS",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"]
+    },
+    {
+      "mint": "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP",
+      "symbol": "POLARIS",
+      "name": "POLARIS AI",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["feedable"]
+    },
+    {
+      "mint": "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi",
+      "symbol": "AEQUA",
+      "name": "aequa",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["not_feedable_season", "sell"],
+      "reason": "Not feedable this season (bought after Oct 8)",
+      "reasonCode": "snapshot_not_held",
+      "valueSol": "0.01"
+    },
+    {
+      "mint": "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump",
+      "symbol": "ASI",
+      "name": "American Super Intelligence",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["not_feedable_season"],
+      "reason": "Not feedable this season (bought after Oct 8)",
+      "reasonCode": "snapshot_not_held"
+    },
+    {
+      "mint": "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ",
+      "symbol": "ELTrqQBvqvKaW7Dq",
+      "name": "Pepe (PEPE)",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["not_in_set"],
+      "reason": "Not from pump.fun",
+      "reasonCode": "not_pump_fun"
+    },
+    {
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "symbol": "BONK",
+      "name": "bonk",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 5,
+      "tokenProgram": "spl",
+      "buckets": ["not_in_set"],
+      "reason": "Not from pump.fun",
+      "reasonCode": "not_pump_fun"
+    },
+    {
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "usdc",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "spl",
+      "buckets": ["not_in_set"],
+      "reason": "Not from pump.fun",
+      "reasonCode": "not_pump_fun"
+    },
+    {
+      "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+      "symbol": "PUMP",
+      "name": "Pump",
+      "logoUrl": "https://example.com/coin.png",
+      "amountUi": "1000",
+      "decimals": 6,
+      "tokenProgram": "token2022",
+      "buckets": ["not_in_set"],
+      "reason": "Not from pump.fun",
+      "reasonCode": "not_pump_fun"
+    }
+  ],
+  "emptyAccounts": [
+    {
+      "address": "G9pgFC5DwxUaQ17ARXKBms57mNUWTto5aBqp5qBXk1tV",
+      "mint": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+      "rentLamports": 2039280
+    },
+    {
+      "address": "HArRyzLFFgzyqeWPJLE6TwBp8KPGUsTckVRq3km5s7oU",
+      "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "rentLamports": 2039280
+    },
+    {
+      "address": "6Ps1jqoqiGQ9rxzVFdS2nSzDR5nxXBKZsLnMx3zQAeh5",
+      "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "rentLamports": 1513840
+    },
+    {
+      "address": "77BaK1LQfyk6jB8m1JzhJeVM88Egdm7sLDfjKCfA26H9",
+      "mint": "So11111111111111111111111111111111111111112",
+      "rentLamports": 1513840
+    },
+    {
+      "address": "8iX1qxbG8AeM9xQUP655NZ4QvP5H8VTwTjEqtaigHoTG",
+      "mint": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+      "rentLamports": 1488440
+    },
+    {
+      "address": "vG7LP2ryV5TdV7QLgTmSsbo27YPKD8mUHESVo4TEhkx",
+      "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+      "rentLamports": 1488440
+    }
+  ],
+  "card": {
+    "title": "Certified Bagholder",
+    "condition": "Played",
+    "oneLiner": "Every top, collected."
+  },
+  "share": {
+    "landscapeUrl": "http://localhost:3000/api/xray/ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM/card.png?format=landscape&v=1791460800&ref=ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+    "squareUrl": "http://localhost:3000/api/xray/ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM/card.png?format=square&v=1791460800&ref=ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+    "xIntentUrl": "https://x.com/intent/post?text=X-ray+%E2%9C%B3+12+bags+%E2%9C%B3+Certified+Bagholder&url=http%3A%2F%2Flocalhost%3A5173%2Fx%2FATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM%3Fref%3DATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM"
+  }
+}

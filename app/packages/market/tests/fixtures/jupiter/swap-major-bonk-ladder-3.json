@@ -1,0 +1,92 @@
+{
+  "recordedAt": "2026-10-08T18:42:51.884Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&outputMint=So11111111111111111111111111111111111111112&amount=26883656947544&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484972"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "26883656947544",
+      "outAmount": "7985794382",
+      "otherAmountThreshold": "7985794382",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.0014497654448359088",
+      "routePlan": [
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 861.1226888154791,
+          "swapInfo": {
+            "ammKey": "5Dp922oSaj9rdLHTxZzq1B7QV7KmwY7U7K1JNCRhc45J",
+            "label": "ZeroFi",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "26883656947544",
+            "outAmount": "862354272"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 861.1226888154791,
+          "swapInfo": {
+            "ammKey": "J2gBtnqvzBkWEeNHKrph5WRckxD1waWhVEjRUrUhGhjc",
+            "label": "ZeroFi",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+            "inAmount": "862354272",
+            "outAmount": "1058670"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 861.1226888154791,
+          "swapInfo": {
+            "ammKey": "HDhWhQCBrSh9xNWmNtsTi86eWj3yCoEiaRodjgNydo1b",
+            "label": "Meteora DLMM",
+            "inputMint": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "1058670",
+            "outAmount": "7993788170"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-4b3b-71bd-81ea-5ad7b5cadb3e",
+      "inUsdValue": 862.3729272860205,
+      "outUsdValue": 861.1226888154793,
+      "swapUsdValue": 861.1226888154793,
+      "priceImpact": -0.14497654448359087,
+      "mode": "ultra",
+      "totalTime": 96
+    }
+  }
+}

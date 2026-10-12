@@ -1,0 +1,105 @@
+{
+  "recordedAt": "2026-10-08T18:42:50.631Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&outputMint=So11111111111111111111111111111111111111112&amount=13441828473772&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "7",
+      "x-ratelimit-remaining": "3",
+      "x-ratelimit-reset": "1791484972"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "13441828473772",
+      "outAmount": "3993330566",
+      "otherAmountThreshold": "3993330566",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.0013413863188029137",
+      "routePlan": [
+        {
+          "percent": 76.9,
+          "bps": 7690,
+          "usdValue": 331.13761045924656,
+          "swapInfo": {
+            "ammKey": "5Dp922oSaj9rdLHTxZzq1B7QV7KmwY7U7K1JNCRhc45J",
+            "label": "ZeroFi",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "10336188410203",
+            "outAmount": "331591310"
+          }
+        },
+        {
+          "percent": 23.1,
+          "bps": 2310,
+          "usdValue": 99.47046556057992,
+          "swapInfo": {
+            "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+            "label": "Scorch",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "3105640063569",
+            "outAmount": "99622100"
+          }
+        },
+        {
+          "percent": 96.27,
+          "bps": 9627,
+          "usdValue": 414.546394784287,
+          "swapInfo": {
+            "ammKey": "7yD7gfXv49SFxhx9uTc11dEd7Nj98rGWeYMdZJgheZbG",
+            "label": "Kipseli",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "415144710",
+            "outAmount": "3848366056"
+          }
+        },
+        {
+          "percent": 3.73,
+          "bps": 373,
+          "usdValue": 16.061681235539528,
+          "swapInfo": {
+            "ammKey": "83v8iPyZihDEjDdY8RdZddyZNyUtXngz69Lgo9Kt5d6d",
+            "label": "Whirlpool",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "16068700",
+            "outAmount": "148961837"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-45d6-704b-aa19-49dc6cb7dafa",
+      "inUsdValue": 431.18646364301026,
+      "outUsdValue": 430.6080760198265,
+      "swapUsdValue": 430.6080760198265,
+      "priceImpact": -0.13413863188029138,
+      "mode": "ultra",
+      "totalTime": 215
+    }
+  }
+}

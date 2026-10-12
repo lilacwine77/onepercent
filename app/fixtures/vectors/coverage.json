@@ -1,0 +1,2738 @@
+[
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": [
+        0
+      ],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": [
+        1
+      ],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": [
+        1,
+        1
+      ],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "3000000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "1",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": [
+        1
+      ],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": [
+        1,
+        0
+      ],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": [
+        1,
+        0,
+        1
+      ],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "1500000000"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "3000000000"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "100000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "250000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "500000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 0
+    },
+    "output": {
+      "backing": [],
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 1
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 2
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 3
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ],
+      "price": "1000000000",
+      "qty": 10
+    },
+    "output": {
+      "backing": null,
+      "buckets": [
+        {
+          "amount": "40",
+          "class": 1,
+          "cost": "2000000000",
+          "enabled": true,
+          "reserved": "0"
+        },
+        {
+          "amount": "60",
+          "class": 1,
+          "cost": "3000000000",
+          "enabled": true,
+          "reserved": "0"
+        }
+      ]
+    }
+  }
+]

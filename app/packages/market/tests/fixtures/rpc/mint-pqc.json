@@ -1,0 +1,74 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.932Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+        {
+          "encoding": "jsonParsed",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628038,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 7808003,
+          "data": {
+            "program": "spl-token-2022",
+            "parsed": {
+              "info": {
+                "decimals": 6,
+                "extensions": [
+                  {
+                    "extension": "metadataPointer",
+                    "state": {
+                      "authority": null,
+                      "metadataAddress": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh"
+                    }
+                  },
+                  {
+                    "extension": "tokenMetadata",
+                    "state": {
+                      "additionalMetadata": [],
+                      "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+                      "name": "pqc.market",
+                      "symbol": "PQC",
+                      "updateAuthority": null,
+                      "uri": "https://ipfs.io/ipfs/bafkreianmihcmfal4drb77vmxjvlsflo5tlirdpojtx5hkdqhhro2d5jgy"
+                    }
+                  }
+                ],
+                "freezeAuthority": null,
+                "isInitialized": true,
+                "mintAuthority": null,
+                "supply": "964171321752138"
+              },
+              "type": "mint"
+            },
+            "space": 411
+          },
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 411
+        }
+      },
+      "id": 1
+    }
+  }
+}

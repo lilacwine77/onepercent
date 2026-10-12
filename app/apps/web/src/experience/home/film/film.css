@@ -1,0 +1,332 @@
+/* The 1% TV film (the landing's concept-video.css): the TV comes forward and
+   plays the film on its glass; a CSS CRT stands in without WebGL. */
+.film {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--cream);
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+.film::backdrop {
+  background: #170d20f5;
+  animation: film-backdrop-in 700ms ease both;
+}
+@keyframes film-backdrop-in {
+  from {
+    background: #170d2000;
+  }
+}
+.film .film__close,
+.film .film__buttons button {
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: var(--cream);
+  background: transparent;
+  box-shadow: none;
+  font:
+    17px/1.2 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  cursor: pointer;
+  transform: none;
+}
+.film .film__close {
+  position: absolute;
+  z-index: 4;
+  right: max(22px, env(safe-area-inset-right));
+  top: max(16px, env(safe-area-inset-top));
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink);
+  background: var(--cream);
+}
+.film__close span {
+  font-size: 26px;
+  line-height: 1;
+}
+.film .film__close:hover,
+.film .film__close:focus-visible,
+.film .film__buttons button:hover,
+.film .film__buttons button:focus-visible,
+.film .film__buttons button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--lilac);
+  box-shadow: none;
+  outline: none;
+}
+.film .film__close:focus-visible,
+.film .film__buttons button:focus-visible {
+  border-color: var(--cream);
+}
+.film .film__buttons button:disabled {
+  cursor: default;
+  opacity: 0.65;
+  color: var(--cream);
+  background: transparent;
+}
+.film__viewport {
+  position: absolute;
+  inset: 66px 0 118px;
+  pointer-events: none;
+}
+/* The live TV's canvas host, moved here from the hero while the film plays. */
+.film .crt-stage {
+  position: fixed;
+  inset: auto;
+  z-index: 1;
+  opacity: 1;
+  touch-action: none;
+  pointer-events: none;
+}
+.film .crt-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-tv.is-film-open .hero-poster img {
+  opacity: 0;
+}
+.film__fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.film__glass {
+  position: relative;
+  width: min(1060px, calc(100vw - 28px), calc((100svh - 200px) * 1.333333));
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: clamp(10px, 2.2vw, 30px) solid #d4ccbc;
+  border-radius: 7% / 8%;
+  background: #08080d;
+  box-shadow:
+    0 12px 50px #0007,
+    inset 0 0 16px #000;
+}
+.film video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #08080d;
+}
+.film__idle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+.film[data-mode="fallback"] video {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+.film[data-mode="fallback"][data-broadcast="film"] video {
+  opacity: 1;
+}
+.film__glass::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, #0000 0 2px, #0003 2px 3px),
+    linear-gradient(115deg, #fff1, #fff0 38%, #fff0 78%, #fff1);
+  box-shadow: inset 0 0 28px #08080d66;
+}
+/* The decoder stays alive for the TV's VideoTexture, without a second picture. */
+.film[data-mode="live"] .film__fallback {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  opacity: 0.001;
+}
+.film[data-mode="fallback"] .crt-stage {
+  visibility: hidden;
+}
+.film__caption {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 40px);
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: var(--cream);
+  background: #170d20ed;
+  font:
+    18px/1.4 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  text-align: center;
+  white-space: pre-line;
+  transform: translateX(-50%);
+}
+.film__controls {
+  position: absolute;
+  z-index: 3;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  left: 50%;
+  width: min(840px, calc(100% - 40px));
+  transform: translateX(-50%);
+}
+.film__progress {
+  display: block;
+  appearance: none;
+  width: 100%;
+  height: 26px;
+  margin: 0 0 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: transparent;
+  accent-color: var(--lilac);
+  cursor: pointer;
+}
+.film__progress::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    var(--lilac) var(--film-progress, 0%),
+    #fff1e33b var(--film-progress, 0%)
+  );
+}
+.film__progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: var(--cream);
+}
+.film__progress::-moz-range-track {
+  height: 5px;
+  border-radius: 5px;
+  background: #fff1e33b;
+}
+.film__progress::-moz-range-progress {
+  background: var(--lilac);
+}
+.film__progress::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--cream);
+}
+.film__progress:focus-visible {
+  outline: none;
+  background: #d5a2f12e;
+}
+.film__progress:disabled {
+  cursor: default;
+}
+.film__buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.film__time {
+  margin-right: auto;
+  padding-inline: 8px;
+  font:
+    16px/1.2 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.film__error {
+  position: absolute;
+  z-index: 4;
+  top: 75px;
+  left: 50%;
+  max-width: calc(100% - 40px);
+  margin: 0;
+  padding: 12px 20px;
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--cream);
+  font:
+    18px/1.4 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  transform: translateX(-50%);
+}
+.film[data-state="closing"] .film__controls,
+.film[data-state="closing"] .film__close,
+.film[data-state="closing"] .film__caption {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 480px) {
+  .film .film__close {
+    right: 15px;
+    top: max(14px, env(safe-area-inset-top));
+  }
+  .film__controls {
+    width: calc(100% - 24px);
+    bottom: max(22px, env(safe-area-inset-bottom));
+  }
+  .film__buttons {
+    gap: 0;
+  }
+  .film .film__buttons button {
+    padding-inline: 10px;
+    font-size: 15px;
+  }
+  .film__time {
+    padding-inline: 3px;
+    font-size: 14px;
+  }
+  .film__caption {
+    max-width: calc(100% - 20px);
+    font-size: 16px;
+  }
+}
+@media (max-height: 520px) {
+  .film__viewport {
+    top: 32px;
+    bottom: 96px;
+  }
+  .film__glass {
+    width: min(calc(100vw - 140px), calc((100svh - 140px) * 1.333333));
+  }
+  .film__controls {
+    bottom: 12px;
+  }
+  .film .film__close {
+    top: 10px;
+    right: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film::backdrop {
+    animation: none;
+  }
+  .film[data-mode="fallback"] video {
+    transition: none;
+  }
+}

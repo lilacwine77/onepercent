@@ -1,0 +1,27 @@
+{
+  "source": "mainnet",
+  "recordedAt": "2026-10-08T19:07:41.711Z",
+  "note": "Actual empty response queried for the synthetic trencher owner. No real wallet was queried.",
+  "request": {
+    "method": "getAssetsByOwner",
+    "params": {
+      "ownerAddress": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+      "page": 1,
+      "limit": 1000,
+      "options": {
+        "showFungible": true,
+        "showZeroBalance": true
+      }
+    }
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "items": [],
+      "total": 0,
+      "limit": 1000,
+      "page": 1
+    }
+  }
+}

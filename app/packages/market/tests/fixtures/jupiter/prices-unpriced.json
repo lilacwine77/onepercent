@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.517Z",
+  "note": "Synthetic, shaped like the live metadata-only entries Jupiter returned for unpriced tokens on 2026-10-09.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=Sysvar1nstructions1111111111111111111111111%2CSo11111111111111111111111111111111111111112"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484098"
+    },
+    "body": {
+      "Sysvar1nstructions1111111111111111111111111": {
+        "createdAt": "2026-10-01T00:00:00Z",
+        "decimals": 6,
+        "liquidity": 0,
+        "launchpad": "pump.fun"
+      },
+      "So11111111111111111111111111111111111111112": {
+        "usdPrice": 150.25,
+        "blockId": 454626900,
+        "decimals": 9
+      }
+    }
+  }
+}

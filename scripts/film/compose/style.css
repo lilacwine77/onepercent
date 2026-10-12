@@ -1,0 +1,175 @@
+/* The film's type and colour come from the brand (da-direction §4). */
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 700;
+  src: url("/repo/app/apps/web/node_modules/@fontsource/fraunces/files/fraunces-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 600;
+  src: url("/repo/app/apps/web/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 600;
+  font-style: italic;
+  src: url("/repo/app/apps/web/node_modules/@fontsource/fraunces/files/fraunces-latin-600-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  src: url("/repo/app/apps/web/node_modules/@fontsource/dm-sans/files/dm-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  src: url("/repo/app/apps/web/node_modules/@fontsource/dm-sans/files/dm-sans-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --cream: #fff1e7;
+  --ink: #26062e;
+  --lilac: #d5a2f1;
+  --plum: #2c1235;
+  --mauve: #773e83;
+  --orchid: #4c2459;
+  --studio: #856096;
+  --blush: #efddee;
+  --paper: #fff9ee;
+  --xray-deep: #120d30;
+  --xray-mid: #243969;
+  --xray-cyan: #94f5ed;
+  --xray-scan: #b3fbff;
+  --gold-hi: #f6d272;
+  --gold: #d9a441;
+  --gold-lo: #a8701f;
+  --gold-ink: #3a2208;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+#stage {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  background: #000;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+.layer,
+.scene {
+  position: absolute;
+  inset: 0;
+}
+.scene {
+  overflow: hidden;
+}
+.abs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+img {
+  display: block;
+  user-select: none;
+}
+
+/* Kinetic headline */
+.hl {
+  position: absolute;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+  white-space: nowrap;
+}
+.hl-line {
+  display: block;
+}
+.hl-mask {
+  display: inline-block;
+  overflow: hidden;
+  /* Room for descenders and the spring's overshoot inside the mask. */
+  padding: 0.04em 0.06em 0.14em;
+  margin: -0.04em -0.06em -0.14em;
+  vertical-align: top;
+}
+.hl-word {
+  display: inline-block;
+  transform-origin: 0 90%;
+  will-change: transform;
+}
+
+.kicker {
+  position: absolute;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.sub {
+  position: absolute;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* A capture shown as a floating screen with the brand's 1% corner. */
+.screen {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 18px 18px 48px 18px;
+  background: var(--paper);
+  box-shadow:
+    0 40px 90px -30px rgba(10, 2, 20, 0.65),
+    0 12px 30px -12px rgba(10, 2, 20, 0.45);
+  transform-origin: 50% 50%;
+}
+.screen > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  white-space: nowrap;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.32em 0.8em 0.36em;
+}
+.chip.gold {
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  box-shadow: inset 0 -2px 0 rgba(58, 34, 8, 0.25);
+}
+.chip.cream {
+  color: var(--ink);
+  background: var(--cream);
+}
+.chip.ink {
+  color: var(--cream);
+  background: var(--ink);
+}
+
+canvas.fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}

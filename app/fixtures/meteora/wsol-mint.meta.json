@@ -1,0 +1,12 @@
+{
+  "address": "So11111111111111111111111111111111111111112",
+  "contextSlot": 454847493,
+  "dataSha256": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3",
+  "account": {
+    "executable": false,
+    "lamports": 1851009722233,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 18446744073709551615,
+    "space": 82
+  }
+}

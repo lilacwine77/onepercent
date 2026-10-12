@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-08T18:29:52.916Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "3",
+      "x-ratelimit-remaining": "7",
+      "x-ratelimit-reset": "1791484202"
+    },
+    "body": {
+      "EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o": {
+        "createdAt": "2024-06-07T10:56:42.584Z",
+        "liquidity": 53.025277326400484,
+        "usdPrice": 1.0001711399138398,
+        "blockId": 453756086,
+        "decimals": 8
+      }
+    }
+  }
+}

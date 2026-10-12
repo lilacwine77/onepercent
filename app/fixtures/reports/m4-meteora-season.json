@@ -1,0 +1,221 @@
+{
+  "programs": [
+    {
+      "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+      "sha256": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+    },
+    {
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "sha256": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+    },
+    {
+      "programId": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+      "sha256": "31f0a627dba051a938de650464e55cc5397a4be0fd496929c1f9cf02fe5e9011"
+    },
+    {
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "sha256": "b4c02e7590cbfb9564046fdbf64467cbe4a55594cd5dfc5c936008e9c363c91e"
+    }
+  ],
+  "config": {
+    "pool_fees": {
+      "base_fee": {
+        "cliff_fee_numerator": "25000000",
+        "first_factor": 0,
+        "second_factor": "0",
+        "third_factor": "0",
+        "base_fee_mode": 0
+      },
+      "dynamic_fee": null
+    },
+    "collect_fee_mode": 0,
+    "migration_option": 1,
+    "activation_type": 0,
+    "token_type": 0,
+    "token_decimal": 6,
+    "partner_liquidity_percentage": 0,
+    "partner_permanent_locked_liquidity_percentage": 100,
+    "creator_liquidity_percentage": 0,
+    "creator_permanent_locked_liquidity_percentage": 0,
+    "migration_quote_threshold": "85000000000",
+    "sqrt_start_price": "97575587997945580",
+    "locked_vesting": {
+      "amount_per_period": "0",
+      "cliff_duration_from_migration_time": "0",
+      "frequency": "0",
+      "number_of_period": "0",
+      "cliff_unlock_amount": "0"
+    },
+    "migration_fee_option": 6,
+    "token_supply": {
+      "pre_migration_token_supply": "1000000000000000",
+      "post_migration_token_supply": "1000000000000000"
+    },
+    "creator_trading_fee_percentage": 0,
+    "token_update_authority": 1,
+    "migration_fee": {
+      "fee_percentage": 0,
+      "creator_fee_percentage": 0
+    },
+    "migrated_pool_fee": {
+      "collect_fee_mode": 0,
+      "dynamic_fee": 0,
+      "pool_fee_bps": 250
+    },
+    "pool_creation_fee": "0",
+    "partner_liquidity_vesting_info": {
+      "vesting_percentage": 0,
+      "bps_per_period": 0,
+      "number_of_periods": 0,
+      "cliff_duration_from_migration_time": 0,
+      "frequency": 0
+    },
+    "creator_liquidity_vesting_info": {
+      "vesting_percentage": 0,
+      "bps_per_period": 0,
+      "number_of_periods": 0,
+      "cliff_duration_from_migration_time": 0,
+      "frequency": 0
+    },
+    "migrated_pool_base_fee_mode": 0,
+    "migrated_pool_market_cap_fee_scheduler_params": {
+      "number_of_period": 0,
+      "sqrt_price_step_bps": 0,
+      "scheduler_expiration_duration": 0,
+      "reduction_factor": "0"
+    },
+    "enable_first_swap_with_min_fee": false,
+    "compounding_fee_bps": 0,
+    "padding": [
+      0,
+      0
+    ],
+    "curve": [
+      {
+        "sqrt_price": "373804058752063036",
+        "liquidity": "104710427239146668654858249241374"
+      },
+      {
+        "sqrt_price": "79226673521066979257578248091",
+        "liquidity": "3404575593784859536198155"
+      }
+    ]
+  },
+  "localFlashRentLamports": "1000000000",
+  "economics": [
+    {
+      "operation": "buy",
+      "venue": "dbc",
+      "mode": 2,
+      "spent": "1192328122",
+      "received": "40000000000000"
+    },
+    {
+      "operation": "buy",
+      "venue": "dbc",
+      "mode": 0,
+      "spent": "1000000000",
+      "received": "31318267359229"
+    },
+    {
+      "operation": "claim",
+      "kind": "curve",
+      "regime": "belowFloor",
+      "quote": "43846564",
+      "base": "0",
+      "stock": "45885844",
+      "team": "0"
+    },
+    {
+      "operation": "buy",
+      "venue": "dbc",
+      "mode": 1,
+      "spent": "84987159060",
+      "received": "721681721155379"
+    },
+    {
+      "operation": "curveComplete",
+      "quoteReserve": "85000000001",
+      "threshold": "85000000000"
+    },
+    {
+      "operation": "claim",
+      "kind": "curve",
+      "regime": "season",
+      "quote": "1699743182",
+      "base": "0",
+      "stock": "850891231",
+      "team": "850891231"
+    },
+    {
+      "operation": "migration",
+      "authorityBefore": "1000000000",
+      "authorityAfter": "1000000000",
+      "payerRent": "22606080"
+    },
+    {
+      "operation": "claim",
+      "kind": "surplus",
+      "regime": "season",
+      "quote": "0",
+      "base": "0",
+      "stock": "1019640",
+      "team": "1019640"
+    },
+    {
+      "operation": "buy",
+      "venue": "damm-v2",
+      "mode": 0,
+      "spent": "1000000000",
+      "received": "2347431385423"
+    },
+    {
+      "operation": "claim",
+      "kind": "pool",
+      "regime": "season",
+      "quote": "19999999",
+      "base": "0",
+      "stock": "11019640",
+      "team": "11019639"
+    },
+    {
+      "operation": "buy",
+      "venue": "damm-v2",
+      "mode": 0,
+      "spent": "1000000000",
+      "received": "2294683158295"
+    },
+    {
+      "operation": "claim",
+      "kind": "pool",
+      "regime": "afterEnd",
+      "quote": "19999999",
+      "base": "0",
+      "stock": "0",
+      "team": "22039279"
+    }
+  ],
+  "computeUnits": {
+    "dbcSwap": 58107,
+    "claimcurve": 90508,
+    "claimcurveAndCollect": 103679,
+    "migration": 140311,
+    "claimsurplus": 60746,
+    "claimsurplusAndCollect": 73948,
+    "damm-v2Swap": 23395,
+    "claimpool": 84110,
+    "claimpoolAndCollect": 97312
+  },
+  "transactionBytes": {
+    "dbcSwap": 719,
+    "claimcurve": 763,
+    "claimcurveAndCollect": 778,
+    "migration": 991,
+    "claimsurplus": 731,
+    "claimsurplusAndCollect": 746,
+    "damm-v2Swap": 686,
+    "claimpool": 827,
+    "claimpoolAndCollect": 842
+  },
+  "afterEndClock": "Exact real venue state replay; only Machine on_air_ts/end_ts pre-aged"
+}

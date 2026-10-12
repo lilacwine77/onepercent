@@ -1,0 +1,240 @@
+/* Synced from experience/cards-lab/src/cards/styles/dock.css by experience/sync-lab.mjs. */
+/* Dock: wallet SOL counter, the machine and "Rip again" (cream glass, the 1% corner); sticky at the bottom on phones. */
+.mc-dock {
+  position: fixed;
+  left: 50%;
+  bottom: calc(22px + var(--mc-bottom, 0px));
+  z-index: calc(var(--mc-z) + 10);
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  border-radius: 18px 18px 40px 18px;
+  isolation: isolate;
+}
+.mc-dock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--cream) 86%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  backdrop-filter: blur(16px) saturate(1.15);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ink),
+    0 22px 44px -26px rgb(38 6 46 / 0.6);
+}
+.mc-dock-main {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.mc-dock-sep {
+  width: 1.5px;
+  height: 28px;
+  background: rgb(38 6 46 / 0.14);
+  margin: 0 4px;
+  border-radius: 1px;
+}
+.mc-wallet {
+  position: relative;
+  height: 46px;
+  padding: 0 16px 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px 12px 28px 12px;
+  transform-origin: 50% 60%;
+}
+.mc-wallet-ico {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px 10px 20px 10px;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--cream);
+}
+.mc-wallet-icon {
+  width: 20px;
+  height: 20px;
+}
+.mc-wallet-ico::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold-hi);
+  box-shadow: 0 0 0 2px var(--cream);
+  opacity: 0;
+  scale: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2326062e' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5 10 16.5 18 8'/%3E%3C/svg%3E");
+  background-size: 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mc-wallet.is-check .mc-wallet-ico::after {
+  animation: mc-check 1.6s var(--ease-spring) forwards;
+}
+@keyframes mc-check {
+  0% {
+    opacity: 0;
+    scale: 0.4;
+  }
+  14% {
+    opacity: 1;
+    scale: 1.1;
+  }
+  22% {
+    scale: 1;
+  }
+  80% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.8;
+  }
+}
+.mc-wallet-fig {
+  font: 700 18px / 1 var(--sans);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+.mc-wallet::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    60% 90% at 60% 50%,
+    rgb(246 210 114 / 0.55),
+    rgb(246 210 114 / 0) 70%
+  );
+}
+.mc-wallet.is-flash::after {
+  animation: mc-flash 0.5s ease-out;
+}
+@keyframes mc-flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mc-machine-btn {
+  position: relative;
+  height: 46px;
+  padding: 0 14px 0 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px 12px 28px 12px;
+  font: 500 15px / 1 var(--sans);
+  transition: background-color 0.18s ease;
+}
+.mc-machine-btn:hover,
+.mc-machine-btn[data-pressed] {
+  background: rgb(213 162 241 / 0.4);
+}
+.mc-machine-btn:focus-visible {
+  outline: none;
+  background: var(--blush);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+.mc-machine-wrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+.mc-machine {
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+}
+.mc-badge {
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--cream);
+  font: 700 13px / 1 var(--sans);
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 2px var(--cream);
+}
+
+/* Rip again: the page's main call to action, an ink oval sized to the dock */
+.mc-dock-rip {
+  height: 46px;
+  min-width: 0;
+  margin-left: 6px;
+}
+.mc-dock-rip .mc-oval-face {
+  gap: 16px;
+  padding: 0 5px 0 18px;
+}
+.mc-dock-rip .mc-oval-label {
+  font-size: 16px;
+}
+.mc-dock-rip .mc-oval-chip {
+  width: 36px;
+  height: 36px;
+  font-size: 21px;
+}
+
+@media (max-width: 719px) {
+  .mc-dock {
+    left: 12px;
+    right: 12px;
+    translate: none;
+    bottom: calc(12px + var(--mc-bottom, 0px) + env(safe-area-inset-bottom));
+    padding: 6px;
+    border-radius: 16px 16px 34px 16px;
+  }
+  .mc-dock-main {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mc-dock-sep {
+    display: none;
+  }
+  .mc-wallet {
+    padding-right: 10px;
+  }
+  .mc-machine-btn {
+    padding-right: 12px;
+  }
+  /* With Rip again in the dock, the machine shows its icon and count only (its label stays its name). */
+  .mc-dock.has-rip .mc-machine-label {
+    display: none;
+  }
+  .mc-dock.has-rip .mc-machine-btn {
+    padding-right: 6px;
+  }
+  .mc-dock-rip {
+    margin-left: 0;
+  }
+}
+@media (max-width: 359px) {
+  .mc-machine-label {
+    display: none;
+  }
+}

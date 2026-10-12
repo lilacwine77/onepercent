@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-08T18:42:39.822Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "116vaFv5yPQqpsVvQdq62VZno3Y8nvKPopDEb15S94e",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "error": {
+        "code": -32000,
+        "message": "Upstream unavailable"
+      }
+    }
+  },
+  "synthetic": {
+    "from": "curve-81-a.json",
+    "edit": "Successful HTTP envelope replaced by a JSON-RPC error."
+  }
+}

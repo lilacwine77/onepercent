@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "GET",
+    "url": "https://hermes.pyth.network/v2/updates/price/latest?ids[]=ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d&parsed=true"
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "parsed": [
+        {
+          "price": {
+            "price": "10765005610",
+            "conf": "108726557",
+            "publish_time": 1791484090,
+            "expo": -8
+          },
+          "id": "ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d",
+          "ema_price": {
+            "price": "10765005610",
+            "conf": "1",
+            "expo": -8,
+            "publish_time": 1791484090
+          },
+          "metadata": {
+            "slot": 454624857
+          }
+        }
+      ]
+    }
+  },
+  "synthetic": {
+    "from": "latest-sol.json",
+    "edit": "Confidence rounded upward to 101 basis points."
+  }
+}

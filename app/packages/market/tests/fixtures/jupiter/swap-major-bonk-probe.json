@@ -1,0 +1,110 @@
+{
+  "recordedAt": "2026-10-08T18:42:45.000Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&outputMint=So11111111111111111111111111111111111111112&amount=504609637968750&swapMode=ExactIn&excludeRouters=jupiterz%2Cdflow%2Cokx"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484965"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "504609637968750",
+      "outAmount": "149489467824",
+      "otherAmountThreshold": "149489467824",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.004182966255836301",
+      "routePlan": [
+        {
+          "percent": 28.4,
+          "bps": 2840,
+          "usdValue": 4577.835695714335,
+          "swapInfo": {
+            "ammKey": "EcARjmSG7K8AWxG2bT91qgD7cjFgDofSou3dyuWCZTv3",
+            "label": "Scorch",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "143300475308823",
+            "outAmount": "42487680000"
+          }
+        },
+        {
+          "percent": 31.46,
+          "bps": 3146,
+          "usdValue": 5071.081372787781,
+          "swapInfo": {
+            "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+            "label": "Scorch",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "158740891120445",
+            "outAmount": "5076731100"
+          }
+        },
+        {
+          "percent": 40.14,
+          "bps": 4014,
+          "usdValue": 6470.222705139909,
+          "swapInfo": {
+            "ammKey": "8B8KYcFPMjZyDtJ1BENsqhW3fEmMrB4ekoEQJiM6z3SC",
+            "label": "TesseraV",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "202568271539482",
+            "outAmount": "6480702314"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 11541.304077927689,
+          "swapInfo": {
+            "ammKey": "7yD7gfXv49SFxhx9uTc11dEd7Nj98rGWeYMdZJgheZbG",
+            "label": "Kipseli",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "11557433414",
+            "outAmount": "107151426930"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-302f-76f5-b816-db6bb748ba7d",
+      "inUsdValue": 16186.848816027794,
+      "outUsdValue": 16119.139773642026,
+      "swapUsdValue": 16119.139773642026,
+      "priceImpact": -0.41829662558363007,
+      "mode": "manual",
+      "totalTime": 131
+    }
+  },
+  "provenance": {
+    "note": "Real quote for the exact bigint probe amount computed from the approved synthetic Pyth snapshots; not live oracle evidence.",
+    "solFixture": "../pyth/latest-sol.json",
+    "tokenFixture": "../pyth/latest-bonk.json"
+  }
+}

@@ -1,0 +1,8 @@
+/* Synced from experience/cards-lab/src/cards/styles/index.css by experience/sync-lab.mjs. */
+/* My cards: one stylesheet, scoped to .mc-root (CSP style-src 'self': no injected <style>). */
+@import "@fontsource/dm-sans/latin-700.css";
+@import "./base.css";
+@import "./face.css";
+@import "./view.css";
+@import "./dock.css";
+@import "./sheet.css";

@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "tool": "gitleaks 8.24.3",
+  "redacted": true,
+  "originalCi": {
+    "run": 37870549757,
+    "commits": 144,
+    "findings": 35,
+    "jsonArtifactAvailable": false,
+    "note": "The previous workflow did not emit or upload JSON; its log records only totals. The full local scan below covers every currently reachable ref, including rebased duplicates and newer refs."
+  },
+  "localHistory": {
+    "range": "--all",
+    "commits": 162,
+    "findings": 72,
+    "classificationCounts": {
+      "public-spl-mint": 1,
+      "public-solana-fixture-address": 1,
+      "public-evm-fixture-address": 62,
+      "public-relay-recording-identifier": 8
+    }
+  },
+  "notes": [
+    "Each exception is limited to generic-api-key, reviewed paths, and exact public values and field shapes.",
+    "Two explicit reserved-domain test placeholders are constrained to their exact test paths and source lines.",
+    "No public-signature or account-base64 finding occurs in this local report; no broad signature or base64 exception is introduced.",
+    "No real secret was found in the reviewed findings."
+  ],
+  "findings": [
+    {
+      "fingerprint": "6d26208b5f847e0d0999b806ac0f4e063e70df83:app/packages/service-kit/src/intake/constants.ts:generic-api-key:3",
+      "commit": "6d26208b5f847e0d0999b806ac0f4e063e70df83",
+      "path": "app/packages/service-kit/src/intake/constants.ts",
+      "line": 3,
+      "rule": "generic-api-key",
+      "classification": "public-spl-mint",
+      "rationale": "SPL Token-2022 native mint identity; not a credential.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "79bb33b358bcd61e1d49f8ec1dddbf8c49a94e72:app/packages/cli/tests/fixtures/m1-ix.json:generic-api-key:74",
+      "commit": "79bb33b358bcd61e1d49f8ec1dddbf8c49a94e72",
+      "path": "app/packages/cli/tests/fixtures/m1-ix.json",
+      "line": 74,
+      "rule": "generic-api-key",
+      "classification": "public-solana-fixture-address",
+      "rationale": "Public token mint in the deterministic M1 instruction vector copied by CLI tests.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/bsc-flap-standard.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/bsc-flap-unknown-quote.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-unknown-quote.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/bsc-four-curve.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-four-curve.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/base-clanker.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/base-clanker.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/bsc-four-pool.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-four-pool.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/base-zora.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/base-zora.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/bsc-flap-tax.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-tax.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-chump.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-chump.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-native-success.json:generic-api-key:420",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-native-success.json",
+      "line": 420,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-native-success.json:generic-api-key:451",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-native-success.json",
+      "line": 451,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:54",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 54,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:65",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 65,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:87",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 87,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:109",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 109,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:140",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 140,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:151",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 151,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:367",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 367,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:398",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 398,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-tax-1000.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-tax-1000.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/simulation-four-graduated-standard.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-four-graduated-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-ubik-clone.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-ubik-clone.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:164",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 164,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:171",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 171,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:178",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 178,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:185",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 185,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:192",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 192,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:199",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 199,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/simulation-four-curve-standard.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-four-curve-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/simulation-ubik-standard.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-ubik-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-ubik-pool.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-ubik-pool.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-boner-stock-pair.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-boner-stock-pair.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-noxa.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-noxa.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a:app/packages/crosschain/fixtures/rpc/rh-pons-v1.json:generic-api-key:8",
+      "commit": "c9bdaccff0ffcf7e8158a295b9e3863e6cb88b1a",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-pons-v1.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/base-clanker.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/base-clanker.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/bsc-flap-standard.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/base-zora.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/base-zora.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/bsc-flap-unknown-quote.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-unknown-quote.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/bsc-flap-tax.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-flap-tax.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/simulation-four-graduated-standard.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-four-graduated-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/simulation-four-curve-standard.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-four-curve-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/fixtures/rpc/simulation-ubik-standard.json:generic-api-key:8",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/fixtures/rpc/simulation-ubik-standard.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:164",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 164,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:171",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 171,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:178",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 178,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:185",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 185,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:192",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 192,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "c7822707ae073539ccb5c75c1054ae58fe0525c8:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:199",
+      "commit": "c7822707ae073539ccb5c75c1054ae58fe0525c8",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 199,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/bsc-four-curve.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-four-curve.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/bsc-four-pool.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/bsc-four-pool.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-native-success.json:generic-api-key:420",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-native-success.json",
+      "line": 420,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-native-success.json:generic-api-key:451",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-native-success.json",
+      "line": 451,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-chump.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-chump.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:54",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 54,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:65",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 65,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:87",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 87,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:109",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 109,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:140",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 140,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:151",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 151,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public token contract address in recorded Relay state changes.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:367",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 367,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/relay/requests-refund.json:generic-api-key:398",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/relay/requests-refund.json",
+      "line": 398,
+      "rule": "generic-api-key",
+      "classification": "public-relay-recording-identifier",
+      "rationale": "Recorded public Relay request idempotency identifier, not an authentication token.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-boner-stock-pair.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-boner-stock-pair.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-ubik-clone.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-ubik-clone.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-tax-1000.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-tax-1000.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-ubik-pool.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-ubik-pool.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-noxa.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-noxa.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:52",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 52,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:53",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 53,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:54",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 54,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/scripts/record-relay-fixtures.ts:generic-api-key:55",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/scripts/record-relay-fixtures.ts",
+      "line": 55,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "Public 20-byte token contract address selected by the recording script.",
+      "disposition": "reviewed-public-fixture-exception"
+    },
+    {
+      "fingerprint": "aded034851541da51fa57ce00c9c3a8d26af4674:app/packages/crosschain/fixtures/rpc/rh-pons-v1.json:generic-api-key:8",
+      "commit": "aded034851541da51fa57ce00c9c3a8d26af4674",
+      "path": "app/packages/crosschain/fixtures/rpc/rh-pons-v1.json",
+      "line": 8,
+      "rule": "generic-api-key",
+      "classification": "public-evm-fixture-address",
+      "rationale": "20-byte public token contract address in an RPC recording.",
+      "disposition": "reviewed-public-fixture-exception"
+    }
+  ],
+  "verification": {
+    "fullHistory": {
+      "command": "gitleaks git --redact --config app/scripts/gitleaks.toml --log-opts=--all .",
+      "commits": 164,
+      "findings": 0,
+      "status": "pass"
+    },
+    "pullRequest": {
+      "command": "gitleaks git --redact --config app/scripts/gitleaks.toml --log-opts=origin/main..HEAD .",
+      "commits": 5,
+      "findings": 0,
+      "status": "pass"
+    },
+    "sourceSnapshot": {
+      "trackedAndUntrackedFiles": 997,
+      "scope": [
+        "app",
+        ".github"
+      ],
+      "findings": 0,
+      "status": "pass"
+    },
+    "exceptionBoundaries": {
+      "publicFamilies": 9,
+      "placeholders": 2,
+      "negativeControls": 29,
+      "ruleScopeCanaries": 11,
+      "status": "pass"
+    },
+    "workflow": {
+      "actionlint": "pass",
+      "bashSteps": 58,
+      "bashSyntax": "pass",
+      "reportArtifact": "Redacted JSON uploaded with always(), including failed scans."
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@onepercent/copy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./format": {
+      "types": "./src/format.ts",
+      "development": "./src/format.ts",
+      "import": "./dist/format.js"
+    },
+    "./initial": {
+      "types": "./src/initial.ts",
+      "development": "./src/initial.ts",
+      "import": "./dist/initial.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --preserve-symlinks ../../scripts/test.mjs"
+  }
+}

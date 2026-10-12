@@ -1,0 +1,10 @@
+{
+  "address": "TBHe5tJnuT4CQbHorJ1uVdfUoaYGPKgfCpiv2jgesVN",
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": "3934883",
+  "dataBase64": "F7f4N2DYrGA=",
+  "source": "synthetic",
+  "note": "fartcoin canonical pump.fun curve.",
+  "derivedFrom": "mainnet/fartcoin-curve.json",
+  "change": "Resize curve to 8 bytes, retaining discriminator."
+}

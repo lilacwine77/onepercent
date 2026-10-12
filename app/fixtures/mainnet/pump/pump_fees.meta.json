@@ -1,0 +1,17 @@
+{
+  "name": "pump_fees",
+  "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+  "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "lamports": 6046721,
+  "executable": true,
+  "slot": 454747025,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 36,
+  "sha256": "cc9077315efa761cfe0b52aae08678ccda2a07e0fa2b374c98a1d51a1b4ce079",
+  "programDataAddress": "75Uu23mqWBb8LM8vDppqC1mQAnCcBuLXhVaDezVMQLRw",
+  "deploySlot": 454596501,
+  "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+  "binaryBytes": 948944,
+  "binarySha256": "73c679c8dae8d24153fdd0455b557b73662e93ab2ec88831a9e4be2b08a897a4",
+  "programDataReadSlot": 454747025
+}

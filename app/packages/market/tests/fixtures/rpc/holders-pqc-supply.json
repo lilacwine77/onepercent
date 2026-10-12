@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-08T18:42:42.521Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getTokenSupply",
+      "params": [
+        "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+        {
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "apiVersion": "4.3.0",
+          "slot": 454628039
+        },
+        "value": {
+          "amount": "964171321752138",
+          "decimals": 6,
+          "uiAmount": 964171321.752138,
+          "uiAmountString": "964171321.752138"
+        }
+      },
+      "id": 1
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Current pass: repair published carousel overlap and artwork identity. The original GLB, packed Blender source and native images are frozen unchanged; baseline sources and captures are preserved under artifacts/carousel-repair/before.
+
+Durable runtime changes are src/pack-carousel-scene.js and src/pack-uv-fit.js, with the shared src/pack-carousel-layout.js. Native print preservation, coupled XY/UV fitting, spaced front arc, asynchronous compilation and first-frame visibility are implemented. Existing UV tests pass. Four edition diagnostic views and final real-page desktop/mobile captures have been inspected. The asset review itself does not deploy; the site release is handled separately after integration validation.
+
+Completed: independent final audit passed 64 phases, three poses, four editions and four widths, with zero overlaps, clipping, overflow or browser errors. Minimum visible gap is 40.91px desktop / 29.50px mobile; native texture URLs and XY/UV identity passed. iteration_review.json records retain_repair. The parent owns final packaging, commit and user delivery. Do not modify the accepted GLB or the independent pack-opening animation.

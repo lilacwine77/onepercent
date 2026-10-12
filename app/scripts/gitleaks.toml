@@ -1,0 +1,414 @@
+# Reviewed public identities and recorded fixtures; never credentials.
+# Exceptions apply only to generic-api-key, with path AND exact content checks.
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Reviewed public ammKey addresses"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-build-too-low\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-build-wif\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-buy-wif\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-buy\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-0\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-1\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-10\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-11\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-2\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-3\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-4\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-5\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-6\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-7\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-8\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-ladder-9\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-bonk-probe\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-buy\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-0\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-1\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-10\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-11\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-2\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-3\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-4\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-5\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-6\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-7\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-8\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-ladder-9\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-fartcoin-probe\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-buy\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-0\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-1\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-10\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-11\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-2\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-3\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-4\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-5\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-6\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-7\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-8\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-ladder-9\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-pnut-probe\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-buy\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-0\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-1\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-10\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-11\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-2\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-3\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-4\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-5\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-6\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-7\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-8\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-ladder-9\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-popcat-probe\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-buy\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-0\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-1\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-10\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-11\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-2\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-3\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-4\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-5\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-6\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-7\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-8\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-ladder-9\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-major-wif-probe\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-mismatched-mint\.json$''',
+  '''(?:^|/)app/packages/market/tests/fixtures/jupiter/swap-sell-wif\.json$''',
+]
+regexes = [
+  '''^\s*"ammKey": "(?:2UhFnySoJi6c89aydGAGS7ZRemo2dbkFRhvSJqDX4gHJ)",?\s*$''',
+  '''^\s*"ammKey": "(?:3Qi48zDut3jWUEd2NbqqiqidPswSGn1XQrUzV529Jg3G)",?\s*$''',
+  '''^\s*"ammKey": "(?:4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i)",?\s*$''',
+  '''^\s*"ammKey": "(?:4GQeEya6ZTwvXre4Br6ZfDyfe2WQMkcDz2QbkJZazVqS)",?\s*$''',
+  '''^\s*"ammKey": "(?:56Ekyu6uBpTna3LR2qkjHjNbDNkCLWK2Lt3uWh7J2R8Z)",?\s*$''',
+  '''^\s*"ammKey": "(?:5Dp922oSaj9rdLHTxZzq1B7QV7KmwY7U7K1JNCRhc45J)",?\s*$''',
+  '''^\s*"ammKey": "(?:5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc)",?\s*$''',
+  '''^\s*"ammKey": "(?:7rhxnLV8C77o6d8oz26AgK8x8m5ePsdeRawjqvojbjnQ)",?\s*$''',
+  '''^\s*"ammKey": "(?:7yD7gfXv49SFxhx9uTc11dEd7Nj98rGWeYMdZJgheZbG)",?\s*$''',
+  '''^\s*"ammKey": "(?:83v8iPyZihDEjDdY8RdZddyZNyUtXngz69Lgo9Kt5d6d)",?\s*$''',
+  '''^\s*"ammKey": "(?:8B8KYcFPMjZyDtJ1BENsqhW3fEmMrB4ekoEQJiM6z3SC)",?\s*$''',
+  '''^\s*"ammKey": "(?:8VXj6uz61v8yAu7m9pVEYNYjJwjK7WfFbRCs3YyXY6Bb)",?\s*$''',
+  '''^\s*"ammKey": "(?:BgifL1GjU4zTpFfDmfUPDAsx3upTdDAwa1D4d8tWnhZN)",?\s*$''',
+  '''^\s*"ammKey": "(?:Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw)",?\s*$''',
+  '''^\s*"ammKey": "(?:CreQJ2t94QK5dsxUZGXfPJ8Nx7wA9LHr5chxjSMkbNft)",?\s*$''',
+  '''^\s*"ammKey": "(?:D6NdKrKNQPmRZCCnG1GqXtF7MMoHB7qR6GU5TkG59Qz1)",?\s*$''',
+  '''^\s*"ammKey": "(?:EP2ib6dYdEeqD8MfE2ezHCxX3kP3K2eLKkirfPm5eyMx)",?\s*$''',
+  '''^\s*"ammKey": "(?:EcARjmSG7K8AWxG2bT91qgD7cjFgDofSou3dyuWCZTv3)",?\s*$''',
+  '''^\s*"ammKey": "(?:FLckHLGMJy5gEoXWwcE68Nprde1D4araK4TGLw4pQq2n)",?\s*$''',
+  '''^\s*"ammKey": "(?:FRhB8L7Y9Qq41qZXYLtC2nw8An1RJfLLxRF2x9RwLLMo)",?\s*$''',
+  '''^\s*"ammKey": "(?:FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp)",?\s*$''',
+  '''^\s*"ammKey": "(?:FwewVm8u6tFPGewAyHmWAqad9hmF7mvqxK4mJ7iNqqGC)",?\s*$''',
+  '''^\s*"ammKey": "(?:GUoa6mRgTyoE8NgXEyLnYXMWdS71KrcXG2nnx9u41Fmd)",?\s*$''',
+  '''^\s*"ammKey": "(?:HBS7a3br8GMMWuqVa7VB3SMFa7xVi1tSFdoF5w4ZZ3kS)",?\s*$''',
+  '''^\s*"ammKey": "(?:HDhWhQCBrSh9xNWmNtsTi86eWj3yCoEiaRodjgNydo1b)",?\s*$''',
+  '''^\s*"ammKey": "(?:J2gBtnqvzBkWEeNHKrph5WRckxD1waWhVEjRUrUhGhjc)",?\s*$''',
+  '''^\s*"ammKey": "(?:MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa)",?\s*$''',
+  '''^\s*"ammKey": "(?:Pi9nzTjPxD8DsRfRBGfKYzmefJoJM8TcXu2jyaQjSHm)",?\s*$''',
+  '''^\s*"ammKey": "(?:proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u)",?\s*$''',
+  '''^\s*"ammKey": "(?:utpEXicLhNpFhmxeLvGQ3vZS4byka86WT3WJFs985qC)",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed public token_mint addresses"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/fixtures/vectors/ix\.json$''',
+]
+regexes = [
+  '''^\s*"token_mint": "(?:gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5)",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed public quoteTokenAccount addresses"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/market/tests/fixtures/rpc/pool-pqc\.json$''',
+]
+regexes = [
+  '''^\s*"quoteTokenAccount": "(?:8XBzLnrtgagBccJ7FuTznkh1adJvWt5HzwE1tKUYTgGz)",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed public SPL Token-2022 native mint identity"
+condition = "AND"
+regexTarget = "match"
+paths = [
+  '''(?:^|/)app/packages/service-kit/src/intake/constants\.ts$''',
+]
+regexes = [
+  '''^TOKEN_2022_NATIVE_MINT\s*=\s*"9pan9bMn5HatX4EJdBwg9VgCa7Uz5HL8N1m5D3NdXejP"$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed CLI M1 vector public token_mint"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/cli/tests/fixtures/m1-ix\.json$''',
+]
+regexes = [
+  '''^\s*"token_mint": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed crosschain RPC public token addresses"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/base-clanker\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/base-zora\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/bsc-flap-standard\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/bsc-flap-tax\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/bsc-flap-unknown-quote\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/bsc-four-curve\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/bsc-four-pool\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-boner-stock-pair\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-chump\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-noxa\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-pons-v1\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-tax-1000\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-ubik-clone\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/rh-ubik-pool\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/simulation-four-curve-standard\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/simulation-four-graduated-standard\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/rpc/simulation-ubik-standard\.json$''',
+]
+regexes = [
+  '''^\s*"token": "0x020bfc650a365f8bb26819deaabf3e21291018b4",?\s*$''',
+  '''^\s*"token": "0x0d8847c7d02552bca663ab9efc0ac65437038888",?\s*$''',
+  '''^\s*"token": "0x0e0d2c89a5a019fe1cf762e5e33187631dacc21b",?\s*$''',
+  '''^\s*"token": "0x1ed3bafef7ed1ccb464d949ea2b3ddba028c7777",?\s*$''',
+  '''^\s*"token": "0x222fbc37a431138e4a8ecc8b8a21c5a8e8b1f035",?\s*$''',
+  '''^\s*"token": "0x39dbed3a2bd333467115de45665cc57f813c4571",?\s*$''',
+  '''^\s*"token": "0x3dc513e1ba643c5119762a4a749b833963af7777",?\s*$''',
+  '''^\s*"token": "0x6fb318cbcd9872c33606b3abcdd23b1216f8a5d8",?\s*$''',
+  '''^\s*"token": "0x812486EAea648819853F8E372dc9f1516C7868Bd",?\s*$''',
+  '''^\s*"token": "0x812486eaea648819853f8e372dc9f1516c7868bd",?\s*$''',
+  '''^\s*"token": "0x8719282772ceea6bb575b97282d3f1ab88e556b0",?\s*$''',
+  '''^\s*"token": "0x924fa68a0FC644485b8df8AbfA0A41C2e7744444",?\s*$''',
+  '''^\s*"token": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",?\s*$''',
+  '''^\s*"token": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",?\s*$''',
+  '''^\s*"token": "0xe1243842e091f073841fc1ac9527ea7e64f168bd",?\s*$''',
+  '''^\s*"token": "0xe3db791c5d25f9d13e8bb4befac8f6ad77c14444",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed Relay public idempotencyKey"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/crosschain/fixtures/relay/requests-native-success\.json$''',
+  '''(?:^|/)app/packages/crosschain/fixtures/relay/requests-refund\.json$''',
+]
+regexes = [
+  '''^\s*"idempotencyKey": "0x33a5c112cdfa50d89aa4c45b888f6d9aaf365663c20d863243b9a52c352fa73b",?\s*$''',
+  '''^\s*"idempotencyKey": "0x4a417b2169e6941e93d27ad48ff655ce1192389eb124358d2e0849602ff2583c",?\s*$''',
+  '''^\s*"idempotencyKey": "0x4daacf31e7fd38303932c0b2c04d918b8a27f9ddbd9e808f9b4112b413f4e265",?\s*$''',
+  '''^\s*"idempotencyKey": "0xd90a44235f89a87a5cc3902e8b650aa0a7c49245412638b04cf52ffc9b7df241",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed Relay public tokenAddress"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''(?:^|/)app/packages/crosschain/fixtures/relay/requests-refund\.json$''',
+]
+regexes = [
+  '''^\s*"tokenAddress": "0x4da3916d3ae6feece32ec8a2c4856d4abeb41bfd",?\s*$''',
+  '''^\s*"tokenAddress": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",?\s*$''',
+]
+
+[[rules.allowlists]]
+description = "Reviewed recorder public token addresses"
+condition = "AND"
+regexTarget = "match"
+paths = [
+  '''(?:^|/)app/packages/crosschain/scripts/record-relay-fixtures\.ts$''',
+]
+regexes = [
+  '''^token:\s*"0x222fbc37a431138e4a8ecc8b8a21c5a8e8b1f035"$''',
+  '''^token:\s*"0x6fb318cbcd9872c33606b3abcdd23b1216f8a5d8"$''',
+  '''^token:\s*"0x812486EAea648819853F8E372dc9f1516C7868Bd"$''',
+  '''^token:\s*"0x8719282772ceea6bb575b97282d3f1ab88e556b0"$''',
+  '''^token:\s*"0x924fa68a0FC644485b8df8AbfA0A41C2e7744444"$''',
+  '''^token:\s*"0xe3db791c5d25f9d13e8bb4befac8f6ad77c14444"$''',
+]
+
+[[rules.allowlists]]
+description = "CLI redaction-test URL placeholder on the reserved invalid domain"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/packages/cli/tests/ops\.test\.ts$''']
+regexes = ['''^\s*"https://rpc\.invalid/\?api-key=never-print-this",?\s*$''']
+
+[[rules.allowlists]]
+description = "Lifecycle redaction-test URL placeholder on the reserved invalid domain"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/packages/service-kit/tests/lifecycle\.test\.ts$''']
+regexes = ['''^\s*const error = new Error\('provider-secret https://rpc\.invalid/private\?api-key=private-key-value'\);\s*$''']
+
+# Gitleaks may include the preceding LF in a reported line.
+# Preserve the exact JSON indentation, field, public value and punctuation.
+
+[[rules.allowlists]]
+description = "Reviewed Historical D29 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?          "tokenMint": "Eq5pnbQMvUKyu2DndJvyWnaW7KsxckNi6t264mtcQr2e"$''']
+
+[[rules.allowlists]]
+description = "Reviewed Historical D29 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenMint": "Eq5pnbQMvUKyu2DndJvyWnaW7KsxckNi6t264mtcQr2e",$''']
+
+[[rules.allowlists]]
+description = "Reviewed Historical D29 rehearsal public tokenVault identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenVault": "B14HGd3HawstPK6hDQijCsxCuMFykD7EDBMqez51kFSY",$''']
+
+[[rules.allowlists]]
+description = "Reviewed Historical D29 rehearsal public launchTokenAccount identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "launchTokenAccount": "BMFF8Y8fJhKM37r81sZXdN8einTbUGafqrKD5KffvWFc",$''']
+
+[[rules.allowlists]]
+description = "Reviewed Historical D29 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?            "tokenMint": "Eq5pnbQMvUKyu2DndJvyWnaW7KsxckNi6t264mtcQr2e"$''']
+
+[[rules.allowlists]]
+description = "Reviewed M4.1 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?          "tokenMint": "3whKVaUcs2GEzGasMEMAvjtXKqExVnwNbPfrxkznRMhP"$''']
+
+[[rules.allowlists]]
+description = "Reviewed M4.1 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenMint": "3whKVaUcs2GEzGasMEMAvjtXKqExVnwNbPfrxkznRMhP",$''']
+
+[[rules.allowlists]]
+description = "Reviewed M4.1 rehearsal public tokenVault identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenVault": "4qCNAaQZbbUwLCfFF2TJn7T2NooS9xRgBFh1k1qUwyJf",$''']
+
+[[rules.allowlists]]
+description = "Reviewed M4.1 rehearsal public launchTokenAccount identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "launchTokenAccount": "GStznhvRyYGBsaq6Z7vFnRmUZppfWMvknKj8gu4Wves8",$''']
+
+[[rules.allowlists]]
+description = "Reviewed M4.1 rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?            "tokenMint": "3whKVaUcs2GEzGasMEMAvjtXKqExVnwNbPfrxkznRMhP"$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?          "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenVault identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "tokenVault": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public token_mint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/init\.json$''']
+regexes = ['''^\n?  "token_mint": "5UTKhyEem2niArN56XGDuCjeYXwGCHMy4typ2YrE5bVQ",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public launchTokenAccount identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?      "launchTokenAccount": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/meteora/validator-launch\.json$''']
+regexes = ['''^\n?            "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public vaultAuth identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/provisioning\.json$''']
+regexes = ['''^\n?    "vaultAuth": "32Q218Feqn6wV88bjZRrNHvxfCcL2nGx5P3vuEbKvy7C",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/provisioning\.json$''']
+regexes = ['''^\n?            "tokenMint": "5UTKhyEem2niArN56XGDuCjeYXwGCHMy4typ2YrE5bVQ"$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenMint identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/provisioning\.json$''']
+regexes = ['''^\n?        "tokenMint": "5UTKhyEem2niArN56XGDuCjeYXwGCHMy4typ2YrE5bVQ",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public tokenVault identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/provisioning\.json$''']
+regexes = ['''^\n?        "tokenVault": "CYDwo5bkp8y7ayePw89NP6ePoa2LVuWmEyYb1es7yG8B",$''']
+
+[[rules.allowlists]]
+description = "Reviewed devnet rehearsal public launchTokenAccount identity"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)app/fixtures/devnet/provisioning\.json$''']
+regexes = ['''^\n?        "launchTokenAccount": "34amaoDV5H6fJfTcZPY653UCuM6wgqjz9Hz2hLpn7TeM",$''']

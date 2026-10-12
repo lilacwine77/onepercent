@@ -1,0 +1,268 @@
+{
+  "commands": [
+    "PROPTEST_CASES=1000 PROPTEST_RNG_SEED=120261009 pnpm program:test -- --nocapture",
+    "pnpm program:test --test t12_exec -- --nocapture",
+    "pnpm e2e:validator exec"
+  ],
+  "limitsRule": "Maximum of T12.16 and local validator, plus 25 percent, rounded up to 1000 CU",
+  "artifact": {
+    "file": "target/deploy/onepercent.so",
+    "bytes": 922904,
+    "sha256": "b4c02e7590cbfb9564046fdbf64467cbe4a55594cd5dfc5c936008e9c363c91e",
+    "sbfFlags": 3
+  },
+  "nativeRuntime": "LiteSVM 0.16.0; local tests with default and mainnet feature sets, no mainnet transactions",
+  "nativePairSizeScope": "Frozen LUT of fixed exec and ATA accounts, excludes swap route instructions and route-only accounts",
+  "nativeCases": [
+    {
+      "kind": 1,
+      "class": 1,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 36139,
+      "endCu": 22392,
+      "totalCu": 59048,
+      "pairBytesWithoutSwap": 369,
+      "remainingSwapBytes": 863
+    },
+    {
+      "kind": 1,
+      "class": 2,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 54010,
+      "endCu": 34392,
+      "totalCu": 88919,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 2,
+      "class": 1,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 51482,
+      "endCu": 37876,
+      "totalCu": 89875,
+      "pairBytesWithoutSwap": 380,
+      "remainingSwapBytes": 852
+    },
+    {
+      "kind": 2,
+      "class": 2,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 46406,
+      "endCu": 30376,
+      "totalCu": 77299,
+      "pairBytesWithoutSwap": 381,
+      "remainingSwapBytes": 851
+    },
+    {
+      "kind": 3,
+      "class": 0,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 39935,
+      "endCu": 19875,
+      "totalCu": 60327,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 3,
+      "class": 0,
+      "migrated": true,
+      "mainnetFeatureSet": false,
+      "beginCu": 43339,
+      "endCu": 22875,
+      "totalCu": 66731,
+      "pairBytesWithoutSwap": 371,
+      "remainingSwapBytes": 861
+    },
+    {
+      "kind": 4,
+      "class": 0,
+      "migrated": false,
+      "mainnetFeatureSet": false,
+      "beginCu": 48927,
+      "endCu": 19367,
+      "totalCu": 68811,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 4,
+      "class": 0,
+      "migrated": true,
+      "mainnetFeatureSet": false,
+      "beginCu": 38831,
+      "endCu": 16367,
+      "totalCu": 55715,
+      "pairBytesWithoutSwap": 371,
+      "remainingSwapBytes": 861
+    },
+    {
+      "kind": 1,
+      "class": 1,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 37639,
+      "endCu": 23892,
+      "totalCu": 62048,
+      "pairBytesWithoutSwap": 369,
+      "remainingSwapBytes": 863
+    },
+    {
+      "kind": 1,
+      "class": 2,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 49510,
+      "endCu": 29892,
+      "totalCu": 79919,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 2,
+      "class": 1,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 54482,
+      "endCu": 43876,
+      "totalCu": 98875,
+      "pairBytesWithoutSwap": 380,
+      "remainingSwapBytes": 852
+    },
+    {
+      "kind": 2,
+      "class": 2,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 41906,
+      "endCu": 25876,
+      "totalCu": 68299,
+      "pairBytesWithoutSwap": 381,
+      "remainingSwapBytes": 851
+    },
+    {
+      "kind": 3,
+      "class": 0,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 57935,
+      "endCu": 31875,
+      "totalCu": 90327,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 3,
+      "class": 0,
+      "migrated": true,
+      "mainnetFeatureSet": true,
+      "beginCu": 46339,
+      "endCu": 24375,
+      "totalCu": 69731,
+      "pairBytesWithoutSwap": 371,
+      "remainingSwapBytes": 861
+    },
+    {
+      "kind": 4,
+      "class": 0,
+      "migrated": false,
+      "mainnetFeatureSet": true,
+      "beginCu": 42927,
+      "endCu": 22367,
+      "totalCu": 65811,
+      "pairBytesWithoutSwap": 370,
+      "remainingSwapBytes": 862
+    },
+    {
+      "kind": 4,
+      "class": 0,
+      "migrated": true,
+      "mainnetFeatureSet": true,
+      "beginCu": 41831,
+      "endCu": 19367,
+      "totalCu": 61715,
+      "pairBytesWithoutSwap": 371,
+      "remainingSwapBytes": 861
+    }
+  ],
+  "validatorRuntime": "solana-test-validator 4.3.0, loopback only; TRENDING transfer stub and hash-pinned real DBC/DAMM v2 programs",
+  "validatorCases": [
+    {
+      "name": "TRENDING StockBuy",
+      "totalCu": 84661,
+      "beginCu": 54563,
+      "endCu": 22392,
+      "transactionBytes": 614
+    },
+    {
+      "name": "TRENDING StockSell",
+      "totalCu": 128208,
+      "beginCu": 61524,
+      "endCu": 30376,
+      "transactionBytes": 625
+    },
+    {
+      "name": "DBC Burn",
+      "totalCu": 98987,
+      "beginCu": 42041,
+      "endCu": 19875,
+      "transactionBytes": 436,
+      "recordedQuote": "24375000000",
+      "minOut": "520128968179",
+      "delivered": "530296405188"
+    },
+    {
+      "name": "DBC JackpotBuy",
+      "totalCu": 96923,
+      "beginCu": 41983,
+      "endCu": 17867,
+      "transactionBytes": 436,
+      "recordedQuote": "24423750000",
+      "minOut": "521833536466",
+      "delivered": "529347676672"
+    },
+    {
+      "name": "DAMM v2 Burn",
+      "totalCu": 87717,
+      "beginCu": 46278,
+      "endCu": 19875,
+      "transactionBytes": 435,
+      "recordedQuote": "84830000000",
+      "minOut": "116340088234",
+      "delivered": "118652401220"
+    },
+    {
+      "name": "DAMM v2 JackpotBuy",
+      "totalCu": 86442,
+      "beginCu": 47018,
+      "endCu": 17867,
+      "transactionBytes": 435,
+      "recordedQuote": "84878750000",
+      "minOut": "116796367701",
+      "delivered": "118516183752"
+    }
+  ],
+  "measured": {
+    "execBegin": 61524,
+    "execEnd": 43876
+  },
+  "limits": {
+    "execBegin": 77000,
+    "execEnd": 55000
+  },
+  "environment": {
+    "CARGO_BUILD_JOBS": 3,
+    "RUST_TEST_THREADS": 2,
+    "M1_PROPTEST_THREADS": 2,
+    "VITEST_MAX_WORKERS": 2,
+    "pnpm": "10.34.5"
+  },
+  "nativeMeasurementAggregation": "Per-path component maxima across the full suite and isolated T12 run of the same artifact; totalCu is the largest observed whole-transaction value.",
+  "validatorMeasurementAggregation": "Per-path component maxima across two successful exec runs of the same artifact; the second run also passed with execBegin 73000 and execEnd 55000 before raising execBegin to 77000 for the observed maximum plus 25 percent."
+}

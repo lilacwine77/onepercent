@@ -1,0 +1,40 @@
+{
+  "name": "@onepercent/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "onepct-ops": "./dist/launch/ops.js",
+    "onepct-rescue": "./dist/rescue/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --preserve-symlinks ../../scripts/test.mjs",
+    "rescue:bundle": "node scripts/rescue-bundle.mjs"
+  },
+  "dependencies": {
+    "@anchor-lang/core": "0.32.2",
+    "@onepercent/config": "workspace:*",
+    "@onepercent/sdk": "workspace:*",
+    "@onepercent/service-kit": "workspace:*",
+    "@solana/web3.js": "1.99.0",
+    "@sqds/multisig": "2.1.4",
+    "zod": "4.6.5",
+    "@onepercent/market": "workspace:*",
+    "@onepercent/db": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./hitlist": {
+      "types": "./src/hitlist/index.ts",
+      "development": "./src/hitlist/index.ts",
+      "import": "./dist/hitlist/index.js"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.319Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=So11111111111111111111111111111111111111112"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "x-ratelimit-current": "6",
+      "x-ratelimit-remaining": "4",
+      "x-ratelimit-reset": "1791484098"
+    },
+    "body": {
+      "message": "unauthorized"
+    }
+  },
+  "synthetic": {
+    "from": "jupiter/prices-wsol.json",
+    "edit": "Replace status with 401 to exercise the non-retryable authentication boundary."
+  }
+}

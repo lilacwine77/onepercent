@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-10-08T18:42:40.910Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "F9nvvN5g87n39UQytpUQLHfDgzLpZvRbDZgWDaVmX6hN",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628036,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": null
+      },
+      "id": 1
+    }
+  }
+}

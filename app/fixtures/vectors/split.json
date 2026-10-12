@@ -1,0 +1,158 @@
+[
+  {
+    "input": {
+      "price": "100000000"
+    },
+    "output": {
+      "burn": "5000000",
+      "jackpot": "5000000",
+      "referral": "2000000",
+      "royalty": "2000000",
+      "stock": "72000000",
+      "team": "8000000"
+    }
+  },
+  {
+    "input": {
+      "price": "250000000"
+    },
+    "output": {
+      "burn": "12500000",
+      "jackpot": "12500000",
+      "referral": "5000000",
+      "royalty": "5000000",
+      "stock": "180000000",
+      "team": "20000000"
+    }
+  },
+  {
+    "input": {
+      "price": "500000000"
+    },
+    "output": {
+      "burn": "25000000",
+      "jackpot": "25000000",
+      "referral": "10000000",
+      "royalty": "10000000",
+      "stock": "360000000",
+      "team": "40000000"
+    }
+  },
+  {
+    "input": {
+      "price": "1000000000"
+    },
+    "output": {
+      "burn": "50000000",
+      "jackpot": "50000000",
+      "referral": "20000000",
+      "royalty": "20000000",
+      "stock": "720000000",
+      "team": "80000000"
+    }
+  },
+  {
+    "input": {
+      "price": "0"
+    },
+    "output": {
+      "burn": "0",
+      "jackpot": "0",
+      "referral": "0",
+      "royalty": "0",
+      "stock": "0",
+      "team": "0"
+    }
+  },
+  {
+    "input": {
+      "price": "1"
+    },
+    "output": {
+      "burn": "0",
+      "jackpot": "0",
+      "referral": "0",
+      "royalty": "0",
+      "stock": "1",
+      "team": "0"
+    }
+  },
+  {
+    "input": {
+      "price": "49"
+    },
+    "output": {
+      "burn": "2",
+      "jackpot": "2",
+      "referral": "0",
+      "royalty": "0",
+      "stock": "42",
+      "team": "3"
+    }
+  },
+  {
+    "input": {
+      "price": "50"
+    },
+    "output": {
+      "burn": "2",
+      "jackpot": "2",
+      "referral": "1",
+      "royalty": "1",
+      "stock": "37",
+      "team": "4"
+    }
+  },
+  {
+    "input": {
+      "price": "99"
+    },
+    "output": {
+      "burn": "4",
+      "jackpot": "4",
+      "referral": "1",
+      "royalty": "1",
+      "stock": "79",
+      "team": "7"
+    }
+  },
+  {
+    "input": {
+      "price": "101"
+    },
+    "output": {
+      "burn": "5",
+      "jackpot": "5",
+      "referral": "2",
+      "royalty": "2",
+      "stock": "73",
+      "team": "8"
+    }
+  },
+  {
+    "input": {
+      "price": "18446744073709551614"
+    },
+    "output": {
+      "burn": "922337203685477580",
+      "jackpot": "922337203685477580",
+      "referral": "368934881474191032",
+      "royalty": "368934881474191032",
+      "stock": "13281655733070877165",
+      "team": "1475739525896764129"
+    }
+  },
+  {
+    "input": {
+      "price": "18446744073709551615"
+    },
+    "output": {
+      "burn": "922337203685477580",
+      "jackpot": "922337203685477580",
+      "referral": "368934881474191032",
+      "royalty": "368934881474191032",
+      "stock": "13281655733070877166",
+      "team": "1475739525896764129"
+    }
+  }
+]

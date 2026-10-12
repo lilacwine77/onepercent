@@ -1,0 +1,54 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.441Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        {
+          "encoding": "jsonParsed",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628037,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 1092251303844,
+          "data": {
+            "program": "spl-token",
+            "parsed": {
+              "info": {
+                "decimals": 5,
+                "freezeAuthority": null,
+                "isInitialized": true,
+                "mintAuthority": null,
+                "supply": "8799436581375731272"
+              },
+              "type": "mint"
+            },
+            "space": 82
+          },
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 82
+        }
+      },
+      "id": 1
+    }
+  }
+}

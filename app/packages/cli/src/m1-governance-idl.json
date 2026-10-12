@@ -1,0 +1,494 @@
+{
+  "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "metadata": {
+    "name": "onepercent",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "The 1% Machine program scaffold"
+  },
+  "instructions": [
+    {
+      "name": "admin_config",
+      "discriminator": [32, 33, 226, 214, 28, 110, 52, 90],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "action",
+          "type": {
+            "defined": {
+              "name": "AdminAction"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "admin_list_mint",
+      "discriminator": [59, 58, 29, 73, 220, 200, 205, 42],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "ledger",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [108, 101, 100, 103, 101, 114]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault"
+        },
+        {
+          "name": "vault_auth",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [118, 97, 117, 108, 116, 95, 97, 117, 116, 104]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "class",
+          "type": "u8"
+        },
+        {
+          "name": "cap",
+          "type": "u64"
+        },
+        {
+          "name": "oracle",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "guardian",
+      "discriminator": [138, 247, 107, 233, 48, 251, 183, 234],
+      "accounts": [
+        {
+          "name": "signer",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "action",
+          "type": {
+            "defined": {
+              "name": "GuardianAction"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "program",
+          "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "deck",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [100, 101, 99, 107]
+              }
+            ]
+          }
+        },
+        {
+          "name": "fee_in",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [102, 101, 101, 95, 105, 110]
+              }
+            ]
+          }
+        },
+        {
+          "name": "vrf_queue"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "InitParams"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "AdminAction",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "SetRole",
+            "fields": [
+              {
+                "name": "role",
+                "type": "u8"
+              },
+              {
+                "name": "key",
+                "type": "pubkey"
+              }
+            ]
+          },
+          {
+            "name": "SetTeam",
+            "fields": [
+              {
+                "name": "team_wallet",
+                "type": "pubkey"
+              },
+              {
+                "name": "team_wallets",
+                "type": {
+                  "array": ["pubkey", 8]
+                }
+              }
+            ]
+          },
+          {
+            "name": "SetSeason",
+            "fields": [
+              {
+                "name": "snapshot_slot",
+                "type": "u64"
+              },
+              {
+                "name": "snapshot_ts",
+                "type": "i64"
+              },
+              {
+                "name": "stock_up_ts",
+                "type": "i64"
+              }
+            ]
+          },
+          {
+            "name": "SetTokenMint",
+            "fields": [
+              {
+                "name": "mint",
+                "type": "pubkey"
+              }
+            ]
+          },
+          {
+            "name": "AddVrfQueue",
+            "fields": [
+              {
+                "name": "queue",
+                "type": "pubkey"
+              }
+            ]
+          },
+          {
+            "name": "UpdateBucket",
+            "fields": [
+              {
+                "name": "index",
+                "type": "u8"
+              },
+              {
+                "name": "enabled",
+                "type": "bool"
+              },
+              {
+                "name": "cap",
+                "type": "u64"
+              }
+            ]
+          },
+          {
+            "name": "SetPause",
+            "fields": [
+              {
+                "name": "bits",
+                "type": "u8"
+              },
+              {
+                "name": "paused",
+                "type": "bool"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "GuardianAction",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "SetPause",
+            "fields": [
+              {
+                "name": "bits",
+                "type": "u8"
+              },
+              {
+                "name": "paused",
+                "type": "bool"
+              }
+            ]
+          },
+          {
+            "name": "DisableBucket",
+            "fields": [
+              {
+                "name": "index",
+                "type": "u8"
+              }
+            ]
+          },
+          {
+            "name": "LowerCap",
+            "fields": [
+              {
+                "name": "index",
+                "type": "u8"
+              },
+              {
+                "name": "cap",
+                "type": "u64"
+              }
+            ]
+          },
+          {
+            "name": "DisableRole",
+            "fields": [
+              {
+                "name": "role",
+                "type": "u8"
+              }
+            ]
+          },
+          {
+            "name": "SelectVrfQueue",
+            "fields": [
+              {
+                "name": "index",
+                "type": "u8"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "guardians",
+            "type": {
+              "array": ["pubkey", 2]
+            }
+          },
+          {
+            "name": "keeper",
+            "type": "pubkey"
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "intake_signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "quote_signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "launch_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "team_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "team_wallets",
+            "type": {
+              "array": ["pubkey", 8]
+            }
+          },
+          {
+            "name": "token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "vrf_queue",
+            "type": "pubkey"
+          },
+          {
+            "name": "rent_buffer_lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "dbc-migrated-quote-vault",
+  "address": "8xQGHBosC3J7wm8YAewKoYdULej9JEEd646Cx4tXrxG7",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848239,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "70cd13d33d8826bf5f3bdf83020b771190ab0a7ffc05fb708157ef6659888bff",
+  "pubkey": "8xQGHBosC3J7wm8YAewKoYdULej9JEEd646Cx4tXrxG7",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHaY2gfcoa8yAZxniwrUKIBVyQ7/JZosRUgvFOEPtzbCIF3jgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAADwHR8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 112039281,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

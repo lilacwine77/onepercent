@@ -1,0 +1,106 @@
+[
+  {
+    "input": {
+      "amount": "0",
+      "cost": "0",
+      "value": "0"
+    },
+    "output": null
+  },
+  {
+    "input": {
+      "amount": "1",
+      "cost": "0",
+      "value": "1"
+    },
+    "output": null
+  },
+  {
+    "input": {
+      "amount": "1",
+      "cost": "3",
+      "value": "1"
+    },
+    "output": null
+  },
+  {
+    "input": {
+      "amount": "5",
+      "cost": "7",
+      "value": "3"
+    },
+    "output": {
+      "amount": "3",
+      "cost": "4",
+      "tokens": "2"
+    }
+  },
+  {
+    "input": {
+      "amount": "5",
+      "cost": "7",
+      "value": "7"
+    },
+    "output": {
+      "amount": "0",
+      "cost": "0",
+      "tokens": "5"
+    }
+  },
+  {
+    "input": {
+      "amount": "5",
+      "cost": "7",
+      "value": "8"
+    },
+    "output": null
+  },
+  {
+    "input": {
+      "amount": "18446744073709551615",
+      "cost": "18446744073709551615",
+      "value": "18446744073709551615"
+    },
+    "output": {
+      "amount": "0",
+      "cost": "0",
+      "tokens": "18446744073709551615"
+    }
+  },
+  {
+    "input": {
+      "amount": "18446744073709551615",
+      "cost": "18446744073709551615",
+      "value": "18446744073709551614"
+    },
+    "output": {
+      "amount": "1",
+      "cost": "1",
+      "tokens": "18446744073709551614"
+    }
+  },
+  {
+    "input": {
+      "amount": "18446744073709551615",
+      "cost": "18446744073709551615",
+      "value": "1"
+    },
+    "output": {
+      "amount": "18446744073709551614",
+      "cost": "18446744073709551614",
+      "tokens": "1"
+    }
+  },
+  {
+    "input": {
+      "amount": "1000",
+      "cost": "99",
+      "value": "10"
+    },
+    "output": {
+      "amount": "899",
+      "cost": "89",
+      "tokens": "101"
+    }
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump,7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr,9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump,DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263,EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm,So11111111111111111111111111111111111111112"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "5",
+      "x-ratelimit-remaining": "5",
+      "x-ratelimit-reset": "1791484098"
+    },
+    "body": {
+      "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": {
+        "createdAt": "2024-10-31T14:21:40Z",
+        "liquidity": 3263429.7405563155,
+        "usdPrice": 0.04655746889768896,
+        "blockId": 454622194,
+        "decimals": 6,
+        "priceChange24h": -4.5099802925047605,
+        "launchpad": "pump.fun"
+      },
+      "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr": {
+        "createdAt": "2024-06-07T10:15:02.516Z",
+        "liquidity": 4208004.082278814,
+        "usdPrice": 0.045172337522429065,
+        "blockId": 454624496,
+        "decimals": 9,
+        "priceChange24h": -6.61125744180692
+      },
+      "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": {
+        "createdAt": "2024-10-18T06:05:05Z",
+        "liquidity": 5991873.404509455,
+        "usdPrice": 0.14844161752156082,
+        "blockId": 454624829,
+        "decimals": 6,
+        "priceChange24h": -7.388820031857357,
+        "launchpad": "pump.fun"
+      },
+      "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+        "createdAt": "2024-06-07T10:26:40.709Z",
+        "liquidity": 5045899.592742155,
+        "usdPrice": 0.0000031979094739212325,
+        "blockId": 454624796,
+        "decimals": 5,
+        "priceChange24h": -7.1479684519515985
+      },
+      "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm": {
+        "createdAt": "2024-06-07T10:51:21.979Z",
+        "liquidity": 6190483.457714996,
+        "usdPrice": 0.20558901013378167,
+        "blockId": 454624814,
+        "decimals": 6,
+        "priceChange24h": -10.897221388431436
+      },
+      "So11111111111111111111111111111111111111112": {
+        "createdAt": "2024-06-05T08:55:25.527Z",
+        "liquidity": 948294408.1247985,
+        "usdPrice": 107.6500561026356,
+        "blockId": 454624859,
+        "decimals": 9,
+        "priceChange24h": -7.5813351607238815
+      }
+    }
+  },
+  "provenance": {
+    "sampleRoles": {
+      "staleMint": "sSo1wxKKr6zW2hqf5hZrp2CawLibcwi1pMBqk5bg2G4",
+      "omittedMint": "11111111111111111111111111111111",
+      "pumpMint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+      "graduatedMint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+      "liveMint": "27J92C2eG7yMpNdG5MQE1swrw4z9U6BiHwKQWTYBpump"
+    },
+    "discovery": "Jupiter Tokens v2 verified, toptraded/24h and recent"
+  }
+}

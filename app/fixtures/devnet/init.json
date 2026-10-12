@@ -1,0 +1,26 @@
+{
+  "admin": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+  "guardians": [
+    "AMLdjDKPotXi2LrvAauhjf2mM8vgoF2PVKGrJnJv28Y4",
+    "2GZRvx8PTSiKri91762UCZF8DXn8NX6Z7F41NXfcUUk5"
+  ],
+  "keeper": "Fu1Kpogh6cPTdVn7PRQmWGkrkUHNdzW7K82YF2Hp7Brw",
+  "executor": "4NPtS1mPchcSNU7iG9bzZWndvKERmvTYu8yZ163WMoqL",
+  "intake_signer": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si",
+  "quote_signer": "EuDMwq4t1bft7qnBDGPEVABNbZiPQXqtvjfgFy1gBLfD",
+  "launch_wallet": "B4WWapt2X6A6MeH9vk3CswcAixkk3R8fXYTtj8inDmGU",
+  "team_wallet": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+  "team_wallets": [
+    "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+    "BKFejgbN7D9MvKidTbs6zJ69U5nFruXvgT3ZDeopj2RP",
+    "11111111111111111111111111111111",
+    "11111111111111111111111111111111",
+    "11111111111111111111111111111111",
+    "11111111111111111111111111111111",
+    "11111111111111111111111111111111",
+    "11111111111111111111111111111111"
+  ],
+  "token_mint": "5UTKhyEem2niArN56XGDuCjeYXwGCHMy4typ2YrE5bVQ",
+  "vrf_queue": "Cuj97ggrhhidhbu39TijNVqE74xvKJ69gDervRUXAxGh",
+  "rent_buffer_lamports": "50000000"
+}

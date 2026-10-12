@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.281Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getTokenAccountBalance",
+      "params": [
+        "8XBzLnrtgagBccJ7FuTznkh1adJvWt5HzwE1tKUYTgGz",
+        {
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "apiVersion": "4.3.0",
+          "slot": 454628036
+        },
+        "value": null
+      },
+      "id": 1
+    }
+  },
+  "synthetic": {
+    "from": "vault-pqc.json",
+    "edit": "Required vault balance is missing."
+  }
+}

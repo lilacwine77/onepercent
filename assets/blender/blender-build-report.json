@@ -1,0 +1,17 @@
+{
+  "blend": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\onepercent-foil-source.blend",
+  "master": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\onepercent-foil-master.glb",
+  "objects": [
+    "Branded reverse",
+    "Printed front",
+    "Sealed foil edge"
+  ],
+  "triangles": 366604,
+  "images_packed": true,
+  "previews": [
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\previews\\front.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\previews\\quarter.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\previews\\rear.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\previews\\profile.png"
+  ]
+}

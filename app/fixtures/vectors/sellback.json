@@ -1,0 +1,832 @@
+{
+  "checks": [
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "30000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "29950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "30000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "at_target"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "29999999999"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "29956499999",
+        "team_sol": "0",
+        "to_team": "0",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "29999999999",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "below_target"
+    },
+    {
+      "expected": {
+        "bucket_cost": "20050000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "10000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "9950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "20000000000",
+        "bucket_costs": [
+          "20000000000"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "10000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "bucket_book_reaches_target"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "1",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "30000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "29956500000",
+        "team_sol": "0",
+        "to_team": "0",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "1",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "30000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "target_tracks_prior_hits"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "1043500000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "1000000000",
+        "team_sol": "0",
+        "to_team": "0",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "1043500000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "floor_equal"
+    },
+    {
+      "expected": {
+        "error": "SellBackFloor",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "1043499999",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "floor_short"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "4956500000",
+          "sol_at_hour_start": "0",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "5000000000",
+        "stock_sol": "99950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "4956500000",
+        "sol_at_hour_start": "0",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "budget_min_equal"
+    },
+    {
+      "expected": {
+        "error": "SellBackBudget",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "4956500001",
+        "sol_at_hour_start": "0",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "budget_min_exceeded"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "24956500000",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "25000000000",
+        "stock_sol": "99950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "24956500000",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "budget_percent_equal"
+    },
+    {
+      "expected": {
+        "error": "SellBackBudget",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "24956500001",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "budget_percent_exceeded"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "99950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "50000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "cap_equal"
+    },
+    {
+      "expected": {
+        "error": "BucketCapExceeded",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "49999999",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "cap_exceeded"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "90000000000",
+          "hit_out_this_hour": "0",
+          "hour_index": "2",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "99956500000",
+        "team_sol": "0",
+        "to_team": "0",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "90000000000",
+        "hour_index": "1",
+        "now": "7200",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "25000000000",
+        "sol_at_hour_start": "0",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "next_hour_rotates"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "3",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "99950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "90000000000",
+        "hour_index": "1",
+        "now": "10800",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "25000000000",
+        "sol_at_hour_start": "0",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "skipped_hour_rotates"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "0",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "100000000000",
+          "stock_sol": "100000000000"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "99950000000",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "-1",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "25000000000",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "negative_time_hour_zero"
+    },
+    {
+      "expected": {
+        "error": "MathOverflow",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "18446744073709551615"
+      },
+      "name": "team_overflow"
+    },
+    {
+      "expected": {
+        "error": "SellBackBudget",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "18446744073709551615",
+        "sol_at_hour_start": "18446744073709551615",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "budget_addition_above_u64"
+    },
+    {
+      "expected": {
+        "error": "BucketCapExceeded",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "18446744073709551615",
+        "bucket_cost": "18446744073709551615",
+        "bucket_costs": [
+          "18446744073709551615"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "cap_addition_above_u64"
+    },
+    {
+      "expected": {
+        "error": "InvalidArgument",
+        "ok": false
+      },
+      "input": {
+        "bucket_cap": "100000000000",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "0"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "1",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "100000000000",
+        "stock_sol": "100000000000",
+        "stocked_value": "1",
+        "team_sol": "0"
+      },
+      "name": "zero_rejected"
+    },
+    {
+      "expected": {
+        "bucket_cost": "50000000",
+        "hour": {
+          "hit_out_last_hour": "0",
+          "hit_out_this_hour": "0",
+          "hour_index": "1",
+          "sb_paid_hour": "0",
+          "sol_at_hour_start": "18446744073709551615",
+          "stock_sol": "18446744073709551615"
+        },
+        "ok": true,
+        "payout": "43500000",
+        "sb_paid_hour": "43500000",
+        "stock_sol": "18446744073659551615",
+        "team_sol": "6500000",
+        "to_team": "6500000",
+        "value": "50000000"
+      },
+      "input": {
+        "bucket_cap": "18446744073709551615",
+        "bucket_cost": "0",
+        "bucket_costs": [
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615"
+        ],
+        "hit_out_last_hour": "0",
+        "hit_out_this_hour": "0",
+        "hour_index": "1",
+        "now": "3600",
+        "quote_lamports": "50000000",
+        "sb_paid_hour": "0",
+        "sol_at_hour_start": "18446744073709551615",
+        "stock_sol": "18446744073709551615",
+        "stocked_value": "50000000",
+        "team_sol": "0"
+      },
+      "name": "large_book_uses_u128"
+    }
+  ],
+  "payouts": [
+    {
+      "error": null,
+      "margin": "6500000",
+      "name": "quote_below",
+      "payout": "43499999",
+      "quoteLamports": "49999999",
+      "stockedValue": "50000000",
+      "value": "49999999"
+    },
+    {
+      "error": null,
+      "margin": "6500000",
+      "name": "quote_above",
+      "payout": "43500000",
+      "quoteLamports": "60000000",
+      "stockedValue": "50000000",
+      "value": "50000000"
+    },
+    {
+      "error": null,
+      "margin": "182000001",
+      "name": "fractional_quote",
+      "payout": "1218000000",
+      "quoteLamports": "1400000001",
+      "stockedValue": "1500000000",
+      "value": "1400000001"
+    },
+    {
+      "error": null,
+      "margin": "1950000000",
+      "name": "black_equal",
+      "payout": "13050000000",
+      "quoteLamports": "15000000000",
+      "stockedValue": "15000000000",
+      "value": "15000000000"
+    },
+    {
+      "error": null,
+      "margin": "6500000",
+      "name": "silver_equal",
+      "payout": "43500000",
+      "quoteLamports": "50000000",
+      "stockedValue": "50000000",
+      "value": "50000000"
+    },
+    {
+      "error": null,
+      "margin": "19500000",
+      "name": "blue_equal",
+      "payout": "130500000",
+      "quoteLamports": "150000000",
+      "stockedValue": "150000000",
+      "value": "150000000"
+    },
+    {
+      "error": null,
+      "margin": "52000000",
+      "name": "holo_equal",
+      "payout": "348000000",
+      "quoteLamports": "400000000",
+      "stockedValue": "400000000",
+      "value": "400000000"
+    },
+    {
+      "error": null,
+      "margin": "1",
+      "name": "two_units",
+      "payout": "1",
+      "quoteLamports": "2",
+      "stockedValue": "2",
+      "value": "2"
+    },
+    {
+      "error": null,
+      "margin": "14",
+      "name": "rounding_101",
+      "payout": "87",
+      "quoteLamports": "101",
+      "stockedValue": "101",
+      "value": "101"
+    },
+    {
+      "error": null,
+      "margin": "1301",
+      "name": "rounding_10001",
+      "payout": "8700",
+      "quoteLamports": "10001",
+      "stockedValue": "10001",
+      "value": "10001"
+    },
+    {
+      "error": null,
+      "margin": "130000000",
+      "name": "quote_capped",
+      "payout": "869999999",
+      "quoteLamports": "999999999",
+      "stockedValue": "9000000000",
+      "value": "999999999"
+    },
+    {
+      "error": null,
+      "margin": "13000000",
+      "name": "value_capped",
+      "payout": "86999999",
+      "quoteLamports": "9000000000",
+      "stockedValue": "99999999",
+      "value": "99999999"
+    },
+    {
+      "error": "InvalidArgument",
+      "margin": "1",
+      "name": "one_unit_zero",
+      "payout": "0",
+      "quoteLamports": "1",
+      "stockedValue": "1",
+      "value": "1"
+    },
+    {
+      "error": "InvalidArgument",
+      "margin": "0",
+      "name": "zero_quote",
+      "payout": "0",
+      "quoteLamports": "0",
+      "stockedValue": "100",
+      "value": "0"
+    },
+    {
+      "error": "InvalidArgument",
+      "margin": "0",
+      "name": "zero_value",
+      "payout": "0",
+      "quoteLamports": "100",
+      "stockedValue": "0",
+      "value": "0"
+    },
+    {
+      "error": null,
+      "margin": "2398076729582241710",
+      "name": "max_equal",
+      "payout": "16048667344127309905",
+      "quoteLamports": "18446744073709551615",
+      "stockedValue": "18446744073709551615",
+      "value": "18446744073709551615"
+    },
+    {
+      "error": null,
+      "margin": "2398076729582241710",
+      "name": "max_quote_below",
+      "payout": "16048667344127309904",
+      "quoteLamports": "18446744073709551614",
+      "stockedValue": "18446744073709551615",
+      "value": "18446744073709551614"
+    },
+    {
+      "error": null,
+      "margin": "2398076729582241710",
+      "name": "max_value_capped",
+      "payout": "16048667344127309904",
+      "quoteLamports": "18446744073709551615",
+      "stockedValue": "18446744073709551614",
+      "value": "18446744073709551614"
+    }
+  ],
+  "schemaVersion": 1
+}

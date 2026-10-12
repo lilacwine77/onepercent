@@ -1,0 +1,66 @@
+{
+  "recordedAt": "2026-10-08T18:42:46.492Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=So11111111111111111111111111111111111111112&outputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&amount=1000000000&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "7",
+      "x-ratelimit-remaining": "3",
+      "x-ratelimit-reset": "1791484968"
+    },
+    "body": {
+      "swapMode": "ExactIn",
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "inAmount": "1000000000",
+      "outAmount": "3360457118443",
+      "otherAmountThreshold": "3360457118443",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.0002904018440951958",
+      "priceImpact": -0.029040184409519578,
+      "routePlan": [
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 107.82792934027793,
+          "swapInfo": {
+            "ammKey": "proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u",
+            "label": "OKX DEX Router",
+            "inputMint": "So11111111111111111111111111111111111111112",
+            "outputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "inAmount": "1000000000",
+            "outAmount": "3360457118443"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "swapType": "aggregator",
+      "router": "okx",
+      "guaranteedPrice": false,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "requestId": "01a11cd3-357d-716e-8ab2-b55e0a802fcc",
+      "taker": null,
+      "inUsdValue": 107.82792934027795,
+      "outUsdValue": 107.79661591075256,
+      "swapUsdValue": 107.82792934027795,
+      "mode": "ultra",
+      "totalTime": 175
+    }
+  }
+}

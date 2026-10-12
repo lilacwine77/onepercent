@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-10-08T18:28:08.336Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getSlot",
+      "params": [
+        {
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": 454624857
+    }
+  }
+}

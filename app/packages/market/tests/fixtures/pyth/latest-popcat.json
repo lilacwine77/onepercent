@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "GET",
+    "url": "https://hermes.pyth.network/v2/updates/price/latest?ids[]=b9312a7ee50e189ef045aa3c7842e099b061bd9bdc99ac645956c3b660dc8cce&parsed=true"
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "parsed": [
+        {
+          "id": "b9312a7ee50e189ef045aa3c7842e099b061bd9bdc99ac645956c3b660dc8cce",
+          "price": {
+            "price": "4517234",
+            "conf": "1",
+            "expo": -8,
+            "publish_time": 1791484090
+          },
+          "ema_price": {
+            "price": "4517234",
+            "conf": "1",
+            "expo": -8,
+            "publish_time": 1791484090
+          },
+          "metadata": {
+            "slot": 454624857
+          }
+        }
+      ]
+    }
+  },
+  "synthetic": {
+    "from": "../jupiter/prices-majors.json",
+    "edit": "User-approved schema-only Hermes sample because no Hermes key is available. Display USD copied from the recorded Jupiter response; confidence and metadata are synthetic. This is not recorded Pyth market evidence."
+  }
+}

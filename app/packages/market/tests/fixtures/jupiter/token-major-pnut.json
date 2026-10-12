@@ -1,0 +1,107 @@
+{
+  "recordedAt": "2026-10-08T18:43:47.449Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/tokens/v2/search?query=2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "6",
+      "x-ratelimit-remaining": "4",
+      "x-ratelimit-reset": "1791485028"
+    },
+    "body": [
+      {
+        "id": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+        "name": "Peanut the Squirrel",
+        "symbol": "Pnut",
+        "icon": "https://ipfs.io/ipfs/QmNdTtJauw39u4DzGyTaZ35rRx4VgAxqb91wE89zjyHWd2",
+        "decimals": 6,
+        "website": "https://www.change.org/p/return-p-nut-the-beloved-squirrel-to-his-rightful-home?fbclid=PAZXh0bgNhZW0CMTEAAaY5fhbirfmm3r9IKhUH_DM6ONraf0BqQwn0aeGC0-CliWxqrljBQ8rXI-w_aem_ntFZBEK60MKAtA8LG3oh6w",
+        "dev": "HrHJputHcA8mkwrcQB3GkrJ2u1f7Fm4LzAZptSYSsUcf",
+        "circSupply": 999841084.699475,
+        "totalSupply": 999841084.699475,
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "launchpad": "pump.fun",
+        "graduatedPool": "4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i",
+        "graduatedAt": "2024-10-31T15:06:46Z",
+        "holderCount": 88312,
+        "fdv": 47332112.38408132,
+        "mcap": 47332112.38408132,
+        "usdPrice": 0.047339635376463914,
+        "priceBlockId": 454626206,
+        "liquidity": 3314093.3357891985,
+        "stats1h": {
+          "priceChange": 1.4822684441688834,
+          "holderChange": 0.0011323617669373011,
+          "liquidityChange": 1.106050625020961,
+          "volumeChange": -54.21945918818179,
+          "buyVolume": 6232.103512271919,
+          "sellVolume": 874.9957447259893,
+          "buyOrganicVolume": 92.88396899268574,
+          "sellOrganicVolume": 17.321583963779283,
+          "numBuys": 40,
+          "numSells": 21,
+          "numTraders": 19,
+          "numOrganicBuyers": 1,
+          "numNetBuyers": 6
+        },
+        "stats6h": {
+          "priceChange": -3.614578001614167,
+          "holderChange": -0.0011323361226546487,
+          "liquidityChange": -4.0461617070667515,
+          "volumeChange": 392.94651734098267,
+          "buyVolume": 81250.70184382988,
+          "sellVolume": 77733.02668839389,
+          "buyOrganicVolume": 148.55132048963696,
+          "sellOrganicVolume": 310.2730396207579,
+          "numBuys": 888,
+          "numSells": 883,
+          "numTraders": 195,
+          "numOrganicBuyers": 2,
+          "numNetBuyers": 34
+        },
+        "stats24h": {
+          "priceChange": -3.196144482438253,
+          "holderChange": -0.01585037248375337,
+          "liquidityChange": -5.426777917039751,
+          "volumeChange": 8.639506633132283,
+          "buyVolume": 146955.6944870308,
+          "sellVolume": 105875.38229786477,
+          "buyOrganicVolume": 400.99034079129683,
+          "sellOrganicVolume": 703.0493803603745,
+          "numBuys": 1639,
+          "numSells": 1419,
+          "numTraders": 293,
+          "numOrganicBuyers": 4,
+          "numNetBuyers": 67
+        },
+        "firstPool": {
+          "id": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+          "createdAt": "2024-10-31T14:21:40Z"
+        },
+        "audit": {
+          "mintAuthorityDisabled": true,
+          "freezeAuthorityDisabled": true,
+          "topHoldersPercentage": 38.89027184277089,
+          "devBalancePercentage": 0.000008369284707394454,
+          "devMigrations": 1,
+          "devMints": 1
+        },
+        "organicScore": 52.394118782349615,
+        "organicScoreLabel": "medium",
+        "isVerified": true,
+        "tags": [
+          "launchpad",
+          "moonshot-verified",
+          "verified",
+          "meme",
+          "community"
+        ],
+        "createdAt": "2024-10-31T14:21:40Z",
+        "updatedAt": "2026-10-08T18:38:20.633548709Z"
+      }
+    ]
+  }
+}

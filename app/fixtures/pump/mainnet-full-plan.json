@@ -1,0 +1,546 @@
+{
+  "evidence": {
+    "capturedAt": "2026-10-09T03:52:54.956Z",
+    "readOnly": true,
+    "signed": false,
+    "sent": false,
+    "scope": "Full CLI plan without configured Machine or a deployed launch lookup table"
+  },
+  "plan": {
+    "ok": false,
+    "cluster": "mainnet",
+    "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "mint": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+    "wallet": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+    "powerOnInterface": "spec-only",
+    "quoteLamports": "1176185869",
+    "form": "bundle",
+    "sizes": {
+      "single": 1511,
+      "bundle": [1182, 709],
+      "limit": 1232
+    },
+    "lookupAddresses": [
+      "TSLvdd1pWpHVjahSpsvCXUbgwsL3JAcvokwaKt1eokM",
+      "EFRpGKN6aEqP5ERT2WCBn3CqVx7FTP1Jf9UVwWnT8U7t",
+      "Dbd79siisNMkaB12VoswaLGzN89f6tRemPyMz4jwiWYU",
+      "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+      "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+      "13ec7XdrjF3h3YcqBTFDSReRcUFwbCnJaAQspM4j6DDJ",
+      "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+      "FdFBPaLJy2XxBt9osJjfUcs9iJDPq1xZ56nUjuDTVSZn",
+      "94948MDsQsTgZ2FbwNomboJuT2i3Wqz8TXxbVbrdL3wg",
+      "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+      "tzv6uYrExpec4puLatNu3Q27B8uJwwLMRGM819BMRYT",
+      "So11111111111111111111111111111111111111112",
+      "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "SBGTSEC4Ai8j8ptkzv5N7ydUfteq5KUNnu96eSeTea7",
+      "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+      "Dcqjj69RQcTsTmhQUuna8u5hPxMRbm2KSf6nsDKZFFth",
+      "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+      "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+      "3JtcpYn3QKeUjVfvHJGpeSEG3JjzFyitRijECXiwrH1F",
+      "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "6ohM2z1Af5NEPMaRTf5LkrKH5V6Fxb2byEhfMuL94mYS"
+    ],
+    "checks": [
+      {
+        "id": "3.config",
+        "status": "NO-GO",
+        "detail": "Config_missing"
+      },
+      {
+        "id": "4.machine",
+        "status": "NO-GO",
+        "detail": "Machine_missing"
+      },
+      {
+        "id": "4.fee_in",
+        "status": "NO-GO",
+        "detail": "fee_in_account"
+      },
+      {
+        "id": "5.lookup_table",
+        "status": "NO-GO",
+        "detail": "lookup_table_missing"
+      },
+      {
+        "id": "landing_policy",
+        "status": "NO-GO",
+        "detail": "K1/S3 landing and retry parameters are unavailable; zero fees below are diagnostic only"
+      },
+      {
+        "id": "1.pump_programs",
+        "status": "GO",
+        "detail": "Pump versions match the recorded baseline.",
+        "value": {
+          "observed": [
+            {
+              "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+              "deploySlot": 454596459,
+              "executableHash": "a4b32d322295a15666b1293e0028b9b75d688bfce10b574e1094f249f2ce9f16"
+            },
+            {
+              "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+              "deploySlot": 454596406,
+              "executableHash": "a8d05e6927cc6e861d3052a9bf2258ce3a4588f47307d53d0c20ecbe0b86697e"
+            },
+            {
+              "programId": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+              "deploySlot": 454596501,
+              "executableHash": "73c679c8dae8d24153fdd0455b557b73662e93ab2ec88831a9e4be2b08a897a4"
+            },
+            {
+              "programId": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+              "deploySlot": 452655053,
+              "executableHash": "a87fa9f866272514e6acb852b668c4a08aeb173d56c883039991d114d1199bdb"
+            }
+          ],
+          "changes": []
+        }
+      },
+      {
+        "id": "2.create_v2",
+        "status": "GO",
+        "detail": "create_v2 is enabled."
+      },
+      {
+        "id": "2.reserves_and_fees",
+        "status": "GO",
+        "detail": "Initial reserves and curve fee tier match the baseline.",
+        "value": {
+          "observed": {
+            "virtualToken": "1073000000000000",
+            "virtualSol": "30000000000",
+            "realToken": "793100000000000",
+            "supply": "1000000000000000",
+            "protocolBps": "95",
+            "creatorBps": "30"
+          },
+          "baseline": {
+            "virtualToken": "1073000000000000",
+            "virtualSol": "30000000000",
+            "realToken": "793100000000000",
+            "supply": "1000000000000000",
+            "protocolBps": "95",
+            "creatorBps": "30"
+          },
+          "quoteLamports": "1176185869"
+        }
+      },
+      {
+        "id": "rehearsal_mint",
+        "status": "NO-GO",
+        "detail": "D18 devnet rehearsal mint and RPC are required"
+      },
+      {
+        "id": "launch_simulation",
+        "status": "NO-GO",
+        "detail": "sequential_bundle_simulation_required"
+      }
+    ],
+    "simulation": null,
+    "instructions": [
+      [
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "02c05c1500",
+          "accounts": []
+        },
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "030000000000000000",
+          "accounts": []
+        },
+        {
+          "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+          "dataHex": "d6904cec5f8b31b4100000004c61756e63682072656865617273616c04000000544553542600000068747470733a2f2f6578616d706c652e696e76616c69642f72656865617273616c2e6a736f6e0f3359e83d63925a0e857f612e6a1e35674755b09c9fb9ed64fd56df68be8b330000000000000000000000",
+          "accounts": [
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "TSLvdd1pWpHVjahSpsvCXUbgwsL3JAcvokwaKt1eokM",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EFRpGKN6aEqP5ERT2WCBn3CqVx7FTP1Jf9UVwWnT8U7t",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Dbd79siisNMkaB12VoswaLGzN89f6tRemPyMz4jwiWYU",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "13ec7XdrjF3h3YcqBTFDSReRcUFwbCnJaAQspM4j6DDJ",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "FdFBPaLJy2XxBt9osJjfUcs9iJDPq1xZ56nUjuDTVSZn",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "94948MDsQsTgZ2FbwNomboJuT2i3Wqz8TXxbVbrdL3wg",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "tzv6uYrExpec4puLatNu3Q27B8uJwwLMRGM819BMRYT",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+          "dataHex": "07051dc4f51765500080ca39612400000d2c1b4600000000",
+          "accounts": [
+            {
+              "address": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EFRpGKN6aEqP5ERT2WCBn3CqVx7FTP1Jf9UVwWnT8U7t",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Dbd79siisNMkaB12VoswaLGzN89f6tRemPyMz4jwiWYU",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "SBGTSEC4Ai8j8ptkzv5N7ydUfteq5KUNnu96eSeTea7",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "tzv6uYrExpec4puLatNu3Q27B8uJwwLMRGM819BMRYT",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Dcqjj69RQcTsTmhQUuna8u5hPxMRbm2KSf6nsDKZFFth",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "02c05c1500",
+          "accounts": []
+        },
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "030000000000000000",
+          "accounts": []
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "3JtcpYn3QKeUjVfvHJGpeSEG3JjzFyitRijECXiwrH1F",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "dataHex": "0c0080ca396124000006",
+          "accounts": [
+            {
+              "address": "tzv6uYrExpec4puLatNu3Q27B8uJwwLMRGM819BMRYT",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "3JtcpYn3QKeUjVfvHJGpeSEG3JjzFyitRijECXiwrH1F",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+          "dataHex": "7be51b871d820265",
+          "accounts": [
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "HthyRtqcRGSWhDTnQUhBCjJjdmKWgVm7sXseo4muauVJ",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EFRpGKN6aEqP5ERT2WCBn3CqVx7FTP1Jf9UVwWnT8U7t",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "6ohM2z1Af5NEPMaRTf5LkrKH5V6Fxb2byEhfMuL94mYS",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "3JtcpYn3QKeUjVfvHJGpeSEG3JjzFyitRijECXiwrH1F",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "dataHex": "09",
+          "accounts": [
+            {
+              "address": "tzv6uYrExpec4puLatNu3Q27B8uJwwLMRGM819BMRYT",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "11111111111111111111111111111111",
+          "dataHex": "020000000000000000000000",
+          "accounts": [
+            {
+              "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

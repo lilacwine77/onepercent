@@ -1,0 +1,421 @@
+**Oui, il y a un modèle économiquement cohérent derrière ton idée. Mais je le construirais comme un marché de distribution aléatoire de tokens, pas comme du « yield sur tes bags ».** Le yield existe seulement après avoir soustrait la valeur des tokens que les LP cèdent aux joueurs.
+
+Ma recommandation serait : **lots entièrement déposés en escrow, rémunération des LP proportionnelle au risque qu’ils financent, option de mutualisation, et buybacks du token financés exclusivement par les revenus réels.** Pour le *provably fair*, je commencerais par une source de randomness vérifiable, pas par du ZK.
+
+Autre point important : **j’ai trouvé un concurrent qui décrit quasiment ton idée initiale.** Il faut donc travailler la différenciation autant que les maths.
+
+## 1. Ce que tu peux reprendre de FWA — et ce qui existe déjà
+
+Chez FWA, les positions associent un NFT à un backing en ETH. Les probabilités sont inversement proportionnelles à ce backing ; le prix du tirage découle de la valeur attendue, et les positions actives se partagent les revenus distribuables à parts égales. Ce n’est donc pas simplement « déposer un asset et toucher des fees » : **la rémunération et le risque de sélection sont conçus ensemble.** [FWA](https://www.fwa.fun/docs/prizes-odds)
+
+**NFW décrit déjà une version avec des tokens :** tokens admis dans un pack, positions valorisées depuis leur marché, probabilités inverses à leur valeur, puis livraison des tokens au gagnant. Les paramètres présentés sont un prix égal à l’EV majorée de 6 %, avec 95 % du paiement réparti entre les positions actives. Je n’ai pas audité leurs contrats ni vérifié leur traction ; c’est ce que décrit leur documentation. [NFW](https://www.nfw.fun/docs?utm_source=chatgpt.com)
+
+Calcul intéressant sur ces paramètres :
+
+\[
+95\%\times1{,}06-1=\boxed{+0{,}7\%}
+\]
+
+C’est la marge attendue des LP rapportée à la valeur des tokens distribués, à valorisations constantes, avant leurs coûts propres. **Un partage de revenus de 95 % peut donc cacher une marge économique très faible.**
+
+Ton avantage ne peut pas être uniquement « FWA, mais des shitcoins ». Je le chercherais dans **une meilleure maîtrise du risque LP, une valorisation plus robuste et des packs communautaires sponsorisés.**
+
+---
+
+## 2. Le moteur économique qui fonctionne
+
+### L’identité à respecter
+
+À prix des tokens constants, sans émissions ni subventions extérieures :
+
+\[
+\text{Perte attendue des joueurs}
+=
+\text{Profit attendu des LP}
++
+\text{Revenus du protocole}
+\]
+
+Les coûts techniques, commerciaux et autres viennent ensuite réduire ces revenus.
+
+**On ne peut pas donner simultanément un excellent RTP aux joueurs, un gros rendement aux LP et beaucoup de value accrual au token sans trouver quelqu’un pour financer la différence.**
+
+Le RTP est ici le rapport entre la valeur attendue des lots reçus et le prix payé. Il ne garantit ni le résultat individuel ni la valeur future des tokens.
+
+### Un calibrage de départ
+
+Je testerais cette répartition, **comme hypothèse de conception, pas comme optimum déjà démontré** :
+
+| Pour 10 $ payés par un joueur | Montant |
+|---|---:|
+| Valeur attendue des tokens distribués | **9,00 $** |
+| Paiement total crédité aux LP | **9,50 $** |
+| Dont compensation économique des tokens cédés, en espérance | 9,00 $ |
+| **Profit attendu des LP** | **0,50 $** |
+| Budget de buyback du token | 0,20 $ |
+| Budget d’exploitation et de distribution commerciale | 0,20 $ |
+| Réserve opérationnelle séparée | 0,10 $ |
+
+**Les 9 $ de lots ne sont pas une seconde sortie de cash : ce sont les tokens initialement apportés par les LP.** Sur les 10 $ encaissés, 9,50 $ leur reviennent et 0,50 $ sont répartis entre les trois budgets du protocole.
+
+Tu obtiens :
+
+\[
+\boxed{\text{RTP joueur}=90\%}
+\]
+
+\[
+\boxed{\text{Marge LP attendue}=5\%\text{ du volume payé}}
+\]
+
+\[
+\boxed{\text{Prélèvement protocole}=5\%\text{ du volume payé}}
+\]
+
+Le modèle n’a pas besoin que le token natif monte pour fonctionner. En revanche, **90 % de RTP doit être accepté commercialement par les joueurs** : c’est une hypothèse à tester, pas une conséquence des maths.
+
+### Comment conserver tes probabilités inverses
+
+On note \(v_i\) la valeur retenue d’un lot effectivement déposé, et \(N\) le nombre de lots actifs.
+
+\[
+p_i=\frac{1/v_i}{\sum_j1/v_j}
+\]
+
+La valeur attendue d’un tirage vaut :
+
+\[
+E=\sum_i p_i v_i
+=\frac{N}{\sum_j1/v_j}
+\]
+
+Pour viser 90 % de RTP, le prix devient :
+
+\[
+\boxed{P=\frac{E}{0{,}90}}
+\]
+
+Le résultat intéressant est :
+
+\[
+p_i v_i=\frac{1}{\sum_j1/v_j}
+\]
+
+**Chaque lot supporte donc la même perte attendue en dollars par tirage**, même si leurs valeurs sont différentes. Un lot dix fois plus gros est dix fois moins susceptible d’être sélectionné.
+
+C’est pourquoi, avec cette loi précise, **les 95 % destinés aux LP doivent être répartis également entre les lots actifs**, y compris celui qui vient d’être tiré.
+
+Pas proportionnellement à leur valeur : sinon tu rémunères davantage les gros lots alors qu’ils supportent déjà moins de risque de sélection.
+
+Plus généralement, lorsque tu changes les probabilités :
+
+\[
+\boxed{
+\text{Part de rémunération du lot }i
+=
+\frac{p_i v_i}{\sum_jp_jv_j}
+}
+\]
+
+C’est la règle structurante : **payer le risque financé, pas simplement la TVL affichée.**
+
+### Le prix ne peut pas être choisi indépendamment
+
+Tu ne peux pas conserver simultanément, en toutes circonstances :
+
+**un ticket toujours à 10 $, des bags entiers de taille libre, et des probabilités toujours exactement inverses à leur valeur.**
+
+Quand l’inventaire ou les prix bougent, l’EV change.
+
+Pour une première version, je choisirais **un prix dynamique par pack**, comme le calcul ci-dessus. Pour proposer ensuite des tickets fixes à 5 / 20 / 100 $, le moteur devra adapter les quantités distribuables et la composition des lots, ou suspendre les ventes lorsque l’inventaire ne permet plus de respecter le RTP annoncé.
+
+---
+
+## 3. Le vrai problème de ton modèle initial : les LP peuvent avoir une expérience catastrophique
+
+Le modèle peut être positif en espérance tout en étant mauvais pour la majorité des LP individuels.
+
+Prenons un lot de valeur \(v\), avec une probabilité de sélection et une rémunération par tirage approximativement constantes, dans un pool continuellement réapprovisionné.
+
+S’il reste jusqu’à sa sélection :
+
+\[
+\mathbb{E}[\text{revenus cumulés}]
+=
+\frac{0{,}95}{0{,}90}v
+=
+1{,}0556v
+\]
+
+Donc :
+
+\[
+\boxed{\text{Profit attendu sur le cycle}=+5{,}56\%}
+\]
+
+**Ce n’est pas un rendement mensuel ou annuel.** C’est une marge attendue jusqu’à la distribution du lot, sous les hypothèses indiquées.
+
+Mais pour une faible probabilité de sélection par tirage, la probabilité approximative de perdre le lot avant d’avoir encaissé sa valeur est :
+
+\[
+1-e^{-0{,}90/0{,}95}
+\simeq
+\boxed{61{,}2\%}
+\]
+
+Dans cette même approximation, le revenu médian avant sélection est seulement d’environ **73 % de la valeur du lot**.
+
+Autrement dit : **tu peux avoir une espérance positive et une majorité de LP qui ressortent perdants**, parce qu’une minorité conserve ses positions très longtemps et encaisse beaucoup.
+
+Ce n’est pas une prévision pour tous les pools : le résultat dépend notamment du renouvellement de l’inventaire, des variations de prix et des retraits. Mais il révèle un vrai problème de produit.
+
+### Ce que je construirais : deux modes, avec le mutualisé par défaut
+
+**Mode individuel — ton idée initiale.**  
+Le LP expose un lot identifié. Il gagne des revenus tant qu’il reste actif ; lorsqu’il est tiré, il le cède entièrement. Ce mode convient aux utilisateurs qui veulent explicitement cette variance.
+
+**Mode mutualisé — ma recommandation principale.**  
+Des LP déposent le même token dans un vault. Le vault fournit plusieurs lots au gacha. Lorsqu’un lot est gagné, la quantité correspondante est prélevée collectivement ; les revenus et les prélèvements sont répartis entre les déposants selon leurs participations.
+
+Exemple : un vault contient 100 000 $ d’un token et distribue un lot de 1 000 $. Le prélèvement représente 1 % de son inventaire, plutôt que la disparition du bag entier d’un seul utilisateur.
+
+La mutualisation **ne supprime ni la perte économique du lot distribué, ni le risque de marché**. Elle réduit la concentration du résultat sur une personne.
+
+Je laisserais également choisir une **fraction maximale de tokens à exposer**. Quelqu’un qui veut conserver son bag pourrait n’en engager que 10 %. Le reste ne finance pas le gacha et ne gagne pas ses revenus.
+
+### Le positionnement doit être honnête
+
+Sans réachat automatique, les LP transforment progressivement des tokens en revenus de paiement. Ils ne conservent pas une exposition identique à leur bag initial.
+
+Avec réachat automatique, tu ajoutes des swaps, du slippage et du risque d’exécution, à déduire de la marge.
+
+Je présenterais donc le produit comme :
+
+> **Monétiser une fraction de son bag en finançant des distributions aléatoires, avec une rémunération attendue et un risque explicite.**
+
+Pas comme « hold tes tokens et gagne du yield sans rien changer ».
+
+---
+
+## 4. La viabilité commerciale : le volume compte davantage que la TVL
+
+Avec le calibrage proposé, à prix constants :
+
+\[
+\text{Résultat LP attendu}
+=
+0{,}05\times\text{volume des achats}
+\]
+
+Le rendement économique rapporté à l’inventaire moyen \(K\) dépend donc de :
+
+\[
+\frac{0{,}05\times\text{volume}}{K}
+\]
+
+Sur une période donnée, un volume égal à 10 % de l’inventaire produit environ **0,5 %** de marge attendue sur cet inventaire ; un volume égal à l’inventaire produit environ **5 %**, avant les coûts propres des LP et les variations des tokens.
+
+**Attirer beaucoup de TVL sans joueurs dilue le rendement.** C’est pour cela que je ne récompenserais pas la TVL avec des émissions permanentes.
+
+Côté protocole :
+
+| Volume mensuel payé — hypothèses | Profit attendu des LP* | Budget buyback | Budget exploitation** | Réserve |
+|---|---:|---:|---:|---:|
+| 100 000 $ | 5 000 $ | 2 000 $ | 2 000 $ | 1 000 $ |
+| 1 M$ | 50 000 $ | 20 000 $ | 20 000 $ | 10 000 $ |
+| 10 M$ | 500 000 $ | 200 000 $ | 200 000 $ | 100 000 $ |
+
+\* Hors variations de marché et coûts propres.  
+\** Avant paiement des coûts, ce n’est pas du bénéfice.
+
+Illustration : avec **30 000 $ de coûts fixes mensuels** et des coûts variables représentant **1 % du volume**, ton allocation d’exploitation de 2 % laisse 1 % pour couvrir les coûts fixes.
+
+\[
+\text{Seuil d’équilibre}
+=
+\frac{30\,000}{2\%-1\%}
+=
+\boxed{3\text{ M\$ de volume mensuel}}
+\]
+
+Ce sont des hypothèses, mais elles montrent le sujet : **les millions de volume ne signifient pas automatiquement beaucoup de revenus disponibles**, surtout après le financement du token. Les commissions d’affiliation doivent entrer dans ce budget, pas être ajoutées après coup.
+
+### Le compromis RTP / rendement LP
+
+En maintenant 95 % des paiements pour les LP :
+
+| RTP joueur | Marge LP attendue / volume |
+|---|---:|
+| 88 % | 7 % |
+| **90 %** | **5 %** |
+| 92 % | 3 % |
+| 94 % | 1 % |
+
+Je testerais **90 % puis 92 %**, en regardant le volume récurrent et le résultat LP net. Un RTP de 94 % peut être plus attractif pour les joueurs, mais laisse peu de marge LP pour absorber leurs frais ou les imperfections de valorisation.
+
+---
+
+## 5. La manipulation : la whitelist seule ne suffit pas
+
+### A. Le « pourcentage du supply » est une présentation, pas une valorisation
+
+« Gagne 0,1 % du supply » peut être un bon format produit. Mais ton moteur doit travailler sur :
+
+**la quantité réellement détenue en escrow, une valeur de référence robuste et la liquidité disponible à cette taille.**
+
+Un pourcentage de supply multiplié par une FDV affichée ne prouve pas qu’un gagnant pourra revendre cette quantité au prix annoncé.
+
+Je montrerais la quantité exacte, le pourcentage d’un supply clairement défini, la valeur indicative et une estimation de sortie après impact de marché.
+
+### B. Le prix doit résister aux attaques dans les deux sens
+
+Un prix artificiellement élevé peut transformer un mauvais lot en « jackpot » trompeur. Un prix artificiellement faible peut permettre d’acheter des tirages trop bon marché.
+
+Il faut donc surveiller les écarts entre sources, la fraîcheur des données et la liquidité, pas simplement appliquer une décote. Les recommandations de Pyth soulignent notamment les risques de prix périmés, de sélection opportuniste des mises à jour et l’intérêt de bornes d’incertitude ou de pauses. [Pyth Developer Hub](https://docs.pyth.network/price-feeds/core/best-practices?utm_source=chatgpt.com)
+
+**Attention : un TWAP long n’est pas automatiquement plus sûr pour des tokens très volatils.** Il peut rester décalé du marché et donner une option aux joueurs ou déposants les plus rapides. La documentation de Pyth traite précisément cette exposition à la latence. [Pyth Developer Hub](https://docs.pyth.network/price-feeds/core/best-practices?utm_source=chatgpt.com)
+
+Mon design prévoirait une admission conditionnelle : sources suffisantes, profondeur adaptée aux lots, écarts tolérables, puis pause des **nouveaux engagements** si ces conditions cessent d’être réunies. Les seuils doivent être calibrés sur les marchés retenus et des simulations adversariales.
+
+### C. Les permissions du token font partie du risque
+
+Sur Solana, une autorité de gel peut bloquer des transferts ; certaines extensions permettent des frais de transfert ou donnent à un délégué permanent des pouvoirs sur les tokens détenus par d’autres comptes. Ce sont des propriétés à vérifier explicitement, y compris pour les tokens déjà placés dans ton escrow. [Solana](https://solana.com/docs/tokens/basics?utm_source=chatgpt.com)
+
+Pour le MVP, je refuserais les permissions ou extensions incompatibles avec une livraison fiable. **Être whitelisted ne doit jamais être présenté comme une garantie anti-rug.**
+
+### D. Le découpage des bags est un problème structurel
+
+Avec un poids \(1/v\), diviser un lot de valeur \(V\) en \(n\) lots égaux fait passer son poids total de :
+
+\[
+\frac{1}{V}
+\quad\text{à}\quad
+n\times\frac{1}{V/n}
+=
+\frac{n^2}{V}
+\]
+
+Le découpage modifie donc fortement les probabilités.
+
+Avec la rémunération correctement alignée sur le risque, ce n’est pas nécessairement un arbitrage gratuit : l’utilisateur expose aussi davantage son inventaire. **Mais cela peut déformer le pack, accélérer la rotation des petits lots et faire disparaître l’intérêt des jackpots.**
+
+Je ne laisserais pas chaque dépôt déterminer librement le nombre de positions économiques. **Le moteur créerait des lots standardisés selon une grille et des limites par catégorie**, indépendamment du nombre de wallets utilisés.
+
+La mutualisation permet justement de séparer la taille du dépôt de la construction des lots.
+
+### E. Le self-farming doit être déficitaire avant toute détection d’identité
+
+Si quelqu’un possède tout l’inventaire d’un pack et joue contre lui-même, les tokens gagnés restent dans son patrimoine.
+
+Il paie 10 $, récupère 9,50 $ via ses positions et perd donc **0,50 $ de prélèvement protocole**, avant ses autres coûts et avantages éventuels.
+
+Si les points, referrals, récompenses ou subventions qu’il capte valent davantage, tu lui donnes une boucle rentable.
+
+**Il faut calculer le coût minimal d’une activité circulaire, pas seulement vérifier qu’une adresse ne tire pas son propre bag.** Plusieurs wallets contournent facilement cette dernière règle.
+
+### F. Ne pas transformer les mauvais tokens en dette du protocole
+
+Je ne proposerais **aucun cashout garanti à un prix historique** sans financement spécifique.
+
+Le gagnant reçoit les tokens ; une vente optionnelle peut se faire au prix réellement exécutable sur un marché externe, avec son accord. Mais le protocole ne doit pas promettre « 1 000 $ garantis » sur un lot qui ne vaut plus cette somme.
+
+C’est ainsi que tu évites de convertir un problème de valorisation en risque de faillite.
+
+---
+
+## 6. La value accrual du token : simple à la base, créative dans les usages
+
+### Le socle : buyback financé par l’activité
+
+FWA utilise des revenus du protocole pour racheter son token, puis les orienter vers des récompenses et du burn. Sa documentation présente une répartition par défaut de 40 % / 40 % / 20 %, tout en précisant que ces paramètres sont configurables et ne doivent pas être pris pour une vérification des réglages live. [FWA](https://v1.fwa.fun/docs/fwa-buybacks?utm_source=chatgpt.com)
+
+Dans ton cas, je privilégierais initialement :
+
+\[
+\boxed{2\%\text{ des achats}\rightarrow\text{buyback puis burn}}
+\]
+
+Pourquoi plutôt que redistribuer la majorité aux farmers ? **Parce que tu rémunères déjà les LP avec le paiement des joueurs.** Ajouter des émissions rendrait plus difficile la lecture de la rentabilité réelle et pourrait subventionner du volume circulaire.
+
+Les buybacks devraient être séparés du règlement des tirages, limités en taille, protégés par des conditions d’exécution et suspendables si le marché du token ne permet pas une exécution acceptable. Aucun bug ou échec de swap du token natif ne doit bloquer un gagnant.
+
+À 1 M$ de volume mensuel, cela représente **240 000 $ de budget annuel** ; à 10 M$, **2,4 M$**. Ce n’est ni un rendement garanti pour les holders ni une garantie de hausse : la valorisation et les ventes d’autres détenteurs restent déterminantes.
+
+### Ce que je ne ferais pas
+
+Je n’imposerais pas le token natif comme monnaie d’entrée. Je ne donnerais pas de meilleures probabilités cachées aux holders. Je ne paierais pas un APY fixe en tokens nouvellement émis.
+
+Je n’utiliserais pas non plus le token natif comme principale assurance contre un problème du protocole : **son efficacité serait précisément la plus douteuse lorsque la confiance dans le produit se dégrade.**
+
+Le test essentiel reste : **le gacha fonctionne-t-il si les incentives valent zéro ?**
+
+### L’innovation que je préfère : des packs communautaires sponsorisés
+
+Une communauté ou un projet finance volontairement un budget de distribution additionnel. Elle reçoit une campagne clairement identifiée ; les joueurs obtiennent des lots supplémentaires ; le protocole facture le service.
+
+Exemple, toujours hypothétique :
+
+- Le joueur paie 10 $.
+- Le mécanisme LP finance 9 $ de valeur attendue.
+- Un sponsor apporte 0,50 $ supplémentaire par tirage, dans une enveloppe préfinancée.
+- Le joueur reçoit 9,50 $ de valeur attendue sans diminuer la rémunération prévue des LP.
+
+**Le meilleur RTP a ici une source de financement identifiable.** Ce n’est pas un miracle tokenomique.
+
+Les contributions doivent être réellement déposées, correctement valorisées et plafonnées. Une campagne positive en EV peut attirer des farmers : c’est un coût d’acquisition à budgéter, pas une preuve de demande organique.
+
+La value accrual additionnelle du token viendrait d’une part des revenus de ces campagnes. L’accès au service et ses tarifs pourraient être liés au token, mais **jamais au droit d’acheter une dérogation aux critères de sécurité**.
+
+À mon avis, le couple différenciant serait donc :
+
+> **Vaults LP à risque modulable + infrastructure de distribution sponsorisée pour communautés.**
+
+Cela dépasse le simple fork de gacha. Mais distribuer des tokens n’équivaut pas à créer de la liquidité : les gagnants peuvent ensuite les vendre.
+
+---
+
+## 7. Pour le *provably fair* : randomness vérifiable d’abord, ZK ensuite
+
+**Une preuve ZK peut démontrer que tu as exécuté un calcul correctement. Elle ne prouve pas, à elle seule, que la seed utilisée était imprévisible et non sélectionnée.** Les preuves ZK portent sur la validité d’un énoncé ; la génération de l’aléa est un problème distinct. [ethereum.org](https://ethereum.org/zero-knowledge-proofs)
+
+Un opérateur pourrait choisir une seed défavorable au joueur, calculer honnêtement le résultat correspondant, puis produire une preuve parfaitement valide.
+
+### L’architecture de départ
+
+Le parcours devrait figer **le paiement, les lots admissibles, les quantités, les probabilités et la règle de valorisation** avant que le résultat aléatoire soit connu.
+
+Ensuite seulement : requête de randomness, résultat lié à un identifiant unique, sélection déterministe vérifiable, puis crédit irrévocable du lot au gagnant.
+
+Il faut également empêcher la double attribution d’un lot entre requêtes concurrentes. Pour un MVP, je préférerais une file d’exécution simple et correcte à un traitement parallèle mal maîtrisé.
+
+Chainlink recommande notamment de lier les résultats à leurs `requestId`, de ne plus accepter d’entrées qui modifient le résultat après la requête, et de ne pas permettre de relancer ou annuler sélectivement un tirage. Ce sont des contraintes d’application, pas seulement des propriétés du générateur. [Chainlink Documentation](https://docs.chain.link/vrf/v2-5/security)
+
+Sur EVM, une VRF est une option à évaluer ; FWA documente l’utilisation de Chainlink VRF. Sur Solana, Switchboard propose une solution reposant sur des environnements d’exécution de confiance : **ce modèle de confiance doit être décrit comme tel, pas assimilé sans nuance à une VRF.** [FWA](https://www.fwa.fun/docs/pricing-draw)
+
+Je demanderais aussi un mécanisme de règlement qui ne dépende pas de la volonté du perdant, une gestion auditée des indisponibilités et aucune réutilisation d’une seed révélée pour de nouveaux achats.
+
+### Là où le ZK pourrait ensuite servir
+
+Une preuve pourrait attester qu’un gros batch respecte un inventaire engagé, les pondérations annoncées, l’absence de double distribution et les mises à jour comptables.
+
+**Mais elle ne rendrait pas un prix manipulé économiquement juste, ni un shitcoin liquide.**
+
+Pour la V1, je consacrerais le budget au moteur de risque, à l’intégration de randomness et à l’audit plutôt qu’à une couche ZK sans nécessité démontrée.
+
+---
+
+## 8. Le point réglementaire peut changer le projet
+
+**Je ferais qualifier le produit avant un lancement accessible depuis la France**, séparément pour le jeu, les positions LP et le token.
+
+Le cadre français JONUM, effectivement mis en place en février 2026, n’est pas une autorisation générale de faire des gachas de crypto-actifs. L’ANJ impose notamment un véritable système de progression et des catégories de jeux déterminées. Les crypto-actifs visés comme récompenses accessoires sont plafonnés, notamment à 20 % du chiffre d’affaires annuel du jeu. [ANJ](https://www.anj.fr/jeux-objets-numeriques-monetisables-jonum)
+
+**Mon interprétation est qu’un pur tirage payant distribuant principalement des memecoins ne rentre pas naturellement dans cette exception.** Il faut une analyse juridique spécialisée ; « on-chain », « décentralisé » ou « provably fair » ne répondent pas à cette question. [ANJ](https://www.anj.fr/jeux-objets-numeriques-monetisables-jonum)
+
+## Ce que je construirais concrètement
+
+Je partirais sur **une seule chaîne, un univers restreint de tokens suffisamment liquides, des lots préfinancés, un prix dynamique et le mode LP mutualisé par défaut**. L’individuel resterait une option explicitement risquée. Le calibrage initial serait 90 % de RTP, 95 % des paiements pour les LP et 5 % pour le protocole, sans émissions nécessaires à l’équilibre.
+
+Avant de lancer un token, je voudrais vérifier trois choses : **que les joueurs reviennent sans subventions, que les LP gagnent après déduction des tokens distribués, et que le volume n’est pas majoritairement circulaire**. Les tests adversariaux devraient couvrir le découpage des lots, les prix périmés, les retraits pendant les tirages, les pannes de randomness et les fortes variations de prix.
+
+**Mon avis final : le modèle est viable sur le plan comptable, mais sa version « ton bag peut disparaître à tout moment contre des fees » est beaucoup plus fragile commercialement qu’elle n’en a l’air.** La meilleure version serait une infrastructure où les détenteurs choisissent la fraction et le risque de distribution qu’ils acceptent, où les joueurs connaissent réellement leurs chances, et où le token capte une part explicite des revenus — sans servir à masquer une économie déficitaire.

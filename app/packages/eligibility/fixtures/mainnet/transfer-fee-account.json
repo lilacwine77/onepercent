@@ -1,0 +1,10 @@
+{
+  "address": "Ft1URsGGW7phzUQWwoDL3ijBuBAE46M2AiPguZKLXUWN",
+  "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+  "lamports": "2157601",
+  "dataBase64": "qDijZLhcKuVLVBmL6Ve9S9DvSU7kn1XtkCnOtnDXGjDnJJa1TTchD6t2N/cF1fsAP4IIAiEADNpGJRgOnxnToDMzGnW3DgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAACAAgA2t4IAwAAAAA=",
+  "slot": 454620028,
+  "recordedAt": "2026-10-08T18:06:23.560Z",
+  "source": "mainnet",
+  "note": "Public transfer-fee token account, discovered via getTokenLargestAccounts; account bytes only, no wallet scan."
+}

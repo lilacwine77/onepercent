@@ -1,0 +1,9 @@
+/* Shared Feed and public paper panels. */
+.feed-panel,
+.feed-done,
+.feed-machine {
+  padding: clamp(18px, 3vw, 30px);
+  border-radius: var(--corner);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}

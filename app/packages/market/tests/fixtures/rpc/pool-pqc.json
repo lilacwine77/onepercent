@@ -1,0 +1,82 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.049Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628036,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 2179320,
+          "data": [
+            "8ZptBBGxbbz7AAAyJPA9c2Ajtzlyf1NJC3l4AWnJ3OWhjv2m2qAbYzbxal3HITRToQ/AE7LMSKOL0hImUxml21xxYMtlURU26cl6BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEcxO8cmQqPzQ5j69MKJggOsrLmAj1IGqS6iT2o/V54yF9rMA/vHtoH8CMxQ/HnxhA6lY9nL7DqhTktCzYgHzDTb72oW/rj4yKujbJUzAlyiN6DjWNn5FsPEOoVSGXUIvtX4di60AMAAOZExIwqIFRKDmyxpSyZAHdWpBAw5Uq1+nbAT5OEk+JBAACfKv/4AwAAAAAAAAAAAAAAAAAAAAAAAAAAABuU9gAAAAAALxqRHgAAAAAAAAAAAAAAAAAAAAAAAA==",
+            "base64"
+          ],
+          "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 301
+        }
+      },
+      "id": 1
+    }
+  },
+  "provenance": {
+    "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+    "length": 301,
+    "layoutSource": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump_amm.json",
+    "layoutSha256": "8fd62d0f4cdfc4236685a5a05ba74e8b94c367f91a6cdc0667fcaa01b858b79e",
+    "offsets": {
+      "pool_bump": 8,
+      "index": 9,
+      "creator": 11,
+      "base_mint": 43,
+      "quote_mint": 75,
+      "lp_mint": 107,
+      "pool_base_token_account": 139,
+      "pool_quote_token_account": 171,
+      "lp_supply": 203,
+      "coin_creator": 211,
+      "is_mayhem_mode": 243,
+      "is_cashback_coin": 244,
+      "virtual_quote_reserves": 245,
+      "creator_fee_bps": 261,
+      "can_edit_creator_fee": 269,
+      "is_holder_reward": 270,
+      "protocol_fees": 271,
+      "creator_fees": 279
+    },
+    "expectedDecoded": {
+      "index": 0,
+      "creator": "4Nk46jkhmXFVXKJt2ktozkYFVPeYh8SUA2mEvCWbMPHK",
+      "baseMint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+      "quoteMint": "So11111111111111111111111111111111111111112",
+      "quoteTokenAccount": "8XBzLnrtgagBccJ7FuTznkh1adJvWt5HzwE1tKUYTgGz",
+      "lpSupply": "4195022856535",
+      "coinCreator": "GVsbAYYWAZDWZLLxXMzc8Y1ZSgLXJBD3SoJ5NfX6xQFr",
+      "mayhem": false,
+      "cashback": false,
+      "virtualQuoteReserves": "17062374047"
+    }
+  }
+}

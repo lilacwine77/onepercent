@@ -1,0 +1,410 @@
+@import "../shared/paper-panel.css";
+
+/* Feed the machine (wave 2): the title, the panel, In the machine. */
+.feed-page {
+  display: grid;
+  gap: 28px;
+}
+.feed-head h1 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 80px);
+}
+.feed-gate {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--blush);
+  font-weight: 500;
+}
+.feed-group + .feed-group {
+  margin-top: 22px;
+}
+.feed-group h2,
+.feed-machine h2 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.2vw, 28px);
+  letter-spacing: -0.04em;
+}
+/* The bags that can't be fed: closed behind their count ("21 not eligible ·
+   why?"); open, each reason once and the coins as chips. */
+.feed-out summary {
+  padding: 4px 0;
+  color: var(--mauve);
+  font-weight: 500;
+  cursor: pointer;
+}
+.feed-out[open] summary {
+  color: var(--ink);
+}
+.feed-group .feed-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.feed-chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 3px 12px 3px 3px;
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1px #26062e1f;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.feed-chips .feed-coin {
+  width: 30px;
+  height: 30px;
+}
+.feed-chips .feed-coin img {
+  width: 24px;
+  height: 24px;
+}
+.feed-chips b {
+  font-weight: 600;
+}
+.feed-chips span:last-child {
+  color: var(--mauve);
+}
+.feed-group ul,
+.feed-machine ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.machine-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 12px 12px 24px 12px;
+  background: var(--cream);
+}
+/* One line per bag: the coin and amount; what feeding pays against selling, its
+   "up to N×" badge and the Feed checkbox; or, for a bag that can't be fed, why. */
+.feed-row {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto auto;
+  align-items: center;
+  column-gap: 14px;
+  min-height: 56px;
+  padding: 8px 14px 8px 10px;
+  border-radius: 12px 12px 24px 12px;
+  background: var(--cream);
+}
+.feed-row p {
+  margin: 0;
+}
+.feed-row .feed-coin {
+  width: 36px;
+  height: 36px;
+}
+.feed-row .feed-coin img {
+  width: 30px;
+  height: 30px;
+}
+.feed-row .feed-coin b {
+  font-size: 17px;
+}
+.feed-coin {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 34% 28%,
+    #fff3c4,
+    #f6d272 30%,
+    #d9a441 62%,
+    #a8701f
+  );
+  box-shadow:
+    inset 0 0 0 2.5px #f6d272,
+    0 6px 12px -6px #26062e80;
+}
+/* Monogram and logo share the coin face; the logo fades in once decoded. */
+.feed-coin > * {
+  grid-area: 1 / 1;
+}
+.feed-coin img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.feed-coin img.is-ready {
+  opacity: 1;
+}
+.feed-coin b {
+  color: var(--ink);
+  font:
+    700 20px/1 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+}
+.feed-flight {
+  position: fixed;
+  z-index: 80;
+  pointer-events: none;
+}
+.feed-bag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+  min-width: 0;
+  font-size: 14.5px;
+  font-variant-numeric: tabular-nums;
+}
+.feed-bag b {
+  font:
+    700 18px/1.2 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  letter-spacing: -0.02em;
+}
+.feed-mark {
+  margin-left: -8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.feed-note,
+.feed-why {
+  font-size: 14px;
+  color: var(--mauve);
+}
+.feed-why {
+  grid-column: 3 / -1;
+  justify-self: end;
+  text-align: right;
+}
+.feed-roi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.feed-times {
+  padding: 3px 10px 4px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 700;
+}
+/* The Feed checkbox: on by default; off, the bag stays in the wallet. */
+.feed-check {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+.feed-check:disabled {
+  cursor: default;
+}
+.feed-check:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.feed-row[data-feed="off"] > :not(.feed-check) {
+  opacity: 0.55;
+}
+.feed-row[data-feed="no"] {
+  min-height: 48px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #26062e1f;
+}
+.feed-footnote {
+  margin: 10px 0 0;
+  color: var(--mauve);
+  font-size: 14px;
+}
+/* The empty accounts close in the Feed transaction: one quiet line, no choice. */
+.feed-rent {
+  margin: 14px 0 0;
+  color: var(--mauve);
+  font-size: 14px;
+}
+.feed-summary {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1.5px dashed #26062e33;
+}
+.feed-summary p {
+  margin: 0;
+}
+/* The small print under the button: deposits, the machine's pace, the wallet. */
+.feed-lines {
+  display: grid;
+  gap: 4px;
+  color: var(--mauve);
+  font-size: 13.5px;
+}
+.feed-lines b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.feed-oval {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  justify-self: start;
+  min-width: 260px;
+  height: 60px;
+  margin-top: 6px;
+  padding: 0 8px 0 24px;
+  border-radius: 9px 9px 25px 9px;
+  color: var(--cream);
+  background: var(--ink);
+  box-shadow: none;
+  font:
+    500 17px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  white-space: nowrap;
+}
+.feed-oval b {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px 6px 19px 6px;
+  color: var(--ink);
+  background: var(--lilac);
+  font:
+    400 24px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.feed-oval:hover {
+  background: var(--orchid);
+}
+.feed-oval:focus-visible {
+  color: var(--cream);
+  background: var(--orchid);
+  box-shadow: inset 0 0 0 2px var(--lilac);
+}
+.feed-oval:disabled {
+  color: var(--cream);
+  background: var(--ink);
+  opacity: 0.6;
+}
+.feed-flow {
+  font-weight: 500;
+}
+.feed-done {
+  display: grid;
+  gap: 18px;
+  background:
+    radial-gradient(120% 140% at 100% 0%, #f6d27240, #f6d27200 60%),
+    var(--paper);
+}
+.feed-done-line {
+  margin: 0;
+  font:
+    700 clamp(24px, 3vw, 34px) / 1.2 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  animation: feed-pop 0.6s var(--ease-spring) both;
+}
+@keyframes feed-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+}
+.feed-machine {
+  background: var(--cream);
+}
+.machine-row p {
+  margin: 0;
+}
+.feed-pill {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 15px;
+}
+.feed-always {
+  margin: 0;
+  font-size: 15px;
+}
+.feed-always {
+  margin-top: 14px;
+}
+@media (max-width: 720px) {
+  /* Phones: the bag and its checkbox on the first line; under them, across the row,
+     what feeding pays at the left and its multiple at the right. */
+  .feed-row {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    row-gap: 6px;
+    padding: 10px 12px 10px 10px;
+  }
+  .feed-row .feed-coin {
+    width: 32px;
+    height: 32px;
+  }
+  .feed-row .feed-coin img {
+    width: 26px;
+    height: 26px;
+  }
+  .feed-row .feed-check {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .feed-roi {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .feed-times {
+    padding: 2px 9px 3px;
+    font-size: 13px;
+  }
+  /* A bag that can't be fed keeps one line: its reason at the right, wrapping if long. */
+  .feed-why {
+    grid-column: 3;
+    grid-row: 1;
+    max-width: 54vw;
+  }
+  .feed-row[data-feed="no"] .feed-coin {
+    grid-row: auto;
+    align-self: center;
+  }
+  /* The button names the bags and the rent back: on a phone it may take two lines. */
+  .feed-oval {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 60px;
+    padding: 9px 9px 9px 18px;
+    gap: 12px;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.25;
+  }
+}

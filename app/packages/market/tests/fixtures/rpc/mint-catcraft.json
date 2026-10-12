@@ -1,0 +1,74 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.997Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+        {
+          "encoding": "jsonParsed",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628038,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 2753360,
+          "data": {
+            "program": "spl-token-2022",
+            "parsed": {
+              "info": {
+                "decimals": 6,
+                "extensions": [
+                  {
+                    "extension": "metadataPointer",
+                    "state": {
+                      "authority": null,
+                      "metadataAddress": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump"
+                    }
+                  },
+                  {
+                    "extension": "tokenMetadata",
+                    "state": {
+                      "additionalMetadata": [],
+                      "mint": "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+                      "name": "CATCRAFT",
+                      "symbol": "CATCRAFT",
+                      "updateAuthority": null,
+                      "uri": "https://ipfs.io/ipfs/bafkreidn2pvkspdjlqsxr4qwinuyumkfxgehfnh3o6y62f34jquo5po3i4"
+                    }
+                  }
+                ],
+                "freezeAuthority": null,
+                "isInitialized": true,
+                "mintAuthority": null,
+                "supply": "984374342805527"
+              },
+              "type": "mint"
+            },
+            "space": 414
+          },
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 414
+        }
+      },
+      "id": 1
+    }
+  }
+}

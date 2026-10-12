@@ -1,0 +1,23 @@
+{
+  "name": "dbc-migrated-base-vault",
+  "address": "4qV7qFrkcEEAyBBZ3XTd9G5gQ1iNatabJkYwoPVSqyze",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848238,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "3e88b83921c188fefd4ad99e5a292d44feb2dd430de77c06b4f632faef56a722",
+  "pubkey": "4qV7qFrkcEEAyBBZ3XTd9G5gQ1iNatabJkYwoPVSqyze",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "zD5IuK3YExyjR7d8S0kKdy9ArACEIZXLWN1mBcLOtqPaY2gfcoa8yAZxniwrUKIBVyQ7/JZosRUgvFOEPtzbCIPlTjUCr1INAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 2039280,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

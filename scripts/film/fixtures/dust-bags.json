@@ -1,0 +1,63 @@
+{
+ "note": "Four real pump.fun bags from a live X-ray (preview API, Solana mainnet) of a trencher wallet holding 207 pump.fun bags. Quotes are the X-ray's executable 'if sold now' values at scannedAt. The wallet address is left out on purpose.",
+ "scannedAt": "2026-10-09T14:20:23.114Z",
+ "walletBags": 207,
+ "bags": [
+  {
+   "mint": "FnNhwfDdHyr5pKFGTgybKNerhqCUcTr6vCE3daLhpump",
+   "symbol": "HAHA",
+   "name": "HAHAHACAT",
+   "amountUi": "13452.344402",
+   "decimals": 6,
+   "tokenProgram": "token2022",
+   "buckets": [
+    "feedable"
+   ],
+   "reason": "Final check when you Feed",
+   "reasonCode": "snapshot_at_feed",
+   "valueSol": "0.000301638"
+  },
+  {
+   "mint": "AbXPpQS2RAL2qpEjAzcVm91hzVZbFzgg72NDAR9Epump",
+   "symbol": "OGPEPE",
+   "name": "The OG PEPE",
+   "amountUi": "20075.521272",
+   "decimals": 6,
+   "tokenProgram": "spl",
+   "buckets": [
+    "feedable"
+   ],
+   "reason": "Final check when you Feed",
+   "reasonCode": "snapshot_at_feed",
+   "valueSol": "0.000600708"
+  },
+  {
+   "mint": "65aP2yHMZ6RxZpXn3iHhfBRnzCpwbZeVDTXAoi1gpump",
+   "symbol": "PEPE",
+   "name": "PEPE",
+   "amountUi": "8649.451661",
+   "decimals": 6,
+   "tokenProgram": "spl",
+   "buckets": [
+    "feedable"
+   ],
+   "reason": "Final check when you Feed",
+   "reasonCode": "snapshot_at_feed",
+   "valueSol": "0.000803974"
+  },
+  {
+   "mint": "Ai9JQd8t7PdD3taL59kvfSttL71iuJeU5T6cND7kpump",
+   "symbol": "JapanWhale",
+   "name": "The Japanese Whale",
+   "amountUi": "15718.964156",
+   "decimals": 6,
+   "tokenProgram": "token2022",
+   "buckets": [
+    "feedable"
+   ],
+   "reason": "Final check when you Feed",
+   "reasonCode": "snapshot_at_feed",
+   "valueSol": "0.000821255"
+  }
+ ]
+}

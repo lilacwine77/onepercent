@@ -1,0 +1,938 @@
+/* Synced from experience/cards-lab/src/cards/styles/face.css by experience/sync-lab.mjs. */
+/* Card faces (da-direction.md §7). Every size is in cqw of the card width: 1cqw = 2.5 px on the 250 px DA card. */
+
+.mc-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  container-type: inline-size;
+  border-radius: 4.6% / 3.29%;
+  isolation: isolate;
+  user-select: none;
+  -webkit-user-select: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.mc-face {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #1c1420;
+}
+.mc-face > * {
+  position: absolute;
+}
+.mc-face img {
+  -webkit-user-drag: none;
+}
+
+/* ---------- Dust Card (§7.1) ---------- */
+.mc-card[data-kind="dust"] .mc-face,
+.mc-card[data-kind="spotlight"] .mc-face {
+  background: var(--paper);
+}
+.mc-paper {
+  inset: 0;
+  background:
+    radial-gradient(
+      90% 60% at 30% 18%,
+      rgb(255 255 255 / 0.75),
+      rgb(255 255 255 / 0) 70%
+    ),
+    radial-gradient(
+      90% 70% at 72% 100%,
+      rgb(241 223 213 / 0.8),
+      rgb(241 223 213 / 0) 72%
+    ),
+    var(--mc-grain);
+  background-size:
+    auto,
+    auto,
+    96px 96px;
+}
+.mc-card[data-kind="dust"] .mc-face::after,
+.mc-card[data-kind="spotlight"] .mc-face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1.6cqw var(--lilac),
+    inset 0 0 0 calc(1.6cqw + 1px) rgb(119 62 131 / 0.25);
+}
+.mc-card[data-kind="spotlight"] .mc-face::after {
+  box-shadow: inset 0 0 0 1.6cqw var(--gold);
+}
+.mc-edge {
+  inset: 2.75cqw;
+  border-radius: 2.9cqw;
+  box-shadow: inset 0 0 0 max(1px, 0.3cqw) var(--ed-edge, #c9ccd2);
+  opacity: 0.85;
+}
+.mc-strip {
+  left: 3.3cqw;
+  right: 3.3cqw;
+  top: 3.3cqw;
+  height: 16.6cqw;
+  border-radius: 2.4cqw 2.4cqw 1cqw 1cqw;
+  background: linear-gradient(180deg, #ddb2f4, var(--lilac));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2cqw;
+  padding: 0 3.4cqw 0 4.4cqw;
+}
+.mc-strip .mc-tk {
+  font: 700 min(9.4cqw, calc(104cqw / var(--n, 8))) / 1 var(--serif);
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+.mc-chain {
+  flex: none;
+  height: 7cqw;
+  padding: 0 2.3cqw;
+  border-radius: 99px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 0.55cqw var(--ink);
+  font: 700 3.7cqw / 7.1cqw var(--sans);
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+.mc-mid {
+  left: 3.3cqw;
+  right: 3.3cqw;
+  top: 19.9cqw;
+  bottom: 17.3cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mc-mid .mc-coin {
+  width: 48cqw;
+  font-size: 48cqw;
+}
+.mc-mid .mc-amt {
+  margin-top: 5.2cqw;
+  font: 700 min(15cqw, calc(150cqw / var(--n, 9))) / 1 var(--serif);
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  white-space: nowrap;
+  font-variant-numeric: lining-nums;
+}
+.mc-sub {
+  margin-top: 2.6cqw;
+  font: 500 5.3cqw / 1.1 var(--sans);
+  color: var(--mauve);
+  white-space: nowrap;
+}
+.mc-foot {
+  left: 3.3cqw;
+  right: 3.3cqw;
+  bottom: 3.3cqw;
+  height: 14cqw;
+  border-radius: 1cqw 1cqw 4.6cqw 1cqw;
+  background: var(--plum);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2cqw;
+  padding: 0 4.2cqw;
+}
+.mc-foot-ed {
+  font: 500 4.9cqw / 1 var(--sans);
+  color: var(--cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mc-val {
+  font: 700 max(13px, 5.2cqw) / 1 var(--sans);
+  color: var(--gold-hi);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.mc-val.is-none {
+  color: var(--lilac);
+}
+@container (max-width: 236px) {
+  .mc-foot {
+    justify-content: center;
+    padding: 0 2.4cqw;
+  }
+  .mc-foot-ed,
+  .mc-chain,
+  .mc-sub {
+    display: none;
+  }
+  .mc-mid .mc-coin {
+    width: 52cqw;
+    font-size: 52cqw;
+  }
+  .mc-mid .mc-amt {
+    margin-top: 6.4cqw;
+    font-size: min(17cqw, calc(156cqw / var(--n, 9)));
+  }
+  .mc-strip .mc-tk {
+    font-size: min(10.4cqw, calc(118cqw / var(--n, 8)));
+  }
+}
+
+/* Thumbnails (list rows, ≤ 110 px): the art only, no lettering (the row carries the text). */
+@container (max-width: 110px) {
+  .mc-face .mc-panel,
+  .mc-face .mc-label,
+  .mc-face .mc-mult,
+  .mc-face .mc-title,
+  .mc-face .mc-onepct,
+  .mc-strip .mc-tk,
+  .mc-chain,
+  .mc-mid .mc-amt,
+  .mc-sub,
+  .mc-foot > * {
+    display: none;
+  }
+  .mc-mid .mc-coin {
+    width: 64cqw;
+    font-size: 64cqw;
+  }
+  .mc-face > .mc-coin {
+    top: 34cqw;
+    width: 64cqw;
+    margin-left: -32cqw;
+    font-size: 64cqw;
+  }
+  .mc-card[data-kind="jackpot"] .mc-face > .mc-coin {
+    top: 38cqw;
+  }
+  .mc-pepe {
+    top: 24cqw;
+  }
+  .mc-strip {
+    height: 14cqw;
+  }
+  .mc-foot {
+    height: 10cqw;
+  }
+}
+
+/* ---------- Coins (§4.4: X-ray and gold modes) ---------- */
+.mc-coin {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  flex: none;
+}
+.mc-coin-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4%;
+  bottom: -4%;
+  border-radius: 50%;
+}
+.mc-coin-rim {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.mc-coin-face {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+.mc-coin-face img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mc-mono {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font: 700 0.5em / 1 var(--serif);
+  letter-spacing: -0.06em;
+  padding-bottom: 0.04em;
+}
+.mc-mono.is-1pct {
+  font-size: 0.38em;
+}
+.mc-coin::after {
+  content: "";
+  position: absolute;
+  inset: 3%;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 0.018em solid transparent;
+  border-top-color: rgb(239 255 255 / 0.85);
+  border-left-color: rgb(239 255 255 / 0.3);
+  rotate: -24deg;
+}
+
+.mc-coin.is-xray .mc-coin-edge {
+  background:
+    repeating-linear-gradient(90deg, #1b2c50 0 2.4%, #4a7aa2 2.4% 3.4%), #1b2c50;
+  box-shadow: 0 0.07em 0.1em -0.03em rgb(7 8 37 / 0.55);
+}
+.mc-coin.is-xray .mc-coin-rim {
+  background: linear-gradient(
+    135deg,
+    #f1ffff 0%,
+    var(--xray-rim) 27%,
+    #476582 47%,
+    #caf8ed 69%,
+    #5eafc8 100%
+  );
+  box-shadow:
+    inset 0 0 0 0.012em #d0ffff,
+    inset 0 0 0 0.055em rgb(19 35 68 / 0);
+}
+.mc-coin.is-xray .mc-coin-rim::after {
+  content: "";
+  position: absolute;
+  inset: 7.6%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.03em #132344;
+}
+.mc-coin.is-xray .mc-coin-face {
+  inset: 12.5%;
+  background: radial-gradient(
+    circle at 32% 24%,
+    #577793 0%,
+    #193153 45%,
+    #0e1434 100%
+  );
+  box-shadow: 0 0 0 0.008em var(--xray-cyan);
+}
+.mc-coin.is-xray .mc-coin-face img {
+  filter: grayscale(1) sepia(1) saturate(2.4) hue-rotate(140deg)
+    brightness(0.92) contrast(1.12);
+  opacity: 0.92;
+}
+.mc-coin.is-xray .mc-coin-face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(14 20 52 / 0) 50%,
+    rgb(14 20 52 / 0.62) 100%
+  );
+}
+.mc-coin.is-xray .mc-mono {
+  color: var(--xray-cyan);
+}
+
+.mc-coin.is-gold .mc-coin-edge {
+  background:
+    repeating-linear-gradient(90deg, #6e4512 0 2%, #d4a64e 2% 3%), #6e4512;
+  box-shadow: 0 0.07em 0.12em -0.03em rgb(20 6 20 / 0.6);
+}
+.mc-coin.is-gold .mc-coin-rim {
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      rgb(58 34 8 / 0) 0 2.2deg,
+      rgb(58 34 8 / 0.3) 2.2deg 3deg
+    ),
+    linear-gradient(
+      135deg,
+      #fff3c4 0%,
+      var(--gold-hi) 30%,
+      var(--gold-lo) 55%,
+      var(--gold-hi) 76%,
+      #8a5a16 100%
+    );
+}
+.mc-coin.is-gold .mc-coin-rim::after {
+  content: "";
+  position: absolute;
+  inset: 7.5%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.026em var(--gold-ink);
+}
+.mc-coin.is-gold .mc-coin-face {
+  inset: 8.5%;
+  background: radial-gradient(
+    circle at 30% 25%,
+    var(--orchid),
+    var(--plum) 72%
+  );
+}
+.mc-coin.is-gold .mc-coin-face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0.26),
+    rgb(255 255 255 / 0) 52%
+  );
+}
+.mc-coin.is-gold .mc-mono {
+  background: linear-gradient(
+    180deg,
+    #fff3c4 10%,
+    var(--gold-hi) 40%,
+    var(--gold) 70%,
+    var(--gold-lo)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.mc-coin.is-gold::after {
+  border-top-color: rgb(255 243 196 / 0.9);
+  border-left-color: rgb(255 243 196 / 0.35);
+}
+
+/* ---------- Hits and specials (§7.2) ---------- */
+.mc-card[data-foil="silver"] {
+  --mc-foil-img: var(--mc-foil-silver);
+}
+.mc-card[data-foil="blue"] {
+  --mc-foil-img: var(--mc-foil-blue);
+}
+.mc-card[data-foil="holo"] {
+  --mc-foil-img: var(--mc-foil-holo);
+}
+.mc-card[data-foil="black"] {
+  --mc-foil-img: var(--mc-foil-black);
+}
+.mc-card[data-foil="gold"] {
+  --mc-foil-img: var(--mc-foil-gold);
+}
+.mc-foil {
+  inset: 0;
+  background:
+    var(--mc-foil-img, none) center / cover no-repeat,
+    var(--mc-foil-base, #6d6f78);
+}
+.mc-card[data-foil="blue"] .mc-foil {
+  --mc-foil-base: #10235f;
+}
+.mc-card[data-foil="holo"] .mc-foil {
+  --mc-foil-base: #3b2a4e;
+}
+.mc-card[data-foil="black"] .mc-foil {
+  --mc-foil-base: #141416;
+}
+.mc-card[data-foil="gold"] .mc-foil {
+  --mc-foil-base: #a8701f;
+}
+.mc-foil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    78% 62% at 50% 40%,
+    rgb(10 4 14 / 0) 42%,
+    rgb(10 4 14 / var(--vig, 0.3)) 100%
+  );
+}
+.mc-card[data-foil="black"] .mc-foil::after {
+  --vig: 0.5;
+}
+.mc-card[data-foil="gold"] .mc-foil::after {
+  --vig: 0.22;
+}
+.mc-frame {
+  inset: 3.5cqw;
+  border-radius: 3.5cqw 3.5cqw 9.4cqw 3.5cqw;
+  padding: max(1px, 0.7cqw);
+  background: linear-gradient(
+    180deg,
+    #fff3c4,
+    var(--gold-hi) 32%,
+    var(--gold) 62%,
+    var(--gold-lo)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+.mc-label {
+  left: 7.6cqw;
+  top: 11.2cqw;
+  height: 9.8cqw;
+  display: flex;
+  align-items: center;
+  padding: 0 4cqw;
+  border-radius: 1.8cqw;
+  background: rgb(14 10 16 / 0.9);
+  box-shadow: inset 0 0 0 max(0.5px, 0.2cqw) rgb(246 210 114 / 0.38);
+}
+.mc-label.is-solo {
+  top: 8.2cqw;
+}
+.mc-label span {
+  font: 700 max(9px, 4.5cqw) / 1 var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-left: 0.12em;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.mc-mult {
+  right: 7.6cqw;
+  top: 6.8cqw;
+  height: 18.6cqw;
+  padding: 0 3.2cqw 0 2.6cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.1cqw 2.1cqw 5.5cqw 2.1cqw;
+  background: rgb(14 10 16 / 0.88);
+  box-shadow:
+    inset 0 0 0 max(0.5px, 0.3cqw) rgb(246 210 114 / 0.45),
+    0 1cqw 2.4cqw rgb(0 0 0 / 0.35);
+}
+.mc-mult .mc-emb {
+  font-size: 16.4cqw;
+}
+.mc-emb {
+  display: inline-block;
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+.mc-mult > .mc-emb,
+.mc-backplate > .mc-emb {
+  position: relative;
+}
+.mc-emb > span {
+  display: block;
+  padding: 0.02em 0.05em 0.08em 0;
+}
+/* The outline lives on the solid copy underneath: a stroke over gradient text would draw the font's overlapping contours. */
+.mc-emb-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-ink);
+  -webkit-text-stroke: 0.042em var(--gold-ink);
+  text-shadow:
+    0 0.03em 0 var(--gold-ink),
+    0 0.07em 0.1em rgb(0 0 0 / 0.45);
+}
+.mc-emboss {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #fff3c4 0%,
+    var(--gold-hi) 32%,
+    var(--gold) 62%,
+    var(--gold-lo) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.mc-face > .mc-coin {
+  left: 50%;
+  top: 29.6cqw;
+  width: 48.8cqw;
+  margin-left: -24.4cqw;
+  font-size: 48.8cqw;
+}
+.mc-card[data-kind="jackpot"] .mc-face > .mc-coin {
+  top: 41cqw;
+  width: 42cqw;
+  margin-left: -21cqw;
+  font-size: 42cqw;
+}
+.mc-card[data-kind="final"] .mc-face > .mc-coin {
+  top: 26.5cqw;
+}
+.mc-title {
+  left: 0;
+  right: 0;
+  top: 22.6cqw;
+  text-align: center;
+  font: 700 14.6cqw / 1 var(--serif);
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  text-shadow: 0 0.04em 0 rgb(255 243 196 / 0.55);
+}
+.mc-panel {
+  left: 6.25cqw;
+  right: 6.25cqw;
+  bottom: 6.8cqw;
+  min-height: 45.3cqw;
+  padding: 4.2cqw 5.2cqw 4.6cqw;
+  border-radius: 2.7cqw 2.7cqw 7cqw 2.7cqw;
+  background: rgb(22 6 26 / 0.88);
+  box-shadow:
+    inset 0 0 0 max(0.5px, 0.3cqw) rgb(246 210 114 / 0.45),
+    0 1.2cqw 3cqw rgb(0 0 0 / 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6cqw;
+}
+.mc-panel .mc-amt {
+  font: 700 min(12.9cqw, calc(124cqw / var(--n, 9))) / 1 var(--serif);
+  letter-spacing: -0.045em;
+  color: var(--cream);
+  white-space: nowrap;
+  font-variant-numeric: lining-nums;
+}
+.mc-panel .mc-tk {
+  margin-top: -0.6cqw;
+  font: 700 max(10px, 5.4cqw) / 1 var(--sans);
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.mc-panel.is-amount {
+  min-height: 0;
+  justify-content: flex-start;
+}
+.mc-valrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 2.6cqw;
+  row-gap: 1.2cqw;
+  margin-top: 1.4cqw;
+}
+.mc-chip {
+  font: 700 max(12.5px, 4.6cqw) / 1 var(--sans);
+  color: var(--ink);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  padding: 0.5em 0.62em 0.56em;
+  border-radius: 0.3em 0.3em 0.78em 0.3em;
+  box-shadow:
+    inset 0 0 0 1px rgb(168 112 31 / 0.5),
+    0 0.2em 0.5em rgb(58 34 8 / 0.25);
+}
+.mc-vlabel {
+  font: 500 max(12px, 3.9cqw) / 1 var(--sans);
+  color: rgb(255 241 231 / 0.86);
+  white-space: nowrap;
+}
+.mc-vnone {
+  font: 700 max(13px, 5cqw) / 1 var(--sans);
+  color: var(--lilac);
+}
+.mc-panel.is-light {
+  background: rgb(255 249 238 / 0.93);
+  box-shadow:
+    inset 0 0 0 max(0.5px, 0.3cqw) rgb(38 6 46 / 0.16),
+    0 1.2cqw 3cqw rgb(38 6 46 / 0.16);
+  min-height: 38cqw;
+}
+.mc-panel.is-light .mc-amt {
+  color: var(--ink);
+}
+.mc-panel.is-light .mc-tk {
+  background: none;
+  color: var(--ink);
+}
+.mc-panel.is-light .mc-vlabel {
+  color: var(--mauve);
+}
+.mc-panel.is-light .mc-vnone {
+  color: var(--mauve);
+}
+
+/* The 1%: white holo, white Pepe, gold "1%" (§7.2) */
+.mc-card[data-kind="one_pct"] .mc-face {
+  background: linear-gradient(
+    135deg,
+    #fffaff 0%,
+    #f4ecff 25%,
+    #fff6fb 50%,
+    #effaff 75%,
+    #fff8ec 100%
+  );
+}
+.mc-pearl {
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      112deg,
+      rgb(168 231 255 / 0.28) 0 9cqw,
+      rgb(228 195 255 / 0.28) 9cqw 18cqw,
+      rgb(255 191 217 / 0.28) 18cqw 27cqw,
+      rgb(255 229 164 / 0.28) 27cqw 36cqw,
+      rgb(199 255 233 / 0.28) 36cqw 45cqw
+    ),
+    var(--mc-grain);
+  background-size:
+    auto,
+    96px 96px;
+}
+.mc-onepct {
+  left: 8.4cqw;
+  top: 6.6cqw;
+  font-size: 19cqw;
+}
+.mc-card[data-kind="one_pct"] .mc-label {
+  left: auto;
+  right: 8.2cqw;
+  top: 10.4cqw;
+}
+.mc-pepe {
+  left: 9cqw;
+  top: 25cqw;
+  width: 82cqw;
+  height: auto;
+  filter: drop-shadow(0 1.6cqw 2.4cqw rgb(38 6 46 / 0.22));
+}
+
+/* ---------- Card back (no tells: identical for every card) ---------- */
+.mc-back .mc-foil {
+  --mc-foil-img: var(--mc-foil-holo);
+  --mc-foil-base: #3b2a4e;
+  transform: scale(-1.32, 1.32);
+}
+.mc-back .mc-foil::after {
+  --vig: 0.42;
+}
+.mc-backplate {
+  left: 13cqw;
+  right: 13cqw;
+  top: 46cqw;
+  height: 48cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3cqw;
+  border-radius: 2.7cqw 2.7cqw 7cqw 2.7cqw;
+  background: rgb(14 8 18 / 0.8);
+  box-shadow: inset 0 0 0 max(0.5px, 0.3cqw) rgb(246 210 114 / 0.42);
+}
+.mc-backplate .mc-emb {
+  font-size: 21cqw;
+}
+.mc-mantra {
+  font: 700 max(7px, 3.9cqw) / 1 var(--sans);
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  padding-left: 0.2em;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Light (pointer-driven: --px --py --fx; added on demand with .is-live) ---------- */
+.mc-shine,
+.mc-glitter {
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+.mc-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  display: none;
+  z-index: 4;
+}
+.mc-card.is-live .mc-shine,
+.mc-card.is-live .mc-glitter,
+.mc-card.is-live .mc-glare {
+  display: block;
+}
+.mc-glare {
+  opacity: calc(var(--fx, 0) * var(--glare, 0.5));
+  background: radial-gradient(
+    farthest-corner circle at var(--px, 50%) var(--py, 35%),
+    rgb(255 255 255 / 0.8) 8%,
+    rgb(255 255 255 / 0.32) 24%,
+    rgb(0 0 0 / 0.32) 92%
+  );
+  mix-blend-mode: overlay;
+}
+.mc-card[data-kind="dust"] {
+  --glare: 0.42;
+}
+.mc-card[data-kind="one_pct"] {
+  --glare: 0.36;
+}
+.mc-shine {
+  opacity: calc(var(--fx, 0) * var(--shine, 0.7));
+  mix-blend-mode: color-dodge;
+}
+.mc-card[data-foil="silver"] .mc-shine {
+  --shine: 0.85;
+  mix-blend-mode: overlay;
+  background: linear-gradient(
+      108deg,
+      rgb(255 255 255 / 0) 32%,
+      rgb(255 255 255 / 0.95) 47%,
+      rgb(214 224 244 / 0.7) 52%,
+      rgb(255 255 255 / 0) 66%
+    )
+    var(--px, 50%) var(--py, 50%) / 280% 280% no-repeat;
+}
+.mc-card[data-foil="blue"] .mc-shine {
+  --shine: 0.6;
+  background:
+    repeating-linear-gradient(
+        115deg,
+        #0b1d5e 0%,
+        #3fe6ff 6%,
+        #1340c8 12%,
+        #a8e7ff 18%,
+        #6f5cff 24%,
+        #0b1d5e 30%
+      )
+      var(--px, 50%) var(--py, 50%) / 360% 360%,
+    radial-gradient(
+      farthest-corner circle at var(--px, 50%) var(--py, 50%),
+      rgb(255 255 255 / 0.1) 10%,
+      rgb(0 0 0 / 0.45) 90%
+    );
+  background-blend-mode: hard-light;
+  filter: brightness(0.85) contrast(1.4) saturate(1.3);
+}
+.mc-card[data-foil="holo"] .mc-shine,
+.mc-card[data-kind="one_pct"] .mc-shine {
+  --shine: 0.58;
+  background-image:
+    repeating-linear-gradient(
+      110deg,
+      #a8e7ff 0%,
+      #e4c3ff 4.5%,
+      #ffbfd9 9%,
+      #ffe5a4 13.5%,
+      #c7ffe9 18%,
+      #a8e7ff 22.5%
+    ),
+    repeating-linear-gradient(
+      42deg,
+      #0e152e 0%,
+      #8fa3ad 3.8%,
+      #b2cdd1 4.5%,
+      #8fa3ad 5.2%,
+      #0e152e 10%,
+      #0e152e 12%
+    ),
+    radial-gradient(
+      farthest-corner circle at var(--px, 50%) var(--py, 50%),
+      rgb(0 0 0 / 0.1) 12%,
+      rgb(0 0 0 / 0.18) 22%,
+      rgb(0 0 0 / 0.32) 120%
+    );
+  background-blend-mode: screen, hue, hard-light;
+  background-size:
+    420% 420%,
+    300% 300%,
+    200% 200%;
+  background-position:
+    var(--px, 50%) var(--py, 50%),
+    calc(100% - var(--px, 50%)) calc(100% - var(--py, 50%)),
+    var(--px, 50%) var(--py, 50%);
+  filter: brightness(0.74) contrast(1.6) saturate(1.2);
+}
+.mc-card[data-kind="one_pct"] .mc-shine {
+  --shine: 0.5;
+  mix-blend-mode: multiply;
+  filter: brightness(1.45) contrast(0.9) saturate(1.1);
+}
+.mc-card[data-foil="black"] .mc-shine {
+  --shine: 0.55;
+  mix-blend-mode: screen;
+  background: linear-gradient(
+      112deg,
+      rgb(246 210 114 / 0) 34%,
+      rgb(246 210 114 / 0.28) 46%,
+      rgb(255 243 196 / 0.55) 50%,
+      rgb(246 210 114 / 0.22) 54%,
+      rgb(246 210 114 / 0) 66%
+    )
+    var(--px, 50%) var(--py, 50%) / 300% 300% no-repeat;
+}
+.mc-card[data-foil="gold"] .mc-shine {
+  --shine: 0.75;
+  background: linear-gradient(
+      112deg,
+      rgb(255 255 255 / 0) 30%,
+      rgb(255 246 214 / 0.85) 47%,
+      rgb(255 255 255 / 0.95) 50%,
+      rgb(255 230 160 / 0.6) 53%,
+      rgb(255 255 255 / 0) 70%
+    )
+    var(--px, 50%) var(--py, 50%) / 300% 300% no-repeat;
+}
+.mc-glitter {
+  opacity: calc(var(--fx, 0) * var(--glit, 0.55));
+  mix-blend-mode: color-dodge;
+  background-image:
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.95) 0 0.2cqw,
+      rgb(255 255 255 / 0) 0.55cqw
+    ),
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.8) 0 0.14cqw,
+      rgb(255 255 255 / 0) 0.42cqw
+    ),
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.9) 0 0.26cqw,
+      rgb(255 255 255 / 0) 0.7cqw
+    );
+  background-size:
+    7.3cqw 6.1cqw,
+    4.7cqw 5.3cqw,
+    13.1cqw 11.9cqw;
+  background-position:
+    calc(var(--px, 50%) * 0.35) calc(var(--py, 50%) * 0.3),
+    calc(var(--px, 50%) * -0.25) calc(var(--py, 50%) * -0.2),
+    1.7cqw 3.1cqw;
+  -webkit-mask: radial-gradient(
+    circle at var(--px, 50%) var(--py, 50%),
+    #000 0%,
+    rgb(0 0 0 / 0.4) 30%,
+    transparent 62%
+  );
+  mask: radial-gradient(
+    circle at var(--px, 50%) var(--py, 50%),
+    #000 0%,
+    rgb(0 0 0 / 0.4) 30%,
+    transparent 62%
+  );
+}
+.mc-card[data-foil="silver"] .mc-glitter {
+  --glit: 0.35;
+}
+.mc-card[data-foil="black"] .mc-glitter,
+.mc-card[data-foil="gold"] .mc-glitter {
+  --glit: 0.7;
+}

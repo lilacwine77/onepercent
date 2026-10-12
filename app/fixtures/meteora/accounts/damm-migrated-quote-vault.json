@@ -1,0 +1,23 @@
+{
+  "name": "damm-migrated-quote-vault",
+  "address": "Bzf7yCHrQx4TbAod1qgkjvUoVw37Xtyjq5g8iAdQWPTC",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848238,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "61df697a39ee9e9641e8defe3da87ee9e33c2e59a4caa752b55a3c8a73236af1",
+  "pubkey": "Bzf7yCHrQx4TbAod1qgkjvUoVw37Xtyjq5g8iAdQWPTC",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHyzNU1rKXxc2rIIt0Hc+TZL72KWbKUA1AClakBHHOp5aCr9ocoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAADwHR8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 174081821072,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

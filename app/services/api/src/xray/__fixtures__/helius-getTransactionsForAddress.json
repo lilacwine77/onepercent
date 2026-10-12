@@ -1,0 +1,35 @@
+{
+  "source": "mainnet",
+  "recordedAt": "2026-10-08T19:07:42.451Z",
+  "note": "Actual empty response queried for the synthetic trencher owner. No real wallet was queried.",
+  "request": {
+    "method": "getTransactionsForAddress",
+    "params": [
+      "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+      {
+        "transactionDetails": "full",
+        "encoding": "jsonParsed",
+        "sortOrder": "desc",
+        "limit": 1,
+        "maxSupportedTransactionVersion": 1,
+        "filters": {
+          "slot": {
+            "lte": 454619967
+          },
+          "tokenAccounts": "balanceChanged",
+          "tokenTransfer": {
+            "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump"
+          }
+        }
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "data": [],
+      "paginationToken": null
+    }
+  }
+}

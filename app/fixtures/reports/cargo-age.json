@@ -1,0 +1,2704 @@
+{
+  "checkedAt": "2026-10-08T21:41:53.641Z",
+  "cutoff": "2026-09-24T21:41:53.641Z",
+  "added": 385,
+  "violations": 0,
+  "errors": 0,
+  "packages": [
+    {
+      "name": "aead",
+      "version": "0.5.2",
+      "publishedAt": "2023-04-02T15:42:58.294718Z",
+      "source": "https://crates.io/api/v1/crates/aead/0.5.2",
+      "eligible": true
+    },
+    {
+      "name": "aes",
+      "version": "0.8.4",
+      "publishedAt": "2024-02-13T15:55:26.335296Z",
+      "source": "https://crates.io/api/v1/crates/aes/0.8.4",
+      "eligible": true
+    },
+    {
+      "name": "aes-gcm-siv",
+      "version": "0.11.1",
+      "publishedAt": "2022-08-01T02:33:35.853549Z",
+      "source": "https://crates.io/api/v1/crates/aes-gcm-siv/0.11.1",
+      "eligible": true
+    },
+    {
+      "name": "agave-feature-set",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:17:27.058006Z",
+      "source": "https://crates.io/api/v1/crates/agave-feature-set/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "agave-precompiles",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:32:17.547522Z",
+      "source": "https://crates.io/api/v1/crates/agave-precompiles/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "agave-reserved-account-keys",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:27:10.015804Z",
+      "source": "https://crates.io/api/v1/crates/agave-reserved-account-keys/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "agave-transaction-view",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:00:34.755289Z",
+      "source": "https://crates.io/api/v1/crates/agave-transaction-view/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "allocator-api2",
+      "version": "0.2.21",
+      "publishedAt": "2024-12-01T14:49:16.555989Z",
+      "source": "https://crates.io/api/v1/crates/allocator-api2/0.2.21",
+      "eligible": true
+    },
+    {
+      "name": "anchor-spl",
+      "version": "0.32.2",
+      "publishedAt": "2026-09-14T16:57:52.695159Z",
+      "source": "https://crates.io/api/v1/crates/anchor-spl/0.32.2",
+      "eligible": true
+    },
+    {
+      "name": "ansi_term",
+      "version": "0.12.1",
+      "publishedAt": "2019-09-02T10:16:04.908577Z",
+      "source": "https://crates.io/api/v1/crates/ansi_term/0.12.1",
+      "eligible": true
+    },
+    {
+      "name": "ark-bn254",
+      "version": "0.4.0",
+      "publishedAt": "2023-01-17T19:44:52.303963Z",
+      "source": "https://crates.io/api/v1/crates/ark-bn254/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-bn254",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T12:08:57.275312Z",
+      "source": "https://crates.io/api/v1/crates/ark-bn254/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-ec",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:37:38.157992Z",
+      "source": "https://crates.io/api/v1/crates/ark-ec/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-ec",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T11:04:28.458327Z",
+      "source": "https://crates.io/api/v1/crates/ark-ec/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:36:54.450385Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T11:01:35.306707Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff-asm",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:36:19.690688Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff-asm/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff-asm",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T11:00:23.081019Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff-asm/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff-macros",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:36:37.927169Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff-macros/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-ff-macros",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T10:59:20.193715Z",
+      "source": "https://crates.io/api/v1/crates/ark-ff-macros/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-poly",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:37:17.400381Z",
+      "source": "https://crates.io/api/v1/crates/ark-poly/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-poly",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T11:03:02.601735Z",
+      "source": "https://crates.io/api/v1/crates/ark-poly/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-serialize",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:36:05.893437Z",
+      "source": "https://crates.io/api/v1/crates/ark-serialize/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-serialize",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T10:58:16.913428Z",
+      "source": "https://crates.io/api/v1/crates/ark-serialize/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-serialize-derive",
+      "version": "0.4.2",
+      "publishedAt": "2023-03-18T09:35:52.504014Z",
+      "source": "https://crates.io/api/v1/crates/ark-serialize-derive/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ark-serialize-derive",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T10:57:09.674085Z",
+      "source": "https://crates.io/api/v1/crates/ark-serialize-derive/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-std",
+      "version": "0.4.0",
+      "publishedAt": "2023-01-17T10:26:06.403536Z",
+      "source": "https://crates.io/api/v1/crates/ark-std/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "ark-std",
+      "version": "0.5.0",
+      "publishedAt": "2024-10-28T10:38:24.008067Z",
+      "source": "https://crates.io/api/v1/crates/ark-std/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "arrayref",
+      "version": "0.3.9",
+      "publishedAt": "2024-09-14T12:24:40.788186Z",
+      "source": "https://crates.io/api/v1/crates/arrayref/0.3.9",
+      "eligible": true
+    },
+    {
+      "name": "arrayvec",
+      "version": "0.7.8",
+      "publishedAt": "2026-07-02T12:44:35.487269Z",
+      "source": "https://crates.io/api/v1/crates/arrayvec/0.7.8",
+      "eligible": true
+    },
+    {
+      "name": "ascii",
+      "version": "0.9.3",
+      "publishedAt": "2019-08-26T10:54:23.556369Z",
+      "source": "https://crates.io/api/v1/crates/ascii/0.9.3",
+      "eligible": true
+    },
+    {
+      "name": "base16ct",
+      "version": "0.2.0",
+      "publishedAt": "2023-02-26T17:06:02.943914Z",
+      "source": "https://crates.io/api/v1/crates/base16ct/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "base64",
+      "version": "0.12.3",
+      "publishedAt": "2020-06-25T02:15:08.385994Z",
+      "source": "https://crates.io/api/v1/crates/base64/0.12.3",
+      "eligible": true
+    },
+    {
+      "name": "base64ct",
+      "version": "1.8.3",
+      "publishedAt": "2026-01-12T04:41:30.672776Z",
+      "source": "https://crates.io/api/v1/crates/base64ct/1.8.3",
+      "eligible": true
+    },
+    {
+      "name": "bit-set",
+      "version": "0.8.0",
+      "publishedAt": "2024-07-16T17:18:45.390925Z",
+      "source": "https://crates.io/api/v1/crates/bit-set/0.8.0",
+      "eligible": true
+    },
+    {
+      "name": "bit-vec",
+      "version": "0.8.0",
+      "publishedAt": "2024-07-16T17:14:52.246887Z",
+      "source": "https://crates.io/api/v1/crates/bit-vec/0.8.0",
+      "eligible": true
+    },
+    {
+      "name": "bitvec",
+      "version": "1.1.1",
+      "publishedAt": "2026-06-18T19:47:24.730968Z",
+      "source": "https://crates.io/api/v1/crates/bitvec/1.1.1",
+      "eligible": true
+    },
+    {
+      "name": "blake3",
+      "version": "1.8.7",
+      "publishedAt": "2026-08-20T09:09:56.903547Z",
+      "source": "https://crates.io/api/v1/crates/blake3/1.8.7",
+      "eligible": true
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "publishedAt": "2026-06-11T15:40:05.682576Z",
+      "source": "https://crates.io/api/v1/crates/block-buffer/0.12.1",
+      "eligible": true
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.9.0",
+      "publishedAt": "2020-06-10T16:49:53.236800Z",
+      "source": "https://crates.io/api/v1/crates/block-buffer/0.9.0",
+      "eligible": true
+    },
+    {
+      "name": "blst",
+      "version": "0.3.17",
+      "publishedAt": "2026-07-24T13:53:15.565905Z",
+      "source": "https://crates.io/api/v1/crates/blst/0.3.17",
+      "eligible": true
+    },
+    {
+      "name": "blstrs",
+      "version": "0.7.1",
+      "publishedAt": "2023-08-14T15:00:21.654518Z",
+      "source": "https://crates.io/api/v1/crates/blstrs/0.7.1",
+      "eligible": true
+    },
+    {
+      "name": "byte-slice-cast",
+      "version": "1.2.3",
+      "publishedAt": "2025-03-03T10:02:39.494851Z",
+      "source": "https://crates.io/api/v1/crates/byte-slice-cast/1.2.3",
+      "eligible": true
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "publishedAt": "2023-10-06T00:45:57.877036Z",
+      "source": "https://crates.io/api/v1/crates/byteorder/1.5.0",
+      "eligible": true
+    },
+    {
+      "name": "cc",
+      "version": "1.4.7",
+      "publishedAt": "2026-09-18T13:26:31.179475Z",
+      "source": "https://crates.io/api/v1/crates/cc/1.4.7",
+      "eligible": true
+    },
+    {
+      "name": "cfg_eval",
+      "version": "0.1.2",
+      "publishedAt": "2023-06-26T09:58:05.413501Z",
+      "source": "https://crates.io/api/v1/crates/cfg_eval/0.1.2",
+      "eligible": true
+    },
+    {
+      "name": "cipher",
+      "version": "0.4.4",
+      "publishedAt": "2023-03-09T00:11:40.449460Z",
+      "source": "https://crates.io/api/v1/crates/cipher/0.4.4",
+      "eligible": true
+    },
+    {
+      "name": "cmov",
+      "version": "0.5.4",
+      "publishedAt": "2026-05-28T19:07:33.005301Z",
+      "source": "https://crates.io/api/v1/crates/cmov/0.5.4",
+      "eligible": true
+    },
+    {
+      "name": "combine",
+      "version": "3.8.1",
+      "publishedAt": "2019-03-13T20:37:31.607451Z",
+      "source": "https://crates.io/api/v1/crates/combine/3.8.1",
+      "eligible": true
+    },
+    {
+      "name": "console_error_panic_hook",
+      "version": "0.1.7",
+      "publishedAt": "2021-10-11T17:01:02.936833Z",
+      "source": "https://crates.io/api/v1/crates/console_error_panic_hook/0.1.7",
+      "eligible": true
+    },
+    {
+      "name": "console_log",
+      "version": "0.2.2",
+      "publishedAt": "2023-03-10T04:04:51.214309Z",
+      "source": "https://crates.io/api/v1/crates/console_log/0.2.2",
+      "eligible": true
+    },
+    {
+      "name": "const-oid",
+      "version": "0.9.6",
+      "publishedAt": "2023-12-15T00:13:20.730670Z",
+      "source": "https://crates.io/api/v1/crates/const-oid/0.9.6",
+      "eligible": true
+    },
+    {
+      "name": "constant_time_eq",
+      "version": "0.4.2",
+      "publishedAt": "2025-03-15T17:03:47.885264Z",
+      "source": "https://crates.io/api/v1/crates/constant_time_eq/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.3.1",
+      "publishedAt": "2026-08-26T18:39:59.636708Z",
+      "source": "https://crates.io/api/v1/crates/cpufeatures/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "crunchy",
+      "version": "0.2.4",
+      "publishedAt": "2025-06-25T12:54:43.146786Z",
+      "source": "https://crates.io/api/v1/crates/crunchy/0.2.4",
+      "eligible": true
+    },
+    {
+      "name": "crypto-bigint",
+      "version": "0.5.5",
+      "publishedAt": "2023-11-18T22:56:54.639626Z",
+      "source": "https://crates.io/api/v1/crates/crypto-bigint/0.5.5",
+      "eligible": true
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "publishedAt": "2026-05-19T16:01:22.304187Z",
+      "source": "https://crates.io/api/v1/crates/crypto-common/0.2.2",
+      "eligible": true
+    },
+    {
+      "name": "crypto-mac",
+      "version": "0.8.0",
+      "publishedAt": "2020-06-04T22:20:19.839159Z",
+      "source": "https://crates.io/api/v1/crates/crypto-mac/0.8.0",
+      "eligible": true
+    },
+    {
+      "name": "ctr",
+      "version": "0.9.2",
+      "publishedAt": "2022-09-30T00:02:32.994568Z",
+      "source": "https://crates.io/api/v1/crates/ctr/0.9.2",
+      "eligible": true
+    },
+    {
+      "name": "ctutils",
+      "version": "0.4.2",
+      "publishedAt": "2026-04-02T20:44:34.184153Z",
+      "source": "https://crates.io/api/v1/crates/ctutils/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "curve25519-dalek",
+      "version": "3.2.0",
+      "publishedAt": "2021-08-04T00:45:39.943612Z",
+      "source": "https://crates.io/api/v1/crates/curve25519-dalek/3.2.0",
+      "eligible": true
+    },
+    {
+      "name": "darling",
+      "version": "0.23.0",
+      "publishedAt": "2025-12-03T15:49:05.724483Z",
+      "source": "https://crates.io/api/v1/crates/darling/0.23.0",
+      "eligible": true
+    },
+    {
+      "name": "darling",
+      "version": "0.24.1",
+      "publishedAt": "2026-08-20T15:12:01.702411Z",
+      "source": "https://crates.io/api/v1/crates/darling/0.24.1",
+      "eligible": true
+    },
+    {
+      "name": "darling_core",
+      "version": "0.23.0",
+      "publishedAt": "2025-12-03T15:48:57.563746Z",
+      "source": "https://crates.io/api/v1/crates/darling_core/0.23.0",
+      "eligible": true
+    },
+    {
+      "name": "darling_core",
+      "version": "0.24.1",
+      "publishedAt": "2026-08-20T15:11:43.129462Z",
+      "source": "https://crates.io/api/v1/crates/darling_core/0.24.1",
+      "eligible": true
+    },
+    {
+      "name": "darling_macro",
+      "version": "0.23.0",
+      "publishedAt": "2025-12-03T15:49:02.678927Z",
+      "source": "https://crates.io/api/v1/crates/darling_macro/0.23.0",
+      "eligible": true
+    },
+    {
+      "name": "darling_macro",
+      "version": "0.24.1",
+      "publishedAt": "2026-08-20T15:11:50.704280Z",
+      "source": "https://crates.io/api/v1/crates/darling_macro/0.24.1",
+      "eligible": true
+    },
+    {
+      "name": "der",
+      "version": "0.7.10",
+      "publishedAt": "2025-04-18T14:53:09.810695Z",
+      "source": "https://crates.io/api/v1/crates/der/0.7.10",
+      "eligible": true
+    },
+    {
+      "name": "derivation-path",
+      "version": "0.2.0",
+      "publishedAt": "2022-02-16T16:57:16.871083Z",
+      "source": "https://crates.io/api/v1/crates/derivation-path/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "derivative",
+      "version": "2.2.0",
+      "publishedAt": "2021-01-23T17:05:39.339355Z",
+      "source": "https://crates.io/api/v1/crates/derivative/2.2.0",
+      "eligible": true
+    },
+    {
+      "name": "digest",
+      "version": "0.11.3",
+      "publishedAt": "2026-05-03T12:54:48.023505Z",
+      "source": "https://crates.io/api/v1/crates/digest/0.11.3",
+      "eligible": true
+    },
+    {
+      "name": "digest",
+      "version": "0.9.0",
+      "publishedAt": "2020-06-10T01:34:28.096655Z",
+      "source": "https://crates.io/api/v1/crates/digest/0.9.0",
+      "eligible": true
+    },
+    {
+      "name": "eager",
+      "version": "0.1.0",
+      "publishedAt": "2018-07-07T21:31:15.671940Z",
+      "source": "https://crates.io/api/v1/crates/eager/0.1.0",
+      "eligible": true
+    },
+    {
+      "name": "ecdsa",
+      "version": "0.16.9",
+      "publishedAt": "2023-11-16T15:55:48.150910Z",
+      "source": "https://crates.io/api/v1/crates/ecdsa/0.16.9",
+      "eligible": true
+    },
+    {
+      "name": "ed25519",
+      "version": "1.5.3",
+      "publishedAt": "2023-01-15T20:38:41.754055Z",
+      "source": "https://crates.io/api/v1/crates/ed25519/1.5.3",
+      "eligible": true
+    },
+    {
+      "name": "ed25519",
+      "version": "2.2.3",
+      "publishedAt": "2023-10-15T19:12:57.917968Z",
+      "source": "https://crates.io/api/v1/crates/ed25519/2.2.3",
+      "eligible": true
+    },
+    {
+      "name": "ed25519-dalek",
+      "version": "1.0.1",
+      "publishedAt": "2020-09-22T02:01:04.148204Z",
+      "source": "https://crates.io/api/v1/crates/ed25519-dalek/1.0.1",
+      "eligible": true
+    },
+    {
+      "name": "ed25519-dalek",
+      "version": "2.2.0",
+      "publishedAt": "2025-07-09T16:24:38.881019Z",
+      "source": "https://crates.io/api/v1/crates/ed25519-dalek/2.2.0",
+      "eligible": true
+    },
+    {
+      "name": "educe",
+      "version": "0.6.0",
+      "publishedAt": "2024-06-01T07:36:58.840438Z",
+      "source": "https://crates.io/api/v1/crates/educe/0.6.0",
+      "eligible": true
+    },
+    {
+      "name": "either",
+      "version": "1.18.0",
+      "publishedAt": "2026-08-20T19:36:48.266137Z",
+      "source": "https://crates.io/api/v1/crates/either/1.18.0",
+      "eligible": true
+    },
+    {
+      "name": "elliptic-curve",
+      "version": "0.13.8",
+      "publishedAt": "2023-11-19T18:33:33.012946Z",
+      "source": "https://crates.io/api/v1/crates/elliptic-curve/0.13.8",
+      "eligible": true
+    },
+    {
+      "name": "enum-iterator",
+      "version": "2.3.0",
+      "publishedAt": "2025-09-08T15:11:01.901802Z",
+      "source": "https://crates.io/api/v1/crates/enum-iterator/2.3.0",
+      "eligible": true
+    },
+    {
+      "name": "enum-iterator-derive",
+      "version": "1.5.0",
+      "publishedAt": "2025-09-08T15:10:18.561931Z",
+      "source": "https://crates.io/api/v1/crates/enum-iterator-derive/1.5.0",
+      "eligible": true
+    },
+    {
+      "name": "enum-ordinalize",
+      "version": "4.4.2",
+      "publishedAt": "2026-07-29T09:23:50.431714Z",
+      "source": "https://crates.io/api/v1/crates/enum-ordinalize/4.4.2",
+      "eligible": true
+    },
+    {
+      "name": "enum-ordinalize-derive",
+      "version": "4.4.2",
+      "publishedAt": "2026-08-01T03:09:18.297565Z",
+      "source": "https://crates.io/api/v1/crates/enum-ordinalize-derive/4.4.2",
+      "eligible": true
+    },
+    {
+      "name": "ephemeral-vrf-sdk",
+      "version": "0.17.3",
+      "publishedAt": "2026-09-24T07:39:48.394444Z",
+      "source": "https://crates.io/api/v1/crates/ephemeral-vrf-sdk/0.17.3",
+      "eligible": true
+    },
+    {
+      "name": "ephemeral-vrf-sdk-vrf-macro",
+      "version": "0.17.3",
+      "publishedAt": "2026-09-24T07:39:35.131926Z",
+      "source": "https://crates.io/api/v1/crates/ephemeral-vrf-sdk-vrf-macro/0.17.3",
+      "eligible": true
+    },
+    {
+      "name": "errno",
+      "version": "0.3.14",
+      "publishedAt": "2025-09-09T04:35:15.362504Z",
+      "source": "https://crates.io/api/v1/crates/errno/0.3.14",
+      "eligible": true
+    },
+    {
+      "name": "fastrand",
+      "version": "2.5.0",
+      "publishedAt": "2026-07-19T12:40:53.683020Z",
+      "source": "https://crates.io/api/v1/crates/fastrand/2.5.0",
+      "eligible": true
+    },
+    {
+      "name": "ff",
+      "version": "0.13.1",
+      "publishedAt": "2025-03-09T22:16:54.081723Z",
+      "source": "https://crates.io/api/v1/crates/ff/0.13.1",
+      "eligible": true
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.13",
+      "publishedAt": "2026-09-18T13:26:25.874635Z",
+      "source": "https://crates.io/api/v1/crates/find-msvc-tools/0.1.13",
+      "eligible": true
+    },
+    {
+      "name": "five8",
+      "version": "1.0.0",
+      "publishedAt": "2025-07-12T06:46:12.728051Z",
+      "source": "https://crates.io/api/v1/crates/five8/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "five8_const",
+      "version": "1.0.0",
+      "publishedAt": "2025-07-12T06:45:40.679378Z",
+      "source": "https://crates.io/api/v1/crates/five8_const/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "five8_core",
+      "version": "1.0.0",
+      "publishedAt": "2025-07-12T06:45:18.043752Z",
+      "source": "https://crates.io/api/v1/crates/five8_core/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "fnv",
+      "version": "1.0.7",
+      "publishedAt": "2020-05-14T16:06:29.223002Z",
+      "source": "https://crates.io/api/v1/crates/fnv/1.0.7",
+      "eligible": true
+    },
+    {
+      "name": "foreign-types",
+      "version": "0.3.2",
+      "publishedAt": "2017-11-28T23:17:39.115409Z",
+      "source": "https://crates.io/api/v1/crates/foreign-types/0.3.2",
+      "eligible": true
+    },
+    {
+      "name": "foreign-types-shared",
+      "version": "0.1.1",
+      "publishedAt": "2017-11-28T23:16:45.760735Z",
+      "source": "https://crates.io/api/v1/crates/foreign-types-shared/0.1.1",
+      "eligible": true
+    },
+    {
+      "name": "funty",
+      "version": "2.0.0",
+      "publishedAt": "2021-11-28T08:56:54.503319Z",
+      "source": "https://crates.io/api/v1/crates/funty/2.0.0",
+      "eligible": true
+    },
+    {
+      "name": "getrandom",
+      "version": "0.1.16",
+      "publishedAt": "2020-12-31T12:12:16.019881Z",
+      "source": "https://crates.io/api/v1/crates/getrandom/0.1.16",
+      "eligible": true
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "publishedAt": "2025-10-14T17:47:36.464125Z",
+      "source": "https://crates.io/api/v1/crates/getrandom/0.3.4",
+      "eligible": true
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3",
+      "publishedAt": "2026-06-17T18:01:59.979552Z",
+      "source": "https://crates.io/api/v1/crates/getrandom/0.4.3",
+      "eligible": true
+    },
+    {
+      "name": "glob",
+      "version": "0.3.4",
+      "publishedAt": "2026-07-21T14:53:49.688341Z",
+      "source": "https://crates.io/api/v1/crates/glob/0.3.4",
+      "eligible": true
+    },
+    {
+      "name": "group",
+      "version": "0.13.0",
+      "publishedAt": "2022-12-06T02:02:57.906653Z",
+      "source": "https://crates.io/api/v1/crates/group/0.13.0",
+      "eligible": true
+    },
+    {
+      "name": "hash32",
+      "version": "0.3.1",
+      "publishedAt": "2022-08-09T13:44:28.945620Z",
+      "source": "https://crates.io/api/v1/crates/hash32/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.15.5",
+      "publishedAt": "2025-08-07T23:58:32.116553Z",
+      "source": "https://crates.io/api/v1/crates/hashbrown/0.15.5",
+      "eligible": true
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "publishedAt": "2026-05-09T04:35:04.251Z",
+      "source": "https://crates.io/api/v1/crates/hashbrown/0.17.1",
+      "eligible": true
+    },
+    {
+      "name": "hermit-abi",
+      "version": "0.5.3",
+      "publishedAt": "2026-08-31T11:45:18.991301Z",
+      "source": "https://crates.io/api/v1/crates/hermit-abi/0.5.3",
+      "eligible": true
+    },
+    {
+      "name": "hmac",
+      "version": "0.12.1",
+      "publishedAt": "2022-02-17T10:50:37.938406Z",
+      "source": "https://crates.io/api/v1/crates/hmac/0.12.1",
+      "eligible": true
+    },
+    {
+      "name": "hmac",
+      "version": "0.8.1",
+      "publishedAt": "2020-06-24T14:21:24.057331Z",
+      "source": "https://crates.io/api/v1/crates/hmac/0.8.1",
+      "eligible": true
+    },
+    {
+      "name": "hmac-drbg",
+      "version": "0.3.0",
+      "publishedAt": "2020-06-15T02:27:43.953301Z",
+      "source": "https://crates.io/api/v1/crates/hmac-drbg/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.15",
+      "publishedAt": "2026-09-08T18:21:39.618460Z",
+      "source": "https://crates.io/api/v1/crates/hybrid-array/0.4.15",
+      "eligible": true
+    },
+    {
+      "name": "ident_case",
+      "version": "1.0.1",
+      "publishedAt": "2019-03-18T20:07:20.426691Z",
+      "source": "https://crates.io/api/v1/crates/ident_case/1.0.1",
+      "eligible": true
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.2",
+      "publishedAt": "2026-09-05T01:53:48.019655Z",
+      "source": "https://crates.io/api/v1/crates/indexmap/2.14.2",
+      "eligible": true
+    },
+    {
+      "name": "inout",
+      "version": "0.1.4",
+      "publishedAt": "2025-02-21T09:30:09.032605Z",
+      "source": "https://crates.io/api/v1/crates/inout/0.1.4",
+      "eligible": true
+    },
+    {
+      "name": "itertools",
+      "version": "0.10.5",
+      "publishedAt": "2022-09-20T14:32:39.012902Z",
+      "source": "https://crates.io/api/v1/crates/itertools/0.10.5",
+      "eligible": true
+    },
+    {
+      "name": "itertools",
+      "version": "0.12.1",
+      "publishedAt": "2024-01-29T18:04:02.909406Z",
+      "source": "https://crates.io/api/v1/crates/itertools/0.12.1",
+      "eligible": true
+    },
+    {
+      "name": "itertools",
+      "version": "0.13.0",
+      "publishedAt": "2024-05-16T15:37:32.015123Z",
+      "source": "https://crates.io/api/v1/crates/itertools/0.13.0",
+      "eligible": true
+    },
+    {
+      "name": "itertools",
+      "version": "0.14.0",
+      "publishedAt": "2024-12-31T12:32:06.925445Z",
+      "source": "https://crates.io/api/v1/crates/itertools/0.14.0",
+      "eligible": true
+    },
+    {
+      "name": "itertools",
+      "version": "0.15.0",
+      "publishedAt": "2026-06-16T15:09:28.880416Z",
+      "source": "https://crates.io/api/v1/crates/itertools/0.15.0",
+      "eligible": true
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.105",
+      "publishedAt": "2026-09-04T23:58:12.292107Z",
+      "source": "https://crates.io/api/v1/crates/js-sys/0.3.105",
+      "eligible": true
+    },
+    {
+      "name": "k256",
+      "version": "0.13.4",
+      "publishedAt": "2024-09-20T16:19:23.971287Z",
+      "source": "https://crates.io/api/v1/crates/k256/0.13.4",
+      "eligible": true
+    },
+    {
+      "name": "keccak",
+      "version": "0.1.6",
+      "publishedAt": "2026-02-13T17:56:37.644814Z",
+      "source": "https://crates.io/api/v1/crates/keccak/0.1.6",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1",
+      "version": "0.6.0",
+      "publishedAt": "2021-07-20T00:27:45.640302Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1/0.6.0",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1",
+      "version": "0.7.2",
+      "publishedAt": "2025-03-14T15:49:21.842379Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1/0.7.2",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-core",
+      "version": "0.2.2",
+      "publishedAt": "2021-07-20T00:26:16.613070Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-core/0.2.2",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-core",
+      "version": "0.3.0",
+      "publishedAt": "2021-09-17T11:18:22.532527Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-core/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-gen-ecmult",
+      "version": "0.2.1",
+      "publishedAt": "2021-07-20T00:26:53.527249Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-gen-ecmult/0.2.1",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-gen-ecmult",
+      "version": "0.3.0",
+      "publishedAt": "2021-09-17T11:18:52.039743Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-gen-ecmult/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-gen-genmult",
+      "version": "0.2.1",
+      "publishedAt": "2021-07-20T00:27:02.222033Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-gen-genmult/0.2.1",
+      "eligible": true
+    },
+    {
+      "name": "libsecp256k1-gen-genmult",
+      "version": "0.3.0",
+      "publishedAt": "2021-09-17T11:18:59.238452Z",
+      "source": "https://crates.io/api/v1/crates/libsecp256k1-gen-genmult/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "light-poseidon",
+      "version": "0.2.0",
+      "publishedAt": "2023-11-08T07:40:07.869355Z",
+      "source": "https://crates.io/api/v1/crates/light-poseidon/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "light-poseidon",
+      "version": "0.4.0",
+      "publishedAt": "2025-09-16T14:25:31.021558Z",
+      "source": "https://crates.io/api/v1/crates/light-poseidon/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "linux-raw-sys",
+      "version": "0.12.1",
+      "publishedAt": "2025-12-23T00:00:07.059646Z",
+      "source": "https://crates.io/api/v1/crates/linux-raw-sys/0.12.1",
+      "eligible": true
+    },
+    {
+      "name": "litesvm",
+      "version": "0.16.0",
+      "publishedAt": "2026-08-24T04:25:22.500682Z",
+      "source": "https://crates.io/api/v1/crates/litesvm/0.16.0",
+      "eligible": true
+    },
+    {
+      "name": "memoffset",
+      "version": "0.9.1",
+      "publishedAt": "2024-03-26T19:58:31.849513Z",
+      "source": "https://crates.io/api/v1/crates/memoffset/0.9.1",
+      "eligible": true
+    },
+    {
+      "name": "merlin",
+      "version": "3.0.0",
+      "publishedAt": "2021-01-28T20:43:26.299029Z",
+      "source": "https://crates.io/api/v1/crates/merlin/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "num",
+      "version": "0.2.1",
+      "publishedAt": "2020-01-10T04:16:04.687626Z",
+      "source": "https://crates.io/api/v1/crates/num/0.2.1",
+      "eligible": true
+    },
+    {
+      "name": "num_cpus",
+      "version": "1.17.0",
+      "publishedAt": "2025-05-30T18:59:42.537878Z",
+      "source": "https://crates.io/api/v1/crates/num_cpus/1.17.0",
+      "eligible": true
+    },
+    {
+      "name": "num_enum",
+      "version": "0.7.6",
+      "publishedAt": "2026-03-15T21:29:40.865699Z",
+      "source": "https://crates.io/api/v1/crates/num_enum/0.7.6",
+      "eligible": true
+    },
+    {
+      "name": "num_enum_derive",
+      "version": "0.7.6",
+      "publishedAt": "2026-03-15T21:29:38.220565Z",
+      "source": "https://crates.io/api/v1/crates/num_enum_derive/0.7.6",
+      "eligible": true
+    },
+    {
+      "name": "num-bigint",
+      "version": "0.2.6",
+      "publishedAt": "2020-01-27T19:59:26.442649Z",
+      "source": "https://crates.io/api/v1/crates/num-bigint/0.2.6",
+      "eligible": true
+    },
+    {
+      "name": "num-bigint",
+      "version": "0.4.8",
+      "publishedAt": "2026-07-05T01:20:47.603095Z",
+      "source": "https://crates.io/api/v1/crates/num-bigint/0.4.8",
+      "eligible": true
+    },
+    {
+      "name": "num-complex",
+      "version": "0.2.4",
+      "publishedAt": "2020-01-10T02:05:54.807473Z",
+      "source": "https://crates.io/api/v1/crates/num-complex/0.2.4",
+      "eligible": true
+    },
+    {
+      "name": "num-derive",
+      "version": "0.4.2",
+      "publishedAt": "2024-02-06T21:00:45.637968Z",
+      "source": "https://crates.io/api/v1/crates/num-derive/0.4.2",
+      "eligible": true
+    },
+    {
+      "name": "num-integer",
+      "version": "0.1.47",
+      "publishedAt": "2026-08-12T00:11:57.840357Z",
+      "source": "https://crates.io/api/v1/crates/num-integer/0.1.47",
+      "eligible": true
+    },
+    {
+      "name": "num-iter",
+      "version": "0.1.46",
+      "publishedAt": "2026-07-07T19:51:46.163752Z",
+      "source": "https://crates.io/api/v1/crates/num-iter/0.1.46",
+      "eligible": true
+    },
+    {
+      "name": "num-rational",
+      "version": "0.2.4",
+      "publishedAt": "2020-03-17T23:54:53.677005Z",
+      "source": "https://crates.io/api/v1/crates/num-rational/0.2.4",
+      "eligible": true
+    },
+    {
+      "name": "opaque-debug",
+      "version": "0.3.1",
+      "publishedAt": "2024-03-01T12:08:32.543535Z",
+      "source": "https://crates.io/api/v1/crates/opaque-debug/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "openssl",
+      "version": "0.10.81",
+      "publishedAt": "2026-06-12T18:11:18.530903Z",
+      "source": "https://crates.io/api/v1/crates/openssl/0.10.81",
+      "eligible": true
+    },
+    {
+      "name": "openssl-macros",
+      "version": "0.1.1",
+      "publishedAt": "2023-04-01T13:58:02.902200Z",
+      "source": "https://crates.io/api/v1/crates/openssl-macros/0.1.1",
+      "eligible": true
+    },
+    {
+      "name": "openssl-src",
+      "version": "300.6.1+3.6.3",
+      "publishedAt": "2026-06-09T14:26:26.688753Z",
+      "source": "https://crates.io/api/v1/crates/openssl-src/300.6.1+3.6.3",
+      "eligible": true
+    },
+    {
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "publishedAt": "2026-06-12T18:11:16.432719Z",
+      "source": "https://crates.io/api/v1/crates/openssl-sys/0.9.117",
+      "eligible": true
+    },
+    {
+      "name": "pairing",
+      "version": "0.23.0",
+      "publishedAt": "2022-12-06T02:34:59.231757Z",
+      "source": "https://crates.io/api/v1/crates/pairing/0.23.0",
+      "eligible": true
+    },
+    {
+      "name": "paste",
+      "version": "1.0.15",
+      "publishedAt": "2024-05-07T01:50:22.784771Z",
+      "source": "https://crates.io/api/v1/crates/paste/1.0.15",
+      "eligible": true
+    },
+    {
+      "name": "pastey",
+      "version": "0.2.3",
+      "publishedAt": "2026-05-20T05:43:36.527579Z",
+      "source": "https://crates.io/api/v1/crates/pastey/0.2.3",
+      "eligible": true
+    },
+    {
+      "name": "pbkdf2",
+      "version": "0.11.0",
+      "publishedAt": "2022-03-18T20:20:58.435402Z",
+      "source": "https://crates.io/api/v1/crates/pbkdf2/0.11.0",
+      "eligible": true
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "publishedAt": "2025-08-21T08:46:50.131801Z",
+      "source": "https://crates.io/api/v1/crates/percent-encoding/2.3.2",
+      "eligible": true
+    },
+    {
+      "name": "percentage",
+      "version": "0.1.0",
+      "publishedAt": "2019-09-12T13:16:30.232969Z",
+      "source": "https://crates.io/api/v1/crates/percentage/0.1.0",
+      "eligible": true
+    },
+    {
+      "name": "pkcs8",
+      "version": "0.10.2",
+      "publishedAt": "2023-04-05T00:01:55.909808Z",
+      "source": "https://crates.io/api/v1/crates/pkcs8/0.10.2",
+      "eligible": true
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "publishedAt": "2026-08-14T08:27:51.724149Z",
+      "source": "https://crates.io/api/v1/crates/pkg-config/0.3.34",
+      "eligible": true
+    },
+    {
+      "name": "polyval",
+      "version": "0.6.2",
+      "publishedAt": "2024-03-03T17:43:14.394476Z",
+      "source": "https://crates.io/api/v1/crates/polyval/0.6.2",
+      "eligible": true
+    },
+    {
+      "name": "ppv-lite86",
+      "version": "0.2.21",
+      "publishedAt": "2025-03-09T20:01:40.419162Z",
+      "source": "https://crates.io/api/v1/crates/ppv-lite86/0.2.21",
+      "eligible": true
+    },
+    {
+      "name": "proptest",
+      "version": "1.11.0",
+      "publishedAt": "2026-03-24T11:01:38.993611Z",
+      "source": "https://crates.io/api/v1/crates/proptest/1.11.0",
+      "eligible": true
+    },
+    {
+      "name": "qstring",
+      "version": "0.7.2",
+      "publishedAt": "2020-01-21T14:11:04.864344Z",
+      "source": "https://crates.io/api/v1/crates/qstring/0.7.2",
+      "eligible": true
+    },
+    {
+      "name": "qualifier_attr",
+      "version": "0.2.2",
+      "publishedAt": "2023-08-13T14:21:26.265725Z",
+      "source": "https://crates.io/api/v1/crates/qualifier_attr/0.2.2",
+      "eligible": true
+    },
+    {
+      "name": "quick-error",
+      "version": "1.2.3",
+      "publishedAt": "2020-01-02T20:56:38.589874Z",
+      "source": "https://crates.io/api/v1/crates/quick-error/1.2.3",
+      "eligible": true
+    },
+    {
+      "name": "r-efi",
+      "version": "5.3.0",
+      "publishedAt": "2025-06-17T09:12:38.227277Z",
+      "source": "https://crates.io/api/v1/crates/r-efi/5.3.0",
+      "eligible": true
+    },
+    {
+      "name": "r-efi",
+      "version": "6.0.0",
+      "publishedAt": "2026-02-03T09:53:46.251122Z",
+      "source": "https://crates.io/api/v1/crates/r-efi/6.0.0",
+      "eligible": true
+    },
+    {
+      "name": "radium",
+      "version": "0.7.0",
+      "publishedAt": "2021-11-10T20:29:10.529846Z",
+      "source": "https://crates.io/api/v1/crates/radium/0.7.0",
+      "eligible": true
+    },
+    {
+      "name": "rand",
+      "version": "0.7.3",
+      "publishedAt": "2020-01-10T21:46:21.337656Z",
+      "source": "https://crates.io/api/v1/crates/rand/0.7.3",
+      "eligible": true
+    },
+    {
+      "name": "rand",
+      "version": "0.8.8",
+      "publishedAt": "2026-08-25T07:45:50.786344Z",
+      "source": "https://crates.io/api/v1/crates/rand/0.8.8",
+      "eligible": true
+    },
+    {
+      "name": "rand",
+      "version": "0.9.5",
+      "publishedAt": "2026-07-11T11:16:46.750480Z",
+      "source": "https://crates.io/api/v1/crates/rand/0.9.5",
+      "eligible": true
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.2.2",
+      "publishedAt": "2020-03-10T10:48:56.508906Z",
+      "source": "https://crates.io/api/v1/crates/rand_chacha/0.2.2",
+      "eligible": true
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.3.1",
+      "publishedAt": "2021-06-09T19:46:38.636012Z",
+      "source": "https://crates.io/api/v1/crates/rand_chacha/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.9.0",
+      "publishedAt": "2025-01-27T13:38:26.609781Z",
+      "source": "https://crates.io/api/v1/crates/rand_chacha/0.9.0",
+      "eligible": true
+    },
+    {
+      "name": "rand_core",
+      "version": "0.5.1",
+      "publishedAt": "2019-08-28T11:51:48.451487Z",
+      "source": "https://crates.io/api/v1/crates/rand_core/0.5.1",
+      "eligible": true
+    },
+    {
+      "name": "rand_core",
+      "version": "0.9.5",
+      "publishedAt": "2026-01-13T09:22:22.780002Z",
+      "source": "https://crates.io/api/v1/crates/rand_core/0.9.5",
+      "eligible": true
+    },
+    {
+      "name": "rand_hc",
+      "version": "0.2.0",
+      "publishedAt": "2019-06-12T09:17:09.071128Z",
+      "source": "https://crates.io/api/v1/crates/rand_hc/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "rand_xorshift",
+      "version": "0.3.0",
+      "publishedAt": "2020-12-18T19:46:21.133573Z",
+      "source": "https://crates.io/api/v1/crates/rand_xorshift/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "rand_xorshift",
+      "version": "0.4.0",
+      "publishedAt": "2025-01-27T14:40:36.244226Z",
+      "source": "https://crates.io/api/v1/crates/rand_xorshift/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "rfc6979",
+      "version": "0.4.0",
+      "publishedAt": "2023-02-28T20:35:07.181292Z",
+      "source": "https://crates.io/api/v1/crates/rfc6979/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "rustc-demangle",
+      "version": "0.1.28",
+      "publishedAt": "2026-07-08T16:08:22.858292Z",
+      "source": "https://crates.io/api/v1/crates/rustc-demangle/0.1.28",
+      "eligible": true
+    },
+    {
+      "name": "rustix",
+      "version": "1.1.5",
+      "publishedAt": "2026-09-16T23:05:02.319690Z",
+      "source": "https://crates.io/api/v1/crates/rustix/1.1.5",
+      "eligible": true
+    },
+    {
+      "name": "rusty-fork",
+      "version": "0.3.1",
+      "publishedAt": "2025-10-04T22:48:23.194025Z",
+      "source": "https://crates.io/api/v1/crates/rusty-fork/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "sec1",
+      "version": "0.7.3",
+      "publishedAt": "2023-07-16T23:37:20.031224Z",
+      "source": "https://crates.io/api/v1/crates/sec1/0.7.3",
+      "eligible": true
+    },
+    {
+      "name": "serde_with",
+      "version": "3.23.0",
+      "publishedAt": "2026-09-07T23:03:03.817937Z",
+      "source": "https://crates.io/api/v1/crates/serde_with/3.23.0",
+      "eligible": true
+    },
+    {
+      "name": "serde_with_macros",
+      "version": "3.23.0",
+      "publishedAt": "2026-09-07T23:02:58.516992Z",
+      "source": "https://crates.io/api/v1/crates/serde_with_macros/3.23.0",
+      "eligible": true
+    },
+    {
+      "name": "sha2",
+      "version": "0.9.9",
+      "publishedAt": "2022-01-06T18:32:21.638830Z",
+      "source": "https://crates.io/api/v1/crates/sha2/0.9.9",
+      "eligible": true
+    },
+    {
+      "name": "sha2-const-stable",
+      "version": "0.1.0",
+      "publishedAt": "2024-01-18T05:51:36.007788Z",
+      "source": "https://crates.io/api/v1/crates/sha2-const-stable/0.1.0",
+      "eligible": true
+    },
+    {
+      "name": "sha3",
+      "version": "0.10.9",
+      "publishedAt": "2026-04-19T16:47:09.142031Z",
+      "source": "https://crates.io/api/v1/crates/sha3/0.10.9",
+      "eligible": true
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "publishedAt": "2026-05-17T18:56:12.775983Z",
+      "source": "https://crates.io/api/v1/crates/shlex/2.0.1",
+      "eligible": true
+    },
+    {
+      "name": "signature",
+      "version": "1.6.4",
+      "publishedAt": "2022-10-06T15:19:00.715544Z",
+      "source": "https://crates.io/api/v1/crates/signature/1.6.4",
+      "eligible": true
+    },
+    {
+      "name": "signature",
+      "version": "2.2.0",
+      "publishedAt": "2023-11-12T20:49:39.435224Z",
+      "source": "https://crates.io/api/v1/crates/signature/2.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-account",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T21:05:12.860779Z",
+      "source": "https://crates.io/api/v1/crates/solana-account/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-account",
+      "version": "4.3.2",
+      "publishedAt": "2026-08-07T20:06:15.886036Z",
+      "source": "https://crates.io/api/v1/crates/solana-account/4.3.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-account-info",
+      "version": "3.1.1",
+      "publishedAt": "2026-03-20T11:02:43.040211Z",
+      "source": "https://crates.io/api/v1/crates/solana-account-info/3.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-address",
+      "version": "1.1.0",
+      "publishedAt": "2025-11-06T11:48:07.715043Z",
+      "source": "https://crates.io/api/v1/crates/solana-address/1.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-address",
+      "version": "2.6.1",
+      "publishedAt": "2026-06-03T05:58:08.337505Z",
+      "source": "https://crates.io/api/v1/crates/solana-address/2.6.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-address-lookup-table-interface",
+      "version": "2.2.2",
+      "publishedAt": "2025-02-12T20:47:11.934830Z",
+      "source": "https://crates.io/api/v1/crates/solana-address-lookup-table-interface/2.2.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-address-lookup-table-interface",
+      "version": "3.1.0",
+      "publishedAt": "2026-04-07T18:52:39.251750Z",
+      "source": "https://crates.io/api/v1/crates/solana-address-lookup-table-interface/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-atomic-u64",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T15:02:02.888180Z",
+      "source": "https://crates.io/api/v1/crates/solana-atomic-u64/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-big-mod-exp",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T19:58:31.129173Z",
+      "source": "https://crates.io/api/v1/crates/solana-big-mod-exp/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-big-mod-exp",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T23:34:18.940404Z",
+      "source": "https://crates.io/api/v1/crates/solana-big-mod-exp/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-bincode",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:29:32.094918Z",
+      "source": "https://crates.io/api/v1/crates/solana-bincode/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-bincode",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-08T11:31:57.563658Z",
+      "source": "https://crates.io/api/v1/crates/solana-bincode/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-blake3-hasher",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:14:02.046630Z",
+      "source": "https://crates.io/api/v1/crates/solana-blake3-hasher/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-blake3-hasher",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-06T22:49:57.846611Z",
+      "source": "https://crates.io/api/v1/crates/solana-blake3-hasher/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-bls-signatures",
+      "version": "3.3.0",
+      "publishedAt": "2026-04-24T19:58:48.021159Z",
+      "source": "https://crates.io/api/v1/crates/solana-bls-signatures/3.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-bls12-381-syscall",
+      "version": "0.1.1",
+      "publishedAt": "2026-07-29T01:39:47.014170Z",
+      "source": "https://crates.io/api/v1/crates/solana-bls12-381-syscall/0.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-bn254",
+      "version": "3.2.1",
+      "publishedAt": "2026-01-14T23:11:14.872697Z",
+      "source": "https://crates.io/api/v1/crates/solana-bn254/3.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-borsh",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T19:44:09.035052Z",
+      "source": "https://crates.io/api/v1/crates/solana-borsh/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-borsh",
+      "version": "3.0.2",
+      "publishedAt": "2026-03-23T19:40:04.912021Z",
+      "source": "https://crates.io/api/v1/crates/solana-borsh/3.0.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-bpf-loader-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:38:13.425533Z",
+      "source": "https://crates.io/api/v1/crates/solana-bpf-loader-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-builtins",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:47:59.717875Z",
+      "source": "https://crates.io/api/v1/crates/solana-builtins/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-builtins-default-costs",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:26:39.953761Z",
+      "source": "https://crates.io/api/v1/crates/solana-builtins-default-costs/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-clock",
+      "version": "3.1.1",
+      "publishedAt": "2026-06-24T11:46:33.192279Z",
+      "source": "https://crates.io/api/v1/crates/solana-clock/3.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-compute-budget",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:26:13.396357Z",
+      "source": "https://crates.io/api/v1/crates/solana-compute-budget/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-compute-budget-instruction",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:35:57.691860Z",
+      "source": "https://crates.io/api/v1/crates/solana-compute-budget-instruction/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-compute-budget-interface",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-07T11:27:31.605331Z",
+      "source": "https://crates.io/api/v1/crates/solana-compute-budget-interface/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-compute-budget-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:31:37.603695Z",
+      "source": "https://crates.io/api/v1/crates/solana-compute-budget-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-cpi",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-07T00:05:55.050367Z",
+      "source": "https://crates.io/api/v1/crates/solana-cpi/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-curve25519",
+      "version": "2.3.13",
+      "publishedAt": "2025-10-10T18:39:28.049454Z",
+      "source": "https://crates.io/api/v1/crates/solana-curve25519/2.3.13",
+      "eligible": true
+    },
+    {
+      "name": "solana-curve25519",
+      "version": "4.0.1",
+      "publishedAt": "2026-05-19T17:51:27.939385Z",
+      "source": "https://crates.io/api/v1/crates/solana-curve25519/4.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-define-syscall",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T21:06:25.075919Z",
+      "source": "https://crates.io/api/v1/crates/solana-define-syscall/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-define-syscall",
+      "version": "4.0.1",
+      "publishedAt": "2025-11-01T00:07:42.454916Z",
+      "source": "https://crates.io/api/v1/crates/solana-define-syscall/4.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-define-syscall",
+      "version": "5.2.0",
+      "publishedAt": "2026-07-28T09:21:55.704401Z",
+      "source": "https://crates.io/api/v1/crates/solana-define-syscall/5.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-derivation-path",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T19:47:24.365240Z",
+      "source": "https://crates.io/api/v1/crates/solana-derivation-path/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-derivation-path",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T22:13:31.325062Z",
+      "source": "https://crates.io/api/v1/crates/solana-derivation-path/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-ed25519-program",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-07T11:31:22.231845Z",
+      "source": "https://crates.io/api/v1/crates/solana-ed25519-program/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-epoch-rewards",
+      "version": "3.1.0",
+      "publishedAt": "2026-06-24T15:31:29.001605Z",
+      "source": "https://crates.io/api/v1/crates/solana-epoch-rewards/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-epoch-schedule",
+      "version": "3.2.0",
+      "publishedAt": "2026-06-24T15:40:23.532611Z",
+      "source": "https://crates.io/api/v1/crates/solana-epoch-schedule/3.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-epoch-stake",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T21:17:36.564415Z",
+      "source": "https://crates.io/api/v1/crates/solana-epoch-stake/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-example-mocks",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T21:19:08.893864Z",
+      "source": "https://crates.io/api/v1/crates/solana-example-mocks/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-example-mocks",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-08T18:41:34.277753Z",
+      "source": "https://crates.io/api/v1/crates/solana-example-mocks/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-feature-gate-interface",
+      "version": "4.0.0",
+      "publishedAt": "2026-02-18T16:37:27.712422Z",
+      "source": "https://crates.io/api/v1/crates/solana-feature-gate-interface/4.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-fee",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:34:10.151271Z",
+      "source": "https://crates.io/api/v1/crates/solana-fee/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-fee-calculator",
+      "version": "3.2.2",
+      "publishedAt": "2026-06-16T20:11:23.636696Z",
+      "source": "https://crates.io/api/v1/crates/solana-fee-calculator/3.2.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-fee-structure",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-07T09:17:34.739545Z",
+      "source": "https://crates.io/api/v1/crates/solana-fee-structure/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-get-sysvar",
+      "version": "1.0.0",
+      "publishedAt": "2026-06-23T22:13:59.889756Z",
+      "source": "https://crates.io/api/v1/crates/solana-get-sysvar/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-hash",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-05T13:48:52.785155Z",
+      "source": "https://crates.io/api/v1/crates/solana-hash/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-hash",
+      "version": "4.5.0",
+      "publishedAt": "2026-07-09T15:39:22.509493Z",
+      "source": "https://crates.io/api/v1/crates/solana-hash/4.5.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-hash-512",
+      "version": "1.1.0",
+      "publishedAt": "2026-04-15T15:16:15.634555Z",
+      "source": "https://crates.io/api/v1/crates/solana-hash-512/1.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-instruction",
+      "version": "3.4.1",
+      "publishedAt": "2026-08-07T20:01:12.128133Z",
+      "source": "https://crates.io/api/v1/crates/solana-instruction/3.4.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-instruction-error",
+      "version": "2.4.0",
+      "publishedAt": "2026-06-25T09:11:35.860460Z",
+      "source": "https://crates.io/api/v1/crates/solana-instruction-error/2.4.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-instructions-sysvar",
+      "version": "3.0.1",
+      "publishedAt": "2026-05-20T11:48:28.724671Z",
+      "source": "https://crates.io/api/v1/crates/solana-instructions-sysvar/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-instructions-sysvar",
+      "version": "4.0.0",
+      "publishedAt": "2026-06-24T16:07:57.856316Z",
+      "source": "https://crates.io/api/v1/crates/solana-instructions-sysvar/4.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-keccak-hasher",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:15:08.562587Z",
+      "source": "https://crates.io/api/v1/crates/solana-keccak-hasher/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-keccak-hasher",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-06T22:58:15.113860Z",
+      "source": "https://crates.io/api/v1/crates/solana-keccak-hasher/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-keypair",
+      "version": "3.1.2",
+      "publishedAt": "2026-02-24T21:15:23.541591Z",
+      "source": "https://crates.io/api/v1/crates/solana-keypair/3.1.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-last-restart-slot",
+      "version": "3.1.0",
+      "publishedAt": "2026-06-24T15:34:50.126903Z",
+      "source": "https://crates.io/api/v1/crates/solana-last-restart-slot/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v2-interface",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:32:47.616122Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v2-interface/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v3-interface",
+      "version": "5.0.0",
+      "publishedAt": "2025-05-14T11:25:27.266171Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v3-interface/5.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v3-interface",
+      "version": "7.0.0",
+      "publishedAt": "2026-04-10T03:12:44.610059Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v3-interface/7.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v3-interface",
+      "version": "8.0.1",
+      "publishedAt": "2026-04-21T10:27:20.555015Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v3-interface/8.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v4-interface",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:35:00.465957Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v4-interface/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-loader-v4-interface",
+      "version": "3.1.0",
+      "publishedAt": "2025-08-12T18:12:16.179940Z",
+      "source": "https://crates.io/api/v1/crates/solana-loader-v4-interface/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-message",
+      "version": "2.4.0",
+      "publishedAt": "2025-05-16T18:15:05.055769Z",
+      "source": "https://crates.io/api/v1/crates/solana-message/2.4.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-message",
+      "version": "3.1.0",
+      "publishedAt": "2026-02-04T01:04:28.972982Z",
+      "source": "https://crates.io/api/v1/crates/solana-message/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-message",
+      "version": "4.4.1",
+      "publishedAt": "2026-08-07T20:10:56.842983Z",
+      "source": "https://crates.io/api/v1/crates/solana-message/4.4.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-msg",
+      "version": "3.1.0",
+      "publishedAt": "2026-02-18T17:31:23.014921Z",
+      "source": "https://crates.io/api/v1/crates/solana-msg/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-native-token",
+      "version": "2.3.0",
+      "publishedAt": "2025-06-04T21:52:49.769401Z",
+      "source": "https://crates.io/api/v1/crates/solana-native-token/2.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-native-token",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T22:47:20.198859Z",
+      "source": "https://crates.io/api/v1/crates/solana-native-token/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-nonce",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:57:14.365201Z",
+      "source": "https://crates.io/api/v1/crates/solana-nonce/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-nonce",
+      "version": "3.2.1",
+      "publishedAt": "2026-07-20T07:09:12.123189Z",
+      "source": "https://crates.io/api/v1/crates/solana-nonce/3.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-nonce-account",
+      "version": "4.1.1",
+      "publishedAt": "2026-07-15T18:03:37.159230Z",
+      "source": "https://crates.io/api/v1/crates/solana-nonce-account/4.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-packet",
+      "version": "4.2.0",
+      "publishedAt": "2026-07-09T06:52:54.652603Z",
+      "source": "https://crates.io/api/v1/crates/solana-packet/4.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-poseidon",
+      "version": "4.0.0",
+      "publishedAt": "2026-01-11T01:20:48.178676Z",
+      "source": "https://crates.io/api/v1/crates/solana-poseidon/4.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-precompile-error",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T22:59:20.050835Z",
+      "source": "https://crates.io/api/v1/crates/solana-precompile-error/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program",
+      "version": "2.3.0",
+      "publishedAt": "2025-06-06T12:05:00.211884Z",
+      "source": "https://crates.io/api/v1/crates/solana-program/2.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-11T12:32:40.813996Z",
+      "source": "https://crates.io/api/v1/crates/solana-program/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-entrypoint",
+      "version": "3.1.1",
+      "publishedAt": "2025-11-07T18:14:39.874070Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-entrypoint/3.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-error",
+      "version": "3.0.1",
+      "publishedAt": "2026-03-23T20:17:33.251440Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-error/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-memory",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-07T10:08:48.128004Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-memory/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-option",
+      "version": "3.1.0",
+      "publishedAt": "2026-03-19T12:35:17.343466Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-option/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-pack",
+      "version": "3.1.0",
+      "publishedAt": "2026-02-18T17:38:25.525549Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-pack/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-program-runtime",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:17:55.610916Z",
+      "source": "https://crates.io/api/v1/crates/solana-program-runtime/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-pubkey",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-07T10:22:20.163458Z",
+      "source": "https://crates.io/api/v1/crates/solana-pubkey/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-pubkey",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-07T19:56:25.569456Z",
+      "source": "https://crates.io/api/v1/crates/solana-pubkey/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-rent",
+      "version": "3.1.0",
+      "publishedAt": "2025-12-05T00:04:29.771976Z",
+      "source": "https://crates.io/api/v1/crates/solana-rent/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-rent",
+      "version": "4.3.0",
+      "publishedAt": "2026-06-24T15:42:43.720275Z",
+      "source": "https://crates.io/api/v1/crates/solana-rent/4.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-runtime-transaction",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:45:36.912635Z",
+      "source": "https://crates.io/api/v1/crates/solana-runtime-transaction/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-sanitize",
+      "version": "3.0.1",
+      "publishedAt": "2025-08-27T17:22:52.519357Z",
+      "source": "https://crates.io/api/v1/crates/solana-sanitize/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-sbpf",
+      "version": "0.21.1",
+      "publishedAt": "2026-06-24T07:52:19.530686Z",
+      "source": "https://crates.io/api/v1/crates/solana-sbpf/0.21.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-sdk-ids",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-11T23:15:09.443802Z",
+      "source": "https://crates.io/api/v1/crates/solana-sdk-ids/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-sdk-macro",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T15:19:32.587884Z",
+      "source": "https://crates.io/api/v1/crates/solana-sdk-macro/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-secp256k1-program",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T23:23:23.984157Z",
+      "source": "https://crates.io/api/v1/crates/solana-secp256k1-program/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-secp256k1-recover",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:11:48.078858Z",
+      "source": "https://crates.io/api/v1/crates/solana-secp256k1-recover/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-secp256k1-recover",
+      "version": "3.3.0",
+      "publishedAt": "2026-07-28T21:30:02.057400Z",
+      "source": "https://crates.io/api/v1/crates/solana-secp256k1-recover/3.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-secp256r1-program",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-07T12:04:24.825985Z",
+      "source": "https://crates.io/api/v1/crates/solana-secp256r1-program/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-security-txt",
+      "version": "1.1.3",
+      "publishedAt": "2026-05-15T08:11:24.726242Z",
+      "source": "https://crates.io/api/v1/crates/solana-security-txt/1.1.3",
+      "eligible": true
+    },
+    {
+      "name": "solana-seed-derivable",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:01:54.859358Z",
+      "source": "https://crates.io/api/v1/crates/solana-seed-derivable/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-seed-derivable",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T23:39:38.704525Z",
+      "source": "https://crates.io/api/v1/crates/solana-seed-derivable/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-seed-phrase",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T19:48:29.027973Z",
+      "source": "https://crates.io/api/v1/crates/solana-seed-phrase/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-seed-phrase",
+      "version": "3.0.0",
+      "publishedAt": "2025-08-06T22:17:02.754744Z",
+      "source": "https://crates.io/api/v1/crates/solana-seed-phrase/3.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-serde-varint",
+      "version": "2.2.2",
+      "publishedAt": "2025-05-16T13:52:41.548826Z",
+      "source": "https://crates.io/api/v1/crates/solana-serde-varint/2.2.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-serde-varint",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T20:12:26.217431Z",
+      "source": "https://crates.io/api/v1/crates/solana-serde-varint/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-serialize-utils",
+      "version": "3.1.2",
+      "publishedAt": "2026-05-19T21:19:00.087146Z",
+      "source": "https://crates.io/api/v1/crates/solana-serialize-utils/3.1.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-sha256-hasher",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-06T22:32:36.731680Z",
+      "source": "https://crates.io/api/v1/crates/solana-sha256-hasher/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-sha512-hasher",
+      "version": "1.0.1",
+      "publishedAt": "2026-04-16T09:31:03.325003Z",
+      "source": "https://crates.io/api/v1/crates/solana-sha512-hasher/1.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-short-vec",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:06:17.730621Z",
+      "source": "https://crates.io/api/v1/crates/solana-short-vec/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-short-vec",
+      "version": "3.2.2",
+      "publishedAt": "2026-06-08T10:02:20.028315Z",
+      "source": "https://crates.io/api/v1/crates/solana-short-vec/3.2.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-signature",
+      "version": "2.3.0",
+      "publishedAt": "2025-05-16T16:19:20.925276Z",
+      "source": "https://crates.io/api/v1/crates/solana-signature/2.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-signature",
+      "version": "3.4.1",
+      "publishedAt": "2026-06-04T05:27:02.262066Z",
+      "source": "https://crates.io/api/v1/crates/solana-signature/3.4.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-signer",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:44:58.209720Z",
+      "source": "https://crates.io/api/v1/crates/solana-signer/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-signer",
+      "version": "3.0.1",
+      "publishedAt": "2026-06-08T10:17:14.832537Z",
+      "source": "https://crates.io/api/v1/crates/solana-signer/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-slot-hashes",
+      "version": "3.1.0",
+      "publishedAt": "2026-06-24T15:36:43.288842Z",
+      "source": "https://crates.io/api/v1/crates/solana-slot-hashes/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-slot-history",
+      "version": "3.1.0",
+      "publishedAt": "2026-06-24T15:38:11.034811Z",
+      "source": "https://crates.io/api/v1/crates/solana-slot-history/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-stable-layout",
+      "version": "3.0.1",
+      "publishedAt": "2026-02-18T23:09:07.425165Z",
+      "source": "https://crates.io/api/v1/crates/solana-stable-layout/3.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-stake-history",
+      "version": "1.0.0",
+      "publishedAt": "2026-06-24T15:46:11.022871Z",
+      "source": "https://crates.io/api/v1/crates/solana-stake-history/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-stake-interface",
+      "version": "4.3.0",
+      "publishedAt": "2026-06-25T22:43:06.402621Z",
+      "source": "https://crates.io/api/v1/crates/solana-stake-interface/4.3.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-callback",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:03:44.920525Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-callback/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-feature-set",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T18:59:42.523820Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-feature-set/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-log-collector",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:04:25.051255Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-log-collector/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-measure",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:04:48.660462Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-measure/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-timings",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:05:14.333786Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-timings/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-transaction",
+      "version": "4.2.0",
+      "publishedAt": "2026-06-10T11:29:05.258450Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-transaction/4.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-svm-type-overrides",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T18:58:41.892648Z",
+      "source": "https://crates.io/api/v1/crates/solana-svm-type-overrides/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-syscalls",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:32:45.614484Z",
+      "source": "https://crates.io/api/v1/crates/solana-syscalls/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-system-interface",
+      "version": "2.0.0",
+      "publishedAt": "2025-08-08T08:45:22.777862Z",
+      "source": "https://crates.io/api/v1/crates/solana-system-interface/2.0.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-system-interface",
+      "version": "3.2.0",
+      "publishedAt": "2026-04-07T18:43:18.249064Z",
+      "source": "https://crates.io/api/v1/crates/solana-system-interface/3.2.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-system-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:29:31.037684Z",
+      "source": "https://crates.io/api/v1/crates/solana-system-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-sysvar",
+      "version": "3.1.1",
+      "publishedAt": "2025-11-26T20:58:46.978917Z",
+      "source": "https://crates.io/api/v1/crates/solana-sysvar/3.1.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-sysvar",
+      "version": "4.1.0",
+      "publishedAt": "2026-06-26T12:13:23.931537Z",
+      "source": "https://crates.io/api/v1/crates/solana-sysvar/4.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-sysvar-id",
+      "version": "3.1.0",
+      "publishedAt": "2025-11-11T23:33:16.396322Z",
+      "source": "https://crates.io/api/v1/crates/solana-sysvar-id/3.1.0",
+      "eligible": true
+    },
+    {
+      "name": "solana-transaction",
+      "version": "4.1.6",
+      "publishedAt": "2026-08-07T20:25:53.470299Z",
+      "source": "https://crates.io/api/v1/crates/solana-transaction/4.1.6",
+      "eligible": true
+    },
+    {
+      "name": "solana-transaction-context",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T18:59:10.036601Z",
+      "source": "https://crates.io/api/v1/crates/solana-transaction-context/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-transaction-error",
+      "version": "2.2.1",
+      "publishedAt": "2025-02-12T20:36:06.148210Z",
+      "source": "https://crates.io/api/v1/crates/solana-transaction-error/2.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-transaction-error",
+      "version": "3.3.2",
+      "publishedAt": "2026-08-07T19:45:47.178356Z",
+      "source": "https://crates.io/api/v1/crates/solana-transaction-error/3.3.2",
+      "eligible": true
+    },
+    {
+      "name": "solana-vote-interface",
+      "version": "2.2.6",
+      "publishedAt": "2025-07-15T11:58:27.078932Z",
+      "source": "https://crates.io/api/v1/crates/solana-vote-interface/2.2.6",
+      "eligible": true
+    },
+    {
+      "name": "solana-vote-interface",
+      "version": "6.0.3",
+      "publishedAt": "2026-07-02T07:38:09.374675Z",
+      "source": "https://crates.io/api/v1/crates/solana-vote-interface/6.0.3",
+      "eligible": true
+    },
+    {
+      "name": "solana-vote-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:28:44.829360Z",
+      "source": "https://crates.io/api/v1/crates/solana-vote-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-zk-elgamal-proof-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:33:18.639679Z",
+      "source": "https://crates.io/api/v1/crates/solana-zk-elgamal-proof-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-zk-sdk",
+      "version": "2.3.13",
+      "publishedAt": "2025-10-10T18:40:12.568819Z",
+      "source": "https://crates.io/api/v1/crates/solana-zk-sdk/2.3.13",
+      "eligible": true
+    },
+    {
+      "name": "solana-zk-sdk",
+      "version": "5.0.1",
+      "publishedAt": "2026-02-11T13:54:36.271254Z",
+      "source": "https://crates.io/api/v1/crates/solana-zk-sdk/5.0.1",
+      "eligible": true
+    },
+    {
+      "name": "solana-zk-token-proof-program",
+      "version": "4.2.1",
+      "publishedAt": "2026-08-13T19:33:43.500349Z",
+      "source": "https://crates.io/api/v1/crates/solana-zk-token-proof-program/4.2.1",
+      "eligible": true
+    },
+    {
+      "name": "spki",
+      "version": "0.7.3",
+      "publishedAt": "2023-11-28T19:35:46.555229Z",
+      "source": "https://crates.io/api/v1/crates/spki/0.7.3",
+      "eligible": true
+    },
+    {
+      "name": "spl-associated-token-account",
+      "version": "7.0.0",
+      "publishedAt": "2025-04-30T21:10:58.466455Z",
+      "source": "https://crates.io/api/v1/crates/spl-associated-token-account/7.0.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-associated-token-account-client",
+      "version": "2.0.0",
+      "publishedAt": "2024-11-01T14:18:32.555456Z",
+      "source": "https://crates.io/api/v1/crates/spl-associated-token-account-client/2.0.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-discriminator",
+      "version": "0.4.1",
+      "publishedAt": "2024-12-16T20:53:00.064554Z",
+      "source": "https://crates.io/api/v1/crates/spl-discriminator/0.4.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-discriminator-derive",
+      "version": "0.2.0",
+      "publishedAt": "2024-03-28T22:06:24.600859Z",
+      "source": "https://crates.io/api/v1/crates/spl-discriminator-derive/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-discriminator-syn",
+      "version": "0.2.1",
+      "publishedAt": "2025-08-11T18:00:25.487309Z",
+      "source": "https://crates.io/api/v1/crates/spl-discriminator-syn/0.2.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-elgamal-registry",
+      "version": "0.2.0",
+      "publishedAt": "2025-03-26T18:04:20.221247Z",
+      "source": "https://crates.io/api/v1/crates/spl-elgamal-registry/0.2.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-memo",
+      "version": "6.0.0",
+      "publishedAt": "2024-11-01T12:10:15.082907Z",
+      "source": "https://crates.io/api/v1/crates/spl-memo/6.0.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-pod",
+      "version": "0.5.1",
+      "publishedAt": "2025-03-04T22:32:25.662081Z",
+      "source": "https://crates.io/api/v1/crates/spl-pod/0.5.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-program-error",
+      "version": "0.7.0",
+      "publishedAt": "2025-03-06T12:36:18.886217Z",
+      "source": "https://crates.io/api/v1/crates/spl-program-error/0.7.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-program-error-derive",
+      "version": "0.5.0",
+      "publishedAt": "2025-03-06T12:16:46.211723Z",
+      "source": "https://crates.io/api/v1/crates/spl-program-error-derive/0.5.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-tlv-account-resolution",
+      "version": "0.10.0",
+      "publishedAt": "2025-03-06T12:55:06.026735Z",
+      "source": "https://crates.io/api/v1/crates/spl-tlv-account-resolution/0.10.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-token",
+      "version": "8.0.0",
+      "publishedAt": "2025-03-24T22:26:13.318631Z",
+      "source": "https://crates.io/api/v1/crates/spl-token/8.0.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-2022",
+      "version": "8.0.1",
+      "publishedAt": "2025-04-04T13:00:19.345422Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-2022/8.0.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-confidential-transfer-ciphertext-arithmetic",
+      "version": "0.3.1",
+      "publishedAt": "2025-08-12T14:04:17.262482Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-confidential-transfer-ciphertext-arithmetic/0.3.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-confidential-transfer-proof-extraction",
+      "version": "0.3.0",
+      "publishedAt": "2025-03-26T17:25:47.434877Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-confidential-transfer-proof-extraction/0.3.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-confidential-transfer-proof-generation",
+      "version": "0.4.1",
+      "publishedAt": "2025-08-12T13:07:54.313334Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-confidential-transfer-proof-generation/0.4.1",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-group-interface",
+      "version": "0.6.0",
+      "publishedAt": "2025-03-24T22:19:42.583346Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-group-interface/0.6.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-token-metadata-interface",
+      "version": "0.7.0",
+      "publishedAt": "2025-03-24T22:27:39.483662Z",
+      "source": "https://crates.io/api/v1/crates/spl-token-metadata-interface/0.7.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-transfer-hook-interface",
+      "version": "0.10.0",
+      "publishedAt": "2025-03-24T22:29:37.914339Z",
+      "source": "https://crates.io/api/v1/crates/spl-transfer-hook-interface/0.10.0",
+      "eligible": true
+    },
+    {
+      "name": "spl-type-length-value",
+      "version": "0.8.0",
+      "publishedAt": "2025-03-06T12:45:49.966569Z",
+      "source": "https://crates.io/api/v1/crates/spl-type-length-value/0.8.0",
+      "eligible": true
+    },
+    {
+      "name": "strsim",
+      "version": "0.11.1",
+      "publishedAt": "2024-04-02T22:18:09.406790Z",
+      "source": "https://crates.io/api/v1/crates/strsim/0.11.1",
+      "eligible": true
+    },
+    {
+      "name": "tap",
+      "version": "1.0.1",
+      "publishedAt": "2021-02-13T02:43:25.525644Z",
+      "source": "https://crates.io/api/v1/crates/tap/1.0.1",
+      "eligible": true
+    },
+    {
+      "name": "tempfile",
+      "version": "3.27.0",
+      "publishedAt": "2026-03-11T00:20:04.812840Z",
+      "source": "https://crates.io/api/v1/crates/tempfile/3.27.0",
+      "eligible": true
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.21",
+      "publishedAt": "2026-09-23T20:24:07.771104Z",
+      "source": "https://crates.io/api/v1/crates/thiserror/2.0.21",
+      "eligible": true
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.21",
+      "publishedAt": "2026-09-23T20:24:05.038819Z",
+      "source": "https://crates.io/api/v1/crates/thiserror-impl/2.0.21",
+      "eligible": true
+    },
+    {
+      "name": "threadpool",
+      "version": "1.8.1",
+      "publishedAt": "2020-05-11T15:44:07.541079Z",
+      "source": "https://crates.io/api/v1/crates/threadpool/1.8.1",
+      "eligible": true
+    },
+    {
+      "name": "unarray",
+      "version": "0.1.4",
+      "publishedAt": "2022-11-30T17:09:42.916530Z",
+      "source": "https://crates.io/api/v1/crates/unarray/0.1.4",
+      "eligible": true
+    },
+    {
+      "name": "universal-hash",
+      "version": "0.5.1",
+      "publishedAt": "2023-05-19T15:25:05.990069Z",
+      "source": "https://crates.io/api/v1/crates/universal-hash/0.5.1",
+      "eligible": true
+    },
+    {
+      "name": "unreachable",
+      "version": "1.0.0",
+      "publishedAt": "2017-05-09T20:54:44.587632Z",
+      "source": "https://crates.io/api/v1/crates/unreachable/1.0.0",
+      "eligible": true
+    },
+    {
+      "name": "uriparse",
+      "version": "0.6.4",
+      "publishedAt": "2022-03-18T21:29:43.314139Z",
+      "source": "https://crates.io/api/v1/crates/uriparse/0.6.4",
+      "eligible": true
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "publishedAt": "2021-06-19T16:35:46.573605Z",
+      "source": "https://crates.io/api/v1/crates/vcpkg/0.2.15",
+      "eligible": true
+    },
+    {
+      "name": "void",
+      "version": "1.0.2",
+      "publishedAt": "2016-04-18T07:21:21.674123Z",
+      "source": "https://crates.io/api/v1/crates/void/1.0.2",
+      "eligible": true
+    },
+    {
+      "name": "wait-timeout",
+      "version": "0.2.1",
+      "publishedAt": "2025-02-03T12:22:33.904538Z",
+      "source": "https://crates.io/api/v1/crates/wait-timeout/0.2.1",
+      "eligible": true
+    },
+    {
+      "name": "wasi",
+      "version": "0.9.0+wasi-snapshot-preview1",
+      "publishedAt": "2019-12-02T16:14:46.160830Z",
+      "source": "https://crates.io/api/v1/crates/wasi/0.9.0+wasi-snapshot-preview1",
+      "eligible": true
+    },
+    {
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "publishedAt": "2026-06-12T17:42:43.116313Z",
+      "source": "https://crates.io/api/v1/crates/wasip2/1.0.4+wasi-0.2.12",
+      "eligible": true
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.128",
+      "publishedAt": "2026-09-04T23:58:10.332542Z",
+      "source": "https://crates.io/api/v1/crates/wasm-bindgen/0.2.128",
+      "eligible": true
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.128",
+      "publishedAt": "2026-09-04T23:58:08.518928Z",
+      "source": "https://crates.io/api/v1/crates/wasm-bindgen-macro/0.2.128",
+      "eligible": true
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.128",
+      "publishedAt": "2026-09-04T23:58:06.417383Z",
+      "source": "https://crates.io/api/v1/crates/wasm-bindgen-macro-support/0.2.128",
+      "eligible": true
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.128",
+      "publishedAt": "2026-09-04T23:58:03.129200Z",
+      "source": "https://crates.io/api/v1/crates/wasm-bindgen-shared/0.2.128",
+      "eligible": true
+    },
+    {
+      "name": "web-sys",
+      "version": "0.3.105",
+      "publishedAt": "2026-09-04T23:58:14.724782Z",
+      "source": "https://crates.io/api/v1/crates/web-sys/0.3.105",
+      "eligible": true
+    },
+    {
+      "name": "winapi",
+      "version": "0.3.9",
+      "publishedAt": "2020-06-26T11:34:33.480855Z",
+      "source": "https://crates.io/api/v1/crates/winapi/0.3.9",
+      "eligible": true
+    },
+    {
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0",
+      "publishedAt": "2018-01-18T00:55:38.910834Z",
+      "source": "https://crates.io/api/v1/crates/winapi-i686-pc-windows-gnu/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0",
+      "publishedAt": "2018-01-18T00:55:12.008307Z",
+      "source": "https://crates.io/api/v1/crates/winapi-x86_64-pc-windows-gnu/0.4.0",
+      "eligible": true
+    },
+    {
+      "name": "wincode",
+      "version": "0.5.5",
+      "publishedAt": "2026-05-27T19:30:46.625339Z",
+      "source": "https://crates.io/api/v1/crates/wincode/0.5.5",
+      "eligible": true
+    },
+    {
+      "name": "wincode-derive",
+      "version": "0.4.6",
+      "publishedAt": "2026-05-27T05:51:55.514193Z",
+      "source": "https://crates.io/api/v1/crates/wincode-derive/0.4.6",
+      "eligible": true
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "publishedAt": "2025-10-06T19:18:30.163595Z",
+      "source": "https://crates.io/api/v1/crates/windows-sys/0.61.2",
+      "eligible": true
+    },
+    {
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "publishedAt": "2026-04-17T17:49:55.029832Z",
+      "source": "https://crates.io/api/v1/crates/wit-bindgen/0.57.1",
+      "eligible": true
+    },
+    {
+      "name": "wyz",
+      "version": "0.5.1",
+      "publishedAt": "2022-11-16T04:53:04.577803Z",
+      "source": "https://crates.io/api/v1/crates/wyz/0.5.1",
+      "eligible": true
+    },
+    {
+      "name": "zeroize_derive",
+      "version": "1.5.0",
+      "publishedAt": "2026-06-12T18:21:55.086967Z",
+      "source": "https://crates.io/api/v1/crates/zeroize_derive/1.5.0",
+      "eligible": true
+    }
+  ]
+}

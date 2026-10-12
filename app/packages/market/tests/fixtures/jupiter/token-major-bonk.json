@@ -1,0 +1,118 @@
+{
+  "recordedAt": "2026-10-08T18:42:43.685Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/tokens/v2/search?query=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484964"
+    },
+    "body": [
+      {
+        "id": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "name": "Bonk",
+        "symbol": "Bonk",
+        "icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
+        "decimals": 5,
+        "dev": "9AhKqLR67hwapvG8SA2JFXaCshXc9nALJjpKaHZrsbkw",
+        "circSupply": 87994365813757.31,
+        "totalSupply": 87994365813757.31,
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "holderCount": 1025717,
+        "fdv": 282267992.7048367,
+        "mcap": 282267992.7048367,
+        "usdPrice": 0.0000032077962048418565,
+        "priceBlockId": 454628015,
+        "liquidity": 5029409.177158307,
+        "stats5m": {
+          "priceChange": 0.04110672143082661,
+          "holderChange": -0.00019498517625197545,
+          "liquidityChange": -1.9545464631338765,
+          "volumeChange": -28.67130647512779,
+          "buyVolume": 995.0034508997878,
+          "sellVolume": 874.0844749961554,
+          "buyOrganicVolume": 170.90655407916597,
+          "sellOrganicVolume": 119.21079204856495,
+          "numBuys": 71,
+          "numSells": 67,
+          "numTraders": 47,
+          "numOrganicBuyers": 6,
+          "numNetBuyers": 9
+        },
+        "stats1h": {
+          "priceChange": 1.6319745549880853,
+          "holderChange": 0.0001949859366393199,
+          "liquidityChange": 4.78230599601373,
+          "volumeChange": -28.848125320127544,
+          "buyVolume": 77413.09175424422,
+          "sellVolume": 64216.39619942851,
+          "buyOrganicVolume": 7266.919243464313,
+          "sellOrganicVolume": 2681.958833974556,
+          "numBuys": 1827,
+          "numSells": 1725,
+          "numTraders": 425,
+          "numOrganicBuyers": 10,
+          "numNetBuyers": 95
+        },
+        "stats6h": {
+          "priceChange": -5.5024729504598655,
+          "holderChange": 0.006239927148850536,
+          "liquidityChange": 5.260168789513991,
+          "volumeChange": 149.3820819273553,
+          "buyVolume": 544978.3444526859,
+          "sellVolume": 562033.0957127563,
+          "buyOrganicVolume": 67330.23974445232,
+          "sellOrganicVolume": 94093.70306527239,
+          "numBuys": 15022,
+          "numSells": 15727,
+          "numTraders": 1989,
+          "numOrganicBuyers": 60,
+          "numNetBuyers": 590
+        },
+        "stats24h": {
+          "priceChange": -6.673222638441985,
+          "holderChange": 0.0073124930531316,
+          "liquidityChange": -18.459202226395654,
+          "volumeChange": 23.137963763251673,
+          "buyVolume": 1149015.085434875,
+          "sellVolume": 1032126.935440768,
+          "buyOrganicVolume": 226208.96637777417,
+          "sellOrganicVolume": 137806.70155877736,
+          "numBuys": 33817,
+          "numSells": 34727,
+          "numTraders": 5017,
+          "numOrganicBuyers": 133,
+          "numNetBuyers": 1393
+        },
+        "firstPool": {
+          "id": "GBMoNx84HsFdVK63t8BZuDgyZhSBaeKWB4pHHpoeRM9z",
+          "createdAt": "2023-05-11T17:09:10Z"
+        },
+        "audit": {
+          "mintAuthorityDisabled": true,
+          "freezeAuthorityDisabled": true,
+          "topHoldersPercentage": 30.610827503412203,
+          "devBalancePercentage": 1.660127472697361e-7,
+          "devMints": 10
+        },
+        "organicScore": 92.36376439406871,
+        "organicScoreLabel": "high",
+        "isVerified": true,
+        "tags": [
+          "birdeye-trending",
+          "community",
+          "moonshot-verified",
+          "strict",
+          "verified",
+          "meme"
+        ],
+        "createdAt": "2024-06-07T10:26:40.709Z",
+        "updatedAt": "2026-10-08T18:42:40.896260326Z"
+      }
+    ]
+  }
+}

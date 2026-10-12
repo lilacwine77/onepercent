@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "evidence_settings_version": 2,
+  "studio": {
+    "presentation": "dark",
+    "floor_color": [
+      0.009,
+      0.012,
+      0.018,
+      1.0
+    ],
+    "light_powers": [
+      7055.999359130874,
+      2822.3997436523496,
+      10583.99903869631
+    ],
+    "camera_distance": 9.659999561309814,
+    "ortho_scale": 6.089999723434448,
+    "floor_size": 839.9999618530273,
+    "floor_offset": 0.02519999885559082,
+    "clip_start": 0.004199999809265137,
+    "clip_end": 4199.999809265137
+  },
+  "requested_presentation": "dark",
+  "subject_luminance_hint": 0.5704200218065065,
+  "render_engine": "BLENDER_EEVEE",
+  "view_transform": "AgX",
+  "exposure": 0.0,
+  "input": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\onepercent-crt-master.glb",
+  "blender_version": "5.2.2 LTS",
+  "resolution": 768,
+  "requested_views": [
+    "perspective",
+    "front",
+    "back",
+    "left",
+    "right",
+    "top"
+  ],
+  "evidence_scope": "full_multiview",
+  "material_mode": "source",
+  "hidden_objects": [],
+  "head_texture": null,
+  "bounds": {
+    "min": [
+      -2.1,
+      -1.52,
+      -1.7545
+    ],
+    "max": [
+      2.1,
+      1.3705,
+      1.75
+    ],
+    "dimensions": [
+      4.2,
+      2.8905,
+      3.5045
+    ]
+  },
+  "views": [
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\perspective.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\front.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\back.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\left.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\right.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\top.png"
+  ],
+  "contact_sheet": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\evidence-final-v2\\contact_sheet.png",
+  "animation_frames": [],
+  "animation_contact_sheet": null
+}

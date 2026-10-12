@@ -1,0 +1,299 @@
+/* Home hero: the studio, 1% TV and the title. Fixed zones, so content arriving
+   with the home chunk never moves what the first frame painted (CLS). */
+.hero {
+  --hero-x: clamp(20px, 3.6vw, 56px);
+  position: relative;
+  height: 100svh;
+  min-height: 640px;
+  overflow: clip;
+  color: var(--cream);
+  background: var(--studio);
+  isolation: isolate;
+}
+/* The studio, sized like a 100vw srcset (a soft photo: the nearest size reads
+   the same); CSS keeps it out of the entry script. */
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url(/experience/home/studio-1440.webp) center / cover no-repeat;
+  background-image: image-set(
+    url(/experience/home/studio-1440.avif) type("image/avif"),
+    url(/experience/home/studio-1440.webp) type("image/webp")
+  );
+}
+@media (max-width: 960px) and (max-resolution: 1.49dppx) {
+  .hero-backdrop {
+    background-image: url(/experience/home/studio-960.webp);
+    background-image: image-set(
+      url(/experience/home/studio-960.avif) type("image/avif"),
+      url(/experience/home/studio-960.webp) type("image/webp")
+    );
+  }
+}
+@media (min-width: 1441px), (min-width: 900px) and (min-resolution: 1.5dppx) {
+  .hero-backdrop {
+    background-image: url(/experience/home/studio-1672.webp);
+    background-image: image-set(
+      url(/experience/home/studio-1672.avif) type("image/avif"),
+      url(/experience/home/studio-1672.webp) type("image/webp")
+    );
+  }
+}
+@media (max-aspect-ratio: 4/5) {
+  .hero-backdrop {
+    background-image: url(/experience/home/studio-portrait-560.webp);
+    background-image: image-set(
+      url(/experience/home/studio-portrait-560.avif) type("image/avif"),
+      url(/experience/home/studio-portrait-560.webp) type("image/webp")
+    );
+  }
+}
+.hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #2c123566, #2c123500 58%);
+}
+.hero-tv {
+  position: absolute;
+  top: calc(var(--header-h) - 1.5%);
+  right: -1.5%;
+  bottom: 1.5%;
+  width: 57%;
+}
+.hero-poster,
+.hero-poster img,
+.hero-tv-stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* The poster is the LCP image: it shows at once when decoded (a fade would delay
+   LCP by its length), and only fades when the live TV takes over. */
+.hero-poster img,
+.hero-poster img[data-fade] {
+  object-fit: contain;
+  transition: none;
+}
+/* While the poster downloads and decodes: its blurred placeholder (--lqip-tv).
+   The poster fades in over it once decoded (main.tsx), then it goes. */
+.hero-poster::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--lqip-tv) center / contain no-repeat;
+  filter: blur(14px);
+}
+.hero-poster:has(> img[data-ready])::before,
+.hero-tv.is-live .hero-poster::before {
+  opacity: 0;
+}
+.hero-tv-stage {
+  opacity: 0;
+  transition: opacity 0.26s ease;
+  touch-action: pan-y;
+}
+.hero-tv.is-live .hero-tv-stage {
+  opacity: 1;
+}
+.hero-tv.is-live .hero-poster img {
+  opacity: 0;
+  transition: opacity 0.26s ease;
+}
+/* The copy sits where the landing centres it (about 47% down), from a fixed
+   offset: the entry's frame and the home chunk's then agree to the pixel. */
+.hero-copy {
+  position: absolute;
+  top: max(calc(var(--header-h) + 28px), calc(47svh - 190px));
+  left: var(--hero-x);
+  width: min(45%, 640px);
+}
+.hero h1 {
+  max-width: none;
+  margin: 0;
+  color: var(--cream);
+  font-size: clamp(64px, 8.7vw, 138px);
+  line-height: 0.9;
+  letter-spacing: -0.064em;
+}
+.hero h1 .line {
+  display: block;
+  transform-origin: 0 100%;
+}
+.hero-tv-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Hero copy below the title (the title's position is fixed by hero.css): the
+   landing's lede and its "Feed your dust ↗". Each keeps its box before its text
+   arrives (the entry paints them empty). */
+.hero-lede {
+  max-width: 510px;
+  min-height: 2.56em;
+  margin: 26px 0 0;
+  color: var(--cream);
+  font:
+    600 clamp(20px, 1.9vw, 28px) / 1.28 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  text-wrap: pretty;
+}
+.hero-deposit {
+  display: flex;
+  align-items: center;
+  height: 37px;
+  margin: 16px 0 0;
+}
+.hero-deposit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--cream);
+  font:
+    400 19px/1.3 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
+}
+.hero-deposit a:hover {
+  color: var(--lilac);
+}
+
+/* First visit: a lilac cover before the home chunk plays the scribble reveal. */
+html.is-intro::before,
+html.is-intro::after {
+  position: fixed;
+  z-index: 2999;
+  pointer-events: none;
+}
+html.is-intro::before {
+  content: "";
+  inset: 0;
+  background: var(--lilac);
+}
+html.is-intro::after {
+  content: "1%";
+  top: 50%;
+  left: 50%;
+  color: #fff4e8;
+  font:
+    700 clamp(110px, 22vh, 220px) / 0.85 "Fraunces",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+  letter-spacing: -0.11em;
+  transform: translate(-50%, -50%);
+}
+html.is-intro-hold .app-header {
+  transform: translateY(-110%);
+}
+html .app-header {
+  transition: transform 1s var(--ease-compose);
+}
+/* The title and the TV stay painted under the cover (they are the LCP); the
+   entrance moves them, and only the secondary copy fades in. */
+html.is-intro-hold .hero-lede,
+html.is-intro-hold .hero-reveal {
+  opacity: 0;
+}
+.hero.is-entering h1 .line {
+  animation: hero-rise 0.9s var(--ease-arrive) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+.hero.is-entering .hero-tv {
+  animation: hero-tv-arrive 0.85s 0.09s var(--ease-arrive) backwards;
+}
+.hero.is-entering .hero-reveal {
+  animation: hero-fade 0.6s var(--ease-arrive) both;
+  animation-delay: calc(0.25s + var(--i, 0) * 80ms);
+}
+@keyframes hero-rise {
+  from {
+    transform: translateY(0.45em) rotate(3deg) scale(0.92);
+  }
+}
+@keyframes hero-tv-arrive {
+  from {
+    transform: translateY(38px) scale(0.94) rotate(1.5deg);
+  }
+}
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@media (max-width: 899px) {
+  .hero {
+    --hero-low: 300px;
+    min-height: 660px;
+  }
+  .hero-backdrop::after {
+    background: linear-gradient(180deg, #2c123500 42%, #2c123599 78%);
+  }
+  .hero-tv {
+    top: calc(var(--header-h) + 4px);
+    right: -7%;
+    bottom: var(--hero-low);
+    left: -7%;
+    width: auto;
+  }
+  .hero-copy {
+    top: calc(100% - var(--hero-low) + 8px);
+    left: 20px;
+    right: 20px;
+    width: auto;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 12.4vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+  .hero-lede {
+    max-width: 30ch;
+    min-height: 2.6em;
+    margin: 10px auto 0;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .hero-deposit {
+    justify-content: center;
+    height: 32px;
+    margin-top: 6px;
+  }
+  .hero-deposit a {
+    gap: 14px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 899px) and (min-height: 900px) {
+  .hero {
+    --hero-low: 340px;
+  }
+}
+@media (min-width: 900px) and (max-height: 700px) {
+  .hero-copy {
+    top: calc(var(--header-h) + 12px);
+  }
+  .hero h1 {
+    font-size: clamp(56px, 7.4vw, 104px);
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "spec": "M4.1 canonical powerOnIx; D29 section 3.1",
+  "inputs": {
+    "cluster": "localnet",
+    "wallet": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+    "mint": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+    "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k"
+  },
+  "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "dataHex": "7be51b871d820265",
+  "accounts": [
+    {
+      "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "signer": true,
+      "writable": true
+    },
+    {
+      "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "signer": false,
+      "writable": true
+    },
+    {
+      "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "9wJDiyfodEtF4Rh66aYLNoGBHwyT9d8pw9LfqfKgaxYQ",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "signer": false,
+      "writable": true
+    },
+    {
+      "address": "HWENLimWWrwGdefvk8TxUR8fWGoMCN76fPEX3k2G4fNB",
+      "signer": false,
+      "writable": true
+    },
+    {
+      "address": "9H3EtVG13aq8pLRuuwFEpEidtQ33r3pRKMX5dC2bqdSZ",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "signer": false,
+      "writable": false
+    },
+    {
+      "address": "11111111111111111111111111111111",
+      "signer": false,
+      "writable": false
+    }
+  ]
+}

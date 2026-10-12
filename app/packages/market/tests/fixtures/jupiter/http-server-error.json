@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.319Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=So11111111111111111111111111111111111111112"
+  },
+  "response": {
+    "status": 503,
+    "headers": {
+      "x-ratelimit-current": "6",
+      "x-ratelimit-remaining": "4",
+      "x-ratelimit-reset": "1791484098"
+    },
+    "body": {
+      "message": "synthetic server failure"
+    }
+  },
+  "synthetic": {
+    "from": "jupiter/prices-wsol.json",
+    "edit": "Replace the transport status and body with a 503 boundary failure."
+  }
+}

@@ -1,0 +1,808 @@
+{
+  "result": "PASS",
+  "cluster": "devnet",
+  "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "programId": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+  "wallet": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+  "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+  "snapshotSlot": "509605276",
+  "snapshotOverride": false,
+  "indexerOverride": false,
+  "scenario": "Architect-authorized take-back of 1000 tokens, followed by Feed of the entire 8000-token balance using the real intake service. User signing stays outside the services.",
+  "scope": "Local API, intake and real indexer against Helius devnet. In the machine is checked through its production readWalletDeck reader over local /api/rpc, plus /api/me and /api/machine. This run is API/SDK evidence, not a new browser test.",
+  "historicalEligibility": {
+    "wallet": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+    "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+    "snapshotSlot": 509605276,
+    "balanceAtS": "8000000000",
+    "first": {
+      "slot": 509604630,
+      "signature": "33PRN2rhH89VxLvyF3SmLEfPvQf7DYpa4uJUghCjR7UuTzvtCqWQwDXsReWAXA8GU1EXMrRkqqdC5JmZJsPtkV7F",
+      "date": "2026-10-10T16:43:35.000Z",
+      "kind": "swap",
+      "sender": null
+    }
+  },
+  "transactions": {
+    "take-back": {
+      "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+      "lastValidBlockHeight": 497266780,
+      "finalized": true,
+      "size": 613,
+      "unitsConsumed": 39189,
+      "slot": 510038979,
+      "feeLamports": 5000,
+      "walletDebitLamports": -401400,
+      "events": [
+        {
+          "name": "BagTakenBack",
+          "data": {
+            "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "1000000000",
+            "deck_index": 1,
+            "moved_from": 49,
+            "refund": "406400"
+          },
+          "ixIndex": 3,
+          "logIndex": 14,
+          "eventIndex": 0
+        }
+      ]
+    },
+    "re-feed": {
+      "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+      "lastValidBlockHeight": 497266872,
+      "finalized": true,
+      "size": 942,
+      "unitsConsumed": 51389,
+      "slot": 510039100,
+      "feeLamports": 10000,
+      "walletDebitLamports": -1097440,
+      "events": [
+        {
+          "name": "BagFed",
+          "data": {
+            "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "8000000000",
+            "deck_index": 49,
+            "deposit": "406400",
+            "fresh_in_deck": 3
+          },
+          "ixIndex": 4,
+          "logIndex": 12,
+          "eventIndex": 0
+        }
+      ],
+      "sourceCloseRefundLamports": 1513840
+    }
+  },
+  "intake": [
+    {
+      "time": "2026-10-11T21:33:24.002Z",
+      "path": "/api/feed/attest",
+      "status": 200,
+      "body": {
+        "asOfSlot": 510039045,
+        "wallet": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+        "signer": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si",
+        "snapshotSlot": 509605276,
+        "attestations": [
+          {
+            "chunk": 0,
+            "nonce": 2,
+            "expiry": 1791754512,
+            "bagsHash": "fc1171ca7df19dc47e0ce5db9b83e370835e1db72f69fb071efaa36fa376840a",
+            "message": "MVBDVC1GRUVELXYxwP15aJ8N/uqNl+eM7zutVdijc7qf0vIe5RxXw9eOdRMvSaPs3TPFfZvb/UgdKes7J1/sqODsVTOCVLW+u0oTuQIAAAAQAcxqAAAAAAH8EXHKffGdxH4M5dubg+Nwg14dty9p+wce+qNvo3aECg==",
+            "signature": "QJgAhS1rzkioUAEvESCj2fXu9FsIkUEaoROfnFxlmMVorbLI456R7whkA4RgvwAZWAVFCLfm2wcjljv6nHDEBw==",
+            "bags": [
+              {
+                "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+                "amount": "8000000000",
+                "decimals": 6,
+                "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+                "source": "Fhev98QNm69LdqvCBfD267WrKPzEqT8gPupqcyF7MVUu",
+                "mergeFrom": []
+              }
+            ]
+          }
+        ],
+        "refused": []
+      }
+    }
+  ],
+  "stages": {
+    "before": {
+      "observedAt": "2026-10-11T21:32:56.153Z",
+      "chainSlot": 510038925,
+      "deckLength": 50,
+      "walletEntries": [
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 1
+        },
+        {
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 2
+        },
+        {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 14
+        }
+      ],
+      "freshInDeck": 3,
+      "holdings": [
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "source": "Fhev98QNm69LdqvCBfD267WrKPzEqT8gPupqcyF7MVUu",
+          "amount": "7000000000",
+          "exists": true
+        }
+      ],
+      "walletLamports": 168560064,
+      "vault": {
+        "address": "4HFSugSSuxSuLxLjQSy8o8LFXNDPqNgBn5H7uCTD8e3m",
+        "amount": "16000000000",
+        "lamports": 1513840
+      },
+      "apiMe": {
+        "asOfSlot": 510038891,
+        "binder": {
+          "owner": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "referrer": "11111111111111111111111111111111",
+          "seasonSpend": "0",
+          "solOwed": "0",
+          "feedNonceBase": 2,
+          "sbNonce": 0,
+          "pullNonce": 0,
+          "feedNonceBits": 0,
+          "freshInDeck": 3,
+          "len": 0,
+          "cap": 0,
+          "reserved": 0,
+          "bump": 251,
+          "flags": 0,
+          "cards": [],
+          "closable": false
+        },
+        "deck": [
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 1,
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          },
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 2,
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          },
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 14,
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          }
+        ],
+        "pulls": {
+          "pending": [],
+          "settleable": []
+        },
+        "vaultDeposits": [
+          {
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "payerIsWallet": true,
+            "accounted": "16000000000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "payerIsWallet": true,
+            "accounted": "18001350000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "payerIsWallet": true,
+            "accounted": "16000000000",
+            "vaultExists": true,
+            "state": "held"
+          }
+        ],
+        "royalties": {
+          "count24h": 0,
+          "lamports24h": "0",
+          "total": "2000000",
+          "settlementReceipts": {
+            "lamports24h": "0",
+            "total": "2406400"
+          }
+        }
+      },
+      "apiMachine": {
+        "asOfSlot": 510038928,
+        "deck": {
+          "len": 50,
+          "reservedDust": "0",
+          "free": 50
+        }
+      },
+      "inTheMachineReader": {
+        "slot": 510038933,
+        "entries": [
+          {
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 1
+          },
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 2
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 14
+          }
+        ]
+      }
+    },
+    "afterTakeBack": {
+      "observedAt": "2026-10-11T21:33:09.401Z",
+      "chainSlot": 510038981,
+      "deckLength": 49,
+      "walletEntries": [
+        {
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 2
+        },
+        {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 14
+        }
+      ],
+      "freshInDeck": 2,
+      "holdings": [
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "source": "Fhev98QNm69LdqvCBfD267WrKPzEqT8gPupqcyF7MVUu",
+          "amount": "8000000000",
+          "exists": true
+        }
+      ],
+      "walletLamports": 168961464,
+      "vault": {
+        "address": "4HFSugSSuxSuLxLjQSy8o8LFXNDPqNgBn5H7uCTD8e3m",
+        "amount": "15000000000",
+        "lamports": 1513840
+      },
+      "apiMe": {
+        "asOfSlot": 510038979,
+        "binder": {
+          "owner": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "referrer": "11111111111111111111111111111111",
+          "seasonSpend": "0",
+          "solOwed": "0",
+          "feedNonceBase": 2,
+          "sbNonce": 0,
+          "pullNonce": 0,
+          "feedNonceBits": 0,
+          "freshInDeck": 2,
+          "len": 0,
+          "cap": 0,
+          "reserved": 0,
+          "bump": 251,
+          "flags": 0,
+          "cards": [],
+          "closable": false
+        },
+        "deck": [
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 2,
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          },
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 14,
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          }
+        ],
+        "pulls": {
+          "pending": [],
+          "settleable": []
+        },
+        "vaultDeposits": [
+          {
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "payerIsWallet": true,
+            "accounted": "16000000000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "payerIsWallet": true,
+            "accounted": "18001350000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "payerIsWallet": true,
+            "accounted": "16000000000",
+            "vaultExists": true,
+            "state": "held"
+          }
+        ],
+        "royalties": {
+          "count24h": 0,
+          "lamports24h": "0",
+          "total": "2000000",
+          "settlementReceipts": {
+            "lamports24h": "0",
+            "total": "2406400"
+          }
+        }
+      },
+      "apiMachine": {
+        "asOfSlot": 510038985,
+        "deck": {
+          "len": 49,
+          "reservedDust": "0",
+          "free": 49
+        }
+      },
+      "inTheMachineReader": {
+        "slot": 510038989,
+        "entries": [
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 2
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 14
+          }
+        ]
+      }
+    },
+    "verified": {
+      "observedAt": "2026-10-11T21:35:33.785Z",
+      "chainSlot": 510039588,
+      "deckLength": 50,
+      "walletEntries": [
+        {
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 2
+        },
+        {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "deckIndex": 14
+        },
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "amount": "8000000000",
+          "deposit": "406400",
+          "deckIndex": 49
+        }
+      ],
+      "freshInDeck": 3,
+      "holdings": [
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "source": "Fhev98QNm69LdqvCBfD267WrKPzEqT8gPupqcyF7MVUu",
+          "amount": "0",
+          "exists": false
+        }
+      ],
+      "walletLamports": 170058904,
+      "vault": {
+        "address": "4HFSugSSuxSuLxLjQSy8o8LFXNDPqNgBn5H7uCTD8e3m",
+        "amount": "23000000000",
+        "lamports": 1513840
+      },
+      "apiMe": {
+        "asOfSlot": 510039128,
+        "binder": {
+          "owner": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "referrer": "11111111111111111111111111111111",
+          "seasonSpend": "0",
+          "solOwed": "0",
+          "feedNonceBase": 3,
+          "sbNonce": 0,
+          "pullNonce": 0,
+          "feedNonceBits": 0,
+          "freshInDeck": 3,
+          "len": 0,
+          "cap": 0,
+          "reserved": 0,
+          "bump": 251,
+          "flags": 0,
+          "cards": [],
+          "closable": false
+        },
+        "deck": [
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 2,
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          },
+          {
+            "asOfSlot": 510033836,
+            "deckIndex": 14,
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          },
+          {
+            "asOfSlot": 510039100,
+            "deckIndex": 49,
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "8000000000",
+            "fresh": true,
+            "refed": false,
+            "deposit": "406400"
+          }
+        ],
+        "pulls": {
+          "pending": [],
+          "settleable": []
+        },
+        "vaultDeposits": [
+          {
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "payerIsWallet": true,
+            "accounted": "23000000000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "payerIsWallet": true,
+            "accounted": "18001350000",
+            "vaultExists": true,
+            "state": "held"
+          },
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "payerIsWallet": true,
+            "accounted": "16000000000",
+            "vaultExists": true,
+            "state": "held"
+          }
+        ],
+        "royalties": {
+          "count24h": 0,
+          "lamports24h": "0",
+          "total": "2000000",
+          "settlementReceipts": {
+            "lamports24h": "0",
+            "total": "2406400"
+          }
+        }
+      },
+      "apiMachine": {
+        "asOfSlot": 510039591,
+        "deck": {
+          "len": 50,
+          "reservedDust": "0",
+          "free": 50
+        }
+      },
+      "inTheMachineReader": {
+        "transport": "local /api/rpc",
+        "slot": 510039595,
+        "entries": [
+          {
+            "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 2
+          },
+          {
+            "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+            "amount": "1000000000",
+            "deposit": "406400",
+            "deckIndex": 14
+          },
+          {
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "amount": "8000000000",
+            "deposit": "406400",
+            "deckIndex": 49
+          }
+        ]
+      }
+    }
+  },
+  "mintLedger": {
+    "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+    "payer": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+    "accounted": "23000000000"
+  },
+  "transientVerificationResponse": {
+    "path": "/api/machine",
+    "status": 503,
+    "loggedReason": "service_unavailable",
+    "loggedCause": "snapshot_too_old",
+    "recovery": "Fresh read returned HTTP200; both transaction signatures reconciled without resubmission"
+  },
+  "indexerEvidence": {
+    "observedAt": "2026-10-11T21:35:56.584061+00:00",
+    "source": "Real local production S1 indexer, S2 intake and S4 API against devnet; read-only database and readiness checks",
+    "snapshotOverride": false,
+    "wallet": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+    "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+    "chainConfig": {
+      "programId": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+      "address": "B5FNEXw35wcDFe8kcb9MkG8sF9SswdW21hG8guaXpGRH",
+      "contextSlot": 510039572,
+      "owner": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+      "dataBytes": 872,
+      "snapshotSlot": "509605276",
+      "snapshotTs": "1791650770",
+      "intakeSigner": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si"
+    },
+    "transactions": [
+      {
+        "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+        "slot": "510038979",
+        "block_time": "2026-10-11T23:33:06+02:00",
+        "commitment": "finalized",
+        "err": null,
+        "truncated": false,
+        "events": [
+          {
+            "name": "BagTakenBack",
+            "data": {
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+              "amount": "1000000000",
+              "refund": "406400",
+              "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+              "deck_index": 1,
+              "moved_from": 49
+            },
+            "eventIndex": 0,
+            "ixIndex": 3
+          }
+        ]
+      },
+      {
+        "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+        "slot": "510039100",
+        "block_time": "2026-10-11T23:33:35+02:00",
+        "commitment": "finalized",
+        "err": null,
+        "truncated": false,
+        "events": [
+          {
+            "name": "BagFed",
+            "data": {
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+              "amount": "8000000000",
+              "deposit": "406400",
+              "_indexer": {
+                "path": "self",
+                "holder": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+                "intakeLogMissing": false,
+                "attestationSha256": "3fbf801fb354f347bfdda6724de6862a1cf2e15db608f9a02cf4a631c0b99603"
+              },
+              "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+              "deck_index": 49,
+              "fresh_in_deck": 3
+            },
+            "eventIndex": 0,
+            "ixIndex": 4
+          }
+        ]
+      }
+    ],
+    "attestations": [
+      {
+        "id": "c0022899-695a-48fd-a027-67dcbe4e2d78",
+        "message_sha256": "3fbf801fb354f347bfdda6724de6862a1cf2e15db608f9a02cf4a631c0b99603",
+        "kind": "FEED",
+        "wallet": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+        "nonce": "2",
+        "expiry": "2026-10-11T23:35:12+02:00",
+        "bags": [
+          {
+            "via": null,
+            "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+            "path": "self",
+            "amount": "8000000000"
+          }
+        ],
+        "signer": "HBZUBCmXSNsFEWXh5yof2zgzfSH17XUHknUYMSNZS3si",
+        "created_at": "2026-10-11T23:33:23.98435+02:00"
+      }
+    ],
+    "deck": {
+      "globalCount": 50,
+      "walletEntries": [
+        {
+          "deck_index": 2,
+          "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "flags": 1,
+          "slot": "510033836"
+        },
+        {
+          "deck_index": 14,
+          "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "amount": "1000000000",
+          "deposit": "406400",
+          "flags": 1,
+          "slot": "510033836"
+        },
+        {
+          "deck_index": 49,
+          "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "amount": "8000000000",
+          "deposit": "406400",
+          "flags": 1,
+          "slot": "510039100"
+        }
+      ]
+    },
+    "consumption": [
+      {
+        "holder": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+        "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+        "used_by": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+        "path": "unknown",
+        "first_feed_sig": "s3HRReTaToZ2ruwda637F4hTgZZftTGbgSUbHXDTnfaWwmXypf18sMck3wJV2q97GY7q5PNhcPwT1kynMQarhpq",
+        "slot": "509605772"
+      }
+    ],
+    "indexer": {
+      "asOfSlot": "510039681",
+      "scanSlot": "510039681",
+      "confirmedSlot": "510039683",
+      "lastEventSlot": "510039100",
+      "lagSlots": "2",
+      "lagSeconds": 0,
+      "checkedAt": "2026-10-11T21:35:54.594Z",
+      "chainTime": 1791754553,
+      "confirmedTime": 1791754553
+    },
+    "readiness": [
+      {
+        "role": "api-private",
+        "port": 4102,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "checks": {
+            "db": true,
+            "redis": true,
+            "rpc": true
+          },
+          "key": {
+            "ok": true
+          }
+        }
+      },
+      {
+        "role": "intake",
+        "port": 4101,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "checks": {
+            "db": true,
+            "redis": true,
+            "rpc": true
+          },
+          "key": {
+            "ok": true
+          }
+        }
+      },
+      {
+        "role": "indexer",
+        "port": 4103,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "checks": {
+            "db": true,
+            "redis": true,
+            "rpc": true
+          },
+          "key": {
+            "ok": true
+          }
+        }
+      }
+    ],
+    "transientPublic503": [
+      {
+        "time": 1791754421519,
+        "level": 40,
+        "msg": "public request unavailable",
+        "reason": "service_unavailable",
+        "cause": {
+          "code": "snapshot_too_old",
+          "detail": "snapshot_too_old"
+        }
+      }
+    ],
+    "notes": [
+      "Take-back and Feed were signed by the separate authorized wallet driver, never by these services.",
+      "Consumption remains recorded at the original feed; take-back does not reset holder eligibility history.",
+      "Observed path self comes from the signed intake log. Historical consumption path is unknown and is retained unchanged.",
+      "The transient snapshot_too_old API failure occurred after finalized Feed; no transaction was resent."
+    ],
+    "shutdown": {
+      "observedAt": "2026-10-11T21:36:13.700013+00:00",
+      "masterPid": 67627,
+      "method": "SIGTERM to owned supervisor; clean session exit 0",
+      "ports": {
+        "4100": "free",
+        "4101": "free",
+        "4102": "free",
+        "4103": "free"
+      },
+      "ownedProcessesRemaining": 0,
+      "databaseAndRedisPreserved": true
+    }
+  }
+}

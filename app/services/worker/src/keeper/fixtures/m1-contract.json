@@ -1,0 +1,630 @@
+{
+  "provenance": {
+    "source": "M1 read-only draft on 2026-10-09",
+    "idlSha256": "c2f903d89aec668f450ccd4800e7c5a35153f9109d60068921defb21c3954d59",
+    "instructionsSha256": "2bb0a041723c3198c32f2720d440f91f57fbae1a52c42e0d82477afec0b9c9e3",
+    "layoutsSha256": "3c93cae31c3aed53f015056d0b20ef961b56bddb483b307b81850958b40d4584"
+  },
+  "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "instructions": [
+    {
+      "name": "advance_phase",
+      "discriminator": [91, 6, 51, 226, 144, 243, 74, 113],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "close_vault",
+      "discriminator": [141, 103, 17, 126, 72, 75, 29, 29],
+      "accounts": [
+        {
+          "name": "machine",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "ledger",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [108, 101, 100, 103, 101, 114]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "vault_auth",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [118, 97, 117, 108, 116, 95, 97, 117, 116, 104]
+              }
+            ]
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "refund_pull",
+      "discriminator": [207, 171, 0, 146, 188, 39, 84, 166],
+      "accounts": [
+        {
+          "name": "pull",
+          "writable": true
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "binder",
+          "writable": true
+        },
+        {
+          "name": "buyer"
+        }
+      ],
+      "args": [
+        {
+          "name": "seq",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "settle",
+      "discriminator": [175, 42, 185, 87, 144, 131, 102, 212],
+      "accounts": [
+        {
+          "name": "pull",
+          "writable": true
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "buyer"
+        },
+        {
+          "name": "referrer"
+        },
+        {
+          "name": "wallet_0"
+        },
+        {
+          "name": "wallet_1"
+        },
+        {
+          "name": "wallet_2"
+        },
+        {
+          "name": "wallet_3"
+        },
+        {
+          "name": "binder_0"
+        },
+        {
+          "name": "binder_1"
+        },
+        {
+          "name": "binder_2"
+        },
+        {
+          "name": "binder_3"
+        }
+      ],
+      "args": [
+        {
+          "name": "seq",
+          "type": "u64"
+        },
+        {
+          "name": "pack",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "team_withdraw",
+      "discriminator": [237, 151, 110, 121, 198, 185, 214, 97],
+      "accounts": [
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [109, 97, 99, 104, 105, 110, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [99, 111, 110, 102, 105, 103]
+              }
+            ]
+          }
+        },
+        {
+          "name": "team_wallet",
+          "writable": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Config",
+      "discriminator": [155, 12, 170, 224, 30, 250, 204, 130]
+    },
+    {
+      "name": "Machine",
+      "discriminator": [25, 102, 22, 13, 58, 243, 138, 79]
+    },
+    {
+      "name": "MintLedger",
+      "discriminator": [202, 202, 190, 148, 227, 148, 76, 70]
+    },
+    {
+      "name": "Pull",
+      "discriminator": [65, 19, 46, 7, 253, 230, 71, 243]
+    }
+  ],
+  "events": [
+    {
+      "name": "PullRevealed",
+      "discriminator": [113, 32, 147, 7, 227, 175, 203, 93]
+    }
+  ],
+  "vectors": [
+    {
+      "accounts": [
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+        }
+      ],
+      "args": {},
+      "data": "5b0633e290f34a71",
+      "name": "advance_phase"
+    },
+    {
+      "accounts": [
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "LbUiWL3xVV8hTFYBVdbTNrpDo41NKS6o3LHHuDzjfcY"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "QWmroo4YnnMqYW3cnxWkFdaTxGD3P7vMSzwMHGbUzwF"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "US517G5965aydkZ46HS38QLi7UQiSojurfbQfKCELFx"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+        }
+      ],
+      "args": {
+        "pack": 0,
+        "seq": "7"
+      },
+      "data": "af2ab957908366d4070000000000000000",
+      "name": "settle"
+    },
+    {
+      "accounts": [
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq"
+        }
+      ],
+      "args": {
+        "seq": "7"
+      },
+      "data": "cfab0092bc2754a60700000000000000",
+      "name": "refund_pull"
+    },
+    {
+      "accounts": [
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "LbUiWL3xVV8hTFYBVdbTNrpDo41NKS6o3LHHuDzjfcY"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "QWmroo4YnnMqYW3cnxWkFdaTxGD3P7vMSzwMHGbUzwF"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "US517G5965aydkZ46HS38QLi7UQiSojurfbQfKCELFx"
+        }
+      ],
+      "args": {},
+      "data": "8d67117e484b1d1d",
+      "name": "close_vault"
+    },
+    {
+      "accounts": [
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+        },
+        {
+          "isSigner": false,
+          "isWritable": false,
+          "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+        },
+        {
+          "isSigner": false,
+          "isWritable": true,
+          "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
+        }
+      ],
+      "args": {},
+      "data": "ed976e79c6b9d661",
+      "name": "team_withdraw"
+    }
+  ],
+  "layouts": {
+    "Bucket": {
+      "fields": {
+        "_reserved": 120,
+        "amount": 64,
+        "cap": 88,
+        "class": 109,
+        "cost": 72,
+        "decimals": 108,
+        "enabled": 110,
+        "final_pool": 112,
+        "mint": 0,
+        "oracle": 32,
+        "reserved": 80,
+        "token_program": 111,
+        "trend_bought_hour": 96,
+        "trend_hour_index": 104
+      },
+      "size": 128
+    },
+    "Config": {
+      "fields": {
+        "_pad": 743,
+        "_reserved": 776,
+        "active_queue": 738,
+        "admin": 8,
+        "admin_paused": 740,
+        "bump": 737,
+        "disabled_roles": 742,
+        "discriminator": 0,
+        "executor": 136,
+        "guardian_paused": 741,
+        "guardians": 40,
+        "intake_signer": 168,
+        "keeper": 104,
+        "launch_wallet": 232,
+        "quote_signer": 200,
+        "season_set": 739,
+        "snapshot_slot": 712,
+        "snapshot_ts": 720,
+        "stock_up_ts": 728,
+        "team_wallet": 264,
+        "team_wallets": 296,
+        "token_mint": 552,
+        "version": 736,
+        "vrf_program": 744,
+        "vrf_queues": 584
+      },
+      "size": 872
+    },
+    "Machine": {
+      "fields": {
+        "_pad0": 15,
+        "_reserved0": 2576,
+        "_reserved1": 3600,
+        "_reserved2": 3728,
+        "_reserved3": 3792,
+        "buckets": 224,
+        "bump": 9,
+        "burn_hour_index": 2304,
+        "burn_paid_hour": 2312,
+        "burn_sol": 88,
+        "burned_total": 2288,
+        "config_bump": 13,
+        "deck_bump": 12,
+        "discriminator": 0,
+        "end_ts": 56,
+        "exec": 2496,
+        "fee_in_bump": 14,
+        "final_pool_1pct": 2328,
+        "final_pool_sol": 104,
+        "final_ts": 64,
+        "hit_out_last_hour": 136,
+        "hit_out_this_hour": 128,
+        "hit_value_out": 192,
+        "hour_index": 120,
+        "jackpot_cost": 2280,
+        "jackpot_sol": 80,
+        "jackpot_tokens": 2272,
+        "last_burn_ts": 2296,
+        "last_jackpot_buy_ts": 2320,
+        "next_seq": 16,
+        "on_air_ts": 48,
+        "onepct": 2336,
+        "packs_revealed": 160,
+        "pending_pulls": 24,
+        "phase": 10,
+        "power_on_ts": 40,
+        "reserved_dust": 32,
+        "sb_paid_hour": 144,
+        "sol_at_hour_start": 152,
+        "spotlight": 2400,
+        "stock_sol": 72,
+        "team_sol": 96,
+        "total_spend": 112,
+        "vault_auth_bump": 11,
+        "version": 8
+      },
+      "size": 3808
+    },
+    "MintLedger": {
+      "fields": {
+        "accounted": 72,
+        "discriminator": 0,
+        "mint": 8,
+        "payer": 40
+      },
+      "size": 80
+    },
+    "PackRecord": {
+      "fields": {
+        "_pad": 197,
+        "backing": 192,
+        "carved_bucket": 194,
+        "fresh_mask": 196,
+        "house_mask": 195,
+        "royalties": 0,
+        "tier": 193
+      },
+      "size": 200
+    },
+    "Pull": {
+      "fields": {
+        "_pad": 149,
+        "_reserved": 152,
+        "bump": 146,
+        "buyer": 16,
+        "buyer_nonce": 136,
+        "created_ts": 112,
+        "discriminator": 0,
+        "edition": 142,
+        "holder": 145,
+        "live_flags": 148,
+        "price": 128,
+        "qty": 143,
+        "randomness": 80,
+        "referrer": 48,
+        "revealed_ts": 120,
+        "seq": 8,
+        "settled_mask": 140,
+        "status": 144,
+        "version": 147
+      },
+      "size": 176
+    },
+    "Royalty": {
+      "fields": {
+        "depositor": 0,
+        "lamports": 32,
+        "refund": 40
+      },
+      "size": 48
+    }
+  },
+  "pdas": [
+    {
+      "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "args": [],
+      "bump": 253,
+      "name": "config"
+    },
+    {
+      "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "args": [],
+      "bump": 255,
+      "name": "machine"
+    },
+    {
+      "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "args": [],
+      "bump": 255,
+      "name": "vault_auth"
+    },
+    {
+      "address": "256VL1mg4LxRoup716z8vtB51PRCvWHTZRcux75qkb5Q",
+      "args": ["4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"],
+      "bump": 255,
+      "name": "binder"
+    },
+    {
+      "address": "HWENLimWWrwGdefvk8TxUR8fWGoMCN76fPEX3k2G4fNB",
+      "args": ["8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"],
+      "bump": 255,
+      "name": "ledger"
+    },
+    {
+      "address": "FEZbXN1ruTx5my6wByp8unvAgD6EfmMH4Q4Ed7Rbn5FY",
+      "args": ["4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi", 7],
+      "bump": 253,
+      "name": "pull"
+    }
+  ]
+}

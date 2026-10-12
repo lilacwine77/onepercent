@@ -1,0 +1,40 @@
+diff --git a/app/apps/web/src/demo/store.ts b/app/apps/web/src/demo/store.ts
+index acf27db..f0921f8 100644
+--- a/app/apps/web/src/demo/store.ts
++++ b/app/apps/web/src/demo/store.ts
+@@ -291,11 +291,12 @@ export function rip(edition: EditionId, forceTier?: Tier) {
+   const s = state;
+   const cost = price(edition);
+   const seq = String(s.seq);
+-  const tier = forceTier ?? drawTier(s.pulls);
++  const tier = forceTier ?? ((globalThis as { __filmTier?: Tier }).__filmTier) ?? drawTier(s.pulls); // FILM-CAPTURE
+   const multiplier = HIT_TIERS.find((t) => t.id === tier)?.valueBps;
+   let hit: DemoCard;
+   if (multiplier !== undefined) {
+-    const coin = pick(HIT_POOL);
++    const want = (globalThis as { __filmHit?: string }).__filmHit; // FILM-CAPTURE
++    const coin = HIT_POOL.find((c) => c.symbol === want) ?? pick(HIT_POOL);
+     const value = bps(cost, multiplier);
+     hit = {
+       mint: coin.mint,
+@@ -325,7 +326,7 @@ export function rip(edition: EditionId, forceTier?: Tier) {
+       sellBackLamports: null,
+     };
+   }
+-  const pool = [...DECK_DUST].sort(() => Math.random() - 0.5).slice(0, 4);
++  const pool = (globalThis as { __filmDust?: typeof DECK_DUST }).__filmDust ?? [...DECK_DUST].sort(() => Math.random() - 0.5).slice(0, 4); // FILM-CAPTURE
+   const dust: DemoCard[] = pool.map((d, i) => ({
+     mint: d.mint,
+     symbol: d.symbol,
+diff --git a/app/apps/web/src/experience/rip/RipView.tsx b/app/apps/web/src/experience/rip/RipView.tsx
+index 8a60f08..b04c9fa 100644
+--- a/app/apps/web/src/experience/rip/RipView.tsx
++++ b/app/apps/web/src/experience/rip/RipView.tsx
+@@ -128,6 +128,7 @@ export default function RipView(props: RipViewProps) {
+       return;
+     }
+     controller.current = rip;
++    (window as unknown as { __rip?: unknown }).__rip = rip; // FILM-CAPTURE
+     const offs = [
+       rip.on("sound", ({ cue, index }) => {
+         if (latest.current.soundOn) playCue(cue, index ?? 0);

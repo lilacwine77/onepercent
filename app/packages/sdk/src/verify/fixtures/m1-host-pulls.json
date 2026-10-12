@@ -1,0 +1,1235 @@
+{
+  "provenance": {
+    "kind": "offline Rust host math vectors; not validator transactions or callback executions",
+    "cases": 6,
+    "packs": 37,
+    "recordedAt": "2026-10-08T23:29:50.959327+00:00",
+    "rustc": "1.95.0",
+    "source": "read-only M1 libonepercent.rlib linked directly; no Cargo or validator run",
+    "sourceMathSha256": "6dd3a7cf56da19e5bc751b27e75a2b25e4617ab01ab28d3dd1b0b6756b6a3dd1",
+    "sourceParamsSha256": "c1db9394a2d2e68693ca4fb1f606dd197a30a9fa1778fc9e3bf56d0fa2340395",
+    "hostLibrarySha256": "c711e690028c2aa8c1dea41dba972878a4af02db641c715013178f1694830bcb",
+    "exporterSha256": "a72d8e1e0f51bb189becca9a133a334a9efa7d9bcf41298b03f324896e9b5a6c",
+    "validatorPulls": 0,
+    "hitBucket": "placeholder 255: bucket selection is not recomputed",
+    "pendingG1Captures": [
+      "confirmed multi-pack callback transactions for x5 and x10",
+      "confirmed short-Deck/House callback transactions",
+      "VRF request-instruction caller seed bound to each recorded callback"
+    ]
+  },
+  "cases": [
+    {
+      "name": "original_ten",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 100,
+      "pull": {
+        "seq": "101",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 0,
+        "qty": 10,
+        "liveFlags": 0,
+        "holder": false,
+        "randomness": "0000000000000000000000000000000000000000000000000000000000000000",
+        "callerSeed": "2906566fed565abb6835860111274c9021291526a123ad5ef1907a7c4a06129a"
+      },
+      "packs": [
+        {
+          "seq": "101",
+          "pack": 0,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 802420354,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 100,
+              "index": 15
+            },
+            {
+              "deckLenBefore": 99,
+              "index": 86
+            },
+            {
+              "deckLenBefore": 98,
+              "index": 50
+            },
+            {
+              "deckLenBefore": 97,
+              "index": 46
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 1,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 641819823,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 96,
+              "index": 79
+            },
+            {
+              "deckLenBefore": 95,
+              "index": 60
+            },
+            {
+              "deckLenBefore": 94,
+              "index": 84
+            },
+            {
+              "deckLenBefore": 93,
+              "index": 15
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 2,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 970616560,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 92,
+              "index": 76
+            },
+            {
+              "deckLenBefore": 91,
+              "index": 78
+            },
+            {
+              "deckLenBefore": 90,
+              "index": 37
+            },
+            {
+              "deckLenBefore": 89,
+              "index": 66
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 3,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 191750054,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 88,
+              "index": 76
+            },
+            {
+              "deckLenBefore": 87,
+              "index": 48
+            },
+            {
+              "deckLenBefore": 86,
+              "index": 52
+            },
+            {
+              "deckLenBefore": 85,
+              "index": 82
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 4,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 472452275,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 84,
+              "index": 41
+            },
+            {
+              "deckLenBefore": 83,
+              "index": 28
+            },
+            {
+              "deckLenBefore": 82,
+              "index": 23
+            },
+            {
+              "deckLenBefore": 81,
+              "index": 38
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 5,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 590787464,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 80,
+              "index": 24
+            },
+            {
+              "deckLenBefore": 79,
+              "index": 24
+            },
+            {
+              "deckLenBefore": 78,
+              "index": 62
+            },
+            {
+              "deckLenBefore": 77,
+              "index": 33
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 6,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 361321483,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 76,
+              "index": 12
+            },
+            {
+              "deckLenBefore": 75,
+              "index": 68
+            },
+            {
+              "deckLenBefore": 74,
+              "index": 66
+            },
+            {
+              "deckLenBefore": 73,
+              "index": 5
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 7,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 862305527,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 72,
+              "index": 32
+            },
+            {
+              "deckLenBefore": 71,
+              "index": 34
+            },
+            {
+              "deckLenBefore": 70,
+              "index": 31
+            },
+            {
+              "deckLenBefore": 69,
+              "index": 53
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 8,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 54639041,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 2,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 68,
+              "index": 64
+            },
+            {
+              "deckLenBefore": 67,
+              "index": 32
+            },
+            {
+              "deckLenBefore": 66,
+              "index": 16
+            },
+            {
+              "deckLenBefore": 65,
+              "index": 46
+            }
+          ]
+        },
+        {
+          "seq": "101",
+          "pack": 9,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 684048886,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 64,
+              "index": 4
+            },
+            {
+              "deckLenBefore": 63,
+              "index": 25
+            },
+            {
+              "deckLenBefore": 62,
+              "index": 41
+            },
+            {
+              "deckLenBefore": 61,
+              "index": 33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blue_shift_ten",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 120,
+      "pull": {
+        "seq": "18446744073709551614",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 1,
+        "qty": 10,
+        "liveFlags": 0,
+        "holder": true,
+        "randomness": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "callerSeed": "25b004ef236303cd997dde28b7e0b9c392fee56185838f0c900ccbe546f43314"
+      },
+      "packs": [
+        {
+          "seq": "18446744073709551614",
+          "pack": 0,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 888548603,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 120,
+              "index": 57
+            },
+            {
+              "deckLenBefore": 119,
+              "index": 45
+            },
+            {
+              "deckLenBefore": 118,
+              "index": 27
+            },
+            {
+              "deckLenBefore": 117,
+              "index": 19
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 1,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 756698590,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 116,
+              "index": 83
+            },
+            {
+              "deckLenBefore": 115,
+              "index": 58
+            },
+            {
+              "deckLenBefore": 114,
+              "index": 76
+            },
+            {
+              "deckLenBefore": 113,
+              "index": 85
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 2,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 743595619,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 112,
+              "index": 106
+            },
+            {
+              "deckLenBefore": 111,
+              "index": 44
+            },
+            {
+              "deckLenBefore": 110,
+              "index": 76
+            },
+            {
+              "deckLenBefore": 109,
+              "index": 57
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 3,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 306489135,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 108,
+              "index": 35
+            },
+            {
+              "deckLenBefore": 107,
+              "index": 55
+            },
+            {
+              "deckLenBefore": 106,
+              "index": 35
+            },
+            {
+              "deckLenBefore": 105,
+              "index": 73
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 4,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 361132463,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 104,
+              "index": 4
+            },
+            {
+              "deckLenBefore": 103,
+              "index": 74
+            },
+            {
+              "deckLenBefore": 102,
+              "index": 91
+            },
+            {
+              "deckLenBefore": 101,
+              "index": 10
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 5,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 14319452,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 3,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 100,
+              "index": 62
+            },
+            {
+              "deckLenBefore": 99,
+              "index": 62
+            },
+            {
+              "deckLenBefore": 98,
+              "index": 60
+            },
+            {
+              "deckLenBefore": 97,
+              "index": 16
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 6,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 774764442,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 96,
+              "index": 50
+            },
+            {
+              "deckLenBefore": 95,
+              "index": 50
+            },
+            {
+              "deckLenBefore": 94,
+              "index": 55
+            },
+            {
+              "deckLenBefore": 93,
+              "index": 65
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 7,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 823454030,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 92,
+              "index": 2
+            },
+            {
+              "deckLenBefore": 91,
+              "index": 56
+            },
+            {
+              "deckLenBefore": 90,
+              "index": 86
+            },
+            {
+              "deckLenBefore": 89,
+              "index": 39
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 8,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 380503875,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 88,
+              "index": 69
+            },
+            {
+              "deckLenBefore": 87,
+              "index": 35
+            },
+            {
+              "deckLenBefore": 86,
+              "index": 25
+            },
+            {
+              "deckLenBefore": 85,
+              "index": 55
+            }
+          ]
+        },
+        {
+          "seq": "18446744073709551614",
+          "pack": 9,
+          "edition": 1,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 177456236,
+          "widths": [0, 0, 0, 2500000, 20000000, 114187500],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 84,
+              "index": 45
+            },
+            {
+              "deckLenBefore": 83,
+              "index": 12
+            },
+            {
+              "deckLenBefore": 82,
+              "index": 16
+            },
+            {
+              "deckLenBefore": 81,
+              "index": 79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "signature_five",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 64,
+      "pull": {
+        "seq": "103",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 2,
+        "qty": 5,
+        "liveFlags": 0,
+        "holder": true,
+        "randomness": "1111111111111111111111111111111111111111111111111111111111111111",
+        "callerSeed": "58533707f4e9c9683b27ef77a46da44d32713f5e363ae3e96b3bb16b16508e1d"
+      },
+      "packs": [
+        {
+          "seq": "103",
+          "pack": 0,
+          "edition": 2,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 564362720,
+          "widths": [0, 0, 0, 2500000, 20000000, 114625000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 64,
+              "index": 24
+            },
+            {
+              "deckLenBefore": 63,
+              "index": 36
+            },
+            {
+              "deckLenBefore": 62,
+              "index": 45
+            },
+            {
+              "deckLenBefore": 61,
+              "index": 50
+            }
+          ]
+        },
+        {
+          "seq": "103",
+          "pack": 1,
+          "edition": 2,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 447656898,
+          "widths": [0, 0, 0, 2500000, 20000000, 114625000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 60,
+              "index": 42
+            },
+            {
+              "deckLenBefore": 59,
+              "index": 57
+            },
+            {
+              "deckLenBefore": 58,
+              "index": 40
+            },
+            {
+              "deckLenBefore": 57,
+              "index": 47
+            }
+          ]
+        },
+        {
+          "seq": "103",
+          "pack": 2,
+          "edition": 2,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 785269497,
+          "widths": [0, 0, 0, 2500000, 20000000, 114625000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 56,
+              "index": 19
+            },
+            {
+              "deckLenBefore": 55,
+              "index": 43
+            },
+            {
+              "deckLenBefore": 54,
+              "index": 4
+            },
+            {
+              "deckLenBefore": 53,
+              "index": 17
+            }
+          ]
+        },
+        {
+          "seq": "103",
+          "pack": 3,
+          "edition": 2,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 297957211,
+          "widths": [0, 0, 0, 2500000, 20000000, 114625000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 52,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 51,
+              "index": 38
+            },
+            {
+              "deckLenBefore": 50,
+              "index": 29
+            },
+            {
+              "deckLenBefore": 49,
+              "index": 23
+            }
+          ]
+        },
+        {
+          "seq": "103",
+          "pack": 4,
+          "edition": 2,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 146850641,
+          "widths": [0, 0, 0, 2500000, 20000000, 114625000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 48,
+              "index": 12
+            },
+            {
+              "deckLenBefore": 47,
+              "index": 32
+            },
+            {
+              "deckLenBefore": 46,
+              "index": 31
+            },
+            {
+              "deckLenBefore": 45,
+              "index": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "after_hours_five",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 64,
+      "pull": {
+        "seq": "104",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 3,
+        "qty": 5,
+        "liveFlags": 0,
+        "holder": true,
+        "randomness": "3535353535353535353535353535353535353535353535353535353535353535",
+        "callerSeed": "38f6ad7ce6fd726a363c6f22b248dbfbe6f0ea7d9b1d30ae57ae570d7dd5e7d1"
+      },
+      "packs": [
+        {
+          "seq": "104",
+          "pack": 0,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 401756211,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 64,
+              "index": 42
+            },
+            {
+              "deckLenBefore": 63,
+              "index": 8
+            },
+            {
+              "deckLenBefore": 62,
+              "index": 42
+            },
+            {
+              "deckLenBefore": 61,
+              "index": 2
+            }
+          ]
+        },
+        {
+          "seq": "104",
+          "pack": 1,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 456832205,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 60,
+              "index": 14
+            },
+            {
+              "deckLenBefore": 59,
+              "index": 24
+            },
+            {
+              "deckLenBefore": 58,
+              "index": 57
+            },
+            {
+              "deckLenBefore": 57,
+              "index": 4
+            }
+          ]
+        },
+        {
+          "seq": "104",
+          "pack": 2,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 891327398,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 56,
+              "index": 16
+            },
+            {
+              "deckLenBefore": 55,
+              "index": 2
+            },
+            {
+              "deckLenBefore": 54,
+              "index": 37
+            },
+            {
+              "deckLenBefore": 53,
+              "index": 18
+            }
+          ]
+        },
+        {
+          "seq": "104",
+          "pack": 3,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 189544495,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 52,
+              "index": 21
+            },
+            {
+              "deckLenBefore": 51,
+              "index": 22
+            },
+            {
+              "deckLenBefore": 50,
+              "index": 43
+            },
+            {
+              "deckLenBefore": 49,
+              "index": 10
+            }
+          ]
+        },
+        {
+          "seq": "104",
+          "pack": 4,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": true,
+          "t": 139768039,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 48,
+              "index": 5
+            },
+            {
+              "deckLenBefore": 47,
+              "index": 30
+            },
+            {
+              "deckLenBefore": 46,
+              "index": 10
+            },
+            {
+              "deckLenBefore": 45,
+              "index": 37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "short_deck_house_five",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 3,
+      "pull": {
+        "seq": "105",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 0,
+        "qty": 5,
+        "liveFlags": 0,
+        "holder": false,
+        "randomness": "6161616161616161616161616161616161616161616161616161616161616161",
+        "callerSeed": "68fc79ffb91091698f89ab4373d7985a53f3aa58901bc4f4a850b84d76dac4b8"
+      },
+      "packs": [
+        {
+          "seq": "105",
+          "pack": 0,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 561167212,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 8,
+          "dust": [
+            {
+              "deckLenBefore": 3,
+              "index": 1
+            },
+            {
+              "deckLenBefore": 2,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 1,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            }
+          ]
+        },
+        {
+          "seq": "105",
+          "pack": 1,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 286885410,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 15,
+          "dust": [
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            }
+          ]
+        },
+        {
+          "seq": "105",
+          "pack": 2,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 118273109,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 2,
+          "hitBucket": 255,
+          "houseMask": 15,
+          "dust": [
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            }
+          ]
+        },
+        {
+          "seq": "105",
+          "pack": 3,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 705647756,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 15,
+          "dust": [
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            }
+          ]
+        },
+        {
+          "seq": "105",
+          "pack": 4,
+          "edition": 0,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 474643676,
+          "widths": [0, 0, 0, 2500000, 20000000, 113925000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 15,
+          "dust": [
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            },
+            {
+              "deckLenBefore": 0,
+              "index": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jackpot_flags_change",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "initialDeckLen": 16,
+      "pull": {
+        "seq": "106",
+        "buyer": "11111111111111111111111111111111",
+        "edition": 3,
+        "qty": 2,
+        "liveFlags": 4,
+        "holder": false,
+        "randomness": "5d02000000000000555555555555555555555555555555555555555555555555",
+        "callerSeed": "daebbd3a957bbb185abd3e8f88da7190377fd80bc6b5be7b752a2c8fe2660e5d"
+      },
+      "packs": [
+        {
+          "seq": "106",
+          "pack": 0,
+          "edition": 3,
+          "liveFlags": 4,
+          "holder": false,
+          "t": 61806,
+          "widths": [0, 0, 2500000, 2500000, 20000000, 115500000],
+          "tier": 5,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 16,
+              "index": 11
+            },
+            {
+              "deckLenBefore": 15,
+              "index": 7
+            },
+            {
+              "deckLenBefore": 14,
+              "index": 9
+            },
+            {
+              "deckLenBefore": 13,
+              "index": 2
+            }
+          ]
+        },
+        {
+          "seq": "106",
+          "pack": 1,
+          "edition": 3,
+          "liveFlags": 0,
+          "holder": false,
+          "t": 442728111,
+          "widths": [0, 0, 0, 2500000, 20000000, 115500000],
+          "tier": 1,
+          "hitBucket": 255,
+          "houseMask": 0,
+          "dust": [
+            {
+              "deckLenBefore": 12,
+              "index": 11
+            },
+            {
+              "deckLenBefore": 11,
+              "index": 1
+            },
+            {
+              "deckLenBefore": 10,
+              "index": 6
+            },
+            {
+              "deckLenBefore": 9,
+              "index": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

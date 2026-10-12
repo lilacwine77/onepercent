@@ -1,0 +1,16 @@
+{
+  "type": "action",
+  "icon": "https://onepercent.test/x/So11111111111111111111111111111111111111112/square.png?ref=So11111111111111111111111111111111111111112",
+  "title": "X-ray: So11…1112",
+  "description": "That wallet’s clean. Nothing to X-ray. Mint condition.",
+  "label": "X-ray your wallet",
+  "links": {
+    "actions": [
+      {
+        "type": "external-link",
+        "label": "X-ray your wallet",
+        "href": "/api/actions/xray?ref=So11111111111111111111111111111111111111112"
+      }
+    ]
+  }
+}

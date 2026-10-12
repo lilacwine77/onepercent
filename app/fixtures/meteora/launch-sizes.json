@@ -1,0 +1,38 @@
+{
+  "spec": "D29 section 4.2; one atomic v0 transaction with frozen lookup table",
+  "standardMetadata": {
+    "nameBytes": 10,
+    "symbolBytes": 4,
+    "uriBytes": 80,
+    "transactionBytes": 826
+  },
+  "maximumMetadata": {
+    "nameBytes": 32,
+    "symbolBytes": 10,
+    "uriBytes": 200,
+    "transactionBytes": 975
+  },
+  "v0WithoutLookupBytes": 1319,
+  "packetLimit": 1232,
+  "requiredSignatures": 2,
+  "instructionCount": 14,
+  "lookupAddresses": [
+    "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+    "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+    "So11111111111111111111111111111111111111112",
+    "9wJDiyfodEtF4Rh66aYLNoGBHwyT9d8pw9LfqfKgaxYQ",
+    "FXeYoCU4Mfq2nNHgUQXmJA6fqBeQzYGotZfLuVukUgmF",
+    "3h7obQ77y4y1VoeEkAMytt56WoLfpL2Y2h6hBLcyHJ75",
+    "CFb5eoChNUkMTs2RdKviwXo6tPUZTukcDigeXn6vk5m4",
+    "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+    "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+    "CsYkfSfTUTWwnoeRkGchtai5kkYz2SC33kKJwA99wVr3",
+    "7i4VVk55NzhtekVjPg7EZzoSGznZYixPyd5cCeDxi7rW",
+    "9H3EtVG13aq8pLRuuwFEpEidtQ33r3pRKMX5dC2bqdSZ",
+    "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+    "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+    "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+    "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+    "HWENLimWWrwGdefvk8TxUR8fWGoMCN76fPEX3k2G4fNB"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "recordedAt": "2026-10-08T18:43:06.067Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/tokens/v2/search?query=7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "6",
+      "x-ratelimit-remaining": "4",
+      "x-ratelimit-reset": "1791484987"
+    },
+    "body": [
+      {
+        "id": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+        "name": "Popcat",
+        "symbol": "POPCAT",
+        "icon": "https://arweave.net/A1etRNMKxhlNGTf-gNBtJ75QJJ4NJtbKh_UXQTlLXzI",
+        "decimals": 9,
+        "dev": "Gda3vwfRN62ambyyvRN7uSwpUVPzsAVJy7Zk5ue3BuuD",
+        "circSupply": 979932304.653644,
+        "totalSupply": 979932304.653644,
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "holderCount": 142485,
+        "fdv": 44603188.86271148,
+        "mcap": 44603188.86271148,
+        "usdPrice": 0.0455166021682247,
+        "priceBlockId": 454628077,
+        "liquidity": 4274661.783455151,
+        "stats5m": {
+          "priceChange": 0.1615792070661481,
+          "holderChange": 0.00140367622804124,
+          "liquidityChange": 0.0019988228253236214,
+          "volumeChange": -84.05645087846733,
+          "buyVolume": 544.7135452772457,
+          "sellVolume": 12.009453407655174,
+          "buyOrganicVolume": 0.08111582996442947,
+          "sellOrganicVolume": 0.08179133406971095,
+          "numBuys": 43,
+          "numSells": 19,
+          "numTraders": 26,
+          "numOrganicBuyers": 1,
+          "numNetBuyers": 14
+        },
+        "stats1h": {
+          "priceChange": 2.3813882082006925,
+          "holderChange": 0.003509264458169568,
+          "liquidityChange": 1.5900318933784316,
+          "volumeChange": 40.726110701441684,
+          "buyVolume": 12672.7460985336,
+          "sellVolume": 49522.723966881815,
+          "buyOrganicVolume": 310.2500836824988,
+          "sellOrganicVolume": 19.780811758556435,
+          "numBuys": 402,
+          "numSells": 267,
+          "numTraders": 166,
+          "numOrganicBuyers": 4,
+          "numNetBuyers": 49
+        },
+        "stats6h": {
+          "priceChange": -5.5622084709870885,
+          "holderChange": -0.005614310878429116,
+          "liquidityChange": -4.625290206211271,
+          "volumeChange": 639.3271716223155,
+          "buyVolume": 149644.97819980132,
+          "sellVolume": 226411.55080060675,
+          "buyOrganicVolume": 11784.221911764158,
+          "sellOrganicVolume": 30423.7086523109,
+          "numBuys": 3037,
+          "numSells": 2938,
+          "numTraders": 712,
+          "numOrganicBuyers": 14,
+          "numNetBuyers": 112
+        },
+        "stats24h": {
+          "priceChange": -5.751600646089669,
+          "holderChange": -0.009824630348283146,
+          "liquidityChange": -6.0162921632924995,
+          "volumeChange": 27.22087142973345,
+          "buyVolume": 281850.48062480934,
+          "sellVolume": 293884.27534067264,
+          "buyOrganicVolume": 27892.220264940606,
+          "sellOrganicVolume": 35453.82920657327,
+          "numBuys": 6619,
+          "numSells": 6472,
+          "numTraders": 1791,
+          "numOrganicBuyers": 33,
+          "numNetBuyers": 197
+        },
+        "firstPool": {
+          "id": "6rBoG7ShzBDbAxDVrPg3KqxRBDcatwezi86kbELGT2ar",
+          "createdAt": "2024-03-25T19:07:52Z"
+        },
+        "audit": {
+          "mintAuthorityDisabled": true,
+          "freezeAuthorityDisabled": true,
+          "topHoldersPercentage": 38.61280149165871,
+          "devMigrations": 3,
+          "devMints": 5
+        },
+        "organicScore": 79.00107891436342,
+        "organicScoreLabel": "medium",
+        "isVerified": true,
+        "tags": [
+          "birdeye-trending",
+          "community",
+          "moonshot-verified",
+          "strict",
+          "verified",
+          "meme"
+        ],
+        "createdAt": "2024-06-07T10:15:02.516Z",
+        "updatedAt": "2026-10-08T18:43:06.018510265Z"
+      }
+    ]
+  }
+}

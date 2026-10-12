@@ -1,0 +1,10 @@
+{
+  "address": "4oPaRNdUyHNPn7oba9RnY66mkCUeUMZNVLmJ2X6J5a4Z",
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "lamports": "2039280",
+  "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j8GtLuCKq3UO97zNyw2sbBKznB8aeuNBS9HDogO11Y2rdkPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "slot": 454620027,
+  "recordedAt": "2026-10-08T18:06:23.112Z",
+  "source": "mainnet",
+  "note": "Public pump.fun curve token account; account bytes only, no wallet scan."
+}

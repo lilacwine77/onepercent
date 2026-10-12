@@ -1,0 +1,23 @@
+{
+  "name": "dbc-active-quote-vault",
+  "address": "4W9cQLFbsKWKk8WQy4G9yN2iwyqrSGRKmRdDZ3yoECqQ",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848237,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "3ebd42036995b0c77e70fb248e4fbfcc66aa63213541ff1a1651b8589ac5148c",
+  "pubkey": "4W9cQLFbsKWKk8WQy4G9yN2iwyqrSGRKmRdDZ3yoECqQ",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHaY2gfcoa8yAZxniwrUKIBVyQ7/JZosRUgvFOEPtzbCI+2tWcEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAA4thYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 18921319623,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

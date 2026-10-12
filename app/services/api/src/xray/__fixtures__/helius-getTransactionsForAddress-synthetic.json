@@ -1,0 +1,55 @@
+{
+  "source": "synthetic-rekeyed",
+  "note": "Provider response envelope derived from recorded public account bytes and synthetic wallet fixtures; never a real wallet scan.",
+  "derivedFrom": "packages/eligibility/fixtures/wallets/trencher.json",
+  "wallet": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+  "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+  "slotS": 454619967,
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "data": [
+        {
+          "slot": 454619966,
+          "transactionIndex": 0,
+          "transaction": {
+            "signatures": ["synthetic-provider-fixture"],
+            "message": {
+              "accountKeys": [],
+              "instructions": []
+            }
+          },
+          "meta": {
+            "err": null,
+            "postTokenBalances": [
+              {
+                "accountIndex": 1,
+                "owner": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+                "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+                "uiTokenAmount": {
+                  "amount": "40",
+                  "decimals": 6,
+                  "uiAmount": 4e-5,
+                  "uiAmountString": "0.00004"
+                }
+              },
+              {
+                "accountIndex": 2,
+                "owner": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+                "mint": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+                "uiTokenAmount": {
+                  "amount": "2",
+                  "decimals": 6,
+                  "uiAmount": 2e-6,
+                  "uiAmountString": "0.000002"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "paginationToken": null
+    }
+  }
+}

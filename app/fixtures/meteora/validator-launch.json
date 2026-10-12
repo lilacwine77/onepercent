@@ -1,0 +1,3748 @@
+{
+  "checkedAt": "2026-10-10T21:21:47.185Z",
+  "cluster": "localnet",
+  "validatorVersion": "solana-test-validator 4.3.0 (src:825efd18; feat:c9ad34d2, client:Agave)",
+  "powerOn": "real-m4.1-program",
+  "productionDeploymentVerified": false,
+  "offline": true,
+  "stage": "complete",
+  "program": {
+    "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "artifact": "target/deploy/onepercent.so",
+    "sha256": "d5204f9d8df27db85bfcdb9e062e1dfdf6f27d8e9138113a959717d182821e71"
+  },
+  "config": {
+    "ok": true,
+    "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+    "feeIn": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+    "migrationQuoteThreshold": "85000000000",
+    "signature": "5WVuQpQuaDccJzDWfx83pMCRwQaxG9Upko3VQwbvckankizKou7wMz53EiZfKxLxdwYnxYqisiZpKo76BSXP5GT2",
+    "verified": {
+      "quoteMint": "So11111111111111111111111111111111111111112",
+      "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "leftoverReceiver": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "poolFees": {
+        "baseFee": {
+          "cliffFeeNumerator": "25000000",
+          "secondFactor": "0",
+          "thirdFactor": "0",
+          "firstFactor": 0,
+          "baseFeeMode": 0,
+          "padding0": [0, 0, 0, 0, 0]
+        },
+        "dynamicFee": {
+          "initialized": 0,
+          "padding": [0, 0, 0, 0, 0, 0, 0],
+          "maxVolatilityAccumulator": 0,
+          "variableFeeControl": 0,
+          "binStep": 0,
+          "filterPeriod": 0,
+          "decayPeriod": 0,
+          "reductionFactor": 0,
+          "padding2": [0, 0, 0, 0, 0, 0, 0, 0],
+          "binStepU128": "0"
+        }
+      },
+      "partnerLiquidityVestingInfo": {
+        "isInitialized": 0,
+        "vestingPercentage": 0,
+        "Padding": [0, 0],
+        "bpsPerPeriod": 0,
+        "numberOfPeriods": 0,
+        "frequency": 0,
+        "cliffDurationFromMigrationTime": 0
+      },
+      "creatorLiquidityVestingInfo": {
+        "isInitialized": 0,
+        "vestingPercentage": 0,
+        "Padding": [0, 0],
+        "bpsPerPeriod": 0,
+        "numberOfPeriods": 0,
+        "frequency": 0,
+        "cliffDurationFromMigrationTime": 0
+      },
+      "padding0": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "padding1": 0,
+      "collectFeeMode": 0,
+      "migrationOption": 1,
+      "activationType": 1,
+      "tokenDecimal": 6,
+      "version": 0,
+      "tokenType": 0,
+      "quoteTokenFlag": 0,
+      "partnerPermanentLockedLiquidityPercentage": 100,
+      "partnerLiquidityPercentage": 0,
+      "creatorPermanentLockedLiquidityPercentage": 0,
+      "creatorLiquidityPercentage": 0,
+      "migrationFeeOption": 6,
+      "fixedTokenSupplyFlag": 1,
+      "creatorTradingFeePercentage": 0,
+      "tokenUpdateAuthority": 1,
+      "migrationFeePercentage": 0,
+      "creatorMigrationFeePercentage": 0,
+      "padding2": [0, 0, 0, 0, 0, 0, 0],
+      "swapBaseAmount": "792999988514609",
+      "migrationQuoteThreshold": "85000000000",
+      "migrationBaseThreshold": "207000002377476",
+      "migrationSqrtPrice": "373804058752063036",
+      "lockedVestingConfig": {
+        "amountPerPeriod": "0",
+        "cliffDurationFromMigrationTime": "0",
+        "frequency": "0",
+        "numberOfPeriod": "0",
+        "cliffUnlockAmount": "0",
+        "Padding": "0"
+      },
+      "preMigrationTokenSupply": "1000000000000000",
+      "postMigrationTokenSupply": "1000000000000000",
+      "migratedCollectFeeMode": 0,
+      "migratedDynamicFee": 0,
+      "migratedPoolFeeBps": 250,
+      "migratedPoolBaseFeeMode": 0,
+      "enableFirstSwapWithMinFee": 0,
+      "migratedCompoundingFeeBps": 0,
+      "poolCreationFee": "0",
+      "migratedPoolBaseFeeBytes": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      ],
+      "sqrtStartPrice": "97575587997945580",
+      "curve": [
+        {
+          "sqrtPrice": "373804058752063036",
+          "liquidity": "104710427239146668654858249241374"
+        },
+        {
+          "sqrtPrice": "79226673521066979257578248091",
+          "liquidity": "3404575593784859536198155"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        },
+        {
+          "sqrtPrice": "0",
+          "liquidity": "0"
+        }
+      ]
+    }
+  },
+  "prefundedAddresses": {
+    "signature": "4t4aTkiJiiDjv1MWab3p62JiEFNVdfhitzDLTtDYdy1D7R65eRWWPyKcrS7FD4YYVckdRHBQbfkCcQgfet1j4GGr",
+    "mintLamports": 890880,
+    "poolLamports": 890880
+  },
+  "lookupTable": {
+    "ok": true,
+    "lookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+    "recordPath": "/var/folders/6l/t5f5ty7x6pn5p6df2mc6dlp00000gn/T/onepct-dbc-launch-HEf5XG/reports/lut-localnet-ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR.json",
+    "alreadyFrozen": false,
+    "signatures": [
+      "3vfMPygEj2keb5wiDTPrztUcdwP9Z2Ss9qTqukbpwJt8vELyj3V7jsyMBLyL8Y6QUQJ8QgBk5q7CUaDgRwvKuHbu",
+      "C4R46vYahkGvT3dz6WAjjx8Dyu9rx6MsSeAWk1365QnW1h8Q64bwqxFSbp8bxD2qUP21jPgJ2TdSqanE9tTQpbX"
+    ],
+    "verified": {
+      "address": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "active": true,
+      "authority": null,
+      "lastExtendedSlot": 72,
+      "observedSlot": 105,
+      "addresses": [
+        "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+        "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "So11111111111111111111111111111111111111112",
+        "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+        "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+        "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+        "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+        "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+        "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+        "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+        "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+        "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+        "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+        "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+        "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+        "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+        "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+      ]
+    }
+  },
+  "plan": {
+    "ok": true,
+    "cluster": "localnet",
+    "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+    "wallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+    "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+    "migrationQuoteThreshold": "85000000000",
+    "powerOnInterface": "M4.1 powerOnIx",
+    "quoteLamports": "1192328122",
+    "form": "single",
+    "sizes": {
+      "single": 787,
+      "limit": 1232
+    },
+    "lookupAddresses": [
+      "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+      "So11111111111111111111111111111111111111112",
+      "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+      "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+      "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+      "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+      "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+      "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+      "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+      "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+      "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+      "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+    ],
+    "checks": [
+      {
+        "id": "3.config",
+        "status": "GO",
+        "detail": "Config identities match the two signers; mint address is available for DBC initialization.",
+        "value": {
+          "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+          "mintExists": false,
+          "prefundedLamports": "890880"
+        }
+      },
+      {
+        "id": "3.pool",
+        "status": "GO",
+        "detail": "Pool address is available for DBC initialization.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "prefundedLamports": "890880"
+        }
+      },
+      {
+        "id": "3.dbc_config",
+        "status": "GO",
+        "detail": "DBC config matches every D29 field and the selected curve threshold.",
+        "value": {
+          "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i"
+        }
+      },
+      {
+        "id": "4.machine",
+        "status": "GO",
+        "detail": "Machine is StockUp and has never powered on.",
+        "value": {
+          "phase": "StockUp",
+          "powerOnTs": "0"
+        }
+      },
+      {
+        "id": "4.fee_in",
+        "status": "GO",
+        "detail": "FeeIn is a System account funded at current rent or above.",
+        "value": {
+          "lamports": "100000000",
+          "rentMinimumLamports": "890880"
+        }
+      },
+      {
+        "id": "5.lookup_table",
+        "status": "GO",
+        "detail": "Lookup table is active, frozen, warmed and exact.",
+        "value": {
+          "address": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+          "active": true,
+          "authority": null,
+          "lastExtendedSlot": 72,
+          "observedSlot": 136,
+          "addresses": [
+            "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "So11111111111111111111111111111111111111112",
+            "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+            "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+            "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+            "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+            "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+            "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+            "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+            "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+            "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+            "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+            "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+            "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+          ]
+        }
+      },
+      {
+        "id": "landing_policy",
+        "status": "GO",
+        "detail": "Pinned landing policy available"
+      },
+      {
+        "id": "1.meteora_programs",
+        "status": "WARN",
+        "detail": "Meteora versions changed: re-run simulation, record the new versions and obtain the founder's rehearsal decision.",
+        "value": {
+          "observed": [
+            {
+              "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "deploySlot": 0,
+              "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+            },
+            {
+              "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+              "deploySlot": 0,
+              "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+            }
+          ],
+          "changes": [
+            {
+              "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "deploySlot": 0,
+              "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+            },
+            {
+              "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+              "deploySlot": 0,
+              "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+            }
+          ]
+        }
+      },
+      {
+        "id": "dbc_dev_buy_quote",
+        "status": "GO",
+        "detail": "Exact-out dev buy from the pinned DBC integer math mirror",
+        "value": {
+          "amountOut": "40000000000000",
+          "quoteIn": "1192328122",
+          "maxQuoteIn": "1192328122",
+          "excludedFeeInput": "1162519918",
+          "nextSqrtPrice": "101353483280186128",
+          "tradeFee": "29808204",
+          "protocolFee": "5961640",
+          "partnerFee": "23846564"
+        }
+      },
+      {
+        "id": "rehearsal_mint",
+        "status": "GO",
+        "detail": "This cluster is a rehearsal; prior devnet evidence is required only before mainnet launch"
+      },
+      {
+        "id": "launch_transaction_size",
+        "status": "GO",
+        "detail": "D28 requires one atomic v0 transaction within the packet limit",
+        "value": {
+          "bytes": 787,
+          "limit": 1232
+        }
+      },
+      {
+        "id": "6.simulation",
+        "status": "GO",
+        "detail": "Launch simulation succeeded."
+      },
+      {
+        "id": "6.mint",
+        "status": "GO",
+        "detail": "Simulated mint is immutable SPL Token with the configured supply.",
+        "value": {
+          "decimals": 6,
+          "supply": "1000000000000000",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "mintAuthority": null,
+          "freezeAuthority": null
+        }
+      },
+      {
+        "id": "6.pool",
+        "status": "GO",
+        "detail": "Simulated DBC pool accrues partner fees to FeeIn and no creator fees.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+          "partnerQuoteFee": "23846564",
+          "creatorQuoteFee": "0"
+        }
+      },
+      {
+        "id": "6.vault",
+        "status": "GO",
+        "detail": "Simulated vault holds exactly the dev buy.",
+        "value": {
+          "amount": "40000000000000"
+        }
+      },
+      {
+        "id": "6.launch_account",
+        "status": "GO",
+        "detail": "Simulated launch token account is closed.",
+        "value": {
+          "closed": true,
+          "amount": "0"
+        }
+      },
+      {
+        "id": "simulation.report.phase",
+        "status": "GO",
+        "detail": "Machine is powered on for the configured mint.",
+        "value": {
+          "phase": "PoweredOn",
+          "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"
+        }
+      },
+      {
+        "id": "simulation.report.ledger",
+        "status": "GO",
+        "detail": "Ledger accounts for exactly the dev buy.",
+        "value": {
+          "accounted": "40000000000000"
+        }
+      },
+      {
+        "id": "simulation.report.vault",
+        "status": "GO",
+        "detail": "Vault covers the dev buy; any donated excess remains unaccounted.",
+        "value": {
+          "amount": "40000000000000",
+          "unaccounted": "0"
+        }
+      },
+      {
+        "id": "simulation.report.one_pct",
+        "status": "GO",
+        "detail": "All four The 1% slots are Locked at their configured amounts.",
+        "value": [
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          }
+        ]
+      },
+      {
+        "id": "simulation.report.timestamps",
+        "status": "GO",
+        "detail": "Season clocks derive from the observed Power-On timestamp.",
+        "value": {
+          "powerOnTs": "1791667380",
+          "onAirTs": "1791668280",
+          "endTs": "1792273080",
+          "onePctReleaseTs": [
+            "1791668280",
+            "1791819480",
+            "1791970680",
+            "1792121880"
+          ]
+        }
+      },
+      {
+        "id": "simulation.report.launch_wallet",
+        "status": "GO",
+        "detail": "Launch wallet holds zero of the configured token across all its token accounts.",
+        "value": {
+          "amount": "0",
+          "tokenAccounts": 0
+        }
+      },
+      {
+        "id": "simulation.report.mint",
+        "status": "GO",
+        "detail": "Landed mint matches the safe launch template.",
+        "value": {
+          "decimals": 6,
+          "supply": "1000000000000000",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "mintAuthority": null,
+          "freezeAuthority": null
+        }
+      },
+      {
+        "id": "simulation.report.pool",
+        "status": "GO",
+        "detail": "Landed DBC pool retains its approved config and FeeIn partner.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+          "partnerQuoteFee": "23846564",
+          "creatorQuoteFee": "0"
+        }
+      },
+      {
+        "id": "launch_funding",
+        "status": "GO",
+        "detail": "Successful simulation debits live wallet including account rent, fees and tip",
+        "value": {
+          "before": "499984941400",
+          "after": "498765400398",
+          "totalSpend": "1219541002"
+        }
+      }
+    ],
+    "simulation": {
+      "slot": 136,
+      "error": null,
+      "unitsConsumed": [219735]
+    },
+    "instructions": [
+      [
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "022db00300",
+          "accounts": []
+        },
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "030000000000000000",
+          "accounts": []
+        },
+        {
+          "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "dataHex": "8c55d7b06636684f0d0000004442432072656865617273616c04000000544553542600000068747470733a2f2f6578616d706c652e636f6d2f6462632d72656865617273616c2e6a736f6e",
+          "accounts": [
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "11111111111111111111111111111111",
+          "dataHex": "02000000ba7b114700000000",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "11",
+          "accounts": [
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "dataHex": "414b3f4ceb5b5b880080ca3961240000ba7b11470000000002",
+          "accounts": [
+            {
+              "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "09",
+          "accounts": [
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "0c0080ca396124000006",
+          "accounts": [
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+          "dataHex": "7be51b871d820265",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "09",
+          "accounts": [
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "11111111111111111111111111111111",
+          "dataHex": "0200000040420f0000000000",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "4ACfpUFoaSD9bfPdeu6DBt89gB6ENTeHBXCAi87NhDEE",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "check": {
+    "ok": true,
+    "cluster": "localnet",
+    "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+    "wallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+    "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+    "migrationQuoteThreshold": "85000000000",
+    "powerOnInterface": "M4.1 powerOnIx",
+    "quoteLamports": "1192328122",
+    "form": "single",
+    "sizes": {
+      "single": 787,
+      "limit": 1232
+    },
+    "lookupAddresses": [
+      "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+      "So11111111111111111111111111111111111111112",
+      "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+      "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+      "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+      "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+      "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+      "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+      "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+      "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+      "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+      "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+    ],
+    "checks": [
+      {
+        "id": "3.config",
+        "status": "GO",
+        "detail": "Config identities match the two signers; mint address is available for DBC initialization.",
+        "value": {
+          "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+          "mintExists": false,
+          "prefundedLamports": "890880"
+        }
+      },
+      {
+        "id": "3.pool",
+        "status": "GO",
+        "detail": "Pool address is available for DBC initialization.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "prefundedLamports": "890880"
+        }
+      },
+      {
+        "id": "3.dbc_config",
+        "status": "GO",
+        "detail": "DBC config matches every D29 field and the selected curve threshold.",
+        "value": {
+          "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i"
+        }
+      },
+      {
+        "id": "4.machine",
+        "status": "GO",
+        "detail": "Machine is StockUp and has never powered on.",
+        "value": {
+          "phase": "StockUp",
+          "powerOnTs": "0"
+        }
+      },
+      {
+        "id": "4.fee_in",
+        "status": "GO",
+        "detail": "FeeIn is a System account funded at current rent or above.",
+        "value": {
+          "lamports": "100000000",
+          "rentMinimumLamports": "890880"
+        }
+      },
+      {
+        "id": "5.lookup_table",
+        "status": "GO",
+        "detail": "Lookup table is active, frozen, warmed and exact.",
+        "value": {
+          "address": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+          "active": true,
+          "authority": null,
+          "lastExtendedSlot": 72,
+          "observedSlot": 136,
+          "addresses": [
+            "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+            "So11111111111111111111111111111111111111112",
+            "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+            "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+            "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+            "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+            "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+            "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+            "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+            "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+            "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+            "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+            "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+            "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+          ]
+        }
+      },
+      {
+        "id": "landing_policy",
+        "status": "GO",
+        "detail": "Pinned landing policy available"
+      },
+      {
+        "id": "1.meteora_programs",
+        "status": "WARN",
+        "detail": "Meteora versions changed: re-run simulation, record the new versions and obtain the founder's rehearsal decision.",
+        "value": {
+          "observed": [
+            {
+              "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "deploySlot": 0,
+              "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+            },
+            {
+              "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+              "deploySlot": 0,
+              "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+            }
+          ],
+          "changes": [
+            {
+              "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "deploySlot": 0,
+              "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+            },
+            {
+              "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+              "deploySlot": 0,
+              "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+            }
+          ]
+        }
+      },
+      {
+        "id": "dbc_dev_buy_quote",
+        "status": "GO",
+        "detail": "Exact-out dev buy from the pinned DBC integer math mirror",
+        "value": {
+          "amountOut": "40000000000000",
+          "quoteIn": "1192328122",
+          "maxQuoteIn": "1192328122",
+          "excludedFeeInput": "1162519918",
+          "nextSqrtPrice": "101353483280186128",
+          "tradeFee": "29808204",
+          "protocolFee": "5961640",
+          "partnerFee": "23846564"
+        }
+      },
+      {
+        "id": "rehearsal_mint",
+        "status": "GO",
+        "detail": "This cluster is a rehearsal; prior devnet evidence is required only before mainnet launch"
+      },
+      {
+        "id": "launch_transaction_size",
+        "status": "GO",
+        "detail": "D28 requires one atomic v0 transaction within the packet limit",
+        "value": {
+          "bytes": 787,
+          "limit": 1232
+        }
+      },
+      {
+        "id": "6.simulation",
+        "status": "GO",
+        "detail": "Launch simulation succeeded."
+      },
+      {
+        "id": "6.mint",
+        "status": "GO",
+        "detail": "Simulated mint is immutable SPL Token with the configured supply.",
+        "value": {
+          "decimals": 6,
+          "supply": "1000000000000000",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "mintAuthority": null,
+          "freezeAuthority": null
+        }
+      },
+      {
+        "id": "6.pool",
+        "status": "GO",
+        "detail": "Simulated DBC pool accrues partner fees to FeeIn and no creator fees.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+          "partnerQuoteFee": "23846564",
+          "creatorQuoteFee": "0"
+        }
+      },
+      {
+        "id": "6.vault",
+        "status": "GO",
+        "detail": "Simulated vault holds exactly the dev buy.",
+        "value": {
+          "amount": "40000000000000"
+        }
+      },
+      {
+        "id": "6.launch_account",
+        "status": "GO",
+        "detail": "Simulated launch token account is closed.",
+        "value": {
+          "closed": true,
+          "amount": "0"
+        }
+      },
+      {
+        "id": "simulation.report.phase",
+        "status": "GO",
+        "detail": "Machine is powered on for the configured mint.",
+        "value": {
+          "phase": "PoweredOn",
+          "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"
+        }
+      },
+      {
+        "id": "simulation.report.ledger",
+        "status": "GO",
+        "detail": "Ledger accounts for exactly the dev buy.",
+        "value": {
+          "accounted": "40000000000000"
+        }
+      },
+      {
+        "id": "simulation.report.vault",
+        "status": "GO",
+        "detail": "Vault covers the dev buy; any donated excess remains unaccounted.",
+        "value": {
+          "amount": "40000000000000",
+          "unaccounted": "0"
+        }
+      },
+      {
+        "id": "simulation.report.one_pct",
+        "status": "GO",
+        "detail": "All four The 1% slots are Locked at their configured amounts.",
+        "value": [
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          }
+        ]
+      },
+      {
+        "id": "simulation.report.timestamps",
+        "status": "GO",
+        "detail": "Season clocks derive from the observed Power-On timestamp.",
+        "value": {
+          "powerOnTs": "1791667380",
+          "onAirTs": "1791668280",
+          "endTs": "1792273080",
+          "onePctReleaseTs": [
+            "1791668280",
+            "1791819480",
+            "1791970680",
+            "1792121880"
+          ]
+        }
+      },
+      {
+        "id": "simulation.report.launch_wallet",
+        "status": "GO",
+        "detail": "Launch wallet holds zero of the configured token across all its token accounts.",
+        "value": {
+          "amount": "0",
+          "tokenAccounts": 0
+        }
+      },
+      {
+        "id": "simulation.report.mint",
+        "status": "GO",
+        "detail": "Landed mint matches the safe launch template.",
+        "value": {
+          "decimals": 6,
+          "supply": "1000000000000000",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "mintAuthority": null,
+          "freezeAuthority": null
+        }
+      },
+      {
+        "id": "simulation.report.pool",
+        "status": "GO",
+        "detail": "Landed DBC pool retains its approved config and FeeIn partner.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+          "partnerQuoteFee": "23846564",
+          "creatorQuoteFee": "0"
+        }
+      },
+      {
+        "id": "launch_funding",
+        "status": "GO",
+        "detail": "Successful simulation debits live wallet including account rent, fees and tip",
+        "value": {
+          "before": "499984941400",
+          "after": "498765400398",
+          "totalSpend": "1219541002"
+        }
+      }
+    ],
+    "simulation": {
+      "slot": 137,
+      "error": null,
+      "unitsConsumed": [219735]
+    },
+    "instructions": [
+      [
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "022db00300",
+          "accounts": []
+        },
+        {
+          "programId": "ComputeBudget111111111111111111111111111111",
+          "dataHex": "030000000000000000",
+          "accounts": []
+        },
+        {
+          "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "dataHex": "8c55d7b06636684f0d0000004442432072656865617273616c04000000544553542600000068747470733a2f2f6578616d706c652e636f6d2f6462632d72656865617273616c2e6a736f6e",
+          "accounts": [
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "11111111111111111111111111111111",
+          "dataHex": "02000000ba7b114700000000",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "11",
+          "accounts": [
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "dataHex": "414b3f4ceb5b5b880080ca3961240000ba7b11470000000002",
+          "accounts": [
+            {
+              "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "So11111111111111111111111111111111111111112",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "09",
+          "accounts": [
+            {
+              "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "dataHex": "01",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "0c0080ca396124000006",
+          "accounts": [
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+          "dataHex": "7be51b871d820265",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "dataHex": "09",
+          "accounts": [
+            {
+              "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            }
+          ]
+        },
+        {
+          "programId": "11111111111111111111111111111111",
+          "dataHex": "0200000040420f0000000000",
+          "accounts": [
+            {
+              "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "4ACfpUFoaSD9bfPdeu6DBt89gB6ENTeHBXCAi87NhDEE",
+              "signer": false,
+              "writable": true
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "launch": {
+    "ok": true,
+    "form": "single",
+    "signatures": [
+      "44qc3ocXAAYbvTgGNAeoJ3RTwMgVALj4enCV9dKpMtyqyWhGGQuAXMuuJ1DSzyHpn4YaA4N47Xn79251ybNXezyC"
+    ],
+    "reconciled": true
+  },
+  "resumedLaunch": {
+    "ok": true,
+    "form": "single",
+    "signatures": [
+      "44qc3ocXAAYbvTgGNAeoJ3RTwMgVALj4enCV9dKpMtyqyWhGGQuAXMuuJ1DSzyHpn4YaA4N47Xn79251ybNXezyC"
+    ],
+    "reconciled": true
+  },
+  "launchReport": {
+    "version": 1,
+    "cluster": "localnet",
+    "observedSlot": 139,
+    "ok": true,
+    "landedForm": "single-v0",
+    "signatures": [
+      "44qc3ocXAAYbvTgGNAeoJ3RTwMgVALj4enCV9dKpMtyqyWhGGQuAXMuuJ1DSzyHpn4YaA4N47Xn79251ybNXezyC"
+    ],
+    "checks": [
+      {
+        "id": "report.phase",
+        "status": "GO",
+        "detail": "Machine is powered on for the configured mint.",
+        "value": {
+          "phase": "PoweredOn",
+          "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"
+        }
+      },
+      {
+        "id": "report.ledger",
+        "status": "GO",
+        "detail": "Ledger accounts for exactly the dev buy.",
+        "value": {
+          "accounted": "40000000000000"
+        }
+      },
+      {
+        "id": "report.vault",
+        "status": "GO",
+        "detail": "Vault covers the dev buy; any donated excess remains unaccounted.",
+        "value": {
+          "amount": "40000000000000",
+          "unaccounted": "0"
+        }
+      },
+      {
+        "id": "report.one_pct",
+        "status": "GO",
+        "detail": "All four The 1% slots retain their configured amounts; only slot 0 may be Live.",
+        "value": [
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          },
+          {
+            "amount": "10000000000000",
+            "state": "Locked"
+          }
+        ]
+      },
+      {
+        "id": "report.timestamps",
+        "status": "GO",
+        "detail": "Season clocks derive from the observed Power-On timestamp.",
+        "value": {
+          "powerOnTs": "1791667381",
+          "onAirTs": "1791668281",
+          "endTs": "1792273081",
+          "onePctReleaseTs": [
+            "1791668281",
+            "1791819481",
+            "1791970681",
+            "1792121881"
+          ]
+        }
+      },
+      {
+        "id": "report.launch_wallet",
+        "status": "GO",
+        "detail": "Launch wallet holds zero of the configured token across all its token accounts.",
+        "value": {
+          "amount": "0",
+          "tokenAccounts": 0
+        }
+      },
+      {
+        "id": "report.mint",
+        "status": "GO",
+        "detail": "Landed mint matches the safe launch template.",
+        "value": {
+          "decimals": 6,
+          "supply": "1000000000000000",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "mintAuthority": null,
+          "freezeAuthority": null
+        }
+      },
+      {
+        "id": "report.pool",
+        "status": "GO",
+        "detail": "Landed DBC pool retains its approved config and FeeIn partner.",
+        "value": {
+          "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+          "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+          "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+          "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+          "partnerQuoteFee": "23846564",
+          "creatorQuoteFee": "0"
+        }
+      }
+    ],
+    "programVersions": [
+      {
+        "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+        "deploySlot": 0,
+        "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+      },
+      {
+        "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+        "deploySlot": 0,
+        "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+      }
+    ],
+    "addresses": {
+      "program": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "programData": "2P6eTow947U3sui2fzmsTZtGc7kp9ZZk5DqAzemoMas4",
+      "config": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+      "machine": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+      "deck": "9FrQZxz1pGVU4jesF9j11u3YaWqJR5hRkVEeudiz88g8",
+      "vaultAuthority": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+      "feeIn": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+      "ledger": "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi",
+      "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+      "tokenVault": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+      "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "launchPool": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+      "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+      "launchTokenAccount": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+      "launchLookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "protocolLookupTable": null,
+      "admin": "11111111111111111111111111111111",
+      "guardians": [
+        "11111111111111111111111111111111",
+        "11111111111111111111111111111111"
+      ],
+      "keeper": "11111111111111111111111111111111",
+      "executor": "11111111111111111111111111111111",
+      "intakeSigner": "11111111111111111111111111111111",
+      "quoteSigner": "11111111111111111111111111111111",
+      "teamWallet": "11111111111111111111111111111111",
+      "teamWallets": [],
+      "vrfQueues": [],
+      "stockVaults": []
+    },
+    "reportFile": "/var/folders/6l/t5f5ty7x6pn5p6df2mc6dlp00000gn/T/onepct-dbc-launch-HEf5XG/reports/localnet-2026-10-10T21-23-19.701Z.json"
+  },
+  "devBuy": {
+    "amount": "40000000000000",
+    "walletBalance": "0",
+    "vaultBalance": "40000000000000",
+    "pool": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+    "partnerQuoteFee": "23846564",
+    "protocolQuoteFee": "5961640"
+  },
+  "thresholdBuy": {
+    "signature": "3XG16jUf8xn8HVWQ1vi1hpSWdhC2E7R8oksE2DPD6TNtdagvouvz2auF6aQb7m6hUrZU5ekGS7aA9BqHDPVhJXaq",
+    "quoteReserve": "85000000001"
+  },
+  "thresholdRoundingSurplusLamports": "1",
+  "migration": {
+    "signature": "51xneugUtg6dtUwVYvS9PLWALYeTJXnJX3ahCDSxahpwgT9HwpB87ks28oiRamqopYpfYB7zCbw3pvQve9TZ7ZuK",
+    "bytes": 797,
+    "pool": "3NZz6DPfsZLARm8D5nBHoEctd3wj9fuJim7vGUeqQwm1",
+    "position": "AELyxs6kJV77CPUe8QsBL7M1rkKSNy2P1FwFhP5cumxH",
+    "positionNftOwner": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+    "poolFeeBps": 250,
+    "migrationProtocolBaseFee": "414000004754",
+    "migrationProtocolQuoteFee": "170000000",
+    "protocolLiquidityMigrationFeeBps": 20,
+    "initialBaseAmount": "206586002372721",
+    "initialQuoteAmount": "84830000000",
+    "globalAuthorityLamportsBefore": 68821882530,
+    "globalAuthorityLamportsAfter": 68821882530,
+    "payerRentAndTransactionFeeLamports": 22616080,
+    "transactionFeeLamports": 10000,
+    "rentLamports": 22606080,
+    "baseFeeMode": 0,
+    "schedulerPeriods": 0,
+    "schedulerFrequency": "0",
+    "schedulerReduction": "0",
+    "collectFeeMode": 1,
+    "dynamicFeeInitialized": 0,
+    "compoundingFeeBps": 0,
+    "unlockedLiquidity": "0",
+    "vestedLiquidity": "0",
+    "permanentlyLockedLiquidity": "77222686168650494068152987524501",
+    "totalLiquidity": "77222686168650494068152987524501",
+    "poolPermanentlyLockedLiquidity": "77222686168650494068152987524501"
+  },
+  "dammBuy": {
+    "signature": "4ocxaaCg2DPb4XMyaNKVkXe87kF5VvFVmj7bEa8ket3sfTUjDW7jfa4t6sNu1dPcpap1fQfu7jYvJNFbDLeuEuaS",
+    "quote": {
+      "amountOut": "1000000000000",
+      "quoteIn": "423205512",
+      "maxQuoteIn": "423205512",
+      "excludedFeeInput": "412625374",
+      "nextSqrtPrice": "375622295667203772",
+      "tradeFee": "10580138",
+      "protocolFee": "2116027",
+      "partnerFee": "8464111"
+    },
+    "output": "1000000000000",
+    "protocolQuoteFee": "2116027",
+    "protocolBaseFee": "0",
+    "poolBaseAmountAfter": "205586002372721",
+    "poolQuoteAmountAfter": "85242625374"
+  },
+  "events": [
+    {
+      "event": "launch_config_signed",
+      "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "signature": "5WVuQpQuaDccJzDWfx83pMCRwQaxG9Upko3VQwbvckankizKou7wMz53EiZfKxLxdwYnxYqisiZpKo76BSXP5GT2",
+      "journal": "/var/folders/6l/t5f5ty7x6pn5p6df2mc6dlp00000gn/T/onepct-dbc-launch-HEf5XG/reports/dbc-config-localnet-DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe-DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi.json"
+    },
+    {
+      "event": "launch_lut_recorded",
+      "lookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "path": "/var/folders/6l/t5f5ty7x6pn5p6df2mc6dlp00000gn/T/onepct-dbc-launch-HEf5XG/reports/lut-localnet-ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR.json",
+      "opsWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+      "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+      "expected": [
+        "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+        "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "So11111111111111111111111111111111111111112",
+        "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+        "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+        "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+        "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+        "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+        "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+        "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+        "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+        "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+        "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+        "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+        "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+        "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+        "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+      ]
+    },
+    {
+      "event": "launch_lut_signed",
+      "lookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "signature": "3vfMPygEj2keb5wiDTPrztUcdwP9Z2Ss9qTqukbpwJt8vELyj3V7jsyMBLyL8Y6QUQJ8QgBk5q7CUaDgRwvKuHbu",
+      "bytes": 816,
+      "freezes": false
+    },
+    {
+      "event": "launch_lut_waiting_for_next_slot",
+      "lookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "lastExtendedSlot": 72
+    },
+    {
+      "event": "launch_lut_signed",
+      "lookupTable": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+      "signature": "C4R46vYahkGvT3dz6WAjjx8Dyu9rx6MsSeAWk1365QnW1h8Q64bwqxFSbp8bxD2qUP21jPgJ2TdSqanE9tTQpbX",
+      "bytes": 209,
+      "freezes": true
+    },
+    {
+      "ok": true,
+      "cluster": "localnet",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+      "wallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+      "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "migrationQuoteThreshold": "85000000000",
+      "powerOnInterface": "M4.1 powerOnIx",
+      "quoteLamports": "1192328122",
+      "form": "single",
+      "sizes": {
+        "single": 787,
+        "limit": 1232
+      },
+      "lookupAddresses": [
+        "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+        "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "So11111111111111111111111111111111111111112",
+        "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+        "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+        "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+        "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+        "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+        "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+        "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+        "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+        "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+        "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+        "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+        "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+        "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+        "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+      ],
+      "checks": [
+        {
+          "id": "3.config",
+          "status": "GO",
+          "detail": "Config identities match the two signers; mint address is available for DBC initialization.",
+          "value": {
+            "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+            "mintExists": false,
+            "prefundedLamports": "890880"
+          }
+        },
+        {
+          "id": "3.pool",
+          "status": "GO",
+          "detail": "Pool address is available for DBC initialization.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "prefundedLamports": "890880"
+          }
+        },
+        {
+          "id": "3.dbc_config",
+          "status": "GO",
+          "detail": "DBC config matches every D29 field and the selected curve threshold.",
+          "value": {
+            "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i"
+          }
+        },
+        {
+          "id": "4.machine",
+          "status": "GO",
+          "detail": "Machine is StockUp and has never powered on.",
+          "value": {
+            "phase": "StockUp",
+            "powerOnTs": "0"
+          }
+        },
+        {
+          "id": "4.fee_in",
+          "status": "GO",
+          "detail": "FeeIn is a System account funded at current rent or above.",
+          "value": {
+            "lamports": "100000000",
+            "rentMinimumLamports": "890880"
+          }
+        },
+        {
+          "id": "5.lookup_table",
+          "status": "GO",
+          "detail": "Lookup table is active, frozen, warmed and exact.",
+          "value": {
+            "address": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+            "active": true,
+            "authority": null,
+            "lastExtendedSlot": 72,
+            "observedSlot": 137,
+            "addresses": [
+              "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "So11111111111111111111111111111111111111112",
+              "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+              "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+              "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+              "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+              "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+            ]
+          }
+        },
+        {
+          "id": "landing_policy",
+          "status": "GO",
+          "detail": "Pinned landing policy available"
+        },
+        {
+          "id": "1.meteora_programs",
+          "status": "WARN",
+          "detail": "Meteora versions changed: re-run simulation, record the new versions and obtain the founder's rehearsal decision.",
+          "value": {
+            "observed": [
+              {
+                "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "deploySlot": 0,
+                "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+              },
+              {
+                "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+                "deploySlot": 0,
+                "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+              }
+            ],
+            "changes": [
+              {
+                "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "deploySlot": 0,
+                "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+              },
+              {
+                "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+                "deploySlot": 0,
+                "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dbc_dev_buy_quote",
+          "status": "GO",
+          "detail": "Exact-out dev buy from the pinned DBC integer math mirror",
+          "value": {
+            "amountOut": "40000000000000",
+            "quoteIn": "1192328122",
+            "maxQuoteIn": "1192328122",
+            "excludedFeeInput": "1162519918",
+            "nextSqrtPrice": "101353483280186128",
+            "tradeFee": "29808204",
+            "protocolFee": "5961640",
+            "partnerFee": "23846564"
+          }
+        },
+        {
+          "id": "rehearsal_mint",
+          "status": "GO",
+          "detail": "This cluster is a rehearsal; prior devnet evidence is required only before mainnet launch"
+        },
+        {
+          "id": "launch_transaction_size",
+          "status": "GO",
+          "detail": "D28 requires one atomic v0 transaction within the packet limit",
+          "value": {
+            "bytes": 787,
+            "limit": 1232
+          }
+        },
+        {
+          "id": "6.simulation",
+          "status": "GO",
+          "detail": "Launch simulation succeeded."
+        },
+        {
+          "id": "6.mint",
+          "status": "GO",
+          "detail": "Simulated mint is immutable SPL Token with the configured supply.",
+          "value": {
+            "decimals": 6,
+            "supply": "1000000000000000",
+            "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "mintAuthority": null,
+            "freezeAuthority": null
+          }
+        },
+        {
+          "id": "6.pool",
+          "status": "GO",
+          "detail": "Simulated DBC pool accrues partner fees to FeeIn and no creator fees.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "partnerQuoteFee": "23846564",
+            "creatorQuoteFee": "0"
+          }
+        },
+        {
+          "id": "6.vault",
+          "status": "GO",
+          "detail": "Simulated vault holds exactly the dev buy.",
+          "value": {
+            "amount": "40000000000000"
+          }
+        },
+        {
+          "id": "6.launch_account",
+          "status": "GO",
+          "detail": "Simulated launch token account is closed.",
+          "value": {
+            "closed": true,
+            "amount": "0"
+          }
+        },
+        {
+          "id": "simulation.report.phase",
+          "status": "GO",
+          "detail": "Machine is powered on for the configured mint.",
+          "value": {
+            "phase": "PoweredOn",
+            "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"
+          }
+        },
+        {
+          "id": "simulation.report.ledger",
+          "status": "GO",
+          "detail": "Ledger accounts for exactly the dev buy.",
+          "value": {
+            "accounted": "40000000000000"
+          }
+        },
+        {
+          "id": "simulation.report.vault",
+          "status": "GO",
+          "detail": "Vault covers the dev buy; any donated excess remains unaccounted.",
+          "value": {
+            "amount": "40000000000000",
+            "unaccounted": "0"
+          }
+        },
+        {
+          "id": "simulation.report.one_pct",
+          "status": "GO",
+          "detail": "All four The 1% slots are Locked at their configured amounts.",
+          "value": [
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            }
+          ]
+        },
+        {
+          "id": "simulation.report.timestamps",
+          "status": "GO",
+          "detail": "Season clocks derive from the observed Power-On timestamp.",
+          "value": {
+            "powerOnTs": "1791667380",
+            "onAirTs": "1791668280",
+            "endTs": "1792273080",
+            "onePctReleaseTs": [
+              "1791668280",
+              "1791819480",
+              "1791970680",
+              "1792121880"
+            ]
+          }
+        },
+        {
+          "id": "simulation.report.launch_wallet",
+          "status": "GO",
+          "detail": "Launch wallet holds zero of the configured token across all its token accounts.",
+          "value": {
+            "amount": "0",
+            "tokenAccounts": 0
+          }
+        },
+        {
+          "id": "simulation.report.mint",
+          "status": "GO",
+          "detail": "Landed mint matches the safe launch template.",
+          "value": {
+            "decimals": 6,
+            "supply": "1000000000000000",
+            "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "mintAuthority": null,
+            "freezeAuthority": null
+          }
+        },
+        {
+          "id": "simulation.report.pool",
+          "status": "GO",
+          "detail": "Landed DBC pool retains its approved config and FeeIn partner.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "partnerQuoteFee": "23846564",
+            "creatorQuoteFee": "0"
+          }
+        },
+        {
+          "id": "launch_funding",
+          "status": "GO",
+          "detail": "Successful simulation debits live wallet including account rent, fees and tip",
+          "value": {
+            "before": "499984941400",
+            "after": "498765400398",
+            "totalSpend": "1219541002"
+          }
+        }
+      ],
+      "simulation": {
+        "slot": 137,
+        "error": null,
+        "unitsConsumed": [219735]
+      },
+      "instructions": [
+        [
+          {
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "dataHex": "022db00300",
+            "accounts": []
+          },
+          {
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "dataHex": "030000000000000000",
+            "accounts": []
+          },
+          {
+            "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+            "dataHex": "8c55d7b06636684f0d0000004442432072656865617273616c04000000544553542600000068747470733a2f2f6578616d706c652e636f6d2f6462632d72656865617273616c2e6a736f6e",
+            "accounts": [
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "11111111111111111111111111111111",
+            "dataHex": "02000000ba7b114700000000",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "11",
+            "accounts": [
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+            "dataHex": "414b3f4ceb5b5b880080ca3961240000ba7b11470000000002",
+            "accounts": [
+              {
+                "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "09",
+            "accounts": [
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "0c0080ca396124000006",
+            "accounts": [
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+            "dataHex": "7be51b871d820265",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "09",
+            "accounts": [
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "11111111111111111111111111111111",
+            "dataHex": "0200000040420f0000000000",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "4ACfpUFoaSD9bfPdeu6DBt89gB6ENTeHBXCAi87NhDEE",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "ok": true,
+      "cluster": "localnet",
+      "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+      "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+      "wallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+      "dbcConfig": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+      "migrationQuoteThreshold": "85000000000",
+      "powerOnInterface": "M4.1 powerOnIx",
+      "quoteLamports": "1192328122",
+      "form": "single",
+      "sizes": {
+        "single": 787,
+        "limit": 1232
+      },
+      "lookupAddresses": [
+        "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+        "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+        "So11111111111111111111111111111111111111112",
+        "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+        "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+        "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+        "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+        "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+        "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+        "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+        "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+        "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+        "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+        "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+        "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+        "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+        "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+      ],
+      "checks": [
+        {
+          "id": "3.config",
+          "status": "GO",
+          "detail": "Config identities match the two signers; mint address is available for DBC initialization.",
+          "value": {
+            "mint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "launchWallet": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+            "mintExists": false,
+            "prefundedLamports": "890880"
+          }
+        },
+        {
+          "id": "3.pool",
+          "status": "GO",
+          "detail": "Pool address is available for DBC initialization.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "prefundedLamports": "890880"
+          }
+        },
+        {
+          "id": "3.dbc_config",
+          "status": "GO",
+          "detail": "DBC config matches every D29 field and the selected curve threshold.",
+          "value": {
+            "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i"
+          }
+        },
+        {
+          "id": "4.machine",
+          "status": "GO",
+          "detail": "Machine is StockUp and has never powered on.",
+          "value": {
+            "phase": "StockUp",
+            "powerOnTs": "0"
+          }
+        },
+        {
+          "id": "4.fee_in",
+          "status": "GO",
+          "detail": "FeeIn is a System account funded at current rent or above.",
+          "value": {
+            "lamports": "100000000",
+            "rentMinimumLamports": "890880"
+          }
+        },
+        {
+          "id": "5.lookup_table",
+          "status": "GO",
+          "detail": "Lookup table is active, frozen, warmed and exact.",
+          "value": {
+            "address": "ExBQ32xEEvEMzNiHdub7WJkUJ9vnmnbDwC8gktYcijyR",
+            "active": true,
+            "authority": null,
+            "lastExtendedSlot": 72,
+            "observedSlot": 138,
+            "addresses": [
+              "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+              "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+              "So11111111111111111111111111111111111111112",
+              "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+              "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+              "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+              "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+              "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+              "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+              "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+              "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+              "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+              "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+              "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+              "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+              "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi"
+            ]
+          }
+        },
+        {
+          "id": "landing_policy",
+          "status": "GO",
+          "detail": "Pinned landing policy available"
+        },
+        {
+          "id": "1.meteora_programs",
+          "status": "WARN",
+          "detail": "Meteora versions changed: re-run simulation, record the new versions and obtain the founder's rehearsal decision.",
+          "value": {
+            "observed": [
+              {
+                "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "deploySlot": 0,
+                "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+              },
+              {
+                "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+                "deploySlot": 0,
+                "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+              }
+            ],
+            "changes": [
+              {
+                "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "deploySlot": 0,
+                "executableHash": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b"
+              },
+              {
+                "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+                "deploySlot": 0,
+                "executableHash": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dbc_dev_buy_quote",
+          "status": "GO",
+          "detail": "Exact-out dev buy from the pinned DBC integer math mirror",
+          "value": {
+            "amountOut": "40000000000000",
+            "quoteIn": "1192328122",
+            "maxQuoteIn": "1192328122",
+            "excludedFeeInput": "1162519918",
+            "nextSqrtPrice": "101353483280186128",
+            "tradeFee": "29808204",
+            "protocolFee": "5961640",
+            "partnerFee": "23846564"
+          }
+        },
+        {
+          "id": "rehearsal_mint",
+          "status": "GO",
+          "detail": "This cluster is a rehearsal; prior devnet evidence is required only before mainnet launch"
+        },
+        {
+          "id": "launch_transaction_size",
+          "status": "GO",
+          "detail": "D28 requires one atomic v0 transaction within the packet limit",
+          "value": {
+            "bytes": 787,
+            "limit": 1232
+          }
+        },
+        {
+          "id": "6.simulation",
+          "status": "GO",
+          "detail": "Launch simulation succeeded."
+        },
+        {
+          "id": "6.mint",
+          "status": "GO",
+          "detail": "Simulated mint is immutable SPL Token with the configured supply.",
+          "value": {
+            "decimals": 6,
+            "supply": "1000000000000000",
+            "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "mintAuthority": null,
+            "freezeAuthority": null
+          }
+        },
+        {
+          "id": "6.pool",
+          "status": "GO",
+          "detail": "Simulated DBC pool accrues partner fees to FeeIn and no creator fees.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "partnerQuoteFee": "23846564",
+            "creatorQuoteFee": "0"
+          }
+        },
+        {
+          "id": "6.vault",
+          "status": "GO",
+          "detail": "Simulated vault holds exactly the dev buy.",
+          "value": {
+            "amount": "40000000000000"
+          }
+        },
+        {
+          "id": "6.launch_account",
+          "status": "GO",
+          "detail": "Simulated launch token account is closed.",
+          "value": {
+            "closed": true,
+            "amount": "0"
+          }
+        },
+        {
+          "id": "simulation.report.phase",
+          "status": "GO",
+          "detail": "Machine is powered on for the configured mint.",
+          "value": {
+            "phase": "PoweredOn",
+            "tokenMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz"
+          }
+        },
+        {
+          "id": "simulation.report.ledger",
+          "status": "GO",
+          "detail": "Ledger accounts for exactly the dev buy.",
+          "value": {
+            "accounted": "40000000000000"
+          }
+        },
+        {
+          "id": "simulation.report.vault",
+          "status": "GO",
+          "detail": "Vault covers the dev buy; any donated excess remains unaccounted.",
+          "value": {
+            "amount": "40000000000000",
+            "unaccounted": "0"
+          }
+        },
+        {
+          "id": "simulation.report.one_pct",
+          "status": "GO",
+          "detail": "All four The 1% slots are Locked at their configured amounts.",
+          "value": [
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            },
+            {
+              "amount": "10000000000000",
+              "state": "Locked"
+            }
+          ]
+        },
+        {
+          "id": "simulation.report.timestamps",
+          "status": "GO",
+          "detail": "Season clocks derive from the observed Power-On timestamp.",
+          "value": {
+            "powerOnTs": "1791667381",
+            "onAirTs": "1791668281",
+            "endTs": "1792273081",
+            "onePctReleaseTs": [
+              "1791668281",
+              "1791819481",
+              "1791970681",
+              "1792121881"
+            ]
+          }
+        },
+        {
+          "id": "simulation.report.launch_wallet",
+          "status": "GO",
+          "detail": "Launch wallet holds zero of the configured token across all its token accounts.",
+          "value": {
+            "amount": "0",
+            "tokenAccounts": 0
+          }
+        },
+        {
+          "id": "simulation.report.mint",
+          "status": "GO",
+          "detail": "Landed mint matches the safe launch template.",
+          "value": {
+            "decimals": 6,
+            "supply": "1000000000000000",
+            "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "mintAuthority": null,
+            "freezeAuthority": null
+          }
+        },
+        {
+          "id": "simulation.report.pool",
+          "status": "GO",
+          "detail": "Landed DBC pool retains its approved config and FeeIn partner.",
+          "value": {
+            "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+            "config": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+            "baseMint": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+            "feeClaimer": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+            "partnerQuoteFee": "23846564",
+            "creatorQuoteFee": "0"
+          }
+        },
+        {
+          "id": "launch_funding",
+          "status": "GO",
+          "detail": "Successful simulation debits live wallet including account rent, fees and tip",
+          "value": {
+            "before": "499984941400",
+            "after": "498765400398",
+            "totalSpend": "1219541002"
+          }
+        }
+      ],
+      "simulation": {
+        "slot": 138,
+        "error": null,
+        "unitsConsumed": [219735]
+      },
+      "instructions": [
+        [
+          {
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "dataHex": "022db00300",
+            "accounts": []
+          },
+          {
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "dataHex": "030000000000000000",
+            "accounts": []
+          },
+          {
+            "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+            "dataHex": "8c55d7b06636684f0d0000004442432072656865617273616c04000000544553542600000068747470733a2f2f6578616d706c652e636f6d2f6462632d72656865617273616c2e6a736f6e",
+            "accounts": [
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "AVXF5B9p7PfHv5FS2Cd9D8Axu5P2xoEGgSawvUQU3Mg5",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "11111111111111111111111111111111",
+            "dataHex": "02000000ba7b114700000000",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "11",
+            "accounts": [
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+            "dataHex": "414b3f4ceb5b5b880080ca3961240000ba7b11470000000002",
+            "accounts": [
+              {
+                "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZTKxEFbfxUYmheSVtXYQTFwpdn6dJLWVbjcKvKwmaEk",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "6LnzrsxoQ96rLxqnpBM7FFDUhGmni28Yp11FpN2xwC7J",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "So11111111111111111111111111111111111111112",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "8Ks12pbrD6PXxfty1hVQiE9sc289zgU1zHkvXhrSdriF",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "09",
+            "accounts": [
+              {
+                "address": "Eg5QqxBhQGtDzGKCKkyGujt3YSmtSfqYNq26f18z7cDF",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "dataHex": "01",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "0c0080ca396124000006",
+            "accounts": [
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+            "dataHex": "7be51b871d820265",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "2Ve5aETBSe2d7LSsqRZkBQg2yNf2AodGKcL3ENu9p6qh",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "CKMcNB7fN494T4KmD5rTxAsBSL39yDPs6mwswkg9SFap",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "7Ua7YHuCd6aEf2z4TVMWUPaMhAeTXLff2wvPFcG6dvuz",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "EshZcnPFTLKymBMJdb7Tm2VGpvw53SNwBnzyJp8dpQro",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "22LXnNPy7uY7MjA9WwWpdZRDEPmbrkMDksCrGD23t24i",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "8ZSB3fyZ9Ty4ZmGDBXvhWZobTTVC8KcDBHsonxiXcsbi",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "GcqLQfqc5moupVpeAD2AkUPyCfuCDJG5dnrje1e323xW",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "xn86GykEe9DNBVnjSsTQerPD1eZPDSqLzdjs2EWfJ1Y",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "signer": false,
+                "writable": false
+              },
+              {
+                "address": "11111111111111111111111111111111",
+                "signer": false,
+                "writable": false
+              }
+            ]
+          },
+          {
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "dataHex": "09",
+            "accounts": [
+              {
+                "address": "DmfsbAPdDqeCgeVLmbjEmMEcmCXzZfWgn59jz4yWu9Af",
+                "signer": false,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              }
+            ]
+          },
+          {
+            "programId": "11111111111111111111111111111111",
+            "dataHex": "0200000040420f0000000000",
+            "accounts": [
+              {
+                "address": "DiAyWNqN2k4kKEVJooCEmixkhvVq9oXv1unxUxUFBHTi",
+                "signer": true,
+                "writable": true
+              },
+              {
+                "address": "4ACfpUFoaSD9bfPdeu6DBt89gB6ENTeHBXCAi87NhDEE",
+                "signer": false,
+                "writable": true
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "ok": true
+}

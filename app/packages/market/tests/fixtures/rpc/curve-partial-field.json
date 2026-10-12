@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-10-08T18:42:40.208Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "84hov8cs6PvUGsmZSPE8NQPWDEceHamTtmWvmiscBzJ4",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628034,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 1935105,
+          "data": [
+            "F7f4N2DYrGDwg+KFJMEDAKqCBYsDAAAA8OvPOZPCAgACAAAAAAAAAACAxqR+jQMAAF/83x1vKmkgIj800Xhgnng/pvfiP915SSo1K7hs9blWAQAA",
+            "base64"
+          ],
+          "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 166
+        }
+      },
+      "id": 1
+    }
+  },
+  "synthetic": {
+    "from": "curve-166-live.json",
+    "edit": "Quote key contains one byte only, exercising a partially present appended field."
+  }
+}

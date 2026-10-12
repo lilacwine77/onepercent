@@ -1,0 +1,3097 @@
+{
+  "actions": [],
+  "blender": {
+    "background": true,
+    "build_hash": "d13f752e3b9c",
+    "version": "5.2.2 LTS",
+    "version_tuple": [
+      5,
+      2,
+      2
+    ]
+  },
+  "hard_gate_pass": true,
+  "input": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\assets\\blender\\crt\\onepercent-crt-source.blend",
+  "issues": [],
+  "material_details": [
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Case",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Graphite",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Logo",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Metal",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_RearCase",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Recess",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 1,
+      "images": [
+        "crt-screen.png"
+      ],
+      "name": "CRT_ScreenMaterial",
+      "node_count": 3,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_Seam",
+      "node_count": 2,
+      "use_nodes": true
+    },
+    {
+      "image_texture_nodes": 0,
+      "images": [],
+      "name": "CRT_StatusLED",
+      "node_count": 2,
+      "use_nodes": true
+    }
+  ],
+  "materials": [
+    "CRT_Case",
+    "CRT_Graphite",
+    "CRT_Logo",
+    "CRT_Metal",
+    "CRT_RearCase",
+    "CRT_Recess",
+    "CRT_ScreenMaterial",
+    "CRT_Seam",
+    "CRT_StatusLED"
+  ],
+  "meshes": [
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "CRT_BezelMesh",
+      "degenerate_faces": 0,
+      "edges": 2304,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Case",
+        "CRT_Recess"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_Bezel",
+      "non_manifold_edges": 0,
+      "polygons": 1152,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 1152,
+      "source_polygons": 1152,
+      "source_vertices": 1152,
+      "triangles": 2304,
+      "uv_layers": 0,
+      "vertex_groups": 0,
+      "vertices": 1152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -2.1,
+          -1.45,
+          -1.75
+        ],
+        [
+          2.1,
+          -0.8,
+          1.75
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 53,
+      "data_name": "Cube.013",
+      "degenerate_faces": 0,
+      "edges": 10176,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_BottomLouvres",
+      "non_manifold_edges": 0,
+      "polygons": 5194,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 5194,
+      "source_polygons": 5194,
+      "source_vertices": 5088,
+      "triangles": 9964,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 5088,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.676704,
+          -1.356144,
+          -1.745
+        ],
+        [
+          1.678704,
+          -1.113856,
+          -1.705
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.011",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_BottomVentEndTrim",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.7675,
+          -1.3845,
+          -1.7545
+        ],
+        [
+          -1.7225,
+          -1.0795,
+          -1.6995
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.012",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_BottomVentEndTrim.001",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.7225,
+          -1.3845,
+          -1.7545
+        ],
+        [
+          1.7675,
+          -1.0795,
+          -1.6995
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.009",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_BottomVentFrontTrim",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.755,
+          -1.397,
+          -1.7545
+        ],
+        [
+          1.755,
+          -1.357,
+          -1.6995
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.010",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_BottomVentRearTrim",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.755,
+          -1.107,
+          -1.7545
+        ],
+        [
+          1.755,
+          -1.067,
+          -1.6995
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.008",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_BottomVentRecess",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.71,
+          -1.367,
+          -1.749
+        ],
+        [
+          1.71,
+          -1.097,
+          -1.699
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 4,
+      "data_name": "Cylinder.017",
+      "degenerate_faces": 0,
+      "edges": 1920,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_CaseScrews",
+      "non_manifold_edges": 0,
+      "polygons": 904,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 904,
+      "source_polygons": 904,
+      "source_vertices": 1024,
+      "triangles": 2032,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 1024,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.287,
+          1.236,
+          -1.182
+        ],
+        [
+          1.287,
+          1.264,
+          0.782
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "CRT_CaseSplitMesh",
+      "degenerate_faces": 0,
+      "edges": 512,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_CaseSplit",
+      "non_manifold_edges": 0,
+      "polygons": 256,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 256,
+      "source_polygons": 256,
+      "source_vertices": 256,
+      "triangles": 512,
+      "uv_layers": 0,
+      "vertex_groups": 0,
+      "vertices": 256,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -2.038,
+          -0.837,
+          -1.688
+        ],
+        [
+          2.038,
+          -0.8,
+          1.688
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.100",
+      "degenerate_faces": 0,
+      "edges": 432,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_ConnectionBay",
+      "non_manifold_edges": 0,
+      "polygons": 218,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 218,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 428,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 216,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -0.8,
+          1.249,
+          -1.06
+        ],
+        [
+          0.8,
+          1.277,
+          -0.67
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.002",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Case"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_ControlPanel",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.395,
+          -1.458,
+          -1.5335
+        ],
+        [
+          1.565,
+          -1.426,
+          -1.2785
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.001",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Recess"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_ControlPanelRecess",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.38,
+          -1.4405,
+          -1.553
+        ],
+        [
+          1.58,
+          -1.3955,
+          -1.273
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.007",
+      "degenerate_faces": 0,
+      "edges": 192,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_InfraredWindow",
+      "non_manifold_edges": 0,
+      "polygons": 98,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 98,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 188,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 96,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.27,
+          -1.4565,
+          -1.212
+        ],
+        [
+          1.4,
+          -1.4475,
+          -1.168
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cylinder.001",
+      "degenerate_faces": 0,
+      "edges": 480,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_StatusLED"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Soft rim",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_LED",
+      "non_manifold_edges": 0,
+      "polygons": 226,
+      "refinement_modifiers": [
+        {
+          "name": "Soft rim",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 226,
+      "source_polygons": 34,
+      "source_vertices": 64,
+      "triangles": 508,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 256,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.084,
+          -1.491,
+          -1.427
+        ],
+        [
+          1.116,
+          -1.469,
+          -1.395
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cylinder",
+      "degenerate_faces": 0,
+      "edges": 480,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Soft rim",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_LED_Rim",
+      "non_manifold_edges": 0,
+      "polygons": 226,
+      "refinement_modifiers": [
+        {
+          "name": "Soft rim",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 226,
+      "source_polygons": 34,
+      "source_vertices": 64,
+      "triangles": 508,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 256,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.075,
+          -1.475,
+          -1.436
+        ],
+        [
+          1.125,
+          -1.453,
+          -1.386
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.006",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Case"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_PowerButton",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.2655,
+          -1.5185,
+          -1.452
+        ],
+        [
+          1.4425,
+          -1.4515,
+          -1.368
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 3,
+      "data_name": "Cube.102",
+      "degenerate_faces": 0,
+      "edges": 324,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Metal"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_PowerPins",
+      "non_manifold_edges": 0,
+      "polygons": 162,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 162,
+      "source_polygons": 162,
+      "source_vertices": 168,
+      "triangles": 324,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 168,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -0.58,
+          1.3185,
+          -0.901
+        ],
+        [
+          -0.4,
+          1.3535,
+          -0.831
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.005",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_PowerSocket",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.2485,
+          -1.477,
+          -1.468
+        ],
+        [
+          1.4595,
+          -1.453,
+          -1.354
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.101",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_PowerSocketRear",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -0.66,
+          1.257,
+          -0.985
+        ],
+        [
+          -0.32,
+          1.327,
+          -0.745
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 13,
+      "data_name": "Cube.087",
+      "degenerate_faces": 0,
+      "edges": 2496,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_RearLouvres",
+      "non_manifold_edges": 0,
+      "polygons": 1274,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 1274,
+      "source_polygons": 1274,
+      "source_vertices": 1248,
+      "triangles": 2444,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 1248,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.145,
+          1.2585,
+          -0.276
+        ],
+        [
+          1.145,
+          1.3055,
+          0.738
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "CRT_RearShellMesh",
+      "degenerate_faces": 0,
+      "edges": 7634,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_RearCase",
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Vent lip micro bevel",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Moulded panel normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_RearShell",
+      "non_manifold_edges": 0,
+      "polygons": 3672,
+      "refinement_modifiers": [
+        {
+          "name": "Vent lip micro bevel",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Moulded panel normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 3672,
+      "source_polygons": 1980,
+      "source_vertices": 2276,
+      "triangles": 7924,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 3964,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -2.0425,
+          -0.79,
+          -1.7
+        ],
+        [
+          2.0425,
+          1.25,
+          1.6925
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.086",
+      "degenerate_faces": 0,
+      "edges": 432,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_RearVentShadow",
+      "non_manifold_edges": 0,
+      "polygons": 218,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 218,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 428,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 216,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.155,
+          1.251,
+          -0.335
+        ],
+        [
+          1.155,
+          1.269,
+          0.795
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.004",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Case"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_Rocker",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.59,
+          -1.52,
+          -1.453
+        ],
+        [
+          0.93,
+          -1.448,
+          -1.367
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.003",
+      "degenerate_faces": 0,
+      "edges": 588,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Seam"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_RockerSocket",
+      "non_manifold_edges": 0,
+      "polygons": 294,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 294,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 588,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 296,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.57,
+          -1.477,
+          -1.468
+        ],
+        [
+          0.95,
+          -1.453,
+          -1.354
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 224,
+      "connected_components": 1,
+      "data_name": "CRT_ScreenMesh",
+      "degenerate_faces": 0,
+      "edges": 6256,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_ScreenMaterial"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_Screen",
+      "non_manifold_edges": 224,
+      "polygons": 3072,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 3072,
+      "source_polygons": 3072,
+      "source_vertices": 3185,
+      "triangles": 6144,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 3185,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.67,
+          -1.335,
+          -1.11
+        ],
+        [
+          1.67,
+          -1.145,
+          1.39
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 4,
+      "data_name": "Cube.107",
+      "degenerate_faces": 0,
+      "edges": 432,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Metal"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_ScrewSlots",
+      "non_manifold_edges": 0,
+      "polygons": 216,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 216,
+      "source_polygons": 216,
+      "source_vertices": 224,
+      "triangles": 432,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 224,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.274,
+          1.265,
+          -1.153
+        ],
+        [
+          1.274,
+          1.273,
+          0.753
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.075",
+      "degenerate_faces": 0,
+      "edges": 192,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_SideVentInterior_-1",
+      "non_manifold_edges": 0,
+      "polygons": 98,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 98,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 188,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 96,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          -1.764348,
+          -0.058369,
+          0.155
+        ],
+        [
+          -1.435652,
+          0.828369,
+          1.005
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.085",
+      "degenerate_faces": 0,
+      "edges": 192,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_SideVentInterior_1",
+      "non_manifold_edges": 0,
+      "polygons": 98,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 98,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 188,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 96,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          1.435652,
+          -0.058369,
+          0.155
+        ],
+        [
+          1.764348,
+          0.828369,
+          1.005
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 15,
+      "data_name": "Cylinder.002",
+      "degenerate_faces": 0,
+      "edges": 2700,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Metal"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [],
+      "name": "CRT_VGAContacts",
+      "non_manifold_edges": 0,
+      "polygons": 1290,
+      "refinement_modifiers": [],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 1290,
+      "source_polygons": 1290,
+      "source_vertices": 1440,
+      "triangles": 2820,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 1440,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.193,
+          1.3615,
+          -0.915
+        ],
+        [
+          0.467,
+          1.3705,
+          -0.817
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.106",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Graphite"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_VGASocket",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.15,
+          1.3375,
+          -0.925
+        ],
+        [
+          0.51,
+          1.3605,
+          -0.807
+        ]
+      ],
+      "zero_length_edges": 0
+    },
+    {
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "data_name": "Cube.105",
+      "degenerate_faces": 0,
+      "edges": 300,
+      "flat_polygons": 0,
+      "invalid_vertices": 0,
+      "isolated_vertices": 0,
+      "material_slots": [
+        "CRT_Metal"
+      ],
+      "missing_material_faces": 0,
+      "modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "name": "CRT_VGASurround",
+      "non_manifold_edges": 0,
+      "polygons": 150,
+      "refinement_modifiers": [
+        {
+          "name": "Manufactured edge",
+          "type": "BEVEL"
+        },
+        {
+          "name": "Weighted corner normals",
+          "type": "WEIGHTED_NORMAL"
+        }
+      ],
+      "shape_keys": 0,
+      "smooth_polygon_ratio": 1.0,
+      "smooth_polygons": 150,
+      "source_polygons": 6,
+      "source_vertices": 8,
+      "triangles": 300,
+      "uv_layers": 1,
+      "vertex_groups": 0,
+      "vertices": 152,
+      "weighted_vertices": 0,
+      "wire_edges": 0,
+      "world_bounds": [
+        [
+          0.055,
+          1.2595,
+          -0.961
+        ],
+        [
+          0.605,
+          1.3425,
+          -0.771
+        ]
+      ],
+      "zero_length_edges": 0
+    }
+  ],
+  "objects": [
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        6.0,
+        -13.0,
+        -1.8
+      ],
+      "name": "CRT_BeautyCamera",
+      "parent": null,
+      "rotation_euler": [
+        1.699024,
+        0.207769,
+        0.460466
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "CAMERA"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        4.2,
+        0.65,
+        3.5
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "CRT_Bezel",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        3.355408,
+        0.242289,
+        0.04
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.65,
+        -1.235,
+        -1.725
+      ],
+      "name": "CRT_BottomLouvres",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.045,
+        0.305,
+        0.055
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.745,
+        -1.232,
+        -1.727
+      ],
+      "name": "CRT_BottomVentEndTrim",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.045,
+        0.305,
+        0.055
+      ],
+      "hidden_render": false,
+      "location": [
+        1.745,
+        -1.232,
+        -1.727
+      ],
+      "name": "CRT_BottomVentEndTrim.001",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        3.51,
+        0.04,
+        0.055
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        -1.377,
+        -1.727
+      ],
+      "name": "CRT_BottomVentFrontTrim",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        3.51,
+        0.04,
+        0.055
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        -1.087,
+        -1.727
+      ],
+      "name": "CRT_BottomVentRearTrim",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        3.42,
+        0.27,
+        0.05
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        -1.232,
+        -1.724
+      ],
+      "name": "CRT_BottomVentRecess",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.138322,
+        0.099542,
+        0.005
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.7,
+        -1.452,
+        -1.425
+      ],
+      "name": "CRT_Brand",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        1.570796,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "FONT"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        2.574,
+        0.028,
+        1.964
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.255,
+        1.25,
+        -1.15
+      ],
+      "name": "CRT_CaseScrews",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        4.076,
+        0.037,
+        3.376
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "CRT_CaseSplit",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        1.6,
+        0.028,
+        0.39
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        1.263,
+        -0.865
+      ],
+      "name": "CRT_ConnectionBay",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        1.17,
+        0.032,
+        0.255
+      ],
+      "hidden_render": false,
+      "location": [
+        0.98,
+        -1.442,
+        -1.406
+      ],
+      "name": "CRT_ControlPanel",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        1.2,
+        0.045,
+        0.28
+      ],
+      "hidden_render": false,
+      "location": [
+        0.98,
+        -1.418,
+        -1.413
+      ],
+      "name": "CRT_ControlPanelRecess",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.13,
+        0.009,
+        0.044
+      ],
+      "hidden_render": false,
+      "location": [
+        1.335,
+        -1.452,
+        -1.19
+      ],
+      "name": "CRT_InfraredWindow",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        -4.0,
+        -5.0,
+        7.0
+      ],
+      "name": "CRT_KeySoftbox",
+      "parent": null,
+      "rotation_euler": [
+        0.740895,
+        -0.0,
+        -0.674741
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "LIGHT"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.032,
+        0.032,
+        0.022
+      ],
+      "hidden_render": false,
+      "location": [
+        1.1,
+        -1.48,
+        -1.411
+      ],
+      "name": "CRT_LED",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        1.570796,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.05,
+        0.05,
+        0.022
+      ],
+      "hidden_render": false,
+      "location": [
+        1.1,
+        -1.464,
+        -1.411
+      ],
+      "name": "CRT_LED_Rim",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        1.570796,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.177,
+        0.067,
+        0.084
+      ],
+      "hidden_render": false,
+      "location": [
+        1.354,
+        -1.485,
+        -1.41
+      ],
+      "name": "CRT_PowerButton",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.18,
+        0.035,
+        0.07
+      ],
+      "hidden_render": false,
+      "location": [
+        -0.57,
+        1.336,
+        -0.866
+      ],
+      "name": "CRT_PowerPins",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.211,
+        0.024,
+        0.114
+      ],
+      "hidden_render": false,
+      "location": [
+        1.354,
+        -1.465,
+        -1.411
+      ],
+      "name": "CRT_PowerSocket",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.34,
+        0.07,
+        0.24
+      ],
+      "hidden_render": false,
+      "location": [
+        -0.49,
+        1.292,
+        -0.865
+      ],
+      "name": "CRT_PowerSocketRear",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        2.29,
+        0.047,
+        1.014
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        1.282,
+        -0.255
+      ],
+      "name": "CRT_RearLouvres",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        1.0,
+        4.0,
+        5.0
+      ],
+      "name": "CRT_RearRim",
+      "parent": null,
+      "rotation_euler": [
+        0.689575,
+        -0.0,
+        2.896614
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "LIGHT"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        4.085,
+        2.04,
+        3.3925
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "CRT_RearShell",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        2.31,
+        0.018,
+        1.13
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        1.26,
+        0.23
+      ],
+      "name": "CRT_RearVentShadow",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        8.0,
+        -13.0,
+        -1.8
+      ],
+      "name": "CRT_ReferenceCamera",
+      "parent": null,
+      "rotation_euler": [
+        1.691106,
+        0.207969,
+        0.578333
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "CAMERA"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        5.0,
+        -2.0,
+        3.0
+      ],
+      "name": "CRT_RightStrip",
+      "parent": null,
+      "rotation_euler": [
+        1.062529,
+        0.0,
+        1.19029
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "LIGHT"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.34,
+        0.072,
+        0.086
+      ],
+      "hidden_render": false,
+      "location": [
+        0.76,
+        -1.484,
+        -1.41
+      ],
+      "name": "CRT_Rocker",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.38,
+        0.024,
+        0.114
+      ],
+      "hidden_render": false,
+      "location": [
+        0.76,
+        -1.465,
+        -1.411
+      ],
+      "name": "CRT_RockerSocket",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "CRT_Root",
+      "parent": null,
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "EMPTY"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        3.34,
+        0.19,
+        2.5
+      ],
+      "hidden_render": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "CRT_Screen",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Scene Collection"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.0,
+        -6.0,
+        3.0
+      ],
+      "name": "CRT_ScreenCatchlight",
+      "parent": null,
+      "rotation_euler": [
+        1.112606,
+        -0.0,
+        -0.165149
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "LIGHT"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        2.548,
+        0.008,
+        1.906
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.255,
+        1.269,
+        -1.15
+      ],
+      "name": "CRT_ScrewSlots",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.025,
+        0.93,
+        0.85
+      ],
+      "hidden_render": false,
+      "location": [
+        -1.6,
+        0.385,
+        0.58
+      ],
+      "name": "CRT_SideVentInterior_-1",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        -0.334231
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.025,
+        0.93,
+        0.85
+      ],
+      "hidden_render": false,
+      "location": [
+        1.6,
+        0.385,
+        0.58
+      ],
+      "name": "CRT_SideVentInterior_1",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.334231
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.274,
+        0.009,
+        0.098
+      ],
+      "hidden_render": false,
+      "location": [
+        0.202,
+        1.366,
+        -0.826
+      ],
+      "name": "CRT_VGAContacts",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.36,
+        0.023,
+        0.118
+      ],
+      "hidden_render": false,
+      "location": [
+        0.33,
+        1.349,
+        -0.866
+      ],
+      "name": "CRT_VGASocket",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    },
+    {
+      "action": null,
+      "collections": [
+        "Collection"
+      ],
+      "dimensions": [
+        0.55,
+        0.083,
+        0.19
+      ],
+      "hidden_render": false,
+      "location": [
+        0.33,
+        1.301,
+        -0.866
+      ],
+      "name": "CRT_VGASurround",
+      "parent": "CRT_Root",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "transform_is_finite": true,
+      "type": "MESH"
+    }
+  ],
+  "scene": {
+    "bounds": {
+      "dimensions": [
+        4.2,
+        2.8905,
+        3.5045
+      ],
+      "max": [
+        2.1,
+        1.3705,
+        1.75
+      ],
+      "min": [
+        -2.1,
+        -1.52,
+        -1.7545
+      ]
+    },
+    "fps": 24.0,
+    "frame_end": 250,
+    "frame_start": 1,
+    "name": "Scene"
+  },
+  "schema_version": 3,
+  "totals": {
+    "actions": 0,
+    "armatures": 0,
+    "bones": 0,
+    "boundary_edges": 224,
+    "cameras": 2,
+    "constraints": 0,
+    "degenerate_faces": 0,
+    "edges": 43082,
+    "flat_polygons": 0,
+    "geometry_nodes_modifiers": 0,
+    "images": 3,
+    "invalid_vertices": 0,
+    "isolated_vertices": 0,
+    "lights": 4,
+    "materials": 9,
+    "mesh_objects": 31,
+    "missing_material_faces": 0,
+    "node_materials": 9,
+    "non_manifold_edges": 224,
+    "objects": 39,
+    "polygons": 21338,
+    "refinement_modifiers": 44,
+    "rigid_body_objects": 0,
+    "shape_keys": 0,
+    "simulation_modifiers": 0,
+    "smooth_polygons": 21338,
+    "textured_materials": 1,
+    "triangles": 43264,
+    "uv_mapped_meshes": 29,
+    "vertices": 21973,
+    "weighted_meshes": 0,
+    "wire_edges": 0,
+    "zero_length_edges": 0
+  }
+}

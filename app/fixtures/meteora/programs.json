@@ -1,0 +1,98 @@
+{
+  "observedAt": "2026-10-09T11:01:19.151065+00:00",
+  "rpc": "https://api.mainnet-beta.solana.com",
+  "method": "getAccountInfo",
+  "commitment": "finalized",
+  "programs": [
+    {
+      "name": "dbc",
+      "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+      "programData": "HUfnSSiJxgspQm6C1rkqv6L3XgVtn7AESApgCQpCXCYh",
+      "sourceCommit": "f552f20aa3c1c7631427c3827aeea7c58b902813",
+      "contextSlot": 454846858,
+      "deploymentSlot": 445503633,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "file": "dbc.so",
+      "byteLength": 2326577,
+      "sha256": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b",
+      "sourceCommitStatus": "D29 reference; binary provenance is the deployed program-data account",
+      "observations": [
+        {
+          "observedAt": "2026-10-09T10:49:54.263Z",
+          "contextSlot": 454844299
+        },
+        {
+          "observedAt": "2026-10-09T11:01:19.151065+00:00",
+          "contextSlot": 454846858
+        }
+      ]
+    },
+    {
+      "name": "damm-v2",
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "programData": "AUh8bm2XsMfex3KjYGcM3G4uBqUNSDw6HEhWaWMYnyPH",
+      "sourceCommit": "a85c926607433f23f0ea60f4ca7b1ae92f4156cb",
+      "contextSlot": 454846862,
+      "deploymentSlot": 445230614,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "file": "damm-v2.so",
+      "byteLength": 2174352,
+      "sha256": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b",
+      "sourceCommitStatus": "D29 reference; binary provenance is the deployed program-data account",
+      "observations": [
+        {
+          "observedAt": "2026-10-09T10:49:54.263Z",
+          "contextSlot": 454844305
+        },
+        {
+          "observedAt": "2026-10-09T11:01:19.151065+00:00",
+          "contextSlot": 454846862
+        }
+      ]
+    },
+    {
+      "name": "token-metadata",
+      "programId": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+      "programData": "PwDiXFxQsGra4sFFTT8r1QWRMd4vfumiWC1jfWNfdYT",
+      "contextSlot": 454847537,
+      "deploymentSlot": 380725176,
+      "upgradeAuthority": null,
+      "file": "token-metadata.so",
+      "byteLength": 793991,
+      "sha256": "31f0a627dba051a938de650464e55cc5397a4be0fd496929c1f9cf02fe5e9011",
+      "sourceCommitStatus": "external dependency",
+      "observations": [
+        {
+          "observedAt": "2026-10-09T10:49:54.263Z",
+          "contextSlot": 454844310
+        },
+        {
+          "observedAt": "2026-10-09T11:01:19.151065+00:00",
+          "contextSlot": 454847537
+        }
+      ]
+    }
+  ],
+  "cluster": "mainnet",
+  "accounts": [
+    {
+      "name": "damm-customizable",
+      "address": "A8gMrEPJkacWkcb3DGwtJwTe16HktSEfvwtuDh2MCtck",
+      "observedAt": "2026-10-09T10:49:54.263Z",
+      "readSlot": 454844314,
+      "owner": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "bytes": 328,
+      "sha256": "988089b8bacd1967ad85e4acd2bb520c847c872a74fed0614b01a89c57ae73a5"
+    },
+    {
+      "name": "dbc-pool-authority",
+      "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+      "observedAt": "2026-10-09T11:13:59.123Z",
+      "readSlot": 454849667,
+      "owner": "11111111111111111111111111111111",
+      "lamports": 68821882530,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

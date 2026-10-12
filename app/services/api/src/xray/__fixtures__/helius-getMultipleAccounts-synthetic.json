@@ -1,0 +1,53 @@
+{
+  "source": "synthetic-rekeyed",
+  "note": "Provider response envelope derived from recorded public account bytes and synthetic wallet fixtures; never a real wallet scan.",
+  "derivedFrom": "packages/eligibility/fixtures/wallets/trencher.json",
+  "addresses": [
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump",
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi",
+    "11111111111111111111111111111111"
+  ],
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "context": {
+        "slot": 454620967
+      },
+      "value": [
+        {
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "lamports": 290080440506,
+          "data": [
+            "AAAAAAbFwc5jjSVn0mRosF65UdGijcxuEjSCtcZ1FJdw5ivy5pvT7mqNAwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+            "base64"
+          ],
+          "executable": false,
+          "rentEpoch": 18446744073709551615
+        },
+        {
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "lamports": 2753360,
+          "data": [
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF2gHg0h/AwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIjlb/y+arOR10rOJ0doRUiVJpZIqxH0jcQoQkQaIQp/EwCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiOVv/L5qs5HXSs4nR2hFSJUmlkirEfSNxChCRBohCn8IAAAAQ0FUQ1JBRlQIAAAAQ0FUQ1JBRlRQAAAAaHR0cHM6Ly9pcGZzLmlvL2lwZnMvYmFma3JlaWRuMnB2a3NwZGpscXN4cjRxd2ludXl1bWtmeGdlaGZuaDNvNnk2MmYzNGpxdW81cG8zaTQAAAAA",
+            "base64"
+          ],
+          "executable": false,
+          "rentEpoch": 18446744073709551615
+        },
+        {
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "lamports": 2656840,
+          "data": [
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDGpH6NAwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEkRMdA9EMor8Ax//yaF5gnvOzwCBRf1nc8n6YQNdsFEwCdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMSREx0D0QyivwDH//JoXmCe87PAIFF/WdzyfphA12wUFAAAAYWVxdWEFAAAAQUVRVUFDAAAAaHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1SSHZacnZ5ckhLSDNObmJwdXlmS0U2TmJISmU5Vlo5UjZMdFNIemFFTVB6ZwAAAAA=",
+            "base64"
+          ],
+          "executable": false,
+          "rentEpoch": 18446744073709551615
+        },
+        null
+      ]
+    }
+  }
+}

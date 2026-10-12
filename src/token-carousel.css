@@ -1,0 +1,79 @@
+.token-lineup {
+  padding: 64px 0 56px;
+  color: var(--ink);
+}
+.token-lineup-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 44px 18px;
+}
+.token-lineup-heading h3 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.token-controls { display: flex; gap: 8px; flex-shrink: 0; }
+.token-controls button { width: 40px; height: 40px; font-size: 23px; padding: 0; }
+.token-window {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  touch-action: pan-x pan-y pinch-zoom;
+  scrollbar-width: none;
+  padding: 12px 0;
+  cursor: grab;
+  user-select: none;
+}
+.token-lineup.is-held .token-window { cursor: grabbing; }
+.token-window::-webkit-scrollbar { display: none; }
+.token-window:focus-visible { outline: none; background: var(--lilac); }
+.token-track { display: flex; width: max-content; }
+.token-group {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 0 42px 0 0;
+  margin: 0;
+  list-style: none;
+  flex: 0 0 auto;
+}
+.token-group li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 180px;
+}
+.token-group img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+.token-group img.token-coin { border-radius: 50%; }
+.token-group strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+.token-group span {
+  display: block;
+  margin-top: 4px;
+  font: 15px/1.3 "DM Sans", sans-serif;
+}
+@media (max-width: 700px) {
+  .token-lineup { padding: 52px 0 40px; }
+  .token-lineup-heading { align-items: flex-start; gap: 16px; padding: 0 20px 18px; }
+  .token-lineup-heading h3 { max-width: 230px; font-size: 22px; }
+  .token-controls { gap: 5px; }
+  .token-controls button { width: 36px; height: 36px; font-size: 20px; }
+  .token-group { gap: 34px; padding-right: 34px; }
+  .token-group li { min-width: 205px; gap: 14px; }
+  .token-group img { width: 48px; height: 48px; }
+  .token-group strong { font-size: 23px; }
+  .token-group span { font-size: 15px; }
+}

@@ -1,0 +1,968 @@
+{
+  "status": "INCOMPLETE_CONCURRENT_KEEPER",
+  "cluster": "devnet",
+  "observedAt": "2026-10-11T22:26:24.319Z",
+  "sourceBaseReportedByArchitect": "f3c04c9",
+  "program": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+  "programData": "9vcrRW2eRKUuJ5Mjywmp1TMTm5HFWBLJUih9tvVUkiLB",
+  "authority": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+  "maxLen": 1966080,
+  "elfBytes": 968904,
+  "hashBefore": "7fded56921a2be659e17fcbe41728db8e001db2c58f171106031dd8eb4cd6488",
+  "hashAfter": "07ec322c94b26904e3c1ff4b70269493608401b560a93f2132ebf0fead701c65",
+  "deploymentSlotBefore": "509691948",
+  "deploymentSlotAfter": "510047710",
+  "migration": {
+    "pause": {
+      "signature": "4FyywzYY4aCZGBfeNoeRpPDgrRfMD2sHr9rzSpxfC49h2B9SnrEjrff8MLke69n119MooUi9X2cmRSysPTKr7yBe",
+      "slot": 510038424
+    },
+    "pauseObservedSlot": 510046849,
+    "inventory": {
+      "slot": 510046963,
+      "pullsChecked": 0
+    },
+    "upgrade": {
+      "signature": "GFoqMKvkhTqygnpcHjQ5JGJSKKSewqAHasTULR9858y8DDFNCcwwQUh3Xy8XhQXCSZmXVtW46NZDLz4rM3Ccj21",
+      "slot": 510047710
+    },
+    "activation": {
+      "signature": "4c6iX8rPzK9VXsA6HCtEMMDft7gM2ERQPfYdJQP6JcMZLRJ4E9BVh3VokKEmvTuRCrVaWQEG3Rtvtj92ScQT7eCh",
+      "slot": 510047755
+    },
+    "activationObservedSlot": 510047756,
+    "resume": {
+      "signature": "59MWuBFV1Z1US4JLPpVf2JvzcuqA2h3ALR6FDkfhzK3HZPLTG2kGZ66xGc18wV6ui5EZ2MjxAiSwY9V3QB7WKpTb",
+      "slot": 510047781
+    }
+  },
+  "activation": {
+    "initialTimestamp": "1791756481",
+    "replayTimestamp": "1791756481",
+    "versionAfterActivation": "0"
+  },
+  "preservation": {
+    "checkedAccounts": 26,
+    "allowedChanges": [
+      {
+        "address": "3Hstj284yCh3y6s8KRk29p96d3WsH54EdfQwgjQ5yrSG",
+        "kind": "Machine",
+        "changedOffsets": [2656, 2657, 2658, 2659]
+      }
+    ],
+    "accountProof": [
+      {
+        "address": "13g9RXecNDJqNxZvjP5jZn7uywmBbU31huhstLkLCNW2",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "aa5f1ab3c891250c321628e89572fa373052d8d51ee229f7d71f7afe64f46362"
+      },
+      {
+        "address": "3Hstj284yCh3y6s8KRk29p96d3WsH54EdfQwgjQ5yrSG",
+        "kind": "Machine",
+        "bytes": 3808,
+        "sha256": "93ed3b71f97850a893c7509d88a48b348003684363cb0abb053cbe59b766b8e9"
+      },
+      {
+        "address": "3KbWp6CcvBcqcFHNGNzUmp96p71FeLLC4UWTVasDn2Fh",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "715cd526aae4ded0115c032c26a355ddbb8e1c1cd816a18a50851c96a461b7d9"
+      },
+      {
+        "address": "4Zrza2o3PKCtnmrfNJio9DXdyqUPYXYJaJiTLVtiFeV9",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "47d37c2190c484df37916ad0d9428112308118670790bc2d5dd57dd02dd8ace1"
+      },
+      {
+        "address": "58Y37yQgQfBYy7rWFjRnvfcgL5zfLA7i4vfGkyTzq1iP",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "f9eb4297890a115007b5b8f63ee4bc15366d5a2a0e2ce64725b92d89ed2eae20"
+      },
+      {
+        "address": "598aqCAUJQ3Ufhz8DT86yzC8tgvZ8fnNxKoiW1kzQVVp",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "b4074a71cb8a8976f0ef8db1109274a1db37cc160c75df6e7f05835918932dd9"
+      },
+      {
+        "address": "6aDA8Hu1VAnhToUsusbdcY4xhCGmXmtYz4ZYVrQST91P",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "ec9ab93610cb1599b10103e3d7fcb5b5a14bd5b96348ae6a787ce28ae9fcd43c"
+      },
+      {
+        "address": "7kQjZSV3zQKXC4Ti3AxCJjWZkoQyZXThHc5TPpe9bgd1",
+        "kind": "MintLedger",
+        "bytes": 80,
+        "sha256": "52ec5232cd850730edc772cc3f92cd22e9a00297febe6ecae05931f3c1a97fc6"
+      },
+      {
+        "address": "7qx19iEt1MbriYwh3J34hG6UuL1dJEcCoJUtAZ3Ryi3Z",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "6a5f86cfde9a9c11a8c4d107a3e0a33b418b1a0d487838d3617d52a8446c54b6"
+      },
+      {
+        "address": "7Sj3B8krHardmHxZpy39mzfVDEKBXrH7YajhSygNDbmB",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "fb53d30b2f3243a758b9f46e2cb30537fff89533c00a563fa241f0fd743b8b3b"
+      },
+      {
+        "address": "8RoRvreH9BDvNJVffniTmDkvjNcng3Rq3b4U8ccnAw9i",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "3a59706d28aa5b50df1b0b1b610bd8a54a12f36901df0a640f07f49c5d5ecf51"
+      },
+      {
+        "address": "8SMiWS3TdcEgXN39kiFvY2uEd1jhT6ksUhnjdbUhfoHX",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "bdc05f234b9aaeca4ea6a4e497819c07085ca6ed594f6d3694a5248d2dc48f2d"
+      },
+      {
+        "address": "8XoLR4GDKCvtmC3sC5DLenUnKfzD56TWu4fkGGrRHWD",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "fa42f3151271374873cff0aae41485a6a61f0372a9d0927390bf5d11bcbd7875"
+      },
+      {
+        "address": "9fBc3pEoW9NABzZCyC2XX1oDW943mT1TW5rmFv52nc9C",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "9bdef9315ea3d0e7399c040e75509d142a0d7c4c4e5a0eae61c5c6cfd92aa7f7"
+      },
+      {
+        "address": "ASLCNV6ULRGPFsdmPnSe6B4yDs6XajfUjsT1MUa79b6S",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "ae9b3443229da5e65c53f46434547afd111143eddc9a44662aa7eeb66f191f83"
+      },
+      {
+        "address": "B5FNEXw35wcDFe8kcb9MkG8sF9SswdW21hG8guaXpGRH",
+        "kind": "Config",
+        "bytes": 872,
+        "sha256": "75b24b548e4d76c056807dd9225b41b8e3dabd646c267a16690ff8890a8807d4"
+      },
+      {
+        "address": "BEh5EqVBdjvvaPss4aQjAPJygZME4C3snFMJc6V8WDiP",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "739fdbe2ace0f23c72269e550f1763da92aa69c3d8948a7bfee42707dba1c1e2"
+      },
+      {
+        "address": "DaXwWa7c8JvxmM3L92ZwnWSV1zghXSgSEDQXiZQVBcvr",
+        "kind": "MintLedger",
+        "bytes": 80,
+        "sha256": "9de35ab74afc6ff8533ea43c7bd367706ffec3e57b8f1a1523a0d1a6838fe229"
+      },
+      {
+        "address": "DefNHJMKJHoCiwaK6imf9fQYBRU6uzDci6imdV8JFDFt",
+        "kind": "Deck",
+        "bytes": 4064,
+        "sha256": "570bc960ddb6a77dfebc5f246da99aebf968fa783757780858596ff5a5e9cbbb"
+      },
+      {
+        "address": "EWeZfNAA5eoguS4YcBp36QFJf9s1W5YmJuKbo4waHPgG",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "29c486a0658ef7703dbb9f009860e31ef450d6a53f2534263e04ebdf23203074"
+      },
+      {
+        "address": "FB4NZxSecsPMzzgTtfKyncRmvs4a3fF3n2fCLC27pfGy",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "730f9336cbb68478899c4f03f254bb34b38e0e94c8c4fc48f3ca2af77aa1849b"
+      },
+      {
+        "address": "FCpYNiLLXgH3U3ttZKGaYPdTLmM92Xqsms3dzWmUhBJY",
+        "kind": "MintLedger",
+        "bytes": 80,
+        "sha256": "6ff24601e636892fed1f2f4a08b1ce9649a4e29e9bbe1b318f88af74aa8afa57"
+      },
+      {
+        "address": "FGrUDqu5SQWQpYaeU3J4ws2oSi1RFXvVa1Y7vtAhRwPw",
+        "kind": "MintLedger",
+        "bytes": 80,
+        "sha256": "dcaa79f8907c5cd31ff9a72b4aad942d53b4bc34a68d455348ef87daa1ca1f47"
+      },
+      {
+        "address": "FjJ9p6MDLoKzDKafn3YFR5GWzGgX3cXrk1jprtkzSFPu",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "7bac234635d7e8fc5659a7ddcfc614e63cca570ab8948765e364b3a7f6e5c857"
+      },
+      {
+        "address": "HrEns37GvnxmxERxRiX3hbDHqZjBZJupkpaE41QDzNUr",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "c05f262126230f1a0602496b6ef030a4d99b327f350c7392301491c5f5835deb"
+      },
+      {
+        "address": "KtWTWACj1HFuzGpJo26LssSh5YuUct2TTW8nmbpQLVw",
+        "kind": "Binder",
+        "bytes": 112,
+        "sha256": "ed6f591432ad33a386d80dc7c3e4b27bd69e205f4569b782ae7ef0d6bdbe997e"
+      }
+    ],
+    "reconciliation": {
+      "status": "PASS",
+      "originalSnapshotSha256": "4416184bb5d2ca124145011cdbbb53bad270c90360e8d73f653fc15024c20d4f",
+      "upgradeSlot": 510047710,
+      "explanation": "Exact TakeBack and Feed replay from finalized signed instructions and events; original snapshot is preserved. No observed post-upgrade bytes enter the replay.",
+      "baselineAccountsNotReplayed": 23,
+      "replayedAccounts": [
+        "DefNHJMKJHoCiwaK6imf9fQYBRU6uzDci6imdV8JFDFt",
+        "8RoRvreH9BDvNJVffniTmDkvjNcng3Rq3b4U8ccnAw9i",
+        "FGrUDqu5SQWQpYaeU3J4ws2oSi1RFXvVa1Y7vtAhRwPw"
+      ],
+      "transactions": [
+        {
+          "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+          "slot": 510038979,
+          "event": {
+            "name": "BagTakenBack",
+            "data": {
+              "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+              "amount": "1000000000",
+              "deck_index": 1,
+              "moved_from": 49,
+              "refund": "406400"
+            },
+            "ixIndex": 3,
+            "logIndex": 14,
+            "eventIndex": 0
+          }
+        },
+        {
+          "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+          "slot": 510039100,
+          "event": {
+            "name": "BagFed",
+            "data": {
+              "depositor": "4BbHoUmkLRKt2zrUTQMRFzxBUsYKM6nxFyAEAahXUvwr",
+              "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+              "amount": "8000000000",
+              "deck_index": 49,
+              "deposit": "406400",
+              "fresh_in_deck": 3
+            },
+            "ixIndex": 4,
+            "logIndex": 12,
+            "eventIndex": 0
+          }
+        }
+      ],
+      "histories": [
+        {
+          "address": "DefNHJMKJHoCiwaK6imf9fQYBRU6uzDci6imdV8JFDFt",
+          "initialSlot": 510038373,
+          "upgradeSlot": 510047710,
+          "reachedInitialSlot": true,
+          "entries": [
+            {
+              "blockTime": 1791754415,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+              "slot": 510039100,
+              "transactionIndex": 6
+            },
+            {
+              "blockTime": 1791754386,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+              "slot": 510038979,
+              "transactionIndex": 9
+            }
+          ]
+        },
+        {
+          "address": "8RoRvreH9BDvNJVffniTmDkvjNcng3Rq3b4U8ccnAw9i",
+          "initialSlot": 510038373,
+          "upgradeSlot": 510047710,
+          "reachedInitialSlot": true,
+          "entries": [
+            {
+              "blockTime": 1791754415,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+              "slot": 510039100,
+              "transactionIndex": 6
+            },
+            {
+              "blockTime": 1791754386,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+              "slot": 510038979,
+              "transactionIndex": 9
+            }
+          ]
+        },
+        {
+          "address": "FGrUDqu5SQWQpYaeU3J4ws2oSi1RFXvVa1Y7vtAhRwPw",
+          "initialSlot": 510038373,
+          "upgradeSlot": 510047710,
+          "reachedInitialSlot": true,
+          "entries": [
+            {
+              "blockTime": 1791754415,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "aoRPj1XmcsoDXRdqKnpg51udiVDTqhqCRnnZ7ky6HvwiZ1EXSPwUkCEz9RRn4KUKj6xUpxwJbz1vSY6x8Es1Ari",
+              "slot": 510039100,
+              "transactionIndex": 6
+            },
+            {
+              "blockTime": 1791754386,
+              "confirmationStatus": "finalized",
+              "err": null,
+              "memo": null,
+              "signature": "5iazUcsLXW8PKtxf1VBjLRgXGa7qLNDdate2Ak7dL57TUz5rCpQjYKvoCs7f7Ag9goe6gnz1Fp66w3skwh6kqz4B",
+              "slot": 510038979,
+              "transactionIndex": 9
+            }
+          ]
+        }
+      ],
+      "sourceSha256": {
+        "instructions/take_back.rs": "51a56507b5839e2ce1eb7a117e9f0f80def778fa7e3df8f5f1a7e383bd16fd06",
+        "instructions/feed.rs": "0f07390f17811a99029d429b277cc3ae931787b3e6354002d9e6a847b254aaf4",
+        "state/views.rs": "a9cb135963d8abc73910845f40d3b6ec49aad23c6ba61b33ec9fbb62fc2f0929",
+        "util/dynamic.rs": "17887913d8505246833d8385d4b3b57916479c0dfde61d74c48622980b0191b7",
+        "checks/nonce.rs": "4ef096c625d743ae9398068aab46578822833cfa7a063c7af9f9ce4e3bfd1c87"
+      }
+    }
+  },
+  "smoke": {
+    "status": "INCOMPLETE_CONCURRENT_KEEPER",
+    "missingGuards": [6071, 6072],
+    "guards": {
+      "6071": {
+        "status": "NOT_EXECUTED",
+        "signature": null
+      },
+      "6072": {
+        "status": "NOT_EXECUTED",
+        "signature": null
+      },
+      "6073": {
+        "status": "PASS",
+        "signature": "53Zqk6mM1ihowEBdUVjB28J35HjD8irJsz5rVKxHxRurErmmWCSMx8tkz4V8SSrMGYCvKNjPrWdcbkv4Rz9eyypt",
+        "slot": 510049962,
+        "blockTime": 1791757009,
+        "instructionIndex": 4,
+        "bucket": 1,
+        "amount": "1000000",
+        "probeOnly": true
+      },
+      "6074": {
+        "status": "PASS",
+        "signature": "6728Be73KT18socCdv8TYAHpmXtJ6fmHUEYTp8ftbtxD8M6q2NU5ivBvCKgv9DibLREkP5V93BQT4PhRQiv2cbba",
+        "slot": 510049700,
+        "blockTime": 1791756947,
+        "instructionIndex": 4,
+        "bucket": 0,
+        "amount": "50000000",
+        "probeOnly": false
+      }
+    },
+    "concurrentKeeper": {
+      "signer": "Fu1Kpogh6cPTdVn7PRQmWGkrkUHNdzW7K82YF2Hp7Brw",
+      "signature": "5DFBSjJCCtjZeznWwUifN7GHvMCqpBGCZ1mrzjsqZKQJqEF4goRuAUZJqv4pJWoToGUfTqAbgRY6n6KXf5WrRx6w",
+      "slot": 510050182,
+      "blockTime": 1791757062,
+      "secondsAfterReveal": "2"
+    },
+    "abandoned": [
+      {
+        "label": "upgrade2/refusal-6071",
+        "signature": "4PAvuo8UhSaaa4BTQSvfhe483G7r7k8zLWb2o3c91jRtGXuRYyNj52tEoNruWfHmhBXPAkGw45UGHx69LskKMP4V",
+        "lastValidBlockHeight": 497277924,
+        "finalizedBlockHeight": 497279757,
+        "finalizedSlot": 510052173,
+        "observedSlot": 510052177,
+        "status": "EXPIRED_WITHOUT_OBSERVED_EXECUTION"
+      }
+    ],
+    "buyer": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+    "pull": "4vcC3epH7V7psNNSdA1Gy8FoeXJdo7opJvzaJF7qKiUv",
+    "rip": "58J26BSoHq5RxyGxjTmBhTEXm2p7GVwWKfogBLxzpaFUwHEUtqf61tFTZKXpznatjDswwhcghCsz5ZAgci2jEmbN",
+    "reveal": {
+      "signature": "yb7igyrexNyFN84tnG86GdQMveA7ZwzpKpWCqFr9EzYMbM3XomqSgcKuMSJ5qxbUuGoWbxNefPLzZgRRoejouKz",
+      "slot": 510050176,
+      "blockTime": 1791757060,
+      "seq": "3",
+      "ts": "1791757060"
+    },
+    "feed": [
+      {
+        "signature": "4ZhAmkCk28ER9XicTrzpj6RUVdJegc9mJsT3897RBBQFiBpQXJFE78qXGqjBAi8qPDx7SbbDVAKZSKQ2uShdbUns",
+        "cards": 1
+      },
+      {
+        "signature": "3qu7tbvD2buQ7JGz5gRZYxXaWE3CPRWDgD4ePihiPDVdaHzxrnZxJnWEESR7WeFab63vkJpyjP8GeQtFN4EXp1o4",
+        "cards": 1
+      },
+      {
+        "signature": "5d6H6WsPiqo1FzVzM83CxbYdDiZ9BskQ1RuRiiiJm7A1351EfTEWS3qUeZSd2rhXHeg6WJjouMVEndpy5UQH941u",
+        "cards": 1
+      },
+      {
+        "signature": "5dg2C93rcaowjj7TKawK8G1U3aLSEuweLGHqUCZPvWFYgQznpw86fF4U6LN6jvqodDYq6939nxzpyTPomy52Q6KX",
+        "cards": 1
+      },
+      {
+        "signature": "xsoFnWvyoLUdjXz5DuaM272nVSoLLjiU4osVUn4TUjdRYiW2upjBfo5i1pboAZ7LRtXSRicLspDGHREv4WoDCFu",
+        "cards": 1
+      }
+    ],
+    "exits": {
+      "takeBack": "4V8NK3jgbdqsjwNPRH2xJGiFhLHHst3PLZq8nQo3M3Tptzbo86NpGV5DRHH7BpWZkfQfLxWAKHkY7eTGiTdqxepH",
+      "settle": "5DFBSjJCCtjZeznWwUifN7GHvMCqpBGCZ1mrzjsqZKQJqEF4goRuAUZJqv4pJWoToGUfTqAbgRY6n6KXf5WrRx6w",
+      "redeem": [
+        "2h1DtyndbEZnqA9FKYdb5vxigum3cNhhtimXYJ1sY7AEN7beuHWHLikDrpX6ch5GiqVosqqPr1U9VT16JsCicgoy"
+      ],
+      "stockSellBelowReserve": "2wqrQQnWnWEj1oQq44MbcjaVdp4sEn2LzaLQhqrhpr2puJ84H2sWUGoVFy9KVY2ka54gvrX9hrkoh8sX3d3XqUxk",
+      "stockSellUnsettled": null,
+      "stockSellConditions": {
+        "belowReserve": {
+          "signature": "2wqrQQnWnWEj1oQq44MbcjaVdp4sEn2LzaLQhqrhpr2puJ84H2sWUGoVFy9KVY2ka54gvrX9hrkoh8sX3d3XqUxk",
+          "ts": "1791756979",
+          "stockBefore": "96488440",
+          "reserveFloor": "1000000000",
+          "duringTrendingNotice": true,
+          "trendingListedTs": "1791756940",
+          "trendingNoticeDeadline": "1791843340"
+        },
+        "unsettled": null
+      },
+      "withdrawOwed": {
+        "signature": "4iVzUauA2YNt2FGbrnCC48GFswiVSgpUA3RwAKVjsb3323DTxeYtN1dSh8jLQTv1VZf8usrYrVVTLdiD89Pk1jYo",
+        "amount": "0"
+      }
+    },
+    "tokenBalances": [
+      {
+        "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+        "address": "13TsLWMd7f1mXvinawy97c1Qf3ViLE7ZRyP52zXFhL9r",
+        "before": "25000000000",
+        "redeemed": "3000050000",
+        "observed": "28000050000"
+      },
+      {
+        "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+        "address": "Gg1pq1PFVQhorCPqE7ehvGNVm3o9doHAryRUUH44Pd8y",
+        "before": "25000000000",
+        "redeemed": "1000000000",
+        "observed": "26000000000"
+      }
+    ],
+    "listing": {
+      "bucket": 1,
+      "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+      "listed_ts": "1791756940"
+    },
+    "stockTrades": [
+      {
+        "signature": "2wqrQQnWnWEj1oQq44MbcjaVdp4sEn2LzaLQhqrhpr2puJ84H2sWUGoVFy9KVY2ka54gvrX9hrkoh8sX3d3XqUxk",
+        "slot": 510049839,
+        "blockTime": 1791756979,
+        "kind": 2,
+        "bucket": 0,
+        "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+        "amount": "1000",
+        "min_out": "985000",
+        "delta": "1000000",
+        "book": "1000000",
+        "tracked_after": "97488440",
+        "ts": "1791756979"
+      },
+      {
+        "signature": "3qWoUkpCPhi9GTXzunjMYcec8EGnHfn5HJtV9drFjvSTU2R6XPwuiMvHDqr3tWWFqGeDujRSDvWy5ZWhxn9JEBHp",
+        "slot": 510049940,
+        "blockTime": 1791757004,
+        "kind": 1,
+        "bucket": 0,
+        "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+        "amount": "151000000",
+        "min_out": "148735",
+        "delta": "151000",
+        "book": "0",
+        "tracked_after": "1000000000",
+        "ts": "1791757004"
+      },
+      {
+        "signature": "3xsbTrMMZ3DsuMs2ANcpFBDovx8GsqZ6exux9LvrMgPkw4yveAzvsRwCghafigpWFnkzNnNNdx7BaUfgREKqes8Z",
+        "slot": 510050962,
+        "blockTime": 1791757248,
+        "kind": 1,
+        "bucket": 0,
+        "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+        "amount": "1000000",
+        "min_out": "985",
+        "delta": "1000",
+        "book": "0",
+        "tracked_after": "1071000000",
+        "ts": "1791757248"
+      }
+    ],
+    "feeSwap": {
+      "signature": "4RxKGACT6ToJqkbGUrsXgESWjXEvRNBUfz2TeWaQ9unxmCa8BgN97UwU5KxU3aWDih7fmUXHA5yv3ne99Sq947EE",
+      "quoteIn": "50000000",
+      "tradeFee": "1250000"
+    },
+    "fees": {
+      "signature": "2z6pupug7RuJjbqGEV2RwBo5T6kkD3r6WpqQuMxGUEK2XZXVEikLbAK5XnzriShLuSyBf8TSf38QNE8G2Ah13y5m",
+      "tradeFee": "1250000",
+      "claim": {
+        "kind": 0,
+        "pool": "iyGGHFujSRRekqsc5PENBb5cwPL16jftyXKJ71n5Dvx",
+        "quote": "1000000",
+        "base": "0",
+        "unwrapped_lamports": "2488440",
+        "ts": "1791757280"
+      },
+      "collection": {
+        "regime": 1,
+        "amount": "2488440",
+        "from_fee_in": "2488440",
+        "from_wsol": "0",
+        "to_stock": "1244220",
+        "to_burn": "0",
+        "to_team": "1244220",
+        "book": "2522000000",
+        "target": "30000000000",
+        "ts": "1791757280"
+      }
+    },
+    "metadata": {
+      "address": "4kKgQcYz2DR1sC43y6JpgLKY7bq9YzTrLNeBV5eZGais",
+      "name": "Copper Rehearsal",
+      "symbol": "CPRT",
+      "uri": "https://example.com/copper-rehearsal.json",
+      "isMutable": false,
+      "mutableOffset": 323
+    }
+  },
+  "final": {
+    "slot": 510052364,
+    "machine": {
+      "phase": 3,
+      "stock": "1072244220",
+      "pendingPulls": "0",
+      "unsettledReveals": "0",
+      "fields": {
+        "last_reveal_ts": {
+          "offset": 2656,
+          "value": "1791757060"
+        },
+        "sb_paid_prev_hour": {
+          "offset": 2664,
+          "value": "0"
+        },
+        "keeper_history_version": {
+          "offset": 2672,
+          "value": "1"
+        },
+        "keeper_history_started_ts": {
+          "offset": 2680,
+          "value": "0"
+        },
+        "bucket_history": [
+          {
+            "index": 0,
+            "offset": 2688,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 1,
+            "offset": 2712,
+            "listed_ts": "1791756940",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 2,
+            "offset": 2736,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 3,
+            "offset": 2760,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 4,
+            "offset": 2784,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 5,
+            "offset": 2808,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 6,
+            "offset": 2832,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 7,
+            "offset": 2856,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 8,
+            "offset": 2880,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 9,
+            "offset": 2904,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 10,
+            "offset": 2928,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 11,
+            "offset": 2952,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 12,
+            "offset": 2976,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 13,
+            "offset": 3000,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 14,
+            "offset": 3024,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          },
+          {
+            "index": 15,
+            "offset": 3048,
+            "listed_ts": "0",
+            "sb_inflow_hour": "0",
+            "sb_inflow_prev_hour": "0"
+          }
+        ],
+        "unsettled_reveals": {
+          "offset": 3072,
+          "value": "0"
+        }
+      }
+    },
+    "config": {
+      "slot": 510052364,
+      "guardianPaused": 0,
+      "adminPaused": 0,
+      "ripOpen": true
+    },
+    "pulls": {
+      "slot": 510052365,
+      "pullsChecked": 0
+    },
+    "balances": {
+      "cluster": "devnet",
+      "observedAt": "2026-10-11T22:27:19.162Z",
+      "slot": 510052596,
+      "wallets": {
+        "payer": {
+          "address": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+          "lamports": 9310206294,
+          "exists": true
+        },
+        "testUser": {
+          "address": "77jH6NwGHobGetQYQPyJrmBz9bsrhaSKk86RmA3KFypG",
+          "lamports": 393829734,
+          "exists": true
+        },
+        "buffer": {
+          "address": "j91ru7R1FvoAiPZirU9eEbhsvT3vKfUXdBFeMHE55mr",
+          "lamports": 0,
+          "exists": false
+        }
+      }
+    }
+  },
+  "budget": {
+    "payerBeforeLamports": "10422840134",
+    "payerAfterUpgradeLamports": "10416750134",
+    "payerAfterSmokeLamports": "9310206294",
+    "payerNetOutflowLamports": "1112633840",
+    "upgradeFeesLamports": "6090000",
+    "returnedBufferRentLamports": "4922870520",
+    "coverageDonationLamports": "1053511560",
+    "curveSwapInputLamports": "50000000",
+    "testUserBeforeLamports": "495568934",
+    "testUserAfterLamports": "393829734"
+  },
+  "transactions": [
+    {
+      "signature": "2wqrQQnWnWEj1oQq44MbcjaVdp4sEn2LzaLQhqrhpr2puJ84H2sWUGoVFy9KVY2ka54gvrX9hrkoh8sX3d3XqUxk",
+      "slot": 510049839,
+      "blockTime": 1791756979,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "4V8NK3jgbdqsjwNPRH2xJGiFhLHHst3PLZq8nQo3M3Tptzbo86NpGV5DRHH7BpWZkfQfLxWAKHkY7eTGiTdqxepH",
+      "slot": 510049856,
+      "blockTime": 1791756983,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "4iVzUauA2YNt2FGbrnCC48GFswiVSgpUA3RwAKVjsb3323DTxeYtN1dSh8jLQTv1VZf8usrYrVVTLdiD89Pk1jYo",
+      "slot": 510050810,
+      "blockTime": 1791757211,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "3qWoUkpCPhi9GTXzunjMYcec8EGnHfn5HJtV9drFjvSTU2R6XPwuiMvHDqr3tWWFqGeDujRSDvWy5ZWhxn9JEBHp",
+      "slot": 510049940,
+      "blockTime": 1791757004,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "3xsbTrMMZ3DsuMs2ANcpFBDovx8GsqZ6exux9LvrMgPkw4yveAzvsRwCghafigpWFnkzNnNNdx7BaUfgREKqes8Z",
+      "slot": 510050962,
+      "blockTime": 1791757248,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "2fghPujBYccyNsqrdopPgLht1Mo8N9P1CD1Q5YVp6PPBwexjF6QTZEGpv4Q47ZR7wRsnRv6PsB5LchpPwzoCSCuQ",
+      "slot": 510049659,
+      "blockTime": 1791756937,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "488uJ7A4QWs9fZGWQ9U7dz1ntyMdrjwweL4n5fAbbJ2asDwb29N5f2XTEuoTbquBwVSMMVQbvKP9YWfQ1bWm5DFp",
+      "slot": 510049674,
+      "blockTime": 1791756940,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "4poyMjhbXd1KBUc6AvsjFBQMsWA9piCKdDzY6AkbF69CtC34k2sKrtu7aqgn35aYBkrWXKPrc6Wzz86AGcNDn5FV",
+      "slot": 510049873,
+      "blockTime": 1791756988,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "58J26BSoHq5RxyGxjTmBhTEXm2p7GVwWKfogBLxzpaFUwHEUtqf61tFTZKXpznatjDswwhcghCsz5ZAgci2jEmbN",
+      "slot": 510050172,
+      "blockTime": 1791757059,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "5DFBSjJCCtjZeznWwUifN7GHvMCqpBGCZ1mrzjsqZKQJqEF4goRuAUZJqv4pJWoToGUfTqAbgRY6n6KXf5WrRx6w",
+      "slot": 510050182,
+      "blockTime": 1791757062,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "2h1DtyndbEZnqA9FKYdb5vxigum3cNhhtimXYJ1sY7AEN7beuHWHLikDrpX6ch5GiqVosqqPr1U9VT16JsCicgoy",
+      "slot": 510050794,
+      "blockTime": 1791757208,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "2z6pupug7RuJjbqGEV2RwBo5T6kkD3r6WpqQuMxGUEK2XZXVEikLbAK5XnzriShLuSyBf8TSf38QNE8G2Ah13y5m",
+      "slot": 510051099,
+      "blockTime": 1791757280,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "4RxKGACT6ToJqkbGUrsXgESWjXEvRNBUfz2TeWaQ9unxmCa8BgN97UwU5KxU3aWDih7fmUXHA5yv3ne99Sq947EE",
+      "slot": 510051067,
+      "blockTime": 1791757272,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "4FyywzYY4aCZGBfeNoeRpPDgrRfMD2sHr9rzSpxfC49h2B9SnrEjrff8MLke69n119MooUi9X2cmRSysPTKr7yBe",
+      "slot": 510038424,
+      "blockTime": 1791754253,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "5ZTvGy4dg8mxhfprVPmqQwQVTcUpnjqqJKtWvteJ9hMCzeEUrEyjX4kHaTfEaiZ31d5XxUtqMpmGmk9D5FUJcqiL",
+      "slot": 510038474,
+      "blockTime": 1791754265,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "GFoqMKvkhTqygnpcHjQ5JGJSKKSewqAHasTULR9858y8DDFNCcwwQUh3Xy8XhQXCSZmXVtW46NZDLz4rM3Ccj21",
+      "slot": 510047710,
+      "blockTime": 1791756471,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "4c6iX8rPzK9VXsA6HCtEMMDft7gM2ERQPfYdJQP6JcMZLRJ4E9BVh3VokKEmvTuRCrVaWQEG3Rtvtj92ScQT7eCh",
+      "slot": 510047755,
+      "blockTime": 1791756482,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "59MWuBFV1Z1US4JLPpVf2JvzcuqA2h3ALR6FDkfhzK3HZPLTG2kGZ66xGc18wV6ui5EZ2MjxAiSwY9V3QB7WKpTb",
+      "slot": 510047781,
+      "blockTime": 1791756488,
+      "error": null,
+      "fee": 5000
+    },
+    {
+      "signature": "2wTmjBb5DSmrGpT4CEecw4aSp6t4JGJJUzMLdUKJorbNA7UZ6SFDaJ6YARYLQVuZcvXgAVs4zdfMzvMy97dtErc5",
+      "slot": 510049399,
+      "blockTime": 1791756874,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "4ZhAmkCk28ER9XicTrzpj6RUVdJegc9mJsT3897RBBQFiBpQXJFE78qXGqjBAi8qPDx7SbbDVAKZSKQ2uShdbUns",
+      "slot": 510049521,
+      "blockTime": 1791756904,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "3qu7tbvD2buQ7JGz5gRZYxXaWE3CPRWDgD4ePihiPDVdaHzxrnZxJnWEESR7WeFab63vkJpyjP8GeQtFN4EXp1o4",
+      "slot": 510049548,
+      "blockTime": 1791756910,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "5d6H6WsPiqo1FzVzM83CxbYdDiZ9BskQ1RuRiiiJm7A1351EfTEWS3qUeZSd2rhXHeg6WJjouMVEndpy5UQH941u",
+      "slot": 510049586,
+      "blockTime": 1791756920,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "5dg2C93rcaowjj7TKawK8G1U3aLSEuweLGHqUCZPvWFYgQznpw86fF4U6LN6jvqodDYq6939nxzpyTPomy52Q6KX",
+      "slot": 510049611,
+      "blockTime": 1791756925,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "xsoFnWvyoLUdjXz5DuaM272nVSoLLjiU4osVUn4TUjdRYiW2upjBfo5i1pboAZ7LRtXSRicLspDGHREv4WoDCFu",
+      "slot": 510050066,
+      "blockTime": 1791757034,
+      "error": null,
+      "fee": 10000
+    },
+    {
+      "signature": "53Zqk6mM1ihowEBdUVjB28J35HjD8irJsz5rVKxHxRurErmmWCSMx8tkz4V8SSrMGYCvKNjPrWdcbkv4Rz9eyypt",
+      "slot": 510049962,
+      "blockTime": 1791757009,
+      "error": {
+        "InstructionError": [
+          4,
+          {
+            "Custom": 6073
+          }
+        ]
+      },
+      "fee": 5000
+    },
+    {
+      "signature": "6728Be73KT18socCdv8TYAHpmXtJ6fmHUEYTp8ftbtxD8M6q2NU5ivBvCKgv9DibLREkP5V93BQT4PhRQiv2cbba",
+      "slot": 510049700,
+      "blockTime": 1791756947,
+      "error": {
+        "InstructionError": [
+          4,
+          {
+            "Custom": 6074
+          }
+        ]
+      },
+      "fee": 10000
+    },
+    {
+      "signature": "yb7igyrexNyFN84tnG86GdQMveA7ZwzpKpWCqFr9EzYMbM3XomqSgcKuMSJ5qxbUuGoWbxNefPLzZgRRoejouKz",
+      "slot": 510050176,
+      "blockTime": 1791757060,
+      "error": null,
+      "fee": 8001
+    }
+  ],
+  "limitations": [
+    "Guards 6071, 6072 have no executed refusal proof; the concurrent keeper settled this Pull before those probes completed.",
+    "TRENDING is an admission probe with canonical addresses; no graduated pool, quote or successful TRENDING swap is proved.",
+    "MAJOR trades use the approved fictitious SOL/USD fixture and transfer adapter, not market pricing.",
+    "Block timestamps are checked alongside execution events and captured Clock observations; stored snapshots are not historical RPC account proofs.",
+    "Refund and Final Pull exits require other lifecycle states and are not claimed as exercised by this smoke.",
+    "StockSell during an unsettled reveal was not exercised; only the successful sale below reserve is proved.",
+    "withdraw_owed succeeded with no positive payout event."
+  ],
+  "verification": {
+    "command": "node scripts/devnet-upgrade2-verify.mjs --partial",
+    "result": "INCOMPLETE_CONCURRENT_KEEPER",
+    "strictModeRequiresAllFourRefusals": true
+  }
+}

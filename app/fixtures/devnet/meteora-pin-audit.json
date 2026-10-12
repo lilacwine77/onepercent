@@ -1,0 +1,601 @@
+{
+  "observedAt": "2026-10-10T17:13:04.038Z",
+  "method": "getAccountInfo",
+  "commitment": "finalized",
+  "programs": [
+    {
+      "cluster": "mainnet",
+      "endpoint": "https://api.mainnet-beta.solana.com",
+      "name": "dbc",
+      "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+      "programData": "HUfnSSiJxgspQm6C1rkqv6L3XgVtn7AESApgCQpCXCYh",
+      "observedSlot": 455333580,
+      "deploymentSlot": 445503633,
+      "deploymentTime": 1788922934,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "bytes": 2326577,
+      "sha256": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b",
+      "trailingZeroTrimmedSha256": "b3f7b765e1b9a2e87e45c4663165974819d248f00c1beefe678af60e9dfe6c44",
+      "baselineSha256": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b",
+      "baselineDeploymentSlot": 445503633,
+      "matchesCapturedPin": true,
+      "referenceCommit": "f552f20aa3c1c7631427c3827aeea7c58b902813",
+      "sourceToBinaryProof": "Not established by a raw binary comparison"
+    },
+    {
+      "cluster": "mainnet",
+      "endpoint": "https://api.mainnet-beta.solana.com",
+      "name": "damm-v2",
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "programData": "AUh8bm2XsMfex3KjYGcM3G4uBqUNSDw6HEhWaWMYnyPH",
+      "observedSlot": 455333620,
+      "deploymentSlot": 445230614,
+      "deploymentTime": 1788836421,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "bytes": 2174352,
+      "sha256": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b",
+      "trailingZeroTrimmedSha256": "7c479dd7de729ada87d141e9d422a572d42df79f4cc8947a751b5f15719d94e0",
+      "baselineSha256": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b",
+      "baselineDeploymentSlot": 445230614,
+      "matchesCapturedPin": true,
+      "referenceCommit": "a85c926607433f23f0ea60f4ca7b1ae92f4156cb",
+      "sourceToBinaryProof": "Not established by a raw binary comparison"
+    },
+    {
+      "cluster": "devnet",
+      "endpoint": "https://api.devnet.solana.com",
+      "name": "dbc",
+      "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+      "programData": "HUfnSSiJxgspQm6C1rkqv6L3XgVtn7AESApgCQpCXCYh",
+      "observedSlot": 509612069,
+      "deploymentSlot": 508712305,
+      "deploymentTime": 1791437588,
+      "upgradeAuthority": "DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX",
+      "bytes": 1983568,
+      "sha256": "5edf76d972abaf355048db5d9003bc4dfa843cd98a5f93785430dac371678ad3",
+      "trailingZeroTrimmedSha256": "9f652df38b27f83565eb2d5271a6a4e8c9ccbc6a721ed1fadf299154b1753b0d",
+      "baselineSha256": "4c26a8a5da99f8ce932fa0300c46675b527090021fbb74214c9486bedda9f23b",
+      "baselineDeploymentSlot": 445503633,
+      "matchesCapturedPin": false,
+      "referenceCommit": "f552f20aa3c1c7631427c3827aeea7c58b902813",
+      "sourceToBinaryProof": "Not established by a raw binary comparison"
+    },
+    {
+      "cluster": "devnet",
+      "endpoint": "https://api.devnet.solana.com",
+      "name": "damm-v2",
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "programData": "AUh8bm2XsMfex3KjYGcM3G4uBqUNSDw6HEhWaWMYnyPH",
+      "observedSlot": 509612087,
+      "deploymentSlot": 503166267,
+      "deploymentTime": 1790203057,
+      "upgradeAuthority": "DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX",
+      "bytes": 1559448,
+      "sha256": "82bb9375921bb8007551cb65f9ca43b191597496cc9922926468b36671081ec2",
+      "trailingZeroTrimmedSha256": "f838b2ae3ed237211319493045b0a172c0946fd72ba8152895b98bb4d8a29a9c",
+      "baselineSha256": "4d5b920baebc090f89b2e8796a3452ed067c9667a143058c96a312f2c1e6848b",
+      "baselineDeploymentSlot": 445230614,
+      "matchesCapturedPin": false,
+      "referenceCommit": "a85c926607433f23f0ea60f4ca7b1ae92f4156cb",
+      "sourceToBinaryProof": "Not established by a raw binary comparison"
+    }
+  ],
+  "payerBalance": {
+    "context": {
+      "apiVersion": "4.4.0-beta.0",
+      "slot": 509612097
+    },
+    "value": 14101310160
+  },
+  "status": "devnet-provenance-waived-empirical-meteora-pass",
+  "candidate": {
+    "referenceCommit": "f552f20aa3c1c7631427c3827aeea7c58b902813",
+    "candidateCommit": "82054dfdffafeb62eac1a158462d0f633bb410e1",
+    "candidateIsProvenDeployed": false,
+    "poolConfigBytes": 1048,
+    "newFieldsInPreviousPadding": [
+      {
+        "name": "transfer_fee_basis_points",
+        "offset": 216,
+        "bytes": 2,
+        "observedValue": 0
+      },
+      {
+        "name": "transfer_fee_withheld_authority",
+        "offset": 218,
+        "bytes": 1,
+        "observedValue": 0
+      },
+      {
+        "name": "migrated_transfer_fee_authority_option",
+        "offset": 219,
+        "bytes": 1,
+        "observedValue": 0
+      },
+      {
+        "name": "transfer_fee_flag",
+        "offset": 220,
+        "bytes": 1,
+        "observedValue": 0
+      }
+    ],
+    "version": {
+      "offset": 236,
+      "reference": 0,
+      "observed": 1
+    },
+    "existingFieldOffsets": {
+      "quote_mint": {
+        "offset": 8,
+        "bytes": 32
+      },
+      "fee_claimer": {
+        "offset": 40,
+        "bytes": 32
+      },
+      "leftover_receiver": {
+        "offset": 72,
+        "bytes": 32
+      },
+      "pool_fees": {
+        "offset": 104,
+        "bytes": 80
+      },
+      "partner_liquidity_vesting_info": {
+        "offset": 184,
+        "bytes": 16
+      },
+      "creator_liquidity_vesting_info": {
+        "offset": 200,
+        "bytes": 16
+      },
+      "padding_0": {
+        "offset": 216,
+        "bytes": 14
+      },
+      "padding_1": {
+        "offset": 230,
+        "bytes": 2
+      },
+      "collect_fee_mode": {
+        "offset": 232,
+        "bytes": 1
+      },
+      "migration_option": {
+        "offset": 233,
+        "bytes": 1
+      },
+      "activation_type": {
+        "offset": 234,
+        "bytes": 1
+      },
+      "token_decimal": {
+        "offset": 235,
+        "bytes": 1
+      },
+      "version": {
+        "offset": 236,
+        "bytes": 1
+      },
+      "token_type": {
+        "offset": 237,
+        "bytes": 1
+      },
+      "quote_token_flag": {
+        "offset": 238,
+        "bytes": 1
+      },
+      "partner_permanent_locked_liquidity_percentage": {
+        "offset": 239,
+        "bytes": 1
+      },
+      "partner_liquidity_percentage": {
+        "offset": 240,
+        "bytes": 1
+      },
+      "creator_permanent_locked_liquidity_percentage": {
+        "offset": 241,
+        "bytes": 1
+      },
+      "creator_liquidity_percentage": {
+        "offset": 242,
+        "bytes": 1
+      },
+      "migration_fee_option": {
+        "offset": 243,
+        "bytes": 1
+      },
+      "fixed_token_supply_flag": {
+        "offset": 244,
+        "bytes": 1
+      },
+      "creator_trading_fee_percentage": {
+        "offset": 245,
+        "bytes": 1
+      },
+      "token_update_authority": {
+        "offset": 246,
+        "bytes": 1
+      },
+      "migration_fee_percentage": {
+        "offset": 247,
+        "bytes": 1
+      },
+      "creator_migration_fee_percentage": {
+        "offset": 248,
+        "bytes": 1
+      },
+      "padding_2": {
+        "offset": 249,
+        "bytes": 7
+      },
+      "swap_base_amount": {
+        "offset": 256,
+        "bytes": 8
+      },
+      "migration_quote_threshold": {
+        "offset": 264,
+        "bytes": 8
+      },
+      "migration_base_threshold": {
+        "offset": 272,
+        "bytes": 8
+      },
+      "migration_sqrt_price": {
+        "offset": 280,
+        "bytes": 16
+      },
+      "locked_vesting_config": {
+        "offset": 296,
+        "bytes": 48
+      },
+      "pre_migration_token_supply": {
+        "offset": 344,
+        "bytes": 8
+      },
+      "post_migration_token_supply": {
+        "offset": 352,
+        "bytes": 8
+      },
+      "migrated_collect_fee_mode": {
+        "offset": 360,
+        "bytes": 1
+      },
+      "migrated_dynamic_fee": {
+        "offset": 361,
+        "bytes": 1
+      },
+      "migrated_pool_fee_bps": {
+        "offset": 362,
+        "bytes": 2
+      },
+      "migrated_pool_base_fee_mode": {
+        "offset": 364,
+        "bytes": 1
+      },
+      "enable_first_swap_with_min_fee": {
+        "offset": 365,
+        "bytes": 1
+      },
+      "migrated_compounding_fee_bps": {
+        "offset": 366,
+        "bytes": 2
+      },
+      "pool_creation_fee": {
+        "offset": 368,
+        "bytes": 8
+      },
+      "migrated_pool_base_fee_bytes": {
+        "offset": 376,
+        "bytes": 16
+      },
+      "sqrt_start_price": {
+        "offset": 392,
+        "bytes": 16
+      },
+      "curve": {
+        "offset": 408,
+        "bytes": 640
+      }
+    },
+    "changedRustFiles": [
+      {
+        "path": "programs/dynamic-bonding-curve/src/constants.rs",
+        "oldSha256": "324c1e34563604e2b87a1328a511dee284b3d270947bba5910a03f3303cca3ce",
+        "candidateSha256": "ebef96a8688c9b867111f7d55d75d5c3785c315ccf8efb238129fe54956470ed"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/error.rs",
+        "oldSha256": "7fccd97bb34a3006bb4160a8fef6e32111bdcf87b9e23a433550f9c12a7e7c09",
+        "candidateSha256": "1ea694fc2111d798dcf86a963c96391ee9b5b96afd634d33a6805109d7e5f773"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/lib.rs",
+        "oldSha256": "1275566d51509245a461c966bf6f2256ba1b1b1358423a63735928888e39ecf9",
+        "candidateSha256": "542b7ce816f443ff0e45322b0d8a5ffb71b94f999ecee64af205f820d6d6ad23"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/event.rs",
+        "oldSha256": "b96fab4ebe518955d599d1875f9d0fde631697194be971022ed0647d10e783f3",
+        "candidateSha256": "352bb9a3b99977a51c8f34b1d1717554eef795569427b9b3ff6a69b45dc41898"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/creator/ix_transfer_pool_creator.rs",
+        "oldSha256": "fafc01e2f9f25b2477682c6049f1508bf0d93dbb939737c2a0c9816a6e9565bf",
+        "candidateSha256": "986fe2a0dfcc0fa3bbd788288f6d812bd787d567d3545a3775d18006eaaa5fe8"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/creator/ix_withdraw_creator_surplus.rs",
+        "oldSha256": "b641ee17e005b3e6bf25cad846dc52a679be2697f19af4c465823fc23733b913",
+        "candidateSha256": "e1b9dba771e8bd8a7d6e09b232e80b74458ed0b83912ffe889b2d877d83d0177"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/creator/ix_claim_creator_trading_fee.rs",
+        "oldSha256": "1869b71044c94370de540ce4e58f08e8da3ba406e48be8314acec921208c497d",
+        "candidateSha256": "fbaa6adb7c0a9be4f44deb5ec9969d2c8723e933d8fc2163b737a2b5d5cdf2d7"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/swap_exact_in.rs",
+        "oldSha256": "40d6c0aeab5c2e395aea3a3623ec51ed7f4858232d0846c993b5b8cc63b5a3ab",
+        "candidateSha256": "af742d7ac5fb1d3d45891c2340154220561fb3399083d6c1a0657ea3d1c67b3a"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/swap_exact_out.rs",
+        "oldSha256": "2c5a40908bf10bed0da1e58990781f470f66b432361258c7225eb3dcc292c9e2",
+        "candidateSha256": "47f41282551e5d874f298ccb18038811b82f6f703817f0e1534ea08fa334a0bd"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/process_swap.rs",
+        "oldSha256": "5ac8ac76f53899b993e51b52e5a80990f80e84d740a47418d96d022c38892ddc",
+        "candidateSha256": "a7b11fa8492c208a863d82d469cabb3f9435bc8a7aa335673a23aa133ece199e"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/mod.rs",
+        "oldSha256": "6fdd342d52e18cbd17f62fd5ce18416652a2a847620fdf872a6b5cfadb9d3ee1",
+        "candidateSha256": "24e6097786031d048c52f7b59af33457c19668903d60efea901ca74e1b8428a3"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/swap_partial_fill.rs",
+        "oldSha256": "8128566d8ddc58d4032f0523f070568ebc4e3eed18dc56589a7dcbe0f72dff92",
+        "candidateSha256": "3db9470ade5b865979220f7b9a716c27477582ef89b551134eafc03472522432"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/ix_swap.rs",
+        "oldSha256": "c39c6d61c8d316198f5eaa78eccb4473dac07d650ea99d98c71c931beff613aa",
+        "candidateSha256": "9845a0bb66e5fd3d4e2993867533de9c2cddc2663ea013b2d9003b7544f1b45a"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/swap/ix_swap2_with_transfer_hook.rs",
+        "oldSha256": "45770086a15fe345ddb4b0bcbbc11f263135c5c17502fd96b3a7126d3c408986",
+        "candidateSha256": "0a574a889f7e343d8b6bc88521623e20e120ea1af3cfd19d124188663d7a2f7b"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/ix_claim_partner_trading_fee.rs",
+        "oldSha256": "7c9d6e3a14d21b0e6c6d32314d81f8769112468fd8dfbe066ea9ccfc95539c8c",
+        "candidateSha256": "a38577decfb26c8296dc51d36dfd4d7c8e206db034d466607ea5f03feb3a0188"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/ix_withdraw_partner_surplus.rs",
+        "oldSha256": "e515d6f633e4f0f297d3a88437b26de2642785a067045e0a8f3fa8316841f4a3",
+        "candidateSha256": "33ea55291ce562797ecc870f410b49e67ce2b6eea1c991e77a91d7c7b880b3a3"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/ix_claim_partner_pool_creation_fee.rs",
+        "oldSha256": "20abcdd3e6660c3d5362540b5ee908807132782033117fefeffa605e9161d92a",
+        "candidateSha256": "391bcba498bb7cc881c55dba549e2cd463e235d9345f7e37d3a87414bd9938e7"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/create_config/ix_create_config.rs",
+        "oldSha256": "022ef92a9106d7c4fec1cd73775106bb325487311f71fe9a71417f34f619e8eb",
+        "candidateSha256": "2aa3d0fdf2cdcb2080a0baac872ef5f74b7539a074cb6e57d5cd80b360767362"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/create_config/mod.rs",
+        "oldSha256": "5120a5951060a6d281b9d1f31691cde81398266d71a55893af7d5ef844a55530",
+        "candidateSha256": "14565d8c8aa61f4154e7253e975067fab296ffa2971f2f35c1047813c3bf85b0"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/create_config/ix_create_transfer_hook_config.rs",
+        "oldSha256": "2eb86a55b207ba1d0cdab1872b008a751629b3b7afd7ee62fdf19df7dff1fdb2",
+        "candidateSha256": "bb69bcef971bde9e043a3e456154ee22583e47a3f7bfa92bcd1c33305ca4ef8c"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/create_config/process_create_config.rs",
+        "oldSha256": "ffe37a9a3fb39fd3eca87cd55fd515612fbd91e422640fd2722ae631476b7e64",
+        "candidateSha256": "0e8cf9c73c0f5607c2823ee0c13e2c5248d26d80dd3492f62597a59a8827243a"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/initialize_pool/ix_initialize_virtual_pool_with_token2022_transfer_hook.rs",
+        "oldSha256": "70dad7ec375a3da666a978bb8569e8ec107bdbb45c215b71bd0cf70416c68352",
+        "candidateSha256": "f053b2511af311cb2d98e062a6590880ebc36a8c0ac01f074a884e58f4e34155"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/initialize_pool/ix_initialize_virtual_pool_with_token2022.rs",
+        "oldSha256": "58152fb43391e9a90ac92b7d0dcf23e1a77961f304125f4429b597eaec641b5f",
+        "candidateSha256": "c78f1be5513fdc19638dbc946f81837bb6d307412e97f371a21a96ff1b915ec8"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/initialize_pool/ix_initialize_virtual_pool_with_spl_token.rs",
+        "oldSha256": "1e64fb5dae95e4c78af35c67b9d932380abf626f7868364031ef218b2aef06ab",
+        "candidateSha256": "eb6da5d90632ced3f03bdaa0bebcba9db03971a1968287348a4532658653abe2"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/initialize_pool/process_initialize_virtual_pool_with_token2022.rs",
+        "oldSha256": "4602c915726c33e9cfa96889aac04d06fe2cf2e0fcc4a0c100a094434d27f00d",
+        "candidateSha256": "d6250cfe53ae7002b785673e51f932ea575eed3cbd6c1f56b4e50337fe78f916"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/migration/withdraw_leftover.rs",
+        "oldSha256": "074a6411f6ba37f978c06450c6425f79e8378fe918357ce457f852e6758234d8",
+        "candidateSha256": "8c4d5960702c90ae361e31581c0ecd3ec2f05eeffdc7af1435046d497916ddcd"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/migration/ix_withdraw_migration_fee.rs",
+        "oldSha256": "d9d1fb4a034e2b1f84bac9bfe5027446ed022eb03fc2b9fc7d206abf19e692c8",
+        "candidateSha256": "27c921bf5fb974ddd0907a19f36d66db73bc0ffef31fdd823ebd027c731d8401"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/migration/dynamic_amm_v2/migrate_damm_v2_initialize_pool.rs",
+        "oldSha256": "17489f821495c8bc67991caf1a50c7d77bc472ff139d17b0edabb116b5d67681",
+        "candidateSha256": "93fcf24597791a7ab48b7b9aed8d5a8279272ad51ec9f4e02ff0f0e7d91ffb1f"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/operator/ix_claim_protocol_pool_creation_fee.rs",
+        "oldSha256": "75cf54e3c355ce5b982043dcbb8e99448f850fd931e94e5f9f442227073fdefc",
+        "candidateSha256": "129702b1a799076504383d7836204bcfa20b0f9e9bdf46253bbba43060adf81a"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/operator/ix_create_token_badge.rs",
+        "oldSha256": "2ea3c12921c9e25a1f07b3b0fce2aebd03d63796bd33786d31cb3f5ac35a2739",
+        "candidateSha256": "e1190742c0d691e9a9acb16599fcd4eb44b652aa90f87a4d19a1705bc39ade56"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/operator/ix_claim_protocol_fee2.rs",
+        "oldSha256": "0f73ef4ae9afa421f3a235a376556c82e7e90a006cb1df82427c8f4c8ccbcd75",
+        "candidateSha256": "5165bc7e0bb2e853abc32984f4be6e5c1379ce3bc577988109b5907de10d280a"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/tests/test_migration_fee.rs",
+        "oldSha256": "08ef835931c6146ac882a5e9c00f1b3466d3a2fb38c569b13e1e48984ac71980",
+        "candidateSha256": "a48b01e8e05c0bdcc009e92477748e34c91eb4f44c57230ad98d342155244e77"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/utils/token.rs",
+        "oldSha256": "ee2742f2cdb625f21d441708412909e0daff4d5d58d967ab8169dbec39304af0",
+        "candidateSha256": "8613e7ccc7258511d65c05c561d5e5b39ab14b7a0885031615419193168629e5"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/utils/mod.rs",
+        "oldSha256": "d5b5f49ed79a900ea64d9de13024254829f8b53548eac5de4ac83a596d3c5723",
+        "candidateSha256": "df8b70a838da50f1139221c8758c9ee99704232e47fd64a63f2544f4c58a84ec"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/state/config.rs",
+        "oldSha256": "5c4a1c88cc9af62f589ca2d85600dcc8671f7792785e4cf0e49a9c33fb9f2b70",
+        "candidateSha256": "925627bcdbee7a12f31c65414a8d112b052f2ac1bbcc795fb7dec35824a063a2"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/math/safe_math.rs",
+        "oldSha256": "c81acac9884123a5359650958f283b43be425673f4b31582831073f422033c41",
+        "candidateSha256": "3706b3773ba0ff0d59280d0962c138ea88472d95fe0e4e4e2fd92502e566b000"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/migration_handler/compounding_liquidity.rs",
+        "oldSha256": "c2adb6b723bb92c5be908bab54cb22ed985583429c963e205770f7568da5da43",
+        "candidateSha256": "b1cb823855a85cab7afeba983dd5f40a765939e2b7ee950d283aba1c2fe2de96"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/migration_handler/concentrated_liquidity.rs",
+        "oldSha256": "235d21ea28495da2ec865b1d72919657289cc6bd8469cbf30ab36f1945fccb0c",
+        "candidateSha256": "de02dccfaf6c5d693b473af1686d8a7e9a62839b08553967d12d8d0512d4b566"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/migration_handler/mod.rs",
+        "oldSha256": "8521487917cc65674b5cc466c2986fda18f81f8fce018f2f67b139391ec36a65",
+        "candidateSha256": "a3af27af0c777c642aed86da6330f3065a9e0850f477409a7b4a37b15c615fc2"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/instructions/partner/create_config/ix_create_config2.rs",
+        "oldSha256": null,
+        "candidateSha256": "09c935ec92661626a5f230099096cd8c2c2f58d47ea42fb33924dc622ec7e7c9"
+      },
+      {
+        "path": "programs/dynamic-bonding-curve/src/utils/accounts.rs",
+        "oldSha256": null,
+        "candidateSha256": "2d5836398ca1829866cc2f95b9efe653dd2de0068662ac70a07a7916a911fd5d"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "dbc": {
+      "is_verified": false,
+      "message": "On chain program not verified",
+      "on_chain_hash": "b3f7b765e1b9a2e87e45c4663165974819d248f00c1beefe678af60e9dfe6c44",
+      "executable_hash": "",
+      "repo_url": "",
+      "commit": "",
+      "last_verified_at": null,
+      "is_frozen": false,
+      "is_closed": false
+    },
+    "damm": {
+      "is_verified": false,
+      "message": "On chain program not verified",
+      "on_chain_hash": "",
+      "executable_hash": "",
+      "repo_url": "",
+      "commit": "",
+      "last_verified_at": null,
+      "is_frozen": false,
+      "is_closed": false
+    }
+  },
+  "hashLookup": {
+    "mainnet-dbc": {
+      "executable_hash": "b3f7b765e1b9a2e87e45c4663165974819d248f00c1beefe678af60e9dfe6c44",
+      "builds": [
+        {
+          "build_id": "5fc35226-7dba-4517-9bf8-5f5b8dc0cc7d",
+          "program_id": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "signer": "Fe7wp9wpkLShLhjtKPV8kwxecZhd2G1aMGAbKcDxsuuC",
+          "repository": "https://github.com/MeteoraAg/dynamic-bonding-curve.git",
+          "commit": "f552f20aa3c1c7631427c3827aeea7c58b902813",
+          "completed_at": "2026-09-16T05:58:26.604372",
+          "matches_deployed": true,
+          "trusted": false
+        }
+      ]
+    },
+    "mainnet-damm-v2": {
+      "executable_hash": "7c479dd7de729ada87d141e9d422a572d42df79f4cc8947a751b5f15719d94e0",
+      "builds": []
+    },
+    "devnet-dbc": {
+      "executable_hash": "9f652df38b27f83565eb2d5271a6a4e8c9ccbc6a721ed1fadf299154b1753b0d",
+      "builds": []
+    },
+    "devnet-damm-v2": {
+      "executable_hash": "f838b2ae3ed237211319493045b0a172c0946fd72ba8152895b98bb4d8a29a9c",
+      "builds": []
+    }
+  },
+  "devnetAuthorityVerificationPda": {
+    "status": "not-found",
+    "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+    "uploader": "DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX",
+    "command": "solana-verify get-program-pda --url https://api.devnet.solana.com --program-id dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN --signer DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX"
+  },
+  "publicArtifacts": {
+    "dbcDeployments": [],
+    "dbcActionsArtifactsCount": 0,
+    "dbcPr211Head": "82054dfdffafeb62eac1a158462d0f633bb410e1",
+    "dbcPr211HeadTime": "2026-10-07T06:25:00Z",
+    "sourceIsDeploymentProof": false
+  },
+  "transactionsSent": 0,
+  "devnetMajorProfile": {
+    "name": "devnet-major-sol-fixture-v1",
+    "approved": true,
+    "funded": true,
+    "tests": 5
+  },
+  "validation": {
+    "configBuild": "PASS",
+    "configTypecheck": "PASS",
+    "majorProfileTests": 5,
+    "launchChecksTests": 93,
+    "cliTypecheck": "PASS",
+    "mainnetReportRejectsVersion1": "PASS",
+    "eslint": "PASS",
+    "vocabulary": "PASS",
+    "cliTests": 361
+  },
+  "architectDecision": {
+    "date": "2026-10-10",
+    "scope": "devnet only",
+    "provenanceRequirement": "waived for rehearsal; candidate source remains unproven",
+    "profile": "devnet-dbc-v1-zero-transfer-fee-v1",
+    "empiricalValidation": "PASS curve fees and claims on devnet; migration and pool claims on local validator with observed devnet binaries; immutable metadata on both"
+  },
+  "transactionsSentNote": "transactionsSent describes the earlier read-only audit; subsequent devnet transactions are recorded in provisioning.json"
+}

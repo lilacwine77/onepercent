@@ -1,0 +1,471 @@
+{
+  "cluster": "devnet",
+  "slot": 509663411,
+  "deploymentSlot": 509603961,
+  "programData": "9vcrRW2eRKUuJ5Mjywmp1TMTm5HFWBLJUih9tvVUkiLB",
+  "deployedElfBytes": 960208,
+  "deployedElfSha256": "1f58027ccd8836d4d72141c395dae46a8de5e73cc31389b3cb0a351f7434d937",
+  "preservedElfSha256": "1f58027ccd8836d4d72141c395dae46a8de5e73cc31389b3cb0a351f7434d937",
+  "preservedMatchesProgramData": true,
+  "buildBytes": 960208,
+  "buildSha256": "7fded56921a2be659e17fcbe41728db8e001db2c58f171106031dd8eb4cd6488",
+  "buildMatchesProgramData": false,
+  "sourceClusterIdPresent": true,
+  "normalization": {
+    "kind": "four 512-byte function relocations and relative call fixups only",
+    "textOffsetsOldToNew": {
+      "0x9a340": "0x9a940",
+      "0x9a540": "0x9a340",
+      "0x9a740": "0x9a540",
+      "0x9a940": "0x9a740"
+    },
+    "relativeCallsAdjusted": 18,
+    "reconstructedElfEqualsBuild": true,
+    "differentFileBytes": 176,
+    "rodataIdentical": true,
+    "sourceChanges": "Cargo cluster cfg selection; no deployed bytes replaced"
+  },
+  "buildCommand": "CARGO_BUILD_JOBS=3 ONEPERCENT_CLUSTER=devnet pnpm anchor:build",
+  "cargoFeatures": [
+    "devnet"
+  ],
+  "deployedProgram": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+  "sdkCanonicalAddress": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "redeployed": false,
+  "verifiedAgainAtSlot": 509673841,
+  "allocatedElfCapacityBytes": 1966080,
+  "upgradeAuthority": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+  "localnetElfSha256": "d5204f9d8df27db85bfcdb9e062e1dfdf6f27d8e9138113a959717d182821e71",
+  "crossClusterElfIdentityCheck": "PASS",
+  "toolchain": {
+    "pnpm": "10.34.5",
+    "node": "22.22.3",
+    "rustHost": "1.95.0",
+    "solanaTestValidator": "4.3.0",
+    "postgres": "17.11",
+    "redis": "8.10.2",
+    "cargoBuildJobs": 3,
+    "vitestMaxWorkers": 2
+  },
+  "validation": {
+    "typescriptTestsPassed": 3655,
+    "typescriptTestsSkipped": 2,
+    "skipReason": "Two Postgres-only assertions are inapplicable to the in-memory backend variant. Postgres integrations ran.",
+    "rustTestsPassed": 351,
+    "rustTestsIgnored": 0,
+    "propertyCases": 1000,
+    "servicesIntegration": true,
+    "databaseMigrationApplied": true,
+    "validatorScenarios": [
+      "feed",
+      "rip",
+      "refund",
+      "settle-closed",
+      "sellback",
+      "exec",
+      "power-on",
+      "launch",
+      "meteora-season",
+      "season",
+      "season-closed"
+    ],
+    "status": "PASS",
+    "initialFailures": [
+      {
+        "name": "service-kit alerts",
+        "reason": "Fresh isolated Postgres was not migrated yet",
+        "resolution": "Applied migrations and reran the full pnpm test suite successfully"
+      },
+      {
+        "name": "service-kit keeper immediate election",
+        "reason": "Intermittent timing failure during the full test run",
+        "resolution": "Passed in isolation, then in a complete pnpm test rerun; no service logic or timeouts changed"
+      },
+      {
+        "name": "validator sellback version probe",
+        "reason": "Process exit could precede stdout pipe draining, returning an empty version string",
+        "resolution": "Wait for close instead of exit in the validator launcher; sellback rerun PASS"
+      }
+    ],
+    "refreshedMeteoraFixtureTestsPassed": 35
+  },
+  "checks": [
+    {
+      "name": "build-devnet-final",
+      "command": [
+        "pnpm",
+        "anchor:build"
+      ],
+      "exitCode": 0,
+      "seconds": 29.69,
+      "pass": true
+    },
+    {
+      "name": "sdk-canonical-devnet",
+      "command": [
+        "pnpm",
+        "sdk:idl"
+      ],
+      "exitCode": 0,
+      "seconds": 0.98,
+      "pass": true
+    },
+    {
+      "name": "program-build",
+      "command": [
+        "pnpm",
+        "program:build"
+      ],
+      "exitCode": 0,
+      "seconds": 29.26,
+      "pass": true
+    },
+    {
+      "name": "rustfmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 1.73,
+      "pass": true
+    },
+    {
+      "name": "program-clippy",
+      "command": [
+        "pnpm",
+        "program:clippy"
+      ],
+      "exitCode": 0,
+      "seconds": 58.11,
+      "pass": true
+    },
+    {
+      "name": "program-test",
+      "command": [
+        "pnpm",
+        "program:test"
+      ],
+      "exitCode": 0,
+      "seconds": 611.49,
+      "pass": true
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "seconds": 115.2,
+      "pass": true
+    },
+    {
+      "name": "test",
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "exitCode": 1,
+      "seconds": 224.02,
+      "pass": false,
+      "supersededBy": "test-after-integration-recheck"
+    },
+    {
+      "name": "lint",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exitCode": 0,
+      "seconds": 41.87,
+      "pass": true
+    },
+    {
+      "name": "format",
+      "command": [
+        "pnpm",
+        "format:check"
+      ],
+      "exitCode": 0,
+      "seconds": 82.4,
+      "pass": true
+    },
+    {
+      "name": "test-after-migrations",
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "exitCode": 1,
+      "seconds": 72.79,
+      "pass": false,
+      "supersededBy": "test-after-integration-recheck"
+    },
+    {
+      "name": "test-after-integration-recheck",
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 537.84,
+      "pass": true
+    },
+    {
+      "name": "release-localnet",
+      "command": [
+        "pnpm",
+        "program:release:check",
+        "--cluster",
+        "localnet"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 15.96
+    },
+    {
+      "name": "release-devnet",
+      "command": [
+        "pnpm",
+        "program:release:check",
+        "--cluster",
+        "devnet"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 31.01
+    },
+    {
+      "name": "release-mainnet",
+      "command": [
+        "pnpm",
+        "program:release:check",
+        "--cluster",
+        "mainnet"
+      ],
+      "exitCode": 1,
+      "pass": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "reject-devnet-mainnet",
+      "command": [
+        "cargo",
+        "check",
+        "--manifest-path",
+        "programs/onepercent/Cargo.toml",
+        "--lib",
+        "--profile",
+        "test",
+        "--features",
+        "devnet,mainnet"
+      ],
+      "exitCode": 101,
+      "pass": true,
+      "seconds": 13.65
+    },
+    {
+      "name": "reject-mainnet",
+      "command": [
+        "cargo",
+        "check",
+        "--manifest-path",
+        "programs/onepercent/Cargo.toml",
+        "--lib",
+        "--profile",
+        "test",
+        "--features",
+        "mainnet"
+      ],
+      "exitCode": 101,
+      "pass": true,
+      "seconds": 20.13
+    },
+    {
+      "name": "validator-feed",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "feed"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 45.48
+    },
+    {
+      "name": "validator-rip",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "rip"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 15.22
+    },
+    {
+      "name": "validator-refund",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "refund"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 11.92
+    },
+    {
+      "name": "validator-settle-closed",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "settle-closed"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 11.84
+    },
+    {
+      "name": "validator-sellback",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "sellback"
+      ],
+      "exitCode": 1,
+      "pass": false,
+      "seconds": 4.35,
+      "supersededBy": "validator-sellback-recheck"
+    },
+    {
+      "name": "validator-exec",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "exec"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 100.25
+    },
+    {
+      "name": "validator-power-on",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "power-on"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 12.02
+    },
+    {
+      "name": "validator-launch",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "launch"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 101.62
+    },
+    {
+      "name": "validator-season",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "season"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "seconds": 50.6
+    },
+    {
+      "name": "validator-sellback-recheck",
+      "command": [
+        "pnpm",
+        "e2e:validator",
+        "sellback"
+      ],
+      "exitCode": 0,
+      "seconds": 17.53,
+      "pass": true
+    },
+    {
+      "name": "validator-harness-lint",
+      "command": [
+        "pnpm",
+        "exec",
+        "eslint",
+        "scripts/e2e-validator.ts"
+      ],
+      "exitCode": 0,
+      "seconds": 1.41,
+      "pass": true
+    },
+    {
+      "name": "validator-harness-format",
+      "command": [
+        "pnpm",
+        "exec",
+        "prettier",
+        "--check",
+        "scripts/e2e-validator.ts"
+      ],
+      "exitCode": 0,
+      "seconds": 0.68,
+      "pass": true
+    },
+    {
+      "name": "root-typecheck-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "seconds": 4.17,
+      "pass": true
+    },
+    {
+      "name": "meteora-fixtures-recheck",
+      "command": [
+        "pnpm",
+        "--filter",
+        "@onepercent/sdk",
+        "test",
+        "src/meteora/meteora.test.ts"
+      ],
+      "exitCode": 0,
+      "pass": true,
+      "testsPassed": 35
+    },
+    {
+      "name": "format-final",
+      "command": [
+        "pnpm",
+        "format:check"
+      ],
+      "exitCode": 0,
+      "pass": true
+    }
+  ],
+  "logsDirectory": "app/target/cluster-audit/",
+  "regeneratedPublicMeteoraFixtures": [
+    "fixtures/meteora/validator-launch.json",
+    "fixtures/meteora/accounts/local-damm-after-buy.bin",
+    "fixtures/meteora/accounts/local-damm-after-buy.meta.json",
+    "fixtures/meteora/accounts/local-damm-pool.bin",
+    "fixtures/meteora/accounts/local-damm-pool.meta.json",
+    "fixtures/meteora/accounts/local-damm-position-nft.bin",
+    "fixtures/meteora/accounts/local-damm-position-nft.meta.json",
+    "fixtures/meteora/accounts/local-damm-position.bin",
+    "fixtures/meteora/accounts/local-damm-position.meta.json"
+  ]
+}

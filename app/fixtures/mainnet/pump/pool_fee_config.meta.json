@@ -1,0 +1,11 @@
+{
+  "name": "pool_fee_config",
+  "address": "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+  "owner": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+  "lamports": 33103977,
+  "executable": false,
+  "slot": 454747038,
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "bytes": 4097,
+  "sha256": "d8706882a217e82af619b754e37beedf9338a25787ebec717e7d69d2cf347c9d"
+}

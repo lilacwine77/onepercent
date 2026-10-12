@@ -1,0 +1,8 @@
+{
+  "cluster": "localnet",
+  "observedSlot": 173,
+  "address": "3NZz6DPfsZLARm8D5nBHoEctd3wj9fuJim7vGUeqQwm1",
+  "owner": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+  "sha256": "564df44838a3180bae32009861c776b201140794866b3a54c9b8f9849c6c766b",
+  "signature": "51xneugUtg6dtUwVYvS9PLWALYeTJXnJX3ahCDSxahpwgT9HwpB87ks28oiRamqopYpfYB7zCbw3pvQve9TZ7ZuK"
+}

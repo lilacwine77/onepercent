@@ -1,0 +1,345 @@
+.xray {
+  --xray-paper: #fff9ee;
+  --xray-paper-edge: #f1dfd5;
+  --xray-mauve: #773e83;
+  --xray-gold-hi: #f6d272;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 64px);
+  font-size: 16px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.xray h1 {
+  margin: 40px 0 28px;
+  font-size: clamp(64px, 10vw, 112px);
+}
+/* A result's title: its wallet, under the field for the next one. */
+.xray h1.xray-who {
+  margin: 34px 0 14px;
+  font-size: clamp(44px, 6.4vw, 76px);
+}
+/* The next step sits under the outlook: the result's one main action. */
+.xray-next {
+  display: inline-flex;
+  margin-top: 6px;
+}
+.xray h2,
+.xray h3 {
+  font-family: "Fraunces", "Fraunces Fallback", serif;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+.xray h2 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 54px);
+}
+.xray h3 {
+  margin: 0 0 14px;
+  font-size: 30px;
+}
+.xray-brand {
+  color: var(--ink);
+  font:
+    700 28px "Fraunces",
+    "Fraunces Fallback",
+    serif;
+  text-decoration: none;
+}
+.xray button,
+.xray input {
+  font: inherit;
+}
+.xray button {
+  cursor: pointer;
+}
+.xray-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--cream);
+}
+.xray-field:focus-within {
+  border-width: 2px;
+  padding: 5.5px;
+  background: var(--xray-paper);
+}
+.xray-field input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  outline: none;
+  box-shadow: none;
+  color: var(--ink);
+  background: transparent;
+}
+.xray-field input::placeholder {
+  color: var(--xray-mauve);
+  opacity: 1;
+}
+.xray-field input:focus,
+.xray-field input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.xray button {
+  min-height: 44px;
+  padding: 11px 22px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--cream);
+  background: var(--ink);
+}
+.xray button:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--xray-mauve);
+  background: var(--plum);
+}
+.xray-brand:focus-visible {
+  outline: none;
+  border-radius: 8px;
+  background: var(--lilac);
+}
+.xray-result {
+  margin-top: 26px;
+}
+/* The few numbers that matter: one tile each, its number large. */
+.xray-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+.xray-stats li {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  padding: 14px 18px 15px;
+  border-radius: 14px 14px 30px 14px;
+  background: var(--xray-paper);
+  box-shadow: inset 0 0 0 1.5px #26062e26;
+}
+.xray-stats b {
+  font:
+    700 clamp(26px, 3vw, 34px) / 1.05 "Fraunces",
+    "Fraunces Fallback",
+    serif;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+.xray-stats span {
+  font-weight: 500;
+}
+.xray-stats .xray-stat-note {
+  color: var(--xray-mauve);
+  font-size: 14px;
+}
+.xray-share-card {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px 18px 48px 18px;
+}
+.xray-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 36px;
+}
+.xray-actions button + button {
+  color: var(--ink);
+  background: var(--xray-paper);
+}
+.xray-actions button + button:focus-visible {
+  background: var(--lilac);
+}
+/* The details (which bags), then the share card: below the decision. */
+.xray-sections {
+  display: grid;
+  gap: 14px;
+  margin-top: 40px;
+}
+.xray-sections + .xray-share-frame {
+  margin-top: 40px;
+}
+/* A list of coins as one compact block: the title and its count, the reason
+   said once, then the coins as chips. */
+.xray-group {
+  min-width: 0;
+  padding: 18px 20px 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: 18px 18px 40px 18px;
+  background: var(--xray-paper);
+}
+.xray-group h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+}
+.xray-count {
+  font:
+    500 15px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  letter-spacing: 0;
+  color: var(--xray-mauve);
+}
+.xray-note {
+  margin: 6px 0 0;
+  color: var(--xray-mauve);
+  font-size: 14px;
+}
+.xray-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.xray-chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: inset 0 0 0 1px #26062e1f;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.xray-chips b {
+  font-weight: 600;
+}
+.xray-chips span {
+  color: var(--xray-mauve);
+  font-variant-numeric: tabular-nums;
+}
+.xray-chips .xray-gold-chip {
+  padding: 2px 8px;
+  color: var(--ink);
+}
+/* The coin: its monogram, then its logo (from the logo proxy) once decoded. */
+.xray-coin {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: var(--ink);
+  background: radial-gradient(
+    circle at 35% 30%,
+    #fff3c4,
+    var(--xray-gold-hi) 55%,
+    #d9a441
+  );
+  font:
+    700 13px/1 "Fraunces",
+    "Fraunces Fallback",
+    serif;
+}
+.xray-coin img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.xray-coin img.is-ready {
+  opacity: 1;
+}
+/* Not eligible: closed behind its count ("21 not eligible · why?"). */
+.xray-group.xray-out {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-style: dashed;
+  background: transparent;
+}
+.xray-out summary {
+  padding: 14px 0;
+  color: var(--xray-mauve);
+  font-weight: 500;
+  cursor: pointer;
+  list-style-position: inside;
+}
+.xray-group.xray-out[open] {
+  padding-bottom: 18px;
+}
+.xray-out[open] summary {
+  color: var(--ink);
+}
+/* The feeding outlook (app/FeedOutlook.tsx) ends the result, one section gap below. */
+.xray-gold-chip {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--xray-gold-hi);
+}
+.xray-error {
+  padding: 16px 20px;
+  border-radius: 18px;
+  color: var(--ink);
+  background: var(--lilac);
+}
+.xray-announcement {
+  min-height: 24px;
+}
+.xray-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .xray {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+  .xray-field input {
+    padding-left: 10px;
+  }
+  .xray-field button {
+    padding-right: 14px;
+    padding-left: 14px;
+    white-space: nowrap;
+  }
+  .xray-sections,
+  .xray-sections + .xray-share-frame {
+    margin-top: 30px;
+  }
+  .xray-group {
+    padding: 16px 16px 18px;
+  }
+  .xray-stats {
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    gap: 8px;
+  }
+  .xray-stats li {
+    padding: 12px 14px 13px;
+  }
+}

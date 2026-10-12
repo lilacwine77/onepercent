@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-lib/
+test-results/
+__pycache__/
+.DS_Store
+artifacts/
+.env
+.env.*
+!.env.example
+app/reports/

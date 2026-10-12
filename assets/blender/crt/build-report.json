@@ -1,0 +1,39 @@
+{
+  "blender": "5.2.2 LTS",
+  "triangle_count": 45944,
+  "mesh_objects": 32,
+  "bounds_blender": {
+    "min": [
+      -2.0999999046325684,
+      -1.5199999809265137,
+      -1.7545000314712524
+    ],
+    "max": [
+      2.0999999046325684,
+      1.370500087738037,
+      1.75
+    ]
+  },
+  "screen_bounds": {
+    "width": 3.34,
+    "height": 2.5,
+    "center": [
+      0,
+      -1.145,
+      0.14
+    ],
+    "center_front_depth": -1.335
+  },
+  "screen_texture": "C:\\Users\\user\\Documents\\ChatGPT\\one percent\\public\\assets\\crt-screen.png",
+  "materials": [
+    "CRT_Case",
+    "CRT_Graphite",
+    "CRT_Logo",
+    "CRT_Metal",
+    "CRT_RearCase",
+    "CRT_Recess",
+    "CRT_ScreenMaterial",
+    "CRT_Seam",
+    "CRT_StatusLED"
+  ]
+}

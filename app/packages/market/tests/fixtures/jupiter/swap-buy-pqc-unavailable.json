@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-08T18:38:25.503Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=So11111111111111111111111111111111111111112&outputMint=7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh&amount=1000000000&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "x-ratelimit-current": "2",
+      "x-ratelimit-remaining": "8",
+      "x-ratelimit-reset": "1791484715"
+    },
+    "body": {
+      "requestId": "01a11ccf-3ab2-777e-a582-ec75fae36f89",
+      "error": "Failed to get quotes"
+    }
+  },
+  "synthetic": {
+    "from": "swap-no-route.json",
+    "edit": "Listing evidence unavailable-cap boundary: same recorded no-route response for the PQC base-rung buy request."
+  }
+}

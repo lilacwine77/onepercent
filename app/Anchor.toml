@@ -1,0 +1,34 @@
+[toolchain]
+anchor_version = "0.32.2"
+solana_version = "4.3.0"
+package_manager = "pnpm"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+onepercent = "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe"
+
+[programs.devnet]
+onepercent = "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr"
+
+# BEGIN GENERATED MAINNET IDENTITY
+# PENDING: run release:mainnet:apply with public release input.
+# END GENERATED MAINNET IDENTITY
+
+[provider]
+cluster = "localnet"
+wallet = ".anchor/localnet-wallet.json"
+
+[scripts]
+test = "node --preserve-symlinks scripts/test.mjs --config vitest.program.config.ts"
+
+[test]
+startup_wait = 30000
+shutdown_wait = 2000
+upgradeable = false
+
+[test.validator]
+bind_address = "127.0.0.1"
+rpc_port = 8899

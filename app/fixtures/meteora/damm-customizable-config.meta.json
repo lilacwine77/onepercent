@@ -1,0 +1,12 @@
+{
+  "address": "A8gMrEPJkacWkcb3DGwtJwTe16HktSEfvwtuDh2MCtck",
+  "contextSlot": 454847493,
+  "dataSha256": "988089b8bacd1967ad85e4acd2bb520c847c872a74fed0614b01a89c57ae73a5",
+  "account": {
+    "executable": false,
+    "lamports": 2887848,
+    "owner": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+    "rentEpoch": 18446744073709551615,
+    "space": 328
+  }
+}

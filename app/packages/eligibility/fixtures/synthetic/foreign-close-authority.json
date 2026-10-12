@@ -1,0 +1,10 @@
+{
+  "address": "4oPaRNdUyHNPn7oba9RnY66mkCUeUMZNVLmJ2X6J5a4Z",
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "lamports": "2039280",
+  "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j8GtLuCKq3UO97zNyw2sbBKznB8aeuNBS9HDogO11Y2rdkPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgSYc3x1aH7hHP4ODwAr2DyGoVUtK2L/NA3+PVI0M7h",
+  "source": "synthetic",
+  "note": "Public pump.fun curve token account; account bytes only, no wallet scan.",
+  "derivedFrom": "mainnet/empty-spl-account.json",
+  "change": "Set foreign synthetic close authority."
+}

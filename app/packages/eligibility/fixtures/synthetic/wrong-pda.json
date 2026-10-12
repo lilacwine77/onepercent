@@ -1,0 +1,10 @@
+{
+  "address": "8M4JEgo2UdMQYLJdmwsTn4cUjsGxuj7CKXvA6898wc36",
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": "3934883",
+  "dataBase64": "F7f4N2DYrGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAxqR+jQMAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "source": "synthetic",
+  "note": "fartcoin canonical pump.fun curve.",
+  "derivedFrom": "mainnet/fartcoin-curve.json",
+  "change": "Place bytes at CATCRAFT curve PDA."
+}

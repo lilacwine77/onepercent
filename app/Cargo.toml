@@ -1,0 +1,28 @@
+[workspace]
+members = ["programs/*"]
+exclude = ["test-programs/mock-vrf"]
+resolver = "2"
+
+[workspace.metadata.cli]
+solana = "4.3.0"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
+
+# Host property campaigns execute the same release artifact; optimize their runtime.
+[profile.test]
+opt-level = 1
+debug = 0
+incremental = false
+
+# Poseidon is not invoked by M1. Its host implementation has very large constant
+# tables; O0 avoids excessive cold test builds while LiteSVM remains optimized.
+[profile.test.package.solana-poseidon]
+opt-level = 0

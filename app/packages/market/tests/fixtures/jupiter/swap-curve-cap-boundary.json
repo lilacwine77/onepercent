@@ -1,0 +1,56 @@
+{
+  "recordedAt": "2026-10-08T18:37:15.861Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=27J92C2eG7yMpNdG5MQE1swrw4z9U6BiHwKQWTYBpump&outputMint=So11111111111111111111111111111111111111112&amount=1&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "1",
+      "x-ratelimit-remaining": "9",
+      "x-ratelimit-reset": "1791484645"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "1",
+      "outAmount": "2",
+      "otherAmountThreshold": "2",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.001386626213842435",
+      "routePlan": [],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "27J92C2eG7yMpNdG5MQE1swrw4z9U6BiHwKQWTYBpump",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "synthetic-swap-curve-cap-boundary",
+      "inUsdValue": 0.20599992903688538,
+      "outUsdValue": 0.20571428413523316,
+      "swapUsdValue": 0.20571428413523316,
+      "priceImpact": -0.1386626213842435,
+      "mode": "ultra",
+      "totalTime": 99
+    }
+  },
+  "synthetic": {
+    "from": "swap-sell-wif.json",
+    "edit": "Boundary-only quote with input mint from ../rpc/curve-166-live.json, amount 1, output/minimum 2 lamports against 2 recorded real reserve lamports. Input/output metadata and routePlan adjusted. Not an observed executable quote; isolates the cap rule."
+  }
+}

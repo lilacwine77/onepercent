@@ -1,0 +1,940 @@
+{
+  "provenance": {
+    "kind": "fresh local-validator transactions",
+    "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "programSha256": "8a87be50958865b5c977e195ef0ba9e1b4d5976c74c99202384b1d3a986a9547",
+    "mockVrfSha256": "0441521d6f43879bdce7c95af5078b674532c1a35b5023e4bba3a34af8728c6e",
+    "fixtureExporterSha256": "543222d973e7b5fcca73624614879a8df09d36c130f60f92e443e65cbe28f7ce",
+    "artifactDirectory": "~/.codex/worktrees/m4.2-launch-tools/1%/app/target/deploy",
+    "provider": "test mock VRF",
+    "providerProofVerified": false,
+    "startedAt": "2026-10-09T20:02:06.624Z",
+    "artifactGitCommit": null,
+    "artifactSourceNote": "Read-only artifact reused in place. Its build commit is not certified; the SHA-256 is the artifact identity."
+  },
+  "result": "passed",
+  "recordedAt": "2026-10-09T20:06:08.153Z",
+  "transactionsSent": 385,
+  "pulls": [
+    {
+      "address": "Ch3CLKuqHZ489xXgw9ZyGuwk7o9jdrrWesJNx4PsKQwD",
+      "request": "5t3fcnFY4DFyCA8xEitLD3zJtzsUTT9ScMdTa8tYrsFNrUWFGspoQoUj5MS9CD5zHasKKgYJqKSELF6EuU4LbF51",
+      "callback": "5mTEHELHpTM88fzhpWkkKXkKBp7z4HZvykYZrJaECBv7v8s7YXhX5xtCVaoHVJXzkRoH6g3PR9q5QTi3C3VPDzhx",
+      "seq": "1",
+      "edition": 0,
+      "qty": 10,
+      "signatureToRevealMs": 805
+    },
+    {
+      "address": "GdFeXEgF23E8aWKYUUzGruaQYziSJQVU5zR8pNKsqYqw",
+      "request": "3gaWquLpLKg4uS1znyEJdhZ8yaLhLmQenxsVRNdULnx23Avqpz7niNosNa3TKPbhbSYGw5y7M8on5iqSG6JYHEiT",
+      "callback": "5abNCEey6nkTdSkroZgFAhFn8cD319xJh5nG6eXzLrk9aEfyeoM3AdGJXs71wnDCUUpJr91PZ7nYAShe9Wfd9itx",
+      "seq": "2",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1007
+    },
+    {
+      "address": "EutBUzt8JAMnjNuVzvQJonaAwjCSXxmEXVc4kAZPbnaM",
+      "request": "2GnfWhNVxWgguJakwBhzcVTrenKXtX4ncngS5jmKZ7Xui6dUQFfv9y9qowNAeYpQ4Tthsw5HfJ8hWbUcKX3eh84G",
+      "callback": "GzKqMyWc8piogfT5e7q2smcSt1a9C8gEL76aKdSg4daDjqCRt5eWNb6pDDfnaEznxF9cnFHPA8BMoiPCHxM1jJg",
+      "seq": "3",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1049
+    },
+    {
+      "address": "EJjHuf4JG8yUT4ugV8RAZr2rBWjmX2pi3JHzTHr1Qkyn",
+      "request": "61svSXmqy7a1WoBZufjz4LxFRiKesTvnMNmmzqKF9gtuFYZ2oor6LUSmZ4UGRzUQJP4tQokhSWER5FQN4hKEBhnF",
+      "callback": "2WQn7Dd6AooG3TbXcffuGj6jCYZt33VYyd5QRZxQLCGCpVydFPT72Km2K9jG7sMKCWPCARhrdcKjkL6XSa1ktrN1",
+      "seq": "4",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 980
+    },
+    {
+      "address": "G9WTBYWPywYYgQWKmVRXdpPLXzinJDzXtUWge1KRxi1m",
+      "request": "3gcZ2W1tK3xc49kYbHMab5qvuu86mc5p37r9WsWfGTsqGCJSyQ8cmzESqQ69KW9HqFrLctYKyy28Vkjd2XakfX7p",
+      "callback": "AhvDbtiJb9J35CSoYbsEwmrQUcyN3TmAEJA6VaWMv1eYXYnKmqjRpnJ19vRjDKYkshRqNGmiTbBSoHwEmZc7VVT",
+      "seq": "5",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 958
+    },
+    {
+      "address": "8JLaz6aakgYi9FEGoY7iE8zVaMw4tiTGbM8fDDTakkGH",
+      "request": "3BEBiLgGw5wedWb9K8QBqnG2dDtPLdW6HRCHG1SxP84jfDLjVchdKksgmcZnzp3zHGNBTg2VfRerbUrkVAApRMCf",
+      "callback": "2WNhFnRtCwDoDPuZpv3fzGeRZsk8PpfmB6mBPNBMu8iE7UzsgcT4utnBSzG98gfdWiPdhfJtvgtcqACpxzCZ8eR",
+      "seq": "6",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 965
+    },
+    {
+      "address": "3CdF5KMt4Ea9uRCXiMujuZFUqzXwYFAmwQWhWbFwL34J",
+      "request": "fCtaCiDR1eZH5SnJxkMPARTehv8pcbTSDrWdz6gcYx3tpShpkdeseHSwmUDor2bnL2oqSmz9Tv7PkExBBh8MUd1",
+      "callback": "28bXFSsEkZvCkRLV86m3eeqFb9GkL4ns8kpoVU4K8iedvv6zVSSMzdA5eUkfALyiYwgzMSwXnh5sMaLcwXLqHLa9",
+      "seq": "7",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1081
+    },
+    {
+      "address": "2vonwp4FVzfmTo49URZxRFNn3cmmWSZPR7tGFVKZgMVx",
+      "request": "5YWWEi4LGkmYATmbSpY6B2Tjkth1s8TvuyFdvh7YprPBLPq1Y54c1DRSKFt7iViz32jc3x78PEJsPJtcM9bA6BPC",
+      "callback": "3MeBA3xcDmXHS9LYJYtn9DF5BNWgZ58EXDGwRBeikFM4wzCT1Z7M1MMFG6z8jgJ56Dhy2q8RHuV8jvA8X4jaNqbx",
+      "seq": "8",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 973
+    },
+    {
+      "address": "4Kp9Ny22yWndWuAzeGvHhASvyuhjHWbTAhV2Ccziikhz",
+      "request": "3dX6FT8GS87V4VWhtR5nMSczMrzQ1ktER2QXpz331tr3kAPRAkS3nDSVD47J43G25c1Dy4LtcBVEgZP61dQ8PneH",
+      "callback": "UmjEkDZ9kq5syFVFk5EkHmSKSMxZo5ax89NM4F6R67ncT8YPefy7EUZ6Sbrwn8pA9rKHzfs6j3D5qK87ou9APcK",
+      "seq": "9",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 982
+    },
+    {
+      "address": "4UE1YBfm42UVJ4gBcLCisUwMmBQvgSTBsawxfMX4ZL48",
+      "request": "3CtUNz8bb4AmjZrP9UJ89MoVNeDUwvQJKC32xEg2LAYkgiMMVoUiHS9G9e7CE3yWFs4P5Uienw7u7F7bqDsrsy9z",
+      "callback": "5gSkbkY9uxuJ9BfBMDpQWjupsGD8rCkLnrtXJJftPX9UhcmPviQ1gbMiN9obPZJYb8chVdNJQ51nQsVRLYt3D28h",
+      "seq": "10",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1105
+    },
+    {
+      "address": "3kSkFM1hZ66veMn4Lrs6CPzWprU8AahhFHoDvZk9tEBE",
+      "request": "5hJa5uRUcfD2oFkezHSS1DaNQdiZpXEEoxGCgtaRjZEPgAt7mAiwprypXeAZxVGSKLvufanogTWhxd7iS45dAk3Z",
+      "callback": "3toXYzxiEz1pYQ2EVTSfips8jQk8KDFqUhiovJRtyjkk8GUG45JvY5id2YF9SMKYnNFMxnJBz4H5wd5r6HmSXcg3",
+      "seq": "11",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1251
+    },
+    {
+      "address": "C4eBZvZS1B1a5UNakYieQNUDEKfutSC3PdknLd94aY43",
+      "request": "4eX4b3KbRAxr4WFuKif6duFZtvjsUqLhLGGS2KTvQ1Lx6tjDuFv9GA7moMo4TiikQYmykVJo1sfSncm2i8Kv13bx",
+      "callback": "5BPf11mWqNokLoHK3wYvApKsGV77Z6YVVT97GMMHnyWA1Q2iEWLXnkD22qA1vCGhwxAdFQqAkNNtVAW714VTyuAK",
+      "seq": "12",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1250
+    },
+    {
+      "address": "HmcBJYkMSzyd9ri89gKt8rWqEvp9geezGnb1FWWYHTJa",
+      "request": "5uGy4xaLq54qMto6dp7QWQARe8PfhD6boAw7TtjPbYvmq5p1jMDd3UP6edr1cqamQ1zasMFUPPXptTRtUMQRGqt9",
+      "callback": "UvUfKALLMznT6vCvxPHYKFLP13bkaPNCrFz8uSqdJ9kvGwW83wjQmh6GviToj4kGdfb6xBVKGF2htnccMvsNH8q",
+      "seq": "13",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1124
+    },
+    {
+      "address": "FfiCGB88waofuAkSHDwEhwn9d25AkmL7bGuy2fbcCxbY",
+      "request": "4PQUEGjK7wVQbLnFV5tx4ENyWz8kVLWaeut3sJWzZGMvFu6xUBX6p4AkKvyyG74grGUzSvfntPCr96S4ys1uH6Th",
+      "callback": "gRqA8baXPT8A6pnEQQ81X1Xot1UaCfeTqer2GGYfiNhvRpPyMiLyhuiukiw9LWQPi1xyYkeuLghd5SdD74bawtt",
+      "seq": "14",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1289
+    },
+    {
+      "address": "4cLfBpG9fS2uZhKZDkAxoxb9qV9J2hzyi8SMnqwFqbPq",
+      "request": "4HJxGyfq9LLpsMmganJhJMX6otR7KLkMgPA9qKGLViJ9QrUTBrjd8ooymsZndeUsLwrKwQQiPKgDTb7NbCmKEghR",
+      "callback": "4EY2jH7DicmVdg1DpE36Hp6AVjm9exw4XNwfEgxqYqvdgUq3g17KFhXjKCLQwMBZGnC3sBan8pdpMxfiytqqVUK1",
+      "seq": "15",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1284
+    },
+    {
+      "address": "2nRdmbJgggGPbZasWmYiPsjN7xDwEpKi7aEeYnGqUQij",
+      "request": "2dH5MNgYM9J5ginfVTXuJfeh4r1SaoKk4Kfjz3iucQnhujHyxQJncqSTUmskEhxWgzEiHs6U9jh4HH7eGZ2p3mwv",
+      "callback": "3q1GJnkUnHtTehDbgmp4Ah2VvN3C4L4R1GzE6joSzNxjzWLcTQE8iVyK3uAhzKTtfyiGWuH3eDEnB8bogzckKDdJ",
+      "seq": "16",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1399
+    },
+    {
+      "address": "5JUNLWz1L3U64c4Vow5qRqHMbYFQoWv5bnjcxGNrywLM",
+      "request": "S3EdhXNMKQAKBF87nwpRn5XTqmyWMwJCTyxgq44Xw3sYVwSfB4yceE6Xz1MFHGbk6GfzCA6FWS3ADW2UPZT1YPQ",
+      "callback": "4zzJSQSShNot5w9Zs1482SxQ2EHXv8UsmUBoYWB89dStEiofUKnCnECxjjPmnzLtoti4yPbjaBhB4TyH8668DjTH",
+      "seq": "17",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1121
+    },
+    {
+      "address": "FcVPxAPua55qexAw8MfG2n4jtj58R9BdwKihGJBi66nC",
+      "request": "3CpF7Qb89eJ6aHQo86YbU2o97ZXpvfUCoVaHLWWu5pX5sE9vqVzHRmqyKiwqZL8kRKEpQgN9L6gHqaWX8BGo9yH5",
+      "callback": "5TPfkjFddBCLPndmnsdqDGjeNkqnBqyCW1N4ndssFWbydPy6u9j8Q99w25n5GdV4CivF9wBPt9GMZUfMrDFYysgv",
+      "seq": "18",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1093
+    },
+    {
+      "address": "EaBaqtJ7ARzALAXkgXtSB1t1rUXGLzfBhFdNJkpw2emF",
+      "request": "4mUHXbYRA4bcKijk58WsiikPfqLWQ1vVd2S1Q1YFymcesGYf2o1VhyNAT4UWgSv59RcPwdpTQxZmC2JZMr1LyThY",
+      "callback": "2S3c3U84DfcKKhKrsNCDMv8rcoXs8dWRpRjKHFLPBwyBNXsR3wt1uY3iJCYkdiqgMAz4WWbGBfjj2bkiKHAvTyEv",
+      "seq": "19",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 999
+    },
+    {
+      "address": "FME4Ed8oHA8646DG8aqz2LFqLfEiU9ebWuoaE3XmWty3",
+      "request": "rz9VGks4UBV13Pi9bNc4xg17r7SemR57nKoKHPPrDKy4h7af9mTJg9m9BUJbztWVkQwNr9HFRcaGcMqunQbPDKD",
+      "callback": "54xWSUawNWdntPb7N4opktc4i9jNpph5caWzForg6PRPQgQse8ApRxUWAuXTvwMDj9wZ48cgcMABasaAkVZvChNT",
+      "seq": "20",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1080
+    },
+    {
+      "address": "5XRgC7jvRbJzoNAytTUvGeQPGGvvnNHJ3yAWu5wpUdXy",
+      "request": "3hLTU66pgQ3wrGMcBjq2BCSj99G46HXg2CJZENkQzo2mFCk2LPFA8ZaQY1VRxtfTFY6LY8gwswmHVogqTBZd21Eh",
+      "callback": "63p5mBtjvTzNF7gFLQQbwcffkbK5uWc9uKPfBe6SRWQeu8V6cmtraczzYG3eKq5YCmLkWqTeYF3o4NW5hQWf5BHb",
+      "seq": "21",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 967
+    },
+    {
+      "address": "8veSnq722PvTwB2z6eqWmdbRhhb7cukmQi1vGue35hiW",
+      "request": "4TyYokq9SEFckzqKeHbHkEprj2Qqpt4tmjoZinGfAcP5NBFopUkHgLqfqfSTGXmgfk8m8b9kUpuu7UkY38ZRQKp9",
+      "callback": "3vkmyZbSWqgGuYiKbFmrTioN91UTZ6NWvaY3m8poYjvDJ3S5WXgJdeEYjKHdJYRvuTA31efJnm3gFF5gAfavVs3x",
+      "seq": "22",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 974
+    },
+    {
+      "address": "9VPv6HRwck8trNzwJ6DMd43gu7qTx3bn28T3ATZE4g6V",
+      "request": "3tPs6ktayxrFr69RMr6yodCFvQLSPLpbz5YS9uti18o2onpQwvcxFpyUvrbJBPFRfX6mD2NCnjTFjna6pXoq3cmH",
+      "callback": "2Za12MUEb7CLjN4WLoELLgX3sx8xc42pgzKS182yuPTzPLA6m4KrnoNnoG3ybT94HrkCAKzcc3msFzVdp8zt9kCf",
+      "seq": "23",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 965
+    },
+    {
+      "address": "EKCbNZhfyUD5twpSoovhBZDSSSfFkmRA7kiKpx7weyuE",
+      "request": "3wtJUcyj9hE1kEWRpckrjgo2kVsk1FETgNyPDyc9Q4w7j9cimGhaRyi8Vb8BJ8xK5cu1YBMT7FHfsvSkgQZcf46S",
+      "callback": "5jqE83pBom1zJs6g8GP1yd7UU8Fs7y7PjUEhgYipMGR5x94Ryrk7qLNE9i2V4sPmpYF9782XoB8wZXYf82dXLrmF",
+      "seq": "24",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1105
+    },
+    {
+      "address": "2wTVoGqYPiB2ZzgDYpocq4xLMWJD7Kbp3j6fBHracS4x",
+      "request": "3jM5NB8sNuzxNpRyHmzyHUZLN67SYczsGZ63iN11hhMrJZdmixbzFAQpeU1xFysANEBh9EUnSfTzPsEiAemfG2TB",
+      "callback": "5Ny5QeV7U9gzffAeQs6GEi9nLQaTy1GoHBjuq57dWS2xmpC6LNEs9YGo12RU3jgEPxAHRrbDUxwMSYqVmMXStCQ",
+      "seq": "25",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1048
+    },
+    {
+      "address": "8SHfMn7ZCbVTfcTpzcmkepUdtGgZ2UievfYtmRQjg6Qh",
+      "request": "G5NovC7KHYyvV8RAZ2styKmEUY22fxGx1pzjmBsBW16CgXR42Nk3NaRhU74t5e8899STYqiEM9cbm5kstxWXhpf",
+      "callback": "4aGS8qovLG7GNVnK2B3SsfsQ8F4LUEJxSoyFZG9SFkVpLa5wsBvN3bwSJ9KtEwv7Ee17FUCpr1egPbXWARExpY6i",
+      "seq": "26",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 991
+    },
+    {
+      "address": "Gd8SGdFTFjdUj77CJkLyQDVb5XyoNrD1pjekwZYq1VzB",
+      "request": "4pTxVqiduMqajp66ZuehCTK7RrQfgYD9jupcDrDXVCvaoDtBjGkE9BUwppg6qtwsdLVbHuvK4JAVQ7bP84XjQiEX",
+      "callback": "4GSU43ryCe737PW6QWg6vLcr3G1E7Ws26SZb4bnVoT4U87AeopBz9ShgDa2B6h1ApD57gCXRnM3mnhZJzps1QSe6",
+      "seq": "27",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 997
+    },
+    {
+      "address": "37R3PQMc4xgS2gPdKn1VvfkpoWfLsmC5nB3HDaJoWhwG",
+      "request": "2PbXCNVnxNkYBh5j2tjM9fdsZXKixgsgeviVZnmnHPxU96XuADVLYC4jZfZe98ABrawug2mnrXTngQp6rTpthY9L",
+      "callback": "5dkVoTjt4SoMecG5g4WWQD3KDeCDErTnh8W4z8scQ6zdrs9pSLaRhae7FtFiEMr5BmKFH8aPYM9WYDmo9mHHF98W",
+      "seq": "28",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 985
+    },
+    {
+      "address": "EZ73U8QULSzhtEgm5FhusXzsB5sDLYypXCvnW7Ymg1mB",
+      "request": "3rTVEFSwe1kDQ6VPz9airTs9d1fMbZZK3Wvtd1NBzeNKRh5G9RKy9w45BNQu8qYb7onXyvwLzjExpceYWLMNTbAJ",
+      "callback": "5CLwFCQT9e8fMzGMwPKo6rpocGGhYrgow7yX9edd8ZQHJWkQPfWt2KbNsse7cR1f22pcGcUMoovkmYxddbZf7k6C",
+      "seq": "29",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 989
+    },
+    {
+      "address": "6QEbYE7UshVBPHuoCEU15wCDapfAHwZq9kh6cRfU9egi",
+      "request": "3ouAi4mxr6TUASBVJNbMwUvCJRiFCA3mzdVdMAkiaz71zCq3cpzhx8KGmnm9ghuftuEvZQMgj7LEVN8aEo52ke7r",
+      "callback": "2nUJpG938Zox5tY86t6JDwju2Ua9q9bmXFFhA8CyxkTqHPhXWaVneNZy387pvST1P6vdPjLnCazYFddBLE71FzB9",
+      "seq": "30",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 991
+    },
+    {
+      "address": "9qcuKVDNvzqbpzstxEKqfFMn7XJygVtc9wARzB4wsW1d",
+      "request": "Lpr6cHyEEjfKFrBsP45kpsVmwoNrQjmyHHVDpdmMvXynjeizxdPkkxgCjryaUzbcj5MKgdqEK3m6bo78MFsuqSV",
+      "callback": "4yJFGfJzyJ4NHyL6aYRZ9TTXUgSpjhA4AoHoLsGcSbn3YJng83JDJR9W5HoCrS75pyjMRu66urr6gSMXzPWqksd7",
+      "seq": "31",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1042
+    },
+    {
+      "address": "CM92QfsvKjwcxCcrhGgVPwFyzVe9NjPRUyfs5XBB9n2q",
+      "request": "Bfd8wKaEujWYGCWMyuVcgbqR78kRmnmXFFgp9xcteTV5LYx1urCZXaU6NU6Gjrgjdo3rPPFxpBC34MkiabEVckp",
+      "callback": "3nwN3m9NfAaZfB9fimWWMwS2m8MLokpN2VVEuMmymL4FrNEnADRUZ2vyj6pdBkywXg7EGZhcsSB98XER2qT6weQb",
+      "seq": "32",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1254
+    },
+    {
+      "address": "7ntS1qiZ1KP1B98ayF2mt1BKbcfE3qT1sbM1JHtQvE57",
+      "request": "5ucgFeA1efvHC5Mzn8jPER1pmD5cWSLhDpLocQf9Cbm7eoZXSP5ebqRi8mhugvFJSAXEC24DsCiQNJrchcZx5fkh",
+      "callback": "2GKgJa1cJrixoiUhVcqiEFXsCbBKcAvv6KjLz3wmn6AkG8jK3JbamF1d5R11DbvWp23SXBF5fxJUvE2kPyB4FxpB",
+      "seq": "33",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1072
+    },
+    {
+      "address": "DupZFyyiCFkzjpEXEAsBHKAcL6zJxTbupb8T5pKGfgx",
+      "request": "2cWLK4ighhF281KmeUCxreWsJ6hfhdbmt75WMGQeMxg9pjerUUx6hR9d6UrjT7HXShBMH3iBwu5HBwk6Y6hwK4Rv",
+      "callback": "VXfHDoAkmtF1uhFwSC6FMZn63az84Fb4kN5AAd3rBJUaeCYt35g8mZJ1rqFtT385iauXYtx9jJZpJZE1pQs8cu3",
+      "seq": "34",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1056
+    },
+    {
+      "address": "7aB1VZsMn7jRYqyb2ZyKKxPGgMKej4FHXkFwZpjbfdM7",
+      "request": "5GBXg6ck5xAvrTNiYLJGbXTNsgCoR1F9wC6oymQ7R2xGbLfww14HnmtvBJ9DsjFUGcinea7sdHHLqb85xEXqWsgf",
+      "callback": "2sgFiXTP4EAegZYc22gVqVHQZ6cC5y1RgjLWcL3WftDkrbcSDW12oYW1No5hhCpc87dW6PqXvcgDMsBi37p2vWWm",
+      "seq": "35",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1188
+    },
+    {
+      "address": "CqDYcWpCwQQNqeRT65JqBngG3vq6q4HdAZUVkiXZkshE",
+      "request": "HGdmnNjXgAfACVZeajwteqy8N2famrUE21m9qKGFq2xiLJ9m1sSEhkcYLQNWpFipTytcCypaA3xv8iduenKAdqu",
+      "callback": "tDui3xFwwvAiwqzq4QmoyRoZvbESKYS7Fto7NibVLYnpAGmWDfgoPMwoYie7AsVNUYQcHuWHmXLoYBx1tuoxuqY",
+      "seq": "36",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1143
+    },
+    {
+      "address": "8pwL4v3coE77AeMwq4tbv5uAoS5Di9nPFz1S6qAzaXMh",
+      "request": "2QAC9LKkGeLKMNRKqw9S7Uf65vNu1hBL3qqnh5ZWcatkindMfCx32xj5sg9V8c6XvrrvjL3QFfRdBZn4dDy5aFtX",
+      "callback": "2VW9JbnoDzTqWE2Vc6SmrEam7q3e4ruRebUCoKGsqTMPQTECwvTsBPTwER653e5ufNMWYLvhC6mD7nuQp659C1Vr",
+      "seq": "37",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1416
+    },
+    {
+      "address": "G9Ph8KhurRPUdyyQxzYtmT1xKsoN9HEpZsgb435mz2pR",
+      "request": "5En6q29v82zMpCbQX8xQ3ft2KPYMy1kt18pBEpgiC1DG19DSNDRwzUzfsemR7oiFVj8ftBKKJ2pNkNvwmqUi13QN",
+      "callback": "3KB6bjy4ZbhiTntwNBLheCHSDoRFo8p3iwfhZdx4uLAwjaxzHos2epHRAAEC4FXb8UgiG53u3FurDPBwrCPBdhKL",
+      "seq": "38",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1211
+    },
+    {
+      "address": "6LKuJxo62sqmirhqD1E5jDA2dTagv5srUoBZtP8nM5be",
+      "request": "43DuXcRKzKMPDVyCa5EGRUHpeLxbEfSbZR3LNNddKvQ392YPq3XbMLUPimjA2XcgqMseeRgFfLh5uKxUnimcW3u4",
+      "callback": "39rA8ZGW9x87g7H2GGFp9gjxPB1V5kgS7JYqtp737hW8kbgvcaiXnKiGqZGeMtLcPWNYpu2vfKL5Kx9qucZWijrK",
+      "seq": "39",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1011
+    },
+    {
+      "address": "91BDqsYsdJZjgCSbeEK2sQXN25ohnarGfEh2A4dU6HTD",
+      "request": "4akFofyQG2ExPhX5uvtbdRgcANfuE3QGdfEWvumEukYkzdmvvfVDuGB1EXqd8iZUZid23hPBxhjLEXnFJW4jdo48",
+      "callback": "2TN68z2N3TdLvsAGSCUqGrwzdJzpLaCEwn2VZ9J3zFmV2zN2RdBAGE97EQz74GzLCotsbzYpiM69UQnKapAsKgk5",
+      "seq": "40",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1247
+    },
+    {
+      "address": "AzpPKihoLR1r3xcWSgw5HTx9rPUukjh2GEYCMaaPrGeq",
+      "request": "9DZsj1pBtShZUDhEjSvBrNs6U4XNey6HriZn6ntxUJiTwEhhmAqX8fjHAdw6cjcH8zuRosTz2gnwEQUK8jo4Vjw",
+      "callback": "5Dvh1TVfvPtBVbmJ6NpGPDpQJ4AdQ4Xv8ipjU77LsWRa72oYEHWqGUyPrQx191HNvtV3pGiRtAzj1FdxAP56kPZc",
+      "seq": "41",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1169
+    },
+    {
+      "address": "G9cWjaY9Swu2NGnqD9TXB6cFttH4TzTy2d1RN9opdv4P",
+      "request": "5PUcfMXGPpadhchuezG65nUbweioxS6jbvpxpPz76y9MR8FxVUMaGvKSD5zsuQ7oibKXTkhkxyS2j4L5cWqC3LWG",
+      "callback": "8p4JVrn5N6P9fRLJG9D5tvX9pmx5BcHYm5NMUmx5QbfyukroA31QThUKGZZtd2bRNEoUK43Ttvx5Lm9VT1SsxZp",
+      "seq": "42",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1409
+    },
+    {
+      "address": "GcwgMriakf9FxtXo2Ck2BsuZ5Kv3fB2y3ushZ5gsvNZj",
+      "request": "3ASfYGK3dTZ9wdHF4uZHbAfuqtPoSNKtorQU6VPxYeABpBnkH7tA96uFr2TiUKpf3xaZ3ikfk9GFd1MUfPA6kCs1",
+      "callback": "5tRfM7EC4vT9ELoFZ7Sm1HfajTM2FKcC1VYbnUsvFg9Djype9GntYw5iBi28GXa84BfiQmDxDnckSjRxd7S8gLaw",
+      "seq": "43",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1220
+    },
+    {
+      "address": "HQDC64TuVDZrjfhtbSb2CFqV22bf9cZx45keHmMrJGqD",
+      "request": "3SjaJXnfr4NeWJTgbztAZghKcG8t8qq2jewpxMrJPSxA72d6KeEbwBAF7sANFLTUVRnvpqcF8mDiJPoZH9tTUrwt",
+      "callback": "3KuvwYWMqVvFUiXaB4Ud8Vtu8WoNzyXVuwPZ41TR6mY2sztgKssRUrP7u4RrnuBPKnVLssTGjLepS4FDzSukXjGV",
+      "seq": "44",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1276
+    },
+    {
+      "address": "DyRCSbNrw6jUbdxCy1iVnWLrE6CLoNyDumq2poUmWPtq",
+      "request": "4V7qFkfA66XPHBAPy3T7qVvyRwaQvZMyEQHgb3Wmg76UgT5ayfHiEFdqxhitHPw3bjFR8YnDE6BGWZCHfjCqP5xv",
+      "callback": "4XaiaP34botTTiEyQ5RW8mM8RyanUD2w1ELP4JMnoPX2HT4b3NWQhhQDzBWwuuy9uyiBEVWFDh4myUWPLV6xs86J",
+      "seq": "45",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1227
+    },
+    {
+      "address": "Py3dubnddcqtRMbSuKBFMKEx5JHPT2BFuzoJHvphbt4",
+      "request": "4n5e4Z96khXfKJ9rmgD82P8jabaqD9L217SZRJRKTfBjVe88ojzsffbyRMeZB46XV9UUZ8ocPdnV467jF1QFG7tC",
+      "callback": "KAr8yt3rAfDfMAiDfB2BKftkF71kErz8391AL55s6B1C1FUSGsGQkMatHCoroyLJYZmeEUR6cLYXxr58dmNJGuf",
+      "seq": "46",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1206
+    },
+    {
+      "address": "5AqbxSyc5ZbmCuAGUnGMPB3XJiF6a1mKqzrW37JjMfRH",
+      "request": "26RT4U6HVCHMVHVnEowxvUxX1KBTgTgqTofCURX6A79bBrLkYE5rMFvjqu2puhcPdtgHimW8EnVPCRctbaJP7UzV",
+      "callback": "55vWHjZr3D2B1EMXvzkBKi8aVj4WqAS715CXumer7RXQGna47Kagn1HQJ3tMNvJ4ouWUWqGRf8MPmEWQZH6JKBxq",
+      "seq": "47",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1250
+    },
+    {
+      "address": "8oHYq1g822jv2aoeT1rsexBTVs6b1ewAjfxQW2mK3bXZ",
+      "request": "3L6MkWsqGRGXiGh1scko2B7KK6NuMZQYJkmwjHYMjbX8nVqBaQVWV8fiPjXXrA6rWiRGuS7XtAkxBiopRBoqvDkC",
+      "callback": "s9NwwnYZAQmw9nUSYM6hH2tZkYWDybj8waNLWXXJ7RjMFPxbeLPa3W3YLyVFtqLWSi2Fu4uK92EWs3t1PgLPTJ2",
+      "seq": "48",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1391
+    },
+    {
+      "address": "5UMM5Edz9xv9aSouQTh5tLwUKd947kC3Mf7j3wh6YTjF",
+      "request": "4WLUo9atguPGbLny2XhqM9VYSq1uDMpPf7VfgcCv7D53YWAbbzkExsApQQhuFEXm1WEthZfNe3RuBB2cEvMLxA8d",
+      "callback": "3csk4yYUvspTCewQDpTpofFUfoKcME9xiDu2yJFM3QBnV9ziQ6Me4A5CL29x37rURncLDLisk6BxEcNfSMV5w2Q3",
+      "seq": "49",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1070
+    },
+    {
+      "address": "9TGRhSGQm2WUpCZT1sCVnwUGd8qVntUeLmxvWMoXGXto",
+      "request": "2Ug3qFCBaRhkXhP7EU2y3BadRb4XjYVJULCSRFntDufJNAFYWGN8KeAjAC3g5UcWvNwDYAwsJyHtzrruKuvg7vPM",
+      "callback": "4N96RdLEcVQBa3tXMxEDicKpU5qoP6vk6A8huBPYaWhi6QCqKMv739X7DF8vTUWU5B42SeiwJrtjUJC2CzySnndm",
+      "seq": "50",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 2024
+    },
+    {
+      "address": "8BLeryVTpWu3LE87xjWJ2WAdLHC8nPp3ETAnByL3kvrb",
+      "request": "63wW3Bj3b3EvUjduhuz8N8sYkPA7Vy5Mr2iEbbbnKvHGzDWUyjzwsVdA2DGM3p1VdPnQQsVtJ4Ei8dqib12XeLqx",
+      "callback": "3UyaHGHpYB4taZpfC8iMSbW8DvNhGDXY5djHqbnubLKnVCLzVEUgi6EKn4MRotGpBTge88RJgvJ7gZnjU3eXN4BM",
+      "seq": "51",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1204
+    },
+    {
+      "address": "9nyLhNHXGgCDnFk4tDFrJURwnH6tPfq4JjQzMosHVMRn",
+      "request": "3gTyDCG2yX3nRhANV7KhFDGjBhKBqX3CHbzTRF5sgeLEViHVNmvBM7a8DwuNseVjc8FL4bXKorL4REW6AaHY3aQt",
+      "callback": "VXZpjypuH79fjN4N9rwiCJr58P3jPW4859RRcno6JFgQN93mwXD3G5xcSZeEFtKqUrWFtMvJtJ12Nhw9PGJz5Rv",
+      "seq": "52",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1123
+    },
+    {
+      "address": "C7WNRbe9tm5ok43BxbDaAvm5VongrsFGZYkaJiTFR6dh",
+      "request": "4uDubzGvRi8UVfK79ACGhhYCdYhcbU9SCR81sn2sPfG86vF2XfhLeg9FGZP72gLVvtoBSVivNNLVnsDaFn9kW9Zq",
+      "callback": "3Vp2AvzvMjYsqZddaU9qHDVQrmReSHWnL9SChWzNMWeL4qcrcgkLsWbmKmAeHLGvXKNnuQUNpyf5bjZQur5SFLDj",
+      "seq": "53",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1112
+    },
+    {
+      "address": "A2DCzXwXLUNw4i7Vx93HcT7oC7i6wYoRjM5gxYVi8rGV",
+      "request": "3SQq78uokiV69s8YRfVR4VCB6i4adCvgYfN5CpsJmJAnpZBtpJEn75jTT5MWmo5HGJHQwSvw32z6kyt7Q3p8jZ1c",
+      "callback": "Nze73FvbYpinJZc7uaVAkvoCfqmvGeT8A5uAPBQM5sqtsBUAb4UQ2VW4yhxkgx3Pkx8sFSKALr6KCvGJFgCtPyt",
+      "seq": "54",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1364
+    },
+    {
+      "address": "CxJXS2sPsZp6P6yDjRFLk2CHqSNxtWy9GiuQUVKVf4EX",
+      "request": "51XzzJeJgsYHKyTR7fFtS73XYbvczsHt2z42Uh2DqLZtUFMUSpcVS9fx8hUK8wUQc3NZemGD3oHPWfJU2BPrdme9",
+      "callback": "53nfgXZHwvGwZ122M2BEpQqamDgUK77PJV2Ai54RtthSeukd1wCehMfBMrMGC4cMnEjVw4NXG5te7ZAZuSirshjV",
+      "seq": "55",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1197
+    },
+    {
+      "address": "3jj3FN1frBMj5zv1Mrm2YVnxcufS9MG4BcBaR6tVU2UK",
+      "request": "4xRvHeyHAk6ddWht1BWpSfTwcWi8TtXp65EHt54Yx4HNmgNhCfqC8W2rnMuFs57CZ5GgVGpatsTVBe89dJ2UtZTX",
+      "callback": "3KX657bTcBvQzVxfrSY5PbGdbP53FqJyzn2MtrGDCyANP96F8E9zPDSsL9KPGAbuLZoi747CrgAjNvp3kWtBxXJY",
+      "seq": "56",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1183
+    },
+    {
+      "address": "64GcaEh696qXYjMMiHeFW1bxZxu6roTRCFhkUYtUu8EJ",
+      "request": "39AfZtbJPQSNtErA7zWYPb8aETFS5cUtQGzmUueCK1M52ui83RNTj9rzsbDairXBzWHPxCWypZgZM2yNNogMFBpo",
+      "callback": "3rjgpQxvatrBjTpfSD1hzSM54iyP3xT9Bb67hMDoTtmshgDJk86yhSEGRoYd1i2H9JuC4XRKehdxq91GsWUNzJQM",
+      "seq": "57",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1275
+    },
+    {
+      "address": "GjN5Z1yCQNhQvVMuHaTMoZVrhHqGFCrjj1zNLpTwA2wD",
+      "request": "45TR2eKJcnqLoRrodto4LisK43AcxeLBdUUEi62FbQuu5Rm79xWvQrLrzEhknhgXxLLeW8uqyxo2i1CeVZ7iLnsL",
+      "callback": "2M75YaBnb33xeyu6PaoSsKhHS19VQvLxhwCjzYZxbxGegLLtYMTdkmhKUCXPMNYdGHmEZNvV7o78tqjCnCEq1wmL",
+      "seq": "58",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1289
+    },
+    {
+      "address": "B4vioq1hVutanQwGxMVmCWfx9ALTj44NNaLSVpYn7RTu",
+      "request": "3Jc6G9cyTLRyoZGawBHph7pwKSF6MkBzNJBSvFb9SqKHTD4S9jJqVcN7gGLpBMRTYexKVAwV571BtTsnJYWKoDai",
+      "callback": "4mQ7eCszZgKrSzGmfDLQbd9YgwEHvk88xcHkezrendNjA3sVRfQgpGE9V4ovpK9yaPo5WwtcXQeByjzcwN4oYb2s",
+      "seq": "59",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1227
+    },
+    {
+      "address": "aHkwZHi2NCiZKeCsMnL8re3QiJD2txmwBsSbDEbUEZz",
+      "request": "5TdGo9HydMANh1n7oRqN4VjsGxi6ubeUB7xmK4gDNnq9M8QRbuXwvixmc7S8haTd2kaGpJu5eULvbcX6uyJHgVsE",
+      "callback": "goytm6cdL3XMU9csdPbqso6CUbeiLwujNugBix2zdiXAMwxi6fEtiLAai6UdcrmADKoVuxnohtyiPbFcZHAcA27",
+      "seq": "60",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1087
+    },
+    {
+      "address": "4mGYG3CED7WnoYgNuAxequnCc5xq2qxPzC9bpaGuRkqE",
+      "request": "2igwbeJU43Sasq9PhFxa7Vrc6vx8huba6zthtbSGZzGZs5LPkk3UQDscZX66akTxHAexVDuPPo5tzvFLMBh9KfDc",
+      "callback": "5LL6yReJ7FNR6i8JafKqYcB7dkPJ6T8vnKzYjcETKNveNmrwSMSUfda6usWk1BbzFC3q6exzjzyAjK4P5q8T914T",
+      "seq": "61",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1155
+    },
+    {
+      "address": "BWw68p8q5mNdUcaSqRhgeFxhQSw3nUgtztAqXh21tT2P",
+      "request": "32xfHeXTALKBzoabFqsh98xdEHN9kfMNR2DeXWFjxNZXo4Gwah9G1wTkvsW3SpCPUrxyxmNUiRob5CxXE78Ub8Cq",
+      "callback": "67V2yRncmrU4a8KWE2zHwytwjbopsXdBdKSF4rCvi6YitCnDdz5yrxckWoaD8T7EwRx2Cu3RgTp2K12t2cCnfcnH",
+      "seq": "62",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1178
+    },
+    {
+      "address": "FQuujjDcMdT3P8PJLt6rfhYBiiQGqoUd7WKuHEd84Pm3",
+      "request": "25dDzSHefeHKzX4rsMazqaGSjaTGNpntSFfw32ysSMuBSFe6FJoMzthJWe2m7boy7GZreqbjmXzKpGGbtAPufyBr",
+      "callback": "67pA4eDdCS4bmbqdLVDxMbhzd9fiHP1dKXu5J9Xa6PbGgW3yNMrt4DufZA8Qr2Ue62nMALG4KvwimQVcQv94D95v",
+      "seq": "63",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1093
+    },
+    {
+      "address": "EHYCbciQzf4qz8ayAa85cvmuca3wJzJBrEZ36MNXv3Mo",
+      "request": "2DUeGxTAMMSCa3KsSgz1NnETm5G44td8E8Zr6xxCzszZwow3S4VnEdG2r7xGWpoP8c52VqwuRbDDY16o4GB5fDjZ",
+      "callback": "64MHoUsq1MQM5HA1aoQCAqTNCfVQzsqLB5ChsF6vyqFtuPaNmuk1od3tHfpvyuWCsLKhHPWkoEXnh8899LAME26U",
+      "seq": "64",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1167
+    },
+    {
+      "address": "AjKzm58s3idZXji4XrETcniraThFzsHpVx955sDpq8PT",
+      "request": "hP7Vc2gwaPdioVWP6Yjs5CN5Vknqd47xAznpJZgTMCxtHGm3YSoZwB9GdrnN6tTkMJS2ciBcjajM2koME2x2L4u",
+      "callback": "3w8JtsUXY8jYfbfmWPMGaWssucMf7E6LqA3VJ15K9EHKwEa3r4BGmLdvvdDgou6oep34jPeCSC4SWHupXuJfpHeF",
+      "seq": "65",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 994
+    },
+    {
+      "address": "2BHhADvBBxFpb27CpxMrGcikcfhDkwY2MMcwszwtraR8",
+      "request": "3GHww9AgWUmL4iztwxMbJyBBYZa6eg2PdAqbtemekw4aqfuPuz3WXAohizxfyaXgEhNBscsdfMeC3MZbj8xYpW3J",
+      "callback": "3ijKQLaNoJRsgF8gy27Xfnqd3HSVJ3izfCYohV8A1Zki5SMf1MvhqgNRvhycSdXs4X44yJZWmhUuuak21PxUjqKF",
+      "seq": "66",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 986
+    },
+    {
+      "address": "Cnb8J3fKijubkyPE7kUQkc4WADLJaZh8EGgq6WK8ioxm",
+      "request": "27o9tyDACV4ZxaRdMpJR1YjqpkpiWi7UMqjD3FQG8bPCf5SpjAHFQb8c7BEf79rek2jMALkxszCoYzxocVJA5usP",
+      "callback": "zRw5A1xeoW5Lv9T48xVv3utvT6xWDzsRVDvH3UfX8T33tH5bvB3aiDbZFx8CidH8dZVcJaCGZYmgNrUK1U2Yi35",
+      "seq": "67",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1112
+    },
+    {
+      "address": "2abMm5YNaZk5hTbNmM3GogQLS17u6GGW1jcKbrcNvS9F",
+      "request": "5AnZ34iZ5zJ6sZxGyQ9kv4BWaLbqqVEEmKbNxjB1EJ2SZ3a6S7iS6EkT6qHnNTDtDKnFFZqCvZ4rvk5EDh5KgsUc",
+      "callback": "32rP9yLmVgWdeSJ8GxuWbVWxzitPrRHCT6uJVA5qAPAR1wwJHUh3tHbd8iuB1f9o4pEuKV2JUABjxUVR4Bj5EPiV",
+      "seq": "68",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 987
+    },
+    {
+      "address": "5f1Moij5yteC4zo3E7chx82UkqTYc9mR3idtyf8VNgCi",
+      "request": "2Vu6s3mJKGLDosegR81hR5QzENGjNdPkLuhPo1Jbx86xi5zqPbxLgcrhswEiDypRrRYeVA255DPmJLGeNeQND1Ms",
+      "callback": "DW9GTYN6nYLZ1JrxAtTf5jfezJhqHcrdgwoHi4BY131fQP6yocVWHpQtwZLvupm4VrBtGftDFq9tXgFmMMyTn88",
+      "seq": "69",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1107
+    },
+    {
+      "address": "9ZkaSe9DLB7qG46SfP2VBm1PUoMarheULdQN6mBbuagK",
+      "request": "2ixrFxr2cGLaFaSs2fENxnmSoTYGHTKfQUAZaXNbWxVWPkdwrYUEAFXMVgRN46VESyDaAEJ2mwdajEa2ygou7riq",
+      "callback": "21HKKtT7zTJoMGic5M3rCZ4X6pThRGAjW7zcoKbK88d3dwu4AHmyWhqsvoXnxoWgpVASzGBnaQSzfNegsYxXk8nW",
+      "seq": "70",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1036
+    },
+    {
+      "address": "7LGpGzyK1N3pqVgUa911suvFNkNez5ASvJ1KX6Eh1ZDB",
+      "request": "nYHU3PmCdHzTiLppRQ1pwnznGGg9wD9J3UjhGmGWanuGkgCYyLNxB6daNZRefs79EYL2hKNmpXRYY1phBxbUmfA",
+      "callback": "4R4946K7eUYj2Bj3qGnvvqGhU8TV5uEVtsdHEtG1Zgh2Ti1JJaXcvcehmCF97DndQqoy3NhU4XoBPMchpK3VCxMB",
+      "seq": "71",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1138
+    },
+    {
+      "address": "GtMBKtGevFxwp1b2yD9mHSUsWNcHRAW2kUAK21nNoSg6",
+      "request": "ryUgmvSYAg4e5RmEgtgoUZLf9VPxT6fXCmaEefnfE2B4borR2BUYknq19sjKr39mxTxWLrFQCXUzuQhL7XGpqhk",
+      "callback": "4KHyMY65pvovHNagbkazoGAWP1P7fDHDNYY7iN94hfvdVvbr2P4nxRvFUu6BnbrTGHCBC2fPUKJu1h36mxP6tE7P",
+      "seq": "72",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1068
+    },
+    {
+      "address": "9S6vhzGtCWYugMRetPeVWU1bKBMKQ8JZafmgKUNksiXr",
+      "request": "5wdFJVLPV8eryihgWmkbMz3CyEkDgdpacPxDjugtYdp1StbdnEi5LVWBaymtJ8gwsSn6b6BLJDgkJAj94Dg3EJGx",
+      "callback": "4zUmh3zkjDrAtAb2J9VoDQoW5LDk1YysYNMPDbuS88Z6rA5AyqGWri9jwCkPF4dcDHN71st49g71YZjmQjDDSWHi",
+      "seq": "73",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1181
+    },
+    {
+      "address": "JCR29EsEVQN3QGc69ztJb8PVc5qkurntFemMzhJEW6Tp",
+      "request": "64zJjq5wVi3TCbCED1Ao7GQvdsxmc3imEHm6ZBCiJRt4xViiGtx61Kc63garAuX4yzUwiJcyG4b43mDymYWd68hS",
+      "callback": "58uS8M87dZMexC35NKqXmjFp33EVmVLuwnCuWBGqy5mzR3kp18L3XnFh7tMY8o7twZX5cPHeKqv9U47wHvz4d6Cj",
+      "seq": "74",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1195
+    },
+    {
+      "address": "HMXru4XfPkPgmQSm54mw8tLizKy198tTW6ahfjvhSzwn",
+      "request": "6391AbQHe7hui3v2LRXALCxUCMM28wJPMWwZSis1jUzca19L3J5fVxfCpm7vLFjJR9qaajrLu1zDxLT9vKY6NxL5",
+      "callback": "5RY82XtpGhSX7VTXh2GA4uq21jATJh8o4LVyCg3W5z2Zah4fwcoBZjeQrPPH9vH1yNSo3v21ZGKTpbn4fERGFteU",
+      "seq": "75",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1036
+    },
+    {
+      "address": "4SXZEs7yaDSjvj1rD3jFcu48iEys22UvhPGEDL1UvJsV",
+      "request": "3ef7Q9E9f4KDoGo4PCjLoVhNqbuwPpZh6z1ZHbNkewVhnkbdoCFbqtZ2azgNmfMdH4goT2oq6u1S6LAtMYBHiFHA",
+      "callback": "52fyrYQriutqnXaFGL1UxiUScy8bzd7N8Yexh2Du9qezoSFTyQ3hkVPyku4vfZpuSRtNdwCafDXQGQqxneJRCmUh",
+      "seq": "76",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1201
+    },
+    {
+      "address": "9qYBEkFRt54xtBiz4sazn2chz5PuiZdwoDFh9dNjDvVr",
+      "request": "5drGdSa2r5JxnzmbQ3VhMbBJHHX18BruBcney4Vvj43Makov24kVx1VNXnH4BanL7ps4JGLDLT2gtConz4epcZtu",
+      "callback": "5rJDVewPMfaA7ajqzTKFx8xzNQaREnUNa8Q8fve1CprFRy52CgihSG3U6aciQgj1ZhkTrqDRhaeJkSV7Zn4gg54e",
+      "seq": "77",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1056
+    },
+    {
+      "address": "GwiqFDcUKf6cq3GrLKfsqemAx8rhQE2Rku9ri58e9HNU",
+      "request": "2jN4ToZJFmPMNbSBZv1GtpdDLcvYEigTpyJ9KZBda2tJTWxvTP1iVtBaf389G95sZQsmvka4BZgRZYSKV2WGVy2z",
+      "callback": "3qZ84AJfP5vG9cyeqarzxWhJcJnFFh36GoqKJc8ZcxFkzeBwKD7Srqydkqb435Gn8iu5KUyq8tBcHBSqKfVcKw7F",
+      "seq": "78",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1282
+    },
+    {
+      "address": "98xfUNYt721Nr1bDGnFUMAhi3ugG9wT5Pq6DkUDxAVEv",
+      "request": "2mLq8g8gB3P9e26q6iXhUkCLFJXmp3qK1c7jXwsaqKZVgYpiD6hoBtd33297dbybefzTcDhK316CL9C9ncMmuYcX",
+      "callback": "26hDGPRQMzApq9ZRqapte4MCDgQcTgxuy41DGKsPEtUZQioRqgibxPuQKNL4Y9ychVW2ffxPnqnDFAJfyEhyARBx",
+      "seq": "79",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1552
+    },
+    {
+      "address": "b3yKP8vy5H5JzPmT3tb9VKmAHYfhLixnYkQ1vByYrqk",
+      "request": "28cWd6pg4rJnLVbGHCzB1uWLUCw766b2arqTxWmFbshidauyzwGCTU4c2wyE9nqmXBn5wWjLGsVj7CubixGFL5P4",
+      "callback": "3CMXv8RSvRJunQBEurYErApCEwU7iU8PcZ6eRubQH7fJgQd2jdWsTAvhCDMZJgCNUioh8kDMnjnMA99H3xCmL8tY",
+      "seq": "80",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1244
+    },
+    {
+      "address": "6uG6aQEup6Vbr7Yu6C6jisXCvjmG11cxCkmiKYNXqC2b",
+      "request": "46xTQcxqyYhTDS6w1hBPwxpoVdUqkTqEZ8qesZeJgpo1m34wjRrBYygvRpusfHnULcuaa7jGpwSsbR8iR4ftqZBS",
+      "callback": "4qLGbqZTv2QA57uLXDFSk65oFB574RThy8kvGFV7aTeQLgUuoEGGq2y42iqtpySTQUU4p4fWYiYr1wHyu9prvc76",
+      "seq": "81",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1464
+    },
+    {
+      "address": "3F8k6MzRsYEPHoT4qWANvCyHMfGDeypvp73mH8UPJnDW",
+      "request": "4s4iyhvhjXaJhPwqagNPEGGwToR7jnEN4asJvepAmYp6ixgSU4HGiigoHzmqps61Rf6Lmp65T7tEFtWhKboWn66Y",
+      "callback": "2MTYuvD5XKxEBGXdsikX2QowPcVMJzJVfMHgpzBhTVrW5wy1ewKT7vVv1jK5XC6ZT1sqsqjcLjeaPRQmJ26eBpjd",
+      "seq": "82",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1095
+    },
+    {
+      "address": "4L68bTkajsBmFiY5KKBo4fpT7RwrQY4PBazWq3VZXBY8",
+      "request": "3nnZ9xxF9AMG1W9PqLMu68S3BGHstzLKikZLjJ2aBkB7RrD5noz1YyBJpKxs2YkfLvjAEDT8z95cKCEBjx3ACE9U",
+      "callback": "3nLJASRJDaG3KrGaUQM1F3HoY2pyjUrR7Es844SkNGNFZj1D2euUVUKCARWmY9tH1jLPv9uBsSndoTpiryBWaQ5n",
+      "seq": "83",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1348
+    },
+    {
+      "address": "WbYLbLjFHijC1744hjqXdgVjrwf3kYfjD2hWtgVzxqS",
+      "request": "3QXrmggNmAbnWTMPhNFDBowAkKpkV3X5K3npeUDpM8RkpBFQJJgk4tLFSeNPQLf4ufP9mmfXUuM1VWHBLX3coDyE",
+      "callback": "2ASmD8YW6kVaX8sn3TTcSzvcRAoRZwVZqNjsZy1FbLGxR6BxBRiKhhKoVCwRSnCZVVfcf5WtzHx4uEjyjTLtQ7Td",
+      "seq": "84",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1530
+    },
+    {
+      "address": "Yavd4Y43guvBCxHknWHzDL3VFowPZr561D179wbLPa3",
+      "request": "3oB9hRZ5weaw3SNMjZNYXpsRE8nAmZBygapYyYpN7Xkj64myUBbkBk3xBpyfePh2V28txZjXPvtNgtibzGT4ryfz",
+      "callback": "5jAGpzA6p6Qr7nwEZYAmzuBrb24QnBrXTgAiVGo98SK9KgxLbYswyGh5MeW5u3C8wKXMpssCWg5ana4sHHag6aM4",
+      "seq": "85",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1186
+    },
+    {
+      "address": "8P9ecJCHAHRnRvr1zj8h9kFjYqCxL4EQgFeS2XYQhcPc",
+      "request": "5zHsEUbEiREoa5ReBTaWh3Z4cvbFJ3jcfwBDNHZ86YDYP4Z8pS78x4rRtP8hHcXS4aAHT6xY63i33nwZbv4SkxgG",
+      "callback": "ebd5hF6Ft9MoYfRpq3XwDaryVTKWSjwqa9Kaow3RdiEv11zodw2gBM9bC6UiWLRo3t8AwrM4zehHKQrixpQpENH",
+      "seq": "86",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1230
+    },
+    {
+      "address": "5dViswrCMbjFfMd1D7b7eLvdrhbNpJac2K6yHAeAtB8s",
+      "request": "5Tq93vhERHz5QEq74ZbBynCv1TWjP82osiFcHmbts47Jz6VKqX1u1gix8q4NgTxW8Z5znwVVxhVnM7qvWpTRj22M",
+      "callback": "4tQmQbNMZdzHDScZQwBkm4RHCCe9dKyxE9bMzX7cisthrCDaakW9WMWHPbStLYDUTUCQowSroioPeMsBvX5suMGG",
+      "seq": "87",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1099
+    },
+    {
+      "address": "H4miW6en9XirCfWEEYtfpWzptTv3nKHKVhytGtrfmXZ4",
+      "request": "KtuMUiY7m7H8xb6Rj7JYyCrp9jwLiLP3sYC2iTR2bB8sTFjqnJuET7fsynvL7MZbdurkkQ4sWTuqRnbpRsxHLMh",
+      "callback": "1cQP7vxK8urPb9sXBRkkoEsujWFQBT53fFMDakguDuGv4bpyy5LWY993rYP2sJRQtLNvcLAA66yRXom6DCGmVbq",
+      "seq": "88",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1199
+    },
+    {
+      "address": "8LG4PFQUdoNPZ332G223iJLt2ZppjuWz9UnmhqQX58Y5",
+      "request": "2V18WdDERwvYQKmuhFSs26VVZYUZ9xZ9bhHSxkDhgi5avGC9goAy6JFhxsd5zKXbHWT53k3fAdCsn2XvpEAHzSAn",
+      "callback": "3N3kBuaqyYFqytrXy6nZF8Ux6eYWongWMefBCMD4H2TWC9KYTFRn5APfNtVQ1kk9LSWFHqrzzcrGG9svaMSJqf13",
+      "seq": "89",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1129
+    },
+    {
+      "address": "43FpVajmPZJ2stS5Y8BLeMUrFnefiYxzpBfQjMyw5V7c",
+      "request": "3JGiL5w3NSJDZZ6LsptpSLDjKYZ52hyYGyEE5PoyVnSkprxrYTsF9x8GcNsgRfm8Sk2AHQYBbYDN3WiJu86EBNkU",
+      "callback": "j9NsJboEX3ekHa35ZdYryGJEyNiSQX1DikPmeVBfzMZU98uJvrBTZNr9j7QaBeSd9ndfBHNhHjT3EWp8iBrCSk6",
+      "seq": "90",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1091
+    },
+    {
+      "address": "9JhcLyAYFDwv8yqv8j7pfkxVBiVsW9ZLvQhpzgGWUHfQ",
+      "request": "5Aza7SmAmayeaXBgN6VywvFQsKrmG9Wis9izyg6mZkAktbEzzbtQcDD965rG82JieJB7ShQ6TLU7ypghgU4ZiBYR",
+      "callback": "Gzrn8qHh3vHoHSGbhHvMntJnWVguaFQp3Q1VJZzh3YdfTWtyGQ3QaEzWAmjMKqqwonvsfj6cqfTjawCeuuv8qpx",
+      "seq": "91",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1060
+    },
+    {
+      "address": "PtEHobX758LJUGoj4yv8h81zXReHHW8r6Fzxy7pwuQz",
+      "request": "5u6TGoNPJH7qYvPtC9B2266JUUe2h58cPAVvSdbb8hDzcw6zjaGpjxejqj9yW93jS9o7yK5Su8TuVSpm9kmV9ors",
+      "callback": "4UkcbeeEb98thFsidDG8UPYZ24A4KJjmXs6ordvYM2xN8JgXNZg6BfPtCJPB36R1WeM55z4ggiNBAH4wU9UXgGaR",
+      "seq": "92",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1101
+    },
+    {
+      "address": "AApuDKeUCRpXhDiGMdos8VJjagYd9NgLNcG7cwHqSB3z",
+      "request": "5kpjqqj55Xp94kH5Ys1WfQWsYMMBMW7zs5gmL91QCEfBNg76EqkCCprYJkovwMUYkK6BX2a55tgfHUoUogKY8ver",
+      "callback": "qCtTE77pro3DCmMH33dzAMKB9nah1L6F2PQWsw8Zqe5YExnXNppvag2yBhTLixPQXoFURq7S2NSi2d3H8sAi6wZ",
+      "seq": "93",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1093
+    },
+    {
+      "address": "GeSKuYX4BXLtZCJwdi4eCC4bHmxUx4SooyCDJczmVPvD",
+      "request": "5BaJrrgGNM66afqS3wCm5ugMFTeg8FrdWfo4VGnepAzV6QJNgp4c3GfSs6H3RLgoahsAfvYJgprFDeWgqEQa26oP",
+      "callback": "4ra5cGYkgVaTQGYxGGA1gKNzLdoBBtMUZWs4hZby8PC1brGoQRKp3MatjjxcdT2F5KWVFAr2SPjwHqLv3D11mkmf",
+      "seq": "94",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1157
+    },
+    {
+      "address": "BmVM2YLCBt4VeeuCaDFwKz87W8LTBUxTfAi7gJMnCRFD",
+      "request": "4gtArKK39sZmDk97LKU4Y198REWU36j2VqgrLbdayUNXUFzW8qFg31r3xWtuqaySa8ccCVWXeP8gz3jyLUwtmpiG",
+      "callback": "5XfStQKc3QLrkki8V9JKjAYRUpcFTiuaX7vtgqeaTQFLHgkDLCVEkJiYPJL6GHLiSGP4WHty4HqTNk7GtYLVdyoz",
+      "seq": "95",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1114
+    },
+    {
+      "address": "3qwrbRgcGrLrZfMvqUWXtNAbvBxLnXhy4SW81c8LUSVw",
+      "request": "3TATMmJjAkncaYKPwbrTMPj8jMJhXS3W7tHX8Db6bDxXScQnGibRkoSFiMJbmkY9pCjmRA3y3BkCioMiMUQC1t5c",
+      "callback": "5jvJZNjgNafh1U6t3gQWXipGDUpKtSxMuDu2opfXHKRAYs27SjUXZkwSxKTjs8ugf6es6onWeT8wMrJCTmVy7Q4h",
+      "seq": "96",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1114
+    },
+    {
+      "address": "BwMpPrTKMq89umpG6acCdMmfbVWebWy1yC394nJsU9ki",
+      "request": "5rqGsJ4nepB8KiXRt1WvXDW68ydZtkcwUU4TbP7jYiVD8rAUZzSRX65gvGeEEKEXw7Jtzs8edJtnyy9pWPVjqN7M",
+      "callback": "3sEGU6QKou92U71KPVXgz2sPcsfP6DKun5SSvijm8sj5zFEBuL2gz3pH3BHAf1M1RA4J7mManhe5JjdGkkw5EXRW",
+      "seq": "97",
+      "edition": 0,
+      "qty": 1,
+      "signatureToRevealMs": 1091
+    },
+    {
+      "address": "BdkrLvQBLYhxKgafiSoapf6EXSSy765dq8SUXJiX6CB6",
+      "request": "5TE8LCAwrKpAwcV93bqQnu7RFPyv6YgZSzsK67a4S6uHkp2nFSWgBb9r1piahRBGre9q19GuYKJDwitnHf86AZXZ",
+      "callback": "4NWgkTiDLfr5iVHtK58mRC4WBMRFUnSUPeRBXYtG4Ux1t46d9h8uEuqpS8fCoVfU2nUERyTDAXwa54rFP7kNxAa4",
+      "seq": "98",
+      "edition": 1,
+      "qty": 1,
+      "signatureToRevealMs": 1106
+    },
+    {
+      "address": "9jsgXzZpvBbbrZvrgU8GDXdSg1yircXf2UPP4YYaPaoh",
+      "request": "L2sTfEdaWZ9ufyxHuHpuGXLaDE3HTmA8sTKgV1qKage8b7mCZhA96aL7KzwVYUy2ZW3zHQNRwnRX1V5kzrqmonZ",
+      "callback": "5UNCpBm61vbNqeFXR5bNH9CnAZi83XiHTdEkBX7DQypjTD2m9Grk2W8in8AL1fDZrAMZ4Xz68qJu1mejsiiGmZkP",
+      "seq": "99",
+      "edition": 2,
+      "qty": 1,
+      "signatureToRevealMs": 1196
+    },
+    {
+      "address": "2YEpyEDeiTVz1dWtDp4BPWP3ESey2FojG6ewBxFLMjvJ",
+      "request": "4imL59NqvNTJ7UncS58bktt7idsGmWzYnddDoKs4yqpuExcrUj7Y7UpngVDn13eRyDbD9wUGbi799c1MxudDcUcN",
+      "callback": "5wh8fHkWmRMosXbPK1GThfkNzUYvprCxW4fnG5G4vbxwZAZqdMb4FA7yqX2EUSx2sQ5syoMPookirKczMaMJ7vkU",
+      "seq": "100",
+      "edition": 3,
+      "qty": 1,
+      "signatureToRevealMs": 1248
+    }
+  ],
+  "checks": [
+    "100 fresh Pulls verified with the page data loader",
+    "x10 callback order equals decoded Pull and events",
+    "Pending requests produce no reveal evidence",
+    "Binder additions equal confirmed dust and hit events",
+    "SDK Redeem lands in descending index order",
+    "SDK Settle closes each revealed Pull without a keeper"
+  ],
+  "timing": {
+    "context": "local mock provider, includes explicit fulfillment and adapter validation",
+    "p50Ms": 1121,
+    "p95Ms": 1416
+  },
+  "browserVerified": false,
+  "deferred": [
+    "W3 browser interactions including Turbo and RipLine",
+    "P2 Sell, Feed back, withdraw owed and Close on-chain validation",
+    "The 1% and Jackpot injection",
+    "devnet deployment and real VRF provider"
+  ]
+}

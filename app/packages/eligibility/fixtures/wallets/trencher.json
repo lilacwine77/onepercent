@@ -1,0 +1,518 @@
+{
+  "name": "trencher",
+  "owner": "ATXnDZiLoMMsMGvmWdKRFxhCSLPX8UvzC7UKLt5wBbyM",
+  "source": "synthetic",
+  "note": "Owner = PublicKey(SHA256(\"xray-synthetic:trencher\")). Token accounts use AccountLayout; this is not a real wallet scan.",
+  "slot": 454620967,
+  "slotS": 454619967,
+  "solUsd": 100,
+  "tokenAccounts": [
+    {
+      "address": "8UPBgGrnbkaraiZsccMdjkH6T7T79f3r8Ja1UEtRk9eN",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "AMxELgDWxPR47ezUGUaDd1znVZhNhVhJUodMUmWpJeYF",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "iOVv/L5qs5HXSs4nR2hFSJUmlkirEfSNxChCRBohCn+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "EQSuoNesD8RFwLkKhPLdBtscThgTL1uH98gkb3rt2PGb",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "MSREx0D0QyivwDH//JoXmCe87PAIFF/WdzyfphA12wWMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "8SRvch7HZT4oFTX6eEXD5vaWgNnwik5ozGbWtndMaQim",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "CoobD7frehd627EY5HU+qBT1tLu0CGopaK38lU+WC3+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "FHqxkj2geSNcs8eM3U5LbugyKTMKarFj5nFr6N9YE71c",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "/C4u2Xc/DmvBFHk4w7skZvp5r2e+nTCPAJLadA7WVH+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "GheaUtBXe4mfdPfstrsz9nUsFiMDPW2UGorkP6Stf6vn",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "J6iXa8FM49U/CTEbGuYTFL86jKCXHtm+WtNQGfhQ9P+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "3aTf3iiVfQ9rmKg6gRSkZ5U7LsXwv5TEzjAcN1a7rv9a",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "RxEjbXWQMZofa43H/yfHfkIa6+PgPXDEgmE9sAvMDa+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "A9jyfyXN2hdSfskYY4jKunMZ5EPShMfFdgNFEPJii4Pb",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "imDxydGYsOn7HcqS2lLpHZn795lSuEyuGRH4Xpu5Ff+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "Gi3H7vCGHdzaMWTaAmnCy4TDATifTL296tdyVHHN5iBA",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "EJLOW46EgULMpWZrdEiEa0TxWoWrQiIonE3Cn1mUcM+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "3YrqD6LzZ4wkBiXzbFB4qaA94hcbFoxphrRnHroteCjg",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "Fs6F0DJAoFVfP5gf1dbHw6Mcp33lOaz/yvuF8zs8HN+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "9jbfoXTXj7n3k9m1XXqtp3Zc46wjhqB8hcyVzkfkBVKV",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "3H4rMp8CPTXz2eI+OP6FddsQQTwF/g/fuT7m3VKIYzyMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "Erp1Xt8CrmnjyjLc9qSZKu3aD7DmmbWzHdZw5v3sN7rs",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "GzaXTMq+K9s3x62jwzNFEm+XPaC1QwDBrga4gMJKrP+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "231Xmwz8BWTMiEmay8ZqFKQ3NRPF6yboLRWzmDzVAH4J",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "vAfFbmCtPT8Xc4LqxlSPuh/TLP2QygKz58+hhf3Oc5iMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADh9QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "3yFEdCNCG1hTQKzTmJRqxPaWStrQuqfxUMDQKGUWFCDA",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "xvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWGMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "FSJzENbZabwCiRdfyvLAtAjF6bPBVZvTxbYK9EgcmqGA",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "DEX3342ecpVihJM/bZi3VwMug9+EYE+14Rf/9h1bEvmMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "6G8BdPnwb1KX5EsePFntgtYRG4TfvYGrcExyKWNB7aVT",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1513840",
+      "dataBase64": "AAF2ygXJ5/h+TYSO3ER2cC2YvqV/q5EIUDDG/jJJotGMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPADKmjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "HArRyzLFFgzyqeWPJLE6TwBp8KPGUsTckVRq3km5s7oU",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "2039280",
+      "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "8iX1qxbG8AeM9xQUP655NZ4QvP5H8VTwTjEqtaigHoTG",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "1488440",
+      "dataBase64": "iOVv/L5qs5HXSs4nR2hFSJUmlkirEfSNxChCRBohCn+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "6Ps1jqoqiGQ9rxzVFdS2nSzDR5nxXBKZsLnMx3zQAeh5",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "1513840",
+      "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "G9pgFC5DwxUaQ17ARXKBms57mNUWTto5aBqp5qBXk1tV",
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "lamports": "2039280",
+      "dataBase64": "iOVv/L5qs5HXSs4nR2hFSJUmlkirEfSNxChCRBohCn+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/immutable-owner-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "vG7LP2ryV5TdV7QLgTmSsbo27YPKD8mUHESVo4TEhkx",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "1488440",
+      "dataBase64": "eXi3FEU80+h66x/Am/Bn+WzS1NabVxOVqpvxhq/52j+MhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    },
+    {
+      "address": "77BaK1LQfyk6jB8m1JzhJeVM88Egdm7sLDfjKCfA26H9",
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "lamports": "1513840",
+      "dataBase64": "BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAGMhRYCaXdl0vYU/9CSWYzfiGcs2k+u1iQBAA9+ZHzfPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAABwGRcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "source": "synthetic",
+      "derivedFrom": "mainnet/empty-spl-account.json",
+      "change": "AccountLayout encoding over recorded mint; synthetic owner, address and balance. Rent uses recorded examples."
+    }
+  ],
+  "mints": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": "mainnet/fartcoin.json",
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": "mainnet/catcraft.json",
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": "mainnet/no-suffix.json",
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": "mainnet/incomplete.json",
+    "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": "mainnet/pump-extra-1.json",
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": "mainnet/pump-extra-2.json",
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": "mainnet/pump-extra-3.json",
+    "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": "mainnet/pump-extra-4.json",
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": "mainnet/pump-extra-5.json",
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": "mainnet/pump-extra-6.json",
+    "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": "mainnet/pump-extra-7.json",
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": "mainnet/pnut.json",
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": "mainnet/bonk.json",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": "mainnet/usdc.json",
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": "mainnet/transfer-hook.json",
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": "mainnet/permanent-delegate.json"
+  },
+  "curves": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": "mainnet/fartcoin-curve.json",
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": "mainnet/catcraft-curve.json",
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": "mainnet/no-suffix-curve.json",
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": "mainnet/incomplete-curve.json",
+    "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": "mainnet/pump-extra-1-curve.json",
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": "mainnet/pump-extra-2-curve.json",
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": "mainnet/pump-extra-3-curve.json",
+    "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": "mainnet/pump-extra-4-curve.json",
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": "mainnet/pump-extra-5-curve.json",
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": "mainnet/pump-extra-6-curve.json",
+    "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": "mainnet/pump-extra-7-curve.json",
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": "mainnet/pnut-curve.json"
+  },
+  "prices": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "usdPrice": 0.001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "usdPrice": 0.000001,
+      "blockId": 454620962,
+      "ageSlots": 5
+    }
+  },
+  "exitCaps": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": "1000000000",
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": "1000000000",
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": "1000000000",
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": "1000000000",
+    "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": "1000000000",
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": "1000000000",
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": "1000000000",
+    "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": "1000000000",
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": "1000000000",
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": "1000000000",
+    "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": "1000000000",
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": "1000000000",
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": "1000000000",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": "1000000000",
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": "1000000000",
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": "1000000000"
+  },
+  "exitCapsSource": "synthetic: fee-adjusted X2 getExitCap seam inputs; no live reserve claim",
+  "snapshot": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": {
+      "balanceAtS": "1000"
+    },
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": {
+      "balanceAtS": "1000"
+    },
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": {
+      "balanceAtS": "0"
+    },
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": {
+      "balanceAtS": null
+    },
+    "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": {
+      "balanceAtS": "0"
+    },
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": {
+      "balanceAtS": null
+    },
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": {
+      "balanceAtS": "1000"
+    },
+    "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": {
+      "balanceAtS": "1000"
+    },
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": {
+      "balanceAtS": "1000"
+    },
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": {
+      "balanceAtS": "1000"
+    },
+    "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": {
+      "balanceAtS": "1000"
+    },
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": {
+      "balanceAtS": "1000"
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "balanceAtS": "1000"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "balanceAtS": "1000"
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "balanceAtS": "1000"
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "balanceAtS": "1000"
+    }
+  },
+  "metadata": {
+    "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": {
+      "symbol": "FARTCOIN",
+      "name": "fartcoin",
+      "image": "https://example.com/coin.png"
+    },
+    "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": {
+      "symbol": "CATCRAFT",
+      "name": "catcraft",
+      "image": "https://example.com/coin.png"
+    },
+    "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": {
+      "symbol": "NOSUFFIX",
+      "name": "no-suffix",
+      "image": "https://example.com/coin.png"
+    },
+    "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": {
+      "symbol": "INCOMPLETE",
+      "name": "incomplete",
+      "image": "https://example.com/coin.png"
+    },
+    "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": {
+      "symbol": "PUMPEXTRA1",
+      "name": "pump-extra-1",
+      "image": "https://example.com/coin.png"
+    },
+    "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": {
+      "symbol": "PUMPEXTRA2",
+      "name": "pump-extra-2",
+      "image": "https://example.com/coin.png"
+    },
+    "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": {
+      "symbol": "PUMPEXTRA3",
+      "name": "pump-extra-3",
+      "image": "https://example.com/coin.png"
+    },
+    "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": {
+      "symbol": "PUMPEXTRA4",
+      "name": "pump-extra-4",
+      "image": "https://example.com/coin.png"
+    },
+    "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": {
+      "symbol": "PUMPEXTRA5",
+      "name": "pump-extra-5",
+      "image": "https://example.com/coin.png"
+    },
+    "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": {
+      "symbol": "PUMPEXTRA6",
+      "name": "pump-extra-6",
+      "image": "https://example.com/coin.png"
+    },
+    "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": {
+      "symbol": "PUMPEXTRA7",
+      "name": "pump-extra-7",
+      "image": "https://example.com/coin.png"
+    },
+    "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": {
+      "symbol": "PNUT",
+      "name": "pnut",
+      "image": "https://example.com/coin.png"
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "symbol": "BONK",
+      "name": "bonk",
+      "image": "https://example.com/coin.png"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "symbol": "USDC",
+      "name": "usdc",
+      "image": "https://example.com/coin.png"
+    },
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+      "symbol": "TRANSFERHOOK",
+      "name": "transfer-hook",
+      "image": "https://example.com/coin.png"
+    },
+    "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+      "symbol": "PERMANENTDELEGAT",
+      "name": "permanent-delegate",
+      "image": "https://example.com/coin.png"
+    }
+  },
+  "expected": {
+    "counts": {
+      "bags": 12,
+      "feedable": 8,
+      "checkAtFeed": 2,
+      "notFeedable": 2,
+      "sellable": 4,
+      "empty": 6,
+      "notInSet": 4
+    },
+    "mints": {
+      "27hMqP6dQ9uZgHTYgYDm7xcZ7qmgjCN144gLkLMdpump": {
+        "buckets": ["feedable", "sell"]
+      },
+      "5nR72FMmzXDtcfYKAXV1EvszCzecF1yrwvCeg1pZpump": {
+        "buckets": ["feedable", "sell"]
+      },
+      "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump": {
+        "buckets": ["feedable", "sell"]
+      },
+      "2Y2cub5NiD7FoTfZxCQCNfTtkht5ymSeohAdBAEkpump": {
+        "buckets": ["feedable"]
+      },
+      "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump": {
+        "buckets": ["feedable"]
+      },
+      "3fp1CNLoC78wpUGQBZhV8pii3uciRoS2jVSq9946pump": {
+        "buckets": ["feedable"],
+        "reason": "snapshot_at_feed"
+      },
+      "i9DfauXuHEFWZQTKgL6ho5MjHm18PvmHSz73sJipump": {
+        "buckets": ["feedable"],
+        "reason": "snapshot_at_feed"
+      },
+      "ADPN2aqzY5RhkBC7bNQWFhTFFEYKY4drHUQG887Cpump": {
+        "buckets": ["feedable"]
+      },
+      "AKB12dmVgm6CunxuTKUG8LqQ1cDi75emmZBcvGTCpump": {
+        "buckets": ["feedable"]
+      },
+      "FqiH7TZBFxCTiQ2wqq7K4GoquhhgwDKtjfPjyLRgBxSP": {
+        "buckets": ["feedable"]
+      },
+      "4Jq46aS6GqmA2csn17fegw5pAcWPz2ENS8WkMjyM3YRi": {
+        "buckets": ["not_feedable_season", "sell"],
+        "reason": "snapshot_not_held"
+      },
+      "HyQatetoD9arE61WDtCVFC6wr98QRwaxbDE28YxJpump": {
+        "buckets": ["not_feedable_season"],
+        "reason": "snapshot_not_held"
+      },
+      "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "12J6fSpv4j7Xtzjh8BharHY9aSJCBsMgycJsDTdCjHJ": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "buckets": ["not_in_set"],
+        "reason": "not_pump_fun"
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "recordedAt": "2026-10-08T18:28:19.235Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/price/v3?ids=XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN,XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB,XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ,Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu,Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh,XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W,XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX,XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1,Xsv9hRk1z5ystj9MhnA7Lq4vjSsLwzL2nxrwmwtD3re,ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq,cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij,jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL,jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v,mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So,nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7,orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE,pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn,rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof,sSo1wxKKr6zW2hqf5hZrp2CawLibcwi1pMBqk5bg2G4,ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "7",
+      "x-ratelimit-remaining": "3",
+      "x-ratelimit-reset": "1791484100"
+    },
+    "body": {
+      "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN": {
+        "createdAt": "2025-06-11T09:36:43Z",
+        "liquidity": 1115583.6921252797,
+        "usdPrice": 346.73518640787876,
+        "blockId": 454624788,
+        "decimals": 8,
+        "priceChange24h": -0.04067911343723469,
+        "stockData": {
+          "id": "xstocks",
+          "price": 346.92,
+          "mcap": 4286592158265.5,
+          "updatedAt": "2026-10-08T18:24:14.552Z"
+        },
+        "scaledUiConfig": {
+          "multiplier": 1.001926722393864,
+          "newMultiplier": 1.0023772500603487,
+          "newMultiplierEffectiveAt": "2026-09-04T00:30:00Z",
+          "circSupplyPrescaled": 160404.94190773,
+          "totalSupplyPrescaled": 160404.94190773,
+          "usdPricePrescaled": 347.5594626506919
+        }
+      },
+      "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB": {
+        "createdAt": "2025-06-11T09:41:10Z",
+        "liquidity": 1506062.9600129446,
+        "usdPrice": 371.7134407135274,
+        "blockId": 454624837,
+        "decimals": 8,
+        "priceChange24h": -1.1588488387115994,
+        "stockData": {
+          "id": "xstocks",
+          "price": 370.75,
+          "mcap": 1492178500927.14,
+          "updatedAt": "2026-10-08T18:25:03.667Z"
+        }
+      },
+      "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ": {
+        "createdAt": "2025-06-11T09:39:42Z",
+        "liquidity": 1005979.4030299032,
+        "usdPrice": 150.49397217893218,
+        "blockId": 454624881,
+        "decimals": 8,
+        "priceChange24h": -2.5596692545273294,
+        "stockData": {
+          "id": "xstocks",
+          "price": 148.01,
+          "mcap": 61156414030.25,
+          "updatedAt": "2026-10-08T18:24:16.136Z"
+        }
+      },
+      "Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu": {
+        "createdAt": "2025-06-11T09:38:40Z",
+        "liquidity": 592566.4319769916,
+        "usdPrice": 718.942396257975,
+        "blockId": 454624807,
+        "decimals": 8,
+        "priceChange24h": -0.9037781867037921,
+        "stockData": {
+          "id": "xstocks",
+          "price": 717.1451,
+          "mcap": 1837541715154.7498,
+          "updatedAt": "2026-10-08T18:23:09.524Z"
+        },
+        "scaledUiConfig": {
+          "multiplier": 1.002298265651938,
+          "newMultiplier": 1.0028515433272898,
+          "newMultiplierEffectiveAt": "2026-09-19T00:30:00Z",
+          "circSupplyPrescaled": 72376.77143197,
+          "totalSupplyPrescaled": 72376.77143197,
+          "usdPricePrescaled": 720.9924916507301
+        }
+      },
+      "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh": {
+        "createdAt": "2025-06-11T09:39:59Z",
+        "liquidity": 4071144.742292481,
+        "usdPrice": 230.86715783471496,
+        "blockId": 454624883,
+        "decimals": 8,
+        "priceChange24h": -2.521113115476288,
+        "stockData": {
+          "id": "xstocks",
+          "price": 230.25,
+          "mcap": 5734188090000,
+          "updatedAt": "2026-10-08T18:25:22.565Z"
+        },
+        "scaledUiConfig": {
+          "multiplier": 1.0009180758490996,
+          "newMultiplier": 1.001701196801074,
+          "newMultiplierEffectiveAt": "2026-09-10T00:30:00Z",
+          "circSupplyPrescaled": 321264.51498235,
+          "totalSupplyPrescaled": 321264.51498235,
+          "usdPricePrescaled": 231.25990830509645
+        }
+      },
+      "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W": {
+        "createdAt": "2025-06-11T09:41:51Z",
+        "liquidity": 4757359.924197639,
+        "usdPrice": 773.2855005506242,
+        "blockId": 454624853,
+        "decimals": 8,
+        "priceChange24h": -0.5033877876140292,
+        "stockData": {
+          "id": "xstocks",
+          "price": 771.979,
+          "mcap": 697800733753,
+          "updatedAt": "2026-10-08T18:23:38.012Z"
+        },
+        "scaledUiConfig": {
+          "multiplier": 1.003909240011759,
+          "newMultiplier": 1.005714560286254,
+          "newMultiplierEffectiveAt": "2026-06-18T04:00:00Z",
+          "circSupplyPrescaled": 95230.79067184,
+          "totalSupplyPrescaled": 95230.79067184,
+          "usdPricePrescaled": 777.7044871620069
+        }
+      },
+      "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX": {
+        "createdAt": "2025-06-11T09:39:32Z",
+        "liquidity": 895010.8813069061,
+        "usdPrice": 522.6633755233108,
+        "blockId": 454624856,
+        "decimals": 8,
+        "priceChange24h": -1.6217731587720723,
+        "stockData": {
+          "id": "xstocks",
+          "price": 519.025,
+          "mcap": 3933756979312.16,
+          "updatedAt": "2026-10-08T18:25:17.143Z"
+        },
+        "scaledUiConfig": {
+          "multiplier": 1.0045820905025638,
+          "newMultiplier": 1.0059033904787456,
+          "newMultiplierEffectiveAt": "2026-08-20T00:30:00Z",
+          "circSupplyPrescaled": 104969.63744582,
+          "totalSupplyPrescaled": 104969.63744582,
+          "usdPricePrescaled": 525.7488615179642
+        }
+      },
+      "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+        "createdAt": "2025-06-11T09:57:29Z",
+        "liquidity": 1646348.0424095807,
+        "usdPrice": 80.37818255774074,
+        "blockId": 454624790,
+        "decimals": 8,
+        "priceChange24h": -0.9185233835617368,
+        "stockData": {
+          "id": "xstocks",
+          "price": 79.1,
+          "mcap": 20523326220.04,
+          "updatedAt": "2026-10-08T18:25:32.135Z"
+        }
+      },
+      "Xsv9hRk1z5ystj9MhnA7Lq4vjSsLwzL2nxrwmwtD3re": {
+        "createdAt": "2025-06-11T09:42:37Z",
+        "liquidity": 805265.505668791,
+        "usdPrice": 378.50311759452916,
+        "blockId": 454624865,
+        "decimals": 8,
+        "priceChange24h": 0.4565154852156043,
+        "stockData": {
+          "id": "xstocks",
+          "price": 378.42,
+          "mcap": 139858897644,
+          "updatedAt": "2026-10-08T18:23:38.814Z"
+        }
+      },
+      "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": {
+        "createdAt": "2024-06-07T10:56:42.584Z",
+        "liquidity": 54038.56461390536,
+        "usdPrice": 0.010250592137397884,
+        "blockId": 454624855,
+        "decimals": 6,
+        "priceChange24h": -22.254931958698783
+      },
+      "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij": {
+        "createdAt": "2024-10-08T16:54:05Z",
+        "liquidity": 27532312.55692132,
+        "usdPrice": 81323.1473227289,
+        "blockId": 454624883,
+        "decimals": 8,
+        "priceChange24h": -2.3578364268254446
+      },
+      "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL": {
+        "createdAt": "2024-06-07T10:15:02.516Z",
+        "liquidity": 365655.842647562,
+        "usdPrice": 0.5013453932421038,
+        "blockId": 454624796,
+        "decimals": 9,
+        "priceChange24h": -1.4783273691195329
+      },
+      "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v": {
+        "createdAt": "2024-06-07T10:30:07.011Z",
+        "liquidity": 556790966.0817223,
+        "usdPrice": 130.37276666405788,
+        "blockId": 454624848,
+        "decimals": 9,
+        "priceChange24h": -7.618061945034582
+      },
+      "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So": {
+        "createdAt": "2024-06-07T10:30:07.011Z",
+        "liquidity": 241497897.07224673,
+        "usdPrice": 151.465890889416,
+        "blockId": 454624863,
+        "decimals": 9,
+        "priceChange24h": -7.606244398517132
+      },
+      "nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7": {
+        "createdAt": "2024-06-07T10:22:58.336Z",
+        "liquidity": 571162.8612233003,
+        "usdPrice": 0.5379019076089759,
+        "blockId": 454624876,
+        "decimals": 6,
+        "priceChange24h": -1.760497212631796
+      },
+      "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE": {
+        "createdAt": "2024-06-07T10:45:14.408Z",
+        "liquidity": 684556.6399842714,
+        "usdPrice": 2.3280543282238186,
+        "blockId": 454624696,
+        "decimals": 6,
+        "priceChange24h": -17.404125236986996
+      },
+      "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+        "createdAt": "2025-07-10T13:10:28Z",
+        "liquidity": 40620637.36219248,
+        "usdPrice": 0.005543118591823948,
+        "blockId": 454624891,
+        "decimals": 6,
+        "priceChange24h": -11.904575674452284
+      },
+      "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof": {
+        "createdAt": "2024-06-07T10:30:07.011Z",
+        "liquidity": 382649.14279160794,
+        "usdPrice": 1.8232869494681345,
+        "blockId": 454624849,
+        "decimals": 8,
+        "priceChange24h": -11.633168014207259
+      },
+      "sSo1wxKKr6zW2hqf5hZrp2CawLibcwi1pMBqk5bg2G4": {
+        "liquidity": 9716924.68524136,
+        "usdPrice": 136.57355727909146,
+        "blockId": 454306360,
+        "decimals": 9
+      },
+      "ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82": {
+        "createdAt": "2024-06-07T10:15:02.516Z",
+        "liquidity": 17208573.033291806,
+        "usdPrice": 0.0010164848693719314,
+        "blockId": 454624874,
+        "decimals": 6,
+        "priceChange24h": 6.787763443851263
+      }
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+ "note": "Film times in seconds (sync point of each SFX) on the 25 s score (bed-25s.wav: groove 2, riser 8, drop 10, hit accent 14, driving 16, lift 20, final hit 22). Gains in dB relative to the kit file (-1 dBTP); the bed plays at -6 dB.",
+ "bed": "bed-25s.wav",
+ "duration": 25.0,
+ "sfx": [
+  {
+   "at": 0.0,
+   "file": "crt-power-on.wav",
+   "gain_db": -5
+  },
+  {
+   "at": 1.0,
+   "file": "ui-tick.wav",
+   "gain_db": -13
+  },
+  {
+   "at": 2.0,
+   "file": "whoosh-short.wav",
+   "gain_db": -12,
+   "pan": 0.3,
+   "rate": 0.85
+  },
+  {
+   "at": 3.5,
+   "file": "whoosh-short.wav",
+   "gain_db": -10,
+   "pan": -0.2
+  },
+  {
+   "at": 4.0,
+   "file": "ui-tick.wav",
+   "gain_db": -10,
+   "pan": 0.2
+  },
+  {
+   "at": 4.25,
+   "file": "ui-tick.wav",
+   "gain_db": -10,
+   "pan": 0.25
+  },
+  {
+   "at": 4.5,
+   "file": "ui-tick.wav",
+   "gain_db": -10,
+   "pan": 0.3
+  },
+  {
+   "at": 4.75,
+   "file": "ui-tick.wav",
+   "gain_db": -10,
+   "pan": 0.35
+  },
+  {
+   "at": 4.76,
+   "file": "coin-sparkle.wav",
+   "gain_db": -16,
+   "pan": 0.3
+  },
+  {
+   "at": 5.0,
+   "file": "whoosh-short.wav",
+   "gain_db": -13,
+   "pan": 0.2
+  },
+  {
+   "at": 5.0,
+   "file": "foil-shimmer.wav",
+   "gain_db": -16
+  },
+  {
+   "at": 5.36,
+   "file": "card-flip-1.wav",
+   "gain_db": -12,
+   "pan": -0.3
+  },
+  {
+   "at": 5.44,
+   "file": "card-flip-2.wav",
+   "gain_db": -12,
+   "pan": -0.1
+  },
+  {
+   "at": 5.52,
+   "file": "card-flip-3.wav",
+   "gain_db": -12,
+   "pan": 0.1
+  },
+  {
+   "at": 5.6,
+   "file": "card-flip-1.wav",
+   "gain_db": -12,
+   "pan": 0.3
+  },
+  {
+   "at": 6.0,
+   "file": "whoosh-short.wav",
+   "gain_db": -11,
+   "pan": -0.3
+  },
+  {
+   "at": 6.12,
+   "file": "ui-tick.wav",
+   "gain_db": -12,
+   "pan": 0.2
+  },
+  {
+   "at": 6.5,
+   "file": "ui-tick.wav",
+   "gain_db": -9,
+   "pan": 0.2
+  },
+  {
+   "at": 6.52,
+   "file": "coin-sparkle.wav",
+   "gain_db": -13,
+   "pan": 0.2
+  },
+  {
+   "at": 7.0,
+   "file": "ui-tick.wav",
+   "gain_db": -8,
+   "pan": 0.1
+  },
+  {
+   "at": 7.0,
+   "file": "foil-shimmer.wav",
+   "gain_db": -14,
+   "pan": 0.1
+  },
+  {
+   "at": 7.8,
+   "file": "whoosh-short.wav",
+   "gain_db": -10,
+   "pan": 0.2
+  },
+  {
+   "at": 8.3,
+   "file": "ui-tick.wav",
+   "gain_db": -10
+  },
+  {
+   "at": 8.47,
+   "file": "foil-shimmer.wav",
+   "gain_db": -15
+  },
+  {
+   "at": 10.0,
+   "file": "riser-2s.wav",
+   "gain_db": -11
+  },
+  {
+   "at": 10.0,
+   "file": "pack-rip.wav",
+   "gain_db": -6
+  },
+  {
+   "at": 11.0,
+   "file": "card-flip-1.wav",
+   "gain_db": -9,
+   "pan": -0.6
+  },
+  {
+   "at": 11.5,
+   "file": "card-flip-2.wav",
+   "gain_db": -9,
+   "pan": -0.25
+  },
+  {
+   "at": 12.0,
+   "file": "card-flip-3.wav",
+   "gain_db": -9,
+   "pan": 0.25
+  },
+  {
+   "at": 12.5,
+   "file": "card-flip-1.wav",
+   "gain_db": -9,
+   "pan": 0.6
+  },
+  {
+   "at": 14.0,
+   "file": "whoosh-long.wav",
+   "gain_db": -12
+  },
+  {
+   "at": 14.0,
+   "file": "big-impact.wav",
+   "gain_db": -5
+  },
+  {
+   "at": 14.05,
+   "file": "coin-sparkle.wav",
+   "gain_db": -10
+  },
+  {
+   "at": 14.1,
+   "file": "foil-shimmer.wav",
+   "gain_db": -14
+  },
+  {
+   "at": 16.0,
+   "file": "whoosh-short.wav",
+   "gain_db": -9,
+   "pan": 0.4
+  },
+  {
+   "at": 16.0,
+   "file": "ui-tick.wav",
+   "gain_db": -11
+  },
+  {
+   "at": 16.18,
+   "file": "ui-tick.wav",
+   "gain_db": -12,
+   "pan": -0.3
+  },
+  {
+   "at": 16.3,
+   "file": "foil-shimmer.wav",
+   "gain_db": -16,
+   "pan": 0.3
+  },
+  {
+   "at": 17.0,
+   "file": "ui-tick.wav",
+   "gain_db": -11
+  },
+  {
+   "at": 17.12,
+   "file": "ui-tick.wav",
+   "gain_db": -13,
+   "pan": -0.3
+  },
+  {
+   "at": 17.95,
+   "file": "whoosh-short.wav",
+   "gain_db": -11,
+   "pan": -0.3
+  },
+  {
+   "at": 18.0,
+   "file": "coin-sparkle.wav",
+   "gain_db": -7,
+   "pan": -0.2
+  },
+  {
+   "at": 18.0,
+   "file": "ui-tick.wav",
+   "gain_db": -9,
+   "pan": -0.3
+  },
+  {
+   "at": 18.12,
+   "file": "ui-tick.wav",
+   "gain_db": -18,
+   "pan": 0.3
+  },
+  {
+   "at": 18.22,
+   "file": "ui-tick.wav",
+   "gain_db": -18,
+   "pan": 0.3
+  },
+  {
+   "at": 18.32,
+   "file": "ui-tick.wav",
+   "gain_db": -18,
+   "pan": 0.3
+  },
+  {
+   "at": 18.42,
+   "file": "ui-tick.wav",
+   "gain_db": -18,
+   "pan": 0.3
+  },
+  {
+   "at": 18.52,
+   "file": "ui-tick.wav",
+   "gain_db": -18,
+   "pan": 0.3
+  },
+  {
+   "at": 18.62,
+   "file": "coin-sparkle.wav",
+   "gain_db": -15,
+   "pan": 0.3
+  },
+  {
+   "at": 19.55,
+   "file": "foil-shimmer.wav",
+   "gain_db": -13
+  },
+  {
+   "at": 20.0,
+   "file": "ui-tick.wav",
+   "gain_db": -11
+  },
+  {
+   "at": 20.02,
+   "file": "coin-sparkle.wav",
+   "gain_db": -12
+  },
+  {
+   "at": 20.2,
+   "file": "foil-shimmer.wav",
+   "gain_db": -16,
+   "pan": 0.2
+  },
+  {
+   "at": 22.0,
+   "file": "riser-2s.wav",
+   "gain_db": -13
+  },
+  {
+   "at": 22.0,
+   "file": "big-impact.wav",
+   "gain_db": -6
+  }
+ ]
+}

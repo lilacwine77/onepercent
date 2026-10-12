@@ -1,0 +1,4 @@
+/* My cards inside the shell (its page box is in styles.css). The module's wallet dock is fixed at the bottom: keep the footer's last line clear. */
+body:has(.mc-root) .app-footer {
+  padding-bottom: 120px;
+}

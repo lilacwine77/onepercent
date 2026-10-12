@@ -1,0 +1,122 @@
+{
+  "provenance": {
+    "kind": "fresh local-validator transactions",
+    "programId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "programSha256": "8a87be50958865b5c977e195ef0ba9e1b4d5976c74c99202384b1d3a986a9547",
+    "mockVrfSha256": "0441521d6f43879bdce7c95af5078b674532c1a35b5023e4bba3a34af8728c6e",
+    "fixtureExporterSha256": "543222d973e7b5fcca73624614879a8df09d36c130f60f92e443e65cbe28f7ce",
+    "artifactDirectory": "~/.codex/worktrees/m4.2-launch-tools/1%/app/target/deploy",
+    "provider": "test mock VRF",
+    "providerProofVerified": false,
+    "startedAt": "2026-10-09T20:21:14.733Z",
+    "artifactGitCommit": null,
+    "artifactSourceNote": "Read-only artifact reused in place. Its build commit is not certified; the SHA-256 is the artifact identity."
+  },
+  "result": "passed",
+  "recordedAt": "2026-10-09T20:21:28.593Z",
+  "transactionsSent": 24,
+  "pulls": [],
+  "checks": [
+    "Pre-aged Pull refunded on chain",
+    "All six tiers match confirmed events and reveal adapters",
+    "Special cards expose Redeem only",
+    "Verify accepts every injected callback",
+    "Binder identities equal My cards props",
+    "Settle lands without a keeper and retains the royalty memo",
+    "Nine Redeems use two descending transactions"
+  ],
+  "sdkChecks": {
+    "result": "passed",
+    "browserVerified": false,
+    "injectedTiers": [
+      {
+        "tier": 6,
+        "seq": "2",
+        "pull": "GtRT7sPbEYRcB6xBfoMG1RNMqvWkgHs8Pbh91pz7vTcw",
+        "callback": "4WhRxtyfTi7ZDDJPUnT13cXKT6khQSERJSxJ8afdJnLmxHyarv6mp6iEz1KsXhUfUb8NVZo7SoZz9FFsA2rPv5o9",
+        "amount": "10000000000000"
+      },
+      {
+        "tier": 5,
+        "seq": "3",
+        "pull": "GdBeSpkf9sGG8AzRkVnhjsmp8xzgiATua1ZPGMz6ZnHV",
+        "callback": "7aca8pDATkaXUuido2gb1NgzsS73NqUxnKteCa4xhURezXFfVRxFXLvkAu8DhAGELB4k9tvgPqxFm4Ygr7xfDsb",
+        "amount": "10000000000000"
+      },
+      {
+        "tier": 1,
+        "seq": "4",
+        "pull": "5TrXvpFU69yBG8PRSeSg3u961rcBrqTTGes3PgdRqK8f",
+        "callback": "4iT3RwNTkf4hyvjZZ9EBL4WcdyWMujMBY7spEzhcYgY2yU2pdyxaefPfgYViQWsvesjABwwrsJaUjMJhyUq5VsWJ",
+        "amount": "166666666"
+      },
+      {
+        "tier": 2,
+        "seq": "5",
+        "pull": "BhE1MUoKsfNznE4SYNBp8YRyvnWXJEKckCN8scxr8GoB",
+        "callback": "273Q8ASwKazUtJhDUZihH5fPUeTy6guCDZMEHnFLb2JhJ8nTUmGHQu16MYhPKkj97i2q2PP6KCDb4JnGPHak14wC",
+        "amount": "500000000"
+      },
+      {
+        "tier": 3,
+        "seq": "6",
+        "pull": "DrSQPGujhkTCPKuG81KpJFWVibH7ishGiVvptHcywRcW",
+        "callback": "46L9oHCsViQ3ATdXvJrUwnQkJHdGT9aHVUoFnnaD1eepWXW2hacYJjYSAu7FzCoDu6E7teCTnNsMvm7zN2jmZGhN",
+        "amount": "1333333333"
+      },
+      {
+        "tier": 4,
+        "seq": "7",
+        "pull": "AiUGuDGvn33GEzKsgkye6EpqNCEXLnXz9YSYbPmELAA7",
+        "callback": "5C3kSSa22KdZcChQtqQFWmpWA4gL19uBnEKs6X5dmVzQeAf51V7NYa8CwdTrGrNL8X3z6i16QdbomcsHFoSmpvZS",
+        "amount": "5000000000"
+      }
+    ],
+    "signatures": [
+      "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"
+    ],
+    "checks": [
+      "Pre-aged Pull refunded on chain",
+      "All six tiers match confirmed events and reveal adapters",
+      "Special cards expose Redeem only",
+      "Verify accepts every injected callback",
+      "Binder identities equal My cards props",
+      "Settle lands without a keeper and retains the royalty memo",
+      "Nine Redeems use two descending transactions"
+    ]
+  },
+  "timing": {
+    "context": "local mock provider, includes explicit fulfillment and adapter validation"
+  },
+  "browserVerified": false,
+  "deferred": [
+    "W3 browser interactions including Turbo and RipLine",
+    "P2 Sell, Feed back, withdraw owed and Close on-chain validation",
+    "The 1% and Jackpot injection",
+    "devnet deployment and real VRF provider"
+  ],
+  "freshPulls": 6
+}

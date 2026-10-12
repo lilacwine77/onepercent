@@ -1,0 +1,182 @@
+{
+  "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "metadata": {
+    "name": "onepercent",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "The 1% Machine program scaffold"
+  },
+  "instructions": [],
+  "events": [
+    {
+      "name": "CreatorFeesCollected",
+      "discriminator": [117, 190, 177, 156, 222, 94, 28, 227]
+    },
+    {
+      "name": "FinalPullStarted",
+      "discriminator": [21, 245, 187, 190, 193, 155, 59, 67]
+    },
+    {
+      "name": "FinalSolClaimed",
+      "discriminator": [65, 112, 28, 121, 191, 36, 31, 108]
+    },
+    {
+      "name": "FinalTokensClaimed",
+      "discriminator": [255, 146, 0, 44, 20, 46, 74, 176]
+    },
+    {
+      "name": "JackpotWon",
+      "discriminator": [37, 157, 14, 36, 53, 182, 158, 175]
+    },
+    {
+      "name": "LaunchFeesClaimed",
+      "discriminator": [152, 122, 245, 108, 47, 244, 90, 137]
+    },
+    {
+      "name": "OnePctLive",
+      "discriminator": [2, 87, 19, 52, 232, 126, 79, 135]
+    },
+    {
+      "name": "OnePctPulled",
+      "discriminator": [202, 206, 162, 61, 142, 233, 44, 0]
+    },
+    {
+      "name": "PoweredOn",
+      "discriminator": [204, 98, 220, 180, 5, 183, 97, 125]
+    }
+  ],
+  "types": [
+    {
+      "name": "CreatorFeesCollected",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "regime", "type": "u8" },
+          { "name": "amount", "type": "u64" },
+          { "name": "from_fee_in", "type": "u64" },
+          { "name": "from_wsol", "type": "u64" },
+          { "name": "to_stock", "type": "u64" },
+          { "name": "to_burn", "type": "u64" },
+          { "name": "to_team", "type": "u64" },
+          { "name": "book", "type": "u64" },
+          { "name": "target", "type": "u64" },
+          { "name": "ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "FinalPullStarted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "final_ts", "type": "i64" },
+          { "name": "pool_sol", "type": "u64" },
+          { "name": "pool_1pct", "type": "u64" },
+          { "name": "jackpot_tokens", "type": "u64" },
+          { "name": "onepct_final_mask", "type": "u8" },
+          { "name": "total_spend", "type": "u64" },
+          { "name": "bucket_pools", "type": { "array": ["u64", 16] } }
+        ]
+      }
+    },
+    {
+      "name": "FinalSolClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "pubkey" },
+          { "name": "share", "type": "u64" },
+          { "name": "paid", "type": "u64" },
+          { "name": "to_owed", "type": "bool" },
+          { "name": "remaining", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "FinalTokensClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "pubkey" },
+          { "name": "onepct", "type": "u64" },
+          { "name": "buckets", "type": { "array": ["u64", 16] } },
+          { "name": "cards", "type": "u8" },
+          { "name": "slot_rent", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "JackpotWon",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "buyer", "type": "pubkey" },
+          { "name": "edition", "type": "u8" },
+          { "name": "tokens", "type": "u64" },
+          { "name": "cost", "type": "u64" },
+          { "name": "jackpot_sol_left", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "LaunchFeesClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "kind", "type": "u8" },
+          { "name": "pool", "type": "pubkey" },
+          { "name": "quote", "type": "u64" },
+          { "name": "base", "type": "u64" },
+          { "name": "unwrapped_lamports", "type": "u64" },
+          { "name": "ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "OnePctLive",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "index", "type": "u8" },
+          { "name": "release_ts", "type": "i64" },
+          { "name": "ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "OnePctPulled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "index", "type": "u8" },
+          { "name": "buyer", "type": "pubkey" },
+          { "name": "amount", "type": "u64" },
+          { "name": "holder", "type": "bool" }
+        ]
+      }
+    },
+    {
+      "name": "PoweredOn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "mint", "type": "pubkey" },
+          { "name": "launch_pool", "type": "pubkey" },
+          { "name": "fee_in", "type": "pubkey" },
+          { "name": "launch_wallet", "type": "pubkey" },
+          { "name": "dev_buy", "type": "u64" },
+          { "name": "vault_amount", "type": "u64" },
+          { "name": "accounted", "type": "u64" },
+          { "name": "fee_in_topup", "type": "u64" },
+          { "name": "power_on_ts", "type": "i64" },
+          { "name": "on_air_ts", "type": "i64" },
+          { "name": "end_ts", "type": "i64" }
+        ]
+      }
+    }
+  ]
+}

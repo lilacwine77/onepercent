@@ -1,0 +1,118 @@
+{
+  "recordedAt": "2026-10-08T18:42:49.077Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&outputMint=So11111111111111111111111111111111111111112&amount=6720914236886&swapMode=ExactIn"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "8",
+      "x-ratelimit-remaining": "2",
+      "x-ratelimit-reset": "1791484969"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "6720914236886",
+      "outAmount": "1996572220",
+      "otherAmountThreshold": "1996572220",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.001387933012110098",
+      "routePlan": [
+        {
+          "percent": 55.1,
+          "bps": 5510,
+          "usdValue": 118.62699557468777,
+          "swapInfo": {
+            "ammKey": "5Dp922oSaj9rdLHTxZzq1B7QV7KmwY7U7K1JNCRhc45J",
+            "label": "ZeroFi",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "3703354045665",
+            "outAmount": "118812506"
+          }
+        },
+        {
+          "percent": 44.9,
+          "bps": 4490,
+          "usdValue": 96.66700728318479,
+          "swapInfo": {
+            "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+            "label": "Scorch",
+            "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "inAmount": "3017560191221",
+            "outAmount": "96796700"
+          }
+        },
+        {
+          "percent": 96.98,
+          "bps": 9698,
+          "usdValue": 208.79212397156482,
+          "swapInfo": {
+            "ammKey": "FLckHLGMJy5gEoXWwcE68Nprde1D4araK4TGLw4pQq2n",
+            "label": "TesseraV",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "209089030",
+            "outAmount": "1938130294"
+          }
+        },
+        {
+          "percent": 3.02,
+          "bps": 302,
+          "usdValue": 6.501878886307751,
+          "swapInfo": {
+            "ammKey": "Pi9nzTjPxD8DsRfRBGfKYzmefJoJM8TcXu2jyaQjSHm",
+            "label": "AlphaQ",
+            "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "outputMint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+            "inAmount": "6520176",
+            "outAmount": "6524103"
+          }
+        },
+        {
+          "percent": 100,
+          "bps": 10000,
+          "usdValue": 6.501878886307751,
+          "swapInfo": {
+            "ammKey": "FwewVm8u6tFPGewAyHmWAqad9hmF7mvqxK4mJ7iNqqGC",
+            "label": "Whirlpool",
+            "inputMint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "6524103",
+            "outAmount": "60440496"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd3-3fd2-76c8-8620-00ef87165734",
+      "inUsdValue": 215.59323182150513,
+      "outUsdValue": 215.29400285787256,
+      "swapUsdValue": 215.29400285787256,
+      "priceImpact": -0.1387933012110098,
+      "mode": "ultra",
+      "totalTime": 210
+    }
+  }
+}

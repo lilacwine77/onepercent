@@ -1,0 +1,76 @@
+.link-page {
+  display: grid;
+  min-height: 100svh;
+  padding: clamp(24px, 6vw, 80px);
+  align-items: center;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Sans", "DM Sans Fallback", sans-serif;
+}
+
+.link-content {
+  width: min(100%, 660px);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.link-title {
+  max-width: 13ch;
+  margin: 0;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.link-sub {
+  max-width: 34ch;
+  margin: 24px 0 0;
+  font-size: clamp(17px, 2.5vw, 20px);
+  line-height: 1.5;
+}
+
+.link-status {
+  max-width: 44ch;
+  min-height: 1.5em;
+  margin: 32px 0 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.link-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.link-button {
+  display: inline-flex;
+  min-height: 48px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--cream);
+  background: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background: var(--plum);
+}
+
+.link-button:focus-visible {
+  outline: none;
+  border-color: var(--lilac);
+  box-shadow: inset 0 0 0 1px var(--cream);
+}

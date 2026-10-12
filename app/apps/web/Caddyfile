@@ -1,0 +1,70 @@
+{
+	admin off
+	auto_https off
+	servers {
+		# Railway's edge reaches the container from private/CGNAT ranges. The
+		# right-most untrusted X-Forwarded-For entry becomes {client_ip}.
+		trusted_proxies static private_ranges 100.64.0.0/10
+		trusted_proxies_strict
+	}
+}
+
+:{$PORT:8080} {
+	root * /srv
+
+	header {
+		>Content-Security-Policy "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self'; img-src 'self' data: blob:; style-src 'self'; font-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+		>Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		>X-Content-Type-Options nosniff
+		>Referrer-Policy strict-origin-when-cross-origin
+		>Permissions-Policy "camera=(), microphone=(), geolocation=()"
+	}
+
+	handle /api/stream {
+		reverse_proxy {$API_UPSTREAM} {
+			header_up X-Real-IP {client_ip}
+			flush_interval -1
+			header_up Accept-Encoding identity
+			header_down Cache-Control "no-cache, no-transform"
+			header_down X-Accel-Buffering no
+		}
+	}
+
+	@share path /x/*
+	handle @share {
+		reverse_proxy {$API_UPSTREAM} {
+			header_up X-Real-IP {client_ip}
+			header_down Cache-Control no-cache
+		}
+	}
+
+	@api path /api/* /actions.json
+	handle @api {
+		reverse_proxy {$API_UPSTREAM} {
+			header_up X-Real-IP {client_ip}
+		}
+	}
+
+	@static path /assets/* /landing/* /experience/*
+	handle @static {
+		encode zstd gzip
+		@immutable {
+			path /assets/*
+			file {path}
+		}
+		header @immutable Cache-Control "public, max-age=31536000, immutable"
+		@glb path *.glb
+		header @glb Content-Type model/gltf-binary
+		file_server
+	}
+
+	handle {
+		encode zstd gzip
+		route {
+			try_files {path} /index.html
+			@html path /index.html *.html
+			header @html Cache-Control no-cache
+			file_server
+		}
+	}
+}

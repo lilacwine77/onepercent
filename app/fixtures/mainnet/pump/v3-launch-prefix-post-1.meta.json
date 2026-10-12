@@ -1,0 +1,11 @@
+{
+  "address": "EFRpGKN6aEqP5ERT2WCBn3CqVx7FTP1Jf9UVwWnT8U7t",
+  "slot": 454748210,
+  "checkedAt": "2026-10-09T03:41:00.871Z",
+  "simulated": true,
+  "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "lamports": 1172161480,
+  "executable": false,
+  "bytes": 166,
+  "sha256": "fc8c8ff14d6c37cbe5648cb085581684fb81c69633c94073c0bfa9a0d63713d4"
+}

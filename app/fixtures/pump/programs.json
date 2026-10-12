@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-09T03:35:52.728Z",
+  "programs": [
+    {
+      "name": "pump",
+      "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "lamports": 9393912471,
+      "executable": true,
+      "slot": 454747012,
+      "checkedAt": "2026-10-09T03:35:52.728Z",
+      "bytes": 36,
+      "sha256": "8101492b544ce08703d5de95363bf796e7e4cd17d03639cfe603071fb59652eb",
+      "programDataAddress": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+      "deploySlot": 454596459,
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "binaryBytes": 10485715,
+      "binarySha256": "a4b32d322295a15666b1293e0028b9b75d688bfce10b574e1094f249f2ce9f16",
+      "programDataReadSlot": 454747012
+    },
+    {
+      "name": "pump_amm",
+      "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "lamports": 1260746836,
+      "executable": true,
+      "slot": 454747020,
+      "checkedAt": "2026-10-09T03:35:52.728Z",
+      "bytes": 36,
+      "sha256": "8a28beaa6366bb6236a8b455b61b280f430b4da6583becf73fd229886844e0da",
+      "programDataAddress": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+      "deploySlot": 454596406,
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "binaryBytes": 10485715,
+      "binarySha256": "a8d05e6927cc6e861d3052a9bf2258ce3a4588f47307d53d0c20ecbe0b86697e",
+      "programDataReadSlot": 454747019
+    },
+    {
+      "name": "pump_fees",
+      "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "lamports": 6046721,
+      "executable": true,
+      "slot": 454747025,
+      "checkedAt": "2026-10-09T03:35:52.728Z",
+      "bytes": 36,
+      "sha256": "cc9077315efa761cfe0b52aae08678ccda2a07e0fa2b374c98a1d51a1b4ce079",
+      "programDataAddress": "75Uu23mqWBb8LM8vDppqC1mQAnCcBuLXhVaDezVMQLRw",
+      "deploySlot": 454596501,
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "binaryBytes": 948944,
+      "binarySha256": "73c679c8dae8d24153fdd0455b557b73662e93ab2ec88831a9e4be2b08a897a4",
+      "programDataReadSlot": 454747025
+    },
+    {
+      "name": "mayhem",
+      "address": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "lamports": 11149834,
+      "executable": true,
+      "slot": 454747029,
+      "checkedAt": "2026-10-09T03:35:52.728Z",
+      "bytes": 36,
+      "sha256": "c06afe39a901bccfcff73e60c84e27c49dddf8dad28c592a16f11305a993f45d",
+      "programDataAddress": "4TXghKDfUy26yBMjicyfSfAp995GbLtNvW1d1uPSknub",
+      "deploySlot": 452655053,
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "binaryBytes": 777408,
+      "binarySha256": "a87fa9f866272514e6acb852b668c4a08aeb173d56c883039991d114d1199bdb",
+      "programDataReadSlot": 454747029
+    }
+  ]
+}

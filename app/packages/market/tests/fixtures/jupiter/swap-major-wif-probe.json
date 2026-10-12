@@ -1,0 +1,84 @@
+{
+  "recordedAt": "2026-10-08T18:42:24.988Z",
+  "request": {
+    "method": "GET",
+    "url": "https://api.jup.ag/swap/v2/order?inputMint=EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm&outputMint=So11111111111111111111111111111111111111112&amount=78542663418&swapMode=ExactIn&excludeRouters=jupiterz%2Cdflow%2Cokx"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-ratelimit-current": "2",
+      "x-ratelimit-remaining": "8",
+      "x-ratelimit-reset": "1791484953"
+    },
+    "body": {
+      "swapType": "aggregator",
+      "inAmount": "78542663418",
+      "outAmount": "148822812898",
+      "otherAmountThreshold": "148822812898",
+      "swapMode": "ExactIn",
+      "slippageBps": 0,
+      "priceImpactPct": "-0.008227004397972243",
+      "routePlan": [
+        {
+          "percent": 5.88,
+          "bps": 588,
+          "usdValue": 943.501587561666,
+          "swapInfo": {
+            "ammKey": "D6NdKrKNQPmRZCCnG1GqXtF7MMoHB7qR6GU5TkG59Qz1",
+            "label": "Whirlpool",
+            "inputMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "4614425835",
+            "outAmount": "8760325452"
+          }
+        },
+        {
+          "percent": 94.12,
+          "bps": 9412,
+          "usdValue": 15102.443779133335,
+          "swapInfo": {
+            "ammKey": "EP2ib6dYdEeqD8MfE2ezHCxX3kP3K2eLKkirfPm5eyMx",
+            "label": "Raydium",
+            "inputMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+            "outputMint": "So11111111111111111111111111111111111111112",
+            "inAmount": "73928237583",
+            "outAmount": "140211459230"
+          }
+        }
+      ],
+      "feeMint": "So11111111111111111111111111111111111111112",
+      "feeBps": 10,
+      "platformFee": {
+        "feeBps": 10,
+        "feeMint": "So11111111111111111111111111111111111111112"
+      },
+      "signatureFeeLamports": 0,
+      "signatureFeePayer": null,
+      "prioritizationFeeLamports": 0,
+      "prioritizationFeePayer": null,
+      "rentFeeLamports": 0,
+      "rentFeePayer": null,
+      "transaction": null,
+      "gasless": false,
+      "jitOptimized": false,
+      "taker": null,
+      "inputMint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "outputMint": "So11111111111111111111111111111111111111112",
+      "router": "metis",
+      "guaranteedPrice": false,
+      "requestId": "01a11cd2-e0da-7598-9bf5-c517958d63b7",
+      "inUsdValue": 16179.050486199983,
+      "outUsdValue": 16045.945366695001,
+      "swapUsdValue": 16045.945366695001,
+      "priceImpact": -0.8227004397972243,
+      "mode": "manual",
+      "totalTime": 278
+    }
+  },
+  "provenance": {
+    "note": "Real quote for the exact bigint probe amount computed from the approved synthetic Pyth snapshots; not live oracle evidence.",
+    "solFixture": "../pyth/latest-sol.json",
+    "tokenFixture": "../pyth/latest-wif.json"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-10-08T18:42:41.049Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "slot": 454628036,
+          "apiVersion": "4.3.0-alpha.2"
+        },
+        "value": {
+          "lamports": 2179320,
+          "data": [
+            "8ZptBBGxbbz7AAAyJPA9c2Ajtzlyf1NJC3l4AWnJ3OWhjv2m2qAbYzbxal3HITRToQ/AE7LMSKOL0hImUxml21xxYMtlURU26cl6BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEcxO8cmQqPzQ5j69MKJggOsrLmAj1IGqS6iT2o/V54yF9rMA/vHtoH8CMxQ/HnxhA6lY9nL7DqhTktCzYgHzDTb72oW/rj4yKujbJUzAlyiN6DjWNn5FsPEOoVSGXUIvtX4di60AMAAOZExIwqIFRKDmyxpSyZAHdWpBAw5Uq1+nbAT5OEk+JBAADv////////////////////AAAAAAAAAAAAABuU9gAAAAAALxqRHgAAAAAAAAAAAAAAAAAAAAAAAA==",
+            "base64"
+          ],
+          "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 301
+        }
+      },
+      "id": 1
+    }
+  },
+  "synthetic": {
+    "from": "pool-pqc.json",
+    "edit": "Signed virtual quote reserves set to negative seventeen; the real vault is unchanged."
+  }
+}

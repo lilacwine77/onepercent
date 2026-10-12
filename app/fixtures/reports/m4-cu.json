@@ -1,0 +1,8691 @@
+{
+  "cases": [
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 25040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 32650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 18109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 27219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 0,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 0,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 0,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 0,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 0,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 1
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 1
+    },
+    {
+      "bytes": 593,
+      "cu": 31040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 1
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 1
+    },
+    {
+      "bytes": 593,
+      "cu": 24109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 1
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 1
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 1,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 1,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 1,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 1,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 1,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 20570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 2
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 2
+    },
+    {
+      "bytes": 593,
+      "cu": 26540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 2
+    },
+    {
+      "bytes": 593,
+      "cu": 25150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 2
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 2
+    },
+    {
+      "bytes": 593,
+      "cu": 19719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 2
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 2,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 2,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 2,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 2,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 2,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 3
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 3
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 3
+    },
+    {
+      "bytes": 593,
+      "cu": 31150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 3
+    },
+    {
+      "bytes": 593,
+      "cu": 24109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 3
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 3
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 3,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 3,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 3,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 3,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 3,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 4
+    },
+    {
+      "bytes": 593,
+      "cu": 26680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 4
+    },
+    {
+      "bytes": 593,
+      "cu": 25040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 4
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 4
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 4
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 4
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 4,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 4,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 4,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 4,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 4,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 5
+    },
+    {
+      "bytes": 593,
+      "cu": 35680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 5
+    },
+    {
+      "bytes": 593,
+      "cu": 32540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 5
+    },
+    {
+      "bytes": 593,
+      "cu": 32650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 5
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 5
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 5
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 5,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 5,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 5,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 5,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 5,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 6
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 6
+    },
+    {
+      "bytes": 593,
+      "cu": 32540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 6
+    },
+    {
+      "bytes": 593,
+      "cu": 25150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 6
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 6
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 6
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 6,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 6,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 6,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 6,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 6,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 7
+    },
+    {
+      "bytes": 593,
+      "cu": 22180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 7
+    },
+    {
+      "bytes": 593,
+      "cu": 29540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 7
+    },
+    {
+      "bytes": 593,
+      "cu": 31150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 7
+    },
+    {
+      "bytes": 593,
+      "cu": 31609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 7
+    },
+    {
+      "bytes": 593,
+      "cu": 28719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 7
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 7,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 7,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 7,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 7,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 7,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 29570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 8
+    },
+    {
+      "bytes": 593,
+      "cu": 26680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 8
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 8
+    },
+    {
+      "bytes": 593,
+      "cu": 26650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 8
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 8
+    },
+    {
+      "bytes": 593,
+      "cu": 19719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 8
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 8,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 8,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 8,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 8,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 8,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 31070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 9
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 9
+    },
+    {
+      "bytes": 593,
+      "cu": 34040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 9
+    },
+    {
+      "bytes": 593,
+      "cu": 26650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 9
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 9
+    },
+    {
+      "bytes": 593,
+      "cu": 27219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 9
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 9,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 9,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 9,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 9,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 9,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 10
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 10
+    },
+    {
+      "bytes": 593,
+      "cu": 25040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 10
+    },
+    {
+      "bytes": 593,
+      "cu": 26650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 10
+    },
+    {
+      "bytes": 593,
+      "cu": 18109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 10
+    },
+    {
+      "bytes": 593,
+      "cu": 27219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 10
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 10,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 10,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 10,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 10,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 10,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 25070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 11
+    },
+    {
+      "bytes": 593,
+      "cu": 28180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 11
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 11
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 11
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 11
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 11
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 11,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 11,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 11,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 11,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 11,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 12
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 12
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 12
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 12
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 12
+    },
+    {
+      "bytes": 593,
+      "cu": 28719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 12
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 12,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 12,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 12,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 12,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 12,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 25070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 13
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 13
+    },
+    {
+      "bytes": 593,
+      "cu": 29540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 13
+    },
+    {
+      "bytes": 593,
+      "cu": 25150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 13
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 13
+    },
+    {
+      "bytes": 593,
+      "cu": 25719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 13
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 13,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 13,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 13,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 13,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 13,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 14
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 14
+    },
+    {
+      "bytes": 593,
+      "cu": 26540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 14
+    },
+    {
+      "bytes": 593,
+      "cu": 32650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 14
+    },
+    {
+      "bytes": 593,
+      "cu": 18109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 14
+    },
+    {
+      "bytes": 593,
+      "cu": 28719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 14
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 14,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 14,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 14,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 14,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 14,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 34070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 15
+    },
+    {
+      "bytes": 593,
+      "cu": 29680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 15
+    },
+    {
+      "bytes": 593,
+      "cu": 26540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 15
+    },
+    {
+      "bytes": 593,
+      "cu": 26650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 15
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 15
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 15
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 15,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 15,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 15,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 15,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 15,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 16
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 16
+    },
+    {
+      "bytes": 593,
+      "cu": 25040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 16
+    },
+    {
+      "bytes": 593,
+      "cu": 29650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 16
+    },
+    {
+      "bytes": 593,
+      "cu": 27109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 16
+    },
+    {
+      "bytes": 593,
+      "cu": 27219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 16
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 16,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 16,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 16,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 16,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 16,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 17
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 17
+    },
+    {
+      "bytes": 593,
+      "cu": 26540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 17
+    },
+    {
+      "bytes": 593,
+      "cu": 31150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 17
+    },
+    {
+      "bytes": 593,
+      "cu": 28609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 17
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 17
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 17,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 17,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 17,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 17,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 17,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 25070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 18
+    },
+    {
+      "bytes": 593,
+      "cu": 28180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 18
+    },
+    {
+      "bytes": 593,
+      "cu": 38540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 18
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 18
+    },
+    {
+      "bytes": 593,
+      "cu": 24109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 18
+    },
+    {
+      "bytes": 593,
+      "cu": 19719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 18
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 18,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 18,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 18,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 18,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 18,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 19
+    },
+    {
+      "bytes": 593,
+      "cu": 22180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 19
+    },
+    {
+      "bytes": 593,
+      "cu": 23540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 19
+    },
+    {
+      "bytes": 593,
+      "cu": 32650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 19
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 19
+    },
+    {
+      "bytes": 593,
+      "cu": 27219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 19
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 19,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 19,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 19,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 19,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 19,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 31070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 20
+    },
+    {
+      "bytes": 593,
+      "cu": 28180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 20
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 20
+    },
+    {
+      "bytes": 593,
+      "cu": 29650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 20
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 20
+    },
+    {
+      "bytes": 593,
+      "cu": 19719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 20
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 20,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 20,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 20,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 20,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 20,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 21
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 21
+    },
+    {
+      "bytes": 593,
+      "cu": 40040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 21
+    },
+    {
+      "bytes": 593,
+      "cu": 31150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 21
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 21
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 21
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 21,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 21,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 21,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 21,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 21,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 20570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 22
+    },
+    {
+      "bytes": 593,
+      "cu": 32680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 22
+    },
+    {
+      "bytes": 593,
+      "cu": 31040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 22
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 22
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 22
+    },
+    {
+      "bytes": 593,
+      "cu": 28719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 22
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 22,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 22,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 22,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 22,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 22,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 23
+    },
+    {
+      "bytes": 593,
+      "cu": 22180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 23
+    },
+    {
+      "bytes": 593,
+      "cu": 29540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 23
+    },
+    {
+      "bytes": 593,
+      "cu": 25150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 23
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 23
+    },
+    {
+      "bytes": 593,
+      "cu": 30219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 23
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 23,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 23,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 23,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 23,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 23,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 20570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 24
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 24
+    },
+    {
+      "bytes": 593,
+      "cu": 23540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 24
+    },
+    {
+      "bytes": 593,
+      "cu": 34150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 24
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 24
+    },
+    {
+      "bytes": 593,
+      "cu": 24219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 24
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 24,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 24,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 24,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 24,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 24,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 26570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 25
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 25
+    },
+    {
+      "bytes": 593,
+      "cu": 25040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 25
+    },
+    {
+      "bytes": 593,
+      "cu": 26650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 25
+    },
+    {
+      "bytes": 593,
+      "cu": 22609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 25
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 25
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 25,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 25,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 25,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 25,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 25,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 28070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 26
+    },
+    {
+      "bytes": 593,
+      "cu": 28180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 26
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 26
+    },
+    {
+      "bytes": 593,
+      "cu": 34150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 26
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 26
+    },
+    {
+      "bytes": 593,
+      "cu": 25719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 26
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 26,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 26,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 26,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 26,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 26,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 31070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 27
+    },
+    {
+      "bytes": 593,
+      "cu": 26680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 27
+    },
+    {
+      "bytes": 593,
+      "cu": 31040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 27
+    },
+    {
+      "bytes": 593,
+      "cu": 28150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 27
+    },
+    {
+      "bytes": 593,
+      "cu": 18109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 27
+    },
+    {
+      "bytes": 593,
+      "cu": 31719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 27
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 27,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 27,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 27,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 27,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 27,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 22070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 28
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 28
+    },
+    {
+      "bytes": 593,
+      "cu": 26540,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 28
+    },
+    {
+      "bytes": 593,
+      "cu": 40150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 28
+    },
+    {
+      "bytes": 593,
+      "cu": 19609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 28
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 28
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 28,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 28,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 28,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 28,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 28,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 23570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 29
+    },
+    {
+      "bytes": 593,
+      "cu": 23680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 29
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 29
+    },
+    {
+      "bytes": 593,
+      "cu": 29650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 29
+    },
+    {
+      "bytes": 593,
+      "cu": 18109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 29
+    },
+    {
+      "bytes": 593,
+      "cu": 22719,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 29
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 29,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 29,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 29,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 29,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 29,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 28070,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 30
+    },
+    {
+      "bytes": 593,
+      "cu": 26680,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 30
+    },
+    {
+      "bytes": 593,
+      "cu": 31040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 30
+    },
+    {
+      "bytes": 593,
+      "cu": 29650,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 30
+    },
+    {
+      "bytes": 593,
+      "cu": 28609,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 30
+    },
+    {
+      "bytes": 593,
+      "cu": 21219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 30
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 30,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 30,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 30,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 30,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 30,
+      "stock": 0
+    },
+    {
+      "bytes": 593,
+      "cu": 20570,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 5080,
+      "sample": 31
+    },
+    {
+      "bytes": 593,
+      "cu": 25180,
+      "instruction": "powerOn",
+      "ledger": "new",
+      "rentPerByte": 6960,
+      "sample": 31
+    },
+    {
+      "bytes": 593,
+      "cu": 28040,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 5080,
+      "sample": 31
+    },
+    {
+      "bytes": 593,
+      "cu": 25150,
+      "instruction": "powerOn",
+      "ledger": "prefunded",
+      "rentPerByte": 6960,
+      "sample": 31
+    },
+    {
+      "bytes": 593,
+      "cu": 21109,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 5080,
+      "sample": 31
+    },
+    {
+      "bytes": 593,
+      "cu": 24219,
+      "instruction": "powerOn",
+      "ledger": "existing",
+      "rentPerByte": 6960,
+      "sample": 31
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 2,
+      "sample": 31,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 2,
+      "sample": 31,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13534,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17440,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13571,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 3,
+      "sample": 31,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 17477,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 3,
+      "sample": 31,
+      "stock": 2000000000
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 4,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 4,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 5,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 5,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 13441,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": false,
+      "phase": 6,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 395,
+      "cu": 17347,
+      "instruction": "collectCreatorFees",
+      "nativeWsol": true,
+      "phase": 6,
+      "sample": 31,
+      "stock": 0
+    },
+    {
+      "bytes": 761,
+      "cu": 105479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 0
+    },
+    {
+      "bytes": 778,
+      "cu": 106713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 0
+    },
+    {
+      "bytes": 761,
+      "cu": 90397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 0
+    },
+    {
+      "bytes": 778,
+      "cu": 96131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 0
+    },
+    {
+      "bytes": 825,
+      "cu": 89628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 0
+    },
+    {
+      "bytes": 842,
+      "cu": 102862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 0
+    },
+    {
+      "bytes": 825,
+      "cu": 78958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 0
+    },
+    {
+      "bytes": 842,
+      "cu": 93692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 0
+    },
+    {
+      "bytes": 729,
+      "cu": 65207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 0
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 0
+    },
+    {
+      "bytes": 729,
+      "cu": 54625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 0
+    },
+    {
+      "bytes": 746,
+      "cu": 69359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 0
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 1
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 1
+    },
+    {
+      "bytes": 761,
+      "cu": 87397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 1
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 1
+    },
+    {
+      "bytes": 825,
+      "cu": 103128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 1
+    },
+    {
+      "bytes": 842,
+      "cu": 111862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 1
+    },
+    {
+      "bytes": 825,
+      "cu": 81958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 1
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 1
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 1
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 1
+    },
+    {
+      "bytes": 729,
+      "cu": 54625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 1
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 1
+    },
+    {
+      "bytes": 761,
+      "cu": 87479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 2
+    },
+    {
+      "bytes": 778,
+      "cu": 114213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 2
+    },
+    {
+      "bytes": 761,
+      "cu": 87397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 2
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 2
+    },
+    {
+      "bytes": 825,
+      "cu": 89628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 2
+    },
+    {
+      "bytes": 842,
+      "cu": 111862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 2
+    },
+    {
+      "bytes": 825,
+      "cu": 93958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 2
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 2
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 2
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 2
+    },
+    {
+      "bytes": 729,
+      "cu": 56125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 2
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 2
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 3
+    },
+    {
+      "bytes": 778,
+      "cu": 103713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 3
+    },
+    {
+      "bytes": 761,
+      "cu": 85897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 3
+    },
+    {
+      "bytes": 778,
+      "cu": 99131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 3
+    },
+    {
+      "bytes": 825,
+      "cu": 95628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 3
+    },
+    {
+      "bytes": 842,
+      "cu": 125362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 3
+    },
+    {
+      "bytes": 825,
+      "cu": 75958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 3
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 3
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 3
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 3
+    },
+    {
+      "bytes": 729,
+      "cu": 56125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 3
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 3
+    },
+    {
+      "bytes": 761,
+      "cu": 87479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 4
+    },
+    {
+      "bytes": 778,
+      "cu": 105213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 4
+    },
+    {
+      "bytes": 761,
+      "cu": 76906,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 4
+    },
+    {
+      "bytes": 778,
+      "cu": 91631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 4
+    },
+    {
+      "bytes": 825,
+      "cu": 95628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 4
+    },
+    {
+      "bytes": 842,
+      "cu": 108862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 4
+    },
+    {
+      "bytes": 825,
+      "cu": 74458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 4
+    },
+    {
+      "bytes": 842,
+      "cu": 90723,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 4
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 4
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 4
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 4
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 4
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 5
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 5
+    },
+    {
+      "bytes": 761,
+      "cu": 85897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 5
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 5
+    },
+    {
+      "bytes": 825,
+      "cu": 95628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 5
+    },
+    {
+      "bytes": 842,
+      "cu": 110362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 5
+    },
+    {
+      "bytes": 825,
+      "cu": 80458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 5
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 5
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 5
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 5
+    },
+    {
+      "bytes": 729,
+      "cu": 54625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 5
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 5
+    },
+    {
+      "bytes": 761,
+      "cu": 88979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 6
+    },
+    {
+      "bytes": 778,
+      "cu": 103713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 6
+    },
+    {
+      "bytes": 761,
+      "cu": 82897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 6
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 6
+    },
+    {
+      "bytes": 825,
+      "cu": 91159,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 6
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 6
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 6
+    },
+    {
+      "bytes": 842,
+      "cu": 89192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 6
+    },
+    {
+      "bytes": 729,
+      "cu": 63707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 6
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 6
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 6
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 6
+    },
+    {
+      "bytes": 761,
+      "cu": 93479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 7
+    },
+    {
+      "bytes": 778,
+      "cu": 105213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 7
+    },
+    {
+      "bytes": 761,
+      "cu": 81397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 7
+    },
+    {
+      "bytes": 778,
+      "cu": 106631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 7
+    },
+    {
+      "bytes": 825,
+      "cu": 94128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 7
+    },
+    {
+      "bytes": 842,
+      "cu": 104393,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 7
+    },
+    {
+      "bytes": 825,
+      "cu": 72958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 7
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 7
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 7
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 7
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 7
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 7
+    },
+    {
+      "bytes": 761,
+      "cu": 91979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 8
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 8
+    },
+    {
+      "bytes": 761,
+      "cu": 85897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 8
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 8
+    },
+    {
+      "bytes": 825,
+      "cu": 98628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 8
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 8
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 8
+    },
+    {
+      "bytes": 842,
+      "cu": 93692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 8
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 8
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 8
+    },
+    {
+      "bytes": 729,
+      "cu": 54625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 8
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 8
+    },
+    {
+      "bytes": 761,
+      "cu": 87479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 9
+    },
+    {
+      "bytes": 778,
+      "cu": 103713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 9
+    },
+    {
+      "bytes": 761,
+      "cu": 90397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 9
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 9
+    },
+    {
+      "bytes": 825,
+      "cu": 103159,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 9
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 9
+    },
+    {
+      "bytes": 825,
+      "cu": 74458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 9
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 9
+    },
+    {
+      "bytes": 729,
+      "cu": 63707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 9
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 9
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 9
+    },
+    {
+      "bytes": 746,
+      "cu": 72359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 9
+    },
+    {
+      "bytes": 761,
+      "cu": 87479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 10
+    },
+    {
+      "bytes": 778,
+      "cu": 105213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 10
+    },
+    {
+      "bytes": 761,
+      "cu": 82897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 10
+    },
+    {
+      "bytes": 778,
+      "cu": 114131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 10
+    },
+    {
+      "bytes": 825,
+      "cu": 91137,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 10
+    },
+    {
+      "bytes": 842,
+      "cu": 107362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 10
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 10
+    },
+    {
+      "bytes": 842,
+      "cu": 93692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 10
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 10
+    },
+    {
+      "bytes": 746,
+      "cu": 81441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 10
+    },
+    {
+      "bytes": 729,
+      "cu": 56125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 10
+    },
+    {
+      "bytes": 746,
+      "cu": 67859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 10
+    },
+    {
+      "bytes": 761,
+      "cu": 95010,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 11
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 11
+    },
+    {
+      "bytes": 761,
+      "cu": 81428,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 11
+    },
+    {
+      "bytes": 778,
+      "cu": 96131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 11
+    },
+    {
+      "bytes": 825,
+      "cu": 94128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 11
+    },
+    {
+      "bytes": 842,
+      "cu": 111862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 11
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 11
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 11
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 11
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 11
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 11
+    },
+    {
+      "bytes": 746,
+      "cu": 67859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 11
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 12
+    },
+    {
+      "bytes": 778,
+      "cu": 121713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 12
+    },
+    {
+      "bytes": 761,
+      "cu": 81397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 12
+    },
+    {
+      "bytes": 778,
+      "cu": 108131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 12
+    },
+    {
+      "bytes": 825,
+      "cu": 89628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 12
+    },
+    {
+      "bytes": 842,
+      "cu": 105862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 12
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 12
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 12
+    },
+    {
+      "bytes": 729,
+      "cu": 65207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 12
+    },
+    {
+      "bytes": 746,
+      "cu": 76941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 12
+    },
+    {
+      "bytes": 729,
+      "cu": 57625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 12
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 12
+    },
+    {
+      "bytes": 761,
+      "cu": 103979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 13
+    },
+    {
+      "bytes": 778,
+      "cu": 108222,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 13
+    },
+    {
+      "bytes": 761,
+      "cu": 82897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 13
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 13
+    },
+    {
+      "bytes": 825,
+      "cu": 104628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 13
+    },
+    {
+      "bytes": 842,
+      "cu": 117862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 13
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 13
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 13
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 13
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 13
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 13
+    },
+    {
+      "bytes": 746,
+      "cu": 67859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 13
+    },
+    {
+      "bytes": 761,
+      "cu": 91979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 14
+    },
+    {
+      "bytes": 778,
+      "cu": 121713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 14
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 14
+    },
+    {
+      "bytes": 778,
+      "cu": 100631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 14
+    },
+    {
+      "bytes": 825,
+      "cu": 94128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 14
+    },
+    {
+      "bytes": 842,
+      "cu": 102862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 14
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 14
+    },
+    {
+      "bytes": 842,
+      "cu": 89192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 14
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 14
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 14
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 14
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 14
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 15
+    },
+    {
+      "bytes": 778,
+      "cu": 108213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 15
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 15
+    },
+    {
+      "bytes": 778,
+      "cu": 94631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 15
+    },
+    {
+      "bytes": 825,
+      "cu": 95628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 15
+    },
+    {
+      "bytes": 842,
+      "cu": 120862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 15
+    },
+    {
+      "bytes": 825,
+      "cu": 72989,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 15
+    },
+    {
+      "bytes": 842,
+      "cu": 84723,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 15
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 15
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 15
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 15
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 15
+    },
+    {
+      "bytes": 761,
+      "cu": 93479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 16
+    },
+    {
+      "bytes": 778,
+      "cu": 111213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 16
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 16
+    },
+    {
+      "bytes": 778,
+      "cu": 96131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 16
+    },
+    {
+      "bytes": 825,
+      "cu": 89628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 16
+    },
+    {
+      "bytes": 842,
+      "cu": 107362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 16
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 16
+    },
+    {
+      "bytes": 842,
+      "cu": 95192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 16
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 16
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 16
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 16
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 16
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 17
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 17
+    },
+    {
+      "bytes": 761,
+      "cu": 87397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 17
+    },
+    {
+      "bytes": 778,
+      "cu": 97662,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 17
+    },
+    {
+      "bytes": 825,
+      "cu": 107628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 17
+    },
+    {
+      "bytes": 842,
+      "cu": 111862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 17
+    },
+    {
+      "bytes": 825,
+      "cu": 74458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 17
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 17
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 17
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 17
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 17
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 17
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 18
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 18
+    },
+    {
+      "bytes": 761,
+      "cu": 78397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 18
+    },
+    {
+      "bytes": 778,
+      "cu": 103631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 18
+    },
+    {
+      "bytes": 825,
+      "cu": 107628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 18
+    },
+    {
+      "bytes": 842,
+      "cu": 110393,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 18
+    },
+    {
+      "bytes": 825,
+      "cu": 83458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 18
+    },
+    {
+      "bytes": 842,
+      "cu": 87692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 18
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 18
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 18
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 18
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 18
+    },
+    {
+      "bytes": 761,
+      "cu": 94979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 19
+    },
+    {
+      "bytes": 778,
+      "cu": 102213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 19
+    },
+    {
+      "bytes": 761,
+      "cu": 82897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 19
+    },
+    {
+      "bytes": 778,
+      "cu": 96131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 19
+    },
+    {
+      "bytes": 825,
+      "cu": 91128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 19
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 19
+    },
+    {
+      "bytes": 825,
+      "cu": 75958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 19
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 19
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 19
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 19
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 19
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 19
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 20
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 20
+    },
+    {
+      "bytes": 761,
+      "cu": 85897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 20
+    },
+    {
+      "bytes": 778,
+      "cu": 97631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 20
+    },
+    {
+      "bytes": 825,
+      "cu": 89628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 20
+    },
+    {
+      "bytes": 842,
+      "cu": 108862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 20
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 20
+    },
+    {
+      "bytes": 842,
+      "cu": 96692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 20
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 20
+    },
+    {
+      "bytes": 746,
+      "cu": 78441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 20
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 20
+    },
+    {
+      "bytes": 746,
+      "cu": 67859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 20
+    },
+    {
+      "bytes": 761,
+      "cu": 103979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 21
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 21
+    },
+    {
+      "bytes": 761,
+      "cu": 82897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 21
+    },
+    {
+      "bytes": 778,
+      "cu": 103631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 21
+    },
+    {
+      "bytes": 825,
+      "cu": 113628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 21
+    },
+    {
+      "bytes": 842,
+      "cu": 134362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 21
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 21
+    },
+    {
+      "bytes": 842,
+      "cu": 90692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 21
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 21
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 21
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 21
+    },
+    {
+      "bytes": 746,
+      "cu": 72359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 21
+    },
+    {
+      "bytes": 761,
+      "cu": 94979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 22
+    },
+    {
+      "bytes": 778,
+      "cu": 105213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 22
+    },
+    {
+      "bytes": 761,
+      "cu": 81397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 22
+    },
+    {
+      "bytes": 778,
+      "cu": 103631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 22
+    },
+    {
+      "bytes": 825,
+      "cu": 92628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 22
+    },
+    {
+      "bytes": 842,
+      "cu": 102862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 22
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 22
+    },
+    {
+      "bytes": 842,
+      "cu": 86192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 22
+    },
+    {
+      "bytes": 729,
+      "cu": 63707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 22
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 22
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 22
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 22
+    },
+    {
+      "bytes": 761,
+      "cu": 114479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 23
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 23
+    },
+    {
+      "bytes": 761,
+      "cu": 88897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 23
+    },
+    {
+      "bytes": 778,
+      "cu": 106631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 23
+    },
+    {
+      "bytes": 825,
+      "cu": 91128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 23
+    },
+    {
+      "bytes": 842,
+      "cu": 107362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 23
+    },
+    {
+      "bytes": 825,
+      "cu": 71458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 23
+    },
+    {
+      "bytes": 842,
+      "cu": 87692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 23
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 23
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 23
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 23
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 23
+    },
+    {
+      "bytes": 761,
+      "cu": 88979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 24
+    },
+    {
+      "bytes": 778,
+      "cu": 100713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 24
+    },
+    {
+      "bytes": 761,
+      "cu": 88897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 24
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 24
+    },
+    {
+      "bytes": 825,
+      "cu": 104628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 24
+    },
+    {
+      "bytes": 842,
+      "cu": 102862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 24
+    },
+    {
+      "bytes": 825,
+      "cu": 77458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 24
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 24
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 24
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 24
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 24
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 24
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 25
+    },
+    {
+      "bytes": 778,
+      "cu": 108213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 25
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 25
+    },
+    {
+      "bytes": 778,
+      "cu": 103631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 25
+    },
+    {
+      "bytes": 825,
+      "cu": 103128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 25
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 25
+    },
+    {
+      "bytes": 825,
+      "cu": 72958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 25
+    },
+    {
+      "bytes": 842,
+      "cu": 98192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 25
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 25
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 25
+    },
+    {
+      "bytes": 729,
+      "cu": 54625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 25
+    },
+    {
+      "bytes": 746,
+      "cu": 66359,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 25
+    },
+    {
+      "bytes": 761,
+      "cu": 96510,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 26
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 26
+    },
+    {
+      "bytes": 761,
+      "cu": 78397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 26
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 26
+    },
+    {
+      "bytes": 825,
+      "cu": 94128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 26
+    },
+    {
+      "bytes": 842,
+      "cu": 114862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 26
+    },
+    {
+      "bytes": 825,
+      "cu": 74458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 26
+    },
+    {
+      "bytes": 842,
+      "cu": 84692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 26
+    },
+    {
+      "bytes": 729,
+      "cu": 66707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 26
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 26
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 26
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 26
+    },
+    {
+      "bytes": 761,
+      "cu": 85979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 27
+    },
+    {
+      "bytes": 778,
+      "cu": 102213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 27
+    },
+    {
+      "bytes": 761,
+      "cu": 79928,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 27
+    },
+    {
+      "bytes": 778,
+      "cu": 103631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 27
+    },
+    {
+      "bytes": 825,
+      "cu": 98628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 27
+    },
+    {
+      "bytes": 842,
+      "cu": 107362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 27
+    },
+    {
+      "bytes": 825,
+      "cu": 74458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 27
+    },
+    {
+      "bytes": 842,
+      "cu": 87692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 27
+    },
+    {
+      "bytes": 729,
+      "cu": 62207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 27
+    },
+    {
+      "bytes": 746,
+      "cu": 76941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 27
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 27
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 27
+    },
+    {
+      "bytes": 761,
+      "cu": 105479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 28
+    },
+    {
+      "bytes": 778,
+      "cu": 103713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 28
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 28
+    },
+    {
+      "bytes": 778,
+      "cu": 90131,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 28
+    },
+    {
+      "bytes": 825,
+      "cu": 103128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 28
+    },
+    {
+      "bytes": 842,
+      "cu": 104362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 28
+    },
+    {
+      "bytes": 825,
+      "cu": 72958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 28
+    },
+    {
+      "bytes": 842,
+      "cu": 95192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 28
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 28
+    },
+    {
+      "bytes": 746,
+      "cu": 73941,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 28
+    },
+    {
+      "bytes": 729,
+      "cu": 53125,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 28
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 28
+    },
+    {
+      "bytes": 761,
+      "cu": 87479,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 29
+    },
+    {
+      "bytes": 778,
+      "cu": 103713,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 29
+    },
+    {
+      "bytes": 761,
+      "cu": 90397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 29
+    },
+    {
+      "bytes": 778,
+      "cu": 100631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 29
+    },
+    {
+      "bytes": 825,
+      "cu": 95628,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 29
+    },
+    {
+      "bytes": 842,
+      "cu": 105862,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 29
+    },
+    {
+      "bytes": 825,
+      "cu": 90958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 29
+    },
+    {
+      "bytes": 842,
+      "cu": 87692,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 29
+    },
+    {
+      "bytes": 729,
+      "cu": 63707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 29
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 29
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 29
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 29
+    },
+    {
+      "bytes": 761,
+      "cu": 88979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 30
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 30
+    },
+    {
+      "bytes": 761,
+      "cu": 76897,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 30
+    },
+    {
+      "bytes": 778,
+      "cu": 94631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 30
+    },
+    {
+      "bytes": 825,
+      "cu": 97128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 30
+    },
+    {
+      "bytes": 842,
+      "cu": 107362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 30
+    },
+    {
+      "bytes": 825,
+      "cu": 72958,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 30
+    },
+    {
+      "bytes": 842,
+      "cu": 89192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 30
+    },
+    {
+      "bytes": 729,
+      "cu": 65207,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 30
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 30
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 30
+    },
+    {
+      "bytes": 746,
+      "cu": 67859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 30
+    },
+    {
+      "bytes": 761,
+      "cu": 91979,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 31
+    },
+    {
+      "bytes": 778,
+      "cu": 99213,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 31
+    },
+    {
+      "bytes": 761,
+      "cu": 84397,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "curve",
+      "sample": 31
+    },
+    {
+      "bytes": 778,
+      "cu": 97631,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "curve",
+      "sample": 31
+    },
+    {
+      "bytes": 825,
+      "cu": 94128,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 31
+    },
+    {
+      "bytes": 842,
+      "cu": 110362,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 31
+    },
+    {
+      "bytes": 825,
+      "cu": 80458,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "pool",
+      "sample": 31
+    },
+    {
+      "bytes": 842,
+      "cu": 89192,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "pool",
+      "sample": 31
+    },
+    {
+      "bytes": 729,
+      "cu": 60707,
+      "existingAtas": false,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 31
+    },
+    {
+      "bytes": 746,
+      "cu": 75441,
+      "existingAtas": false,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 31
+    },
+    {
+      "bytes": 729,
+      "cu": 51625,
+      "existingAtas": true,
+      "instruction": "claimLaunchFees",
+      "kind": "surplus",
+      "sample": 31
+    },
+    {
+      "bytes": 746,
+      "cu": 64859,
+      "existingAtas": true,
+      "instruction": "feeChainTx",
+      "kind": "surplus",
+      "sample": 31
+    }
+  ],
+  "corpusIsolation": "fresh process; signer seed and unique-address counter reset",
+  "fixtureSeed": 20261009,
+  "limits": {
+    "claimLaunchFees": {
+      "curve": 144000,
+      "pool": 143000,
+      "surplus": 84000
+    },
+    "collectCreatorFees": 22000,
+    "feeChainTx": {
+      "curve": 153000,
+      "pool": 168000,
+      "surplus": 102000
+    },
+    "powerOn": 51000
+  },
+  "measured": {
+    "claimLaunchFees": {
+      "curve": 114479,
+      "pool": 113628,
+      "surplus": 66707
+    },
+    "collectCreatorFees": 17477,
+    "feeChainTx": {
+      "curve": 121713,
+      "pool": 134362,
+      "surplus": 81441
+    },
+    "powerOn": 40150
+  },
+  "runtime": "LiteSVM 0.16.0, sBPFv3, default feature set",
+  "samplesPerVariant": 32,
+  "transactionBytes": {
+    "claimLaunchFees": {
+      "curve": 761,
+      "pool": 825,
+      "surplus": 729
+    },
+    "collectCreatorFees": 395,
+    "feeChainTx": {
+      "curve": 778,
+      "pool": 842,
+      "surplus": 746
+    },
+    "powerOn": 593
+  },
+  "transactionShape": "two compute-budget instructions plus the SDK instruction"
+}

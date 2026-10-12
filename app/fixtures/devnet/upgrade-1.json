@@ -1,0 +1,713 @@
+{
+  "status": "upgrade-and-smoke-pass",
+  "cluster": "devnet",
+  "observedAt": "2026-10-10T23:01:08.086Z",
+  "sourceBaseReportedByArchitect": "f674762",
+  "program": "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
+  "programData": "9vcrRW2eRKUuJ5Mjywmp1TMTm5HFWBLJUih9tvVUkiLB",
+  "authority": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+  "maxLen": 1966080,
+  "elfBytes": 960208,
+  "hashBefore": "1f58027ccd8836d4d72141c395dae46a8de5e73cc31389b3cb0a351f7434d937",
+  "hashAfter": "7fded56921a2be659e17fcbe41728db8e001db2c58f171106031dd8eb4cd6488",
+  "deploymentSlotBefore": "509603961",
+  "deploymentSlotAfter": "509691948",
+  "preservedAccounts": 26,
+  "openPullsBefore": 0,
+  "accountProof": [
+    {
+      "address": "13g9RXecNDJqNxZvjP5jZn7uywmBbU31huhstLkLCNW2",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "aa5f1ab3c891250c321628e89572fa373052d8d51ee229f7d71f7afe64f46362"
+    },
+    {
+      "address": "3Hstj284yCh3y6s8KRk29p96d3WsH54EdfQwgjQ5yrSG",
+      "kind": "Machine",
+      "bytes": 3808,
+      "sha256": "8db3675a791fff57512bbd01b51a072417a64a1480b09d3fdf47bc5542439414"
+    },
+    {
+      "address": "3KbWp6CcvBcqcFHNGNzUmp96p71FeLLC4UWTVasDn2Fh",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "8541d63b3125e743290a8d967d640973f824b4216f796d416c8b81fb21e9ef45"
+    },
+    {
+      "address": "4Zrza2o3PKCtnmrfNJio9DXdyqUPYXYJaJiTLVtiFeV9",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "c929e540ab15fb26002b0831f72ec7b419d171d1ea6531eed5e0ca02ae3e4e8c"
+    },
+    {
+      "address": "58Y37yQgQfBYy7rWFjRnvfcgL5zfLA7i4vfGkyTzq1iP",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "f9eb4297890a115007b5b8f63ee4bc15366d5a2a0e2ce64725b92d89ed2eae20"
+    },
+    {
+      "address": "598aqCAUJQ3Ufhz8DT86yzC8tgvZ8fnNxKoiW1kzQVVp",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "b4074a71cb8a8976f0ef8db1109274a1db37cc160c75df6e7f05835918932dd9"
+    },
+    {
+      "address": "6aDA8Hu1VAnhToUsusbdcY4xhCGmXmtYz4ZYVrQST91P",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "6123dc5b75a32a197f5f24bd3301f4bcafec9a12713ad5cb9d9127aa18a9043e"
+    },
+    {
+      "address": "7kQjZSV3zQKXC4Ti3AxCJjWZkoQyZXThHc5TPpe9bgd1",
+      "kind": "MintLedger",
+      "bytes": 80,
+      "sha256": "52ec5232cd850730edc772cc3f92cd22e9a00297febe6ecae05931f3c1a97fc6"
+    },
+    {
+      "address": "7qx19iEt1MbriYwh3J34hG6UuL1dJEcCoJUtAZ3Ryi3Z",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "a6f29015bc19edb96a5257fbb3863700065fa0e98a96d540d9f491205357e67c"
+    },
+    {
+      "address": "7Sj3B8krHardmHxZpy39mzfVDEKBXrH7YajhSygNDbmB",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "fb53d30b2f3243a758b9f46e2cb30537fff89533c00a563fa241f0fd743b8b3b"
+    },
+    {
+      "address": "8RoRvreH9BDvNJVffniTmDkvjNcng3Rq3b4U8ccnAw9i",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "a798beee2cf0f369d32db124ef33608307d6ac6c1c119c1995510e7dbe8d7638"
+    },
+    {
+      "address": "8SMiWS3TdcEgXN39kiFvY2uEd1jhT6ksUhnjdbUhfoHX",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "bdc05f234b9aaeca4ea6a4e497819c07085ca6ed594f6d3694a5248d2dc48f2d"
+    },
+    {
+      "address": "8XoLR4GDKCvtmC3sC5DLenUnKfzD56TWu4fkGGrRHWD",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "fa42f3151271374873cff0aae41485a6a61f0372a9d0927390bf5d11bcbd7875"
+    },
+    {
+      "address": "9fBc3pEoW9NABzZCyC2XX1oDW943mT1TW5rmFv52nc9C",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "9bdef9315ea3d0e7399c040e75509d142a0d7c4c4e5a0eae61c5c6cfd92aa7f7"
+    },
+    {
+      "address": "ASLCNV6ULRGPFsdmPnSe6B4yDs6XajfUjsT1MUa79b6S",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "ae9b3443229da5e65c53f46434547afd111143eddc9a44662aa7eeb66f191f83"
+    },
+    {
+      "address": "B5FNEXw35wcDFe8kcb9MkG8sF9SswdW21hG8guaXpGRH",
+      "kind": "Config",
+      "bytes": 872,
+      "sha256": "75b24b548e4d76c056807dd9225b41b8e3dabd646c267a16690ff8890a8807d4"
+    },
+    {
+      "address": "BEh5EqVBdjvvaPss4aQjAPJygZME4C3snFMJc6V8WDiP",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "739fdbe2ace0f23c72269e550f1763da92aa69c3d8948a7bfee42707dba1c1e2"
+    },
+    {
+      "address": "DaXwWa7c8JvxmM3L92ZwnWSV1zghXSgSEDQXiZQVBcvr",
+      "kind": "MintLedger",
+      "bytes": 80,
+      "sha256": "9c11723a7a969e1ce760f688835b91c2afe8f0b2386a98ae6de29309821d9ac8"
+    },
+    {
+      "address": "DefNHJMKJHoCiwaK6imf9fQYBRU6uzDci6imdV8JFDFt",
+      "kind": "Deck",
+      "bytes": 4064,
+      "sha256": "64192c5ddf4bdb200e5a77d8608dfa4641d5ffbbf162efb05cb2701d29efa367"
+    },
+    {
+      "address": "EWeZfNAA5eoguS4YcBp36QFJf9s1W5YmJuKbo4waHPgG",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "1258da607da2e75446176e17a2544649a607436e5680ca4b944e906fc89c1679"
+    },
+    {
+      "address": "FB4NZxSecsPMzzgTtfKyncRmvs4a3fF3n2fCLC27pfGy",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "730f9336cbb68478899c4f03f254bb34b38e0e94c8c4fc48f3ca2af77aa1849b"
+    },
+    {
+      "address": "FCpYNiLLXgH3U3ttZKGaYPdTLmM92Xqsms3dzWmUhBJY",
+      "kind": "MintLedger",
+      "bytes": 80,
+      "sha256": "e86330da55102e7cb4f8a25630180ce6d105174164f65e0034617c78cfc935a1"
+    },
+    {
+      "address": "FGrUDqu5SQWQpYaeU3J4ws2oSi1RFXvVa1Y7vtAhRwPw",
+      "kind": "MintLedger",
+      "bytes": 80,
+      "sha256": "3e866a3d5d7961dcf98dc1df4ff419d5dbeaec83f25c6c5081fdb594d816d2ec"
+    },
+    {
+      "address": "FjJ9p6MDLoKzDKafn3YFR5GWzGgX3cXrk1jprtkzSFPu",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "2965b81ad1f7e020011ad56016c22d0755400d341f502d3508b0c9954db78931"
+    },
+    {
+      "address": "HrEns37GvnxmxERxRiX3hbDHqZjBZJupkpaE41QDzNUr",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "c05f262126230f1a0602496b6ef030a4d99b327f350c7392301491c5f5835deb"
+    },
+    {
+      "address": "KtWTWACj1HFuzGpJo26LssSh5YuUct2TTW8nmbpQLVw",
+      "kind": "Binder",
+      "bytes": 112,
+      "sha256": "185e2a328039038bc2348417f1cf124e5220f576b87f35bf867962436e41dc0a"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "upgrade/7fded56921a2be659e17fcbe41728db8e001db2c58f171106031dd8eb4cd6488/509603961/buffer-create",
+      "signature": "5BCRHonvRxZVr1cWQ1dVS4bBajVi3zg5U2u4jqCVZVBAsgcgUXgham56j4wDnbrLjdeidRXKV8XybGxVW6fN7oyY",
+      "slot": 509685156,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade/7fded56921a2be659e17fcbe41728db8e001db2c58f171106031dd8eb4cd6488/509603961/upgrade",
+      "signature": "2ekwieNn2q4xwqHCxJHgstJafkmVqfX7X2smTQuurGfbs6RkJNyfdkcc9CW9W3dHj1Mjcrj4QKQyBKTsR2z8Jkm9",
+      "slot": 509691948,
+      "microLamports": "0"
+    },
+    {
+      "label": "refill-feed/2",
+      "signature": "3BvAiNmzkEft8VTQ2ws6e2AB1B7bxLDesUbqdPzsTGLK3zHX7cJRvVGXhYVRsT4hpE1LZZqdNLg6rsZ9xig1Sczc",
+      "slot": 509692519,
+      "microLamports": "0"
+    },
+    {
+      "label": "feed/0/1",
+      "signature": "2XFenkyu8Arzz8v9jyGCjPhdAHPZW3RyFXnQDWMHRmr7Ey8CzxepU4yvpjEE8Gxddp4nNT8BovVdoBPR3VfsbwdN",
+      "slot": 509692843,
+      "microLamports": "0"
+    },
+    {
+      "label": "feed/1/1",
+      "signature": "2si1KebhLxDCqJo4ZFfkc77UVBdUDUQcoWAB2exyYDRgVEn3Y4xrh94BoSSyWeyyB9Et3VwmUxjhif4Kb7wdd4Lf",
+      "slot": 509692868,
+      "microLamports": "0"
+    },
+    {
+      "label": "feed/3/1",
+      "signature": "3HvN37M41M37UMYmwU4KFCuNZSD6bbAriRz8MZJLhSBYXG5rB4vemHXTWgb25GQ4kn3GaQevaRrKVHwRbycDHEK3",
+      "slot": 509692898,
+      "microLamports": "0"
+    },
+    {
+      "label": "feed/14/1",
+      "signature": "2EFnwJoyXztRjizVs1hHiCzRmtJh7EMebW6tJYKnARYwkM7U5S3uUdnXeX2Fihrzy3t7BMTxwbqb2HMSHZJTX3kG",
+      "slot": 509692945,
+      "microLamports": "0"
+    },
+    {
+      "label": "fixture-stock-buy/1791660699",
+      "signature": "4QZJ8Nix9Tcb3sqEUAKyskv5gtqddtKC3J83y6xeHu18i3sdm9vVbfAjVNBj6uDh3KBwyjZEW4PS8SX4sSbscTAx",
+      "slot": 509693700,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade1/fund-rip-wallet",
+      "signature": "4nN1VR6fj355RHgDfrKcveKWLaXhs98FBVeJpVa6a6FvWeR5odA9HZY4Jf3H55gro3g3bFPmumbzwDYfoEC6YDzY",
+      "slot": 509693849,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade1/rip",
+      "signature": "3iFMKM8dfn2a158mCRDprKcEzDPPuXpiZA5t8QLX5vcWon4ySjdNSzwDq6XM9XcmDGkzW6Z6cTLppRBb6zUWfcSJ",
+      "slot": 509693879,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade1/settle",
+      "signature": "wAfyUtv7PpavP2Z1yu5XEUUbPtusjKA1WZdTguDTB8iS18nxqeC6MYvPmWh3ct6HWAWNSdKeXRYDVhkPacLyHCz",
+      "slot": 509693916,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade1/redeem/0",
+      "signature": "293W2CGDLRzKESDeC4T2pYsGanzRmjUa3k2o4GhqsasVZZqmEvcqZT5WWN3UzkbhF3BkrLNFwxNu9nBSL59HjJaN",
+      "slot": 509693952,
+      "microLamports": "0"
+    },
+    {
+      "label": "upgrade1/fee-swap",
+      "signature": "33ez56EsTU5Kr8VfxZ3wF6qoAmUhFc7Xx3xYDaa2GT8VcpT6NeGV95iUBfQgM5zWNa1ReTVcBtcJVNWZfgkyooYu",
+      "slot": 509694104,
+      "microLamports": "0"
+    }
+  ],
+  "smoke": {
+    "feedCardsAfter": 50,
+    "stockBuy": {
+      "fictitious": true,
+      "profile": "devnet-major-sol-fixture-v1",
+      "cluster": "devnet",
+      "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+      "oracle": "7AviUf9nL62mcxNbQGKm4nKDQnPjswo6c5MX4D57HmyE",
+      "bucket": 0,
+      "cost": "1500000000",
+      "amount": "1500000",
+      "adapter": "test transfer (master 5.1)",
+      "tradeSignature": "4QZJ8Nix9Tcb3sqEUAKyskv5gtqddtKC3J83y6xeHu18i3sdm9vVbfAjVNBj6uDh3KBwyjZEW4PS8SX4sSbscTAx",
+      "stockBefore": "72000000",
+      "stockAfter": "22000000",
+      "costBefore": "1450000000",
+      "lastTradeBefore": "1791660699",
+      "lastTradeAfter": "1791671945",
+      "stockBoughtHour": "50000000",
+      "stockHourIndex": "497686"
+    },
+    "rip": {
+      "wallet": "5ie3Vb8pw3CMi3ZSFXJpJvR5tScQa1VJaKrghKujd7Bb",
+      "walletPath": "~/.config/solana/onepercent-devnet/rip-wallet.json",
+      "pull": "9devbphKKQzKj1nijCExDoUNJcC7PpQemi3ruoM3XXNW",
+      "nonce": 1,
+      "queue": "Cuj97ggrhhidhbu39TijNVqE74xvKJ69gDervRUXAxGh",
+      "ripSignature": "3iFMKM8dfn2a158mCRDprKcEzDPPuXpiZA5t8QLX5vcWon4ySjdNSzwDq6XM9XcmDGkzW6Z6cTLppRBb6zUWfcSJ",
+      "revealedSeq": "2",
+      "revealedStatus": 2,
+      "pullSignatures": [
+        {
+          "signature": "4LHcp2sTjY89k9NFkpZQtfv1tcarGjg8AR8J5rYk8mA3AsyG7QM6gfwRKVVSVfMCwvQdtpjYyAdr6zpuMGc1FFwA",
+          "slot": 509693882
+        },
+        {
+          "signature": "3iFMKM8dfn2a158mCRDprKcEzDPPuXpiZA5t8QLX5vcWon4ySjdNSzwDq6XM9XcmDGkzW6Z6cTLppRBb6zUWfcSJ",
+          "slot": 509693879
+        }
+      ],
+      "settleSignature": "wAfyUtv7PpavP2Z1yu5XEUUbPtusjKA1WZdTguDTB8iS18nxqeC6MYvPmWh3ct6HWAWNSdKeXRYDVhkPacLyHCz",
+      "cards": [
+        {
+          "cardIndex": 0,
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "amount": "150000",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        },
+        {
+          "cardIndex": 1,
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "amount": "1000000000",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        },
+        {
+          "cardIndex": 2,
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        },
+        {
+          "cardIndex": 3,
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "amount": "1000000000",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        },
+        {
+          "cardIndex": 4,
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "amount": "1000000000",
+          "tokenProgram": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "tokenBalancesBefore": {
+        "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV": "4000050000",
+        "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf": "0",
+        "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2": "0"
+      },
+      "redeemSignatures": [
+        "293W2CGDLRzKESDeC4T2pYsGanzRmjUa3k2o4GhqsasVZZqmEvcqZT5WWN3UzkbhF3BkrLNFwxNu9nBSL59HjJaN"
+      ],
+      "redeemedTokenBalances": [
+        {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "account": "4ektapbkDNDyfd7b3aB5Hme4UuqgpFgXTqSiiqEaS3yr",
+          "expected": "150000",
+          "observed": "4000200000",
+          "before": "4000050000"
+        },
+        {
+          "mint": "5SatqsL5EZPmsonD7Xt9Y3t3cC3wCVwE3PQpohBYfmUf",
+          "account": "6UDpemeoF1cma64dma36UsJKF6f6gEMmaTVx5ideAfPL",
+          "expected": "2000000000",
+          "observed": "2000000000",
+          "before": "0"
+        },
+        {
+          "mint": "X2BfHo37mrsXBJEuwradkxsayB6nSYp35S2QMZ2kdt2",
+          "account": "CNTwSUBUUrGFsfNhvGJCrLy3i7uBxF3hNoi4rreecNDg",
+          "expected": "2000000000",
+          "observed": "2000000000",
+          "before": "0"
+        }
+      ],
+      "callbackProof": {
+        "signature": "4LHcp2sTjY89k9NFkpZQtfv1tcarGjg8AR8J5rYk8mA3AsyG7QM6gfwRKVVSVfMCwvQdtpjYyAdr6zpuMGc1FFwA",
+        "slot": 509693882,
+        "instruction": "consume_randomness",
+        "viaMagicBlockVrf": true
+      },
+      "status": "PASS",
+      "balance": 146457320
+    },
+    "curveSwap": {
+      "pool": "iyGGHFujSRRekqsc5PENBb5cwPL16jftyXKJ71n5Dvx",
+      "budget": "50000000",
+      "amountOut": "1612346552860",
+      "quoteIn": "50000000",
+      "partnerBefore": "0",
+      "protocolBefore": "5961640",
+      "reserveBefore": "1162519918",
+      "signature": "33ez56EsTU5Kr8VfxZ3wF6qoAmUhFc7Xx3xYDaa2GT8VcpT6NeGV95iUBfQgM5zWNa1ReTVcBtcJVNWZfgkyooYu",
+      "fee": "1250000",
+      "partnerClaimable": "1000000",
+      "status": "PASS"
+    },
+    "feeKeeper": {
+      "signature": "4BMYWvNtqkZF7xKjhagcFkUpjjh48UoK6iidQaSd7DYWWMwke5uoEHPSzXUy2nZcRzEHUokcAUCPNEtfRSoM8Nb8",
+      "slot": 509697672,
+      "claim": {
+        "kind": 0,
+        "pool": "iyGGHFujSRRekqsc5PENBb5cwPL16jftyXKJ71n5Dvx",
+        "quote": "1000000",
+        "base": "0",
+        "unwrapped_lamports": "2488440",
+        "ts": "1791672893"
+      },
+      "collection": {
+        "regime": 0,
+        "amount": "2488440",
+        "from_fee_in": "2488440",
+        "from_wsol": "0",
+        "to_stock": "2488440",
+        "to_burn": "0",
+        "to_team": "0",
+        "book": "1444000000",
+        "target": "30000000000",
+        "ts": "1791672893"
+      }
+    },
+    "metadata": {
+      "address": "4kKgQcYz2DR1sC43y6JpgLKY7bq9YzTrLNeBV5eZGais",
+      "name": "Copper Rehearsal",
+      "symbol": "CPRT",
+      "uri": "https://example.com/copper-rehearsal.json",
+      "isMutable": false,
+      "mutableOffset": 323
+    },
+    "teamWithdrawal": {
+      "signature": "2LASrCxyaCtBLfnjGU3M8RFpu3qKUgaTEd6FEkiTpJVW8Q6qjSqDp5Q8YvSWLCAxpvAYtUEyuRoZVcExMGf4xTvJ",
+      "slot": 509697692,
+      "to": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+      "amount": "20000000"
+    },
+    "finalMachine": {
+      "phase": 3,
+      "stock": "96488440",
+      "burn": "10000000",
+      "jackpot": "10000000",
+      "team": "0",
+      "majorBook": "1350000000",
+      "pendingPulls": "0"
+    }
+  },
+  "services": {
+    "observedAt": "2026-10-10T22:57:38.141Z",
+    "slot": 509698357,
+    "payerBalance": 10922845134,
+    "checks": {
+      "machineFields": [
+        "phase",
+        "next_seq",
+        "pending_pulls",
+        "reserved_dust",
+        "power_on_ts",
+        "on_air_ts",
+        "end_ts",
+        "stock_sol",
+        "jackpot_sol",
+        "burn_sol",
+        "team_sol",
+        "total_spend",
+        "jackpot_tokens",
+        "jackpot_cost",
+        "burned_total"
+      ],
+      "config": true,
+      "buckets": 1,
+      "deck": 50,
+      "pulls": 2
+    },
+    "pulls": [
+      {
+        "seq": "1",
+        "address": "EsrwQw13Qru36RhmCNr3d7JLeWb84aEfTCKZFNBfQtqQ",
+        "status": "closed",
+        "opened_sig": "nWmPRBxHctzH6SmnzWhHngHoHQU8L61zrSfgLoTMeHpUxBcKXcy9uLyQ7yHGww3voDj1RSJwwB4fSNWrAEX7m68",
+        "revealed_sig": "5qTqQPZqTrGjUy1BPHVbZBDtFikBTixHRUnroUu4iiFfCsdVKjNuqgvght48msczn1E54wzbwKjUjzPYPiihZaXx"
+      },
+      {
+        "seq": "2",
+        "address": "9devbphKKQzKj1nijCExDoUNJcC7PpQemi3ruoM3XXNW",
+        "status": "closed",
+        "opened_sig": "3iFMKM8dfn2a158mCRDprKcEzDPPuXpiZA5t8QLX5vcWon4ySjdNSzwDq6XM9XcmDGkzW6Z6cTLppRBb6zUWfcSJ",
+        "revealed_sig": "4LHcp2sTjY89k9NFkpZQtfv1tcarGjg8AR8J5rYk8mA3AsyG7QM6gfwRKVVSVfMCwvQdtpjYyAdr6zpuMGc1FFwA"
+      }
+    ],
+    "chain_txs": 44,
+    "chain_events": 96,
+    "creator_fee_collections": 3,
+    "exec_trades": 2,
+    "feeds": 58,
+    "intake_consumption": 54,
+    "history": {
+      "expectedSuccessful": 44,
+      "stored": 44,
+      "failedExcluded": [
+        {
+          "signature": "4fSFcUwuBhZ8bpjMCtBmZSrBFR1dR1qG9BhZXRBcy2WdsCc2w7kWjR2GAqfCk2DcNGPB7X1Pm236x26uk89EAZY7",
+          "slot": 509693883,
+          "err": {
+            "InstructionError": [
+              1,
+              {
+                "Custom": 1
+              }
+            ]
+          }
+        },
+        {
+          "signature": "5WtXY98dq2beNqHSZ56JHXiWTpwDfivLdtqDEWx9TzkRchYFqpVnyU5ToMLTPhjawt476B6G23JJboCRVL69JcvS",
+          "slot": 509693883,
+          "err": {
+            "InstructionError": [
+              1,
+              {
+                "Custom": 1
+              }
+            ]
+          }
+        },
+        {
+          "signature": "4BQx78dWu8AyEcxJqccFuFFwwreP3EvB9FR3huzfHzwitExDxRo1e3ndEGRwWPfkzJpZuTy2EASaqj9z4hgB64Kz",
+          "slot": 509650141,
+          "err": {
+            "InstructionError": [
+              1,
+              {
+                "Custom": 1
+              }
+            ]
+          }
+        }
+      ],
+      "complete": true
+    },
+    "indexerStatus": {
+      "asOfSlot": "509698339",
+      "scanSlot": "509698339",
+      "confirmedSlot": "509698343",
+      "lastEventSlot": "509697692",
+      "lagSlots": "4",
+      "lagSeconds": 1,
+      "checkedAt": "2026-10-10T22:57:35.552Z",
+      "chainTime": 1791673053,
+      "confirmedTime": 1791673054
+    },
+    "quarantined": [],
+    "events": [
+      {
+        "name": "BagFed",
+        "count": 58
+      },
+      {
+        "name": "CardRedeemed",
+        "count": 10
+      },
+      {
+        "name": "ConfigChanged",
+        "count": 2
+      },
+      {
+        "name": "CreatorFeesCollected",
+        "count": 3
+      },
+      {
+        "name": "ExecBegun",
+        "count": 2
+      },
+      {
+        "name": "ExecEnded",
+        "count": 2
+      },
+      {
+        "name": "IndexerBlock0Ready",
+        "count": 1
+      },
+      {
+        "name": "Initialized",
+        "count": 1
+      },
+      {
+        "name": "LaunchFeesClaimed",
+        "count": 2
+      },
+      {
+        "name": "OnePctLive",
+        "count": 1
+      },
+      {
+        "name": "PackRevealed",
+        "count": 2
+      },
+      {
+        "name": "PackSettled",
+        "count": 2
+      },
+      {
+        "name": "PhaseAdvanced",
+        "count": 2
+      },
+      {
+        "name": "PoweredOn",
+        "count": 1
+      },
+      {
+        "name": "PullClosed",
+        "count": 2
+      },
+      {
+        "name": "PullOpened",
+        "count": 2
+      },
+      {
+        "name": "PullRevealed",
+        "count": 2
+      },
+      {
+        "name": "TeamWithdrawn",
+        "count": 1
+      }
+    ],
+    "keeper": [
+      {
+        "id": "fee-chain:1791660620:periodic:1791672884",
+        "kind": "fee-chain",
+        "status": "confirmed",
+        "signature": "4BMYWvNtqkZF7xKjhagcFkUpjjh48UoK6iidQaSd7DYWWMwke5uoEHPSzXUy2nZcRzEHUokcAUCPNEtfRSoM8Nb8",
+        "last_error": null
+      },
+      {
+        "id": "team-withdraw:497686",
+        "kind": "team-withdraw",
+        "status": "confirmed",
+        "signature": "2LASrCxyaCtBLfnjGU3M8RFpu3qKUgaTEd6FEkiTpJVW8Q6qjSqDp5Q8YvSWLCAxpvAYtUEyuRoZVcExMGf4xTvJ",
+        "last_error": null
+      }
+    ],
+    "executor": [],
+    "executorDecisions": [
+      {
+        "time": 1791672933204,
+        "kind": "burn",
+        "reason": "BelowMinimumTranche"
+      },
+      {
+        "time": 1791672938033,
+        "kind": "jackpot",
+        "reason": "rpc_unavailable"
+      },
+      {
+        "time": 1791672962199,
+        "kind": "jackpot",
+        "reason": "rpc_unavailable"
+      },
+      {
+        "time": 1791672970488,
+        "kind": "burn",
+        "reason": "BelowMinimumTranche"
+      },
+      {
+        "time": 1791672995104,
+        "kind": "burn",
+        "reason": "BelowMinimumTranche"
+      },
+      {
+        "time": 1791673005590,
+        "kind": "jackpot",
+        "reason": "BelowMinimumTranche"
+      }
+    ],
+    "alerts": [
+      {
+        "key": "bucket_history_incomplete",
+        "severity": "warning",
+        "count": "4",
+        "payload": {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "index": 0
+        }
+      },
+      {
+        "key": "intake_log_missing",
+        "severity": "warning",
+        "count": "58",
+        "payload": {
+          "mint": "8qHh54rJXmwegYvCz7369akQUnx1DTj3G3amoYzmYdFV",
+          "path": "unknown",
+          "signature": "2EFnwJoyXztRjizVs1hHiCzRmtJh7EMebW6tJYKnARYwkM7U5S3uUdnXeX2Fihrzy3t7BMTxwbqb2HMSHZJTX3kG"
+        }
+      },
+      {
+        "key": "vrf_queue_unavailable",
+        "severity": "warning",
+        "count": "8",
+        "payload": {
+          "queue": "11111111111111111111111111111111"
+        }
+      }
+    ],
+    "status": "PASS"
+  },
+  "budget": {
+    "payerBefore": 11063616614,
+    "payerAfter": 10922845134,
+    "payerOutflow": 140771480,
+    "teamReceived": "20000000",
+    "payerGrossOutflow": "160771480",
+    "upgradeNetworkFees": 6020000,
+    "bufferBalance": 0,
+    "profileMaximum": 6396734840
+  },
+  "checks": {
+    "executorTests": 45,
+    "releaseTests": 5,
+    "workerTypecheck": "PASS",
+    "targetedLint": "PASS",
+    "targetedFormat": "PASS"
+  },
+  "limitations": [
+    "No open Pull existed before upgrade; the new Pull was exercised after upgrade.",
+    "Feed attestations use test drivers, not the Railway intake API.",
+    "Executor live decisions preserve the 0.05 SOL minimum and reserve caps; skipped trades are not reported as fills.",
+    "Public RPC fallback uses the same provider; no redundancy proof.",
+    "Public RPC returned rate limits and temporary failures; final reconciliation succeeded with roles run sequentially.",
+    "Historical intake audit records are absent: Feed path remains unknown in the new service database.",
+    "Keeper VRF monitoring also reads empty allow-list entries and reports the zero pubkey as unavailable; active VRF delivered successfully."
+  ]
+}

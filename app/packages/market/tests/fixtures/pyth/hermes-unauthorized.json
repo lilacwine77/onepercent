@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-08T18:28:21.199Z",
+  "request": {
+    "method": "GET",
+    "url": "https://hermes.pyth.network/v2/updates/price/latest?ids[]=ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d&parsed=true"
+  },
+  "response": {
+    "status": 401,
+    "headers": {},
+    "body": "unauthorized"
+  }
+}

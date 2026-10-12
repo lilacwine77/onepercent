@@ -1,0 +1,55 @@
+{
+  "input": "C:\\Users\\user\\.codex\\worktrees\\carousel-volume\\one percent\\assets\\blender\\onepercent-foil-master.glb",
+  "master": "C:\\Users\\user\\.codex\\worktrees\\carousel-volume\\one percent\\assets\\blender\\carousel\\onepercent-carousel-master.glb",
+  "runtime": "C:\\Users\\user\\.codex\\worktrees\\carousel-volume\\one percent\\public\\models\\onepercent-carousel.glb",
+  "triangles": 45312,
+  "parts": [
+    {
+      "name": "Printed front",
+      "before": 262144,
+      "triangles": 31977,
+      "vertices": 16752,
+      "uv": true,
+      "metalness": 0.62,
+      "roughness": 0.28
+    },
+    {
+      "name": "Branded reverse",
+      "before": 98304,
+      "triangles": 7179,
+      "vertices": 4196,
+      "uv": true,
+      "metalness": 0.62,
+      "roughness": 0.28
+    },
+    {
+      "name": "Sealed foil edge",
+      "before": 6156,
+      "triangles": 6156,
+      "vertices": 4104,
+      "uv": false,
+      "metalness": 0.94,
+      "roughness": 0.2,
+      "edgeNormals": {
+        "outward": 4104,
+        "inward": 0
+      }
+    }
+  ],
+  "bounds": {
+    "min": [
+      -1.7296093702316284,
+      -1.8467743396759033,
+      -0.28370946645736694
+    ],
+    "max": [
+      1.6749218702316284,
+      2.003039598464966,
+      0.4159501791000366
+    ]
+  },
+  "bytes": 4690396,
+  "artwork": "Native canonical 1254x1254 front and reverse; lossless WebP. UVs unchanged.",
+  "axes": "glTF: width X; vertical Y; front +Z. Pivot unchanged at origin.",
+  "finish": "Existing sculpted puffed foil, raised logo and connected sealed perimeter retained."
+}

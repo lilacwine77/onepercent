@@ -1,0 +1,23 @@
+{
+  "name": "dbc-active-base-vault",
+  "address": "thovwt6S13SBPppjtxS8rsyMiVArRfbeeAKtudU6EU1",
+  "observedAt": "2026-10-09T11:07:31.795Z",
+  "readSlot": 454848238,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "bytes": 165,
+  "sha256": "e278a85144629ef82f14347fb2dd271e6f4e553fe7564ea2d69618c6e61438a2",
+  "pubkey": "thovwt6S13SBPppjtxS8rsyMiVArRfbeeAKtudU6EU1",
+  "commitment": "finalized",
+  "rpcRentEpoch": "18446744073709551615",
+  "account": {
+    "data": [
+      "AeeFGz/MdXHW/NQ0eWK2U/2G9g8RJLPm3t72727TpozaY2gfcoa8yAZxniwrUKIBVyQ7/JZosRUgvFOEPtzbCFvQyWSpWQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 1488440,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "rentEpoch": 0,
+    "space": 165
+  }
+}

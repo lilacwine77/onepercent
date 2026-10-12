@@ -1,0 +1,335 @@
+{
+  "cluster": "devnet",
+  "recordedAt": "2026-10-08T23:56:09.956Z",
+  "runId": "m1-d17-20261009",
+  "fundingLamports": "6900000000",
+  "accounting": {
+    "sourceBalanceLamports": "99990000",
+    "disposableBalanceLamports": "3440932023",
+    "netDisposableDebitLamports": "3459067977",
+    "trackedRentStillFundedLamports": "3404773480",
+    "deployment": {
+      "method": "Funding minus current disposable balance, less journaled S1/application debits; retained loader accounts are separated from fees",
+      "netDisposableDebitLamports": "3368535920",
+      "retainedAccountLamports": "3365240920",
+      "networkFeesByBalanceReconciliationLamports": "3295000",
+      "bufferRemainingLamports": "0"
+    },
+    "machineAboveRentLamports": "50000000"
+  },
+  "s1Costs": {
+    "disposableDebitLamports": "10662137",
+    "networkFeeLamports": "25000",
+    "rentFundedLamports": "9692640",
+    "curvePurchaseIncludingProtocolAndCreatorFeesLamports": "944497"
+  },
+  "programDeployed": true,
+  "feedAndTakeBackPassed": true,
+  "artifactSha256": "99201a1c6573f840790cbe6d86f1628f1abb08e0e9d3f4eaccb27b3aa4eff413",
+  "deployedElfSha256": "99201a1c6573f840790cbe6d86f1628f1abb08e0e9d3f4eaccb27b3aa4eff413",
+  "returnedTokenAmount": "1000000000000",
+  "buildProof": {
+    "sourceSha256": "344a9086fb46253f737b17acaaf52f28db0cbaaa2d938a33fc4b68fd162131d8",
+    "artifactSha256": "99201a1c6573f840790cbe6d86f1628f1abb08e0e9d3f4eaccb27b3aa4eff413",
+    "canonicalParamsSha256": "c1db9394a2d2e68693ca4fb1f606dd197a30a9fa1778fc9e3bf56d0fa2340395",
+    "isolatedParamsSha256": "c1db9394a2d2e68693ca4fb1f606dd197a30a9fa1778fc9e3bf56d0fa2340395",
+    "canonicalProgramId": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+    "isolatedProgramId": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+    "sbpfFlags": 3
+  },
+  "fixture": {
+    "sourceUrl": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/2293f9a66c654e9fe82dc5e8f4618538f24bb35f/idl/pump.json",
+    "idlSha256": "6a19bad7758fb822cee79a91575e51a7bd60391c670200408676643e00a79a6d",
+    "mint": "DwPiHp17zKqq665zZ6rnm12Byg1tHQW3Vg8TzwWbvymA",
+    "creator": "HrAre7PstsxWghYeWtMGnnnu3fzP7GwA8Tvbfo3146RT",
+    "extensions": [
+      18,
+      19
+    ],
+    "curveBytes": 166,
+    "tokenAmount": "1000000000000",
+    "creatorFeeReceivedLamports": "2799",
+    "pumpSwapExecutable": true,
+    "mintAuthority": null,
+    "freezeAuthority": null,
+    "quote": "SOL",
+    "mayhem": false,
+    "cashback": false,
+    "holderMode": false
+  },
+  "transactions": [
+    {
+      "stage": "funding",
+      "signature": "2QV9HmdZfQeFfTPg7ikaX4j3CCH8ndk9fjrPPGKDt3xgf88ZvPCxV3nHhfb4BWxmVzxq8XrRX6Kq1AWFCS1L1jF1",
+      "slot": 508966482,
+      "feeLamports": "5000",
+      "unitsConsumed": 150,
+      "disposableDeltaLamports": "6900000000",
+      "sourceDeltaLamports": "-6900005000",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "s1-creator-rent",
+      "signature": "3wk56BmJhcAntJqdBwxnRJ91gcwbMyCpTVo4GnVEUyxf4Jn6VPazKhDGyLa7zd4PWu6eqBAKGTiLZXEjcPfctGuu",
+      "slot": 508966487,
+      "feeLamports": "5000",
+      "unitsConsumed": 300,
+      "disposableDeltaLamports": "-655240",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "650240"
+    },
+    {
+      "stage": "s1-create",
+      "signature": "PyCgz4w4HjGxNQh2kqF16MJQZ36Yv92irGHzS2CHCeQHFL7CoRNFC8B2Sbq5qwP3uXAF7XSHTKN4dFEqXrDqudr",
+      "slot": 508966492,
+      "feeLamports": "10000",
+      "unitsConsumed": 115944,
+      "disposableDeltaLamports": "-5542120",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "s1-buy",
+      "signature": "4pXbg1vM3JWhmnCnh9xT5EFJiiW6uHQFfNFRcv4mXLthZ1HaWZPCD3thUhAS2VFVezSshEXJCyFy8zrMpdSu9abA",
+      "slot": 508966538,
+      "feeLamports": "5000",
+      "unitsConsumed": 99163,
+      "disposableDeltaLamports": "-4459777",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "s1-collect",
+      "signature": "tGjSLGJAJJT3Azqc8yqG7mrQ1LkCvGkbop7cdNbVPijpeyQaARodY9PCiz7Yn2g2eEwcd1wdNaoSsC3eDwsics5",
+      "slot": 508966547,
+      "feeLamports": "5000",
+      "unitsConsumed": 14800,
+      "disposableDeltaLamports": "-5000",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "2799"
+    },
+    {
+      "stage": "initialize",
+      "signature": "47L4d4mSt93JxoxHLajnh31TqU8jQDUqDobMsjAhEThWSwzsdyvKKWQLbapCtJ6H3HxiameoLxs2RsSxz2fGbZN2",
+      "slot": 508988788,
+      "feeLamports": "5000",
+      "unitsConsumed": 35280,
+      "disposableDeltaLamports": "-76055240",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "set-season",
+      "signature": "5rXGm1TsUTmokjwuuu8pJY1LPG9DcNo1sKz4P1vZPMAZHUU2jXW3SjmoH6tgMttCEFZ9pdFRGfXwPn1yALRL5J3a",
+      "slot": 508988795,
+      "feeLamports": "5000",
+      "unitsConsumed": 5342,
+      "disposableDeltaLamports": "-5000",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "advance-phase-0",
+      "signature": "4bcGSkmRy2nj888EbZ5rRyh3JZXz1yAoKQTigy2WodKypric5ifAAdpnH3wrseJsTANR6mzdU3CYTLUXk5EoawSW",
+      "slot": 508988806,
+      "feeLamports": "5000",
+      "unitsConsumed": 4726,
+      "disposableDeltaLamports": "-5000",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "feed-0",
+      "signature": "WWWusVq7ftAbFK1rdviyQEcwmfsmXKSq5mwdFvXCUmcZvk66UvUPJ221gGsT5UyqQy4aqUWWvpGdtm9geoPhxvm",
+      "slot": 508988828,
+      "feeLamports": "10000",
+      "unitsConsumed": 70294,
+      "disposableDeltaLamports": "-4206080",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    },
+    {
+      "stage": "take-back",
+      "signature": "5Shm4KLhHoendgFh8aqfEaANq75fcMFbQaHHAj4NCDLS8t6Kuq9YQ6Gcr75X7uYqZxVYdT121GwnBSfoiPZdmCwf",
+      "slot": 508988838,
+      "feeLamports": "5000",
+      "unitsConsumed": 38567,
+      "disposableDeltaLamports": "401400",
+      "sourceDeltaLamports": "0",
+      "creatorDeltaLamports": "0"
+    }
+  ],
+  "accounts": {
+    "source": {
+      "minimumRentLamports": "650240",
+      "address": "DpMXTAcBPhEpNA2joqP6eEgJkfetjzRiQyVUfQoqZG93",
+      "exists": true,
+      "lamports": "99990000",
+      "dataBytes": 0,
+      "owner": "11111111111111111111111111111111",
+      "executable": false
+    },
+    "disposable": {
+      "minimumRentLamports": "650240",
+      "address": "6Tx2yUGnSVLkyx3WDaRSrR1TXN1Lhx91HvdRtya3ZwLM",
+      "exists": true,
+      "lamports": "3440932023",
+      "dataBytes": 0,
+      "owner": "11111111111111111111111111111111",
+      "executable": false
+    },
+    "program": {
+      "minimumRentLamports": "833120",
+      "address": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "exists": true,
+      "lamports": "833120",
+      "dataBytes": 36,
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "executable": true
+    },
+    "programData": {
+      "minimumRentLamports": "3364407800",
+      "address": "DT8cT28Xf7UjCosNZw6LYgJuj676bHvsLmNzdNEkFNbD",
+      "exists": true,
+      "lamports": "3364407800",
+      "dataBytes": 662157,
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "executable": false
+    },
+    "mint": {
+      "minimumRentLamports": "2524760",
+      "address": "DwPiHp17zKqq665zZ6rnm12Byg1tHQW3Vg8TzwWbvymA",
+      "exists": true,
+      "lamports": "2524760",
+      "dataBytes": 369,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false
+    },
+    "creator": {
+      "minimumRentLamports": "650240",
+      "address": "HrAre7PstsxWghYeWtMGnnnu3fzP7GwA8Tvbfo3146RT",
+      "exists": true,
+      "lamports": "653039",
+      "dataBytes": 0,
+      "owner": "11111111111111111111111111111111",
+      "executable": false
+    },
+    "curve": {
+      "minimumRentLamports": "1493520",
+      "address": "6NB4MeBKuSApH4yPUhemkrh16igpoAx53nMNH5wwpvX",
+      "exists": true,
+      "lamports": "2426356",
+      "dataBytes": 166,
+      "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "executable": false
+    },
+    "creatorVault": {
+      "minimumRentLamports": "650240",
+      "address": "5x8geAcqCFhu7hwqgDjFfc9HLjPrkLs7WygFMufaAWpV",
+      "exists": true,
+      "lamports": "650240",
+      "dataBytes": 0,
+      "owner": "11111111111111111111111111111111",
+      "executable": false
+    },
+    "userTokenAccount": {
+      "minimumRentLamports": "1513840",
+      "address": "99jkHLdFh6cihsMHhy4L72nykbNf8k9R9CKhAXnB2Dr9",
+      "exists": true,
+      "lamports": "1513840",
+      "dataBytes": 170,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false
+    },
+    "curveTokenAccount": {
+      "minimumRentLamports": "1513840",
+      "address": "2fFbFV3VeqpPKR2jAQevsWTstWAHTuPngcXy5AkJuC82",
+      "exists": true,
+      "lamports": "1513840",
+      "dataBytes": 170,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false
+    },
+    "userVolume": {
+      "minimumRentLamports": "1346200",
+      "address": "Dmyb8Md2if6cAbfwaizUp7t5mrw7zjba3AfHzGMiDgCY",
+      "exists": true,
+      "lamports": "1346200",
+      "dataBytes": 137,
+      "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "executable": false
+    },
+    "curveV2": {
+      "minimumRentLamports": "0",
+      "address": "FfVTEGd4qgR91YmytdZRz7gj59MR5952cgqvQiQLT6Vv",
+      "exists": false,
+      "lamports": "0",
+      "dataBytes": 0,
+      "owner": null,
+      "executable": false
+    },
+    "config": {
+      "minimumRentLamports": "5080000",
+      "address": "DvXee8NKUUVECXEhtEAttiMYopmhgo13ciFMENoqiFjr",
+      "exists": true,
+      "lamports": "5080000",
+      "dataBytes": 872,
+      "owner": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "executable": false
+    },
+    "machine": {
+      "minimumRentLamports": "19994880",
+      "address": "64zVCuznFyupzJzuFm1mB5DB4TCuZC5tfttNBYY4c99q",
+      "exists": true,
+      "lamports": "69994880",
+      "dataBytes": 3808,
+      "owner": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "executable": false
+    },
+    "deck": {
+      "minimumRentLamports": "975360",
+      "address": "FM7vBb3vLSrMSswHQSwJ4Sc6isusJ4r2ji96mLV2tZHv",
+      "exists": true,
+      "lamports": "975360",
+      "dataBytes": 64,
+      "owner": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "executable": false
+    },
+    "binder": {
+      "minimumRentLamports": "1219200",
+      "address": "FdsPCnJuPGin5UvLipKiEfbA7AX5Jep25FVrHh2wR8gd",
+      "exists": true,
+      "lamports": "1219200",
+      "dataBytes": 112,
+      "owner": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "executable": false
+    },
+    "mintLedger": {
+      "minimumRentLamports": "1056640",
+      "address": "6BryJZBFo2CncakuXHpfNsSx9K5Hu2bkGW2XdAFLcvDY",
+      "exists": true,
+      "lamports": "1056640",
+      "dataBytes": 80,
+      "owner": "FoTxSjUbEA6435ou5N5YALRrw4FL1accizkYbxdDuzK4",
+      "executable": false
+    },
+    "tokenVault": {
+      "minimumRentLamports": "1513840",
+      "address": "FkYBnWN7vM6e4KeBoLpWFegU1zvLPq8B9HvcpzLd3JtG",
+      "exists": true,
+      "lamports": "1513840",
+      "dataBytes": 170,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "executable": false
+    },
+    "deploymentBuffer": {
+      "minimumRentLamports": "0",
+      "address": "HTWcFswombVxfQ2pZdzzFoHXQKJnKLKVV8YsLeQ5XWv5",
+      "exists": false,
+      "lamports": "0",
+      "dataBytes": 0,
+      "owner": null,
+      "executable": false
+    }
+  }
+}

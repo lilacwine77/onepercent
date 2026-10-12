@@ -1,0 +1,42 @@
+{
+  "capturedAtUtc": "2026-10-09T10:53:53.991205+00:00",
+  "cluster": "mainnet-beta",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "symbol": "BONK/USD",
+  "shard": 0,
+  "feedId": "72b021217ca3fe68922a19aaf990109cb9d84e9ad004b4d2025ad6f529314419",
+  "address": "3nMpgBXnjBSDYupQQEVR7DZM65zkJCdKy1Up7nkqp99w",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getAccountInfo",
+    "params": [
+      "3nMpgBXnjBSDYupQQEVR7DZM65zkJCdKy1Up7nkqp99w",
+      {
+        "encoding": "base64",
+        "commitment": "finalized"
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "result": {
+      "context": {
+        "apiVersion": "4.3.0",
+        "slot": 454845183
+      },
+      "value": {
+        "data": [
+          "IvEjY51+9M0pVg3DY6tKNt+nNs3jawqHhlNmBMUQrUBpmYWsGXqSngFysCEhfKP+aJIqGar5kBCcudhOmtAEtNICWtb1KTFEGaaBAAAAAAAAIQAAAAAAAAD2////m8fIagAAAACax8hqAAAAAOeCAAAAAAAAFgAAAAAAAACTYhwbAAAAAAA=",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1823520,
+        "owner": "rec2HHDDnjLfj4kE7VyEtFA1HPGQLK33259532cRyHp",
+        "rentEpoch": 18446744073709551615,
+        "space": 134
+      }
+    },
+    "id": 1
+  }
+}

@@ -1,0 +1,12 @@
+# Only the static site's build inputs belong in the Docker context.
+**
+!Dockerfile
+!Caddyfile
+!package.json
+!package-lock.json
+!index.html
+!vite.library.config.js
+!src/
+!src/**
+!public/
+!public/**

@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "GET",
+    "url": "https://hermes.pyth.network/v2/updates/price/1791158400?ids[]=4ca4beeca86f0d164160323817a4e42b10010a724c2217c6ee41b54cd4cc61fc&parsed=true"
+  },
+  "response": {
+    "status": 200,
+    "headers": {},
+    "body": {
+      "parsed": [
+        {
+          "id": "4ca4beeca86f0d164160323817a4e42b10010a724c2217c6ee41b54cd4cc61fc",
+          "price": {
+            "price": "100000000",
+            "conf": "1",
+            "expo": -8,
+            "publish_time": 1791158400
+          },
+          "ema_price": {
+            "price": "100000000",
+            "conf": "1",
+            "expo": -8,
+            "publish_time": 1791158400
+          },
+          "metadata": {
+            "slot": 454624857
+          }
+        }
+      ]
+    }
+  },
+  "synthetic": {
+    "from": "latest-wif.json",
+    "edit": "User-approved synthetic historical Hermes sample; no historical API credentials available. UTC midnight and alternating 1.00/1.10 USD close values exercise the sample deviation calculation. Not actual market history."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "entryJsGzipBytes": 123000,
+  "routeJsGzipBytes": 250000,
+  "entryForbiddenModules": [
+    "@solana/web3.js",
+    "@solana/spl-token",
+    "@anchor-lang/core",
+    "three",
+    "gsap"
+  ],
+  "experienceChunk": "experience-3d",
+  "chunkJsGzipBytes": {
+    "src/experience/home/Home.tsx": 10000,
+    "src/experience/home/tv/experience-3d.ts": 155000
+  },
+  "performance": {
+    "lcpMs": 2200,
+    "cls": 0.05,
+    "tbtMs": 300,
+    "cpuSlowdown": 4,
+    "networkBitsPerSecond": 1600000,
+    "networkLatencyMs": 150,
+    "runs": 3,
+    "observationMs": 5000
+  },
+  "entryDynamicSources": ["src/xray/XrayView.tsx"],
+  "initialCssGzipBytes": 30000,
+  "lazyCssChunkGzipBytes": 16000,
+  "initialCssSources": ["src/experience/home/Home.tsx"],
+  "entryForbiddenSources": [
+    "copy/dist/catalog-routes.js",
+    "copy/src/catalog-routes.ts"
+  ]
+}

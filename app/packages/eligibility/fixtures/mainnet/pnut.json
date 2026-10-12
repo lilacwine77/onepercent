@@ -1,0 +1,10 @@
+{
+  "address": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "lamports": "159052311414",
+  "dataBase64": "AAAAAAbFwc5jjSVn0mRosF65UdGijcxuEjSCtcZ1FJdw5ivyVHOvpFmNAwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "slot": 454620967,
+  "recordedAt": "2026-10-08T18:10:35.613Z",
+  "source": "mainnet",
+  "note": "Public PNUT mint, additional deterministic wallet bag."
+}

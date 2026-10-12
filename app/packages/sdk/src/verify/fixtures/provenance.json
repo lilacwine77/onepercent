@@ -1,0 +1,8 @@
+{
+  "kind": "Rust host golden math vectors, not validator pulls",
+  "source": "M1 draft app/fixtures/vectors/{draw,dust}.json and packages/config/src/index.ts",
+  "sourceConfigSha256": "0182d5022cd82b2bd739d14e44d5d36bc4c3a36f5d8c7882cb667705a6b448ec",
+  "drawVectors": 256,
+  "dustVectors": 256,
+  "validatorPulls": 0
+}

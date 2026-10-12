@@ -1,0 +1,63 @@
+/* All lighting is alpha-masked to the native, undistorted wrapper artwork. */
+.has-pack-foil .orbit-light,
+.has-pack-foil .orbit-iridescence,
+.has-pack-foil .orbit-glare {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+  border-radius: 0;
+  mask-image: var(--foil-mask);
+  mask-size: 100% 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: opacity 180ms ease;
+}
+
+.has-pack-foil .orbit-light {
+  background: linear-gradient(112deg,
+    transparent 34%,
+    #fff8e500 41%,
+    #fff8e5a8 48%,
+    #ffffffd4 50%,
+    #e8ddff72 52%,
+    #fff8e500 59%,
+    transparent 66%);
+  background-size: 240% 160%;
+  background-position: calc(var(--orbit-highlight, 50%) + (var(--foil-x, 50%) - 50%) * var(--foil-active, 0)) var(--foil-y, 45%);
+  mix-blend-mode: screen;
+  opacity: clamp(0, calc(var(--orbit-shine, 0.12) * 0.2 + var(--foil-active, 0) * 0.33), 0.52);
+}
+
+.has-pack-foil .orbit-iridescence {
+  background: repeating-linear-gradient(118deg,
+    #a8e7ff00 0%,
+    #a8e7ffb8 12%,
+    #e4c3ffb8 24%,
+    #ffbfd9b8 36%,
+    #ffe5a4b8 48%,
+    #c7ffe9b8 60%,
+    #a8e7ff00 72%);
+  background-size: 220% 180%;
+  background-position: var(--foil-x, 50%) var(--foil-y, 45%);
+  mix-blend-mode: color-dodge;
+  opacity: calc(var(--foil-active, 0) * 0.1);
+}
+
+.pack-display[data-edition="signature"] .has-pack-foil .orbit-iridescence {
+  opacity: calc(var(--foil-active, 0) * 0.18);
+}
+
+.has-pack-foil .orbit-glare {
+  background: radial-gradient(ellipse at var(--foil-x, 50%) var(--foil-y, 45%),
+    #fff9ecbb 0%, #fff9ec45 16%, #fff9ec00 44%);
+  mix-blend-mode: screen;
+  opacity: calc(var(--foil-active, 0) * 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-pack-foil .orbit-light,
+  .has-pack-foil .orbit-iridescence,
+  .has-pack-foil .orbit-glare { transition: none; }
+  .has-pack-foil .orbit-iridescence { display: none; }
+}

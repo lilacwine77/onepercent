@@ -1,0 +1,54 @@
+[package]
+name = "onepercent"
+version = "0.1.0"
+description = "The 1% Machine program scaffold"
+edition = "2021"
+rust-version = "1.95"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "onepercent"
+
+[features]
+default = []
+devnet = []
+mainnet = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "=0.32.2"
+bytemuck = { version = "=1.25.2", features = ["derive"] }
+solana-sha256-hasher = "=2.3.0"
+anchor-spl = { version = "=0.32.2", features = ["token", "token_2022", "associated_token"] }
+ephemeral-vrf-sdk = { version = "=0.17.3", default-features = false, features = ["anchor-compat"] }
+
+[dev-dependencies]
+solana-sdk-ids = "=2.2.1"
+# five8 1.0 accepts either core line; the shared lock also needs 0.1 for Anchor.
+# Enable its Error implementation for the host keypair parser without changing pins.
+five8_core = { version = "=0.1.2", features = ["std"] }
+litesvm = { version = "=0.16.0", features = ["precompiles"] }
+proptest = "=1.11.0"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+solana-keypair = "=3.1.2"
+solana-signer = "=3.0.1"
+solana-transaction = "=4.1.6"
+solana-message = "=4.4.1"
+solana-instruction = "=3.4.1"
+solana-address = "=2.6.1"
+solana-account = "=4.3.2"
+solana-clock = "=3.1.1"
+solana-rent = "=4.3.0"
+solana-compute-budget-interface = "=3.0.0"
+agave-feature-set = "=4.2.1"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

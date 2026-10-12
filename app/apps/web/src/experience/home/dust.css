@@ -1,0 +1,832 @@
+/* The landing's "Got dust? Feed the machine." and "How dust pays." (onepercent.fun
+   src/styles.css .story and src/dust-pays.css), in the app's tokens. Both set in
+   Fraunces, as the landing; DM Sans where the landing uses it. */
+.home-story,
+.dust-pays {
+  font-family: "Fraunces", "Fraunces Fallback", Georgia, serif;
+}
+:is(.home-story, .dust-pays) :is(h2, h3, p) {
+  margin: 0;
+}
+:is(.home-story, .dust-pays) h2 {
+  max-width: none;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+:is(.home-story, .dust-pays) .oval {
+  font:
+    400 17px/1 "Fraunces Text",
+    "Fraunces Fallback",
+    Georgia,
+    serif;
+}
+
+/* The landing's reveals: titles spring in character by character, copy rises
+   from its mask, art pops (Dust.tsx useReveals adds .revealed). */
+:is(.home-story, .dust-pays) [data-title] .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+:is(.home-story, .dust-pays) [data-title] .char {
+  display: inline-block;
+  transform: scale(0);
+  transform-origin: 50% 75%;
+  transition: transform 0.4s var(--ease-spring);
+  transition-delay: calc(var(--i) * 30ms);
+}
+:is(.home-story, .dust-pays) [data-title].revealed .char {
+  transform: scale(1);
+}
+:is(.home-story, .dust-pays) [data-copy] {
+  overflow: hidden;
+}
+:is(.home-story, .dust-pays) [data-copy] .copy-inner {
+  display: block;
+  transform: translateY(110%) rotate(5deg);
+  transform-origin: 0 0;
+  transition: transform 0.6s var(--ease-mask);
+}
+:is(.home-story, .dust-pays) [data-copy].revealed .copy-inner {
+  transform: none;
+}
+:is(.home-story, .dust-pays) [data-pop] {
+  scale: 0;
+  transition:
+    scale 0.5s var(--ease-spring),
+    transform 0.25s;
+}
+:is(.home-story, .dust-pays) [data-pop].revealed {
+  scale: 1;
+}
+[data-motion="reduced"]
+  :is(.home-story, .dust-pays)
+  :is([data-title] .char, [data-copy] .copy-inner) {
+  transform: none;
+  transition: none;
+}
+[data-motion="reduced"] :is(.home-story, .dust-pays) [data-pop] {
+  scale: 1;
+  transition: none;
+}
+
+/* "Got dust? Feed the machine.": the machine beside the copy. Both columns are
+   capped at half the row and the row at 1440 px, so the copy never runs off. */
+.home-story {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 7%;
+  min-height: 630px;
+  padding: 64px max(8%, calc((100% - 1440px) / 2)) 82px;
+  background: var(--blush);
+}
+.story-machine {
+  position: relative;
+  justify-self: center;
+  max-width: 100%;
+  padding-bottom: 22px;
+}
+/* A soft floor shadow that breathes with the machine's idle float. */
+.story-machine::after {
+  content: "";
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  bottom: 2px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    #4c245952,
+    #4c24591c 62%,
+    transparent
+  );
+  animation: story-machine-shadow 5.6s ease-in-out infinite;
+}
+.story-machine img {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  height: clamp(440px, 38vw, 580px);
+  max-width: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+  filter: drop-shadow(0 24px 28px #4c245930);
+  animation: story-machine-float 5.6s ease-in-out infinite;
+}
+@keyframes story-machine-float {
+  50% {
+    transform: translateY(-9px);
+  }
+}
+@keyframes story-machine-shadow {
+  50% {
+    transform: scaleX(0.86);
+    opacity: 0.7;
+  }
+}
+.story-copy {
+  width: 100%;
+  max-width: 510px;
+  min-width: 0;
+  margin: auto;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.story-copy h2 {
+  margin-bottom: 28px;
+  font-size: clamp(43px, 4.8vw, 72px);
+}
+.story-copy p {
+  margin-bottom: 17px;
+  font-family: "Fraunces Text", "Fraunces Fallback", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.44;
+}
+.story-copy .oval {
+  margin-top: 15px;
+}
+
+/* "How dust pays.": a dark panel that rises over the lilac story and sits on the
+   cream footer. Mobile first: Pepe above the coin and its card; from 900 px,
+   coin → Pepe → card. */
+.dust-pays {
+  --dust-acid: #eeff75;
+  --dust-soft: #ead2f6;
+  --dust-muted: #bea2cf;
+  position: relative;
+  z-index: 1;
+  margin-top: -36px;
+  padding: 72px 20px 56px;
+  border-radius: 36px;
+  background: var(--ink);
+  color: var(--cream);
+  overflow: hidden;
+  isolation: isolate;
+}
+.dust-pays::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 26% at 50% 24%, #7d3a9f5c, transparent 72%),
+    radial-gradient(44% 22% at 8% 96%, #4c245966, transparent 70%);
+  pointer-events: none;
+}
+.dust-pays-head {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dust-pays-head h2 {
+  margin-bottom: 14px;
+  font-size: 42px;
+}
+.dust-pays-head p {
+  color: var(--dust-soft);
+  font:
+    18px/1.45 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  text-wrap: balance;
+}
+
+/* Stage */
+.dust-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "host host" "before after" "payoff payoff";
+  column-gap: 12px;
+  align-items: start;
+  max-width: 400px;
+  margin: 26px auto 0;
+}
+.dust-demo-host {
+  grid-area: host;
+  justify-self: center;
+  position: relative;
+  width: 196px;
+  margin-bottom: 50px;
+}
+.dust-demo-host::before {
+  content: "";
+  position: absolute;
+  inset: 10% 6% 2%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    #d5a2f166,
+    #d5a2f11f 62%,
+    transparent
+  );
+}
+.dust-demo-host picture {
+  animation: dust-float 4.2s ease-in-out infinite;
+}
+.dust-demo-host img {
+  width: 100%;
+  height: auto;
+}
+.dust-demo-before,
+.dust-demo-after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+.dust-demo-before {
+  grid-area: before;
+}
+.dust-demo-after {
+  grid-area: after;
+  padding-top: 18px;
+}
+
+/* A gold coin carrying the token's own art: the ring of the app's Dust Card. */
+.dust-coin {
+  --coin: 96px;
+  position: relative;
+  display: block;
+  flex: none;
+  width: var(--coin);
+  height: var(--coin);
+  padding: calc(var(--coin) * 0.085);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 210deg,
+    #fff3c4,
+    var(--gold-hi) 18%,
+    var(--gold) 40%,
+    #8a5a16 55%,
+    var(--gold) 70%,
+    var(--gold-hi) 85%,
+    #fff3c4
+  );
+  box-shadow:
+    0 12px 26px #0009,
+    inset 0 0 0 1.5px #3a2208aa;
+}
+.dust-coin::before {
+  content: "";
+  position: absolute;
+  inset: 2.5%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #3a22083d 0 1.2deg,
+    transparent 1.2deg 3deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 64%, #000 65%);
+  mask: radial-gradient(circle, transparent 64%, #000 65%);
+}
+.dust-coin img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 2px #8a5a16,
+    0 0 0 3.5px #fff3c466;
+}
+.dust-pays .dust-coin-name {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* What the bag sells for: quiet, so the payoff wins the comparison. */
+.dust-pays .dust-sold {
+  margin-top: 6px;
+  color: var(--dust-muted);
+  font:
+    400 14px/1.3 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-sold b {
+  color: #d9c3e6;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* The payoff: up to 75× when a pack pulls the card, in gold foil. Under the coin
+   and the card when stacked; under the card from 900 px. */
+.dust-pays .dust-payoff {
+  grid-area: payoff;
+  display: grid;
+  justify-items: center;
+  margin-top: 22px;
+  text-align: center;
+}
+.dust-payoff > span {
+  display: block;
+}
+.dust-payoff-upto {
+  color: var(--gold-hi);
+  font:
+    500 14px/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-payoff-x {
+  margin-top: 2px;
+  padding: 0 0.04em;
+  font-size: 80px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  /* Two identical periods, so the shine can pass across and land where it started. */
+  background: linear-gradient(
+      100deg,
+      #d9a441 0%,
+      #f2c95f 9%,
+      #fff4cc 17%,
+      #f2c95f 25%,
+      #c4892c 37%,
+      #d9a441 50%,
+      #f2c95f 59%,
+      #fff4cc 67%,
+      #f2c95f 75%,
+      #c4892c 87%,
+      #d9a441 100%
+    )
+    0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 20px #f6d27238);
+  /* While it counts, the block keeps its final width and the × stays put. */
+  text-align: right;
+}
+.dust-payoff-when {
+  margin-top: 4px;
+  color: var(--cream);
+  font:
+    500 15px/1.25 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-payoff-range {
+  margin-top: 3px;
+  color: var(--dust-muted);
+  font:
+    400 13px/1.2 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+
+/* The Dust Card: paper stock, lilac frame, orchid hairline, plum foot (the app's
+   card art). The card's own box scales with --card; its contents use cqw. */
+.dust-card {
+  --card: 152px;
+  container-type: inline-size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--card);
+  aspect-ratio: 5 / 7;
+  padding: calc(var(--card) * 0.05);
+  border: calc(var(--card) * 0.034) solid var(--lilac);
+  border-radius: calc(var(--card) * 0.12);
+  background:
+    radial-gradient(90% 60% at 35% 25%, #ffffffb3, transparent 70%),
+    linear-gradient(160deg, var(--paper), var(--paper-edge));
+  color: var(--ink);
+  box-shadow:
+    0 22px 44px #000a,
+    inset 0 0 0 calc(var(--card) * 0.013) var(--paper),
+    inset 0 0 0 calc(var(--card) * 0.021) var(--orchid);
+  overflow: hidden;
+  transform-origin: 50% 60%;
+}
+.dust-card-strip {
+  align-self: stretch;
+  padding: 3cqw 0 2.6cqw;
+  border-radius: 9cqw 9cqw 3.5cqw 3.5cqw;
+  background: var(--lilac);
+  font-size: 13cqw;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-align: center;
+}
+.dust-card .dust-coin--card {
+  --coin: 50cqw;
+  margin: 8cqw 0 5cqw;
+  box-shadow:
+    0 2.5cqw 6cqw #3a22085c,
+    inset 0 0 0 1px #3a2208aa;
+}
+.dust-card .dust-coin--card img {
+  box-shadow: 0 0 0 1.2cqw #8a5a16;
+}
+.dust-card-amount {
+  font-size: 17cqw;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.dust-card-ticker {
+  margin-top: 1.6cqw;
+  font:
+    500 8cqw/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-card-chain {
+  margin-top: 3cqw;
+  color: var(--orchid);
+  font:
+    500 7cqw/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-card-foot {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: 3cqw;
+  margin-top: auto;
+  padding: 3.4cqw 4.5cqw;
+  border-radius: 3.5cqw 3.5cqw 10cqw 3.5cqw;
+  background: var(--plum);
+  color: var(--cream);
+  font:
+    500 6.6cqw/1 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  white-space: nowrap;
+}
+.dust-card-foot b {
+  color: var(--lilac);
+  font-weight: 500;
+}
+.dust-card-foil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      112deg,
+      transparent 32%,
+      #ffffffc4 44%,
+      #d5a2f1aa 50%,
+      #a7ecff8c 56%,
+      transparent 68%
+    )
+    130% 0 / 260% 100%;
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The Feed arc, its label and the coin that travels it (dust-pays.ts). */
+.dust-demo-path {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.dust-demo-path [data-dust-path] {
+  fill: none;
+  stroke: var(--lilac);
+  stroke-width: 2.2;
+  stroke-dasharray: 1.5 8.5;
+  stroke-linecap: round;
+}
+.dust-demo-path [data-dust-trace] {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 18;
+  stroke-linecap: round;
+}
+#dust-arc-head path {
+  fill: none;
+  stroke: var(--lilac);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dust-demo-feed {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 0;
+  padding: 3px 13px 5px;
+  border: 1.5px solid var(--lilac);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--lilac);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  translate: -50% -50%;
+  visibility: hidden;
+}
+.dust-demo[data-geometry] .dust-demo-feed {
+  visibility: visible;
+}
+.dust-demo-flyer {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Steps: three tiles, an icon, a word, one line. */
+.dust-steps {
+  display: grid;
+  gap: 10px;
+  max-width: 440px;
+  margin: 46px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.dust-steps li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  column-gap: 14px;
+  align-content: center;
+  align-items: center;
+  padding: 13px 18px 13px 13px;
+  border: 1px solid #d5a2f12b;
+  border-radius: 20px;
+  background: #ffffff08;
+}
+.dust-step-icon {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #d5a2f11c;
+}
+.dust-step-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: var(--lilac);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dust-step-icon .dust-step-accent {
+  stroke: var(--dust-acid);
+}
+.dust-steps h3 {
+  align-self: end;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+.dust-steps p {
+  align-self: start;
+  margin-top: 2px;
+  color: #ecdcf3;
+  font:
+    15.5px/1.35 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+}
+.dust-pays .dust-pays-back {
+  width: fit-content;
+  max-width: 100%;
+  margin: 36px auto 0;
+  padding: 14px 22px;
+  border: 1.5px solid #d5a2f173;
+  border-radius: 22px;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  text-align: center;
+  text-wrap: balance;
+}
+.dust-pays .dust-pays-note {
+  margin: 16px auto 0;
+  color: var(--dust-muted);
+  font:
+    13.5px/1.4 "DM Sans",
+    "DM Sans Fallback",
+    sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .story-copy p {
+    font-size: 19px;
+  }
+}
+@media (min-width: 700px) {
+  .dust-pays {
+    margin-top: -44px;
+    padding: 92px 6% 68px;
+    border-radius: 44px;
+  }
+  .dust-pays-head h2 {
+    font-size: clamp(46px, 4.8vw, 72px);
+  }
+  .dust-pays-head p {
+    font-size: 20px;
+  }
+  .dust-demo {
+    max-width: 540px;
+    column-gap: 24px;
+  }
+  .dust-demo-host {
+    width: 250px;
+    margin-bottom: 56px;
+  }
+  .dust-demo-before .dust-coin,
+  .dust-demo-flyer {
+    --coin: 116px;
+  }
+  .dust-demo-after {
+    padding-top: 24px;
+  }
+  .dust-card {
+    --card: 186px;
+  }
+  .dust-pays .dust-sold {
+    font-size: 15px;
+  }
+  .dust-payoff-upto {
+    font-size: 15px;
+  }
+  .dust-payoff-x {
+    font-size: 92px;
+  }
+  .dust-payoff-when {
+    font-size: 16px;
+  }
+  .dust-payoff-range {
+    font-size: 13.5px;
+  }
+}
+@media (min-width: 900px) {
+  .dust-demo {
+    grid-template-columns: 1fr minmax(250px, 1.15fr) 1fr;
+    grid-template-areas: "before host after" "before host payoff";
+    align-items: center;
+    max-width: 1080px;
+    margin-top: 18px;
+    column-gap: 2%;
+  }
+  .dust-demo-host {
+    width: min(100%, 370px);
+    margin: 84px 0 0;
+  }
+  .dust-demo-before {
+    padding-top: 40px;
+  }
+  .dust-demo-after {
+    align-self: end;
+    padding-top: 0;
+  }
+  .dust-demo-before .dust-coin,
+  .dust-demo-flyer {
+    --coin: 148px;
+  }
+  .dust-pays .dust-coin-name {
+    font-size: 27px;
+  }
+  .dust-pays .dust-sold {
+    font-size: 16px;
+  }
+  .dust-card {
+    --card: 196px;
+  }
+  .dust-pays .dust-payoff {
+    align-self: start;
+    margin-top: 16px;
+  }
+  .dust-payoff-upto {
+    font-size: 16px;
+  }
+  .dust-payoff-x {
+    font-size: 100px;
+  }
+  .dust-payoff-when {
+    font-size: 17px;
+  }
+  .dust-payoff-range {
+    font-size: 14px;
+  }
+  .dust-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 960px;
+    margin-top: 60px;
+  }
+  .dust-steps li {
+    grid-template-columns: 1fr;
+    align-content: start;
+    justify-items: start;
+    row-gap: 6px;
+    padding: 22px 24px 24px;
+    border-radius: 24px;
+  }
+  /* A chevron in the gap: X-ray → Feed → Get paid. */
+  .dust-steps li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--lilac);
+    border-right: 2px solid var(--lilac);
+    opacity: 0.7;
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+  .dust-step-icon {
+    grid-row: auto;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 10px;
+    border-radius: 19px;
+  }
+  .dust-step-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  .dust-steps h3 {
+    font-size: 27px;
+  }
+  .dust-steps p {
+    font-size: 17px;
+  }
+  .dust-pays .dust-pays-back {
+    margin-top: 44px;
+    padding: 16px 28px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .home-story {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    min-height: 0;
+    padding: 45px 25px 60px;
+  }
+  .story-machine {
+    padding-bottom: 16px;
+  }
+  .story-machine::after {
+    height: 30px;
+  }
+  .story-machine img {
+    height: 330px;
+  }
+  .story-copy {
+    max-width: 390px;
+  }
+  .story-copy h2 {
+    margin-bottom: 22px;
+    font-size: 42px;
+  }
+  .story-copy p {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  .story-copy .oval {
+    margin-top: 12px;
+  }
+}
+
+/* Until the stage plays (dust-pays.ts arms it only when motion is allowed), the
+   card side waits. Without the script, or with reduced motion, nothing is armed
+   and the finished example shows. */
+.dust-demo.is-armed :is(.dust-card, .dust-payoff > span, .dust-demo-feed) {
+  opacity: 0;
+}
+.dust-demo.is-armed [data-dust-trace] {
+  visibility: hidden;
+}
+@keyframes dust-float {
+  50% {
+    transform: translateY(-7px) rotate(-0.6deg);
+  }
+}
+[data-motion="reduced"] :is(.dust-demo-host picture, .story-machine img),
+[data-motion="reduced"] .story-machine::after {
+  animation: none;
+}
+[data-motion="reduced"] .dust-demo-flyer {
+  display: none;
+}

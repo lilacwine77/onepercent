@@ -1,0 +1,390 @@
+{
+  "address": "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
+  "metadata": {
+    "name": "onepercent",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "The 1% Machine program scaffold"
+  },
+  "instructions": [],
+  "events": [
+    {
+      "name": "BagFed",
+      "discriminator": [224, 113, 23, 93, 216, 121, 129, 77]
+    },
+    {
+      "name": "BagTakenBack",
+      "discriminator": [169, 62, 149, 216, 67, 122, 82, 62]
+    },
+    {
+      "name": "CallbackSkipped",
+      "discriminator": [6, 168, 228, 80, 89, 110, 119, 182]
+    },
+    {
+      "name": "CardDropped",
+      "discriminator": [236, 165, 48, 242, 228, 11, 65, 237]
+    },
+    {
+      "name": "CardRedeemed",
+      "discriminator": [133, 166, 12, 57, 114, 90, 50, 85]
+    },
+    {
+      "name": "ConfigChanged",
+      "discriminator": [147, 25, 86, 98, 98, 77, 78, 192]
+    },
+    {
+      "name": "HitSkipped",
+      "discriminator": [109, 212, 206, 231, 27, 170, 141, 167]
+    },
+    {
+      "name": "Initialized",
+      "discriminator": [208, 213, 115, 98, 115, 82, 201, 209]
+    },
+    {
+      "name": "PackRevealed",
+      "discriminator": [152, 85, 14, 60, 105, 201, 31, 169]
+    },
+    {
+      "name": "PackSettled",
+      "discriminator": [84, 73, 178, 253, 208, 173, 47, 100]
+    },
+    {
+      "name": "PhaseAdvanced",
+      "discriminator": [123, 52, 118, 23, 154, 234, 206, 41]
+    },
+    { "name": "Pong", "discriminator": [107, 153, 141, 173, 103, 56, 68, 117] },
+    {
+      "name": "PullClosed",
+      "discriminator": [151, 42, 161, 114, 178, 108, 13, 167]
+    },
+    {
+      "name": "PullOpened",
+      "discriminator": [226, 99, 246, 234, 48, 201, 169, 193]
+    },
+    {
+      "name": "PullRefunded",
+      "discriminator": [80, 238, 108, 202, 93, 150, 181, 56]
+    },
+    {
+      "name": "PullRevealed",
+      "discriminator": [113, 32, 147, 7, 227, 175, 203, 93]
+    },
+    {
+      "name": "ReferralRedirected",
+      "discriminator": [55, 7, 11, 253, 175, 171, 19, 248]
+    },
+    {
+      "name": "RoyaltyRedirected",
+      "discriminator": [0, 154, 103, 216, 110, 141, 245, 135]
+    },
+    {
+      "name": "TeamWithdrawn",
+      "discriminator": [81, 96, 11, 34, 127, 203, 158, 3]
+    },
+    {
+      "name": "VaultClosed",
+      "discriminator": [238, 129, 38, 228, 227, 118, 249, 215]
+    },
+    {
+      "name": "VaultShortfall",
+      "discriminator": [168, 9, 203, 214, 142, 202, 75, 5]
+    }
+  ],
+  "types": [
+    {
+      "name": "BagFed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "depositor", "type": "pubkey" },
+          { "name": "mint", "type": "pubkey" },
+          { "name": "amount", "type": "u64" },
+          { "name": "deck_index", "type": "u32" },
+          { "name": "deposit", "type": "u64" },
+          { "name": "fresh_in_deck", "type": "u16" }
+        ]
+      }
+    },
+    {
+      "name": "BagTakenBack",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "depositor", "type": "pubkey" },
+          { "name": "mint", "type": "pubkey" },
+          { "name": "amount", "type": "u64" },
+          { "name": "deck_index", "type": "u32" },
+          { "name": "moved_from", "type": "u32" },
+          { "name": "refund", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "CallbackSkipped",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "reason", "type": "u8" }
+        ]
+      }
+    },
+    {
+      "name": "CardDropped",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "tier", "type": "u8" },
+          { "name": "value", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "CardRedeemed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "pubkey" },
+          { "name": "mint", "type": "pubkey" },
+          { "name": "amount", "type": "u64" },
+          { "name": "kind", "type": "u8" },
+          { "name": "card_index", "type": "u16" },
+          { "name": "moved_from", "type": "u16" },
+          { "name": "refund", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "ConfigChanged",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "action", "type": "u8" },
+          { "name": "actor", "type": "pubkey" },
+          { "name": "key", "type": "pubkey" },
+          { "name": "a", "type": "u64" },
+          { "name": "b", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "DustPick",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "deck_len_before", "type": "u32" },
+          { "name": "index", "type": "u32" },
+          { "name": "moved_from", "type": "u32" },
+          { "name": "mint", "type": "pubkey" },
+          { "name": "amount", "type": "u64" },
+          { "name": "depositor", "type": "pubkey" },
+          { "name": "refund", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "HitSkipped",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "tier", "type": "u8" },
+          { "name": "value", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "Initialized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "version", "type": "u16" },
+          { "name": "admin", "type": "pubkey" }
+        ]
+      }
+    },
+    {
+      "name": "PackRevealed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "edition", "type": "u8" },
+          { "name": "live_flags", "type": "u8" },
+          { "name": "holder", "type": "bool" },
+          { "name": "t", "type": "u32" },
+          { "name": "widths", "type": { "array": ["u32", 6] } },
+          { "name": "tier", "type": "u8" },
+          { "name": "hit_bucket", "type": "u8" },
+          { "name": "house_mask", "type": "u8" },
+          { "name": "hit_mint", "type": "pubkey" },
+          { "name": "hit_amount", "type": "u64" },
+          { "name": "hit_value", "type": "u64" },
+          {
+            "name": "dust",
+            "type": { "array": [{ "defined": { "name": "DustPick" } }, 4] }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PackSettled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "paid", "type": { "array": ["u64", 4] } },
+          { "name": "redirected_mask", "type": "u8" },
+          { "name": "referral_paid", "type": "u64" },
+          { "name": "referral_to_team", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "PhaseAdvanced",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "from", "type": "u8" },
+          { "name": "to", "type": "u8" },
+          { "name": "ts", "type": "i64" }
+        ]
+      }
+    },
+    {
+      "name": "Pong",
+      "type": {
+        "kind": "struct",
+        "fields": [{ "name": "version", "type": "u16" }]
+      }
+    },
+    {
+      "name": "PullClosed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "to", "type": "pubkey" },
+          { "name": "lamports", "type": "u64" },
+          { "name": "to_stock", "type": "bool" }
+        ]
+      }
+    },
+    {
+      "name": "PullOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "buyer", "type": "pubkey" },
+          { "name": "edition", "type": "u8" },
+          { "name": "qty", "type": "u8" },
+          { "name": "price", "type": "u64" },
+          { "name": "referrer", "type": "pubkey" },
+          { "name": "holder", "type": "bool" },
+          { "name": "queue", "type": "pubkey" },
+          { "name": "created_ts", "type": "i64" },
+          { "name": "backing", "type": { "array": ["u8", 10] } }
+        ]
+      }
+    },
+    {
+      "name": "PullRefunded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "buyer", "type": "pubkey" },
+          { "name": "amount", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "PullRevealed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "pull", "type": "pubkey" },
+          { "name": "seq", "type": "u64" },
+          { "name": "buyer", "type": "pubkey" },
+          { "name": "randomness", "type": { "array": ["u8", 32] } },
+          { "name": "qty", "type": "u8" },
+          { "name": "hit_value_total", "type": "u64" },
+          { "name": "to_stock", "type": "u64" },
+          { "name": "to_jackpot", "type": "u64" },
+          { "name": "to_burn", "type": "u64" },
+          { "name": "to_team", "type": "u64" },
+          { "name": "shortfall", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "ReferralRedirected",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "referrer", "type": "pubkey" },
+          { "name": "amount", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "RoyaltyRedirected",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "seq", "type": "u64" },
+          { "name": "pack", "type": "u8" },
+          { "name": "slot", "type": "u8" },
+          { "name": "depositor", "type": "pubkey" },
+          { "name": "amount", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "TeamWithdrawn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "to", "type": "pubkey" },
+          { "name": "amount", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "VaultClosed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "mint", "type": "pubkey" },
+          { "name": "payer", "type": "pubkey" },
+          { "name": "burned", "type": "u64" },
+          { "name": "lamports", "type": "u64" }
+        ]
+      }
+    },
+    {
+      "name": "VaultShortfall",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "mint", "type": "pubkey" },
+          { "name": "vault_amount", "type": "u64" },
+          { "name": "accounted", "type": "u64" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode zstd gzip
+
+	header X-Content-Type-Options nosniff
+	@glb path *.glb
+	header @glb Content-Type model/gltf-binary
+	@gltf path *.gltf
+	header @gltf Content-Type model/gltf+json
+
+	@html path / *.html
+	header @html Cache-Control "no-cache"
+	@assets path /assets/* /models/* /media/*
+	header @assets Cache-Control "public, max-age=3600, must-revalidate"
+
+	file_server
+}
