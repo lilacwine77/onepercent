@@ -27,8 +27,10 @@ import {
   createJupiterSwapClient,
   createJupiterTokensClient,
   createListingEvidenceGatherer,
+  createListingHistoryClient,
   createMintSafetyClient,
   createPythHermesClient,
+  createPythPushClient,
   createValueClient,
   deriveCanonicalPool,
   evaluateMajor,
@@ -85,7 +87,13 @@ export function listingClients(rpcUrl: string, source = process.env) {
   const gatherer = createListingEvidenceGatherer({
     swap,
     tokens: createJupiterTokensClient({ ...opts, http }),
-    pyth: createPythHermesClient(opts),
+    pyth: env.pythHermesApiKey
+      ? createPythHermesClient(opts)
+      : createPythPushClient({ rpc }),
+    pythSource: env.pythHermesApiKey
+      ? "Pyth Hermes"
+      : "Pyth push feed on-chain (shard 0)",
+    history: createListingHistoryClient(opts),
     mintSafety: createMintSafetyClient({ ...opts, rpc }),
     exitCaps,
     holders: createHoldersClient({ ...opts, rpc }),

@@ -1,4 +1,4 @@
-import { TX_LIMITS } from "@onepercent/config";
+import { CU_LIMITS, TX_LIMITS } from "@onepercent/config";
 import {
   createAssociatedTokenAccountIdempotentInstruction,
   NATIVE_MINT,
@@ -19,6 +19,8 @@ import { userAta, vaultAta, vaultAuthPda } from "../pda.js";
 import { serializedSize } from "./index.js";
 import type { ClusterDeployment } from "../deployment.js";
 
+const MAX_COMPUTE_UNITS = 1_400_000;
+
 export interface ComposeExecInput {
   deployment: ClusterDeployment;
   payer: PublicKey;
@@ -32,6 +34,11 @@ export interface ComposeExecInput {
   endIx: TransactionInstruction;
   computeBudget: readonly TransactionInstruction[];
   extraIxs?: readonly TransactionInstruction[];
+  /**
+   * Restore a closed canonical token vault for Done Burn. Requires an explicit
+   * compute unit limit; the measured restoration allowance is added once.
+   */
+  restoreTokenVault?: boolean;
   protocolLut: AddressLookupTableAccount;
   blockhash: string;
 }
@@ -111,6 +118,26 @@ export function composeExecTransaction(input: ComposeExecInput): {
         EXTERNAL_IDS.splToken,
       ),
     );
+  // A completed season may have closed its empty token vault. Any Burn caller can restore it.
+  if (input.restoreTokenVault) {
+    if (kind !== EXEC_KIND.burn)
+      throw new Error("Token vault restoration requires Burn");
+    if (
+      !beginIx.keys[5]!.pubkey.equals(
+        vaultAta(programId, beginIx.keys[3]!.pubkey, beginIx.keys[13]!.pubkey),
+      )
+    )
+      throw new Error("AccountMismatch");
+    prep.push(
+      createAssociatedTokenAccountIdempotentInstruction(
+        input.payer,
+        beginIx.keys[5]!.pubkey,
+        vaultAuthPda(programId)[0],
+        beginIx.keys[3]!.pubkey,
+        beginIx.keys[13]!.pubkey,
+      ),
+    );
+  }
   const swap = Array.isArray(input.swap.swap)
     ? input.swap.swap
     : [input.swap.swap];
@@ -141,6 +168,20 @@ export function composeExecTransaction(input: ComposeExecInput): {
       throw new Error("Invalid exec compute budget");
     seen.add(tag);
   }
+  if (input.restoreTokenVault && !seen.has(2))
+    throw new Error("Token vault restoration requires a compute unit limit");
+  const computeBudget = input.restoreTokenVault
+    ? input.computeBudget.map((ix) =>
+        ix.data[0] === 2
+          ? ComputeBudgetProgram.setComputeUnitLimit({
+              units: Math.min(
+                ix.data.readUInt32LE(1) + CU_LIMITS.restoreBurnVault,
+                MAX_COMPUTE_UNITS,
+              ),
+            })
+          : ix,
+      )
+    : input.computeBudget;
   if (
     input.protocolLut.state.authority !== undefined ||
     input.protocolLut.state.deactivationSlot !== U64_MAX
@@ -165,7 +206,7 @@ export function composeExecTransaction(input: ComposeExecInput): {
       payerKey: input.payer,
       recentBlockhash: input.blockhash,
       instructions: [
-        ...input.computeBudget,
+        ...computeBudget,
         ...(input.extraIxs ?? []),
         ...prep,
         beginIx,

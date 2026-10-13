@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "9Sn9FVu6WpufA8yZFSRuxYyFgpBrhc5PpTgB3mq2DcsG",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "context": {
+          "slot": 454624857
+        },
+        "value": {
+          "data": [
+            "IvEjY51+9M19eA7hv8i0BvnEBmYzlBYHOWlusjdBQ3XS77HxNL20PwFMpL7sqG8NFkFgMjgXpOQrEAEKckwiF8buQbVM1Mxh/DW0OQEAAAAAAQAAAAAAAAD4////uuDHagAAAACax8hqAAAAANGoQwEAAAAAxxoAAAAAAACTYhwbAAAAAAA=",
+            "base64"
+          ],
+          "executable": false,
+          "lamports": 1823520,
+          "owner": "rec2HHDDnjLfj4kE7VyEtFA1HPGQLK33259532cRyHp",
+          "rentEpoch": 18446744073709551615,
+          "space": 134
+        }
+      }
+    }
+  },
+  "synthetic": {
+    "from": [
+      "../pyth/latest-wif.json",
+      "../../../../../fixtures/mainnet/pyth/wif-usd.json"
+    ],
+    "edit": "Captured push account layout with the existing synthetic listing prices and timestamp, for replay of the exact recorded Jupiter sell probe. Not live listing evidence."
+  }
+}

@@ -1,5 +1,8 @@
 // Verbatim COPY.md entries; the complete catalog is assembled in en.ts.
 export const initial = {
+  "launch.label": "The Machine opens in",
+  "launch.time":
+    "{hours} hours, {minutes} minutes, {seconds} seconds until the Machine opens",
   "meta.title": "Onepercent · Dust in, Packs out.",
   "meta.description":
     "X-ray any Solana wallet. Feed your bags to the machine. Rip foil packs with real tokens inside. Go for the 1%.",
@@ -210,4 +213,6 @@ export const initial = {
   "feed.outlook.soldEst": "≈{sol} SOL est. for these bags",
   "feed.outlook.note":
     "An estimate, not a promise. Take any card back until it’s pulled.",
+  "title.docs": "Docs · Onepercent",
+  "nav.docs": "Docs",
 } as const;

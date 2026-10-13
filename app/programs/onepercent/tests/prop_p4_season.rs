@@ -1,4 +1,6 @@
 mod common;
+#[path = "common/final_cases.rs"]
+mod final_cases;
 #[path = "common/launch_cases.rs"]
 mod launch;
 #[path = "common/property.rs"]
@@ -126,6 +128,26 @@ fn season(steps: Vec<(u8, u64, [u8; 32])>) -> proptest::test_runner::TestCaseRes
         ),
         (0, 12345)
     );
+    env.warp(params::SEASON_FINAL_PULL_DELAY_SECONDS);
+    let snapshot = env.state::<Machine>(env.machine);
+    env.send(&[final_cases::start(&env)], &[]).unwrap();
+    env.send(
+        &[
+            final_cases::sol(&env, owner, true),
+            final_cases::tokens(&env, owner),
+        ],
+        &[&user],
+    )
+    .unwrap();
+    let final_state = env.state::<Machine>(env.machine);
+    prop_assert_eq!(
+        final_state.final_sol_total,
+        snapshot.stock_sol + snapshot.jackpot_sol
+    );
+    prop_assert_eq!(final_state.final_pool_sol, 0);
+    prop_assert_eq!(final_state.buckets[0].amount, 0);
+    prop_assert_eq!(env.state::<Binder>(specials::binder(owner)).flags & 3, 3);
+    env.check_invariants();
     loop {
         let owned = cards(&env, owner);
         let Some(card) = owned.last() else {
@@ -166,9 +188,9 @@ fn season(steps: Vec<(u8, u64, [u8; 32])>) -> proptest::test_runner::TestCaseRes
     env.check_invariants();
     let m = env.state::<Machine>(env.machine);
     prop_assert_eq!(m.team_sol, 0);
-    // D18 ends this launch campaign at BuysClosed. Remaining stock and pack
-    // burn SOL retain their tracked claims for the separately shipped upgrade.
-    prop_assert_eq!(m.phase, PHASE_BUYS_CLOSED);
+    final_cases::finish(&mut env);
+    prop_assert_eq!(env.state::<Machine>(env.machine).phase, PHASE_DONE);
+    // Pack burn remains tracked for permissionless executor transactions.
     Ok(())
 }
 

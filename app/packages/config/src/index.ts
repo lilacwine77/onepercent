@@ -189,10 +189,10 @@ export const CREATOR_FEE_SPLIT_BPS = {
 
 // ── Season ───────────────────────────────────────────────────────── [CONST] unless tagged
 export const SEASON = {
-  durationDays: 7, // [OFF]
-  durationSeconds: 604_800,
+  durationDays: 2, // [OFF] [D37]
+  durationSeconds: 172_800, // [D37]
   onAirDelaySeconds: 900, // [C18]
-  lastCallSeconds: 86_400, // [OFF] countdown only
+  lastCallSeconds: 21_600, // [OFF] [D37] countdown and keeper surplus sales
   finalPullDelaySeconds: 600,
   sealDelaySeconds: 259_200, // [C23]
 } as const;
@@ -279,6 +279,10 @@ export const TX_LIMITS = {
 
 // [OFF] Max of cu.json and real-vrf.json measurements; 25% headroom, rounded up to 1,000 CU.
 export const CU_LIMITS = {
+  // Final Pull: fixtures/reports/final-pull-cu.json, 25% margin rounded to 1,000.
+  startFinalPull: 5000,
+  claimFinalSol: { x1: 9000, xMax: 100000 },
+  claimFinalTokens: 20000,
   powerOn: 51000,
   collectCreatorFees: 22000,
   claimLaunchFees: {
@@ -311,6 +315,8 @@ export const CU_LIMITS = {
   // m2-exec.json: T12.16 + validator maxima, 25% headroom, rounded up to 1,000.
   execBegin: 77000,
   execEnd: 55000,
+  // final-pull-burn-cu.json: optional Done Burn vault/ledger restoration allowance.
+  restoreBurnVault: 53000,
 } as const;
 
 // [CONST] Shared by every cluster; only the launch config pin varies.
@@ -1093,11 +1099,15 @@ const refineParams: Parameters<z.ZodType["superRefine"]>[0] = (
         p.CU_LIMITS.closeBinder,
         p.CU_LIMITS.withdrawOwed,
         p.CU_LIMITS.powerOn,
+        p.CU_LIMITS.startFinalPull,
+        ...Object.values(p.CU_LIMITS.claimFinalSol),
+        p.CU_LIMITS.claimFinalTokens,
         p.CU_LIMITS.collectCreatorFees,
         ...Object.values(p.CU_LIMITS.claimLaunchFees),
         ...Object.values(p.CU_LIMITS.feeChainTx),
         p.CU_LIMITS.execBegin,
         p.CU_LIMITS.execEnd,
+        p.CU_LIMITS.restoreBurnVault,
       ].every(
         (value) => value > 0 && value <= 1_400_000 && value % 1_000 === 0,
       ),

@@ -1,0 +1,2597 @@
+{
+  "cases": [
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 0
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 0,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 0,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 0,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 0,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 0,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 0,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 0,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 0,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 0,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 0,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 1
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 1,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 1,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 1,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 1,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 1,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 1,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 1,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 1,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 1,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 1,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 2
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 2,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 2,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 2,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 2,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 2,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 2,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 2,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 2,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 2,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 2,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 3
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 3,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 3,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 3,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 3,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 3,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 3,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 3,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 3,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 3,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 3,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 4
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 4,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 4,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 4,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 4,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 4,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 4,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 4,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 4,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 4,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 4,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 5
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 5,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 5,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 5,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 5,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 5,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 5,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 5,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 5,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 5,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 5,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 6
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 6,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 6,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 6,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 6,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 6,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 6,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 6,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 6,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 6,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 6,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 7
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 7,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 7,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 7,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 7,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 7,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 7,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 7,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 7,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 7,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 7,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 8
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 8,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 8,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 8,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 8,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 8,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 8,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 8,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 8,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 8,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 8,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 9
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 9,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 9,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 9,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 9,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 9,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 9,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 9,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 9,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 9,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 9,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 10
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 10,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 10,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 10,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 10,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 10,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 10,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 10,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 10,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 10,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 10,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 11
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 11,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 11,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 11,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 11,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 11,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 11,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 11,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 11,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 11,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 11,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 12
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 12,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 12,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 12,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 12,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 12,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 12,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 12,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 12,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 12,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 12,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 13
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 13,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 13,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 13,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 13,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 13,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 13,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 13,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 13,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 13,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 13,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 14
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 14,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 14,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 14,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 14,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 14,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 14,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 14,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 14,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 14,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 14,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 15
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 15,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 15,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 15,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 15,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 15,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 15,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 15,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 15,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 15,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 15,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 16
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 16,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 16,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 16,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 16,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 16,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 16,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 16,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 16,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 16,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 16,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 17
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 17,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 17,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 17,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 17,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 17,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 17,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 17,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 17,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 17,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 17,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 18
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 18,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 18,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 18,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 18,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 18,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 18,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 18,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 18,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 18,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 18,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 19
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 19,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 19,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 19,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 19,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 19,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 19,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 19,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 19,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 19,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 19,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 20
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 20,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 20,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 20,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 20,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 20,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 20,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 20,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 20,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 20,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 20,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 21
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 21,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 21,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 21,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 21,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 21,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 21,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 21,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 21,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 21,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 21,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 22
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 22,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 22,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 22,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 22,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 22,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 22,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 22,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 22,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 22,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 22,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 23
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 23,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 23,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 23,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 23,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 23,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 23,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 23,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 23,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 23,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 23,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 24
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 24,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 24,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 24,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 24,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 24,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 24,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 24,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 24,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 24,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 24,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 25
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 25,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 25,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 25,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 25,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 25,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 25,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 25,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 25,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 25,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 25,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 26
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 26,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 26,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 26,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 26,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 26,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 26,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 26,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 26,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 26,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 26,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 27
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 27,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 27,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 27,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 27,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 27,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 27,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 27,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 27,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 27,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 27,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 28
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 28,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 28,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 28,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 28,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 28,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 28,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 28,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 28,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 28,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 28,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 29
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 29,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 29,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 29,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 29,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 29,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 29,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 29,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 29,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 29,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 29,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 30
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 30,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 30,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 30,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 30,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 30,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 30,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 30,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 30,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 30,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 30,
+      "variant": "owed"
+    },
+    {
+      "bytes": 262,
+      "cu": 3697,
+      "instruction": "startFinalPull",
+      "sample": 31
+    },
+    {
+      "bytes": 328,
+      "cu": 6889,
+      "instruction": "claimFinalSol",
+      "sample": 31,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 328,
+      "cu": 6422,
+      "instruction": "claimFinalSol",
+      "sample": 31,
+      "variant": "owed"
+    },
+    {
+      "bytes": 328,
+      "cu": 5509,
+      "instruction": "claimFinalSol",
+      "sample": 31,
+      "variant": "zero"
+    },
+    {
+      "bytes": 328,
+      "cu": 5020,
+      "instruction": "claimFinalSol",
+      "sample": 31,
+      "variant": "idempotent"
+    },
+    {
+      "bytes": 329,
+      "cu": 15304,
+      "instruction": "claimFinalTokens",
+      "sample": 31,
+      "variant": "seventeen"
+    },
+    {
+      "bytes": 329,
+      "cu": 9008,
+      "instruction": "claimFinalTokens",
+      "sample": 31,
+      "variant": "zero"
+    },
+    {
+      "bytes": 329,
+      "cu": 13121,
+      "instruction": "claimFinalTokens",
+      "sample": 31,
+      "variant": "existingCapacity"
+    },
+    {
+      "bytes": 343,
+      "cu": 21889,
+      "instruction": "claimFinalTokens",
+      "sample": 31,
+      "variant": "combined"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 79368,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 31,
+      "variant": "wallet"
+    },
+    {
+      "bytes": 1186,
+      "count": 12,
+      "cu": 73764,
+      "instruction": "claimFinalSolBatch",
+      "nextCountBytes": 1264,
+      "sample": 31,
+      "variant": "owed"
+    }
+  ],
+  "fixtureSeed": 20261013,
+  "largestSolBatch": 12,
+  "limits": {
+    "claimFinalSol": {
+      "x1": 9000,
+      "xMax": 100000
+    },
+    "claimFinalTokens": 20000,
+    "startFinalPull": 5000
+  },
+  "measured": {
+    "claimFinalSol": {
+      "x1": 6889,
+      "xMax": 79368
+    },
+    "claimFinalTokens": 15304,
+    "combinedClaims": 21889,
+    "startFinalPull": 3697
+  },
+  "mockVrfSha256": "0441521d6f43879bdce7c95af5078b674532c1a35b5023e4bba3a34af8728c6e",
+  "programSha256": "90b9f3183a324119b1f8e02bf84d377f3a50e58a8f7163461b243c4f13248d03",
+  "runtime": "LiteSVM 0.16.0, sBPFv3, default feature set",
+  "samplesPerVariant": 32,
+  "transactionBytes": {
+    "claimFinalSol": {
+      "x1": 328,
+      "xMax": 1186
+    },
+    "claimFinalTokens": 329,
+    "combinedClaims": 343,
+    "startFinalPull": 262
+  },
+  "transactionShape": "legacy transaction with both compute budget instructions"
+}

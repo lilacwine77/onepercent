@@ -1,9 +1,13 @@
 # Mainnet release inputs and reproduction
 
 Run commands from `app/`. `mainnet.json` contains only the two externally supplied
-public addresses and the two measured transport values. `null` means blocked;
+public addresses and the two supplied transport values. `null` means blocked;
 do not substitute devnet values. The release input validator rejects incomplete
-input, unknown fields, test identities and invalid measurement rounding.
+input, unknown fields, test identities and invalid transport-value rounding.
+D35 abandons the 24-hour measurement requirement: the provisional values are
+`landing.tipLamports = 1_000_000` and
+`landing.maxComputeUnitPriceMicroLamports = 50_000`. The architect supplies them
+with the public addresses in `mainnet.json`; they remain adjustable later.
 
 ```sh
 pnpm release:mainnet:apply --input release/mainnet.json

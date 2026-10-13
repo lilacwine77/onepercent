@@ -1,8 +1,8 @@
 {
-  "programId": null,
-  "dbcConfig": null,
+  "programId": "7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH",
+  "dbcConfig": "35kjYpFKkNfViR9sNfcS3ZuocHor8Ju3xB5WTHybrWdS",
   "landing": {
-    "tipLamports": null,
-    "maxComputeUnitPriceMicroLamports": null
+    "tipLamports": 1000000,
+    "maxComputeUnitPriceMicroLamports": 50000
   }
 }

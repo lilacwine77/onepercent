@@ -1,6 +1,6 @@
 # PARAMS: every number of The 1% Machine, Season 1
 
-> **Issue 3, 2026-10-08 (evening). Frozen for M1, M2 and M3.** Changes only through a new issue of this file, announced with a diff of every changed key. §27 lists every change of this issue against issue 2; §25 lists what issue 2 changed against the 19:20 draft that X1–X3 copied. Issue 3 applies `DECISIONS.md` D1–D11 and adds the operational blocks the M2 and M3 briefs left pending (§26).
+> **Issue 7, 2026-10-13. D37 two-day season.** The four changed keys are listed below; issue 6's D35/D36 release amendment remains in force. The issue 3 baseline remains frozen for M1, M2 and M3. Changes only through a new issue of this file, announced with a diff of every changed key. §27 lists every change of issue 3 against issue 2; §25 lists what issue 2 changed against the 19:20 draft that X1–X3 copied. Issue 3 applies `DECISIONS.md` D1–D11 and adds the operational blocks the M2 and M3 briefs left pending (§26).
 
 Issued 2026-10-08 by the architect (issue 2), re-issued the same evening (issue 3). **This file is authoritative for every number** used by the program, the services, the web app, the bot and the copy, and it restates the rules that use those numbers. The toolchain, account layouts and code rules belong to the master brief and the milestone briefs, not to this file. It replaces the provisional values of `00-M0-SCAFFOLD.md` §6. Codex applies §22 at the start of M1.
 
@@ -12,6 +12,68 @@ Issued 2026-10-08 by the architect (issue 2), re-issued the same evening (issue 
 - **Apart from [C24]–[C28] and the [D#] entries, no value in this file differs from SPEC as amended by those founder decisions.** Where SPEC leaves a non-economic detail open (an encoding, a window, a bound implied by a data type), the architect's default is marked **[A]** and listed in §24. Where this file restates a rule that `01-M1-BRIEF.md` §0.3 amends (A1–A4, A7, A9, A11), it states the amended rule.
 
 **D27 amendment, 2026-10-09:** the founder's launch task supersedes §13.4. Added key: `STOCK.creatorFeeFloorLamports = 2_000_000_000n`. Removed split keys: `beforeOnAir`, `onAirBelowTarget`, `onAirAtOrAboveTarget`. Added split keys: `belowFloor = {stock: 10_000, burn: 0, team: 0}` and `season = {stock: 5_000, burn: 0, team: 5_000}`. Changed `afterEnd` to `{stock: 0, burn: 0, team: 10_000}`. `PACK_SPLIT_BPS` and the Sell back target are unchanged. The final D27, D28 and D29 decisions are in `origin/main`; the architect merges them with this PR. D29 replaces the launch venue and fee-chain rows below.
+
+**Issue 7, D37 amendment, 2026-10-13.** The season lasts 48 hours from On Air.
+The four The 1% releases remain at 0%, 25%, 50% and 75% of the season.
+The founder explicitly sets Last Call to 6 hours. Every changed key:
+
+| Key | Previous value | Issue 7 value |
+|---|---|---|
+| `SEASON.durationDays` | `7` | `2` |
+| `SEASON.durationSeconds` | `604_800` | `172_800` |
+| `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | `[0, 151_200, 302_400, 453_600]` (0 / 42 / 84 / 126 h) | `[0, 43_200, 86_400, 129_600]` (0 / 12 / 24 / 36 h) |
+| `SEASON.lastCallSeconds` | `86_400` (24 h) | `21_600` (6 h) |
+
+No other parameter changes. `SEASON.onAirDelaySeconds` stays 900,
+`SEASON.finalPullDelaySeconds` stays 600, `SEASON.sealDelaySeconds` stays 259_200,
+`TOKEN_1PCT.holderTier.continuousHoldSeconds` and `HIT_LIST.trendingNoticeSeconds`
+stay 86_400. All config invariants accept these values.
+
+Effects to account for:
+
+- Last Call also starts the keeper's surplus sales (§8.3), now at T-6 h instead of
+  T-24 h. Odds and payouts do not change; there is less time to reduce inventory
+  before BuysClosed, and tokens still unsold at Final Pull are shared in kind.
+- Hourly caps, tranche limits and spacing stay fixed. The stock floor is sized
+  for coverage, not season length. With the same total pack volume, average
+  hourly throughput is 3.5 times higher. Burn's unchanged 10 SOL/h cap meets the
+  5% pack inflow at about 9,600 SOL of packs over 48 h, versus 33,600 over the
+  former 168 h (§24 N2). Clock-hour boundaries, peaks, reserve limits and spacing
+  affect actual execution. Unspent burn SOL remains available after the season.
+- A new TRENDING listing needs 24 h notice, half the season; one listed at or
+  after On Air + 24 h cannot open for stock buys before the season closes.
+  A new holder's 24 h qualifying hold also spans half the season when that tier
+  is enabled. Neither delay is compressed. Prelaunch lead times and independent
+  market-history windows stay unchanged.
+- The historical sim2 timing and fulfillment results below were calibrated for
+  the former season; they are not a new 48-hour simulation. D18's deferred Final
+  Pull implementation must ship before the earlier end; D37 does not waive it.
+- Existing Machine timestamps are persisted by `power_on`: a constants upgrade
+  cannot shorten an already stored `end_ts`. Release eligibility does read the
+  compiled offsets, and clients use the new Last Call window. Apply this issue
+  before Power-On to keep all three aligned; it performs no deployment or live
+  state change.
+
+**Issue 6, D35/D36 amendment, 2026-10-13.** D35 abandons the 24-hour
+observation and report requirement for P1/P2. These are provisional off-chain
+values chosen by the founder, adjustable in a later issue, not measurements.
+Every changed key is listed here:
+
+| Key | Previous requirement | Issue 6 value |
+|---|---|---|
+| `SERVICES.landing.tipLamports` | PENDING 24-hour P1 measurement | `1_000_000` lamports |
+| `SERVICES.landing.maxComputeUnitPriceMicroLamports` | PENDING 24-hour P2 measurement | `50_000` micro-lamports/CU |
+
+`app/release/mainnet.json` remains untouched by this issue. The architect supplies
+these values together with the public program and DBC keys, then regenerates
+§11.1.2 and `packages/config`; its generated PENDING rows describe release-file
+completeness, not undecided values. No economic or Rust constant changes.
+D36 amends §11.1's operator order and custody without further number changes:
+the founder prepares Setup without knowing the final mint. Before Stock-Up, the
+friend launches on our DBC config, transfers exactly 40M 1PCT to the founder's
+distinct launch wallet and sends the token address. The founder verifies the
+launch and registers the mint during Setup, then enters Stock-Up at its scheduled
+time, transfers admin/upgrade to their Ledger, deposits and powers on.
 
 ---
 
@@ -145,7 +207,7 @@ Redeem works in every phase and never reads a pause bit. $1PCT is never a hit an
 | `HIT_ODDS.jackpotPriceDivisor` | u32 | — | 400 | `jackpot_ppb = priceLamports / 400`, so P(Jackpot) = price ÷ 400 SOL. Mean pot 20 SOL (5% × 400). Same Jackpot EV per SOL in every edition [C13] |
 | `HIT_ODDS.onePctPriceDivisor` | u32 | — | 1_000 | `onepct_ppb = priceLamports / 1_000`, so P(The 1%) = price ÷ 1,000 SOL [C13]. sim2 exp6: card #1 is pulled in 100% of seasons at 5,000 SOL of packs and in 50% at 500 SOL |
 | `TOKEN_1PCT.holderTier.onePctOddsMultiplierBps` | u32 | bps | 15_000 | MODEL §5: ×1.5. `onepct_ppb_holder = onepct_ppb × 15_000 / 10_000`, exact for every price |
-| `HIT_ODDS.spotlightPriceDivisor` | u32 | — | 500 | `spotlight_ppb = priceLamports / 500`. At 5,000 SOL per season (≈700 SOL a day) a 24 h window is pulled about 75% of the time [C20]. Kept as a compiled constant (layouts and the draw are frozen); the segment is never live in Season 1 [D1] |
+| `HIT_ODDS.spotlightPriceDivisor` | u32 | - | 500 | `spotlight_ppb = priceLamports / 500`. Historical sim2 calibration for the former season: 5,000 SOL total (≈700 SOL a day), a 24 h window pulled about 75% of the time [C20]. This was not rerun for D37. Kept as a compiled constant (layouts and the draw are frozen); the segment is never live in Season 1 [D1] |
 | `HIT_ODDS.walkOrder` | const list | — | one_pct, spotlight, jackpot, black, holo, blue | SPEC §4.3 |
 | `HIT_ODDS.calibratedStockEvBps` | u32 | bps | 7_200 | Test identity; equals `PACK_SPLIT_BPS.stock` |
 | `JACKPOT.minPotPriceMultiple` | u32 | × price | 15 | The Jackpot is live in edition E only while `jackpot_cost ≥ 15 × price(E)`, so it always outranks Black Foil at cost |
@@ -270,7 +332,7 @@ Verification: load the Ed25519 instruction at the index passed as an argument; r
 
 | Field | Type | Set by | Notes |
 |---|---|---|---|
-| `admin` | Pubkey | init; admin rotates | The founder wallet (D31; Ledger recommended), after verified Config-admin transfer from the deployer |
+| `admin` | Pubkey | init; admin rotates | The founder Ledger (D31/D36), after verified Config-admin transfer from the founder's deployment wallet |
 | `guardians` | Pubkey × 2 | admin | Two people in two time zones |
 | `keeper`, `executor`, `intake_signer`, `quote_signer` | Pubkey | admin | Separate hot keys and hosts. The guardian can disable any of them |
 | `launch_wallet` | Pubkey | admin | Calls `power_on` once |
@@ -291,7 +353,7 @@ Verification: load the Ed25519 instruction at the index passed as an argument; r
 | `buckets[16]`: mint, class (MAJOR or TRENDING), enabled, `cap_lamports`, oracle reference (Pyth feed id for MAJOR; canonical PumpSwap pool for TRENDING) | Admin adds a mint (D31: no timelock; `mint_is_safe` runs on-chain; class required) and raises caps. Guardian disables a bucket or lowers a cap | `STOCK.maxBuckets` = 16; `STOCK.trendingMaxCount` = 4 |
 | `spotlight` slot: mint, sponsor, window start, amount | Nobody in Season 1 [D1]: the bytes stay in the layout, no instruction writes them | §12 |
 | `onepct[4]`: amount, state (Locked, Live, Pulled, Final) | `power_on` | §11.2 |
-| `power_on_ts`, `on_air_ts`, `end_ts`, `final_ts` | `power_on` sets the first three: `on_air_ts = power_on_ts + 900`, `end_ts = on_air_ts + 604,800`. `start_final_pull` sets `final_ts` | §14 |
+| `power_on_ts`, `on_air_ts`, `end_ts`, `final_ts` | `power_on` sets the first three: `on_air_ts = power_on_ts + 900`, `end_ts = on_air_ts + 172,800`. `start_final_pull` sets `final_ts` | §14 |
 
 ---
 
@@ -503,16 +565,34 @@ These external venue parameters replace the launch-specific pump values. The Fee
 
 **Exact dev-buy quote.** For 40_000_000_000_000 base units, next sqrt is `ceil(L × start / (L − amountOut × start)) = 101_353_483_280_186_128`. Excluded-fee input is `ceil(L × (next − start) / Q128) = 1_162_519_918`. Gross input is `ceil(excluded × 1_000_000_000 / 975_000_000) = 1_192_328_122`. The 29_808_204 lamport fee splits to protocol `floor(fee × 20 / 100) = 5_961_640` and partner 23_846_564. The unsigned mainnet capture `app/fixtures/meteora/mainnet-launch-simulation.json` reproduces every amount and the decoded config with no mismatches.
 
-**Config pin and release order (D31/D32, 2026-10-12).** The production DBC
-signer is generated offline and retained outside the repository. Its public key
-is known before its account exists: supply it in `app/release/mainnet.json`,
-apply the release input, build and deploy the program, initialize Config, then
-create the DBC config with `onepct-ops launch config`. The config creation
-verifies FeeIn and the authorized team payer after init; the Proxima launch must
-use that config and the prepared vanity mint. The launch wallet is the friend's
-Proxima Deployer wallet; its exact dev buy goes directly to that wallet, then to
-the vault before its separate `power_on` signature. There is no intermediate
-wallet transfer. D32 supersedes D28's atomic mainnet launch.
+**Config pin and release order (D31/D32 amended by D36, 2026-10-13).** The
+production DBC signer is generated offline and retained outside the repository.
+Its public key is known before its account exists: the architect supplies it in
+`app/release/mainnet.json` with the other release inputs. The founder builds and
+deploys from their machine, initializes Config, creates the DBC config with
+`onepct-ops launch config`, sets the season with time before `stock_up_ts`, and
+creates the protocol LUT. The Machine stays in Setup. The final token mint is
+not known yet; no Custom Token Address is required. Because both the current CLI
+schema and `initialize` reject an empty or zero `token_mint`, init uses the
+program's nonzero public address temporarily. It does not create a token. Config
+creation verifies FeeIn and the authorized team payer after init.
+
+Before Stock-Up, the friend launches a new mint through Proxima using our public
+DBC config and a dev buy of at least 4% (40M) into their own Deployer wallet. They
+transfer exactly `TOKEN_1PCT.devBuyAmount` to the founder's distinct launch wallet
+and send the token address. The founder runs read-only `launch verify`, then
+`set-mint` while phase is 0; after Setup, `set-mint` is refused. An existing mint
+in Setup is accepted only with explicit `--pool-creator` and all launch checks
+passing. The canonical pool must use our DBC config and FeeIn, its creator must
+match the friend's declared public Deployer and differ from the launch wallet,
+and the mint must have null authorities, immutable metadata and supply no higher
+than the proven initial supply. A third party reusing our public DBC config is
+refused. Without `--pool-creator`, the prior same-wallet flow remains unchanged.
+At `stock_up_ts`, the founder enters Stock-Up, transfers Config admin and upgrade
+authority to their Ledger, then signs the exact deposit and `power_on` with their
+launch wallet, which remains their deployment wallet. Deposit/vault minimum,
+donation/surplus and burn checks remain unchanged. D32/D36 supersede D28's atomic
+mainnet launch.
 
 Localnet/devnet keep their existing public test pin. Mainnet refuses these test
 identities. No private key file is a build input. `release:mainnet:apply` validates
@@ -524,17 +604,17 @@ selection uses `ONEPERCENT_PROGRAM_IDS`, with no mainnet fallback.
 
 ### 11.1.2 Mainnet release input (issue 5, 2026-10-12)
 
-This issue authorizes exactly these supplied keys: `ONEPERCENT_PROGRAM_IDS.mainnet`
+Issue 5 authorized exactly these supplied keys: `ONEPERCENT_PROGRAM_IDS.mainnet`
 (P6), `METEORA_BY_CLUSTER.mainnet.dbcConfig` / compiled `METEORA_DBC_CONFIG` (P3),
 `SERVICES.landing.tipLamports` (P1) and
-`SERVICES.landing.maxComputeUnitPriceMicroLamports` (P2). Their values are supplied,
-never measured or inferred by the build. The two measurements retain §26.3's
-observation and rounding requirements. `null` means no mainnet release: it is
-not a usable default. The provisional development tip remains 1,000,000 until
-all values are adopted. The generated table below supersedes PENDING mentions
-elsewhere in this document only when every value is present. Measured raw data
-and the observation report must accompany release review; this file records
-adopted numeric values, not proof of measurement.
+`SERVICES.landing.maxComputeUnitPriceMicroLamports` (P2). D35/issue 6 replaces the
+P1/P2 measurement requirement with the provisional values listed above and in
+§26.3. The build never infers values. The architect fills the release input with
+all four values; `null` still blocks mainnet. The generated table below records
+that file's supplied values, not whether the founder has decided them. Until it
+is applied, the development tip remains 1,000,000 and the priority cap remains
+pending in generated config. No 24-hour observations or measurement report are
+required for these two keys.
 
 ```sh
 cd app
@@ -547,16 +627,17 @@ pnpm program:release:check --cluster mainnet
 <!-- BEGIN MAINNET RELEASE INPUT -->
 | Release key | Supplied value |
 |---|---|
-| `programId` | **PENDING** |
-| `dbcConfig` | **PENDING** |
-| `landing.tipLamports` | **PENDING** |
-| `landing.maxComputeUnitPriceMicroLamports` | **PENDING** |
+| `programId` | `7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH` |
+| `dbcConfig` | `35kjYpFKkNfViR9sNfcS3ZuocHor8Ju3xB5WTHybrWdS` |
+| `landing.tipLamports` | `1000000` |
+| `landing.maxComputeUnitPriceMicroLamports` | `50000` |
 <!-- END MAINNET RELEASE INPUT -->
 
 D31 also replaces the off-chain governance defaults in §17/§22:
 `GOVERNANCE.multisigThreshold` 2 → 1, `GOVERNANCE.multisigMembers` 3 → 1,
 `GOVERNANCE.timelockSeconds` 43,200 → 0. One founder wallet holds Config admin and
-upgrade authority after the friend's deployment and verified transfers. The
+upgrade authority after the founder's deployment and verified transfers from
+their deployment wallet (D36). The
 existing two-slot guardian ABI is unchanged; guardians remain separate from the
 admin and hot operator roles. No on-chain economics changes in this issue.
 
@@ -588,8 +669,8 @@ zéro si aucun échantillon, plafond **1 000 000 microlamports/CU**.
 Les retransmissions utilisent les mêmes octets signés ; elles ne modifient pas le prix.
 Le bootstrap et le dry run de l’executor M4.2 utilisent également ce profil sur
 devnet ; la composition y omet entièrement le transfert Sender et refuse un tip non nul.
-Le profil est refusé pour mainnet. Il ne constitue aucune mesure mainnet P1/P2 (§11.1.2/§26.3) et ne change
-pas leur exigence de 24 h de mesures (§26.3). Détails et preuves dans
+Le profil est refusé pour mainnet. Il ne constitue aucune mesure mainnet P1/P2.
+D35 abandonne cette mesure et fixe les valeurs provisoires de §26.3. Détails et preuves dans
 [`DEVNET.md`](DEVNET.md). Aucun chiffre économique compilé ne change.
 
 
@@ -604,7 +685,7 @@ on-chain. Sélection par `ClusterDeployment`, refus mainnet/mainnet-beta testé.
 Le profil MAJOR est approuvé pour cette répétition uniquement. La dérogation de
 provenance Meteora du 2026-10-10 autorise le profil `devnet-dbc-v1-zero-transfer-fee-v1` :
 cluster devnet, config v1 avec octets 216 à 220 strictement nuls, tous les paramètres
-D29 inchangés. Mainnet refuse v1 ; ce profil ne remplace pas les mesures P1/P2 de §26.3, dont les valeurs adoptées sont en §11.1.2. Validation
+D29 inchangés. Mainnet refuse v1 ; ce profil ne remplace pas les valeurs provisoires P1/P2 de D35 (§26.3), à renseigner en §11.1.2. Validation
 empirique requise : frais Curve 250 bps, claims, métadonnées immuables ; migration
 85 SOL et LP permanent vers FeeIn sur validator local avec les binaires devnet
 si le budget devnet ne suffit pas. Voir `DEVNET-METEORA-AUDIT.md`.
@@ -615,12 +696,12 @@ si le budget devnet ne suffit pas. Voir `DEVNET-METEORA-AUDIT.md`.
 |---|---|---|---|---|
 | `TOKEN_1PCT.onePctCardCount` | u8 | cards | 4 | MODEL §4 |
 | `TOKEN_1PCT.onePctCardAmount` | u64 | base units | 10_000_000_000_000 (10M × 10⁶) | MODEL §4: 1% of supply each |
-| `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | i64[4] | s after `on_air_ts` | 0, 151_200, 302_400, 453_600 (0 / 42 / 84 / 126 h) | [C14] Card k is Live iff cards 0..k−1 are Pulled and `now ≥ on_air_ts + offset[k]`. One card live at a time. Program-enforced from timestamps only |
+| `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | i64[4] | s after `on_air_ts` | 0, 43_200, 86_400, 129_600 (0 / 12 / 24 / 36 h) | [C14, D37] Card k is Live iff cards 0..k−1 are Pulled and `now ≥ on_air_ts + offset[k]`. One card live at a time. Program-enforced from timestamps only |
 | `HIT_ODDS.onePctPriceDivisor` | u32 | — | 1_000 | §4.2 |
 | Delivery | — | — | 10M $1PCT at once, no vesting; Redeem, Keep or Sell at market; no Sell back, no Feed | [C3], [C14] |
 | Unpulled at `end_ts` | — | — | Become the $1PCT pool of the Final Pull | [C14] |
 
-sim2 at 5,000 SOL of packs: card #1 is pulled at a median of 6.5 h; cards #2, #3 and #4 in 95%, 77% and 45% of seasons. Card value ≈22.6 SOL executable at a $300k market cap, ≈69–72 SOL at $1M, ≈183–193 SOL at $3M. The UI always shows "≈X if sold now".
+Historical sim2 for the former season, not rerun for D37, at 5,000 SOL of packs: card #1 is pulled at a median of 6.5 h; cards #2, #3 and #4 in 95%, 77% and 45% of seasons. Card value ≈22.6 SOL executable at a $300k market cap, ≈69–72 SOL at $1M, ≈183–193 SOL at $3M. The UI always shows "≈X if sold now".
 
 ### 11.3 Holder boost
 
@@ -640,7 +721,7 @@ sim2 at 5,000 SOL of packs: card #1 is pulled at a median of 6.5 h; cards #2, #3
 | Key | Type | Unit | Value | Where | Source / rationale |
 |---|---|---|---|---|---|
 | `SPOTLIGHT.enabledAtLaunch` | boolean | — | false | OFF | [C20] Built last, behind a flag. Season 1: never enabled [D1] |
-| `HIT_ODDS.spotlightPriceDivisor` | u32 | — | 500 | CONST | N_S = 500 SOL |
+| `HIT_ODDS.spotlightPriceDivisor` | u32 | - | 500 | CONST | N_S = 500 SOL |
 | `SPOTLIGHT.windowSeconds` | i64 | s | 86_400 | CONST | 24 h per drop; one slot at a time. No drop in Season 1 [D1] |
 | `SPOTLIGHT.minDepositBpsOfSupply` | u16 | bps of the mint's supply | 100 | CONST | MODEL §4: ≥ 1% of the supply, measured as a vault delta |
 | `SPOTLIGHT.lineupNoticeSeconds` | number | s | 86_400 | OFF | The Lineup notice stays ≥ 24 h; D31 removes the former timelock rationale |
@@ -663,7 +744,7 @@ A pulled Spotlight card supports Redeem, Keep and Sell at market. Unpulled token
 | `BURN.hourlyMaxLamports` | u64 | lamports per hour | 10_000_000_000 | See §24 note N2 |
 | `BURN.minOutSlipBps` | u16 | bps | 150 | Canonical Meteora `sqrt_price` read in `exec_begin`, after `METEORA.feeAllowBps` (300), per §8.1 [D29 §3b, M2 P1] |
 
-The swap lands in the $1PCT vault; the vault authority then runs `burn_checked(Δ)` and `burned_total += Δ`. After Done, `Burn` is permissionless with the same checks. This is a future upgrade: the P1 audit amendment enforces D18 by rejecting Burn in Done in the current delivery. 1% TV counts only these burns. D29 locks the Meteora LP permanently; it does not add a graduation burn.
+The swap lands in the $1PCT vault; the vault authority then runs `burn_checked(Δ)` and `burned_total += Δ`. After Done, `Burn` is permissionless with the same checks. The D18 Final Pull upgrade enables this Done path; the initial launch artifact rejects Burn in Done. 1% TV counts only these burns. D29 locks the Meteora LP permanently; it does not add a graduation burn.
 
 ### 13.2 Referral (CONST rules)
 
@@ -705,10 +786,10 @@ D27 and D29 (founder, 2026-10-09) replace the earlier split and venue. `$1PCT` l
 
 | Key | Type | Unit | Value | Where | Source / rationale |
 |---|---|---|---|---|---|
-| `SEASON.durationDays` | number | days | 7 | OFF (copy, tests) | MODEL §9 |
-| `SEASON.durationSeconds` | i64 | s | 604_800 | CONST | `end_ts = on_air_ts + 604,800` |
+| `SEASON.durationDays` | number | days | 2 | OFF (copy, tests) | MODEL §9, [D37] |
+| `SEASON.durationSeconds` | i64 | s | 172_800 | CONST | [D37] `end_ts = on_air_ts + 172,800` |
 | `SEASON.onAirDelaySeconds` | i64 | s | 900 | CONST | [C18] |
-| `SEASON.lastCallSeconds` | number | s | 86_400 | OFF | A countdown only: no odds or payout change at any published time |
+| `SEASON.lastCallSeconds` | number | s | 21_600 | OFF | [D37] Countdown and keeper surplus-sale window (§8.3); no odds or payout change |
 | `SEASON.finalPullDelaySeconds` | i64 | s | 600 | CONST | `start_final_pull` needs `now ≥ end_ts + 600` and `pending_pulls == 0` |
 | `SEASON.sealDelaySeconds` | i64 | s | 259_200 | CONST | Done (Sealed) at `final_ts + 72 h`; then the founder wallet sets the upgrade authority to None [C23, admin amended by D31] |
 
@@ -720,14 +801,14 @@ D27 and D29 (founder, 2026-10-09) replace the earlier split and venue. `$1PCT` l
 | Stock-Up | T−3 d (`stock_up_ts`) | `StockUp` | Feed, take-back, Redeem. KPI: Deck ≥ 4 × the packs expected in the first 6 h (≈15–20k cards at mid scale); alarm below 5k |
 | Power-On | T0 (`power_on_ts`) | `PoweredOn` | Creator fees use the D27 floor; stock buys |
 | On Air | T0 + 900 s (`on_air_ts`) | `OnAir` | Rip, Sell back. Editions open as coverage allows. The 1% card #1 eligible |
-| The 1% #2 / #3 / #4 eligible | On Air + 42 / 84 / 126 h | `OnAir` | Only once the previous card is pulled |
+| The 1% #2 / #3 / #4 eligible | On Air + 12 / 24 / 36 h | `OnAir` | Only once the previous card is pulled |
 | Spotlight Drops | Not in Season 1 [D1] | — | — |
-| Last Call | `end_ts − 24 h` | `OnAir` | Countdown only |
+| Last Call | `end_ts − 6 h` | `OnAir` | Countdown and keeper surplus sales (§8.3) |
 | Buys closed | `end_ts` | `BuysClosed` | Rip, Feed, `feed_back` and Sell back close; pending Pulls resolve; the keeper sells the buckets to SOL (MAJOR sells skip the gross hourly cap here, §8.1). Tokens still unsold at the Final Pull are shared in kind |
 | The Final Pull | ≥ `end_ts + 600 s` with no pending Pull (`final_ts`) | `FinalPull` | `claim_final_*` |
 | Sealed | `final_ts + 72 h` | `Done` | Exits only, forever |
 
-Example (the founder fixes T0): T0 = Thu 2026-10-29 16:00:00 UTC. X-ray Week opens Thu 10-22; Stock-Up Mon 10-26; On Air 16:15 on 10-29; The 1% #2 eligible Sat 10-31 10:15, #3 Mon 11-02 04:15, #4 Tue 11-03 22:15; Last Call Wed 11-04 16:15; buys close Thu 11-05 16:15; Final Pull from 16:25; Sealed from Sun 11-08 16:25.
+Example (the founder fixes T0): T0 = Thu 2026-10-29 16:00:00 UTC. X-ray Week opens Thu 10-22; Stock-Up Mon 10-26; On Air 16:15 on 10-29; The 1% #2 eligible Fri 10-30 04:15, #3 Fri 10-30 16:15, #4 Sat 10-31 04:15; Last Call Sat 10-31 10:15; buys close Sat 10-31 16:15; Final Pull from 16:25; Sealed from Tue 11-03 16:25.
 
 **Final Pull** (CONST rules, [C17]): `pool_sol = stock_sol + jackpot_sol`; `pool_tok[b] = A(b)` for any bucket still holding tokens; `pool_1pct` = unpulled The 1% amounts + `jackpot_tokens` (J-B). Each buyer's share is `floor(pool × season_spend / total_spend)`, where `season_spend` adds `qty × price` at each reveal (refunded Pulls never count). Claims never expire. Spotlight leftovers, `burn_sol`, `team_sol` and Dust Cards are not in it.
 
@@ -789,7 +870,7 @@ Rent back on closed user token accounts is the account's actual lamports (EXT): 
 | Key | Value | Source / rationale |
 |---|---|---|
 | `TX_LIMITS.maxTxBytes` | 1,232 | EXT. Web wallets sign legacy or v0 only |
-| `TX_LIMITS.feedBagsPerTx` / `feedBagsPerTxWithLookupTable` | **PENDING M1 measurement** (expected 2 / 3) | One attestation and one `feed` per transaction; per bag 5 unique accounts and three instructions, within the 1,047-byte budget. M1 A7 and M1 §15.4 show that SPEC's 4 / ≈6 cannot fit. M1 writes the measured values into `packages/config` and reports them in its PR; the next issue of this file adopts them. Until then these two keys, `CU_LIMITS` (below) and the two release measurement inputs of §26.3 (adopted in §11.1.2) are the only ones where `packages/config` may differ from this file |
+| `TX_LIMITS.feedBagsPerTx` / `feedBagsPerTxWithLookupTable` | **PENDING M1 measurement** (expected 2 / 3) | One attestation and one `feed` per transaction; per bag 5 unique accounts and three instructions, within the 1,047-byte budget. M1 A7 and M1 §15.4 show that SPEC's 4 / ≈6 cannot fit. M1 writes the measured values into `packages/config` and reports them in its PR; the next issue of this file adopts them. Until then these two keys, `CU_LIMITS` (below) and the two provisional release inputs of §26.3 (pending release-file application in §11.1.2) are the only ones where `packages/config` may differ from this file |
 | `TX_LIMITS.redeemPerTx` / `takeBackPerTx` | 8 / 8 | SPEC §8.8 |
 | `TX_LIMITS.settlePacksPerTx` | 2 | 8 depositors plus their Binders |
 | `TX_LIMITS.txPerSignAll` | 8 | Per `signAndSendAllTransactions`: one wallet approval per batch of up to 8 transactions. A Feed needs `ceil(transactions / 8)` approvals (§19) |
@@ -815,6 +896,32 @@ The fee-chain rows include `collect_creator_fees`. Each measured transaction has
 P1 B4 audit remeasurement (2026-10-09, OFF): adding the readonly Machine account and exec lock to Redeem and Take back gives native maxima of 73,435 / 400,880 CU for Redeem x1/x8 and 71,000 CU for Take back. Their SDK limits are 92,000 / 502,000 and 89,000 CU, respectively, with the same 25% margin and upward rounding. The refreshed native and callback reports cover the B4 guards. The real MagicBlock baseline above retains its recorded M4.1 provenance.
 
 P1 executor measurements after the B4/B7 audit (2026-10-10, OFF): per-path maxima from two runs of the 16 T12.16 cases and two runs of six local validator swaps set `execBegin = 77,000` (61,524 measured) and `execEnd = 55,000` (43,876 measured), using the same 25% and upward rounding rule. `fixtures/reports/m2-exec.json` records every case and the binary hash. Fixed exec pairs with the protocol LUT occupy 369 to 381 bytes before swap instructions; complete validator transactions occupy 435 to 625 bytes. The validator uses the TRENDING stub and real DBC/DAMM programs for Burn and JackpotBuy, including migration.
+
+Final Pull upgrade measurements (OFF, D18, 2026-10-13): 32 samples per
+variant in LiteSVM 0.16.0 on the sBPFv3 artifact, with both compute-budget
+instructions. These keys were PENDING measurement under §16.3 and M4 §13.7;
+no economic value changes. `fixtures/reports/final-pull-cu.json` records the
+artifact hash and every sample. SDK limits add 25% and round up to 1,000 CU.
+
+| Key | Measured maximum CU | CU limit | Largest measured transaction bytes |
+|---|---|---|---|
+| `startFinalPull` | 3,697 | 5,000 | 262 |
+| `claimFinalSol.x1` | 6,889 | 9,000 | 328 |
+| `claimFinalSol.xMax` (12 recipients) | 79,368 | 100,000 | 1,186 |
+| `claimFinalTokens` (17 cards) | 15,304 | 20,000 | 329 |
+
+The combined SOL and 17-card claim measures 21,889 CU and 343 bytes; its SDK
+budget is the sum of the two single-claim limits. The keeper uses one SOL
+recipient per durable job. This measurement does not certify mainnet execution.
+
+Done Burn vault restoration is optional. `CU_LIMITS.restoreBurnVault = 53,000`
+is an additive OFF allowance, leaving `execBegin = 77,000` and
+`execEnd = 55,000` unchanged. The restoration fixture peaks at 147,229 CU;
+25% headroom rounded up gives 185,000 CU, or 53,000 above the existing
+132,000 pair budget. `fixtures/reports/final-pull-burn-cu.json` records 192
+samples across DBC/DAMM, existing/closed/prefunded ledgers and both feature
+sets. It includes ATA preparation but uses transfer swap fixtures; live venue
+routes still need simulation and their own swap budget.
 
 ### 16.4 Rounding (CONST rules, SPEC §4.7)
 
@@ -1002,7 +1109,7 @@ Codex applies this section at the start of M1, in the same PR as the first M1 ch
 
 ### 22.2 Unchanged (do not touch)
 
-`PACK_EDITIONS` ids, names and `priceLamports`; `CARDS_PER_PACK`; every `PACK_SPLIT_BPS` value; `HIT_TIERS` ids, labels and `valueBps`; `SELL_BACK.payoutBps` 8_700; `SEASON.durationDays` 7; every M0 field of `TOKEN_1PCT` (decimals 6, totalSupply, devBuyBps 400, onePctCardAmount, onePctCardCount 4, teamAllocation 0n, holderTier.minBalance, holderTier.onePctOddsMultiplierBps 15_000); `FEED_RULES.launchpads`; `FEED_RULES.oneCardPerWalletPerMint` (comment it: fresh cards only).
+`PACK_EDITIONS` ids, names and `priceLamports`; `CARDS_PER_PACK`; every `PACK_SPLIT_BPS` value; `HIT_TIERS` ids, labels and `valueBps`; `SELL_BACK.payoutBps` 8_700; `SEASON.durationDays` 2 [D37]; every M0 field of `TOKEN_1PCT` (decimals 6, totalSupply, devBuyBps 400, onePctCardAmount, onePctCardCount 4, teamAllocation 0n, holderTier.minBalance, holderTier.onePctOddsMultiplierBps 15_000); `FEED_RULES.launchpads`; `FEED_RULES.oneCardPerWalletPerMint` (comment it: fresh cards only).
 
 ### 22.3 Fields and blocks added
 
@@ -1162,7 +1269,7 @@ export const TOKEN_1PCT = {
   devBuyAmount: 40_000_000_000_000n, // 40M × 10^6, all to The 1% cards
   onePctCardAmount: 10_000_000_000_000n, // 10M × 10^6
   onePctCardCount: 4,
-  onePctReleaseOffsetsSeconds: [0, 151_200, 302_400, 453_600], // [C14] after on_air_ts: 0 / 42 / 84 / 126 h
+  onePctReleaseOffsetsSeconds: [0, 43_200, 86_400, 129_600], // [D37] after on_air_ts: 0 / 12 / 24 / 36 h
   teamAllocation: 0n, // [OFF]
   holderTier: {
     minBalance: 1_000_000_000_000n, // [OFF] attester: ≥ 1M $1PCT
@@ -1197,10 +1304,10 @@ export const CREATOR_FEE_SPLIT_BPS = {
 
 // ── Season ───────────────────────────────────────────────────────── [CONST] unless tagged
 export const SEASON = {
-  durationDays: 7, // [OFF]
-  durationSeconds: 604_800,
+  durationDays: 2, // [OFF] [D37]
+  durationSeconds: 172_800, // [D37]
   onAirDelaySeconds: 900, // [C18]
-  lastCallSeconds: 86_400, // [OFF] countdown only
+  lastCallSeconds: 21_600, // [OFF] [D37] countdown and keeper surplus sales
   finalPullDelaySeconds: 600,
   sealDelaySeconds: 259_200, // [C23]
 } as const;
@@ -1385,7 +1492,7 @@ The founder approved every SPEC §13 change (C1–C23), decided C12 as option J-
 | C11 Permissionless settle | Approved: a non-creditable payee's 2% → stock | settle rules |
 | C12 Jackpot | **Option J-B**: continuous pre-buy in $1PCT, the whole pot delivered at once | `JACKPOT.*` (§10) |
 | C13 Per-SOL odds | Approved: price ÷ 400 SOL (Jackpot), price ÷ 1,000 SOL (The 1%) | `HIT_ODDS.jackpotPriceDivisor`, `.onePctPriceDivisor` |
-| C14 The 1% release | Approved: 0 / 42 / 84 / 126 h, one at a time, delivered at once; unpulled cards go to the Final Pull | `TOKEN_1PCT.onePctReleaseOffsetsSeconds` |
+| C14 The 1% release | Amended by D37: 0 / 12 / 24 / 36 h, one at a time, delivered at once; unpulled cards go to the Final Pull | `TOKEN_1PCT.onePctReleaseOffsetsSeconds` |
 | C15 Holder ×1.5 | Approved: 24 h continuous hold, signed attestation | `holderTier.continuousHoldSeconds`, `ATTESTATIONS.holdTtlSeconds` |
 | C16 Referral | Approved: bound once; unreferred 2% → team | referral binding (§13.2) |
 | C17 Final Pull | Approved: pro rata to season spend; Sell back closes at `end_ts` | §14 |
@@ -1452,7 +1559,7 @@ The table below is the record that the founder decided from (issue 2's defaults 
 **Inconsistencies found in SPEC (no value changes):**
 
 - **N1** SPEC §10 says The 1% card #1 is pulled in "41%" of 500-SOL seasons; SPEC §6.4 and sim2 exp6 say 50%. This file uses 50%. It is rationale only.
-- **N2** The burn's 10 SOL/hour cap binds above about 33,600 SOL of packs per week (5% inflow spread evenly; earlier at peaks). sim2 modelled no hourly cap, so at high scale less is burned during the season than sim2's 6.3% of supply. The rest stays in `burn_sol` and keeps burning after the season (permissionless after Done). No change.
+- **N2** The burn's unchanged 10 SOL/hour cap binds above about 9,600 SOL of packs per 48-hour season [D37] (10 × 48 ÷ 5%; 5% inflow spread evenly; earlier at peaks), versus 33,600 SOL over the former 168-hour season. sim2 modelled no hourly cap, so at high scale less is burned during the season than sim2's 6.3% of supply. The rest stays in `burn_sol` and keeps burning after the season (permissionless after Done). No change.
 - **N3** SPEC's body (§6.3, §7.3, §7.4, §8.2, §9.1) still describes the Jackpot "bought at the win" with orders and a 30-minute timeout. The founder's J-B decision recorded at the top of SPEC and in `MODEL.md` overrides it; §10 here is the J-B version.
 - **N4** sim2 priced SOL at $117. Pyth SOL/USD read $109.01 on 2026-10-08 at 16:20 UTC. No parameter depends on it; display values come from live quotes.
 - **N5** SPEC §7.4 lets `close_binder` run while its owner's Pull is Pending, and SPEC §3.2 S3 records one-hop consumption when the attestation is signed. This file adds `reserved == 0` to `close_binder` (§16.2) and records consumption only from landed `BagFed` events (§6.2). Both are security fixes; no value changes.
@@ -1496,7 +1603,7 @@ X1–X3 copied values from the draft. This is every changed or added key and rul
 
 ## 26. Operational blocks, experience pins and measurements (issue 3)
 
-These blocks carry no economic value. Every key is `[OFF]` and an architect default `[A]`, unless it is tagged `[EXT]` (a third-party fact, with its source) or supplied through the release measurement input (§11.1.2/§26.3). They live in `app/packages/config` like every other key, under the rules of §0, and `validateParams()` covers them (§26.5).
+These blocks carry no economic value. Every key is `[OFF]` and an architect default `[A]`, unless it is tagged `[EXT]` (a third-party fact, with its source) or supplied through the release input (§11.1.2/§26.3, provisional founder values under D35). They live in `app/packages/config` like every other key, under the rules of §0, and `validateParams()` covers them (§26.5).
 
 **Who applies what.** M1 applies §22.4 as amended by this issue (the `XRAY`, `PROGRAM_IDS`, `HIT_ODDS` and `SPOTLIGHT` lines of §27) with check 22; if M1 has already merged when this issue lands, M2's P0 applies them. M2's P0 adds `SERVICES` (§26.1), the `ONCHAIN_KEYS` appends of §24 A18 and check 19. M3.1 writes `WEB` (§26.2) between its markers, with checks 20 and 21. The architect's wave PRs add the pins of §26.4.
 
@@ -1505,7 +1612,7 @@ These blocks carry no economic value. Every key is `[OFF]` and an architect defa
 M2's P0 adds this block, headed `// PARAMS issue 3 §26.1` instead of M2's "pending" header. Where each key is used: M2 §11 and §12.
 
 ```ts
-// [OFF] [A] PARAMS issue 3 §26.1, updated by issue 5: two measured release values come from §11.1.2/§26.3.
+// [OFF] PARAMS issue 6: D35 provisional landing values are supplied through §11.1.2/§26.3.
 export const SERVICES = {
   indexer: { pollMs: 2_000, accountReconcileSeconds: 300, deckReconcileSeconds: 600, deckChunkBytes: 262_144,
              fallbackAfterFailures: 5, fallbackRecoverSeconds: 600, maxLagSecondsForIntake: 30, lagAlertSeconds: 60 },
@@ -1549,8 +1656,8 @@ export const SERVICES = {
 | `stock.pythSkipAgeSeconds` | 45 | A MAJOR trade uses a sponsored Pyth account only up to this age; older, the keeper posts its own update (§21.1) |
 | `monitor.alertDedupeSeconds`, `vrfExpiryClusterPerWallet24h`, `stockCapUsageAlertBps`, `stockConditionAlertSeconds` | 600, 3, 8,000, 900 | Alerts (M2 §11.7, §12.5) |
 | `landing.cuMarginBps` | 2,000 | CU limit = simulated CU × 1.2 |
-| `landing.tipLamports` | Supplied P1 value in §11.1.2; measurement method §26.3 | Helius Sender tip on keeper trades |
-| `landing.maxComputeUnitPriceMicroLamports` | Supplied P2 value in §11.1.2; measurement method §26.3 | Cap on the services' priority price (p75 of `getRecentPrioritizationFees`) |
+| `landing.tipLamports` | 1,000,000 lamports, provisional [D35]; release input §11.1.2 | Helius Sender tip on keeper trades |
+| `landing.maxComputeUnitPriceMicroLamports` | 50,000 micro-lamports/CU, provisional [D35]; release input §11.1.2 | Cap on the services' priority price (p75 of `getRecentPrioritizationFees`) |
 
 #### Operational amendment: RPC node lag (2026-10-11)
 
@@ -1634,16 +1741,26 @@ export const WEB = {
 - **Logo hosts.** The list is the starting allow-list of M3's logo proxy (`GET /api/logo/:mint`). A logo on any other host renders as a monogram; M3 reports the misses it sees in its PR, and the next issue of this file extends the list.
 - **Swap allow-list.** A swap transaction may contain only Compute Budget, System, SPL Token, Token-2022, ATA, `onepercent` (`redeem` only) and `WEB.jupiterProgramIds` at the top level (M3 §9 step 3). The AMMs a route uses are CPIs of the aggregator, so they are not listed.
 
-### 26.3 Measurement requirements for release inputs P1 and P2
+### 26.3 Provisional release inputs P1 and P2 (D35, issue 6)
 
-K1 historical amendment (2026-10-10) introduced the provisional development Sender Max floor of 1,000,000 lamports. The current adopted P1/P2 values and their pending/complete status are exclusively in §11.1.2. The release command replaces the development values only from supplied measurements meeting the 24-hour requirements below. Sponsored Pyth prices only for K1: stale feeds wait and replan; the encoded-VAA poster in §21.1 is deferred. Persistent staleness alerts use `SERVICES.monitor.stockConditionAlertSeconds` (900 seconds).
+The founder abandons the former 24-hour mainnet observation and measurement-report
+requirement. The following off-chain values are provisional and may be adjusted
+later through a new issue listing every changed key. They are not measured results.
 
-Only these two keys may stay `null` in `packages/config` until measured (M1 measures `TX_LIMITS.feedBagsPerTx*` and `CU_LIMITS` the same way, §16.3). Each is written by the PR named, with the measurement in its report; the next issue of this file adopts it. Codex sends no mainnet transaction: every measurement below is a read.
-
-| Key | Measured by | Plan |
+| Key | Value | Use |
 |---|---|---|
-| `SERVICES.landing.tipLamports` | K1 (M2.3) | Helius Sender requires a tip **and** a priority fee on every transaction. Its documented minimums (helius.dev/docs `sending-transactions/sender`, read 2026-10-08) are 1,000,000 lamports (0.001 SOL) for Sender Max, which routes through every path including Jito, and 5,000 lamports for SWQOS-only; a tip in between is accepted without priority. K1 lands through the Jito path (the `jitodontfront` account), so its floor is 1,000,000. K1 reads Jito's landed-tip percentiles (`bundles.jito.wtf/api/v1/bundles/tip_floor`) for at least 24 h and writes `tipLamports = max(1_000_000, the window's 50th percentile)`, rounded up to the next 10,000 lamports, with the window and the percentiles in the PR. D18 replaces the former mainnet canary with a devnet rehearsal; the supplied measurement still uses mainnet observations. Cost bound at the floor: each 20 s spacing allows at most 180 trades an hour (stock trades; and, once the executor lands the same way in M4.2, burns and Jackpot buys), so tips cost at most 0.18 SOL an hour per kind |
-| `SERVICES.landing.maxComputeUnitPriceMicroLamports` | S3 (M2.2) | S3 samples `getRecentPrioritizationFees` (read-only) once a minute for at least 24 h on mainnet: without an account filter, and with the accounts the keeper's trades write that already exist (the launch majors' main pool accounts). It computes the p75 that `TxSender` would pick for each sample and writes the window's 99th percentile of those, rounded up to the next 10,000 micro-lamports, with the window and the percentiles in the PR. D18 removes the mainnet canary; retain raw measurement evidence with the release input |
+| `SERVICES.landing.tipLamports` | `1_000_000` lamports | P1, Sender tip |
+| `SERVICES.landing.maxComputeUnitPriceMicroLamports` | `50_000` micro-lamports/CU | P2, cap on the selected priority price |
+
+The architect will enter these values together with the public keys in
+`app/release/mainnet.json` and apply §11.1.2. This issue does not edit that file.
+Generated release values may remain `null` until then; mainnet stays blocked
+until every release input is supplied and validated. The services retain their
+per-transaction fee selection within the configured cap.
+
+Sponsored Pyth prices only for K1: stale feeds wait and replan; the encoded-VAA
+poster in §21.1 remains deferred. Persistent staleness alerts use
+`SERVICES.monitor.stockConditionAlertSeconds` (900 seconds).
 
 ### 26.4 Experience-layer dependency pins (requested by `03-M3-BRIEF.md` §3)
 
@@ -1657,7 +1774,7 @@ Checked on the npm registry on 2026-10-08. The architect's wave PRs add them to 
 
 ### 26.5 `validateParams()` additions (issue 3)
 
-19. `SERVICES` (M2 §4.3): every value a positive integer, except the two release measurement keys, which may be `null` only while §11.1.2 is incomplete (mainnet remains blocked); `quote.rateLimitPerMinutePerIp ≥ quote.rateLimitPerMinutePerWallet`; `indexer.maxLagSecondsForIntake < indexer.lagAlertSeconds`; `stock.pythSkipAgeSeconds < STOCK.pythMaxAgeSeconds`; `keeper.followerRetrySeconds < keeper.leaderFailoverSeconds`.
+19. `SERVICES` (M2 §4.3): every value a positive integer, except the two provisional release keys (D35), which may be `null` only while §11.1.2 is incomplete (mainnet remains blocked); `quote.rateLimitPerMinutePerIp ≥ quote.rateLimitPerMinutePerWallet`; `indexer.maxLagSecondsForIntake < indexer.lagAlertSeconds`; `stock.pythSkipAgeSeconds < STOCK.pythMaxAgeSeconds`; `keeper.followerRetrySeconds < keeper.leaderFailoverSeconds`.
 20. `WEB` timings and limits: every number a positive integer; `liveStaleAfterMs > 2 × SERVICES.api.ssePingSeconds × 1_000`; `pullPollFastMs < pullPollSlowMs`; `machinePollMs < machinePollHiddenMs`; `valuesBatchMax ≤ valuesNowPerMinutePerIp`.
 21. `WEB` lists: every `logoHosts` entry is a lowercase host name, optionally prefixed `*.`, with no scheme, path or port; every `jupiterProgramIds` entry decodes from base58 to 32 bytes.
 22. Prices and ids: `XRAY.priceMaxAgeSlots ≥ MARKET.price.maxAgeSlots` (the X-ray display bound never applies to anything stricter [D7]); `PROGRAM_IDS.pythReceiver`, `.pythPushOracle` and `.pythWormholeReceiver` decode to 32 bytes and are distinct.

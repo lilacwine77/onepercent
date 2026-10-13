@@ -92,6 +92,18 @@ impl Env {
     }
     pub fn with_mainnet(mainnet: bool) -> Self {
         let mut env = Self::empty(mainnet);
+        env.initialize_for_tests();
+        env
+    }
+    /// Initialize and serialize accounts with an actual prior release artifact.
+    pub fn with_legacy_program(so: &[u8]) -> Self {
+        let mut env = Self::empty(false);
+        env.install_program(onepercent::ID, so, pubkey(&env.authority.pubkey()));
+        env.initialize_for_tests();
+        env
+    }
+    fn initialize_for_tests(&mut self) {
+        let env = self;
         let init = env.initialize_ix();
         env.send(&[init], &[]).unwrap();
         let now = env.now();
@@ -114,7 +126,6 @@ impl Env {
             &[],
         )
         .unwrap();
-        env
     }
     pub fn empty(mainnet: bool) -> Self {
         let mut svm = if mainnet {
@@ -268,7 +279,11 @@ impl Env {
         self.mutate(self.machine, |a| {
             a.data[10] = phase;
             write_u64(&mut a.data, 48, (now - 60) as u64);
-            write_u64(&mut a.data, 56, (now + 604800) as u64);
+            write_u64(
+                &mut a.data,
+                56,
+                (now - 60 + onepercent::params::SEASON_DURATION_SECONDS) as u64,
+            );
             let mut m: onepercent::state::Machine = bytemuck::pod_read_unaligned(&a.data[8..]);
             if m.token_mint == Pubkey::default() {
                 // A pre-M4 fixture has no backed special claims.

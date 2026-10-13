@@ -475,8 +475,50 @@ export type Onepercent = {
       ],
       "accounts": [
         {
-          "name": "signer",
-          "signer": true
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "binder",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  110,
+                  100,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "owner"
         }
       ],
       "args": []
@@ -495,8 +537,56 @@ export type Onepercent = {
       ],
       "accounts": [
         {
-          "name": "signer",
+          "name": "owner",
+          "writable": true,
           "signer": true
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "binder",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  110,
+                  100,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "systemProgram",
+          "address": "11111111111111111111111111111111"
         }
       ],
       "args": []
@@ -2151,8 +2241,24 @@ export type Onepercent = {
       ],
       "accounts": [
         {
-          "name": "signer",
-          "signer": true
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
         }
       ],
       "args": []
@@ -6413,7 +6519,7 @@ export type Onepercent = {
     {
       "name": "seasonDurationSeconds",
       "type": "i64",
-      "value": "604800"
+      "value": "172800"
     },
     {
       "name": "seasonFinalPullDelaySeconds",
@@ -6583,7 +6689,7 @@ export type Onepercent = {
           4
         ]
       },
-      "value": "[0, 151200, 302400, 453600]"
+      "value": "[0, 43200, 86400, 129600]"
     },
     {
       "name": "vrfMaxQueues",

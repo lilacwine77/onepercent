@@ -111,7 +111,7 @@ export const HIT_TIERS = [
 // Odds per edition: NOT set in M0 (calibrated in M1). Export `HIT_ODDS = null` with a TODO(M1).
 
 export const SELL_BACK = { payoutBps: 8_700, quoteTtlSeconds: 60 } as const;
-export const SEASON = { durationDays: 7 } as const;
+export const SEASON = { durationDays: 2 } as const; // D37
 export const TOKEN_1PCT = {
   decimals: 6,
   totalSupply: 1_000_000_000_000_000n,     // 1B * 10^6 (pump.fun)

@@ -40,6 +40,9 @@ const programId = key(100);
 const mint = key(101);
 const wallet = key(102);
 const dbcConfig = key(103);
+const powerOnTs = 1_793_289_600n;
+const onAirTs = powerOnTs + BigInt(SEASON.onAirDelaySeconds);
+const endTs = onAirTs + BigInt(SEASON.durationSeconds);
 const pda = (name: string) =>
   PublicKey.findProgramAddressSync([Buffer.from(name)], programId)[0];
 const feeIn = pda("fee_in");
@@ -76,9 +79,9 @@ function machineAccount(powered = false) {
   data[8] = 1;
   data[10] = powered ? 2 : 1;
   if (powered) {
-    data.writeBigInt64LE(1_793_289_600n, 40);
-    data.writeBigInt64LE(1_793_290_500n, 48);
-    data.writeBigInt64LE(1_793_895_300n, 56);
+    data.writeBigInt64LE(powerOnTs, 40);
+    data.writeBigInt64LE(onAirTs, 48);
+    data.writeBigInt64LE(endTs, 56);
     putKey(data, 2_608, mint);
     for (let index = 0; index < TOKEN_1PCT.onePctCardCount; index++)
       data.writeBigUInt64LE(TOKEN_1PCT.onePctCardAmount, 2_336 + index * 16);
@@ -221,9 +224,9 @@ describe("launch account decoding SWITCH vectors", () => {
     const decoded = decodeLaunchMachine(machineAccount(true), programId);
     expect(decoded.phase).toBe(2);
     expect(decoded.tokenMint).toEqual(mint);
-    expect(decoded.powerOnTs).toBe(1_793_289_600n);
-    expect(decoded.onAirTs).toBe(1_793_290_500n);
-    expect(decoded.endTs).toBe(1_793_895_300n);
+    expect(decoded.powerOnTs).toBe(powerOnTs);
+    expect(decoded.onAirTs).toBe(onAirTs);
+    expect(decoded.endTs).toBe(endTs);
     expect(decoded.onePct).toEqual(
       Array.from({ length: 4 }, () => ({
         state: 0,
@@ -803,10 +806,12 @@ describe("landed launch report", () => {
     expect(
       report.checks.find((entry) => entry.id === "report.timestamps")!.value,
     ).toMatchObject({
-      powerOnTs: "1793289600",
-      onAirTs: "1793290500",
-      endTs: "1793895300",
-      onePctReleaseTs: ["1793290500", "1793441700", "1793592900", "1793744100"],
+      powerOnTs: powerOnTs.toString(),
+      onAirTs: onAirTs.toString(),
+      endTs: endTs.toString(),
+      onePctReleaseTs: TOKEN_1PCT.onePctReleaseOffsetsSeconds.map((offset) =>
+        (onAirTs + BigInt(offset)).toString(),
+      ),
     });
     expect(() => JSON.stringify(report)).not.toThrow();
   });

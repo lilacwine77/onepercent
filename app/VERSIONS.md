@@ -803,7 +803,7 @@ cases are not validated by this run. PostgreSQL's standard `mmap` setting still
 requires that small segment, as documented in its
 [kernel resource requirements](https://www.postgresql.org/docs/17/kernel-resources.html#SYSVIPC).
 
-Final Pull claims, their math and Burn-after-Done remain deferred under D18.
+At that delivery, Final Pull claims, their math and Burn-after-Done remained deferred under D18.
 The reserved Machine space and stubs remain intact. Production launch tooling
 and the atomic launch transaction rehearsal are M4.2 work.
 
@@ -852,3 +852,41 @@ configured suites and are not claimed as validated here. The 24 signed SDK
 transaction shapes reproduced every size in the P2 report. Heavy steps ran
 sequentially with `CARGO_BUILD_JOBS=3`, `RUST_TEST_THREADS=2`,
 `M1_PROPTEST_THREADS=2` and `VITEST_MAX_WORKERS=2`.
+
+## D18 Final Pull upgrade on the D37 48-hour season (2026-10-13)
+
+Final Pull and both claims use existing fields and flags. Machine remains
+3,808 bytes; Config, Binder, Card and bucket layouts are unchanged. The checked-in
+prior artifact and provenance in `fixtures/upgrade/` initialize, buy, reveal and
+settle before the new artifact is installed. T25 then exercises claims, exits,
+Done and permissionless Burn without reinitializing or reallocating Machine
+or Config.
+
+The localnet sBPFv3 artifact is 1,001,400 bytes, SHA-256
+`90b9f3183a324119b1f8e02bf84d377f3a50e58a8f7163461b243c4f13248d03`,
+with 133 generated parameters. Final Pull limits come from
+`fixtures/reports/final-pull-cu.json`: start 5,000 CU, SOL 9,000 CU,
+12-recipient SOL batch 100,000 CU, and 17-card token claim 20,000 CU.
+`final-pull-burn-cu.json` covers existing, closed and prefunded ledger paths.
+Normal execution budgets stay unchanged. The optional restoration path has a
+separate measured allowance. Venue swaps still require route simulation.
+
+P4 passes 10,000 complete 200-step seasons through Final Pull, claims and Done;
+T25 separately includes Burn on DBC and DAMM fixtures. The refreshed core and
+callback CU reports retain their previous limits. Eleven existing validator e2e
+tests pass against the new artifact. Detailed local checks and exclusions are
+in `fixtures/reports/final-pull.json`.
+
+Cross-review covered on-chain accounting, account authentication, exits,
+SDK instruction composition and keeper reconciliation. This is an internal
+review, not the architect's independent PASS. The branch includes main's merged
+D37 season and PR #84 public mainnet inputs. No deployment, transaction or
+production-state verification is claimed. See `../docs/codex/FINAL-PULL-UPGRADE.md` for the
+mainnet-feature build, authority-signed upgrade and post-upgrade checks.
+
+The native `--features mainnet` compile check passes with the published identity
+`7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH`. Its sBPFv3 artifact is
+1,001,400 bytes, SHA-256
+`2fea83fb532524c76048ffdc9702cbbe1ec3d464f25132f6bcfb1eee36823d1c`.
+This validates compilation and release pins; the separate reproducible Docker
+release build remains required before deployment.

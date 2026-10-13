@@ -7,9 +7,9 @@ export const MAINNET_RELEASE: Readonly<{
     maxComputeUnitPriceMicroLamports: number | null;
   }>;
 }> = Object.freeze({
-  programId: null,
-  dbcConfig: null,
-  landing: { tipLamports: null, maxComputeUnitPriceMicroLamports: null },
+  programId: "7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH",
+  dbcConfig: "35kjYpFKkNfViR9sNfcS3ZuocHor8Ju3xB5WTHybrWdS",
+  landing: { tipLamports: 1000000, maxComputeUnitPriceMicroLamports: 50000 },
 });
 export const ONEPERCENT_PROGRAM_IDS: Readonly<{
   localnet: string;
@@ -18,5 +18,5 @@ export const ONEPERCENT_PROGRAM_IDS: Readonly<{
 }> = Object.freeze({
   localnet: "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe",
   devnet: "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr",
-  mainnet: null,
+  mainnet: "7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH",
 });

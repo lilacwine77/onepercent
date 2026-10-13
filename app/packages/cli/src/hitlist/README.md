@@ -2,7 +2,17 @@
 
 `onepct-ops hitlist check|recheck <mint> --class major|trending` uses the X2
 listing evidence gatherer and evaluators. Set `DATABASE_URL` and the public
-`SOLANA_RPC_URL` (or `RPC_URL`), with the service's Jupiter and Hermes credentials.
+`SOLANA_RPC_URL` (or `RPC_URL`), with `JUPITER_API_KEY` for executable quotes.
+Without `PYTH_HERMES_API_KEY`, MAJOR prices and confidence come from Pyth push
+feeds on shard 0, through that same RPC. The account owner, `PriceUpdateV2`
+discriminator, feed id and price freshness are checked. With a Hermes key,
+latest prices still use Hermes.
+
+Daily volatility uses eight completed daily closes from public Pyth Benchmarks,
+falling back to public GeckoTerminal daily OHLCV for the major's most liquid
+SOL or USD pool. No history API key is required. Each report records the source;
+all listing thresholds are unchanged.
+
 The evidence RPC genesis must match the command's cluster. Reports are stored
 in `hitlist_reports` and `reports/hitlist/<UTC date>/<mint>.json`.
 

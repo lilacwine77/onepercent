@@ -9,6 +9,7 @@ export const routes = {
   fairness: { path: "/fairness", title: "title.fairness" },
   live: { path: "/live", title: "title.live" },
   token: { path: "/token", title: "title.token" },
+  docs: { path: "/docs", title: "title.docs" },
   go: { path: "/go", title: "title.home" },
   link: { path: "/link", title: "title.home" },
   notFound: { path: "", title: "title.notFound" },

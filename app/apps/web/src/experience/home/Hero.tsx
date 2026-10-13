@@ -113,6 +113,7 @@ function Countdown({
  * beside it (Status; the first config read shows none, so nothing swaps).
  */
 function Action({ props }: { props: HomeProps }) {
+  if (props.flowsLocked) return null;
   if (machine(props).stage === "over")
     return (
       <a className="oval" href="/cards">
@@ -138,6 +139,7 @@ function Action({ props }: { props: HomeProps }) {
 }
 /** While the machine is not on air: when it will be, or that the season is over. */
 function Status({ props }: { props: HomeProps }) {
+  if (props.flowsLocked) return null;
   const { stage, next } = machine(props);
   if (stage === "over")
     return <p className="hero-chip">{existing.seasonOver()}</p>;
@@ -318,13 +320,14 @@ export function Hero({ props }: { props: HomeProps }) {
     >
       <HeroFrame stage={stage} live={live} />
       <div className="hero-copy">
+        {props.launchNotice}
         <HeroTitle />
         <p className="hero-lede hero-reveal">{copy("home.hero.lede")}</p>
         <p
           className="hero-deposit hero-reveal"
           style={{ "--i": 1 } as CSSProperties}
         >
-          {props.flags.feed && (
+          {!props.flowsLocked && props.flags.feed && (
             <a href="/feed">
               {copy("home.cta.feed")} <span aria-hidden="true">↗</span>
             </a>

@@ -880,8 +880,8 @@ an application service and no exit reads a pause bit. `--cluster` defaults to
 mainnet, whose program id is refused until published or passed with `--program`.
 `pnpm rescue:bundle` builds the reproducible standalone file with its SHA-256.
 See [the rescue CLI guide](packages/cli/src/rescue/README.md) for commands,
-recovery and the stopped-services validator drill. The Final Pull claims and the
-IPFS page are later tracks under D18.
+recovery and the stopped-services validator drill. The Final Pull upgrade adds claims and a start crank. The IPFS page remains
+a later track under D18.
 
 ## M4.1 season on-chain, launch scope
 
@@ -983,7 +983,7 @@ pnpm build
 covers real DBC config creation, pool initialization, dev buy, Power-On, trading
 and Curve collection, migration past 85 SOL, and DAMM trading and Pool collection.
 It replays the resulting venue accounts with only Machine timestamps aged to
-exercise AFTER_END without waiting seven days. Exported fixtures also cover
+exercise AFTER_END without waiting two days. Exported fixtures also cover
 forced special wins followed by settle and Redeem. Exact lamports are checked
 for all three D27 regimes. Disposable test signers and validator ledgers are
 removed after each run; only the explicitly public test config signer is kept.
@@ -1067,3 +1067,22 @@ documents the reserved-byte extension, legacy activation through `advance_phase`
 execution-time StockBuy guards, and the bounds K1 can derive without event
 history. [DEVNET.md](DEVNET.md) describes the required pre-upgrade Pull inventory.
 No K1 integration is included.
+
+## Final Pull upgrade (D18, 48-hour season)
+
+The program now implements `start_final_pull`, `claim_final_sol`,
+`claim_final_tokens` and permissionless Burn in Done. Existing Machine and
+Config layouts are unchanged. Claims remain available without a pause, signer
+service or keeper, including zero claims and claims after Done. Token claims
+create Final cards redeemable through the existing exit.
+
+The SDK and `onepct-rescue` expose the new instructions. The keeper starts the
+snapshot at `end_ts + 600` with no pending draw, pushes SOL claims using a
+durable job per Binder and advances to Done at `final_ts + 259,200`. The
+historical launch-scope exclusions above describe the pre-upgrade artifact.
+
+See [the upgrade procedure](../docs/codex/FINAL-PULL-UPGRADE.md) for mainnet
+feature builds, founder-authority signing and post-upgrade accounting checks.
+The legacy binary fixture and `t25_upgrade_final_pull` exercise existing
+serialized accounts across the upgrade, including a complete season through
+Done and Burn. `final-pull-cu.json` records measured transaction budgets.

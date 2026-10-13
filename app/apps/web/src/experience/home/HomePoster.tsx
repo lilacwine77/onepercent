@@ -1,4 +1,4 @@
-import { useLayoutEffect, type Ref } from "react";
+import { useLayoutEffect, type ReactNode, type Ref } from "react";
 import { t } from "@onepercent/copy/initial";
 import { TV_ASSETS, TV_SIZES, tvSet } from "../../app/tv-poster";
 import "./hero.css";
@@ -72,7 +72,7 @@ function firstVisit() {
     return false;
   }
 }
-export function HomePoster() {
+export function HomePoster({ launchNotice }: { launchNotice?: ReactNode }) {
   useLayoutEffect(() => {
     if (!firstVisit()) return;
     const root = document.documentElement;
@@ -89,6 +89,7 @@ export function HomePoster() {
     <section className="hero" aria-labelledby="hero-title">
       <HeroFrame />
       <div className="hero-copy">
+        {launchNotice}
         <HeroTitle />
         <p className="hero-lede" />
         <p className="hero-deposit" />

@@ -53,7 +53,7 @@ test("public environment allow-list catches dot access, bracket access and destr
   assert.equal(
     inspectSource(
       "main.tsx",
-      "const a = import.meta.env.VITE_CLUSTER; const b = import.meta.env['VITE_API_URL'];",
+      "const a = import.meta.env.VITE_CLUSTER; const b = import.meta.env['VITE_API_URL']; const c = import.meta.env.VITE_LAUNCH_AT;",
     ).length,
     0,
   );

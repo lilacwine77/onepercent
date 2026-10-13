@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-13",
+  "scope": "D18 Final Pull upgrade on the D37 48-hour season",
+  "cluster": "localnet",
+  "sourceBaseCommit": "07669e889388ee592f29d4c1c89bcefa5cd58ce7",
+  "artifact": {
+    "path": "target/deploy/onepercent.so",
+    "bytes": 1001400,
+    "sbfFlags": 3,
+    "sha256": "90b9f3183a324119b1f8e02bf84d377f3a50e58a8f7163461b243c4f13248d03"
+  },
+  "compatibility": {
+    "machineBytes": 3808,
+    "existingLayoutsChanged": false,
+    "machineOrConfigRealloc": false,
+    "priorArtifact": "fixtures/upgrade/pre-final-pull.so",
+    "priorSha256": "6a7ab618dc7914b1d6fce6da022526b01057d6f42254aff5eeab509627f4d712",
+    "method": "Initialize, buy, reveal and settle using the prior binary, then replace the executable and invoke the new instructions against the same account bytes.",
+    "tests": 2
+  },
+  "evidence": {
+    "targetedRust": "lib, golden, T01, T07-T10, T12, T15, T21-T23, T25-T26",
+    "property": {
+      "suite": "prop_p4_season",
+      "cases": 10000,
+      "stepsPerSeason": 200,
+      "workers": 2,
+      "durationSeconds": 913.19
+    },
+    "upgradeScenario": "Prior season -> BuysClosed -> FinalPull -> both claims -> Redeem -> Done -> permissionless Burn, DBC and DAMM fixtures",
+    "validatorE2e": {
+      "passed": 11,
+      "note": "Existing validator flows; new Final Pull and old-binary upgrade scenarios are covered by Rust LiteSVM."
+    },
+    "worker": {
+      "passed": 540,
+      "skipped": 26
+    },
+    "cli": {
+      "passed": 525
+    },
+    "cuReports": [
+      "final-pull-cu.json",
+      "final-pull-burn-cu.json",
+      "cu.json",
+      "m4-cu.json",
+      "callback.json",
+      "callback-m4.json"
+    ],
+    "sdk": {
+      "passed": 619
+    },
+    "checks": [
+      "params:rs --check",
+      "program:build",
+      "program:clippy",
+      "program:report",
+      "golden generation and comparisons",
+      "targeted Rust unit and integration suites",
+      "SDK, CLI and worker tests",
+      "test:e2e",
+      "rescue:bundle",
+      "typecheck",
+      "lint",
+      "format:check",
+      "lint:words",
+      "rustfmt on changed Rust files",
+      "git diff --check",
+      "release:mainnet:check",
+      "program:release:check --cluster mainnet",
+      "ONEPERCENT_CLUSTER=mainnet program:build"
+    ],
+    "config": {
+      "passed": 142
+    },
+    "postRebase": {
+      "localnetArtifactByteIdentical": true,
+      "tests": "golden, T21, T22, T25, T26",
+      "passed": 25
+    }
+  },
+  "safetyChoices": [
+    "Uncreditable SOL payees accrue backed Binder.sol_owed.",
+    "Positive SOL claims fail atomically on insufficient current sysvar rent plus tracked liabilities; claim bits are preserved.",
+    "Each keeper SOL recipient has its own durable retry and finality record.",
+    "Done Burn can recreate only a canonical empty closed ledger when no Machine token claims remain; the caller pays rent.",
+    "Optional SDK vault restoration adds its measured compute allowance; ordinary execution shapes and limits stay unchanged."
+  ],
+  "review": {
+    "type": "Internal cross-review of program, SDK and services",
+    "independentArchitectPass": false
+  },
+  "limitations": [
+    "Native mainnet-feature build passed; the independent reproducible Docker release build is still required before deployment.",
+    "No mainnet upgrade, transaction or live state verification.",
+    "The prior compatibility artifact is localnet; compare the actual deployed executable and account state before upgrade.",
+    "Twenty-six worker cases are skipped by the existing suite, including conditional external-service integration tests.",
+    "Burn CU fixtures use authenticated synthetic venue states and SPL transfer swaps; real route compute requires simulation.",
+    "A worker stock-policy property test initially exceeded its 60-second timeout during concurrent Rust work; the complete worker suite then passed twice."
+  ],
+  "mainnetCompileCheck": {
+    "scope": "Native mainnet-feature compile check; not the reproducible production release",
+    "bytes": 1001400,
+    "sbfFlags": 3,
+    "sha256": "2fea83fb532524c76048ffdc9702cbbe1ec3d464f25132f6bcfb1eee36823d1c",
+    "publicInputSha256": "51f6fad4e6a032a8d3afc797b5e2ab75a80dc0313ea9ad47842a616b75d10994",
+    "programId": "7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH",
+    "dbcConfig": "35kjYpFKkNfViR9sNfcS3ZuocHor8Ju3xB5WTHybrWdS",
+    "sourceMainCommit": "8234a08",
+    "command": "CARGO_BUILD_JOBS=3 VITEST_MAX_WORKERS=2 ONEPERCENT_CLUSTER=mainnet pnpm program:build"
+  },
+  "integratedMainCommit": "8234a08"
+}

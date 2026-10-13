@@ -1,0 +1,141 @@
+{
+  "limitation": "Synthetic authenticated DBC/DAMM pool state and SPL transfer swaps; production swap routing needs its own simulation budget",
+  "limits": {
+    "execBegin": 77000,
+    "execEnd": 55000,
+    "restoreBurnVault": 53000
+  },
+  "limitsSource": "packages/config/src/index.ts CU_LIMITS",
+  "measured": {
+    "execBegin": 74881,
+    "execEnd": 40874,
+    "existingTransaction": 95546,
+    "restorationTransaction": 147229
+  },
+  "measuredWith25PercentMargin": {
+    "execBegin": 94000,
+    "execEnd": 52000
+  },
+  "programSha256": "90b9f3183a324119b1f8e02bf84d377f3a50e58a8f7163461b243c4f13248d03",
+  "restorationAllowanceDerivation": {
+    "additionalRequired": 53000,
+    "baseHandlerBudget": 132000,
+    "wholeRestorationWith25PercentMargin": 185000
+  },
+  "runtime": "LiteSVM 0.16.0, sBPFv3; default and recorded mainnet feature sets",
+  "scope": "Done Burn handlers, source ATA preparation, optional restoration of token vault and ledger, atomic token-transfer swap fixture, and both compute budget instructions",
+  "transactionLimits": {
+    "existing": 132000,
+    "restoration": 185000
+  },
+  "variants": [
+    {
+      "execBeginMax": 54316,
+      "execEndMax": 36374,
+      "featureSet": "LiteSVM default",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 95546,
+      "variant": "existing"
+    },
+    {
+      "execBeginMax": 72977,
+      "execEndMax": 40874,
+      "featureSet": "LiteSVM default",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 147229,
+      "variant": "closed"
+    },
+    {
+      "execBeginMax": 69947,
+      "execEndMax": 28874,
+      "featureSet": "LiteSVM default",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 124699,
+      "variant": "prefunded"
+    },
+    {
+      "execBeginMax": 56220,
+      "execEndMax": 28874,
+      "featureSet": "LiteSVM default",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 92950,
+      "variant": "existing"
+    },
+    {
+      "execBeginMax": 61381,
+      "execEndMax": 30374,
+      "featureSet": "LiteSVM default",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 116133,
+      "variant": "closed"
+    },
+    {
+      "execBeginMax": 62851,
+      "execEndMax": 27374,
+      "featureSet": "LiteSVM default",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 111603,
+      "variant": "prefunded"
+    },
+    {
+      "execBeginMax": 46816,
+      "execEndMax": 24374,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 80546,
+      "variant": "existing"
+    },
+    {
+      "execBeginMax": 62477,
+      "execEndMax": 28874,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 111229,
+      "variant": "closed"
+    },
+    {
+      "execBeginMax": 62447,
+      "execEndMax": 31874,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DBC",
+      "samples": 16,
+      "transactionMax": 117199,
+      "variant": "prefunded"
+    },
+    {
+      "execBeginMax": 54720,
+      "execEndMax": 30374,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 92950,
+      "variant": "existing"
+    },
+    {
+      "execBeginMax": 74881,
+      "execEndMax": 37874,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 135633,
+      "variant": "closed"
+    },
+    {
+      "execBeginMax": 71851,
+      "execEndMax": 37874,
+      "featureSet": "recorded mainnet fixture",
+      "pool": "DAMM v2",
+      "samples": 16,
+      "transactionMax": 137103,
+      "variant": "prefunded"
+    }
+  ]
+}

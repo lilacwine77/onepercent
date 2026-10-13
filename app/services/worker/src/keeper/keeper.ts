@@ -1,4 +1,4 @@
-import { isRpcNodeLag, safeCause } from "@onepercent/service-kit";
+import { isRpcNodeLag, RpcNodeLag, safeCause } from "@onepercent/service-kit";
 import {
   PublicKey,
   type TransactionInstruction,
@@ -10,7 +10,12 @@ import {
   type TxSendResult,
 } from "@onepercent/service-kit";
 import type { KeeperChain, KeeperSnapshot } from "./adapter.js";
-import { nextPhase, settleIntents, type KeeperIntent } from "./jobs.js";
+import {
+  finalPullDue,
+  nextPhase,
+  settleIntents,
+  type KeeperIntent,
+} from "./jobs.js";
 import type { KeeperParams } from "./params.js";
 import {
   chainDate,
@@ -51,6 +56,10 @@ export interface KeeperOptions {
     | "settle"
     | "refund"
     | "advance"
+    | "startFinalPull"
+    | "finalSolClaims"
+    | "finalClaim"
+    | "claimFinalSol"
     | "closeVault"
     | "teamWithdraw"
   >;
@@ -148,7 +157,16 @@ export class Keeper {
         if (this.options.shouldYield?.()) return;
         const to = nextPhase(snapshot, now);
         const cadence = params.SERVICES.keeper;
-        if (to !== null)
+        if (finalPullDue(snapshot, now))
+          await store.ensure(
+            {
+              kind: "start-final-pull",
+              endTs: snapshot.machine.endTs.toString(),
+              window: (now / BigInt(cadence.scanSeconds)).toString(),
+            },
+            date,
+          );
+        else if (to !== null)
           await store.ensure(
             {
               kind: "advance",
@@ -158,6 +176,29 @@ export class Keeper {
             },
             date,
           );
+        if (snapshot.machine.phase === 5 || snapshot.machine.phase === 6) {
+          try {
+            for (const binder of await chain.finalSolClaims(signal)) {
+              this.active(signal);
+              if (this.options.shouldYield?.()) return;
+              await store.ensure(
+                {
+                  kind: "final-sol",
+                  address: binder.address.toBase58(),
+                  owner: binder.owner.toBase58(),
+                },
+                date,
+              );
+              if (this.options.shouldYield?.()) return;
+            }
+          } catch (error) {
+            this.active(signal);
+            this.options.hooks.log({
+              reason: "final_claim_scan_failed",
+              cause: safeCause(error),
+            });
+          }
+        }
         await this.discoverFees(now, signal);
         if (this.options.shouldYield?.()) return;
         if (
@@ -310,6 +351,18 @@ export class Keeper {
         return (
           (await chain.snapshot(commitment, signal)).machine.phase >= intent.to
         );
+      case "start-final-pull":
+        return (await chain.snapshot(commitment, signal)).machine.phase >= 5;
+      case "final-sol": {
+        const binder = await chain.finalClaim(
+          new PublicKey(intent.owner),
+          commitment,
+          signal,
+        );
+        if (binder && binder.address.toBase58() !== intent.address)
+          throw new Error("binder_identity_changed");
+        return !binder || (binder.flags & 1) !== 0;
+      }
       case "team-withdraw":
         return (
           (await chain.snapshot(commitment, signal)).machine.teamSol === 0n
@@ -379,6 +432,33 @@ export class Keeper {
             signal,
           );
         return [chain.advance()];
+      }
+      case "start-final-pull": {
+        const snapshot = await chain.snapshot("confirmed", signal);
+        if (
+          snapshot.machine.endTs.toString() !== intent.endTs ||
+          !finalPullDue(snapshot, await chain.chainNow())
+        )
+          return null;
+        return snapshot.machine.phase === 3
+          ? [chain.advance(), chain.startFinalPull()]
+          : [chain.startFinalPull()];
+      }
+      case "final-sol": {
+        const binder = await chain.finalClaim(
+          new PublicKey(intent.owner),
+          "confirmed",
+          signal,
+        );
+        // A concurrent confirmed claim or an older bank is not a permanent
+        // skipped job: let the next pass reconcile it at finalized commitment.
+        if (!binder || (binder.flags & 1) !== 0) throw new RpcNodeLag();
+        if (binder.address.toBase58() !== intent.address)
+          throw new Error("binder_identity_changed");
+        const snapshot = await chain.snapshot("confirmed", signal);
+        if (snapshot.machine.phase !== 5 && snapshot.machine.phase !== 6)
+          throw new RpcNodeLag();
+        return [await chain.claimFinalSol(binder.owner, signal)];
       }
       case "team-withdraw": {
         const snapshot = await chain.snapshot("confirmed", signal);
@@ -539,7 +619,7 @@ export class Keeper {
         // A finalized signature proves this job ran even if fresh activity has
         // since replenished team revenue or recreated the ledger.
         if (
-          intent.kind === "advance" &&
+          (intent.kind === "advance" || intent.kind === "start-final-pull") &&
           !(await this.complete(intent, "finalized", signal))
         ) {
           await store.finish(job.id, "skipped", "no_effect", chainDate(now));

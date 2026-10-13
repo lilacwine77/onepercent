@@ -961,3 +961,75 @@ Dated 2026-10-09. Authorized by the founder for M3.3 implementation. These strin
 | `token.jackpotCost` | `SOL used to buy the pot` | Draft for architect review |
 | `token.conversion` | `SOL waiting for conversion` | Draft for architect review |
 | `token.noEstimate` | `No executable SOL quote is available.` | Draft for architect review |
+
+
+## 8. Launch Docs (founder request, simplified 2026-10-13)
+
+Six short sections with preview screenshots. Numeric placeholders use config; the 100 SOL example uses the fixed D29 launch fee and D27 split. D31 governs authority, D37 governs duration, and D18 keeps Final Pull deferred at launch.
+
+| Key | Text | Notes |
+|---|---|---|
+| `title.docs` | `Docs · Onepercent` | Launch Docs |
+| `nav.docs` | `Docs` | Launch Docs |
+| `docs.heading` | `Docs` | Launch Docs |
+| `docs.intro` | `Bags in. Packs out.` | Launch Docs |
+| `docs.introDetail` | `Feed your dust, or open packs with real Solana tokens inside.` | Launch Docs |
+| `docs.how.title` | `How it works` | Launch Docs |
+| `docs.how.feed` | `Feed deposits an eligible pump.fun token bag as a Dust Card.` | Launch Docs |
+| `docs.how.rip` | `Rip opens a pack: {d} Dust Cards + {n} hit.` | Launch Docs |
+| `docs.how.empty` | `Empty Dust Card slots become House Cards.` | Launch Docs |
+| `docs.how.royalty` | `A pulled Dust Card pays you {pct} of its pack’s price in SOL. If your wallet cannot receive it, it goes to the Machine.` | Launch Docs |
+| `docs.how.takeBack` | `Take back returns your deposited tokens until someone pulls the card.` | Launch Docs |
+| `docs.packs.title` | `Packs and odds` | Launch Docs |
+| `docs.packs.price` | `{sol} SOL` | Launch Docs |
+| `docs.packs.odds` | `Chance per pack` | Launch Docs |
+| `docs.packs.scroll` | `Scroll to compare all packs.` | Launch Docs |
+| `docs.packs.probability` | `{pct}%` | Launch Docs |
+| `docs.packs.oddsNote` | `These odds assume both specials are available. An unavailable special’s chance moves to Silver Foil.` | Launch Docs |
+| `docs.packs.fees` | `Each Rip also costs {sol} SOL for the draw, plus network fees and account deposits.` | Launch Docs |
+| `docs.packs.fairness` | `Draws use randomness checked on Solana. MagicBlock supplies it through one operator, who can delay results.` | Launch Docs |
+| `docs.packs.fairnessLink` | `Draw details and verification` | Launch Docs |
+| `docs.cards.title` | `Your cards` | Launch Docs |
+| `docs.cards.redeem` | `Redeem sends a card’s tokens to your wallet. You pay network fees and any account deposits.` | Launch Docs |
+| `docs.cards.sell` | `Sell pays SOL for Silver, Blue, Holo and Black Foil cards: {pct} of the lower of their recorded cost and current sale quote.` | Launch Docs |
+| `docs.cards.sellLimits` | `Sell depends on available funds and hourly limits. It can pause and ends when pack sales close.` | Launch Docs |
+| `docs.cards.specials` | `Jackpot and The 1% cards have Redeem only.` | Launch Docs |
+| `docs.token.title` | `$1PCT and fees` | Launch Docs |
+| `docs.token.specials` | `The Jackpot pays $1PCT. The 1% consists of {n} cards holding {amount} $1PCT each.` | Launch Docs |
+| `docs.token.curve` | `$1PCT starts on Meteora’s automated launch market (DBC).` | Launch Docs |
+| `docs.token.example` | `On 100 SOL traded, the launch fee is 2.5 SOL: 0.5 to Meteora and 2 to the Machine.` | Launch Docs |
+| `docs.token.split` | `During pack sales, that gives 1 SOL to stock and 1 to the team when stock is at least {sol} SOL.` | Launch Docs |
+| `docs.token.exceptions` | `Below that threshold, all of the Machine’s share goes to stock. After sales close, all goes to the team.` | Launch Docs |
+| `docs.token.book` | `The split uses stock’s SOL plus tokens at recorded cost, at collection time.` | Launch Docs |
+| `docs.token.feeControl` | `Only Meteora can change the market fee after migration.` | Launch Docs |
+| `docs.season.title` | `The season` | Launch Docs |
+| `docs.season.duration` | `Pack sales last {n} hours.` | Launch Docs |
+| `docs.season.final` | `Final Pull is planned to share remaining stock, SOL and unpulled $1PCT in proportion to your pack spending.` | Launch Docs |
+| `docs.season.pending` | `Final Pull is not active yet and requires a program upgrade.` | Launch Docs |
+| `docs.team.title` | `Safety` | Launch Docs |
+| `docs.team.sign` | `You sign transactions yourself; services never request your private keys or seed phrase.` | Launch Docs |
+| `docs.team.guardian` | `The team can pause Feed, Rip, Sell and automated trades.` | Launch Docs |
+| `docs.team.exits` | `The current program prevents the team from taking your cards or blocking exits, including Redeem and Take back after the season.` | Launch Docs |
+| `docs.team.upgrade` | `One founder wallet can replace the program and its protections through upgrade authority, without multiple signers or a waiting period.` | Launch Docs |
+| `docs.addresses.title` | `All mainnet addresses` | Launch Docs |
+| `docs.addresses.program` | `Program` | Launch Docs |
+| `docs.addresses.dbc` | `DBC launch settings` | Launch Docs |
+| `docs.addresses.feeIn` | `FeeIn fee receiver` | Launch Docs |
+| `docs.addresses.lut` | `Transaction address list (LUT)` | Launch Docs |
+| `docs.addresses.copy` | `Copy` | Launch Docs |
+| `docs.addresses.copyLabel` | `Copy {name} address` | Launch Docs |
+| `docs.addresses.copied` | `Copied` | Launch Docs |
+| `docs.addresses.copyFailed` | `Copy failed. Use the full address below.` | Launch Docs |
+| `docs.addresses.solscan` | `Solscan` | Launch Docs |
+| `docs.addresses.solscanLabel` | `View {name} on Solscan` | Launch Docs |
+| `docs.images.ripAlt` | `Opened preview pack with Dust Cards and a Silver Foil hit.` | Launch Docs |
+| `docs.images.ripCaption` | `An opened pack. Preview with demo data.` | Launch Docs |
+| `docs.images.cardsAlt` | `My cards in the preview app, with collected cards and their actions.` | Launch Docs |
+| `docs.images.cardsCaption` | `My cards. Preview with demo data.` | Launch Docs |
+
+## Launch gate
+
+| Key | English | Context |
+|---|---|---|
+| `launch.label` | `The Machine opens in` | Countdown before the build-time opening |
+| `launch.time` | `{hours} hours, {minutes} minutes, {seconds} seconds until the Machine opens` | Accessible countdown |

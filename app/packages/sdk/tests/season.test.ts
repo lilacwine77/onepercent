@@ -308,7 +308,7 @@ describe("M4 launch builders", () => {
       expect(build).toThrow("METEORA_DBC_CONFIG is PENDING for mainnet");
     else expect(build().programId.equals(caller)).toBe(true);
   });
-  it("uses FeeIn's SPL wSOL ATA and leaves Final Pull builders deferred", () => {
+  it("uses FeeIn's SPL wSOL ATA and leaves only Spotlight deferred", () => {
     const ix = collectCreatorFeesIx(DEPLOYMENT, { payer: caller });
     expect(ix.keys.map((meta) => meta.pubkey.toBase58())).toEqual(
       [
@@ -331,9 +331,6 @@ describe("M4 launch builders", () => {
     expect(STUB_INSTRUCTIONS).toEqual([
       "spotlight_deposit",
       "spotlight_take_back",
-      "start_final_pull",
-      "claim_final_sol",
-      "claim_final_tokens",
     ]);
   });
 });

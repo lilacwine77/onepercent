@@ -445,13 +445,7 @@ fn t01_14_advance_phase_rules() {
 #[test]
 fn t01_15_stubs_return_not_implemented() {
     let mut env = Env::new();
-    for name in [
-        "start_final_pull",
-        "claim_final_sol",
-        "claim_final_tokens",
-        "spotlight_deposit",
-        "spotlight_take_back",
-    ] {
+    for name in ["spotlight_deposit", "spotlight_take_back"] {
         assert_error(
             env.send(
                 &[instruction(

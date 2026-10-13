@@ -469,8 +469,50 @@
       ],
       "accounts": [
         {
-          "name": "signer",
-          "signer": true
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "binder",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  110,
+                  100,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "owner"
         }
       ],
       "args": []
@@ -489,8 +531,56 @@
       ],
       "accounts": [
         {
-          "name": "signer",
+          "name": "owner",
+          "writable": true,
           "signer": true
+        },
+        {
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "binder",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  110,
+                  100,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
         }
       ],
       "args": []
@@ -2145,8 +2235,24 @@
       ],
       "accounts": [
         {
-          "name": "signer",
-          "signer": true
+          "name": "machine",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  99,
+                  104,
+                  105,
+                  110,
+                  101
+                ]
+              }
+            ]
+          }
         }
       ],
       "args": []
@@ -6407,7 +6513,7 @@
     {
       "name": "SEASON_DURATION_SECONDS",
       "type": "i64",
-      "value": "604800"
+      "value": "172800"
     },
     {
       "name": "SEASON_FINAL_PULL_DELAY_SECONDS",
@@ -6577,7 +6683,7 @@
           4
         ]
       },
-      "value": "[0, 151200, 302400, 453600]"
+      "value": "[0, 43200, 86400, 129600]"
     },
     {
       "name": "VRF_MAX_QUEUES",

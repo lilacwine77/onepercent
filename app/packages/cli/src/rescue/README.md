@@ -4,8 +4,8 @@ The SDK discovers positions from Solana account data. The CLI talks only to the
 explicitly supplied RPC; it needs no API, indexer, keeper, database or cache, and
 no exit reads a pause bit. It uses the existing SDK builders for Take back,
 Redeem, Settle, Refund, Withdraw owed, Close My cards (`close_binder`), Close
-vault and the `advance_phase` crank. No instruction, account layout or economic
-constant changes.
+vault, Final Pull claims and the phase cranks. Final Pull transactions use only
+chain accounts, without an attestation or service dependency.
 
 ## Get the CLI
 
@@ -76,6 +76,10 @@ $R all --keypair /path/to/owner.json
 - `take-back --entry <INDEX>... | --all`: owner-signed.
 - `redeem --card <INDEX>... | --all`: owner-signed, every card kind.
 - `withdraw-owed`: owner-signed; pays `min(sol_owed, Binder balance above rent)`.
+- `claim-final-sol [--wallet <OWNER>]`: permissionless, paid with `--fee-payer`.
+  The owner defaults to the fee payer; an explicit wallet receives its own share.
+- `claim-final-tokens`: owner-signed. Creates Final cards; `redeem --all` then
+  transfers their tokens to the owner.
 - `close-my-cards`: owner-signed `close_binder`, returning the Binder's rent. It
   is planned only when the program's checks pass: no card, no FRESH card in the
   Deck or an unsettled Pull, no owed SOL, no open Pull, and either no season
@@ -89,6 +93,10 @@ $R all --keypair /path/to/owner.json
   Buys Closed, Final Pull to Done), re-reading after each one, so several due
   transitions run in one command. Nothing due is exit 4 and sends nothing; an
   exec trade in flight is reported for a later retry.
+- `crank start-final-pull`: permissionless, at least 600 seconds after `end_ts`,
+  from Buys Closed with no pending Pull or trade in flight. Run
+  `crank advance-phase` first if the season is still On Air. Unmet preconditions
+  return exit 4; an already started Final Pull is a no-op.
 - `all`: owner-signed Get everything back for one wallet, in this order: refund
   the wallet's timed-out Pulls, settle its revealed Pulls and those paying it,
   Final Pull claims, Redeem, Take back, Withdraw owed, Close My cards, then its
@@ -114,13 +122,26 @@ explicit vault mints avoid program scans; global sequence lookup needs a scan.
 
 ## Final Pull (D18)
 
-`claim_final_sol`, `claim_final_tokens` and `start_final_pull` are stubs in the
-program until the Final Pull upgrade ships before the season ends (D18, F1).
-Until then `all` reports a buyer's unclaimed Final Pull as remaining (exit 2),
-and Close My cards stays blocked with `FinalNotClaimed` for a wallet whose
-season spend is not yet claimed: that is the program's own precondition, not a
-CLI limit. `crank start-final-pull` refuses with exit 4. The `final-claims`
-stage of `planEverythingBackStage` accepts the M4.1b planner as an extension.
+The Final Pull upgrade enables `crank start-final-pull`, `claim-final-sol` and
+`claim-final-tokens`. Both claims remain available indefinitely in Final Pull
+and Done, even with a zero share; each records its claim bit. Before the snapshot,
+`all` continues the other exits and reports unclaimed season spend as remaining.
+
+```sh
+$R crank advance-phase --fee-payer /path/to/payer.json
+$R crank start-final-pull --fee-payer /path/to/payer.json
+$R claim-final-sol --fee-payer /path/to/payer.json --wallet "$WALLET"
+$R claim-final-tokens --keypair /path/to/owner.json
+$R all --keypair /path/to/owner.json
+```
+
+`all` claims SOL first, then re-reads the Binder before token claims. If Final
+card slots need more capacity or rent, it Redeems existing cards first and
+retries the claims from fresh state. Its normal Redeem pass includes the new
+Final cards. Claim amounts use frozen pools and floor division, never a token
+price estimate. Token claims may require Binder rent paid by the owner. The
+command reports remaining work;
+it never signs with an owner's key through a service.
 
 ## Execution and recovery
 

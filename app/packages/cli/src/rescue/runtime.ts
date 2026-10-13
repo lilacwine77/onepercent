@@ -31,6 +31,9 @@ import {
   planWithdrawOwed,
   planCloseBinder,
   planAdvancePhase,
+  planStartFinalPull,
+  planClaimFinalSol,
+  planClaimFinalTokens,
   phaseCrankState,
   planEverythingBackStage,
   type RescuePlan,
@@ -232,12 +235,19 @@ export function pendingReport(
   ];
 }
 
-type CommandStage = RescueStage | "close-vaults" | "advance-phase";
+type CommandStage =
+  | RescueStage
+  | "close-vaults"
+  | "advance-phase"
+  | "start-final-pull"
+  | "claim-final-sol"
+  | "claim-final-tokens";
 function commandStage(
   command: Exclude<RescueInput["command"], "status" | "find" | "all">,
+  crank: RescueInput["crank"],
 ): CommandStage {
   if (command === "close-my-cards") return "close-binder";
-  if (command === "crank") return "advance-phase";
+  if (command === "crank") return crank!;
   return command;
 }
 
@@ -296,7 +306,11 @@ export async function runRescue(
   let laterStages: readonly string[] = [];
   try {
     const wallet = signer?.publicKey ?? new PublicKey(input.wallet!);
-    if (input.wallet && !wallet.equals(new PublicKey(input.wallet)))
+    if (
+      input.wallet &&
+      input.command !== "claim-final-sol" &&
+      !wallet.equals(new PublicKey(input.wallet))
+    )
       throw new RescueCliError("signer_wallet_mismatch", 4);
     emit({ type: "wallet", wallet });
     let indices = input.indices ? [...input.indices] : undefined;
@@ -319,7 +333,7 @@ export async function runRescue(
     const stages: CommandStage[] =
       input.command === "all"
         ? [...GET_EVERYTHING_BACK_ORDER]
-        : [commandStage(input.command)];
+        : [commandStage(input.command, input.crank)];
     const remaining: RescueRemaining[] = [];
     let previews = 0;
     let movedRetries = 0;
@@ -359,6 +373,15 @@ export async function runRescue(
           plan = await planCloseBinder(options);
         else if (stage === "advance-phase")
           plan = await planAdvancePhase(options);
+        else if (stage === "start-final-pull")
+          plan = await planStartFinalPull(options);
+        else if (stage === "claim-final-sol")
+          plan = await planClaimFinalSol({
+            ...options,
+            owner: input.wallet ? new PublicKey(input.wallet) : wallet,
+          });
+        else if (stage === "claim-final-tokens")
+          plan = await planClaimFinalTokens(options);
         else
           plan = await planCloseVaults({
             ...options,
@@ -367,6 +390,14 @@ export async function runRescue(
         lastPlan = plan;
         laterStages = stages.slice(stages.indexOf(stage) + 1);
         if (!plan.transactions.length) {
+          if (
+            stage === "start-final-pull" &&
+            plan.remaining.length &&
+            sent === 0
+          ) {
+            emit({ type: "remaining", items: plan.remaining, sent, previews });
+            return 4;
+          }
           if (stage === "advance-phase") {
             // A transition that is not due is a precondition, unless this run already cranked.
             const notDue = plan.remaining.filter((row) =>

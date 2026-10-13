@@ -12,6 +12,7 @@ import {
   PACK_EDITIONS,
   PACK_SPLIT_BPS,
   PARAMS,
+  SEASON,
   TOKEN_1PCT,
   validateParams,
 } from "../src/index.js";
@@ -224,6 +225,51 @@ describe("calibrated parameters", () => {
         TOKEN_1PCT: { ...TOKEN_1PCT, totalSupply: 1_000_000_000_000_000 },
       }),
     ).toThrow();
+  });
+});
+
+describe("D37 season schedule", () => {
+  it("keeps four quarterly releases inside 48 hours with a six-hour Last Call", () => {
+    expect(SEASON.durationDays).toBe(2);
+    expect(SEASON.durationSeconds).toBe(172_800);
+    expect(TOKEN_1PCT.onePctReleaseOffsetsSeconds).toEqual([
+      0, 43_200, 86_400, 129_600,
+    ]);
+    expect(
+      TOKEN_1PCT.onePctReleaseOffsetsSeconds.map(
+        (offset) => offset / SEASON.durationSeconds,
+      ),
+    ).toEqual([0, 0.25, 0.5, 0.75]);
+    expect(SEASON.lastCallSeconds).toBe(21_600);
+    expect(SEASON.durationSeconds - SEASON.lastCallSeconds).toBeGreaterThan(
+      TOKEN_1PCT.onePctReleaseOffsetsSeconds[3],
+    );
+    expect(validateParams()).toEqual(PARAMS);
+  });
+
+  it("rejects a release at or after closing and mismatched day/second units", () => {
+    for (const last of [SEASON.durationSeconds, SEASON.durationSeconds + 1]) {
+      expect(() =>
+        validateParams({
+          ...PARAMS,
+          TOKEN_1PCT: {
+            ...TOKEN_1PCT,
+            onePctReleaseOffsetsSeconds: [0, 43_200, 86_400, last],
+          },
+        }),
+      ).toThrow("Release offsets must increase within the season");
+    }
+    expect(() =>
+      validateParams({ ...PARAMS, SEASON: { ...SEASON, durationDays: 3 } }),
+    ).toThrow("Season days and seconds must agree");
+  });
+
+  it("preserves the independent launch, exit, holder and listing delays", () => {
+    expect(SEASON.onAirDelaySeconds).toBe(900);
+    expect(SEASON.finalPullDelaySeconds).toBe(600);
+    expect(SEASON.sealDelaySeconds).toBe(259_200);
+    expect(TOKEN_1PCT.holderTier.continuousHoldSeconds).toBe(86_400);
+    expect(PARAMS.HIT_LIST.trendingNoticeSeconds).toBe(86_400);
   });
 });
 

@@ -508,7 +508,7 @@ fn t12_12_roles_pauses_phases() {
             let permitted = match kind {
                 1 => [2, 3].contains(&phase),
                 2 => [3, 4].contains(&phase),
-                3 => (2..6).contains(&phase),
+                3 => (2..=6).contains(&phase),
                 _ => phase == 3,
             };
             let value = 50_000_000;
@@ -1296,14 +1296,13 @@ fn t12_30_meteora_canonical_reference_and_migration_are_required() {
 }
 
 #[test]
-fn t12_31_done_burn_is_refused_until_d18_upgrade() {
+fn t12_31_done_burn_is_permissionless_after_d18_upgrade() {
     for migrated in [false, true] {
         let mut f = ExecFixture::new(3, 0, migrated, false);
         f.e.inject_phase(6);
-        let tx = f.transaction(50_000_000, min(&f, 50_000_000));
-        f.reject(&tx, "WrongPhase");
         config(&mut f.e, |c| c.executor = Pubkey::default());
-        f.reject(&tx, "Unauthorized");
+        let tx = f.transaction(50_000_000, min(&f, 50_000_000));
+        f.send(&tx).unwrap();
         clean(&f);
     }
 }

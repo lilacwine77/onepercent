@@ -21,6 +21,7 @@ import {
 import { type PythHermesClient, type PythPriceUpdate } from "../pyth/hermes.js";
 import { capLamportsAtImpact, type Ladder } from "../value/ladder.js";
 import { sigmaDailyBps } from "./sigma.js";
+import { type ListingHistoryClient } from "./history.js";
 
 export type PythReading = PythPriceUpdate["price"];
 export interface ExcludedHolder {
@@ -39,10 +40,12 @@ export interface BaseListingEvidence {
 }
 export interface MajorEvidence extends BaseListingEvidence {
   pyth: PythReading | null;
+  pythSource?: string;
   firstPoolCreatedAtMs: number | null;
   externalDepthUsd: number | null;
   sellRecoveryBps: bigint | null;
   dailySigmaBps: number | null;
+  dailySigmaSource?: string;
 }
 export interface TrendingEvidence extends BaseListingEvidence {
   pumpOrigin: boolean | null;
@@ -61,7 +64,10 @@ export interface TrendingEvidence extends BaseListingEvidence {
 }
 export interface ListingEvidenceOptions {
   tokens: JupiterTokensClient;
-  pyth: PythHermesClient;
+  pyth: Pick<PythHermesClient, "getLatest"> &
+    Partial<Pick<PythHermesClient, "getHistorical">>;
+  pythSource?: string;
+  history?: ListingHistoryClient;
   swap: JupiterSwapClient;
   mintSafety: {
     getMintSafety(mint: string): Promise<{ safe: boolean; decimals: number }>;
@@ -178,6 +184,30 @@ export function createListingEvidenceGatherer(opts: ListingEvidenceOptions): {
   gatherTrendingEvidence(mint: string): Promise<TrendingEvidence>;
 } {
   const clock = opts.clock ?? defaultClock;
+  async function dailyCloses(mint: string, feedId: string, times: number[]) {
+    if (opts.history) return opts.history.getDailyCloses(mint, feedId, times);
+    const getHistorical = opts.pyth.getHistorical?.bind(opts.pyth);
+    if (!getHistorical) throw new MarketError("PRICE_UNAVAILABLE");
+    const historical = await Promise.all(
+      times.map((time) => getHistorical(feedId, time)),
+    );
+    if (
+      !historical.every(
+        (entry, index) =>
+          entry !== undefined &&
+          entry.price.publish_time >= times[index]! &&
+          entry.price.publish_time < times[index]! + SECONDS_PER_DAY,
+      )
+    )
+      throw new MarketError("PRICE_UNAVAILABLE");
+    return {
+      closes: historical.map(
+        (entry) =>
+          Number(entry!.price.price) * DECIMAL_RADIX ** entry!.price.expo,
+      ),
+      source: "Eight daily Pyth closes; sample log-return deviation",
+    };
+  }
   async function cap(mint: string): Promise<bigint | null> {
     return nullable(async () => {
       const buy = await opts.swap.quoteBuy(mint, LAMPORTS_PER_SOL);
@@ -191,28 +221,25 @@ export function createListingEvidenceGatherer(opts: ListingEvidenceOptions): {
       validateMints([mint]);
       const nowMs = clock.nowMs();
       const closeTimes = dailyCloseTimes(nowMs);
-      const [safety, tokens, update, sol, historical, capLamports] =
-        await Promise.all([
-          nullable(() => opts.mintSafety.getMintSafety(mint)),
-          nullable(() => opts.tokens.getTokens([mint])),
-          nullable(() => opts.pyth.getLatest(pythFeedId)),
-          nullable(() => opts.pyth.getLatest(HIT_LIST.solUsdPythFeedId)),
-          nullable(() =>
-            Promise.all(
-              closeTimes.map((time) =>
-                opts.pyth.getHistorical(pythFeedId, time),
-              ),
-            ),
-          ),
-          cap(mint),
-        ]);
+      const [safety, tokens, historical, capLamports] = await Promise.all([
+        nullable(() => opts.mintSafety.getMintSafety(mint)),
+        nullable(() => opts.tokens.getTokens([mint])),
+        nullable(() => dailyCloses(mint, pythFeedId, closeTimes)),
+        cap(mint),
+      ]);
+      // Public history and quote ladders may wait on provider rate limits.
+      // Read both short-lived prices only when the sell probe can start.
+      const [update, sol] = await Promise.all([
+        nullable(() => opts.pyth.getLatest(pythFeedId)),
+        nullable(() => opts.pyth.getLatest(HIT_LIST.solUsdPythFeedId)),
+      ]);
       const token = tokens?.[mint];
       const sellRecoveryBps =
         update &&
         sol &&
         safety &&
-        eligibleProbeReading(update.price, nowMs) &&
-        eligibleProbeReading(sol.price, nowMs)
+        eligibleProbeReading(update.price, clock.nowMs()) &&
+        eligibleProbeReading(sol.price, clock.nowMs())
           ? await nullable(async () => {
               const amount = majorSellProbeAmount(
                 sol.price,
@@ -232,21 +259,9 @@ export function createListingEvidenceGatherer(opts: ListingEvidenceOptions): {
             })
           : null;
       let dailySigmaBps: number | null = null;
-      if (
-        historical?.every(
-          (entry, index) =>
-            entry !== undefined &&
-            entry.price.publish_time >= closeTimes[index]! &&
-            entry.price.publish_time < closeTimes[index]! + SECONDS_PER_DAY,
-        )
-      ) {
+      if (historical) {
         try {
-          dailySigmaBps = sigmaDailyBps(
-            historical.map(
-              (entry) =>
-                Number(entry!.price.price) * DECIMAL_RADIX ** entry!.price.expo,
-            ),
-          );
+          dailySigmaBps = sigmaDailyBps(historical.closes);
         } catch {
           /* A missing or nonpositive close leaves the statistic unavailable. */
         }
@@ -256,10 +271,16 @@ export function createListingEvidenceGatherer(opts: ListingEvidenceOptions): {
         symbol: token?.symbol.trim() ?? null,
         mintSafe: safety?.safe ?? null,
         pyth: update?.price ?? null,
+        pythSource: opts.pythSource,
         firstPoolCreatedAtMs: parsedDate(token?.firstPool?.createdAt),
         externalDepthUsd: token?.liquidity ?? null,
         sellRecoveryBps,
         dailySigmaBps,
+        dailySigmaSource:
+          historical?.source ??
+          (opts.history
+            ? "Public daily closes unavailable (Pyth Benchmarks, GeckoTerminal)"
+            : undefined),
         capLamports,
         excludedHolders: null,
         jupiterTopHoldersPercentage: token?.audit?.topHoldersPercentage ?? null,

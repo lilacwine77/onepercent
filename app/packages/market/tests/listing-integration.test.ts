@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { createChainRpc, createExitCapClient } from "../src/chain/exit-cap.js";
 import { createHoldersClient } from "../src/chain/holders.js";
 import { createMintSafetyClient } from "../src/chain/mint-safety.js";
@@ -9,8 +9,9 @@ import { createJupiterSwapClient } from "../src/jupiter/swap.js";
 import { createJupiterTokensClient } from "../src/jupiter/tokens.js";
 import { createListingEvidenceGatherer } from "../src/listing/evidence.js";
 import { evaluateMajor, evaluateTrending } from "../src/listing/evaluate.js";
-import { HIT_LIST, MARKET } from "../src/params.js";
+import { HIT_LIST, MARKET, STOCK } from "../src/params.js";
 import { createPythHermesClient } from "../src/pyth/hermes.js";
+import { createPythPushClient } from "../src/pyth/push.js";
 import { fixtureFetch } from "../src/testing.js";
 import { buildLadder } from "../src/value/ladder.js";
 import { createValueClient } from "../src/value/value-now.js";
@@ -38,6 +39,7 @@ const env = {
 function clients(
   files: string[],
   wrap?: (fetch: typeof globalThis.fetch) => typeof globalThis.fetch,
+  push = false,
 ) {
   const offline = fixtureFetch(files.map(file));
   const fetch = wrap ? wrap(offline) : offline;
@@ -64,7 +66,16 @@ function clients(
     exitCaps,
     mintSafety,
     holders,
-    pyth: createPythHermesClient(opts),
+    pyth: push ? createPythPushClient({ rpc }) : createPythHermesClient(opts),
+    pythSource: push ? "Pyth push feed on-chain (shard 0)" : undefined,
+    history: push
+      ? {
+          getDailyCloses: async () => ({
+            closes: [100, 110, 100, 110, 100, 110, 100, 110],
+            source: "Fixture daily USD closes",
+          }),
+        }
+      : undefined,
     clock,
     buildLadder: (mint, amount) => buildLadder(mint, amount, value.valueNow),
   });
@@ -91,6 +102,161 @@ function wifFiles(solFixture = "pyth/latest-sol", history = true): string[] {
 }
 
 describe("listing gathering from recorded providers", () => {
+  const pushFiles = () => [
+    ...wifFiles().filter((name) => !name.startsWith("pyth/")),
+    "rpc/pyth-push-listing-wif",
+    "rpc/pyth-push-listing-sol",
+  ];
+
+  it("uses push prices for the exact Jupiter 150 SOL probe without Hermes", async () => {
+    const requests = vi.fn<typeof fetch>();
+    const { gatherer } = clients(
+      pushFiles(),
+      (offline) => requests.mockImplementation(offline),
+      true,
+    );
+    const major = HIT_LIST.launchMajors[0];
+    const evidence = await gatherer.gatherMajorEvidence(
+      major.mint,
+      major.pythFeedId,
+    );
+    const report = evaluateMajor(evidence, nowMs);
+    expect(evidence.sellRecoveryBps).toBe(9_921n);
+    expect(evidence.dailySigmaBps).toBe(1_019);
+    for (const id of ["pyth_fresh", "pyth_conf", "sell150_recovery_bps"])
+      expect(report.criteria.find((entry) => entry.id === id)?.pass).toBe(true);
+    expect(
+      report.criteria.find((entry) => entry.id === "pyth_fresh")?.source,
+    ).toBe("Pyth push feed on-chain (shard 0) publish_time");
+    expect(
+      report.criteria.find((entry) => entry.id === "sigma_daily_bps")?.source,
+    ).toBe("Fixture daily USD closes");
+    expect(
+      requests.mock.calls.every(([input]) => !String(input).includes("hermes")),
+    ).toBe(true);
+  });
+
+  it("reads fresh probe prices after a slow public history request", async () => {
+    let currentMs = nowMs;
+    const movingClock = { ...clock, nowMs: () => currentMs };
+    const swap = createJupiterSwapClient({
+      env,
+      clock: movingClock,
+      fetch: fixtureFetch([
+        file("jupiter/swap-major-wif-buy"),
+        file("jupiter/swap-major-wif-probe"),
+      ]),
+    });
+    const gatherer = createListingEvidenceGatherer({
+      clock: movingClock,
+      swap,
+      tokens: { getTokens: async () => ({}) },
+      mintSafety: { getMintSafety: async () => ({ safe: true, decimals: 6 }) },
+      exitCaps: {
+        getCurve: async () => undefined,
+        getCanonicalPool: async () => undefined,
+      },
+      holders: { getTopHolders: async () => ({ top10Bps: 0, excluded: [] }) },
+      buildLadder: async () => {
+        throw new Error("No cap fixture");
+      },
+      pyth: {
+        getLatest: async (feedId) => {
+          const symbol = feedId === HIT_LIST.solUsdPythFeedId ? "sol" : "wif";
+          const fixture = JSON.parse(
+            readFileSync(file(`pyth/latest-${symbol}`), "utf8"),
+          ) as {
+            response: {
+              body: {
+                parsed: {
+                  id: string;
+                  price: {
+                    price: string;
+                    conf: string;
+                    expo: number;
+                    publish_time: number;
+                  };
+                }[];
+              };
+            };
+          };
+          const update = fixture.response.body.parsed[0]!;
+          return {
+            ...update,
+            price: {
+              ...update.price,
+              publish_time: Math.floor(currentMs / 1_000),
+            },
+          };
+        },
+      },
+      history: {
+        getDailyCloses: async () => {
+          await Promise.resolve();
+          currentMs += (STOCK.pythMaxAgeSeconds + 1) * 1_000;
+          return {
+            closes: Array<number>(8).fill(100),
+            source: "Delayed history fixture",
+          };
+        },
+      },
+    });
+    const major = HIT_LIST.launchMajors[0];
+    const evidence = await gatherer.gatherMajorEvidence(
+      major.mint,
+      major.pythFeedId,
+    );
+    expect(evidence.sellRecoveryBps).toBe(9_921n);
+    expect(evidence.pyth?.publish_time).toBe(Math.floor(currentMs / 1_000));
+  });
+
+  it.each(["wif", "sol"])(
+    "refuses the sell probe when the push %s feed is older than 60 seconds",
+    async (symbol) => {
+      const fixture = JSON.parse(
+        readFileSync(file(`rpc/pyth-push-listing-${symbol}`), "utf8"),
+      ) as {
+        request: { body: { params: [string, unknown] } };
+      };
+      const { gatherer } = clients(
+        pushFiles(),
+        (offline) => async (input, init) => {
+          const response = await offline(input, init);
+          const request = init?.body
+            ? (JSON.parse(String(init.body)) as { params?: unknown[] })
+            : null;
+          if (request?.params?.[0] !== fixture.request.body.params[0])
+            return response;
+          const body = (await response.json()) as {
+            result: { value: { data: [string, string] } };
+          };
+          const data = Buffer.from(body.result.value.data[0], "base64");
+          data.writeBigInt64LE(
+            BigInt(Math.floor(nowMs / 1_000) - STOCK.pythMaxAgeSeconds - 1),
+            93,
+          );
+          body.result.value.data[0] = data.toString("base64");
+          return Response.json(body);
+        },
+        true,
+      );
+      const major = HIT_LIST.launchMajors[0];
+      const evidence = await gatherer.gatherMajorEvidence(
+        major.mint,
+        major.pythFeedId,
+      );
+      expect(evidence.sellRecoveryBps).toBeNull();
+      const report = evaluateMajor(evidence, nowMs);
+      expect(
+        report.criteria.find((entry) => entry.id === "sell150_recovery_bps")
+          ?.pass,
+      ).toBe(false);
+      expect(
+        report.criteria.find((entry) => entry.id === "pyth_fresh")?.pass,
+      ).toBe(symbol === "sol");
+    },
+  );
+
   it.each(["pyth/latest-sol-stale", "pyth/latest-sol-wide"])(
     "refuses a probe based on %s while the token feed stays valid",
     async (solFixture) => {

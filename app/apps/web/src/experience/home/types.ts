@@ -1,5 +1,11 @@
+import type { ReactNode } from "react";
+
 /** Props of the home experience (wave 1 home, D19). Codex fills them from config. */
 export interface HomeProps {
+  /** Opening notice supplied by the app's launch gate. */
+  launchNotice?: ReactNode;
+  /** Hide flow entry points until the app opens. */
+  flowsLocked?: boolean;
   /**
    * The machine's phase from `/api/config`; null when it is not live (404/503) or
    * unreachable, undefined while the first read is on its way (the hero shows the

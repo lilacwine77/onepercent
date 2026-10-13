@@ -13,6 +13,7 @@ import "@fontsource/fraunces/700.css";
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/500.css";
 import { App } from "./App";
+import { redirectBeforeLaunch } from "./app/launch-gate";
 import { reloadOnce } from "./app/chunk-reload";
 import { matchGoRoute } from "./go/route";
 import { matchLinkRoute } from "./link/route";
@@ -58,6 +59,7 @@ document.addEventListener(
 );
 const root = document.getElementById("root");
 if (!root) throw new Error("The page root is missing.");
+redirectBeforeLaunch();
 const goId = matchGoRoute(window.location.pathname);
 const linkNonce = matchLinkRoute(window.location.pathname);
 

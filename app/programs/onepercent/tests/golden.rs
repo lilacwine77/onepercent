@@ -519,19 +519,28 @@ fn instructions() {
         "start_final_pull",
         json!({}),
         onepercent::instruction::StartFinalPull {},
-        onepercent::accounts::Deferred { signer: k(1) },
+        onepercent::accounts::StartFinalPull { machine: k(1) },
     ));
     output.push(ix_sample(
         "claim_final_sol",
         json!({}),
         onepercent::instruction::ClaimFinalSol {},
-        onepercent::accounts::Deferred { signer: k(1) },
+        onepercent::accounts::ClaimFinalSol {
+            machine: k(1),
+            binder: k(2),
+            owner: k(3),
+        },
     ));
     output.push(ix_sample(
         "claim_final_tokens",
         json!({}),
         onepercent::instruction::ClaimFinalTokens {},
-        onepercent::accounts::Deferred { signer: k(1) },
+        onepercent::accounts::ClaimFinalTokens {
+            owner: k(1),
+            machine: k(2),
+            binder: k(3),
+            system_program: k(4),
+        },
     ));
     output.push(ix_sample(
         "withdraw_owed",

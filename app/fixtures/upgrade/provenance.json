@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "07669e889388ee592f29d4c1c89bcefa5cd58ce7",
+  "sourceBranch": "feat/season-2-days",
+  "cluster": "localnet",
+  "artifact": "pre-final-pull.so",
+  "bytes": 968904,
+  "sha256": "6a7ab618dc7914b1d6fce6da022526b01057d6f42254aff5eeab509627f4d712",
+  "sbfFlags": 3,
+  "source": "Prior clean worktree artifact at app/target/deploy/onepercent.so; same HEAD as this branch before edits.",
+  "reproduce": "At sourceCommit, from app: CARGO_BUILD_JOBS=3 ONEPERCENT_CLUSTER=localnet pnpm program:build",
+  "test": "t25_upgrade_final_pull initializes accounts and processes draws with this artifact, then installs the new artifact without reallocating Machine or Config."
+}

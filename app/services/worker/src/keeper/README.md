@@ -1,7 +1,7 @@
-# M2 S3 keeper v1
+# Keeper
 
-S3 implements permissionless Settle, expired Pull refunds, the three M1 phase
-transitions, the empty-vault pass, and team withdrawal. It never constructs an
+The keeper implements permissionless Settle, expired Pull refunds, phase
+transitions, Final Pull start and SOL claims, the empty-vault pass, and team withdrawal. It never constructs an
 execution pair, requests another draw, or changes pause bits. K1 and M4 own the
 remaining work. Every deadline comes from the confirmed Clock sysvar.
 
@@ -112,8 +112,33 @@ are checked against every listed bucket, both token programs, the actual ATA and
 its ledger payer. Non-writable payers are recorded as skipped and alerted once
 per mint/payer across passes. An absent vault is left alone. A new pass runs at
 boot, hourly, and on observing Done; a recreated vault is eligible in a later
-pass window. Phase cranks require the corresponding nonzero timestamp. No M4
-FinalPull-to-Done crank is introduced here.
+pass window. Phase cranks require the corresponding nonzero timestamp.
+
+Final Pull uses the unchanged Machine layout. At `end_ts +
+SEASON.finalPullDelaySeconds`, with no pending Pull or exec trade, the keeper
+sends `start_final_pull`, prepending `advance_phase` atomically if still On Air.
+It rechecks the current phase, deadline and pending count before sending. A
+state change skips the job; the next scan window permits another attempt.
+Final Pull advances to Done at `final_ts + SEASON.sealDelaySeconds`, and the
+next housekeeping scan runs the Done close-vault pass.
+
+In Final Pull and Done, a Binder header scan discovers positive season spend
+with SOL claim bit clear. Each job is keyed `final_sol:<binder>`, reads the
+canonical Binder and owner again, and sends a permissionless `claim_final_sol`.
+Completion reads the Binder and Machine in one bank: an absent Binder proves
+completion only after that bank has reached Final Pull. Older banks and a
+concurrent claim keep the durable job retryable until finalized reconciliation.
+Executable and reserved recipients stay read-only so the on-chain Binder credit
+path remains available. Token claims are owner-signed through the SDK or rescue
+CLI; the keeper never signs them. Refused Binder scans are isolated from phase
+transitions and other exits.
+
+SOL pushes use one transaction per Binder in this release. This deliberately
+keeps one immutable signed transaction and retry journal per recipient; adding
+greedy multi-recipient batches requires shared journal reconciliation. Each
+transaction is simulated for its compute limit and uses the existing bounded
+TxSender landing/retry path. Manual rescue claims remain available at any time,
+including after a keeper job exhausts its operational retry budget.
 
 The existing S0 metrics registry is reused. Settle latency is a conservative
 chain-clock observation from reveal until confirmation is observed; this is not

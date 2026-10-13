@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-10-08T18:28:10.176Z",
+  "request": {
+    "method": "POST",
+    "url": "https://rpc.invalid/",
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "getAccountInfo",
+      "params": [
+        "7AviUf9nL62mcxNbQGKm4nKDQnPjswo6c5MX4D57HmyE",
+        {
+          "encoding": "base64",
+          "commitment": "confirmed"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "context": {
+          "slot": 454624857
+        },
+        "value": {
+          "data": [
+            "IvEjY51+9M1bsRWwDdII6qyfKmvtWLaGyH3c9S5trfFYcCJDMhaezQHvDYtv2izrpB2hXUCV0do5Kg0vjtDGx7wPTPrIwoC1bSrzpIECAAAAAQAAAAAAAAD4////uuDHagAAAAC1x8hqAAAAAOq0S5ACAAAAV5IuAAAAAAD5YhwbAAAAAAA=",
+            "base64"
+          ],
+          "executable": false,
+          "lamports": 1823520,
+          "owner": "rec2HHDDnjLfj4kE7VyEtFA1HPGQLK33259532cRyHp",
+          "rentEpoch": 18446744073709551615,
+          "space": 134
+        }
+      }
+    }
+  },
+  "synthetic": {
+    "from": [
+      "../pyth/latest-sol.json",
+      "../../../../../fixtures/mainnet/pyth/sol-usd.json"
+    ],
+    "edit": "Captured push account layout with the existing synthetic listing prices and timestamp, for replay of the exact recorded Jupiter sell probe. Not live listing evidence."
+  }
+}

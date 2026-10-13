@@ -8,7 +8,7 @@ mod specials;
 use anchor_lang::prelude::Pubkey;
 use callback::*;
 use common::*;
-use onepercent::{events::CallbackSkipped, state::Machine};
+use onepercent::{events::CallbackSkipped, params, state::Machine};
 use proptest::prelude::*;
 use solana_signer::Signer;
 use std::cell::RefCell;
@@ -191,7 +191,7 @@ fn run_case(seed: u64, mainnet: bool) -> Result<(), TestCaseError> {
                 25 | 26 => {
                     let now = e.now();
                     specials::machine(e, |m| {
-                        m.on_air_ts = now - 453_600;
+                        m.on_air_ts = now - params::TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS[3];
                         m.onepct.iter_mut().for_each(|slot| {
                             slot.state = 0;
                             slot.amount = value;

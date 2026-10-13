@@ -1,155 +1,83 @@
 # Déployer Onepercent et lancer $1PCT avec Proxima
 
-Ce document s'adresse à l'ami développeur Solana qui déploie le programme et
-lance le token. Toutes les commandes partent de `app/`. Elles sont une procédure
-à exécuter par l'opérateur, **pas une preuve d'exécution mainnet**. La release
-reste bloquée tant que les quatre pins publics ne sont pas fournis.
+D31 et D36 : le fondateur déploie depuis sa machine, prépare la Machine puis
+transfère admin et upgrade authority à son Ledger. Pendant Setup, l'ami lance un
+mint sans adresse prédéfinie et transfère exactement 40M 1PCT au `launch_wallet`
+du fondateur, distinct de son Deployer Proxima. Le fondateur vérifie le lancement,
+fait `set-mint` avant Stock-Up, puis signe le dépôt et `power_on` avec ce wallet.
+Cette procédure ne constitue pas une preuve d'exécution mainnet.
 
-D31 : un seul wallet du fondateur détient l'admin final et l'autorité d'upgrade,
-Ledger recommandé, sans Squads ni timelock. D32 : le **Deployer Proxima de l'ami
-est le `launch_wallet`**. Les 40 000 000 1PCT du dev buy arrivent directement sur
-ce wallet ; il signe leur dépôt puis `power_on`. Aucun transfert par le wallet
-du fondateur ou un wallet de transit.
+## Fondateur
 
-**Ordre obligatoire : déployer → init → préparer Setup → Proxima → dépôt →
-Power-On → contrôle final de Power-On → transférer admin → transférer upgrade.**
-`initialize` exige la signature
-de l'autorité d'upgrade actuelle. La config DBC exige une Config Onepercent déjà
-initialisée. `SetTokenMint` exige Setup et l'admin actuel. On prépare donc ces
-opérations avec l'ami avant les transferts au Ledger ; le fondateur ne communique
-jamais sa clé. **Ne jamais transférer l'upgrade authority avant `init`.** Les deux
-autorités restent chez le Deployer jusqu'au contrôle final de Power-On (§7).
+**1. Préparer la release et les identités.** Toutes les commandes partent de
+`app/`. L'architecte remplit `release/mainnet.json` avec `programId`, `dbcConfig`
+et les valeurs provisoires D35 : `landing.tipLamports = 1_000_000`,
+`landing.maxComputeUnitPriceMicroLamports = 50_000`. La mesure 24 h est abandonnée.
+Ce runbook ne remplit pas le fichier ; la release reste bloquée tant qu'il est
+incomplet. Générer les signers programme et DBC hors ligne avant le build, avec
+leurs secrets hors dépôt. L'ami fournit seulement l'adresse publique de son
+Deployer à ce stade. Aucune Custom Token Address ni adresse finale de mint n'est
+préparée à l'avance.
 
-## 1. Rassembler les entrées et les clés publiques
+Fournir les chemins externes `PUBLIC`, `PROGRAM_KEYPAIR`, `BUFFER_KEYPAIR`,
+`DEPLOYMENT_KEYPAIR`, `OPS_KEYPAIR`, `DBC_CONFIG_KEYPAIR`, puis `MAINNET_RPC_URL`.
+Le wallet `DEPLOYMENT_KEYPAIR` appartient au fondateur et sert aussi de
+`launch_wallet` : le CLI exige `params.admin == params.launch_wallet` à l'init.
+Il est distinct du Ledger final et du Deployer de l'ami. Les signers sont des
+fichiers réguliers mode 600, jamais imprimés ni committés. Aucun secret de l'ami
+ni seed du Ledger n'entre dans le CLI. Keeper, executor, intake signer, quote
+signer, ops et les deux guardians restent distincts ; seuls les rôles chauds
+rejoignent leurs services respectifs. Ops reste plafonné à 5 SOL.
 
-Le fondateur et l'opérateur fournissent, sans inventer de valeur :
-
-- `release/mainnet.json` : `programId` (P6), `dbcConfig` (P3),
-  `landing.tipLamports` (P1), `landing.maxComputeUnitPriceMicroLamports` (P2).
-  P1/P2 sont les résultats des mesures PARAMS §26.3 avec leurs rapports.
-- Wallet public du fondateur, Deployer Proxima de l'ami, ops, keeper, executor,
-  intake signer, quote signer, deux guardians distincts, team wallet ; le mint
-  vanity et la queue VRF mainnet vérifiée. Deux guardians restent dans l'ABI,
-  sans créer deux admins. L'opérateur peut garder ces deux clés de secours.
-- Huit adresses publiques `team_wallets`, avec au minimum fondateur, Deployer et
-  ops ; compléter les places inutilisées par `11111111111111111111111111111111`.
-  Publier les wallets de l'équipe qui doivent être exclus des achats.
-- `rent_buffer_lamports` (chaîne décimale, borne config à 50 000 000), et le
-  timestamp `stock_up_ts` choisi pour la saison. Ni rent ni calendrier ne sont
-  devinés. Metadata finale HTTPS, immuable, nom/symbole de la config produit.
-- RPC mainnet, Helius Sender et providers des services, selon leurs besoins.
-
-Les keypairs programme et DBC sont **générées hors ligne avant le build** ; seule
-leur adresse publique entre dans le dépôt. Le compte DBC sera créé après init.
-La keypair vanity est préparée pour Proxima « Custom Token Address » : Onepercent
-ne la charge jamais dans le flux D32. Le secret Deployer doit correspondre au
-wallet choisi dans Proxima, jamais à une clé générée par ce runbook à sa place.
-
-L'opérateur des services génère les clés chaudes sur sa propre machine hors du
-dépôt, avec `umask 077`. S'il utilise `solana-keygen new`, ajouter `--silent`
-pour ne pas afficher la phrase et fournir un `--outfile` externe explicite.
-Ne pas activer `set -x`, imprimer les fichiers, coller leurs contenus dans un
-terminal enregistré, un rapport, Git, CI ou une conversation. Les commandes
-suivantes ne montrent que les adresses publiques :
-
-```sh
-solana-keygen pubkey "$PROGRAM_KEYPAIR"
-solana-keygen pubkey "$DBC_CONFIG_KEYPAIR"
-solana-keygen pubkey "$DEPLOYER_KEYPAIR"
-solana-keygen pubkey "$OPS_KEYPAIR"
-solana address --keypair 'usb://ledger'
-```
-
-| Identité | Destination du secret |
-|---|---|
-| Fondateur | Ledger du fondateur ; admin et upgrade seulement |
-| Ami / Deployer Proxima | Machine de l'ami et son lancement Proxima ; init, Setup, dépôt, Power-On |
-| Programme, buffer déploiement, signer DBC | Stockage opérateur externe ; jamais un service |
-| Ops | CLI DBC et LUT, ≤5 SOL ; jamais keeper/executor |
-| Keeper | Secret `KEEPER_KEYPAIR` du worker `ROLE=keeper`, partagé seulement entre ses réplicas élus |
-| Executor | Secret `EXECUTOR_KEYPAIR` du worker `ROLE=executor` |
-| Intake signer | Secret `INTAKE_SIGNER_KEYPAIR` du service `ROLE=intake-signer` |
-| Quote signer | Secret `QUOTE_SIGNER_KEYPAIR` du service `ROLE=quote-signer` |
-| Guardians 0 et 1 | Stockage opérateur séparé, procédure de pause ; aucun service automatique |
-| Team wallet | Wallet de réception équipe ; aucune clé requise dans les services |
-
-Chaque rôle chaud est distinct de l'admin, du launch wallet, d'ops et des autres
-rôles. Aucun de ces rôles ne garde les fonds de la Machine. Après installation,
-contrôler `/ready`, la clé publique du rôle et sa correspondance avec Config,
-puis faire le drill de désactivation/rotation en répétition.
-
-Créer un fichier **public**, par exemple `$PUBLIC/init.mainnet.json`, avec cette
-structure. Remplacer chaque libellé par une adresse ; les libellés ci-dessous ne
-sont volontairement pas des valeurs valides :
+Créer `$PUBLIC/init.mainnet.json`, uniquement avec des données publiques :
 
 ```json
 {
-  "founder_admin": "FONDATEUR",
+  "founder_admin": "LEDGER_FONDATEUR",
   "ops_wallet": "OPS",
   "params": {
-    "admin": "DEPLOYER_PROXIMA",
+    "admin": "DEPLOIEMENT_FONDATEUR",
     "guardians": ["GUARDIAN_0", "GUARDIAN_1"],
     "keeper": "KEEPER",
     "executor": "EXECUTOR",
     "intake_signer": "INTAKE_SIGNER",
     "quote_signer": "QUOTE_SIGNER",
-    "launch_wallet": "DEPLOYER_PROXIMA",
+    "launch_wallet": "DEPLOIEMENT_FONDATEUR",
     "team_wallet": "TEAM",
-    "team_wallets": ["FONDATEUR", "DEPLOYER_PROXIMA", "OPS", "TEAM", "11111111111111111111111111111111", "11111111111111111111111111111111", "11111111111111111111111111111111", "11111111111111111111111111111111"],
-    "token_mint": "MINT_VANITY",
+    "team_wallets": ["LEDGER_FONDATEUR", "DEPLOIEMENT_FONDATEUR", "DEPLOYER_AMI", "OPS", "TEAM", "11111111111111111111111111111111", "11111111111111111111111111111111", "11111111111111111111111111111111"],
+    "token_mint": "PROGRAMME_ONEPERCENT",
     "vrf_queue": "QUEUE_VRF_MAINNET",
     "rent_buffer_lamports": "0"
   }
 }
 ```
 
-Le `0` de l'exemple est un buffer supplémentaire nul, pas une estimation du rent.
-Le compte mint peut ne pas encore exister ; son adresse est connue à l'avance.
-Le fichier est strict : les champs supplémentaires, clés secrètes, rôles
-confondus et ops/launch/fondateur absents de `team_wallets` sont refusés.
-
-## 2. Geler, produire et reproduire le binaire
+Remplacer chaque libellé par l'adresse vérifiée. **`token_mint` ne peut pas être
+vide** : le schéma CLI et `initialize` refusent une valeur absente ou nulle.
+Mettre provisoirement l'adresse publique non nulle du programme dans ce champ.
+Init la stocke sans créer de mint ; elle devra être remplacée par `set-mint`
+pendant Setup. Aucun changement Rust n'est requis. `rent_buffer_lamports` est un
+supplément choisi, borné à 50 000 000 ; `0` n'est pas une estimation du rent.
+Publier les wallets d'équipe à exclure des achats. Les champs supplémentaires,
+secrets et rôles confondus sont refusés.
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm release:mainnet:apply --input release/mainnet.json
 pnpm build:libs
 pnpm program:release:check --cluster mainnet
+# L'architecte fait relire et commite les entrées et le code avant ce build.
 pnpm program:release:build --cluster mainnet
-```
 
-L'architecte commite les valeurs publiques et le code avant le build de release.
-Le build exige la recette Docker figée, compile deux fois dans des répertoires
-propres et refuse des hashes différents. Il produit
-`target/release/mainnet/onepercent.so`, `onepercent.so.sha256`, `manifest.json`.
-Le manifeste identifie commit, entrées, image/toolchain et features. Un tiers
-checkout exactement ce commit, vérifie les entrées publiques du manifeste,
-installe le lockfile et relance la même commande avec la même base Docker par
-digest et la recette toolchain figée de `app/release/Dockerfile`. L'identifiant
-d'image construit peut différer ; la preuve porte sur les octets ELF identiques.
-Il compare le SHA-256 de l'ELF, pas celui d'un build local par défaut localnet.
-Recette complète : [`app/release/README.md`](../../app/release/README.md).
-Publier ces trois artefacts et le miroir public du programme. Aucun déploiement
-ne doit utiliser `target/deploy/onepercent.so` d'un autre cluster.
-
-## 3. Préparer les variables et calculer le budget de déploiement
-
-Fournir les chemins externes `PUBLIC`, `PROGRAM_KEYPAIR`, `BUFFER_KEYPAIR`,
-`DEPLOYER_KEYPAIR`, `OPS_KEYPAIR`, `DBC_CONFIG_KEYPAIR` et l'URL `MAINNET_RPC_URL`.
-Les fichiers de signer doivent être réguliers, hors dépôt, mode 600. Fournir aussi
-`APPROVED_RC_COMMIT` (commit Git complet) et `APPROVED_RC_ELF_SHA256` (SHA-256 de
-l'ELF), issus de la validation indépendante de la RC approuvée. Ne pas extraire
-ces références du manifeste adjacent à l'ELF à vérifier.
-
-```sh
 PROGRAM_ID=$(node -p 'require("./release/mainnet.json").programId')
 DBC_CONFIG=$(node -p 'require("./release/mainnet.json").dbcConfig')
 INIT="$PUBLIC/init.mainnet.json"
 FOUNDER=$(node -p 'require(process.argv[1]).founder_admin' "$INIT")
-DEPLOYER=$(solana-keygen pubkey "$DEPLOYER_KEYPAIR")
+DEPLOYMENT_WALLET=$(solana-keygen pubkey "$DEPLOYMENT_KEYPAIR")
+LAUNCH_WALLET=$(node -p 'require(process.argv[1]).params.launch_wallet' "$INIT")
 OPS=$(solana-keygen pubkey "$OPS_KEYPAIR")
 BUFFER=$(solana-keygen pubkey "$BUFFER_KEYPAIR")
-MINT=$(node -p 'require(process.argv[1]).params.token_mint' "$INIT")
+# POOL_CREATOR : adresse publique du Deployer fournie par l'ami, distincte de LAUNCH_WALLET.
 ARTIFACT=target/release/mainnet/onepercent.so
 MAX_LEN=$(wc -c < "$ARTIFACT" | tr -d ' ')
 
@@ -162,220 +90,187 @@ launch_ops() {
     --rpc "$MAINNET_RPC_URL" --program "$PROGRAM_ID" \
     --mainnet-program "$PROGRAM_ID" --dbc-config "$DBC_CONFIG"
 }
+proxima_ops() {
+  launch_ops "$@" --flow proxima --mint "$MINT" --pool-creator "$POOL_CREATOR"
+}
 deploy_ops validate
 deploy_ops addresses > "$PUBLIC/addresses.json"
 solana --url "$MAINNET_RPC_URL" genesis-hash
+solana-keygen pubkey "$PROGRAM_KEYPAIR"
+solana-keygen pubkey "$DBC_CONFIG_KEYPAIR"
+solana address --keypair 'usb://ledger'
 ```
 
-Le genesis mainnet attendu est
-`5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d`. Vérifier aussi que les trois
-`solana-keygen pubkey` programme, DBC et Deployer correspondent aux fichiers
-publics ; ne pas financer ou signer en cas d'écart.
+Vérifier les publiques contre les fichiers et le Ledger, ainsi que le genesis
+mainnet `5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d`. Le build doit reproduire
+deux ELF identiques avec la recette Docker figée. Publier ELF, checksum, manifeste
+et miroir des sources selon [la recette de release](../../app/release/README.md).
+Obtenir `APPROVED_RC_COMMIT` et `APPROVED_RC_ELF_SHA256` de la validation indépendante
+de la RC, jamais du seul manifeste adjacent à l'ELF à vérifier.
+
+**2. Déployer et initialiser.** Le budget lit tailles, rent et frais RPC. Il couvre
+le déploiement seul, avec réutilisation du rent du buffer dans ProgramData.
+Init, DBC, LUT, ATA et dev buy ont leurs propres frais ; simuler ou obtenir leur
+devis. Un retry ajoute des frais ; réconcilier tout envoi ambigu avant reprise.
 
 ```sh
 pnpm program:deploy:check budget --cluster mainnet --rpc "$MAINNET_RPC_URL" \
-  --artifact "$ARTIFACT" --program "$PROGRAM_ID" --payer "$DEPLOYER" \
+  --artifact "$ARTIFACT" --program "$PROGRAM_ID" --payer "$DEPLOYMENT_WALLET" \
   --approved-commit "$APPROVED_RC_COMMIT" --approved-elf-sha256 "$APPROVED_RC_ELF_SHA256" \
   --buffer "$BUFFER" --max-len "$MAX_LEN" --out "$PUBLIC/budget.json"
-solana --url "$MAINNET_RPC_URL" balance "$DEPLOYER" --lamports
-```
-
-Les commandes `budget` et `verify` exigent le `manifest.json` adjacent à l'ELF
-et les deux références approuvées explicites. Avant tout RPC, elles vérifient
-les pins, la feature mainnet, les deux builds identiques, le commit non nul, son
-tree Git et le SHA-256 de l'ELF. Le hash `cargoLockSha256` doit correspondre au
-`app/Cargo.lock` de ce commit et au lockfile local. Le commit approuvé doit être
-disponible dans le dépôt Git local ; un manifeste auto-cohérent ne suffit pas.
-`budget.json` utilise la taille ELF réelle, le `max-len` explicite, les rent RPC
-et les frais RPC des messages de chargement/déploiement. Avec Agave 4.3.0, le rent
-du buffer est réutilisé pour ProgramData : ne pas additionner deux fois cette
-réserve. Le budget décrit le premier essai avec compute-unit-price zéro ; un
-renvoi ajoute des frais. `MAX_LEN` égal à la taille actuelle évite une réserve
-arbitraire ; un upgrade plus grand demandera extension et rent supplémentaires.
-
-Ce chiffre est le **budget de déploiement**, pas le budget complet du lancement.
-Init crée Config, Machine, Deck et le rent de FeeIn, plus le buffer demandé.
-DBC, LUT, création des ATA et dev buy ont leurs propres comptes/frais. Simuler
-chaque opération avant signature et consulter les rent RPC actuels ; archiver
-le devis Proxima du dev buy exact 40M avec frais/max input. Le prix SOL du dev buy
-change avec le marché : aucun total de lancement statique n'est annoncé. Ops
-reste plafonné à 5 SOL ; recharger ses frais séparément si nécessaire.
-
-## 4. Déployer et vérifier l'ELF
-
-```sh
-solana --url "$MAINNET_RPC_URL" --keypair "$DEPLOYER_KEYPAIR" program deploy \
+solana --url "$MAINNET_RPC_URL" balance "$DEPLOYMENT_WALLET" --lamports
+solana --url "$MAINNET_RPC_URL" --keypair "$DEPLOYMENT_KEYPAIR" program deploy \
   "$ARTIFACT" --program-id "$PROGRAM_KEYPAIR" --buffer "$BUFFER_KEYPAIR" \
-  --upgrade-authority "$DEPLOYER_KEYPAIR" --max-len "$MAX_LEN" \
+  --upgrade-authority "$DEPLOYMENT_KEYPAIR" --max-len "$MAX_LEN" \
   --with-compute-unit-price 0 --max-sign-attempts 1
 pnpm program:deploy:check verify --cluster mainnet --rpc "$MAINNET_RPC_URL" \
-  --artifact "$ARTIFACT" --program "$PROGRAM_ID" --authority "$DEPLOYER" \
+  --artifact "$ARTIFACT" --program "$PROGRAM_ID" --authority "$DEPLOYMENT_WALLET" \
   --approved-commit "$APPROVED_RC_COMMIT" --approved-elf-sha256 "$APPROVED_RC_ELF_SHA256"
 deploy_ops check --stage deployed
-```
 
-La vérification relit Program/ProgramData finalisés, contrôle le propriétaire,
-le lien canonique, l'autorité et le hash ELF, y compris le padding du compte.
-Une signature reçue seule n'est pas une preuve de succès. En cas d'envoi ambigu,
-réconcilier la signature avant de relancer ; garder le même buffer.
-
-## 5. Initialiser, créer DBC, préparer Setup
-
-Pour les mutations `deploy_ops`, lancer une première fois sans `--confirm` : le
-CLI simule, imprime le plan public et sa `confirmation`, puis s'arrête avec
-`deployment_confirmation_required` **sans ouvrir le signer**. Vérifier les
-rôles et recopier la confirmation complète dans la seconde commande ; toute
-modification du fichier ou de l'instruction invalide cette confirmation.
-
-```sh
-deploy_ops init --wallet "$DEPLOYER_KEYPAIR"
-# Recopier la valeur confirmation imprimée après revue dans CONFIRM_INIT.
-deploy_ops init --wallet "$DEPLOYER_KEYPAIR" --confirm "$CONFIRM_INIT"
+deploy_ops init --wallet "$DEPLOYMENT_KEYPAIR"
+# Après revue du plan simulé, recopier confirmation dans CONFIRM_INIT.
+deploy_ops init --wallet "$DEPLOYMENT_KEYPAIR" --confirm "$CONFIRM_INIT"
 deploy_ops check --stage initialized
-
 launch_ops config --wallet "$OPS_KEYPAIR" --dbc-config-keypair "$DBC_CONFIG_KEYPAIR"
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
 ```
 
-`launch config` utilise **la keypair DBC pré-générée dont la publique est déjà
-compilée**. Il vérifie FeeIn, tous les champs D29, le pin, les 2,5 % de frais,
-la collecte SOL et le LP verrouillé ; puis relit les mêmes champs finalisés.
-Aucune édition de cette config n'est possible après création. Le seuil D29 par
-défaut est 85 SOL ; une autre valeur demande décision explicite et cohérence de
-tous les contrôles, jamais une valeur choisie par le déployeur.
+`initialize` exige l'upgrade authority actuelle : **ne pas transférer les
+autorités avant init**. Pour les mutations `deploy_ops`, la première commande
+sans `--confirm` simule et s'arrête avec `deployment_confirmation_required`
+sans ouvrir le signer ; recopier sa confirmation exacte après revue. Les checks
+relisent les comptes finalisés et l'ELF, pas seulement la signature. DBC utilise
+la clé pré-générée et vérifie le pin, FeeIn et tous les paramètres D29 immuables.
+
+**3. Préparer la saison et la LUT, rester en Setup.** Choisir `STOCK_UP_TS`
+(entier Unix supérieur au snapshot) avec assez de temps pour que l'ami lance et
+transfère, puis pour vérifier et enregistrer le mint avant cette heure. Préparer
+les listings et services selon le plan de stock approuvé ; vérifier `/ready` et
+les publiques des rôles contre Config.
+
+Dès cette heure, n'importe qui peut appeler `advance_phase` et sortir de Setup.
+La saison ne se fixe qu'une fois : ne pas compter sur un report de cette fenêtre.
 
 ```sh
 deploy_ops season-point > "$PUBLIC/season-point.json"
 SNAPSHOT_SLOT=$(node -p 'require(process.argv[1]).slot' "$PUBLIC/season-point.json")
 SNAPSHOT_TS=$(node -p 'require(process.argv[1]).ts' "$PUBLIC/season-point.json")
-# STOCK_UP_TS est fourni par le fondateur ; entier Unix supérieur à SNAPSHOT_TS.
-deploy_ops set-season --wallet "$DEPLOYER_KEYPAIR" --slot "$SNAPSHOT_SLOT" \
+deploy_ops set-season --wallet "$DEPLOYMENT_KEYPAIR" --slot "$SNAPSHOT_SLOT" \
   --ts "$SNAPSHOT_TS" --stock-up-ts "$STOCK_UP_TS"
-# Recopier la confirmation du plan dans CONFIRM_SEASON.
-deploy_ops set-season --wallet "$DEPLOYER_KEYPAIR" --slot "$SNAPSHOT_SLOT" \
+# Après revue, recopier confirmation dans CONFIRM_SEASON.
+deploy_ops set-season --wallet "$DEPLOYMENT_KEYPAIR" --slot "$SNAPSHOT_SLOT" \
   --ts "$SNAPSHOT_TS" --stock-up-ts "$STOCK_UP_TS" --confirm "$CONFIRM_SEASON"
-deploy_ops check --stage initialized
-launch_ops set-mint --flow proxima --mint "$MINT" --wallet "$DEPLOYER_KEYPAIR" \
-  --confirm "${MINT:0:8}"
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
-```
 
-Le slot doit être finalisé et son blockTime correspondre exactement au timestamp.
-`set-mint` ne reçoit que l'adresse publique vanity. Si init a déjà enregistré
-cette adresse, la commande vérifie l'état et le signale sans envoi supplémentaire.
-Ne pas faire avancer Setup avant ce contrôle. Préparer également les listings
-initiaux tant que l'ami est admin, selon le plan de stock approuvé ; aucun montant
-ou coin n'est déduit de ce document. Les commandes admin/K1 existantes acceptent désormais `--keypair` pour
-l'admin actuel sans Squads, vérifient Config.admin finalisé et simulent avant
-confirmation. Après transfert au Ledger, `--admin "$FOUNDER"` fournit un export
-`unsigned-admin-transaction` à signer avec un outil wallet revu ; cet export
-n'est pas un transport Ledger intégré. Ne jamais exporter sa seed pour le CLI.
-
-## 6. LUT protocole
-
-```sh
 PROTOCOL_ADDRESSES=$(node -p 'require(process.argv[1]).protocolLutAddresses.join(",")' "$PUBLIC/addresses.json")
 node packages/cli/dist/launch/ops.js --cluster mainnet --rpc-url "$MAINNET_RPC_URL" \
   --program-id "$PROGRAM_ID" --ops-wallet "$OPS" lut create \
   --addresses "$PROTOCOL_ADDRESSES"
-# Copier confirmation.value du plan dans CONFIRM_LUT.
+# Après revue, recopier confirmation.value dans CONFIRM_LUT.
 node packages/cli/dist/launch/ops.js --cluster mainnet --rpc-url "$MAINNET_RPC_URL" \
   --program-id "$PROGRAM_ID" --ops-wallet "$OPS" --keypair "$OPS_KEYPAIR" \
   --confirm-mainnet-lut "$CONFIRM_LUT" lut create --addresses "$PROTOCOL_ADDRESSES"
+# PROTOCOL_LUT vient du rapport final, après finalité et gel vérifiés.
+node packages/cli/dist/launch/ops.js --cluster mainnet --rpc-url "$MAINNET_RPC_URL" \
+  --program-id "$PROGRAM_ID" --ops-wallet "$OPS" lut freeze \
+  --lut "$PROTOCOL_LUT" --addresses "$PROTOCOL_ADDRESSES"
 ```
 
-Le CLI demande aussi le préfixe/suffixe programme au terminal, crée/étend puis
-fige la table. Il attend la finalité et n'annonce le succès qu'après lecture
-exacte des six adresses et absence d'autorité. Publier uniquement la LUT du
-rapport final, puis vérifier sans signer avec `lut freeze --lut "$PROTOCOL_LUT"
---addresses "$PROTOCOL_ADDRESSES"` et les mêmes options publiques `--ops-wallet`.
-Configurer cette adresse dans les services (`PROTOCOL_LOOKUP_TABLE` du keeper et
-`PROTOCOL_LUT_ADDRESS` de l'API selon leurs schémas). Une tentative incomplète se
-reprend sur sa LUT existante après réconciliation, pas par création aveugle.
+Le snapshot doit être finalisé avec le blockTime exact. La LUT contient six
+adresses indépendantes du mint ; fournir sa publique aux services via
+`PROTOCOL_LOOKUP_TABLE` (keeper) et `PROTOCOL_LUT_ADDRESS` (API). Donner à l'ami
+`$DBC_CONFIG`, `$LAUNCH_WALLET` et l'heure de Stock-Up, puis lui faire exécuter la
+partie « Ami ». Ne pas avancer la phase avant réception et vérification.
 
-D32 utilise des transactions courtes séparées et n'exige pas la LUT du launch
-atomique D28. `launch lut` demeure disponible pour les répétitions atomiques.
-
-## 7. Stock-Up, Proxima, dépôt et Power-On
-
-À partir de `stock_up_ts`, après les contrôles de stock/services applicables :
+**4. Vérifier le token reçu, enregistrer le mint pendant Setup.** Renseigner
+`MINT` avec l'adresse du token transmise par l'ami. Conserver les signatures
+Proxima et transfert. `POOL_CREATOR` reste l'adresse publique de son Deployer,
+vérifiée séparément ; notre config DBC étant publique, un tiers peut la réutiliser.
 
 ```sh
-launch_ops stock-up --flow proxima --mint "$MINT" --wallet "$DEPLOYER_KEYPAIR" \
-  --confirm "${MINT:0:8}"
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
+# MINT : adresse du token transmise après le lancement de l'ami.
+proxima_ops verify --wallet-address "$LAUNCH_WALLET"
+# Exiger ok avant set-mint : ce contrôle ne signe et ne soumet rien.
+proxima_ops set-mint --wallet "$DEPLOYMENT_KEYPAIR" --confirm "${MINT:0:8}"
+proxima_ops check --wallet-address "$LAUNCH_WALLET"
+# Exiger stock-up, avec le mint final enregistré et la Machine encore en Setup.
+
+# Après succès seulement : conserver l'init original et actualiser son mint public.
+cp -n "$INIT" "$PUBLIC/init.initial.mainnet.json"
+node --input-type=commonjs - "$INIT" "$MINT" <<'NODE'
+const fs = require("node:fs");
+const [path, mint] = process.argv.slice(2);
+const input = JSON.parse(fs.readFileSync(path, "utf8"));
+input.params.token_mint = mint;
+fs.writeFileSync(path, JSON.stringify(input, null, 2) + "\n");
+NODE
+
+# À partir de STOCK_UP_TS, après les contrôles de stock et services :
+proxima_ops stock-up --wallet "$DEPLOYMENT_KEYPAIR" --confirm "${MINT:0:8}"
+proxima_ops check --wallet-address "$LAUNCH_WALLET"
 ```
 
-Le contrôle doit indiquer `awaiting-proxima`. Dans Proxima, l'ami sélectionne son
-même wallet **Deployer**, sa Custom Token Address pré-générée, **notre config DBC
-`$DBC_CONFIG`**, les metadata immuables et un dev buy de **40 000 000 1PCT**
-(4 % de 1 000 000 000, 6 décimales). Il vérifie l'aperçu avant signature.
-Team bundle, Block-0 et Sniper Guard restent des options externes ; aucun outil
-Onepercent ne les suppose ni ne les configure. Conserver la signature Proxima.
+`launch verify` vérifie le lancement même avant l'enregistrement de son mint.
+Un mint existant en Setup n'est accepté qu'avec `--pool-creator` et tous les
+contrôles valides. `set-mint` exige phase 0 et est refusé après Stock-Up, y compris
+si le mint demandé est déjà enregistré. L'actualisation de l'input public après
+succès permet aux contrôles de déploiement et de transfert d'admin de vérifier
+le mint final. Un retard ne permet jamais de contourner la phase Setup.
 
-Le token peut commencer à trader dès la transaction Proxima, avant Power-On.
-Ne pas annoncer Machine allumée avant la preuve ci-dessous. Si Proxima ne permet
-pas de sélectionner notre config, notre mint ou ce dev buy exact, arrêter le
-lancement : une config Proxima par défaut ne convient pas à D29.
-
-```sh
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
-# Le rapport doit indiquer deposit (ATA >=40M) ou power-on si le vault est déjà financé.
-launch_ops deposit --flow proxima --mint "$MINT" --wallet "$DEPLOYER_KEYPAIR" \
-  --confirm "${MINT:0:8}"
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
-# Le rapport doit indiquer power-on : vault >=40M non comptabilisés ; surplus wallet permis.
-launch_ops power-on --flow proxima --mint "$MINT" --wallet "$DEPLOYER_KEYPAIR" \
-  --confirm "${MINT:0:8}"
-launch_ops check --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
-launch_ops report --flow proxima --mint "$MINT" --wallet-address "$DEPLOYER"
-# Exiger powered-on et un rapport final ok avant le transfert des autorités (§8).
-```
-
-Avant chaque signature et dans le rapport final, les outils contrôlent config
-DBC et `fee_claimer = FeeIn`, pool/mint canoniques, supply initiale prouvée par
-la config DBC et le lancement finalisé, supply courante ≤ supply initiale,
-décimales, autorités nulles et métadonnées immuables. Un burn externe ne bloque
-pas la suite. Le dépôt transfère exactement `TOKEN_1PCT.devBuyAmount` (40M)
-depuis un ATA détenant au moins ce montant ; les surplus restent au Deployer,
-y compris dans ses autres comptes token. Le passage à Power-On exige au moins
-40M non comptabilisés dans le vault, sans condition de wallet vide. Un vault déjà
-financé permet de passer directement à Power-On sans refaire le dépôt. Les 40M
-sont comptabilisés exactement ; un surplus de vault
-provenant d'un don reste distinct et non comptabilisé. Le dépôt et Power-On sont
-deux transactions, toutes deux
-signées par le même launch wallet. Le rapport final immédiat, avant toute activité de packs, prouve phase, horodatages,
-vault et comptabilité des 40M ; il ne reconstruit pas artificiellement une unique
-transaction D28. Archiver la signature externe Proxima et les journaux publics
-du dépôt/Power-On. Tout envoi ambigu exige réconciliation des mêmes signatures
-et comptes finalisés avant reprise. Après le transfert des autorités (§8), ouvrir
-les flags publics seulement après couverture, services et go/no-go ; un programme déployé n'est pas une Machine
-ouverte ni une acceptation des éléments encore ouverts de MAINNET-READINESS.
-
-## 8. Transférer les deux autorités au fondateur
-
-Effectuer ces transferts uniquement après le contrôle final `powered-on` et le
-rapport `ok` de la section 7. Ne jamais transférer l’upgrade authority avant `init`.
+**5. Transférer admin et upgrade authority au Ledger.** Ces transferts ont lieu
+après `set-mint` et Stock-Up, avant le dépôt et Power-On. Ils ne changent pas
+`launch_wallet`.
 
 ```sh
-deploy_ops transfer-admin --wallet "$DEPLOYER_KEYPAIR"
-# Recopier la confirmation du plan dans CONFIRM_ADMIN.
-deploy_ops transfer-admin --wallet "$DEPLOYER_KEYPAIR" --confirm "$CONFIRM_ADMIN"
-solana --url "$MAINNET_RPC_URL" --keypair "$DEPLOYER_KEYPAIR" \
-  program set-upgrade-authority "$PROGRAM_ID" --upgrade-authority "$DEPLOYER_KEYPAIR" \
-  --new-upgrade-authority "$FOUNDER" --skip-new-upgrade-authority-signer-check
+deploy_ops transfer-admin --wallet "$DEPLOYMENT_KEYPAIR"
+# Après revue, recopier confirmation dans CONFIRM_ADMIN.
+deploy_ops transfer-admin --wallet "$DEPLOYMENT_KEYPAIR" --confirm "$CONFIRM_ADMIN"
+solana --url "$MAINNET_RPC_URL" --keypair "$DEPLOYMENT_KEYPAIR" \
+  program set-upgrade-authority "$PROGRAM_ID" --upgrade-authority "$DEPLOYMENT_KEYPAIR" \
+  --new-upgrade-authority 'usb://ledger'
 pnpm program:deploy:check verify --cluster mainnet --rpc "$MAINNET_RPC_URL" \
   --artifact "$ARTIFACT" --program "$PROGRAM_ID" --authority "$FOUNDER" \
   --approved-commit "$APPROVED_RC_COMMIT" --approved-elf-sha256 "$APPROVED_RC_ELF_SHA256"
 deploy_ops check --stage handoff
 ```
 
-`transfer-admin` n'annonce le succès qu'après relecture finalisée de Config avec
-l'adresse du fondateur, les autres rôles inchangés. Vérifier la publique du Ledger
-avec le fondateur avant `set-upgrade-authority` : l'option explicite ci-dessus
-permet ce transfert sans demander au fondateur de communiquer son signer à l'ami.
-Si le Ledger est physiquement disponible, utiliser `--new-upgrade-authority
-'usb://ledger'` et retirer l'option de saut pour obtenir sa cosignature.
-Ne jamais employer `--final` : cela supprimerait l'upgrade nécessaire avant la
-fin de saison. `check --stage handoff` exige **les deux autorités** au même wallet
-fondateur ; il ne se contente pas d'une transaction envoyée.
+Vérifier et cosigner avec le Ledger du fondateur, sans exporter sa seed.
+Ne jamais employer `--final`. `handoff` exige admin et upgrade au même Ledger.
+
+**6. Déposer et Power-On.** Depuis la machine du fondateur :
+
+```sh
+proxima_ops check --wallet-address "$LAUNCH_WALLET"
+# Exiger deposit avec ATA >=40M ; si le vault est déjà financé, passer à power-on.
+proxima_ops deposit --wallet "$DEPLOYMENT_KEYPAIR" --confirm "${MINT:0:8}"
+proxima_ops check --wallet-address "$LAUNCH_WALLET"
+# Exiger power-on avec vault >=40M non comptabilisés.
+proxima_ops power-on --wallet "$DEPLOYMENT_KEYPAIR" --confirm "${MINT:0:8}"
+proxima_ops check --wallet-address "$LAUNCH_WALLET"
+proxima_ops report --wallet-address "$LAUNCH_WALLET"
+# Exiger powered-on et rapport final ok avant toute activité de packs.
+```
+
+`--pool-creator` vérifie `pool.creator == POOL_CREATOR` et refuse cette adresse si
+elle égale `LAUNCH_WALLET`. Sans l'option, le créateur doit rester le launch wallet.
+Tous les autres contrôles restent requis : config DBC et `fee_claimer = FeeIn`,
+pool/mint canoniques, supply initiale prouvée et supply courante au plus égale,
+décimales, autorités nulles et métadonnées immuables. Le dépôt transfère exactement
+`TOKEN_1PCT.devBuyAmount` (40M) depuis l'ATA du launch wallet détenant au moins 40M.
+Power-On exige au moins 40M non comptabilisés dans le vault, sans wallet vide.
+Les surplus du wallet restent au fondateur ; un don au vault reste distinct et
+non comptabilisé ; un burn externe est toléré. Archiver rapports et journaux des
+deux transactions séparées. Réconcilier toute signature ambiguë avant reprise.
+Le token peut trader avant Power-On ; n'ouvrir les flags publics qu'après le
+rapport final, la couverture, les services et le go/no-go applicables.
+
+## Ami
+
+**Avant l'heure de Stock-Up donnée par le fondateur**, coller notre config dans
+le champ **« DBC Config public key »** de Proxima. Lancer avec son propre wallet
+Deployer et un mint quelconque, sans Custom Token Address, avec les métadonnées
+finales immuables et un dev buy d'**au moins 4 % (40 000 000 1PCT)**.
+
+Envoyer **exactement 40 000 000 1PCT** à **l'adresse `launch_wallet` donnée par le
+fondateur**, puis lui transmettre **l'adresse du token** et les signatures du
+lancement et du transfert. Le surplus reste sur le Deployer de l'ami. Rien à
+déployer ni à exécuter dans le CLI.

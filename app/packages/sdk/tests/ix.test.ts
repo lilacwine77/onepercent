@@ -400,6 +400,15 @@ describe("named instruction builders", () => {
               cardIndices: decoded.card_indices as number[],
             });
             break;
+          case "start_final_pull":
+            built = sdk.startFinalPullIx(programId);
+            break;
+          case "claim_final_sol":
+            built = sdk.claimFinalSolIx(programId, { owner: key(3) });
+            break;
+          case "claim_final_tokens":
+            built = sdk.claimFinalTokensIx(programId, { owner: key(1) });
+            break;
           case "withdraw_owed":
             built = sdk.withdrawOwedIx(programId, { owner: key(1) });
             break;
@@ -420,6 +429,7 @@ describe("named instruction builders", () => {
           isWritable:
             (v.name === "settle" && i >= 2) ||
             (v.name === "refund_pull" && i === 3) ||
+            (v.name === "claim_final_sol" && i === 2) ||
             (v.name === "consume_randomness" && !meta.isSigner) ||
             (((v.name === "exec_begin" && i === 8) ||
               (v.name === "exec_end" && i === 7)) &&

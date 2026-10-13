@@ -13,9 +13,13 @@ import {
   TransactionInstruction,
   TransactionMessage,
 } from "@solana/web3.js";
-import { NATIVE_MINT } from "@solana/spl-token";
+import {
+  NATIVE_MINT,
+  createAssociatedTokenAccountIdempotentInstruction,
+} from "@solana/spl-token";
 import {
   BURN,
+  CU_LIMITS,
   METEORA,
   METEORA_BY_CLUSTER,
   meteoraForCluster,
@@ -1153,12 +1157,131 @@ describe("reserve oracle begin checks", () => {
       expect(f.run).toThrow("METEORA_DBC_CONFIG is PENDING for mainnet");
     else expect(f.run().ok).toBe(false); // The fixture pool remains bound to the devnet config.
   });
-  it("refuses Burn in Done until the D18 upgrade", () => {
+  it("allows any Burn caller in Done despite disabled roles and pauses while preserving limits", () => {
+    const f = meteoraBeginFixture(EXEC_KIND.burn);
+    const expected = f.run();
+    f.state.machine.phase = PHASE.done;
+    f.state.config.executor = key(66);
+    f.state.config.disabled_roles = 0xff;
+    f.state.config.admin_paused = 0xff;
+    f.state.config.guardian_paused = 0xff;
+    expect(f.run()).toEqual(expected);
+    f.state.machine.last_burn_ts = f.now;
+    expect(f.run()).toEqual({ ok: false, error: "TooSoon" });
+    f.state.machine.last_burn_ts = 0n;
+    f.state.machine.burn_hour_index = 2n;
+    f.state.machine.burn_paid_hour = BURN.hourlyMaxLamports;
+    expect(f.run()).toEqual({ ok: false, error: "HourlyCapReached" });
+    f.state.machine.burn_paid_hour = 0n;
+    f.args.amount = BURN.trancheMaxLamports + 1n;
+    expect(f.run()).toEqual({ ok: false, error: "TrancheTooLarge" });
+    f.args.amount = 50_000_000n;
+    f.state.machine.phase = PHASE.finalPull;
+    expect(f.run()).toEqual({ ok: false, error: "Unauthorized" });
+    f.state.machine.phase = PHASE.done;
+    f.args.kind = EXEC_KIND.jackpotBuy;
+    expect(f.run()).toEqual({ ok: false, error: "Unauthorized" });
+  });
+  it("allows an empty canonical closed ledger only for Done Burn", () => {
     const f = meteoraBeginFixture(EXEC_KIND.burn);
     f.state.machine.phase = PHASE.done;
-    expect(f.run()).toEqual({ ok: false, error: "WrongPhase" });
-    f.state.config.executor = key(66);
-    expect(f.run()).toEqual({ ok: false, error: "Unauthorized" });
+    f.readings.ledger.owner = SystemProgram.programId;
+    f.readings.ledger.data = Buffer.alloc(0);
+    expect(f.run().ok).toBe(true);
+    f.state.machine.final_pool_1pct = 1n;
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.state.machine.final_pool_1pct = 0n;
+    f.state.machine.jackpot_tokens = 1n;
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.state.machine.jackpot_tokens = 0n;
+    f.state.machine.onepct[0]!.amount = 1n;
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.state.machine.onepct[0]!.amount = 0n;
+    f.readings.ledger.executable = true;
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.readings.ledger.executable = false;
+    f.readings.ledger.data = Buffer.alloc(1);
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.readings.ledger.data = Buffer.alloc(0);
+    f.readings.ledger.address = key(67);
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+    f.readings.ledger.address = ledgerPda(PROGRAM_ID, f.args.mint)[0];
+    f.state.machine.phase = PHASE.finalPull;
+    expect(f.run()).toEqual({ ok: false, error: "LedgerMismatch" });
+  });
+  it("preflights a closed vault only with exact immediate Done Burn restoration", () => {
+    const f = meteoraBeginFixture(EXEC_KIND.burn);
+    const expected = f.run();
+    f.state.machine.phase = PHASE.done;
+    f.readings.vault.owner = SystemProgram.programId;
+    f.readings.vault.data = Buffer.alloc(0);
+    f.readings.ledger.owner = SystemProgram.programId;
+    f.readings.ledger.data = Buffer.alloc(0);
+    expect(f.run()).toEqual({ ok: false, error: "VaultMismatch" });
+    const restore = createAssociatedTokenAccountIdempotentInstruction(
+      f.args.signer,
+      f.readings.vault.address,
+      vaultAuthPda(PROGRAM_ID)[0],
+      f.args.mint,
+      f.args.tokenProgram,
+    );
+    const begin = execBeginIx(PROGRAM_ID, f.args);
+    const end = execEndIx(PROGRAM_ID, f.args);
+    const check = (
+      instructions: TransactionInstruction[] = [restore, begin, end],
+      currentIndex = 1,
+    ) => {
+      f.readings.execution.instructions = instructions;
+      f.readings.execution.currentIndex = currentIndex;
+      return checkExecBegin(f.state, f.args, f.readings, f.now);
+    };
+    expect(check()).toEqual(expected);
+    f.readings.vault.executable = true;
+    expect(check()).toEqual({ ok: false, error: "VaultMismatch" });
+    f.readings.vault.executable = false;
+    f.readings.vault.data = Buffer.alloc(1);
+    expect(check()).toEqual({ ok: false, error: "VaultMismatch" });
+    f.readings.vault.data = Buffer.alloc(0);
+    f.readings.vault.address = key(88);
+    expect(check()).toEqual({ ok: false, error: "VaultMismatch" });
+    f.readings.vault.address = vaultAta(
+      PROGRAM_ID,
+      f.args.mint,
+      f.args.tokenProgram,
+    );
+    expect(check([begin, restore, end], 0)).toEqual({
+      ok: false,
+      error: "VaultMismatch",
+    });
+    for (const altered of [
+      new TransactionInstruction({ ...restore, data: Buffer.from([0]) }),
+      new TransactionInstruction({
+        ...restore,
+        programId: SystemProgram.programId,
+      }),
+      new TransactionInstruction({
+        ...restore,
+        keys: restore.keys.map((meta, index) =>
+          index === 2 ? { ...meta, pubkey: key(89) } : meta,
+        ),
+      }),
+      new TransactionInstruction({
+        ...restore,
+        keys: restore.keys.map((meta, index) =>
+          index === 0 ? { ...meta, isSigner: false } : meta,
+        ),
+      }),
+    ])
+      expect(check([altered, begin, end])).toEqual({
+        ok: false,
+        error: "VaultMismatch",
+      });
+    f.state.machine.phase = PHASE.finalPull;
+    expect(check()).toEqual({ ok: false, error: "VaultMismatch" });
+    f.state.machine.phase = PHASE.done;
+    f.state.machine.burn_hour_index = 2n;
+    f.state.machine.burn_paid_hour = BURN.hourlyMaxLamports;
+    expect(check()).toEqual({ ok: false, error: "HourlyCapReached" });
   });
   it("rejects nonpositive signed quote reserves and wrong pool token authority", () => {
     const f = poolFixture(EXEC_KIND.stockBuy);
@@ -1287,6 +1410,101 @@ describe("composeExecTransaction", () => {
     ).toBe(true);
     expect(begin).toBe(kind === EXEC_KIND.stockSell ? 3 : 2);
     expect(ixs.at(-1)!.data.equals(input.endIx.data)).toBe(true);
+  });
+  it("restores a closed canonical vault only when a Burn caller opts in", () => {
+    const input = composition(EXEC_KIND.burn);
+    const normal = composeExecTransaction(input);
+    const restored = composeExecTransaction({
+      ...input,
+      restoreTokenVault: true,
+    });
+    const ixs = TransactionMessage.decompile(restored.transaction.message, {
+      addressLookupTableAccounts: [input.protocolLut],
+    }).instructions;
+    const begin = ixs.findIndex((ix) => ix.programId.equals(PROGRAM_ID));
+    expect(begin).toBe(3);
+    const ata = ixs[begin - 1]!;
+    expect(ata.programId).toEqual(EXTERNAL_IDS.associatedToken);
+    expect(ata.data).toEqual(Buffer.from([1]));
+    expect(ata.keys[0]!.pubkey).toEqual(input.payer);
+    expect(ata.keys[1]!.pubkey).toEqual(input.beginIx.keys[5]!.pubkey);
+    expect(ata.keys[2]!.pubkey).toEqual(vaultAuthPda(PROGRAM_ID)[0]);
+    expect(ata.keys[3]!.pubkey).toEqual(input.beginIx.keys[3]!.pubkey);
+    expect(restored.serializedSize).toBeGreaterThan(normal.serializedSize);
+    expect(ixs.at(-1)!.data).toEqual(input.endIx.data);
+    for (const kind of [
+      EXEC_KIND.stockBuy,
+      EXEC_KIND.stockSell,
+      EXEC_KIND.jackpotBuy,
+    ])
+      expect(() =>
+        composeExecTransaction({
+          ...composition(kind),
+          restoreTokenVault: true,
+        }),
+      ).toThrow("Token vault restoration requires Burn");
+  });
+  it("adds the measured restoration budget once without changing the caller's limit or price", () => {
+    const input = composition(EXEC_KIND.burn);
+    const baseline = CU_LIMITS.execBegin + CU_LIMITS.execEnd;
+    input.computeBudget = [
+      ComputeBudgetProgram.setComputeUnitLimit({ units: baseline }),
+      ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 12_345 }),
+    ];
+    for (const restoreTokenVault of [false, true, true]) {
+      const built = composeExecTransaction({ ...input, restoreTokenVault });
+      const ixs = TransactionMessage.decompile(built.transaction.message, {
+        addressLookupTableAccounts: [input.protocolLut],
+      }).instructions;
+      expect(ixs[0]!.data.readUInt32LE(1)).toBe(
+        baseline + (restoreTokenVault ? CU_LIMITS.restoreBurnVault : 0),
+      );
+      expect(ixs[1]!.data).toEqual(input.computeBudget[1]!.data);
+      expect(input.computeBudget[0]!.data.readUInt32LE(1)).toBe(baseline);
+    }
+  });
+  it.each([1_400_000, 1_390_000])(
+    "caps the restoration budget at the runtime maximum for a %s CU route",
+    (units) => {
+      const input = composition(EXEC_KIND.burn);
+      input.computeBudget = [
+        ComputeBudgetProgram.setComputeUnitLimit({ units }),
+      ];
+      const built = composeExecTransaction({
+        ...input,
+        restoreTokenVault: true,
+      });
+      const ixs = TransactionMessage.decompile(built.transaction.message, {
+        addressLookupTableAccounts: [input.protocolLut],
+      }).instructions;
+      expect(ixs[0]!.data.readUInt32LE(1)).toBe(1_400_000);
+    },
+  );
+  it("rejects missing, malformed or duplicate restoration compute limits", () => {
+    const input = composition(EXEC_KIND.burn);
+    const limit = input.computeBudget[0]!;
+    for (const computeBudget of [
+      [],
+      [ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 1 })],
+    ])
+      expect(() =>
+        composeExecTransaction({
+          ...input,
+          computeBudget,
+          restoreTokenVault: true,
+        }),
+      ).toThrow("Token vault restoration requires a compute unit limit");
+    for (const computeBudget of [
+      [limit, limit],
+      [new TransactionInstruction({ ...limit, data: Buffer.from([2, 1]) })],
+    ])
+      expect(() =>
+        composeExecTransaction({
+          ...input,
+          computeBudget,
+          restoreTokenVault: true,
+        }),
+      ).toThrow("Invalid exec compute budget");
   });
   it("preserves a full route with a second LUT at the exact packet boundary", () => {
     const input = composition();

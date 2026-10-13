@@ -10,7 +10,11 @@ import {
   PUMP_LAYOUTS,
   STOCK,
 } from "@onepercent/config";
-import { NATIVE_MINT, ExtensionType } from "@solana/spl-token";
+import {
+  NATIVE_MINT,
+  ExtensionType,
+  createAssociatedTokenAccountIdempotentInstruction,
+} from "@solana/spl-token";
 import { PublicKey, SystemProgram } from "@solana/web3.js";
 import type { TransactionInstruction } from "@solana/web3.js";
 import {
@@ -18,6 +22,7 @@ import {
   EXEC_KIND,
   EXTERNAL_IDS,
   PHASE,
+  ONE_PCT_STATE,
   POOL_AUTHORITY_SEED,
   PUMPSWAP_POOL_DISCRIMINATOR,
   PYTH_PRICE_UPDATE_V2_DISCRIMINATOR,
@@ -259,6 +264,7 @@ export interface ExecAccountReading {
   address: PublicKey;
   owner: PublicKey;
   data: Uint8Array;
+  executable?: boolean;
 }
 export interface ExecReadings {
   mint: ExecAccountReading;
@@ -726,6 +732,38 @@ function beginBindings(
     "AccountMismatch",
   );
 }
+/** The opt-in composer places this exact restoration immediately before begin. */
+function restoresTokenVault(
+  programId: PublicKey,
+  args: ExecBeginInput,
+  readings: ExecReadings,
+): boolean {
+  const preceding =
+    readings.execution.instructions[readings.execution.currentIndex - 1];
+  const payer = preceding?.keys[0]?.pubkey;
+  if (!preceding || !payer) return false;
+  const expected = createAssociatedTokenAccountIdempotentInstruction(
+    payer,
+    vaultAta(programId, args.mint, args.tokenProgram),
+    vaultAuthPda(programId)[0],
+    args.mint,
+    args.tokenProgram,
+  );
+  return (
+    preceding.programId.equals(expected.programId) &&
+    preceding.data.equals(expected.data) &&
+    preceding.keys.length === expected.keys.length &&
+    preceding.keys.every((meta, index) => {
+      const account = expected.keys[index]!;
+      return (
+        meta.pubkey.equals(account.pubkey) &&
+        (!account.isSigner || meta.isSigner) &&
+        (!account.isWritable || meta.isWritable)
+      );
+    })
+  );
+}
+
 /** Full begin preflight against account bytes and the proposed top-level transaction. */
 export function checkExecBegin(
   state: ExecState,
@@ -748,27 +786,31 @@ export function checkExecBegin(
     u64(args.amount);
     const stock = args.kind <= EXEC_KIND.stockSell;
     const phase = machine.phase;
-    requireExec(
-      args.signer.equals(stock ? config.keeper : config.executor),
-      "Unauthorized",
-    );
-    requireExec(
-      (config.disabled_roles & (1 << (stock ? 3 : 4))) === 0,
-      "RoleDisabled",
-    );
-    requireExec(
-      ((config.admin_paused | config.guardian_paused) &
-        (stock ? PAUSE_BITS.stockBuy : PAUSE_BITS.burn)) ===
-        0,
-      "Paused",
-    );
+    const permissionlessBurn =
+      args.kind === EXEC_KIND.burn && phase === PHASE.done;
+    if (!permissionlessBurn) {
+      requireExec(
+        args.signer.equals(stock ? config.keeper : config.executor),
+        "Unauthorized",
+      );
+      requireExec(
+        (config.disabled_roles & (1 << (stock ? 3 : 4))) === 0,
+        "RoleDisabled",
+      );
+      requireExec(
+        ((config.admin_paused | config.guardian_paused) &
+          (stock ? PAUSE_BITS.stockBuy : PAUSE_BITS.burn)) ===
+          0,
+        "Paused",
+      );
+    }
     requireExec(
       args.kind === EXEC_KIND.stockBuy
         ? phase === PHASE.poweredOn || phase === PHASE.onAir
         : args.kind === EXEC_KIND.stockSell
           ? phase === PHASE.onAir || phase === PHASE.buysClosed
           : args.kind === EXEC_KIND.burn
-            ? phase >= PHASE.poweredOn && phase < PHASE.done
+            ? phase >= PHASE.poweredOn && phase <= PHASE.done
             : phase === PHASE.onAir,
       "WrongPhase",
     );
@@ -810,26 +852,62 @@ export function checkExecBegin(
       ),
       "VaultMismatch",
     );
-    tokenAccount(
-      readings.vault,
-      args.mint,
-      args.tokenProgram,
-      vaultAuthPda(programId)[0],
-      false,
-      "VaultMismatch",
-    );
+    if (
+      permissionlessBurn &&
+      readings.vault.owner.equals(SystemProgram.programId)
+    ) {
+      requireExec(
+        readings.vault.data.length === 0 &&
+          readings.vault.executable !== true &&
+          restoresTokenVault(programId, args, readings),
+        "VaultMismatch",
+      );
+    } else {
+      tokenAccount(
+        readings.vault,
+        args.mint,
+        args.tokenProgram,
+        vaultAuthPda(programId)[0],
+        false,
+        "VaultMismatch",
+      );
+    }
     requireExec(
-      readings.ledger.address.equals(ledgerPda(programId, args.mint)[0]) &&
-        readings.ledger.owner.equals(programId),
+      readings.ledger.address.equals(ledgerPda(programId, args.mint)[0]),
       "LedgerMismatch",
     );
     let ledgerAccounted: bigint;
-    try {
-      const ledger = decodeMintLedger(readings.ledger.data);
-      ledgerAccounted = ledger.accounted;
-      requireExec(ledger.mint.equals(args.mint), "LedgerMismatch");
-    } catch {
-      throw new ExecCheckError("LedgerMismatch");
+    if (
+      permissionlessBurn &&
+      readings.ledger.owner.equals(SystemProgram.programId)
+    ) {
+      requireExec(
+        readings.ledger.data.length === 0 &&
+          readings.ledger.executable !== true,
+        "LedgerMismatch",
+      );
+      requireExec(
+        machine.final_pool_1pct === 0n &&
+          machine.jackpot_tokens === 0n &&
+          machine.onepct.every(
+            (slot) =>
+              slot.amount === 0n ||
+              (slot.state !== ONE_PCT_STATE.locked &&
+                slot.state !== ONE_PCT_STATE.live),
+          ),
+        "LedgerMismatch",
+      );
+      // exec_begin recreates a closed empty ledger from the caller's rent.
+      ledgerAccounted = 0n;
+    } else {
+      requireExec(readings.ledger.owner.equals(programId), "LedgerMismatch");
+      try {
+        const ledger = decodeMintLedger(readings.ledger.data);
+        ledgerAccounted = ledger.accounted;
+        requireExec(ledger.mint.equals(args.mint), "LedgerMismatch");
+      } catch {
+        throw new ExecCheckError("LedgerMismatch");
+      }
     }
     const sell = args.kind === EXEC_KIND.stockSell;
     const sourceMint = sell ? args.mint : NATIVE_MINT,

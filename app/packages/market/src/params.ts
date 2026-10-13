@@ -91,3 +91,29 @@ export const RESERVE_READS = {
   FEE_TIER_THRESHOLD_BYTES: 16,
   FEE_COMPONENT_BYTES: 8,
 } as const;
+
+// Full PriceUpdateV2 wire layout and integer exponent bound used by the stock SDK.
+// Protocol representation only; freshness and confidence still come from STOCK.
+export const PYTH_PUSH_LAYOUT = {
+  discriminatorHex: "22f123639d7ef4cd",
+  minimumBytes: 133,
+  verificationLevel: 40,
+  feedId: 41,
+  price: 73,
+  conf: 81,
+  exponent: 89,
+  publishTime: 93,
+  minimumExponent: -18,
+} as const;
+
+// Public history endpoints, API bounds and token identities; no economic policy.
+export const LISTING_HISTORY = {
+  pythBenchmarksUrl: "https://benchmarks.pyth.network",
+  geckoTerminalUrl: "https://api.geckoterminal.com/api/v2",
+  geckoMaxPoolPages: 10,
+  geckoPoolsPerPage: 20,
+  geckoRequestsPerMinute: 10,
+  ohlcvCloseIndex: 4,
+  usdcMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  usdtMint: "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+} as const;

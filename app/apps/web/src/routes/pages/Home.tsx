@@ -4,12 +4,19 @@ import { useConfig } from "../../data/config";
 import { flagEnabled } from "../../data/flags";
 import { serverTime } from "../../data/server-time";
 import { motionPref, soundPref, useStore } from "../../app/prefs";
+import { useLaunchGate } from "../../app/launch-gate";
+import { LaunchCountdown } from "../../app/LaunchCountdown";
 const now = () => serverTime.nowMs() ?? Date.now();
 // D19: the landing is the home route. Config → props; no fabricated machine data.
 export default function Home() {
+  const remaining = useLaunchGate();
+  const launchNotice =
+    remaining > 0 ? <LaunchCountdown seconds={remaining} /> : undefined;
   const machine = useConfig();
   const config = machine.error ? null : machine.data;
   const props: HomeProps = {
+    launchNotice,
+    flowsLocked: remaining > 0,
     phase:
       machine.data === undefined && !machine.error
         ? undefined
@@ -23,7 +30,7 @@ export default function Home() {
     reducedMotion: useStore(motionPref),
     soundOn: useStore(soundPref),
   };
-  const poster = <HomePoster />;
+  const poster = <HomePoster launchNotice={launchNotice} />;
   return (
     <ExperienceSlot
       component="hero"

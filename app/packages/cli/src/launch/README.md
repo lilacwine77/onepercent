@@ -1,60 +1,76 @@
 # Meteora launch tooling
 
-## D32 mainnet: Proxima Deployer wallet
+## D36 mainnet: founder launch wallet and friend's Proxima Deployer
 
-Mainnet uses Proxima for the pool and dev buy. The launch wallet in Config is
-the technical deployer's Proxima **Deployer** wallet: the 40,000,000 tokens
-arrive there and that same wallet signs their deposit and Power-On. No
-intermediate transfer is required. The founder receives Config admin and the
-program upgrade authority after the final Power-On checks, following the [mainnet runbook](../../../../../docs/codex/DEPLOY-MAINNET.md).
+The founder deploys and initializes the program from their own machine, prepares
+DBC, the season with time before `stock_up_ts`, and the protocol LUT while the
+Machine remains in Setup. No final mint address is known in advance and no
+Custom Token Address is needed. Init cannot omit `token_mint`: the CLI schema and
+program require a nonzero public key. Use the program's public address temporarily,
+then replace it with the verified token mint during Setup. The placeholder is
+not a token mint and cannot pass launch checks. Follow the
+[mainnet runbook](../../../../../docs/codex/DEPLOY-MAINNET.md).
 
-The public mint address is prepared before launch. While the technical deployer
-still has temporary admin authority, `launch set-mint --mint <public-mint>`
-registers it during Setup (or verifies it if init already registered it).
-`launch stock-up` advances the phase after `deploy set-season` has configured
-the season and its Stock-Up time has arrived; this transaction is permissionless.
-Create and verify the pinned DBC config before these commands.
-The finalized canonical pool and its immutable DBC config prove the initial
-supply. Current mint supply may be lower after burns, but never higher; mint
-and freeze authorities remain null and D29 metadata policy remains immutable.
-
-All commands below require `--cluster mainnet --rpc <url> --program <P6>
---mainnet-program <P6> --dbc-config <P3> --mint <public-mint>`.
-Mutations also require `--wallet <external-deployer-key-file>` and
+All Proxima commands below require `--cluster mainnet --rpc <url> --program <P6>
+--mainnet-program <P6> --dbc-config <P3> --mint <public-mint>
+--flow proxima --pool-creator <friend-deployer-public-address>`.
+Read-only commands use `--wallet-address <founder-launch-wallet>`.
+Mutations require `--wallet <external-founder-deployment-key-file>` and
 `--confirm <first-eight-mint-characters>`. Key files stay outside the repository.
+The friend never supplies their Deployer secret to the CLI.
 
-1. `launch check`: verifies finalized state and reports `set-mint`, `stock-up`,
-   `awaiting-proxima`, `deposit`, `power-on` or `powered-on`.
-2. `launch set-mint`, then `launch stock-up`: prepare the machine before Proxima.
-3. Launch externally with Proxima **Custom Token Address** and our DBC config.
-   Proxima receives the pre-generated mint signer, Onepercent only its public key.
-4. `launch check`, then `launch deposit`: requires at least the configured 4%
-   dev buy in the Deployer's canonical ATA; transfers exactly
-   `TOKEN_1PCT.devBuyAmount` from that ATA to the vault.
-5. `launch check`, then `launch power-on`: requires at least that amount in the
-   vault, still unaccounted; signs only Power-On. Deployer token balances never
-   block this transition, and their surplus stays with the Deployer. An already
-   funded vault skips another deposit, even if the wallet holds more tokens.
-   Donated vault excess is reported separately and never increases the tracked 40M.
-6. `launch report`: records finalized mint, canonical pool, full D29 config,
+1. Before `stock_up_ts`, the friend launches any new mint on Proxima with our
+   **DBC Config public key**, a dev buy of at least 4% (40,000,000 1PCT) into their
+   own Deployer wallet, null mint/freeze authorities and immutable metadata. They
+   transfer exactly `TOKEN_1PCT.devBuyAmount` to the founder's distinct launch
+   wallet and send the token address.
+2. The founder runs read-only `launch verify` with that mint and the friend's
+   `--pool-creator`. It validates the existing launch before mint registration;
+   it signs and submits nothing. A third party using our public DBC config fails
+   the creator check; a launch on another config also fails.
+3. The founder runs `launch set-mint` during Setup (phase 0 only), then updates
+   `params.token_mint` in their public deployment input to the verified address
+   for later deployment checks, preserving the initial input separately.
+   `launch check` reports `stock-up`. At `stock_up_ts`, run `launch stock-up`,
+   then transfer admin and upgrade authority to the founder's Ledger. The
+   founder's deployment wallet remains the launch wallet.
+4. The founder runs `launch check`, then `launch deposit`: the launch wallet's
+   canonical ATA must hold at least `TOKEN_1PCT.devBuyAmount`; the transaction
+   transfers exactly that amount from that ATA to the vault.
+5. `launch check`, then `launch power-on`: the vault must hold at least that amount,
+   still unaccounted. Launch wallet surplus stays in the wallet and never blocks
+   Power-On. An already funded vault skips another deposit. Donated vault excess
+   is reported separately and never increases the tracked 40M.
+6. `launch report` records finalized mint, canonical pool, full D29 config,
    FeeIn, tracked amount, clock and The 1% slots. Run immediately after Power-On,
    before later product activity changes these launch-specific balances. This
-   report identifies its evidence as finalized account state, not proof of an
-   atomic external transaction.
+   report identifies its evidence as finalized account state.
 
-Each mutation checks the canonical DBC pool, mint, config and FeeIn when present,
-simulates, writes its signed transaction journal, submits, and verifies its
-finalized postcondition. An ambiguous attempt resubmits the same bytes; it never
-rebuilds automatically. `proxima_reconciliation_required` requires reviewing the
-recorded signature and finalized state before archiving a definitively expired
-attempt. Retrying completed deposit/Power-On verifies state without transferring
-again. A stale `.lock` after a crashed process is removed only after confirming
-that no other operator process remains active.
+With `--pool-creator`, the finalized pool's creator must match that public address
+and differ from the launch wallet. An existing mint during Setup is allowed only
+with that option and all launch validations passing. `set-mint` is refused after
+Setup, even if Config already contains the requested mint. Without the option,
+the existing same-wallet flow still requires `pool.creator == launch_wallet`
+and no mint before Stock-Up. `launch check` reports `set-mint`, `stock-up`,
+`awaiting-proxima`, `deposit`, `power-on` or `powered-on`.
+The canonical pool and its immutable DBC config prove the initial supply. Current
+supply may be lower after burns, but never higher; mint and freeze authorities
+remain null and D29 metadata policy remains immutable. Every DBC field and
+`fee_claimer = FeeIn` remain checked.
 
-The D32 transactions fit without a launch LUT. The protocol LUT is independent.
+Each mutation simulates, persists its signed transaction journal, submits, and
+verifies its finalized postcondition. The declared pool creator is bound to the
+journal. An ambiguous attempt resubmits the same bytes; it never rebuilds
+automatically. `proxima_reconciliation_required` requires reviewing the recorded
+signature and finalized state before archiving a definitively expired attempt.
+Retrying completed deposit/Power-On verifies state without transferring again.
+Remove a stale `.lock` only after confirming no operator process remains active.
+
+The Proxima transactions fit without a launch LUT. The protocol LUT is independent.
 Use `--flow proxima` to rehearse this path on localnet or devnet. Mainnet selects
-it automatically and rejects `launch send` / `--flow atomic`. Fee measurements
-and public release pins must be supplied before any mainnet launch command.
+it automatically and rejects `launch send` / `--flow atomic`. `--pool-creator`
+is rejected on commands outside the Proxima path. Public release pins and D35's
+provisional landing values must be supplied by the architect before mainnet launch.
 
 ## Atomic localnet/devnet rehearsal
 

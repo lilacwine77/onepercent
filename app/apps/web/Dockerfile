@@ -12,6 +12,7 @@ RUN node apps/web/scripts/sync-landing-assets.mjs
 ARG VITE_API_URL
 ARG VITE_TURNSTILE_SITE_KEY
 ARG VITE_CLUSTER=devnet
+ARG VITE_LAUNCH_AT
 # Public deployment identity, pinned independently of API availability.
 ARG CLUSTER
 ARG PROGRAM_ID

@@ -169,7 +169,7 @@ No Telegram SDK, Prometheus client parser or pinning-service SDK: zod-typed `fet
 | Slip | `STOCK.majorMinOutSlipBps`, `.trendingMinOutSlipBps`; `BURN.minOutSlipBps`; `JACKPOT.minOutSlipBps` | 150; 100; 150; 100 |
 | Sell back | `SELL_BACK.payoutBps`, `.solFloorLamports`, `.hourlyBudgetMinLamports`, `.hourlyBudgetBpsOfStockSol` | 8,700; 1 SOL; 5 SOL; 2,500 |
 | Hit values | `HIT_TIERS[].valueBps`; `PACK_EDITIONS[].priceLamports`, `.maxPerRip` | PARAMS §2–§3 |
-| Season | `SEASON.onAirDelaySeconds`, `.durationSeconds`, `.lastCallSeconds`, `.finalPullDelaySeconds`, `.sealDelaySeconds` | 900; 604,800; 86,400; 600; 259,200 |
+| Season | `SEASON.onAirDelaySeconds`, `.durationSeconds`, `.lastCallSeconds`, `.finalPullDelaySeconds`, `.sealDelaySeconds` | 900; 172,800; 21,600; 600; 259,200 (D37) |
 | Governance | `GOVERNANCE.multisigThreshold`, `.multisigMembers`, `.timelockSeconds`, `.guardianCount`; `PAUSE_BITS` | 2; 3; 43,200; 2; rip 1, feed 2, sellBack 4, stockBuy 8, burn 16 |
 | $1PCT | `TOKEN_1PCT.devBuyAmount`, `.onePctCardAmount`, `.onePctCardCount` | 40M; 10M; 4 (base units × 10⁶) |
 | Batching | `TX_LIMITS.redeemPerTx`, `.takeBackPerTx`, `.settlePacksPerTx`, `.txPerSignAll`, `.maxTxBytes`; `CU_LIMITS` | 8; 8; 2; 8; 1,232; M1's measured block |

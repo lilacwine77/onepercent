@@ -2,6 +2,7 @@ import {
   lazy,
   Suspense,
   useEffect,
+  useLayoutEffect,
   useState,
   type ComponentType,
   type ReactNode,
@@ -24,6 +25,13 @@ import { OfflineBanner, RescueLink } from "./OfflineBanner";
 import NotFound from "./NotFound";
 import Home from "../routes/pages/Home";
 import Xray from "../routes/pages/Xray";
+import {
+  LaunchGateProvider,
+  useLaunchGate,
+  launchRemainingSeconds,
+  isLaunchPublicPath,
+  redirectBeforeLaunch,
+} from "./launch-gate";
 
 const X_URL = "https://x.com/1percentfun";
 
@@ -60,6 +68,7 @@ const Verify = lazyRoute(() => import("../routes/pages/Verify"));
 const Fairness = lazyRoute(() => import("../routes/pages/Fairness"));
 const Live = lazyRoute(() => import("../routes/pages/Live"));
 const Token = lazyRoute(() => import("../routes/pages/Token"));
+const Docs = lazyRoute(() => import("../routes/pages/Docs"));
 const preloaders: Partial<Record<string, () => Promise<unknown>>> = {
   home: () => preloadModule(loadHome),
   feed: Feed.preload,
@@ -69,15 +78,25 @@ const preloaders: Partial<Record<string, () => Promise<unknown>>> = {
   fairness: Fairness.preload,
   live: Live.preload,
   token: Token.preload,
+  docs: Docs.preload,
 };
-setRoutePreloader((pathname) => preloaders[matchRoute(pathname).route]?.());
+setRoutePreloader((pathname) =>
+  launchRemainingSeconds() && !isLaunchPublicPath(pathname)
+    ? undefined
+    : preloaders[matchRoute(pathname).route]?.(),
+);
 const DevExperience = import.meta.env.DEV
   ? lazy(() => import("../routes/pages/DevExperience"))
   : null;
 function Content() {
+  const locked = useLaunchGate() > 0;
   const href = useLocation();
   const url = new URL(href);
-  const match = matchRoute(url.pathname);
+  const redirect = locked && !isLaunchPublicPath(url.pathname);
+  const match = matchRoute(redirect ? "/" : url.pathname);
+  useLayoutEffect(() => {
+    if (redirect) redirectBeforeLaunch();
+  }, [redirect, href]);
   const [menu, setMenu] = useState(false);
   const { reduced, toggle: toggleMotion } = useReducedMotion();
   useEffect(() => motionPref.set(reduced), [reduced]);
@@ -136,6 +155,9 @@ function Content() {
     case "token":
       page = <Token />;
       break;
+    case "docs":
+      page = <Docs />;
+      break;
     case "experience":
       page = DevExperience ? <DevExperience /> : <NotFound />;
       break;
@@ -153,49 +175,54 @@ function Content() {
   return (
     <>
       <header className="app-header">
-        <button
-          className="round menu-toggle"
-          aria-expanded={menu}
-          aria-controls="main-nav"
-          aria-label={t(menu ? "nav.menuClose" : "nav.menuOpen")}
-          onClick={() => setMenu(!menu)}
-        />
+        {!locked && (
+          <button
+            className="round menu-toggle"
+            aria-expanded={menu}
+            aria-controls="main-nav"
+            aria-label={t(menu ? "nav.menuClose" : "nav.menuOpen")}
+            onClick={() => setMenu(!menu)}
+          />
+        )}
         <nav
           id="main-nav"
           className={menu ? "nav-open" : ""}
           aria-label={t("nav.label")}
         >
-          {(["xray", "feed", "rip"] as const).map((id) => (
-            <a
-              key={id}
-              href={routes[id].path}
-              aria-current={match.route === id ? "page" : undefined}
-            >
-              {t(`nav.${id}`)}
-            </a>
-          ))}
+          {!locked &&
+            (["xray", "feed", "rip"] as const).map((id) => (
+              <a
+                key={id}
+                href={routes[id].path}
+                aria-current={match.route === id ? "page" : undefined}
+              >
+                {t(`nav.${id}`)}
+              </a>
+            ))}
           {soundAvailable && soundToggle}
         </nav>
         {/* The 1% mark is drawn by CSS (styles.css .wordmark); its name is the label. */}
         <a href="/" className="wordmark" aria-label={t("brand.name")} />
         <div className="header-tools">
           {soundAvailable && soundToggle}
-          <a
-            href={routes.cards.path}
-            className="cards-chip"
-            aria-current={match.route === "cards" ? "page" : undefined}
-          >
-            {t("nav.cards")}
-            {!!cards && (
-              <b className="badge" aria-hidden="true">
-                {count(cards)}
-              </b>
-            )}
-          </a>
-          <WalletButton />
+          {!locked && (
+            <a
+              href={routes.cards.path}
+              className="cards-chip"
+              aria-current={match.route === "cards" ? "page" : undefined}
+            >
+              {t("nav.cards")}
+              {!!cards && (
+                <b className="badge" aria-hidden="true">
+                  {count(cards)}
+                </b>
+              )}
+            </a>
+          )}
+          {!locked && <WalletButton />}
         </div>
       </header>
-      <OfflineBanner />
+      {!locked && <OfflineBanner />}
       {/* One <main> per route: a route's own page box (Feed is narrower) is a new
           element, never a shift of the previous page's. */}
       <main key={match.route} className={`shell-page page-${match.route}`}>
@@ -216,17 +243,21 @@ function Content() {
           <div>
             {/* "Find your" / "1%." on two lines, as the landing's footer. */}
             <h2>{t("footer.heading").replace(/ (\S+)$/, "\n$1")}</h2>
-            <a className="oval" href={routes.rip.path}>
-              {t("footer.cta").slice(0, -2)}
-            </a>
+            {!locked && (
+              <a className="oval" href={routes.rip.path}>
+                {t("footer.cta").slice(0, -2)}
+              </a>
+            )}
           </div>
           <nav>
-            {(["live", "token", "fairness"] as const).map((id) => (
-              <a key={id} href={routes[id].path}>
-                {t(`nav.${id}`)}
-              </a>
-            ))}
-            <RescueLink />
+            {(["live", "token", "fairness", "docs"] as const)
+              .filter((id) => !locked || id === "docs")
+              .map((id) => (
+                <a key={id} href={routes[id].path}>
+                  {t(`nav.${id}`)}
+                </a>
+              ))}
+            {!locked && <RescueLink />}
             <a href={X_URL} rel="external noopener" target="_blank">
               {t("footer.x")}
             </a>
@@ -304,9 +335,11 @@ function FooterPepe() {
 export function AppShell() {
   return (
     <ErrorBoundary>
-      <Providers>
-        <Content />
-      </Providers>
+      <LaunchGateProvider>
+        <Providers>
+          <Content />
+        </Providers>
+      </LaunchGateProvider>
     </ErrorBoundary>
   );
 }

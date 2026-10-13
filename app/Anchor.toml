@@ -14,7 +14,8 @@ onepercent = "DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe"
 onepercent = "DzMTD92EwiEaZ5uTKPwweR2JEhp62kp8VEmpueCAQigr"
 
 # BEGIN GENERATED MAINNET IDENTITY
-# PENDING: run release:mainnet:apply with public release input.
+[programs.mainnet]
+onepercent = "7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH"
 # END GENERATED MAINNET IDENTITY
 
 [provider]

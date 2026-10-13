@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-10-13T11:52:27.901346+00:00",
+  "request": {
+    "method": "GET",
+    "url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm/pools?sort=h24_volume_usd_liquidity_desc&page=1"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "data": [
+        {
+          "attributes": {
+            "address": "EP2ib6dYdEeqD8MfE2ezHCxX3kP3K2eLKkirfPm5eyMx",
+            "reserve_in_usd": "5877575.0345"
+          },
+          "relationships": {
+            "base_token": {
+              "data": {
+                "id": "solana_EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+                "type": "token"
+              }
+            },
+            "quote_token": {
+              "data": {
+                "id": "solana_So11111111111111111111111111111111111111112",
+                "type": "token"
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "address": "D6NdKrKNQPmRZCCnG1GqXtF7MMoHB7qR6GU5TkG59Qz1",
+            "reserve_in_usd": "154601.9344"
+          },
+          "relationships": {
+            "base_token": {
+              "data": {
+                "id": "solana_EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+                "type": "token"
+              }
+            },
+            "quote_token": {
+              "data": {
+                "id": "solana_So11111111111111111111111111111111111111112",
+                "type": "token"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "note": "Public response reduced to the first two pools and fields used by the client. Pagination is tested with synthetic expansions."
+}

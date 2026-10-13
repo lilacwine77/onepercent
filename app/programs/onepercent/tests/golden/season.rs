@@ -37,16 +37,35 @@ fn special_case(
 #[test]
 fn specials_vectors() {
     let start = 1_793_290_500i64;
+    let offsets = params::TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS;
     let mut rows = vec![
         special_case([0; 4], start, start - 1, 0, 0, 0),
         special_case([0; 4], start, start, 0, 0, 0),
-        special_case([2, 0, 0, 0], start, start + 151_199, 0, 0, 0),
-        special_case([2, 0, 0, 0], start, start + 151_200, 0, 0, 0),
-        special_case([0; 4], start, start + 200_000, 0, 0, 0),
+        special_case([2, 0, 0, 0], start, start + offsets[1] - 1, 0, 0, 0),
+        special_case([2, 0, 0, 0], start, start + offsets[1], 0, 0, 0),
+        special_case([2, 2, 0, 0], start, start + offsets[2] - 1, 0, 0, 0),
+        special_case([2, 2, 0, 0], start, start + offsets[2], 0, 0, 0),
+        special_case([2, 2, 2, 0], start, start + offsets[3] - 1, 0, 0, 0),
+        special_case([2, 2, 2, 0], start, start + offsets[3], 0, 0, 0),
+        special_case([0; 4], start, start + offsets[1] + 1, 0, 0, 0),
         special_case([2; 4], start, start, 0, 0, 0),
         special_case([7, 0, 0, 0], start, start, 0, 0, 0),
-        special_case([0; 4], start, start + 604_805, 0, 0, 0),
-        special_case([3; 4], start, start + 604_805, 0, 0, 0),
+        special_case(
+            [0; 4],
+            start,
+            start + params::SEASON_DURATION_SECONDS + 5,
+            0,
+            0,
+            0,
+        ),
+        special_case(
+            [3; 4],
+            start,
+            start + params::SEASON_DURATION_SECONDS + 5,
+            0,
+            0,
+            0,
+        ),
         special_case([2; 4], start, start, 0, 1, 1_499_999_999),
         special_case([2; 4], start, start, 0, 1, 1_500_000_000),
         special_case([0; 4], 0, i64::MAX, 0, u64::MAX, u64::MAX),
@@ -64,7 +83,8 @@ fn specials_vectors() {
         if leading < 4 {
             states[leading] = (random(&mut seed) % 5) as u8;
         }
-        let now = start + (random(&mut seed) % 800_000) as i64 - 100;
+        let horizon = (params::SEASON_DURATION_SECONDS * 4 / 3) as u64;
+        let now = start + (random(&mut seed) % horizon) as i64 - 100;
         let tokens = random(&mut seed);
         let price = params::PACK_EDITIONS_PRICE_LAMPORTS[index % 4];
         let threshold = u64::from(params::JACKPOT_MIN_POT_PRICE_MULTIPLE) * price;
@@ -232,4 +252,36 @@ fn launch_pool_vectors() {
         record(name, pool_template.clone(), data, false);
     }
     fixture("launch_pool", json!(rows));
+}
+
+#[test]
+fn final_pull_vectors() {
+    let mut inputs = vec![
+        (1_000_000_000_000, 4_200_000_000, 4_980_000_000_000),
+        (43_000_000_000_000, 4_200_000_000, 4_980_000_000_000),
+        (0, 1, 1),
+        (1, 0, 1),
+        (1, 1, 0),
+        (1, 1, 1),
+        (1, 1, 2),
+        (2, 1, 2),
+        (u64::MAX, u64::MAX, u64::MAX),
+        (u64::MAX, u64::MAX, 1),
+        (1_000, 3, 7),
+        (1_000, 7, 7),
+    ];
+    let mut seed = 7189;
+    for _ in 0..128 {
+        let pool = random(&mut seed);
+        let total = random(&mut seed).max(1);
+        let spend = random(&mut seed) % total;
+        inputs.push((pool, spend, total));
+    }
+    let rows:Vec<_>=inputs.into_iter().map(|(pool,spend,total)|{
+        let result=onepercent::math::final_pull::final_share(pool,spend,total);
+        let reference=if total==0 {0} else {(u128::from(pool)*u128::from(spend)/u128::from(total)).min(u128::from(u64::MAX)) as u64};
+        assert_eq!(result,reference);
+        json!({"input":{"pool":pool.to_string(),"spend":spend.to_string(),"total":total.to_string()},"output":result.to_string()})
+    }).collect();
+    fixture("final_pull", json!(rows));
 }

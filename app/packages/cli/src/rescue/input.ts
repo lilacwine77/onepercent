@@ -33,6 +33,8 @@ const commands = [
   "take-back",
   "redeem",
   "withdraw-owed",
+  "claim-final-sol",
+  "claim-final-tokens",
   "close-my-cards",
   "settle",
   "refund",
@@ -44,6 +46,7 @@ const ownerSigned: readonly string[] = [
   "take-back",
   "redeem",
   "withdraw-owed",
+  "claim-final-tokens",
   "close-my-cards",
   "all",
 ];
@@ -52,7 +55,7 @@ export interface RescueInput {
   rpc: string;
   cluster: ProgramCluster;
   program?: string;
-  crank?: "advance-phase";
+  crank?: "advance-phase" | "start-final-pull";
   wallet?: string;
   signerFile?: string;
   indices?: number[];
@@ -102,14 +105,9 @@ export function parseRescueArgs(args: readonly string[]): RescueInput {
       positionals.length !== (command === "find" || command === "crank" ? 2 : 1)
     )
       throw new Error();
-    if (command === "crank" && positionals[1] === "start-final-pull")
-      throw new RescueCliError(
-        "start_final_pull_ships_with_final_pull_upgrade",
-        4,
-      );
     const crank =
       command === "crank"
-        ? z.literal("advance-phase").parse(positionals[1])
+        ? z.enum(["advance-phase", "start-final-pull"]).parse(positionals[1])
         : undefined;
     const rpc = z.url().parse(v.rpc);
     const url = new URL(rpc);
@@ -218,19 +216,22 @@ Owner-signed, --keypair <FILE>
   take-back (--entry <INDEX>... | --all)
   redeem (--card <INDEX>... | --all)
   withdraw-owed
+  claim-final-tokens              receive Final cards, then use redeem
   close-my-cards                 close_binder: returns the My cards account rent
   all                            Get everything back, in the safe order
 Permissionless, --fee-payer <FILE>
   settle (--pull <SEQ|ADDRESS>... | --paying <WALLET> | --all-open)
   refund (--pull <SEQ|ADDRESS>... | --all-due)
   close-vaults (--mint <MINT>... | --all)
+  claim-final-sol [--wallet <OWNER>]
   crank advance-phase
+  crank start-final-pull
 Common: --dry-run, --unsigned, --yes, --max <N>.
 For --unsigned or --dry-run, --wallet <PUBLIC_KEY> can replace the signer file.
 --cluster defaults to mainnet. Mainnet program id: ${mainnetId ?? "not published yet, pass --program <ID>"}.
 Devnet program id: ${ONEPERCENT_PROGRAM_IDS.devnet ?? "not published"}. Localnet always needs --program.
 A --program that differs from the published id is custom: check its upgrade authority first.
-Final Pull claims and crank start-final-pull ship with the Final Pull upgrade (D18).
+Final Pull claims remain available after Done, including zero shares.
 RPC is mandatory. Nothing else is contacted. Key files are read only from the path given.
 Exit codes: 0 done, 1 error, 2 partial, 3 RPC scan refused, 4 preconditions not met.
 `;

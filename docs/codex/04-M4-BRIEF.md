@@ -32,7 +32,7 @@ This brief is self-contained for M4. Everything M4 needs from SPEC, `PARAMS.md`,
 | `onepct-ops launch` | §12 | |
 | The Final Pull keeper | §11.3 | |
 | Block-0 board data | §11.5 | |
-| **Not M4** | — | Spotlight (D1: nothing at all). The Final Pull screen and its claim buttons (web lane, due D+5 per master §11.1; M4 ships the SDK builders, §10). The monitor's I14 check and the status matrix (M6.1). Rescue (M6.2). Copy (`COPY.md` issue 2) |
+| **Not M4** | - | Spotlight (D1: nothing at all). The Final Pull screen and its claim buttons (web lane, due before `end_ts` per master §11.1, D37; M4 ships the SDK builders, §10). The monitor's I14 check and the status matrix (M6.1). Rescue (M6.2). Copy (`COPY.md` issue 2) |
 
 ### 0.3 Amendments this brief makes (binding for M4)
 
@@ -55,7 +55,7 @@ None of these adds or removes a mechanic or changes a validated number.
 ### 0.4 Founder decisions M4 relies on
 
 - **J-B** (master §0.2, PARAMS §10): the pot is pre-bought in $1PCT; a win delivers the whole of `jackpot_tokens` at once; no order queue, no SOL fallback. Unconverted `jackpot_sol` stays for the next pot.
-- **C14** release at 0 / 42 / 84 / 126 h, one card live at a time, delivered at once; unpulled cards go to the Final Pull. **C15** holder ×1.5 for ≥ 1M $1PCT held continuously for 24 h, signed attestation. **C17** Final Pull pro rata to season spend; claims never expire. **C18** On Air 15 min after Power-On. **C21** FeeIn PDA is the creator, no fee sharing; D27 makes collections 100% team from BuysClosed while someone runs the chain. **C23** exits never pausable; upgrade key removed at Final Pull + 72 h.
+- **C14** release at 0 / 12 / 24 / 36 h (D37), one card live at a time, delivered at once; unpulled cards go to the Final Pull. **C15** holder ×1.5 for ≥ 1M $1PCT held continuously for 24 h, signed attestation. **C17** Final Pull pro rata to season spend; claims never expire. **C18** On Air 15 min after Power-On. **C21** FeeIn PDA is the creator, no fee sharing; D27 makes collections 100% team from BuysClosed while someone runs the chain. **C23** exits never pausable; upgrade key removed at Final Pull + 72 h.
 - **D1** no Spotlight: no instruction, no service code, no API field. **D3** no RC-slip fallback: M4.1 must pass G4.1 by D12 to be in `rc-1`. **D4** the RC is the first mainnet deploy. **D5** C25–C28 at their defaults. **D6** shared VRF queue.
 - **M2 B8**: both Final Pull claims are callable with a zero share and set their bit.
 
@@ -149,14 +149,14 @@ No new crate and no new npm package. Everything below is already pinned on `main
 |---|---|---|
 | `DEV_BUY` | `TOKEN_1PCT.devBuyAmount` | 40,000,000,000,000 base units (40M × 10⁶) |
 | `CARD_AMOUNT`, `CARD_COUNT` | `TOKEN_1PCT.onePctCardAmount`, `.onePctCardCount` | 10,000,000,000,000; 4 |
-| `REL[k]` | `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | 0 / 151,200 / 302,400 / 453,600 s after `on_air_ts` |
+| `REL[k]` | `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | 0 / 43,200 / 86,400 / 129,600 s after `on_air_ts` (D37) |
 | `DECIMALS_1PCT` | `TOKEN_1PCT.decimals` | 6 |
 | `HOLDER_BPS` | `TOKEN_1PCT.holderTier.onePctOddsMultiplierBps` | 15,000 (×1.5 on The 1% segment only) |
 | `HOLD_MIN`, `HOLD_SECONDS` | `TOKEN_1PCT.holderTier.minBalance`, `.continuousHoldSeconds` | 1,000,000,000,000 base units; 86,400 s (OFF, attester) |
 | `HOLD_TTL` | `ATTESTATIONS.holdTtlSeconds` | 600 s |
 | `C_DIV`, `JP_DIV` | `HIT_ODDS.onePctPriceDivisor`, `.jackpotPriceDivisor` | 1,000; 400 |
 | `JP_MIN_MULT` | `JACKPOT.minPotPriceMultiple` | 15 |
-| `ON_AIR_DELAY`, `DURATION`, `FINAL_DELAY`, `SEAL_DELAY` | `SEASON.onAirDelaySeconds`, `.durationSeconds`, `.finalPullDelaySeconds`, `.sealDelaySeconds` | 900; 604,800; 600; 259,200 s |
+| `ON_AIR_DELAY`, `DURATION`, `FINAL_DELAY`, `SEAL_DELAY` | `SEASON.onAirDelaySeconds`, `.durationSeconds`, `.finalPullDelaySeconds`, `.sealDelaySeconds` | 900; 172,800; 600; 259,200 s |
 | `CF[r].{stock, burn, team}` | `CREATOR_FEE_SPLIT_BPS.{belowFloor, season, afterEnd}` | 10,000/0/0; 5,000/0/5,000; 0/0/10,000 (D27) |
 | `CREATOR_FEE_FLOOR` | `STOCK.creatorFeeFloorLamports` | 2,000,000,000 (D27) |
 | `TARGET_BASE` | `STOCK.targetBaseLamports` | 30,000,000,000 |
@@ -170,7 +170,7 @@ No new crate and no new npm package. Everything below is already pinned on `main
 
 Every on-chain key above is already in M1's `ONCHAIN_KEYS` (M1 §4.3). M4 appends none.
 
-Examples in this brief use the PARAMS §14 calendar: Power-On at 1,793,289,600 (Thu 2026-10-29 16:00 UTC), so `on_air_ts` = 1,793,290,500, `end_ts` = 1,793,895,300, The 1% releases at 1,793,290,500 / 1,793,441,700 / 1,793,592,900 / 1,793,744,100, the Final Pull opens at 1,793,895,900 (11-05 16:25) and Done is due 259,200 s after `final_ts` (11-08 16:25 at the earliest).
+Examples in this brief use the PARAMS §14 calendar: Power-On at 1,793,289,600 (Thu 2026-10-29 16:00 UTC), so `on_air_ts` = 1,793,290,500, `end_ts` = 1,793,463,300, The 1% releases at 1,793,290,500 / 1,793,333,700 / 1,793,376,900 / 1,793,420,100, the Final Pull opens at 1,793,463,900 (10-31 16:25) and Done is due 259,200 s after `final_ts` (11-03 16:25 at the earliest, D37).
 
 ### 4.2 External facts pinned for M4 (EXT; re-check at M4 start, Appendix A)
 
@@ -429,18 +429,18 @@ live_flags(m, P, now) → (flags, onepct_index):
 
 No `end_ts` term (Q1, decided D16): `buy_packs` already closes at `end_ts`, every pending Pull resolves within 300 s, and the snapshot then turns the unpulled slots Final and empties the pot, which ends both segments. On every reachable state `jackpot_cost > 0` implies `jackpot_tokens > 0` (JackpotBuy credits both; a win and the snapshot clear both), so the `jackpot_tokens > 0` guard equals PARAMS' rule; it only stops a zero-amount card on a corrupt state. Widths stay M1's: The 1% `P / C_DIV` (×`HOLDER_BPS` / 10,000 for a holder), Jackpot `P / JP_DIV`. Card k is live iff cards 0..k−1 are Pulled and `now ≥ on_air_ts + REL[k]`, so at most one card is live at a time (acceptance 3).
 
-**Check values** (`on_air_ts` = 1,793,290,500, `end_ts` = 1,793,895,300, OG `P` = 100,000,000):
+**Check values** (`on_air_ts` = 1,793,290,500, `end_ts` = 1,793,463,300, OG `P` = 100,000,000):
 
 | State | `now` | Result |
 |---|---|---|
 | all Locked | 1,793,290,499 | none |
 | all Locked | 1,793,290,500 | card 0; widths C = 100,000 (holder 150,000) |
-| card 0 Pulled | 1,793,441,699 | none |
-| card 0 Pulled | 1,793,441,700 | card 1 |
-| card 0 Locked | 1,793,490,500 | card 0 only (card 1 waits for card 0) |
+| card 0 Pulled | 1,793,333,699 | none |
+| card 0 Pulled | 1,793,333,700 | card 1 |
+| card 0 Locked | 1,793,333,701 | card 0 only (card 1 waits for card 0) |
 | all Pulled | any | none |
 | slot 0 state byte 7 | any | none |
-| card 0 Locked | 1,793,895,305 (`end_ts` + 5, a Pull bought before `end_ts`) | card 0 (decided D16, Q1) |
+| card 0 Locked | 1,793,463,305 (`end_ts` + 5, a Pull bought before `end_ts`) | card 0 (decided D16, Q1) |
 | after `start_final_pull` (unpulled slots Final) | any | none |
 | `jackpot_cost` 1,499,999,999, tokens > 0 | any | Jackpot not live |
 | `jackpot_cost` 1,500,000,000, tokens > 0 | any | Jackpot live; width 250,000 |
@@ -773,7 +773,7 @@ Fixtures: `inject.rs` gains `inject_power_on(token_mint, on_air_ts, end_ts)`, `i
 | T17.06 | `slack_rule` [DG-2] | vault pre-funded by 1 unit → ok, `accounted` grows by exactly 40M; vault 40M − 1 → `SlackShort`; ledger injected with `accounted` 5 and vault 40M + 4 → `SlackShort` |
 | T17.07 | `fee_in_topup` | rent switched to 6,960 → FeeIn topped up to `rent_min(0)` by the launch wallet; at 5,080 → no transfer |
 | T17.08 | `prefunded_ledger_precreated_vault` [DG-7] | lamports donated to the ledger PDA; vault ATA created by a third party → ok |
-| T17.09 | `season_timeline` | `on_air_ts` = `power_on_ts` + 900, `end_ts` = `on_air_ts` + 604,800; `advance_phase` at `on_air_ts` − 1 no-op, at `on_air_ts` → OnAir |
+| T17.09 | `season_timeline` | `on_air_ts` = `power_on_ts` + 900, `end_ts` = `on_air_ts` + 172,800; `advance_phase` at `on_air_ts` − 1 no-op, at `on_air_ts` → OnAir |
 
 **t18_one_pct.rs** (acceptance 3)
 
@@ -1034,7 +1034,7 @@ pnpm program:report && git diff --exit-code packages/sdk/src/idl fixtures/vector
 4. **Master §3.4:** "$1PCT transfers, for the holder attestation and the Block-0 board" → "HOLD evidence log and Block-0 rows" (M4-A8). **Master §6:** the executor holds its own Jupiter key from the keeper's organisation (M4-A10); its wallet holds fee money only.
 5. **`01-M1-BRIEF.md` §7.5, §9.9:** `Pull.live_flags` is the OR of per-pack flags (M4-A2). **`02-M2-BRIEF.md` §11.9** and **`03-M3-BRIEF.md` §14.1:** Verify recomputes each pack's widths from that pack's `PackRevealed.live_flags`; `/api/verify` and the `packs` table carry it (§11.6–§11.7).
 6. **`02-M2-BRIEF.md` §12.3:** the landing helper is `packages/service-kit/src/landing.ts`, shared by K1, the executor and the launch tool (M4-A9). **§11.8:** `/api/hold/attest` is live from M4.2; the appended `MachineResponse` fields and SSE names of §11.6.
-7. **`03-M3-BRIEF.md` §6.2 (`experience/contracts.ts`, the architect's):** `CardRow.edition` becomes `EditionId | null`, null for kind `final` (M4-A7). **§13.1:** Final cards carry no edition and value 0. **Web lane, due D+5:** the Final Pull screen's claim buttons use `buildFinalClaimsTransaction` (§10.1).
+7. **`03-M3-BRIEF.md` §6.2 (`experience/contracts.ts`, the architect's):** `CardRow.edition` becomes `EditionId | null`, null for kind `final` (M4-A7). **§13.1:** Final cards carry no edition and value 0. **Web lane, due before `end_ts` (D37):** the Final Pull screen's claim buttons use `buildFinalClaimsTransaction` (§10.1).
 8. **`PARAMS.md` issue 4:** the keys of §4.3 (with Q2's value once decided), the M4 `CU_LIMITS` keys; §13.4's chain row gets the exact sequence of §11.2 and `transfer_creator_fees_to_pump`, and its `afterEnd` row reads "from BuysClosed (set at `end_ts`)" (M4-A11); §11.2's "Unpulled at `end_ts`" reads "Unpulled when the Final Pull starts" (Q1's recommendation); §21 gains the pump layout facts of §4.2 (curve 166 B, offsets) and the Mayhem program id.
 9. **`COPY.md` issue 2:** the holder line, if Q3's recommendation stands: "Held 1M+ $1PCT in your wallet's main $1PCT account for 24 h"; the creator-fee disclosure already covers the regime rule.
 10. **`RUNBOOK.md` (M6.6):** T−1 `launch lut` (frozen) and `launch check`; T−10 min `launch check`; T0 `launch send --at`; `launch report` → publish every address; disclose the 2-transaction form if it was used; a `fee_in_creator_changed` page is a P0 incident.

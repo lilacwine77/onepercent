@@ -14,6 +14,7 @@ export const launchOptionsSchema = z.strictObject({
     "lut",
     "plan",
     "check",
+    "verify",
     "send",
     "report",
     "set-mint",
@@ -28,6 +29,7 @@ export const launchOptionsSchema = z.strictObject({
   mainnetProgram: publicKeySchema.optional(),
   wallet: z.string().optional(),
   walletAddress: publicKeySchema.optional(),
+  poolCreator: publicKeySchema.optional(),
   mintKeypair: z.string().optional(),
   mint: publicKeySchema.optional(),
   lut: publicKeySchema.optional(),
@@ -63,6 +65,18 @@ export const launchOptionsSchema = z.strictObject({
 });
 export type LaunchInput = z.infer<typeof launchOptionsSchema>;
 
+export function isProximaLaunch(
+  input: Pick<LaunchInput, "command" | "flow" | "cluster">,
+) {
+  return (
+    ["verify", "set-mint", "stock-up", "deposit", "power-on"].includes(
+      input.command,
+    ) ||
+    (["check", "plan", "report"].includes(input.command) &&
+      (input.flow === "proxima" || input.cluster === "mainnet"))
+  );
+}
+
 export function parseLaunchInput(argv: string[]): LaunchInput {
   const names = [
     "cluster",
@@ -72,6 +86,7 @@ export function parseLaunchInput(argv: string[]): LaunchInput {
     "mainnet-program",
     "wallet",
     "wallet-address",
+    "pool-creator",
     "mint-keypair",
     "mint",
     "lut",
@@ -121,6 +136,21 @@ export function parseLaunchInput(argv: string[]): LaunchInput {
     (input.command === "send" || input.flow === "atomic")
   )
     throw new OpsError("mainnet_requires_proxima_launch");
+  if (input.poolCreator && !isProximaLaunch(input))
+    throw new OpsError("pool_creator_requires_proxima_launch");
+  if (input.command === "verify") {
+    if (input.flow === "atomic")
+      throw new OpsError("proxima_verify_requires_proxima_flow");
+    if (
+      input.wallet !== undefined ||
+      input.mintKeypair !== undefined ||
+      input.dbcConfigKeypair !== undefined ||
+      input.confirm !== undefined
+    )
+      throw new OpsError("proxima_verify_is_read_only");
+    if (!input.mint) throw new OpsError("proxima_mint_required");
+    if (!input.poolCreator) throw new OpsError("proxima_pool_creator_required");
+  }
   if (
     ["set-mint", "stock-up", "deposit", "power-on"].includes(input.command) &&
     (!input.wallet || !input.mint || !input.confirm)
@@ -133,7 +163,10 @@ export function parseLaunchInput(argv: string[]): LaunchInput {
     input.mintKeypair
   )
     throw new OpsError("proxima_requires_public_mint_only");
-  if (parsed.values.simulate && !["plan", "check"].includes(input.command))
+  if (
+    parsed.values.simulate &&
+    !["plan", "check", "verify"].includes(input.command)
+  )
     throw new OpsError("simulate_flag_requires_read_only_launch_command");
   for (const endpoint of [input.rpc, input.rehearsalRpc]) {
     if (!endpoint) continue;

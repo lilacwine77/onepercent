@@ -449,9 +449,6 @@ export function pingInstruction(
 export const STUB_INSTRUCTIONS = [
   "spotlight_deposit",
   "spotlight_take_back",
-  "start_final_pull",
-  "claim_final_sol",
-  "claim_final_tokens",
 ] as const;
 export type StubInstruction = (typeof STUB_INSTRUCTIONS)[number];
 export function stubInstruction(
@@ -477,3 +474,10 @@ export type { PowerOnInput } from "./powerOn.js";
 export { collectCreatorFeesIx } from "./collectCreatorFees.js";
 export { claimLaunchFeesIx } from "./claimLaunchFees.js";
 export type { ClaimLaunchFeesInput, LaunchFeeKind } from "./claimLaunchFees.js";
+
+export {
+  startFinalPullIx,
+  claimFinalSolIx,
+  claimFinalTokensIx,
+} from "./finalPull.js";
+export type { ClaimFinalSolInput } from "./finalPull.js";

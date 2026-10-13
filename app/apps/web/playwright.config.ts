@@ -13,9 +13,16 @@ if (requested.length > 1)
 // Workers reload this config without the runner's CLI arguments. Pin the
 // selection in their inherited environment, including backend and WebGL mode.
 const project = requested[0] ?? process.env.WEB_E2E_PROJECT ?? "fixtures";
-if (!["fixtures", "webgl-smoke", "validator", "devnet"].includes(project))
+if (
+  !["fixtures", "launch-gate", "webgl-smoke", "validator", "devnet"].includes(
+    project,
+  )
+)
   throw new Error("Unknown web e2e project.");
 process.env.WEB_E2E_PROJECT = project;
+// The gate gets its own future-dated build; existing flow fixtures stay open.
+process.env.VITE_LAUNCH_AT =
+  project === "launch-gate" ? "2099-10-13T17:45:00Z" : "";
 function externalOrigin(
   variable: "WEB_VALIDATOR_URL" | "WEB_DEVNET_URL",
 ): string {
@@ -38,7 +45,9 @@ function externalOrigin(
     );
   return url.origin;
 }
-const fixtureBackend = project === "fixtures" || project === "webgl-smoke";
+const fixtureBackend = ["fixtures", "launch-gate", "webgl-smoke"].includes(
+  project,
+);
 const localFeedValidator =
   project === "validator" && !process.env.WEB_VALIDATOR_URL;
 const baseURL =
@@ -48,6 +57,7 @@ const baseURL =
         project === "validator" ? "WEB_VALIDATOR_URL" : "WEB_DEVNET_URL",
       );
 const patterns = {
+  "launch-gate": /launch-gate\.spec\.ts/,
   "webgl-smoke": /webgl-smoke\.spec\.ts/,
   fixtures: /(?:w1-.*|w[23]-.*\.fixtures)\.spec\.ts/,
   // The existing external runner owns W3; W2 starts its own disposable bank.
@@ -67,7 +77,10 @@ export default defineConfig({
     ...devices["Desktop Chrome"],
     // Exercise the real no-WebGL path; software rendering must not compete
     // with RPC, signature and accessibility assertions. The smoke keeps WebGL.
-    launchOptions: project === "fixtures" ? { args: ["--disable-webgl"] } : {},
+    launchOptions:
+      project === "fixtures" || project === "launch-gate"
+        ? { args: ["--disable-webgl"] }
+        : {},
   },
   projects: [
     {

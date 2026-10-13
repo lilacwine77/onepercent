@@ -31,6 +31,9 @@ import {
   planSettle,
   planTakeBack,
   planWithdrawOwed,
+  planClaimFinalSol,
+  planClaimFinalTokens,
+  planFinalClaims,
   phaseCrankState,
   rescuePda,
   type RescueRpc,
@@ -163,6 +166,125 @@ function fixtures(programId = PROGRAM_ID) {
 }
 
 describe("M1 rescue planning from RPC accounts", () => {
+  it("claims SOL first, releases card rent if needed, then claims and Redeems Final cards before closing", async () => {
+    const f = fixtures();
+    const [machine, bump] = rescuePda(f.options.programId, "machine");
+    f.put(
+      machine,
+      machineLayout.encode({
+        version: 1,
+        bump,
+        phase: 5,
+        token_mint: mint,
+        total_spend: 10n,
+        final_sol_total: 1n,
+        final_pool_sol: 1n,
+        final_1pct_total: 5n,
+        final_pool_1pct: 5n,
+      }),
+    );
+    const oldCards = [{ mint, amount: 3n, kind: 0 }];
+    f.binder(oldCards, { season_spend: 10n });
+    const initial = await planFinalClaims(f.options);
+    expect(initial.transactions).toHaveLength(1);
+    expect(initial.transactions[0]!.details).toEqual([
+      { amount: 1n, recipient: wallet },
+    ]);
+    expect(
+      (initial.transactions[0]!.transaction as Transaction).instructions.filter(
+        (ix) => ix.programId.equals(PROGRAM_ID),
+      ),
+    ).toHaveLength(1);
+
+    f.binder(oldCards, { season_spend: 10n, flags: 1 });
+    const rent = (size: number) => (size + 128) * 3480 * 2;
+    f.accounts.get(f.binderAddress.toBase58())!.lamports = rent(
+      ACCOUNT_SIZES.binderHeader + ACCOUNT_SIZES.cardSlot,
+    );
+    f.put(wallet, Buffer.alloc(0), SystemProgram.programId, 10_000);
+    const direct = await planClaimFinalTokens(f.options);
+    expect(direct.transactions).toHaveLength(0);
+    expect(direct.remaining[0]?.reason).toContain("rent");
+    const recoverRent = await planFinalClaims(f.options);
+    expect(recoverRent.transactions.map((row) => row.action)).toEqual([
+      "redeem",
+    ]);
+    expect(recoverRent.transactions[0]!.indices).toEqual([0]);
+
+    f.binder([], { season_spend: 10n, flags: 1 });
+    f.accounts.get(f.binderAddress.toBase58())!.lamports = rent(
+      ACCOUNT_SIZES.binderHeader,
+    );
+    f.put(
+      wallet,
+      Buffer.alloc(0),
+      SystemProgram.programId,
+      rent(ACCOUNT_SIZES.cardSlot) - rent(0) + 10_000,
+    );
+    const tokens = await planFinalClaims(f.options);
+    expect(tokens.transactions.map((row) => row.action)).toEqual([
+      "final-claims",
+    ]);
+    expect(tokens.transactions[0]!.details).toEqual([
+      { mint, amount: 5n, kind: 8, recipient: wallet },
+    ]);
+    expect((await planCloseBinder(f.options)).remaining[0]?.reason).toContain(
+      "FinalNotClaimed",
+    );
+
+    f.binder([{ mint, amount: 5n, kind: 8 }], { season_spend: 10n, flags: 3 });
+    expect(await planFinalClaims(f.options)).toEqual({
+      transactions: [],
+      remaining: [],
+    });
+    expect(
+      (await planRedeem(f.options)).transactions[0]!.details?.[0]?.amount,
+    ).toBe(5n);
+    expect((await planCloseBinder(f.options)).remaining[0]?.reason).toContain(
+      "BinderNotEmpty",
+    );
+    f.binder([], { season_spend: 10n, flags: 3 });
+    expect((await planCloseBinder(f.options)).transactions[0]?.action).toBe(
+      "close-binder",
+    );
+  });
+  it("permits zero-share token claims in a full Binder without a rent or owner lookup", async () => {
+    const f = fixtures();
+    const [machine, bump] = rescuePda(f.options.programId, "machine");
+    f.put(
+      machine,
+      machineLayout.encode({
+        version: 1,
+        bump,
+        phase: 6,
+        token_mint: mint,
+        total_spend: 100n,
+        final_1pct_total: 1n,
+        final_pool_1pct: 1n,
+      }),
+    );
+    f.binder([], { season_spend: 1n, cap: 65_535, reserved: 65_535 });
+    f.accounts.delete(SYSVAR_RENT_PUBKEY.toBase58());
+    expect((await planClaimFinalTokens(f.options)).transactions).toHaveLength(
+      1,
+    );
+    expect((await planClaimFinalSol(f.options)).transactions).toHaveLength(1);
+    f.put(
+      machine,
+      machineLayout.encode({
+        version: 1,
+        bump,
+        phase: 6,
+        token_mint: mint,
+        total_spend: 1n,
+        final_1pct_total: 1n,
+        final_pool_1pct: 1n,
+      }),
+    );
+    const full = await planClaimFinalTokens(f.options);
+    expect(full.transactions).toHaveLength(0);
+    expect(full.remaining[0]?.reason).toContain("BinderFull");
+  });
   it("plans and previews take-back using only the supplied RPC while every API is unavailable", async () => {
     const f = fixtures();
     f.deck([
@@ -581,6 +703,8 @@ describe("Binder exits and the phase crank from RPC accounts", () => {
 
   it("closes My cards only when close_binder's checks pass, keeping the Final Pull precondition", async () => {
     const f = fixtures();
+    const [machine, bump] = rescuePda(f.options.programId, "machine");
+    f.put(machine, machineLayout.encode({ version: 1, bump, phase: 4 }));
     expect(await planCloseBinder(f.options)).toEqual({
       transactions: [],
       remaining: [],
@@ -607,7 +731,7 @@ describe("Binder exits and the phase crank from RPC accounts", () => {
       f.options,
       "final-claims",
     );
-    expect(finalClaims.remaining[0]!.reason).toContain("D18");
+    expect(finalClaims.remaining[0]!.reason).toContain("WrongPhase");
     for (const extra of [
       { season_spend: 5n, flags: 3 },
       { season_spend: 0n },
@@ -655,7 +779,7 @@ describe("Binder exits and the phase crank from RPC accounts", () => {
     expect(at(3, 69n, { end_ts: 70n })).toMatchObject({ due: false, at: 70n });
     const four = at(4, 10_000_000n, { end_ts: 1n });
     expect(four.due).toBe(false);
-    expect("reason" in four && four.reason).toContain("D18");
+    expect("reason" in four && four.reason).toContain("start_final_pull");
     const seal = 5n + BigInt(SEASON.sealDelaySeconds);
     expect(at(5, seal, { final_ts: 5n })).toEqual({
       due: true,

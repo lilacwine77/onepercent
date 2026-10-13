@@ -21,7 +21,10 @@ export default function Home(props: HomeProps) {
   return (
     <>
       <Hero props={props} />
-      <Sections reducedMotion={props.reducedMotion} />
+      <Sections
+        reducedMotion={props.reducedMotion}
+        flowsLocked={props.flowsLocked}
+      />
     </>
   );
 }

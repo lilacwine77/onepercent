@@ -130,7 +130,7 @@ Each item goes to the milestone master §0.4 assigns (§0.2).
    - The 1% slots;
    - `power_on_ts`, `on_air_ts` and `end_ts`.
 2. **M4.** The 1% segment:
-   - release at 0 / 42 / 84 / 126 h;
+   - release at 0 / 12 / 24 / 36 h (D37);
    - `one_pct` cards;
    - the holder ×1.5 effect (M1 already verifies and stores the holder flag).
 3. The Jackpot under J-B:
@@ -1930,7 +1930,7 @@ Nothing in M1 can reach `OnAir` on a real cluster: OnAir needs `power_on` (M4), 
 - `--account` fixtures that the Rust harness exports at run time (`export_fixtures(dir, now)`, §16.1).
 
 The flows:
-- **`rip`** (E2 shape). Config and Machine preloaded in OnAir (`on_air_ts = now − 60 s`, `end_ts = now + 7 d`), a Deck of 100 entries with their vaults and ledgers, one seeded Major bucket, and the mock queue. Then buy OG ×1 → mock fulfil → settle → redeem all 5 cards (descending batch).
+- **`rip`** (E2 shape). Config and Machine preloaded in OnAir (`on_air_ts = now − 60 s`, `end_ts = on_air_ts + 2 d`, D37), a Deck of 100 entries with their vaults and ledgers, one seeded Major bucket, and the mock queue. Then buy OG ×1 → mock fulfil → settle → redeem all 5 cards (descending batch).
 - **`feed`** (E1 shape). Preloaded in StockUp with a fake BondingCurve. Feed 1 bag, then take it back.
 - **`payees`**. Only if §16.1 requires it: T07.11 (a, b) and T08.06 from exported states.
 

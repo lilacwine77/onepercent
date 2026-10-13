@@ -61,7 +61,7 @@ Tokens vérifiés on-chain · rien ne peut rester bloqué (Redeem/reprise non bl
 
 ## 9. Décisions confirmées par le fondateur
 - Tokens équipe : **0** (tout le dev buy de 4 % va aux 4 cartes The 1%).
-- Durée de saison : **7 jours**.
+- Durée de saison : **2 jours** (D37).
 - ZK : Redeem en tokens ZK-compressés **plus tard, sauf si c'est simple** (à évaluer).
 - Hits : liste publique de memecoins Solana liquides (option 1A).
 - Partage : ~77 % ouvreur + loterie dust, 2 % par carte au déposant (option 2A).

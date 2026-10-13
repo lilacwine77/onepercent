@@ -3,6 +3,7 @@ pub mod bucket;
 pub mod coverage;
 pub mod creator_fee;
 pub mod draw;
+pub mod final_pull;
 pub mod hour;
 pub mod specials;
 pub mod split;

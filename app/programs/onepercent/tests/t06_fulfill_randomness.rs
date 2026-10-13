@@ -809,7 +809,9 @@ fn t06_16_m4_specials_cu_and_t06_17_log_matrix() {
                     let (mut env, user, dust, _) = setup(true, params::COVERAGE_DECK_MAX);
                     specials::inject(&mut env, [0; 4], 5_000_000_000, 15_000_000_000);
                     let now = env.now();
-                    specials::machine(&mut env, |m| m.on_air_ts = now - 453_600);
+                    specials::machine(&mut env, |m| {
+                        m.on_air_ts = now - params::TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS[3]
+                    });
                     for index in 1..16 {
                         let bag = env.new_pump_mint(false);
                         env.seed_bucket(index, &bag, 1, 1_000_000_000_000, 300_000_000_000);

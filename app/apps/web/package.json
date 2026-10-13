@@ -12,6 +12,7 @@
     "preview": "node --preserve-symlinks --preserve-symlinks-main ../../scripts/web.mjs preview",
     "test:e2e:webgl": "playwright test --project webgl-smoke",
     "test:e2e:fixtures": "playwright test --project fixtures",
+    "test:e2e:gate": "playwright test --project launch-gate",
     "test:e2e:captures": "playwright test --config e2e/visual/playwright.config.ts",
     "test:e2e:validator": "playwright test --project validator",
     "test:e2e:devnet": "playwright test --project devnet",

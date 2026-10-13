@@ -501,4 +501,84 @@ export const routes = {
   "errors.pullPending": "This Pull is still drawing.",
   "errors.myCardsNotEmpty":
     "My cards cannot close yet. Check its cards, deposits and pending Pulls.",
+  "docs.heading": "Docs",
+  "docs.intro": "Bags in. Packs out.",
+  "docs.introDetail":
+    "Feed your dust, or open packs with real Solana tokens inside.",
+  "docs.how.title": "How it works",
+  "docs.how.feed":
+    "Feed deposits an eligible pump.fun token bag as a Dust Card.",
+  "docs.how.rip": "Rip opens a pack: {d} Dust Cards + {n} hit.",
+  "docs.how.empty": "Empty Dust Card slots become House Cards.",
+  "docs.how.royalty":
+    "A pulled Dust Card pays you {pct} of its pack’s price in SOL. If your wallet cannot receive it, it goes to the Machine.",
+  "docs.how.takeBack":
+    "Take back returns your deposited tokens until someone pulls the card.",
+  "docs.packs.title": "Packs and odds",
+  "docs.packs.price": "{sol} SOL",
+  "docs.packs.odds": "Chance per pack",
+  "docs.packs.scroll": "Scroll to compare all packs.",
+  "docs.packs.probability": "{pct}%",
+  "docs.packs.oddsNote":
+    "These odds assume both specials are available. An unavailable special’s chance moves to Silver Foil.",
+  "docs.packs.fees":
+    "Each Rip also costs {sol} SOL for the draw, plus network fees and account deposits.",
+  "docs.packs.fairness":
+    "Draws use randomness checked on Solana. MagicBlock supplies it through one operator, who can delay results.",
+  "docs.packs.fairnessLink": "Draw details and verification",
+  "docs.cards.title": "Your cards",
+  "docs.cards.redeem":
+    "Redeem sends a card’s tokens to your wallet. You pay network fees and any account deposits.",
+  "docs.cards.sell":
+    "Sell pays SOL for Silver, Blue, Holo and Black Foil cards: {pct} of the lower of their recorded cost and current sale quote.",
+  "docs.cards.sellLimits":
+    "Sell depends on available funds and hourly limits. It can pause and ends when pack sales close.",
+  "docs.cards.specials": "Jackpot and The 1% cards have Redeem only.",
+  "docs.token.title": "$1PCT and fees",
+  "docs.token.specials":
+    "The Jackpot pays $1PCT. The 1% consists of {n} cards holding {amount} $1PCT each.",
+  "docs.token.curve":
+    "$1PCT starts on Meteora’s automated launch market (DBC).",
+  "docs.token.example":
+    "On 100 SOL traded, the launch fee is 2.5 SOL: 0.5 to Meteora and 2 to the Machine.",
+  "docs.token.split":
+    "During pack sales, that gives 1 SOL to stock and 1 to the team when stock is at least {sol} SOL.",
+  "docs.token.exceptions":
+    "Below that threshold, all of the Machine’s share goes to stock. After sales close, all goes to the team.",
+  "docs.token.book":
+    "The split uses stock’s SOL plus tokens at recorded cost, at collection time.",
+  "docs.token.feeControl":
+    "Only Meteora can change the market fee after migration.",
+  "docs.season.title": "The season",
+  "docs.season.duration": "Pack sales last {n} hours.",
+  "docs.season.final":
+    "Final Pull is planned to share remaining stock, SOL and unpulled $1PCT in proportion to your pack spending.",
+  "docs.season.pending":
+    "Final Pull is not active yet and requires a program upgrade.",
+  "docs.team.title": "Safety",
+  "docs.team.sign":
+    "You sign transactions yourself; services never request your private keys or seed phrase.",
+  "docs.team.guardian":
+    "The team can pause Feed, Rip, Sell and automated trades.",
+  "docs.team.exits":
+    "The current program prevents the team from taking your cards or blocking exits, including Redeem and Take back after the season.",
+  "docs.team.upgrade":
+    "One founder wallet can replace the program and its protections through upgrade authority, without multiple signers or a waiting period.",
+  "docs.addresses.title": "All mainnet addresses",
+  "docs.addresses.program": "Program",
+  "docs.addresses.dbc": "DBC launch settings",
+  "docs.addresses.feeIn": "FeeIn fee receiver",
+  "docs.addresses.lut": "Transaction address list (LUT)",
+  "docs.addresses.copy": "Copy",
+  "docs.addresses.copyLabel": "Copy {name} address",
+  "docs.addresses.copied": "Copied",
+  "docs.addresses.copyFailed": "Copy failed. Use the full address below.",
+  "docs.addresses.solscan": "Solscan",
+  "docs.addresses.solscanLabel": "View {name} on Solscan",
+  "docs.images.ripAlt":
+    "Opened preview pack with Dust Cards and a Silver Foil hit.",
+  "docs.images.ripCaption": "An opened pack. Preview with demo data.",
+  "docs.images.cardsAlt":
+    "My cards in the preview app, with collected cards and their actions.",
+  "docs.images.cardsCaption": "My cards. Preview with demo data.",
 } as const;

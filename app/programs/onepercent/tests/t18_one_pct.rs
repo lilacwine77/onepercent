@@ -13,21 +13,26 @@ use solana_signer::Signer;
 #[test]
 fn t18_01_release_schedule_and_t18_08_min_live_flags() {
     let start = 1_793_290_500;
+    let offsets = params::TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS;
     for (states, now, expected) in [
         ([0; 4], start - 1, None),
         ([0; 4], start, Some(0)),
-        ([2, 0, 0, 0], start + 151_199, None),
-        ([2, 0, 0, 0], start + 151_200, Some(1)),
-        ([0; 4], start + 200_000, Some(0)),
-        ([2; 4], start + 200_000, None),
-        ([7, 0, 0, 0], start + 200_000, None),
-        ([3; 4], start + 200_000, None),
+        ([2, 0, 0, 0], start + offsets[1] - 1, None),
+        ([2, 0, 0, 0], start + offsets[1], Some(1)),
+        ([2, 2, 0, 0], start + offsets[2] - 1, None),
+        ([2, 2, 0, 0], start + offsets[2], Some(2)),
+        ([2, 2, 2, 0], start + offsets[3] - 1, None),
+        ([2, 2, 2, 0], start + offsets[3], Some(3)),
+        ([0; 4], start + offsets[1] + 1, Some(0)),
+        ([2; 4], start + offsets[1] + 1, None),
+        ([7, 0, 0, 0], start + offsets[1] + 1, None),
+        ([3; 4], start + offsets[1] + 1, None),
     ] {
         let (mut env, user, _, _) = setup(false, 100);
         specials::inject(&mut env, states, 0, 0);
         specials::machine(&mut env, |m| {
             m.on_air_ts = start;
-            m.end_ts = start + 604_800;
+            m.end_ts = start + params::SEASON_DURATION_SECONDS;
         });
         specials::set_time(&mut env, now);
         assert_eq!(
@@ -139,7 +144,9 @@ fn t18_04_two_cards_one_rip_and_per_pack_flags() {
     let (mut env, user, _, _) = setup(false, 100);
     specials::inject(&mut env, [0; 4], 0, 0);
     let now = env.now();
-    specials::machine(&mut env, |m| m.on_air_ts = now - 151_200);
+    specials::machine(&mut env, |m| {
+        m.on_air_ts = now - params::TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS[1]
+    });
     let (pull, _) = env.buy(&user, 0, 10).unwrap();
     // Exhaustive tier-hash search found this seed; the independent model
     // rechecks both forced pack positions before the transaction is sent.

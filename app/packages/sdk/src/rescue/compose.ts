@@ -28,6 +28,7 @@ import { readClock } from "./clock.js";
 import { planTakeBack, readRentMinimum } from "./plan-deck.js";
 import { planRedeem } from "./plan-cards.js";
 import { planCloseBinder, planWithdrawOwed } from "./plan-binder.js";
+import { planFinalClaims } from "./plan-final.js";
 
 export * from "./discover.js";
 export * from "./clock.js";
@@ -35,6 +36,7 @@ export * from "./plan-deck.js";
 export * from "./plan-cards.js";
 export * from "./plan-binder.js";
 export * from "./plan-crank.js";
+export * from "./plan-final.js";
 
 export type RescueAction =
   | "take-back"
@@ -45,7 +47,10 @@ export type RescueAction =
   | "final-claims"
   | "withdraw-owed"
   | "close-binder"
-  | "advance-phase";
+  | "advance-phase"
+  | "start-final-pull"
+  | "claim-final-sol"
+  | "claim-final-tokens";
 export interface RescuePlanOptions {
   rpc: RescueRpc;
   programId: PublicKey;
@@ -350,7 +355,7 @@ export const GET_EVERYTHING_BACK_ORDER = [
   "close-vault",
 ] as const;
 export type RescueStage = (typeof GET_EVERYTHING_BACK_ORDER)[number];
-/** M4.1b supplies the Final Pull claims planner here when it ships (D18). */
+/** Callers may customize a stage while preserving confirmed stage ordering. */
 export type RescueExtensions = Partial<
   Record<
     "final-claims" | "withdraw-owed" | "close-binder",
@@ -365,6 +370,7 @@ export async function planEverythingBackStage(
 ): Promise<RescuePlan> {
   const extension = extensions[stage as keyof RescueExtensions];
   if (extension) return extension(options);
+  if (stage === "final-claims") return planFinalClaims(options);
   if (stage === "redeem") return planRedeem(options);
   if (stage === "take-back") return planTakeBack(options);
   if (stage === "withdraw-owed") return planWithdrawOwed(options);
@@ -435,20 +441,7 @@ export async function planEverythingBackStage(
       remaining: [...remaining, ...plan.remaining],
     };
   }
-  // final-claims: the program's claim_final_* are stubs until the Final Pull upgrade.
-  if (!binder || binder.season_spend === 0n || (binder.flags & 3) === 3)
-    return { transactions: [], remaining: [] };
-  return {
-    transactions: [],
-    remaining: [
-      {
-        action: stage,
-        address: binder.address.toBase58(),
-        reason:
-          "Final Pull claims ship with the Final Pull upgrade before the season ends (D18); Close My cards waits for them",
-      },
-    ],
-  };
+  return { transactions: [], remaining: [] };
 }
 
 function isScanRefused(error: unknown): boolean {

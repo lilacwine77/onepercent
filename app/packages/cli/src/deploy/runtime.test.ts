@@ -220,6 +220,22 @@ describe("D31 deployment input and authority", () => {
       String(SystemProgram.programId),
     );
   });
+  it("requires a nonzero init mint but accepts the public program as a Setup placeholder", () => {
+    const value = source();
+    for (const token_mint of [undefined, null, "", String(PublicKey.default)])
+      expect(
+        deploymentInitSchema.safeParse({
+          ...value,
+          params: { ...value.params, token_mint },
+        }).success,
+      ).toBe(false);
+    expect(
+      deploymentInitSchema.parse({
+        ...value,
+        params: { ...value.params, token_mint: String(program) },
+      }).params.token_mint,
+    ).toBe(String(program));
+  });
   it("validates loader owner, type, program-data link and present authority", () => {
     const [p, pd] = loader();
     expect(verifyProgramAuthority(p, pd, program).equals(deployer)).toBe(true);

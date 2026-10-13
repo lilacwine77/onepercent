@@ -93,14 +93,14 @@ export function evaluateMajor(
       "pyth_fresh",
       ageSeconds,
       STOCK.pythMaxAgeSeconds,
-      "Pyth Hermes publish_time",
+      `${evidence.pythSource ?? "Pyth Hermes"} publish_time`,
       ageSeconds !== null && ageSeconds <= STOCK.pythMaxAgeSeconds,
     ),
     criterion(
       "pyth_conf",
       confidence,
       STOCK.pythMaxConfBps,
-      "Pyth Hermes confidence ratio",
+      `${evidence.pythSource ?? "Pyth Hermes"} confidence ratio`,
       price !== null &&
         conf !== null &&
         price > 0n &&
@@ -141,7 +141,8 @@ export function evaluateMajor(
       "sigma_daily_bps",
       evidence.dailySigmaBps,
       HIT_LIST.majorBar.maxDailySigmaBps,
-      "Eight daily Pyth closes; sample log-return deviation",
+      evidence.dailySigmaSource ??
+        "Eight daily Pyth closes; sample log-return deviation",
       evidence.dailySigmaBps !== null &&
         evidence.dailySigmaBps <= HIT_LIST.majorBar.maxDailySigmaBps,
     ),

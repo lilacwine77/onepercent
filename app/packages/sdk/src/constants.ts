@@ -27,6 +27,7 @@ export const PHASE = {
 } as const;
 export const BUCKET_CLASS = { empty: 0, major: 1, trending: 2 } as const;
 export const TOKEN_PROGRAM_CODE = { spl: 0, token2022: 1 } as const;
+export const FINAL_CLAIM_FLAGS = { sol: 1, tokens: 2 } as const;
 export const PULL_STATUS = { pending: 1, revealed: 2 } as const;
 export const DECK_FLAGS = { fresh: 1, refed: 2 } as const;
 export const LIVE_FLAGS = { onePct: 1, spotlight: 2, jackpot: 4 } as const;

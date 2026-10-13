@@ -223,7 +223,7 @@ The X tracks rebase on `main` once M0.1 merges, and regenerate `pnpm-lock.yaml` 
 
 ## 1. The product in one page
 
-**Pitch.** Bags in. Packs out. Go for the 1%. A 7-day season on Solana. The $1PCT token launches on Meteora DBC the same day packs go live.
+**Pitch.** Bags in. Packs out. Go for the 1%. A 2-day season on Solana (D37). The $1PCT token launches on Meteora DBC the same day packs go live.
 
 **Feed (depositors).**
 - A depositor feeds an eligible bag. Eligible means:
@@ -275,7 +275,7 @@ A token amount shown in SOL is an executable quote, "≈ X if sold now". Lists a
 
 **Token.**
 - The disclosed 4% dev buy (40M $1PCT) becomes the four The 1% cards. Team tokens: 0.
-  - The cards are released at On Air + 0 / 42 / 84 / 126 h, one live at a time.
+  - The cards are released at On Air + 0 / 12 / 24 / 36 h (D37), one live at a time.
   - Each is delivered at once when pulled.
 - Trading fees go to the program's FeeIn PDA, the Meteora partner fee claimer:
   - D27: in PoweredOn or OnAir, 100% stock while the stock book is below 2 SOL;
@@ -286,9 +286,9 @@ A token amount shown in SOL is an executable quote, "≈ X if sold now". Lists a
 1. X-ray Week (T−7).
 2. Stock-Up (T−3): Feed opens.
 3. Power-On (T0): the token launches.
-4. On Air (T0 + 15 min): 7 days.
+4. On Air (T0 + 15 min): 2 days (D37).
 5. Spotlight Drops: not in Season 1 (D1).
-6. Last Call: the final 24 h, a countdown only.
+6. Last Call: the final 6 h, with a countdown and keeper surplus sales (D37).
 7. Buys close.
 8. The Final Pull: everything left goes to the season's openers, pro rata to the SOL they spent on packs.
 9. Sealed (Final Pull + 72 h): the upgrade key is burned.
@@ -416,7 +416,7 @@ stateDiagram-v2
   Setup --> StockUp: advance_phase at stock_up_ts
   StockUp --> PoweredOn: power_on by the launch wallet
   PoweredOn --> OnAir: advance_phase at power_on_ts + 15 min
-  OnAir --> BuysClosed: advance_phase at end_ts = on_air_ts + 7 d
+  OnAir --> BuysClosed: advance_phase at end_ts = on_air_ts + 2 d
   BuysClosed --> FinalPull: start_final_pull, 10 min after end_ts with no pending Pull
   FinalPull --> Done: Final Pull + 72 h, then upgrade authority None
 ```
@@ -609,7 +609,7 @@ Never pin MagicBlock's ProgramData address or deploy slot.
 | pump.fun | Fake BondingCurve accounts (M1 harness) and mainnet fixtures | Real programs if S1 finds them on devnet. Otherwise Feed and Rip e2e run on `solana-test-validator` 4.3.0 with pump.fun accounts cloned from mainnet and the mock VRF, and devnet keeps VRF-only checks | Real | Real |
 | Jupiter | Recorded responses | Stub quotes; a test transfer stands in for the swap between `exec_begin` and `exec_end` | Real | Real |
 | Pyth | Fixtures | Devnet accounts (S4) | Real | Real |
-| Season-end flows | Clock warp and state injection | Not reached (7-day clock) | Reached 7 days after its On Air | Real |
+| Season-end flows | Clock warp and state injection | Not reached in the launch rehearsal (2-day clock, D37) | Reached 2 days after its On Air | Real |
 | Services | Local processes; Postgres and Redis via docker compose | Railway `dev` | Railway `staging` | Railway `production` |
 | Web | localhost | Railway domain | `staging.onepercent.fun` behind basic auth | `onepercent.fun` after SW-1 |
 | Telegram | Dev bot | Dev bot | Staging bot | "1% Machine" |
@@ -978,11 +978,11 @@ The plan is anchored on the example calendar of `PARAMS.md` §14: **T0 = Thu 202
 | D15 | Wed 10-28 | T−1 | Canary launch rehearsal. Go / no-go at T−24 h (**G6**), after the soak |
 | T0 | Thu 10-29 | Power-On 16:00 UTC; On Air 16:15 | Go / no-go at T−10 min. Launch transaction. **SW-3** |
 | T0 + 1 | Fri 10-30 | — | `07-M7-BRIEF.md`. X4's audit may start; it merges once its own gate passes (C24 decided, D2) |
+| Before end_ts | Before Sat 10-31 16:15 | Final Pull readiness | Final Pull screen and keeper ready before season end (D18, D37); replaces the former D+5 target |
+| D+2 | Sat 10-31 10:15 | Last Call | Countdown and keeper surplus sales, final 6 h (D37) |
+| D+2 | Sat 10-31 16:15 | Buys closed | Final Pull from 16:25 |
 | D+3 | Sun 11-01 | — | M7a target, if every lane is green |
-| D+5 | Tue 11-03 | — | Final Pull screen and keeper due |
-| D+6 | Wed 11-04 16:15 | Last Call | Countdown only |
-| D+7 | Thu 11-05 16:15 | Buys closed | Final Pull from 16:25 |
-| — | Sun 11-08 16:25 | Sealed | Upgrade authority set to None |
+| D+5 | Tue 11-03 16:25 | Sealed | Upgrade authority set to None; seal delay remains 72 h |
 
 ### 11.2 Gantt
 
@@ -1468,7 +1468,7 @@ Only presentation or optional items may be cut. No mechanic is cut without a fou
 5. Reveal polish, done by the architect. Timing parity stays.
 6. 1% TV segments other than Idle, Countdown, Hit, Stock and Block-0. The web ticker keeps every event.
 7. Spotlight Drops: already cut from Season 1 (D1). The RC carries no Spotlight instruction and no live Spotlight segment.
-8. The Final Pull screen and keeper may ship as late as D+5. Their on-chain part may not slip.
+8. The Final Pull screen and keeper must ship before `end_ts`, now On Air + 2 d (D37). D18 permits their deferred on-chain part only through an upgrade before the season ends.
 
 **Never cut:**
 - every exit;

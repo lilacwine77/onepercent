@@ -33,6 +33,7 @@ import { z } from "zod";
 import { OpsError } from "../input.js";
 import { GENESIS } from "../runtime.js";
 import {
+  isProximaLaunch,
   launchMetadata,
   parseLaunchInput,
   migrationQuoteThreshold,
@@ -754,11 +755,9 @@ export async function executeLaunch(
     (input.command === "send" || input.flow === "atomic")
   )
     throw new OpsError("mainnet_requires_proxima_launch");
-  if (
-    ["set-mint", "stock-up", "deposit", "power-on"].includes(input.command) ||
-    (["check", "plan", "report"].includes(input.command) &&
-      (input.flow === "proxima" || input.cluster === "mainnet"))
-  ) {
+  if (input.poolCreator && !isProximaLaunch(input))
+    throw new OpsError("pool_creator_requires_proxima_launch");
+  if (isProximaLaunch(input)) {
     const { executeProxima } = await import("./proxima.js");
     try {
       return await executeProxima(input, rpc, signers.wallet, {

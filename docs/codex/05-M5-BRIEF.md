@@ -205,7 +205,7 @@ If B2 runs late, the architect may move items 4 and 5 to a follow-up PR on the s
 | `CARDS_PER_PACK`, `PACK_SPLIT_BPS.royaltyPerDustCard`, `HIT_TIERS`, `CARD_KINDS`, `TOKEN_1PCT` | PARAMS §2, §3, §11 | Copy numbers; tier codes (the on-chain kind is the index in `CARD_KINDS`) |
 | `JACKPOT.minPotPriceMultiple` | 15 | Jackpot live in an edition iff `jackpot.cost ≥ 15 × price` |
 | `COVERAGE.dustBuffer` | 50 | Hungry iff `deck.free < 4 × qty + 50` |
-| `SEASON.lastCallSeconds`, `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | 86,400; 0 / 42 / 84 / 126 h | `/machine` |
+| `SEASON.lastCallSeconds`, `TOKEN_1PCT.onePctReleaseOffsetsSeconds` | 21,600; 0 / 12 / 24 / 36 h (D37) | `/machine` |
 | `INTAKE.rateLimitPerMinutePerWallet`, `.rateLimitPerMinutePerIp` | 30, 60 | Feed Blink POST (same path as `/api/feed/attest`) |
 | `XRAY.rateLimitPerMinutePerIp` | 60 | X-ray Blink scans |
 | `CU_LIMITS.feed[0]`, `CU_LIMITS.buyPacks.x1`, `.x10` | M1's measurements | Blink transactions |

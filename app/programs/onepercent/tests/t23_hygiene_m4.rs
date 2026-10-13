@@ -6,6 +6,8 @@ fn t23_01_specials_do_not_read_exit_gates() {
         include_str!("../src/instructions/consume_randomness.rs"),
         include_str!("../src/math/specials.rs"),
         include_str!("../src/instructions/collect_creator_fees.rs"),
+        include_str!("../src/instructions/claim_final_sol.rs"),
+        include_str!("../src/instructions/claim_final_tokens.rs"),
     ] {
         for forbidden in [
             "admin_paused",
@@ -22,20 +24,27 @@ fn t23_01_specials_do_not_read_exit_gates() {
     }
 }
 #[test]
-fn t23_02_collect_exit_structure_and_deferred_stubs() {
-    let source = include_str!("../src/instructions/collect_creator_fees.rs");
-    assert!(!source.contains("pub config:"));
-    assert!(!source.contains("pub remaining_accounts:"));
-    let stubs = include_str!("../src/lib.rs");
-    for name in [
-        "start_final_pull",
-        "claim_final_sol",
-        "claim_final_tokens",
-        "spotlight_deposit",
-        "spotlight_take_back",
+fn t23_02_final_exit_structure_and_spotlight_stubs() {
+    for source in [
+        include_str!("../src/instructions/collect_creator_fees.rs"),
+        include_str!("../src/instructions/start_final_pull.rs"),
+        include_str!("../src/instructions/claim_final_sol.rs"),
+        include_str!("../src/instructions/claim_final_tokens.rs"),
     ] {
-        assert!(stubs.contains(name));
+        assert!(!source.contains("pub config:"));
+        assert!(!source.contains("pub remaining_accounts:"));
+        assert!(!source.contains("admin_paused"));
+        assert!(!source.contains("guardian_paused"));
+        assert!(!source.contains("disabled_roles"));
     }
+    let sol = include_str!("../src/instructions/claim_final_sol.rs");
+    assert!(!sol.contains("#[account(mut)]\n    pub owner:"));
+    let program = include_str!("../src/lib.rs");
+    for instruction in ["start_final_pull", "claim_final_sol", "claim_final_tokens"] {
+        assert!(program.contains(&format!("instructions::{instruction}::handler(ctx)")));
+    }
+    assert!(program.contains("spotlight_deposit(ctx: Context<Deferred>)"));
+    assert!(program.contains("spotlight_take_back(ctx: Context<Deferred>)"));
 }
 #[test]
 fn t23_03_power_on_top_level_and_callback_no_cpi() {

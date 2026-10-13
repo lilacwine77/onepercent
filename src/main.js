@@ -6,11 +6,13 @@ import { initConceptVideo, bindTelevisionPoster } from "./concept-video.js";
 import { preloadCRTResources } from "./crt-resources.js";
 import "./crt-hero.css";
 import { initDustPays } from "./dust-pays.js";
+import { initLaunchCountdown } from "./launch-countdown.js";
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 const clamp = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n));
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
+const destroyLaunchCountdown = initLaunchCountdown($("[data-countdown]"));
 const lenis = new Lenis({
   autoRaf: true,
   anchors: { offset: -64 },
@@ -374,6 +376,7 @@ if (import.meta.hot)
     delete window.crtTelevision;
     destroyPackDisplay?.();
     destroyDustPays();
+    destroyLaunchCountdown();
     lenis.destroy();
     revealObserver?.disconnect();
     artObserver.disconnect();

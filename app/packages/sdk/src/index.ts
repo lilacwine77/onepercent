@@ -71,3 +71,5 @@ export { createDeploymentSelector } from "./deployment.js";
 export type { ClusterDeployment } from "./deployment.js";
 export * from "./meteora/fees.js";
 export * from "./tx/feeChain.js";
+
+export * from "./tx/finalClaims.js";

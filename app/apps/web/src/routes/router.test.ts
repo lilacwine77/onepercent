@@ -16,6 +16,7 @@ describe("canonical route matching", () => {
     ["/fairness", "fairness"],
     ["/live", "live"],
     ["/token", "token"],
+    ["/docs", "docs"],
     ["/status", "notFound"],
     ["/missing", "notFound"],
   ])("matches %s as %s", (path, expected) =>

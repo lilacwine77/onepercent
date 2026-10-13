@@ -9,6 +9,7 @@ const publicEnvironment = new Set([
   "VITE_API_URL",
   "VITE_TURNSTILE_SITE_KEY",
   "VITE_CLUSTER",
+  "VITE_LAUNCH_AT",
   // Build-time switch of the preview build (scripts/build-preview.mjs); never set in production.
   "VITE_PREVIEW",
 ]);
@@ -82,7 +83,7 @@ export function inspectSource(name, source) {
       if (node.text.startsWith("VITE_") && !publicEnvironment.has(node.text)) {
         report(
           node,
-          "Only the three public VITE environment variables are permitted.",
+          "Only allow-listed public VITE environment variables are permitted.",
         );
       }
     }
@@ -93,7 +94,7 @@ export function inspectSource(name, source) {
     ) {
       report(
         node,
-        "Only the three public VITE environment variables are permitted.",
+        "Only allow-listed public VITE environment variables are permitted.",
       );
     }
     if (ts.isCallExpression(node)) {

@@ -217,7 +217,7 @@ pub const TOKEN_1PCT_ONE_PCT_CARD_AMOUNT: u64 = 10000000000000u64;
 
 #[constant]
 pub const TOKEN_1PCT_ONE_PCT_RELEASE_OFFSETS_SECONDS: [i64; 4] =
-    [0i64, 151200i64, 302400i64, 453600i64];
+    [0i64, 43200i64, 86400i64, 129600i64];
 
 #[constant]
 pub const SPOTLIGHT_WINDOW_SECONDS: i64 = 86400i64;
@@ -268,7 +268,7 @@ pub const CREATOR_FEE_SPLIT_BPS_AFTER_END_BURN: u32 = 0u32;
 pub const CREATOR_FEE_SPLIT_BPS_AFTER_END_TEAM: u32 = 10000u32;
 
 #[constant]
-pub const SEASON_DURATION_SECONDS: i64 = 604800i64;
+pub const SEASON_DURATION_SECONDS: i64 = 172800i64;
 
 #[constant]
 pub const SEASON_ON_AIR_DELAY_SECONDS: i64 = 900i64;
@@ -413,7 +413,8 @@ pub const METEORA_DBC_CONFIG: Pubkey = pubkey!("AonXiWUzyniqiaVyK7Bd8kjavgX6KBis
 pub const METEORA_DBC_CONFIG: Pubkey = pubkey!("AonXiWUzyniqiaVyK7Bd8kjavgX6KBissnSmWwzVhX8k");
 
 #[cfg(feature = "mainnet")]
-compile_error!("METEORA_DBC_CONFIG is PENDING for mainnet");
+#[constant]
+pub const METEORA_DBC_CONFIG: Pubkey = pubkey!("35kjYpFKkNfViR9sNfcS3ZuocHor8Ju3xB5WTHybrWdS");
 
 #[constant]
 pub const METEORA_FEE_ALLOW_BPS: u32 = 300u32;

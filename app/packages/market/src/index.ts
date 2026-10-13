@@ -35,6 +35,7 @@ export type {
   PythPriceUpdate,
   PythHermesOptions,
 } from "./pyth/hermes.js";
+export { createPythPushClient } from "./pyth/push.js";
 export { createSlotClient } from "./rpc/slot.js";
 export type { SlotClient } from "./rpc/slot.js";
 export type { MarketErrorCode, MarketErrorOptions } from "./errors.js";
@@ -136,6 +137,8 @@ export type {
 } from "./listing/evidence.js";
 export { evaluateMajor, evaluateTrending } from "./listing/evaluate.js";
 export { sigmaDailyBps } from "./listing/sigma.js";
+export { createListingHistoryClient } from "./listing/history.js";
+export type { ListingHistoryClient } from "./listing/history.js";
 export {
   listingReportSchema,
   serializeListingReport,

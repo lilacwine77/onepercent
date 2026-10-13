@@ -159,8 +159,16 @@ describe("atomic DBC launch transaction composition", () => {
         ids[cluster],
       );
     }
+    const pendingMainnet = new Proxy(select("mainnet"), {
+      get(deployment, property) {
+        if (property === "meteoraConfigPin") return null;
+        if (property === "meteora")
+          throw new Error("METEORA_DBC_CONFIG is PENDING for mainnet");
+        return Reflect.get(deployment, property, deployment);
+      },
+    });
     expect(() =>
-      launchInstructionGroups({ ...options, deployment: select("mainnet") }),
+      launchInstructionGroups({ ...options, deployment: pendingMainnet }),
     ).toThrow(/PENDING/);
     expectTypeOf<
       Extract<

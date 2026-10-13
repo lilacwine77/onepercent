@@ -1,7 +1,8 @@
 import { warnCause } from "@onepercent/service-kit";
 import { createHash } from "node:crypto";
-import { JsonRpcClient } from "@onepercent/service-kit";
+import { JsonRpcClient, RpcNodeLag } from "@onepercent/service-kit";
 import {
+  binderHeaderLayout,
   configLayout,
   machineLayout,
   mintLedgerLayout,
@@ -13,6 +14,7 @@ import type { Payee, SettleInput } from "@onepercent/sdk";
 
 import {
   PublicKey,
+  SystemProgram,
   Transaction,
   TransactionInstruction,
 } from "@solana/web3.js";
@@ -66,6 +68,12 @@ export interface KeeperLedger {
   payer: PublicKey;
   accounted: bigint;
 }
+export interface KeeperFinalClaim {
+  address: PublicKey;
+  owner: PublicKey;
+  seasonSpend: bigint;
+  flags: number;
+}
 export interface KeeperSnapshot {
   asOfSlot: number;
   config: {
@@ -81,6 +89,9 @@ export interface KeeperSnapshot {
     nextSeq: bigint;
     onAirTs: bigint;
     endTs: bigint;
+    finalTs: bigint;
+    pendingPulls: bigint;
+    execKind: number;
     teamSol: bigint;
     buckets: { mint: PublicKey; class: number }[];
   };
@@ -247,12 +258,35 @@ export function decodeSnapshot(
       nextSeq: machine.readBigUInt64LE(16),
       onAirTs: machine.readBigInt64LE(48),
       endTs: machine.readBigInt64LE(56),
+      finalTs: machine.readBigInt64LE(machineLayout.fields.final_ts),
+      pendingPulls: machine.readBigUInt64LE(machineLayout.fields.pending_pulls),
+      execKind: machine.readUInt8(machineLayout.fields.exec),
       teamSol: machine.readBigUInt64LE(96),
       buckets: Array.from({ length: 16 }, (_, i) => ({
         mint: keyAt(machine, 224 + i * 128),
         class: machine.readUInt8(224 + i * 128 + 109),
       })),
     },
+  };
+}
+export function decodeFinalClaim(
+  data: Buffer,
+  address: PublicKey,
+  programId: PublicKey,
+): KeeperFinalClaim {
+  checkData(data, "Binder", binderHeaderLayout.size, false);
+  const header = binderHeaderLayout.decode(data);
+  const [expected, bump] = PublicKey.findProgramAddressSync(
+    [Buffer.from("binder"), header.owner.toBuffer()],
+    programId,
+  );
+  if (!address.equals(expected) || header.bump !== bump)
+    throw new Error("keeper_invalid_binder");
+  return {
+    address,
+    owner: header.owner,
+    seasonSpend: header.season_spend,
+    flags: header.flags,
   };
 }
 const meta = (pubkey: PublicKey, isWritable = false): AccountMeta => ({
@@ -561,6 +595,83 @@ export class KeeperChain {
       return pull;
     });
   }
+  async finalSolClaims(signal?: AbortSignal): Promise<KeeperFinalClaim[]> {
+    const accounts = await this.client.request(
+      "getProgramAccounts",
+      [
+        this.programId.toBase58(),
+        {
+          commitment: "confirmed",
+          encoding: "base64",
+          dataSlice: { offset: 0, length: binderHeaderLayout.size },
+          filters: [
+            {
+              memcmp: {
+                offset: 0,
+                bytes: discriminator("account", "Binder").toString("base64"),
+                encoding: "base64",
+              },
+            },
+          ],
+        },
+      ],
+      z.array(z.object({ pubkey: pubkeySchema, account: rpcAccountSchema })),
+      signal,
+    );
+    return accounts
+      .map(({ pubkey, account }) =>
+        decodeFinalClaim(
+          this.owned(account),
+          new PublicKey(pubkey),
+          this.programId,
+        ),
+      )
+      .filter((binder) => binder.seasonSpend > 0n && (binder.flags & 1) === 0);
+  }
+  async finalClaim(
+    owner: PublicKey,
+    commitment: KeeperCommitment = "confirmed",
+    signal?: AbortSignal,
+  ): Promise<KeeperFinalClaim | null> {
+    const address = keeperPda(this.programId, "binder", owner.toBuffer());
+    // The same bank must include the snapshot before absence can prove a claim
+    // completed and its Binder closed. An older bank may predate the Binder.
+    const [account, machine] = (
+      await this.accounts(
+        [address, keeperPda(this.programId, "machine")],
+        commitment,
+        signal,
+      )
+    ).value;
+    if (!machine) throw new Error("keeper_missing_machine");
+    const data = this.owned(machine);
+    checkData(data, "Machine", KEEPER_LAYOUT.machineSize);
+    if (data.readUInt8(8) !== 1 || data.readUInt8(10) > 6)
+      throw new Error("keeper_invalid_machine");
+    if (data.readUInt8(10) < 5) throw new RpcNodeLag();
+    if (
+      !account ||
+      (account.owner === SystemProgram.programId.toBase58() &&
+        !account.executable &&
+        bytes(account).length === 0)
+    )
+      return null;
+    return decodeFinalClaim(this.owned(account), address, this.programId);
+  }
+  async claimFinalSol(
+    owner: PublicKey,
+    signal?: AbortSignal,
+  ): Promise<TransactionInstruction> {
+    const payee = (await this.payees([owner], "confirmed", signal)).get(
+      owner.toBase58(),
+    );
+    if (!payee) throw new Error("keeper_missing_payee");
+    return instruction(this.programId, "claim_final_sol", [
+      meta(keeperPda(this.programId, "machine"), true),
+      meta(keeperPda(this.programId, "binder", owner.toBuffer()), true),
+      meta(owner, payeeWritable(payee)),
+    ]);
+  }
   async pull(
     address: PublicKey,
     commitment: KeeperCommitment = "confirmed",
@@ -709,6 +820,11 @@ export class KeeperChain {
   advance(): TransactionInstruction {
     return instruction(this.programId, "advance_phase", [
       meta(keeperPda(this.programId, "config")),
+      meta(keeperPda(this.programId, "machine"), true),
+    ]);
+  }
+  startFinalPull(): TransactionInstruction {
+    return instruction(this.programId, "start_final_pull", [
       meta(keeperPda(this.programId, "machine"), true),
     ]);
   }

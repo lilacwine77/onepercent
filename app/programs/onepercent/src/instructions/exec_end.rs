@@ -43,7 +43,12 @@ pub fn handler(ctx: Context<ExecEnd>, kind: u8) -> Result<()> {
         MachineError::ExecPairing
     );
     let config = ctx.accounts.config.load()?;
-    super::exec_begin::check_role(&config, kind, &ctx.accounts.signer.key())?;
+    super::exec_begin::check_role(
+        &config,
+        kind,
+        &ctx.accounts.signer.key(),
+        ctx.accounts.machine.load()?.phase,
+    )?;
     {
         let machine = ctx.accounts.machine.load()?;
         super::exec_begin::check_mint(

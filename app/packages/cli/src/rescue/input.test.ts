@@ -75,7 +75,11 @@ describe("rescue CLI boundaries", () => {
       ).toThrow("invalid_arguments");
   });
   it("parses the Binder exits as owner-signed and the crank as permissionless", () => {
-    for (const command of ["withdraw-owed", "close-my-cards"]) {
+    for (const command of [
+      "withdraw-owed",
+      "close-my-cards",
+      "claim-final-tokens",
+    ]) {
       expect(
         parseRescueArgs([command, "--rpc", rpc, "--keypair", "owner.json"]),
       ).toMatchObject({ command, signerFile: "owner.json" });
@@ -111,7 +115,7 @@ describe("rescue CLI boundaries", () => {
       expect(() => parseRescueArgs([...args, "--rpc", rpc])).toThrow(
         "invalid_arguments",
       );
-    expect(() =>
+    expect(
       parseRescueArgs([
         "crank",
         "start-final-pull",
@@ -120,7 +124,31 @@ describe("rescue CLI boundaries", () => {
         "--fee-payer",
         "payer.json",
       ]),
-    ).toThrow("start_final_pull_ships_with_final_pull_upgrade");
+    ).toMatchObject({ command: "crank", crank: "start-final-pull" });
+    expect(
+      parseRescueArgs([
+        "claim-final-sol",
+        "--rpc",
+        rpc,
+        "--fee-payer",
+        "payer.json",
+        "--wallet",
+        wallet,
+      ]),
+    ).toMatchObject({
+      command: "claim-final-sol",
+      signerFile: "payer.json",
+      wallet,
+    });
+    expect(() =>
+      parseRescueArgs([
+        "claim-final-sol",
+        "--rpc",
+        rpc,
+        "--keypair",
+        "owner.json",
+      ]),
+    ).toThrow("invalid_arguments");
   });
   it("accepts public-only unsigned building without reading a signer", () => {
     expect(

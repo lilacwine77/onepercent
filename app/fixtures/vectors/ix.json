@@ -1373,8 +1373,8 @@
   {
     "accounts": [
       {
-        "isSigner": true,
-        "isWritable": false,
+        "isSigner": false,
+        "isWritable": true,
         "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
       }
     ],
@@ -1385,9 +1385,19 @@
   {
     "accounts": [
       {
-        "isSigner": true,
-        "isWritable": false,
+        "isSigner": false,
+        "isWritable": true,
         "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+      },
+      {
+        "isSigner": false,
+        "isWritable": true,
+        "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+      },
+      {
+        "isSigner": false,
+        "isWritable": false,
+        "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
       }
     ],
     "args": {},
@@ -1398,8 +1408,23 @@
     "accounts": [
       {
         "isSigner": true,
-        "isWritable": false,
+        "isWritable": true,
         "pubkey": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi"
+      },
+      {
+        "isSigner": false,
+        "isWritable": true,
+        "pubkey": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR"
+      },
+      {
+        "isSigner": false,
+        "isWritable": true,
+        "pubkey": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8"
+      },
+      {
+        "isSigner": false,
+        "isWritable": false,
+        "pubkey": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq"
       }
     ],
     "args": {},

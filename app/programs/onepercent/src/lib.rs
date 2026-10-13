@@ -123,14 +123,14 @@ pub mod onepercent {
     pub fn claim_launch_fees(ctx: Context<ClaimLaunchFees>, kind: LaunchFeeKind) -> Result<()> {
         instructions::claim_launch_fees::handler(ctx, kind)
     }
-    pub fn start_final_pull(ctx: Context<Deferred>) -> Result<()> {
-        instructions::stubs::handler(ctx)
+    pub fn start_final_pull(ctx: Context<StartFinalPull>) -> Result<()> {
+        instructions::start_final_pull::handler(ctx)
     }
-    pub fn claim_final_sol(ctx: Context<Deferred>) -> Result<()> {
-        instructions::stubs::handler(ctx)
+    pub fn claim_final_sol(ctx: Context<ClaimFinalSol>) -> Result<()> {
+        instructions::claim_final_sol::handler(ctx)
     }
-    pub fn claim_final_tokens(ctx: Context<Deferred>) -> Result<()> {
-        instructions::stubs::handler(ctx)
+    pub fn claim_final_tokens(ctx: Context<ClaimFinalTokens>) -> Result<()> {
+        instructions::claim_final_tokens::handler(ctx)
     }
     pub fn withdraw_owed(ctx: Context<WithdrawOwed>) -> Result<()> {
         instructions::withdraw_owed::handler(ctx)
@@ -151,9 +151,7 @@ pub mod onepercent {
 #[cfg(all(feature = "devnet", feature = "mainnet"))]
 compile_error!("devnet and mainnet features are mutually exclusive");
 #[cfg(feature = "mainnet")]
-compile_error!("Mainnet program ID is PENDING");
-#[cfg(feature = "mainnet")]
-compile_error!("Mainnet landing measurements are PENDING");
+declare_id!("7H19ieb7A8s8re2fxoh4bd3jf51XXefLroougKLHvreH");
 #[cfg(not(any(feature = "devnet", feature = "mainnet")))]
 declare_id!("DoNH1Cxvv9umyWV9i77LEK4CoqTotDxPRzPxPBzjMJpe");
 #[cfg(feature = "devnet")]

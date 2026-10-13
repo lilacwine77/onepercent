@@ -5,6 +5,7 @@
  * Without an API at all (a static preview), every flow is demo.
  */
 import { WebConfigResponse, type WebConfig } from "@onepercent/web-api";
+import { SEASON } from "@onepercent/config";
 import { ConfigResponse } from "@onepercent/sdk/api";
 import { XrayResultSchema } from "@onepercent/eligibility/xray-result";
 import { SAMPLE_BAGS, SAMPLE_EMPTIES } from "./data";
@@ -15,6 +16,19 @@ import xrayCard from "./xray-card.png";
 
 const SYSTEM = "11111111111111111111111111111111";
 const now = () => Math.floor(Date.now() / 1000);
+const season = () => {
+  const timestamp = now();
+  const onAirTs = timestamp - 3_600;
+  return {
+    snapshotSlot: "400000000",
+    snapshotTs: timestamp - 9 * 86_400,
+    stockUpTs: timestamp - 3 * 86_400,
+    powerOnTs: onAirTs - SEASON.onAirDelaySeconds,
+    onAirTs,
+    endTs: onAirTs + SEASON.durationSeconds,
+    finalTs: 0,
+  };
+};
 // Validated with the app's schemas, returned raw (they transform u64 strings to bigint).
 const valid = <T>(schema: { parse(value: unknown): unknown }, value: T) => (
   schema.parse(value),
@@ -47,15 +61,7 @@ const config = () =>
       teamWallets: [SYSTEM],
     },
     vrf: { queues: [SYSTEM], activeIndex: 0 },
-    season: {
-      snapshotSlot: "400000000",
-      snapshotTs: now() - 9 * 86_400,
-      stockUpTs: now() - 3 * 86_400,
-      powerOnTs: now() - 86_400,
-      onAirTs: now() - 3_600,
-      endTs: now() + 6 * 86_400,
-      finalTs: now() + 7 * 86_400,
-    },
+    season: season(),
     paused: 0,
   });
 const json = (body: unknown, status = 200, delay = 160) =>

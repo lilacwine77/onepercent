@@ -36,6 +36,7 @@ import { OpsError } from "../input.js";
 import {
   buildLaunchReport,
   decodeLaunchConfig,
+  decodeLaunchMachine,
   LaunchCheckError,
 } from "./checks.js";
 import {
@@ -184,7 +185,7 @@ function transaction(
   );
 }
 
-/** D32 never creates a mint or pool, nor receives the vanity mint's secret. */
+/** Proxima creates the mint and pool; this flow only accepts their public addresses. */
 export async function executeProxima(
   input: LaunchInput,
   rpc: Connection,
@@ -198,12 +199,20 @@ export async function executeProxima(
   const deployment = requirePinnedLaunchIdentity(input);
   if (input.mintKeypair)
     throw new OpsError("proxima_requires_public_mint_only");
-  const policy =
-    options.localPolicy ??
-    (input.cluster === "devnet"
-      ? devnetLaunchPolicy(input.cluster)
-      : readLaunchPolicy());
-  if (!policy) throw new OpsError("launch_landing_policy_unavailable");
+  if (input.command === "verify") {
+    if (input.flow === "atomic")
+      throw new OpsError("proxima_verify_requires_proxima_flow");
+    if (
+      input.wallet !== undefined ||
+      wallet ||
+      input.mintKeypair !== undefined ||
+      input.dbcConfigKeypair !== undefined ||
+      input.confirm !== undefined
+    )
+      throw new OpsError("proxima_verify_is_read_only");
+    if (!input.mint) throw new OpsError("proxima_mint_required");
+    if (!input.poolCreator) throw new OpsError("proxima_pool_creator_required");
+  }
   const configAddress = PublicKey.findProgramAddressSync(
     [Buffer.from("config")],
     deployment.programId,
@@ -219,20 +228,36 @@ export async function executeProxima(
   };
   if (input.walletAddress && input.walletAddress !== identity.wallet.toBase58())
     throw new OpsError("proxima_launch_wallet_mismatch");
+  const poolCreator = input.poolCreator
+    ? new PublicKey(input.poolCreator)
+    : undefined;
   const threshold = migrationQuoteThreshold(input);
   const read = async (minSlot = 0) => {
     const result = await readProximaState(rpc, identity, minSlot);
+    if (
+      input.command === "set-mint" &&
+      decodeLaunchMachine(result.state.machine, deployment.programId).phase !==
+        0
+    )
+      throw new OpsError("proxima_set_mint_requires_setup");
     return {
       ...result,
-      checked: checkProximaState(identity, result.state, threshold),
+      checked: checkProximaState(
+        identity,
+        result.state,
+        threshold,
+        poolCreator,
+      ),
     };
   };
   let observed: Awaited<ReturnType<typeof read>>;
   try {
     observed = await read();
+    if (input.command === "verify" && !observed.checked.launchVerified)
+      throw new LaunchCheckError("proxima_launch_not_created");
   } catch (error) {
     if (
-      ["check", "plan"].includes(input.command) &&
+      ["check", "plan", "verify"].includes(input.command) &&
       error instanceof LaunchCheckError
     )
       return {
@@ -248,7 +273,7 @@ export async function executeProxima(
     observedSlot: observed.slot,
     ...observed.checked,
   });
-  if (["check", "plan"].includes(input.command)) return result();
+  if (["check", "plan", "verify"].includes(input.command)) return result();
   if (input.command === "report") {
     const a = launchAddresses(identity);
     const state = observed.state;
@@ -285,10 +310,18 @@ export async function executeProxima(
   if (!["set-mint", "stock-up", "deposit", "power-on"].includes(input.command))
     throw new OpsError("proxima_command_invalid");
   const command = input.command as Record["command"];
+  const policy =
+    options.localPolicy ??
+    (input.cluster === "devnet"
+      ? devnetLaunchPolicy(input.cluster)
+      : readLaunchPolicy());
+  if (!policy) throw new OpsError("launch_landing_policy_unavailable");
   if (!wallet || input.confirm !== identity.mint.toBase58().slice(0, 8))
     throw new OpsError("proxima_signer_or_confirmation_required");
   if (command === "set-mint" && !wallet.publicKey.equals(config.admin))
     throw new OpsError("proxima_admin_required");
+  if (command === "set-mint" && poolCreator && !observed.checked.launchVerified)
+    throw new OpsError("proxima_launch_not_created");
   if (
     ["deposit", "power-on"].includes(command) &&
     !wallet.publicKey.equals(config.launchWallet)
@@ -310,6 +343,21 @@ export async function executeProxima(
     !("seasonReady" in observed.checked && observed.checked.seasonReady)
   )
     throw new OpsError("proxima_season_not_ready");
+  const requireSetMintReady = async () => {
+    if (command !== "set-mint") return;
+    observed = await read(observed.slot);
+    if (observed.checked.stage !== "set-mint")
+      throw new OpsError("proxima_state_changed");
+    if (poolCreator && !observed.checked.launchVerified)
+      throw new OpsError("proxima_launch_not_created");
+    if (
+      !decodeLaunchConfig(
+        observed.state.config,
+        deployment.programId,
+      ).admin.equals(wallet.publicKey)
+    )
+      throw new OpsError("proxima_admin_required");
+  };
   const id = [
     input.cluster,
     input.program,
@@ -318,6 +366,7 @@ export async function executeProxima(
     identity.wallet.toBase58(),
     wallet.publicKey.toBase58(),
     threshold.toString(),
+    ...(poolCreator ? ["pool-creator", poolCreator.toBase58()] : []),
   ].join(":");
   await mkdir(options.directory, { recursive: true, mode: 0o700 });
   const path = join(
@@ -393,6 +442,7 @@ export async function executeProxima(
       });
       if (simulated.value.err) throw new OpsError("proxima_simulation_failed");
       await requireLaunchCluster(rpc, input);
+      await requireSetMintReady();
       tx.sign([wallet]);
       record = {
         command,
@@ -448,7 +498,10 @@ export async function executeProxima(
         lastValidBlockHeight: record.lastValidBlockHeight,
       },
       {
-        assertCluster: () => requireLaunchCluster(rpc, input),
+        assertCluster: async () => {
+          await requireLaunchCluster(rpc, input);
+          await requireSetMintReady();
+        },
         emit: options.emit,
         sleep,
         submit: (encoded) =>

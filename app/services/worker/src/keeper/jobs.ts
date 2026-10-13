@@ -1,3 +1,4 @@
+import { SEASON } from "@onepercent/config";
 import { warnCause } from "@onepercent/service-kit";
 import { PublicKey } from "@solana/web3.js";
 import { z } from "zod";
@@ -35,11 +36,19 @@ export const intentSchema = z.discriminatedUnion("kind", [
     })
     .strict(),
   z.object({ kind: z.literal("refund"), address, seq: u64 }).strict(),
+  z.object({ kind: z.literal("final-sol"), address, owner: address }).strict(),
+  z
+    .object({
+      kind: z.literal("start-final-pull"),
+      endTs: u64,
+      window: u64,
+    })
+    .strict(),
   z
     .object({
       kind: z.literal("advance"),
-      from: z.number().int().min(0).max(3),
-      to: z.number().int().min(1).max(4),
+      from: z.number().int().min(0).max(5),
+      to: z.number().int().min(1).max(6),
       // Earlier persisted jobs have no window; keep their signed records readable.
       window: u64.optional(),
     })
@@ -65,6 +74,10 @@ export function jobId(intent: KeeperIntent): string {
       return `settle:${intent.seq}:${intent.packs.join(",")}`;
     case "refund":
       return `refund:${intent.seq}`;
+    case "final-sol":
+      return `final_sol:${intent.address}`;
+    case "start-final-pull":
+      return `start-final-pull:${intent.endTs}:${intent.window}`;
     case "advance":
       return `advance:${intent.from}:${intent.to}${intent.window === undefined ? "" : `:${intent.window}`}`;
     case "close-vault":
@@ -106,5 +119,22 @@ export function nextPhase(
     return 3;
   if (machine.phase === 3 && machine.endTs !== 0n && now >= machine.endTs)
     return 4;
+  if (
+    machine.phase === 5 &&
+    machine.finalTs !== 0n &&
+    now >= machine.finalTs + BigInt(SEASON.sealDelaySeconds)
+  )
+    return 6;
   return null;
+}
+
+export function finalPullDue(snapshot: KeeperSnapshot, now: bigint): boolean {
+  const { machine } = snapshot;
+  return (
+    (machine.phase === 3 || machine.phase === 4) &&
+    machine.endTs !== 0n &&
+    now >= machine.endTs + BigInt(SEASON.finalPullDelaySeconds) &&
+    machine.pendingPulls === 0n &&
+    machine.execKind === 0
+  );
 }

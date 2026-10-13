@@ -95,6 +95,59 @@ const executor = JSON.parse(
   measured: { execBegin: number; execEnd: number };
   limits: { execBegin: number; execEnd: number };
 };
+type FinalPullLimits = Pick<
+  typeof CU_LIMITS,
+  "startFinalPull" | "claimFinalSol" | "claimFinalTokens"
+>;
+const finalPull = JSON.parse(
+  readFileSync(
+    new URL("../../../fixtures/reports/final-pull-cu.json", import.meta.url),
+    "utf8",
+  ),
+) as {
+  measured: FinalPullLimits & { combinedClaims: number };
+  limits: FinalPullLimits;
+  cases: {
+    instruction: string;
+    variant?: string;
+    cu: number;
+    bytes: number;
+  }[];
+};
+const roundedFinalPull = {
+  startFinalPull: rounded(finalPull.measured.startFinalPull),
+  claimFinalSol: {
+    x1: rounded(finalPull.measured.claimFinalSol.x1),
+    xMax: rounded(finalPull.measured.claimFinalSol.xMax),
+  },
+  claimFinalTokens: rounded(finalPull.measured.claimFinalTokens),
+};
+const finalBurn = JSON.parse(
+  readFileSync(
+    new URL(
+      "../../../fixtures/reports/final-pull-burn-cu.json",
+      import.meta.url,
+    ),
+    "utf8",
+  ),
+) as {
+  measured: { existingTransaction: number; restorationTransaction: number };
+  limits: Pick<typeof CU_LIMITS, "execBegin" | "execEnd" | "restoreBurnVault">;
+  restorationAllowanceDerivation: {
+    additionalRequired: number;
+    baseHandlerBudget: number;
+    wholeRestorationWith25PercentMargin: number;
+  };
+  transactionLimits: { existing: number; restoration: number };
+  variants: { variant: string; transactionMax: number }[];
+};
+const baseExecutorBudget =
+  rounded(executor.measured.execBegin) + rounded(executor.measured.execEnd);
+const restorationBudget = rounded(finalBurn.measured.restorationTransaction);
+const restorationAllowance = Math.max(
+  0,
+  restorationBudget - baseExecutorBudget,
+);
 const realVrf = JSON.parse(
   readFileSync(
     new URL("../../../fixtures/reports/real-vrf.json", import.meta.url),
@@ -149,8 +202,65 @@ describe("measured transaction compute limits", () => {
         x10: rounded(Math.max(m.buyPacks[1], realVrf.measured.buyPacks[1])),
       },
       ...roundedMyCards,
+      ...roundedFinalPull,
       execBegin: rounded(executor.measured.execBegin),
       execEnd: rounded(executor.measured.execEnd),
+      restoreBurnVault: restorationAllowance,
+    });
+  });
+
+  it("derives Final Pull limits from the complete measured transactions", () => {
+    const maximum = (instruction: string, combined = false) =>
+      Math.max(
+        ...finalPull.cases
+          .filter(
+            (entry) =>
+              entry.instruction === instruction &&
+              (entry.variant === "combined") === combined,
+          )
+          .map((entry) => entry.cu),
+      );
+    expect(finalPull.measured).toEqual({
+      startFinalPull: maximum("startFinalPull"),
+      claimFinalSol: {
+        x1: maximum("claimFinalSol"),
+        xMax: maximum("claimFinalSolBatch"),
+      },
+      claimFinalTokens: maximum("claimFinalTokens"),
+      combinedClaims: maximum("claimFinalTokens", true),
+    });
+    expect(finalPull.limits).toEqual(roundedFinalPull);
+    expect(rounded(finalPull.measured.combinedClaims)).toBeLessThanOrEqual(
+      CU_LIMITS.claimFinalSol.x1 + CU_LIMITS.claimFinalTokens,
+    );
+    for (const entry of finalPull.cases)
+      expect(entry.bytes).toBeLessThanOrEqual(PARAMS.TX_LIMITS.maxTxBytes);
+  });
+
+  it("adds only the measured allowance for optional Done Burn restoration", () => {
+    for (const [name, restored] of [
+      ["existingTransaction", false],
+      ["restorationTransaction", true],
+    ] as const)
+      expect(finalBurn.measured[name]).toBe(
+        Math.max(
+          ...finalBurn.variants
+            .filter((entry) => (entry.variant !== "existing") === restored)
+            .map((entry) => entry.transactionMax),
+        ),
+      );
+    expect(finalBurn.restorationAllowanceDerivation).toEqual({
+      additionalRequired: restorationAllowance,
+      baseHandlerBudget: baseExecutorBudget,
+      wholeRestorationWith25PercentMargin: restorationBudget,
+    });
+    expect(finalBurn.limits).toEqual({
+      ...executor.limits,
+      restoreBurnVault: restorationAllowance,
+    });
+    expect(finalBurn.transactionLimits).toEqual({
+      existing: baseExecutorBudget,
+      restoration: baseExecutorBudget + restorationAllowance,
     });
   });
 

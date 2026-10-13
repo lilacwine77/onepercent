@@ -15,9 +15,9 @@ pub struct ExecBegin<'info> {
     #[account(mut, seeds = [MACHINE_SEED], bump = machine.load()?.bump)]
     pub machine: AccountLoader<'info, Machine>,
     pub mint: InterfaceAccount<'info, Mint>,
-    #[account(mut, seeds = [LEDGER_SEED, mint.key().as_ref()], bump,
-        constraint = ledger.load()?.mint == mint.key() @ MachineError::LedgerMismatch)]
-    pub ledger: AccountLoader<'info, MintLedger>,
+    /// CHECK: Canonical MintLedger is checked below; Done Burn can recreate an empty closed ledger.
+    #[account(mut, seeds = [LEDGER_SEED, mint.key().as_ref()], bump)]
+    pub ledger: UncheckedAccount<'info>,
     #[account(mut,
         address = get_associated_token_address_with_program_id(&vault_auth.key(), &mint.key(), &token_program.key()) @ MachineError::VaultMismatch,
         constraint = vault.mint == mint.key() && vault.owner == vault_auth.key() @ MachineError::VaultMismatch)]
@@ -54,14 +54,16 @@ pub fn handler(ctx: Context<ExecBegin>, kind: u8, bucket: u8, amount: u64) -> Re
     );
     let clock = Clock::get()?;
     let config = ctx.accounts.config.load()?;
-    check_role(&config, kind, &ctx.accounts.signer.key())?;
+    let phase = ctx.accounts.machine.load()?.phase;
+    check_role(&config, kind, &ctx.accounts.signer.key(), phase)?;
     let pause = if is_stock(kind) {
         crate::params::PAUSE_BITS_STOCK_BUY
     } else {
         crate::params::PAUSE_BITS_BURN
     };
     require!(
-        (config.admin_paused | config.guardian_paused) & pause == 0,
+        permissionless_burn(kind, phase)
+            || (config.admin_paused | config.guardian_paused) & pause == 0,
         MachineError::Paused
     );
     let mut machine = ctx.accounts.machine.load_mut()?;
@@ -88,6 +90,37 @@ pub fn handler(ctx: Context<ExecBegin>, kind: u8, bucket: u8, amount: u64) -> Re
         &ctx.accounts.vault_auth.key(),
         kind == EXEC_KIND_STOCK_SELL,
     )?;
+    let ledger_info = ctx.accounts.ledger.to_account_info();
+    if permissionless_burn(kind, phase) && *ledger_info.owner == anchor_lang::system_program::ID {
+        // A ledger closes only with zero accounted claims. Recreate it from the
+        // caller's rent so closing accounts never strands the remaining burn SOL.
+        // For Burn, validate_sol_dest has authenticated this System sentinel.
+        require!(
+            ledger_info.data_is_empty() && !ledger_info.executable,
+            MachineError::LedgerMismatch
+        );
+        require!(
+            machine.final_pool_1pct == 0
+                && machine.jackpot_tokens == 0
+                && machine.onepct.iter().all(|slot| {
+                    slot.amount == 0 || (slot.state != ONEPCT_LOCKED && slot.state != ONEPCT_LIVE)
+                }),
+            MachineError::LedgerMismatch
+        );
+        crate::util::ensure_ledger(
+            &ledger_info,
+            &ctx.accounts.mint.key(),
+            &ctx.accounts.signer.to_account_info(),
+            &ctx.accounts.sol_dest.to_account_info(),
+        )?;
+    }
+    crate::state::views::validate::<MintLedger>(&ledger_info)
+        .map_err(|_| error!(MachineError::LedgerMismatch))?;
+    require_keys_eq!(
+        crate::state::views::header::<MintLedger>(&ledger_info.try_borrow_data()?)?.mint,
+        ctx.accounts.mint.key(),
+        MachineError::LedgerMismatch
+    );
     if kind == EXEC_KIND_STOCK_BUY {
         let b = machine
             .buckets
@@ -116,12 +149,14 @@ pub fn handler(ctx: Context<ExecBegin>, kind: u8, bucket: u8, amount: u64) -> Re
         crate::math::exec::preserve_granularity(b, next_amount, next_cost)?;
         b.amount = next_amount;
         b.cost = next_cost;
-        let mut ledger = ctx.accounts.ledger.load_mut()?;
-        ledger.accounted = ledger
-            .accounted
-            .checked_sub(amount)
-            .ok_or(MachineError::MathOverflow)?;
-        drop(ledger);
+        {
+            let mut data = ledger_info.try_borrow_mut_data()?;
+            let ledger = crate::state::views::header_mut::<MintLedger>(&mut data)?;
+            ledger.accounted = ledger
+                .accounted
+                .checked_sub(amount)
+                .ok_or(MachineError::MathOverflow)?;
+        }
         crate::util::vault_transfer(
             &ctx.accounts.mint.to_account_info(),
             &ctx.accounts.vault.to_account_info(),
@@ -203,7 +238,14 @@ pub(crate) fn is_stock(kind: u8) -> bool {
     kind == EXEC_KIND_STOCK_BUY || kind == EXEC_KIND_STOCK_SELL
 }
 
-pub(crate) fn check_role(config: &Config, kind: u8, signer: &Pubkey) -> Result<()> {
+pub(crate) fn permissionless_burn(kind: u8, phase: u8) -> bool {
+    kind == EXEC_KIND_BURN && phase == PHASE_DONE
+}
+
+pub(crate) fn check_role(config: &Config, kind: u8, signer: &Pubkey, phase: u8) -> Result<()> {
+    if permissionless_burn(kind, phase) {
+        return Ok(());
+    }
     let (expected, bit) = if is_stock(kind) {
         (config.keeper, 3)
     } else {
@@ -261,7 +303,7 @@ fn check_phase(machine: &Machine, kind: u8, now: i64) -> Result<()> {
             MachineError::WrongPhase
         ),
         EXEC_KIND_BURN => require!(
-            (PHASE_POWERED_ON..PHASE_DONE).contains(&machine.phase),
+            (PHASE_POWERED_ON..=PHASE_DONE).contains(&machine.phase),
             MachineError::WrongPhase
         ),
         EXEC_KIND_JACKPOT_BUY => {
@@ -559,4 +601,99 @@ fn check_reserve_tranche(kind: u8, amount: u64, quote_eff: u128) -> Result<()> {
         MachineError::TrancheTooLarge
     );
     Ok(())
+}
+
+#[cfg(test)]
+#[allow(clippy::unwrap_used)]
+mod final_burn_tests {
+    use super::*;
+    use anchor_lang::__private::bytemuck::Zeroable;
+
+    #[test]
+    fn only_done_burn_bypasses_executor_role() {
+        let mut config = Config::zeroed();
+        config.executor = Pubkey::new_unique();
+        config.disabled_roles = u8::MAX;
+        config.admin_paused = u8::MAX;
+        config.guardian_paused = u8::MAX;
+        let caller = Pubkey::new_unique();
+        for phase in PHASE_SETUP..=PHASE_DONE {
+            let allowed = phase == PHASE_DONE;
+            assert_eq!(permissionless_burn(EXEC_KIND_BURN, phase), allowed);
+            assert_eq!(
+                check_role(&config, EXEC_KIND_BURN, &caller, phase).is_ok(),
+                allowed
+            );
+            assert!(!permissionless_burn(EXEC_KIND_JACKPOT_BUY, phase));
+            assert!(check_role(&config, EXEC_KIND_JACKPOT_BUY, &caller, phase).is_err());
+            let mut machine = Machine::zeroed();
+            machine.phase = phase;
+            machine.end_ts = i64::MAX;
+            assert_eq!(
+                check_phase(&machine, EXEC_KIND_BURN, 1).is_ok(),
+                phase >= PHASE_POWERED_ON
+            );
+            if allowed {
+                assert!(check_phase(&machine, EXEC_KIND_JACKPOT_BUY, 1).is_err());
+            }
+        }
+        assert!(check_role(&config, EXEC_KIND_BURN, &config.executor, PHASE_FINAL_PULL).is_err());
+        config.disabled_roles = 0;
+        assert!(check_role(&config, EXEC_KIND_BURN, &config.executor, PHASE_FINAL_PULL).is_ok());
+    }
+
+    #[test]
+    fn done_burn_keeps_spacing_tranche_reserve_and_hour_limits() {
+        use crate::params;
+        let mut machine = Machine::zeroed();
+        machine.phase = PHASE_DONE;
+        machine.burn_sol = params::BURN_HOURLY_MAX_LAMPORTS.saturating_mul(2);
+        machine.last_burn_ts = 1_000;
+        let due = machine
+            .last_burn_ts
+            .saturating_add(params::BURN_MIN_SPACING_SECONDS);
+        let tranche = params::BURN_TRANCHE_MAX_LAMPORTS;
+        assert!(check_caps(
+            &mut machine,
+            EXEC_KIND_BURN,
+            BUCKET_NONE,
+            tranche,
+            due.saturating_sub(1)
+        )
+        .is_err());
+        assert!(check_caps(
+            &mut machine,
+            EXEC_KIND_BURN,
+            BUCKET_NONE,
+            tranche.saturating_add(1),
+            due
+        )
+        .is_err());
+        check_caps(&mut machine, EXEC_KIND_BURN, BUCKET_NONE, tranche, due).unwrap();
+        assert_eq!(machine.burn_paid_hour, tranche);
+        machine.burn_paid_hour = params::BURN_HOURLY_MAX_LAMPORTS;
+        assert!(check_caps(
+            &mut machine,
+            EXEC_KIND_BURN,
+            BUCKET_NONE,
+            tranche,
+            due.saturating_add(params::BURN_MIN_SPACING_SECONDS)
+        )
+        .is_err());
+        let reserves = u128::from(tranche).saturating_mul(u128::from(params::BPS_DENOMINATOR));
+        let cap = crate::math::exec::reserve_tranche(
+            reserves,
+            params::BURN_TRANCHE_MAX_BPS_OF_QUOTE_RESERVES,
+        )
+        .unwrap();
+        assert!(
+            check_reserve_tranche(EXEC_KIND_BURN, u64::try_from(cap).unwrap(), reserves).is_ok()
+        );
+        assert!(check_reserve_tranche(
+            EXEC_KIND_BURN,
+            u64::try_from(cap).unwrap().saturating_add(1),
+            reserves
+        )
+        .is_err());
+    }
 }

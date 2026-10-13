@@ -13,6 +13,9 @@ import {
   readCore,
   planRedeem,
   planAdvancePhase,
+  planStartFinalPull,
+  planClaimFinalSol,
+  planClaimFinalTokens,
   planEverythingBackStage,
   GET_EVERYTHING_BACK_ORDER,
   type RescuePlan,
@@ -35,6 +38,9 @@ vi.mock("@onepercent/sdk/rescue", async (load) => ({
   readCore: vi.fn(),
   planRedeem: vi.fn(),
   planAdvancePhase: vi.fn(),
+  planStartFinalPull: vi.fn(),
+  planClaimFinalSol: vi.fn(),
+  planClaimFinalTokens: vi.fn(),
   planEverythingBackStage: vi.fn(),
 }));
 vi.mock("./send.js", async (load) => ({
@@ -501,5 +507,110 @@ describe("rescue CLI phase crank", () => {
       sent: 2,
       previews: 0,
     });
+  });
+});
+
+describe("rescue CLI Final Pull", () => {
+  it("builds a permissionless SOL claim for a recipient distinct from the payer", async () => {
+    const f = runtimeFixture();
+    const owner = Keypair.generate().publicKey;
+    vi.mocked(planClaimFinalSol).mockResolvedValue({
+      transactions: [],
+      remaining: [],
+    });
+    expect(
+      await runRescue(
+        [
+          ...f.baseArgs,
+          "claim-final-sol",
+          "--fee-payer",
+          "payer.json",
+          "--wallet",
+          owner.toBase58(),
+        ],
+        f.deps,
+      ),
+    ).toBe(0);
+    expect(planClaimFinalSol).toHaveBeenCalledWith(
+      expect.objectContaining({
+        wallet: f.signer.publicKey,
+        owner,
+      }),
+    );
+    expect(f.deps.readText).toHaveBeenCalledOnce();
+  });
+  it("keeps token claims owner-signed and refreshes the claimed state", async () => {
+    const f = runtimeFixture();
+    vi.mocked(planClaimFinalTokens)
+      .mockResolvedValueOnce({
+        transactions: [
+          {
+            action: "claim-final-tokens",
+            addresses: [f.signer.publicKey.toBase58()],
+            transaction: f.transaction(),
+          },
+        ],
+        remaining: [],
+      })
+      .mockResolvedValueOnce({ transactions: [], remaining: [] });
+    vi.mocked(sendRescueTransaction).mockResolvedValue({
+      state: "confirmed",
+      signature: "final-tokens",
+    });
+    expect(
+      await runRescue(
+        [
+          ...f.baseArgs,
+          "claim-final-tokens",
+          "--keypair",
+          "owner.json",
+          "--yes",
+        ],
+        f.deps,
+      ),
+    ).toBe(0);
+    expect(planClaimFinalTokens).toHaveBeenCalledTimes(2);
+    expect(sendRescueTransaction).toHaveBeenCalledWith(
+      expect.objectContaining({
+        signer: expect.objectContaining({ publicKey: f.signer.publicKey }),
+      }),
+      expect.objectContaining({ action: "claim-final-tokens" }),
+      f.block.lastValidBlockHeight,
+    );
+  });
+  it("reports start preconditions without sending and starts from the new planner", async () => {
+    const f = runtimeFixture();
+    vi.mocked(planStartFinalPull).mockResolvedValue({
+      transactions: [],
+      remaining: [{ action: "start-final-pull", reason: "PullPending" }],
+    });
+    const args = [
+      ...f.baseArgs,
+      "crank",
+      "start-final-pull",
+      "--fee-payer",
+      "payer.json",
+      "--yes",
+    ];
+    expect(await runRescue(args, f.deps)).toBe(4);
+    expect(sendRescueTransaction).not.toHaveBeenCalled();
+    vi.mocked(planStartFinalPull)
+      .mockResolvedValueOnce({
+        transactions: [
+          {
+            action: "start-final-pull",
+            addresses: ["machine"],
+            transaction: f.transaction(),
+          },
+        ],
+        remaining: [],
+      })
+      .mockResolvedValueOnce({ transactions: [], remaining: [] });
+    vi.mocked(sendRescueTransaction).mockResolvedValue({
+      state: "confirmed",
+      signature: "final-start",
+    });
+    expect(await runRescue(args, f.deps)).toBe(0);
+    expect(sendRescueTransaction).toHaveBeenCalledOnce();
   });
 });

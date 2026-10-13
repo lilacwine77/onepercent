@@ -10,6 +10,7 @@ export const RouteName = z.enum([
   "fairness",
   "live",
   "token",
+  "docs",
   "link",
   "notFound",
 ]);

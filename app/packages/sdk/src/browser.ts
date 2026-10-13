@@ -10,6 +10,7 @@ export {
   EXTERNAL_IDS,
   DECK_FLAGS,
   LIVE_FLAGS,
+  FINAL_CLAIM_FLAGS,
   MEMO_PROGRAM_ID,
   PHASE,
   PULL_STATUS,
@@ -79,3 +80,11 @@ export type {
 export { buildMergeTransactions } from "./tx/merge.js";
 export { precheckPayeeRent } from "./fetch.js";
 export type { PayeeRentCheck } from "./fetch.js";
+
+export { finalShare, finalShares } from "./math/finalPull.js";
+export { claimFinalSolIx, claimFinalTokensIx } from "./ix/finalPull.js";
+export {
+  buildFinalClaimsTransaction,
+  buildClaimFinalSolTransaction,
+  buildClaimFinalTokensTransaction,
+} from "./tx/finalClaims.js";

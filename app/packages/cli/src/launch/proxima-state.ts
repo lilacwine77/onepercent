@@ -47,6 +47,7 @@ export function checkProximaState(
   identity: LaunchIdentity,
   state: ProximaState,
   migrationQuoteThreshold?: bigint,
+  poolCreator?: PublicKey,
 ) {
   const a = launchAddresses(identity);
   const config = decodeLaunchConfig(state.config, a.programId);
@@ -58,6 +59,10 @@ export function checkProximaState(
   requireState(
     config.launchWallet.equals(identity.wallet),
     "proxima_launch_wallet_mismatch",
+  );
+  requireState(
+    !poolCreator?.equals(identity.wallet),
+    "proxima_pool_creator_is_launch_wallet",
   );
   const dbc = checkDbcLaunchConfig(state.dbc, {
     feeIn: a.feeIn,
@@ -78,14 +83,35 @@ export function checkProximaState(
   const common = {
     mint: identity.mint.toBase58(),
     launchWallet: identity.wallet.toBase58(),
+    ...(poolCreator ? { poolCreator: poolCreator.toBase58() } : {}),
     admin: config.admin.toBase58(),
     pool: a.launchPool.toBase58(),
     dbcConfig: a.dbcConfig.toBase58(),
     feeClaimer: dbc.feeClaimer.toBase58(),
     requiredAmount: TOKEN_1PCT.devBuyAmount.toString(),
+    launchVerified: mintState !== "absent",
+  };
+  const verifyLaunch = () => {
+    checkLaunchMint(state.mint);
+    checkLaunchPool(state.pool, {
+      mint: identity.mint,
+      feeIn: a.feeIn,
+      dbcConfig: a.dbcConfig,
+      dbcConfigAccount: state.dbc,
+      cluster: identity.deployment.cluster,
+      migrationQuoteThreshold,
+    });
+    const pool = decodeDbcPool(state.pool!.data);
+    requireState(
+      pool.creator.equals(poolCreator ?? identity.wallet),
+      "proxima_pool_creator_mismatch",
+    );
   };
   if (machine.phase === 0) {
-    requireState(mintState === "absent", "proxima_mint_exists_before_stock_up");
+    if (mintState !== "absent") {
+      requireState(Boolean(poolCreator), "proxima_mint_exists_before_stock_up");
+      verifyLaunch();
+    }
     return {
       ...common,
       stage: (registered ? "stock-up" : "set-mint") as ProximaStage,
@@ -105,20 +131,7 @@ export function checkProximaState(
     );
     return { ...common, stage: "awaiting-proxima" as ProximaStage };
   }
-  checkLaunchMint(state.mint);
-  checkLaunchPool(state.pool, {
-    mint: identity.mint,
-    feeIn: a.feeIn,
-    dbcConfig: a.dbcConfig,
-    dbcConfigAccount: state.dbc,
-    cluster: identity.deployment.cluster,
-    migrationQuoteThreshold,
-  });
-  const pool = decodeDbcPool(state.pool!.data);
-  requireState(
-    pool.creator.equals(identity.wallet),
-    "proxima_pool_creator_mismatch",
-  );
+  verifyLaunch();
   const walletAmount = state.launchTokens.reduce(
     (sum, account) =>
       sum + checkLaunchTokenAccount(account, identity.mint, identity.wallet),
@@ -163,7 +176,7 @@ export function checkProximaState(
     machine.powerOnTs === 0n && (ledger?.accounted ?? 0n) === 0n,
     "proxima_already_accounted",
   );
-  // A funded vault is authoritative on retries, even if the Deployer received
+  // A funded vault is authoritative on retries, even if the launch wallet received
   // more tokens after depositing. Wallet surplus never triggers another transfer.
   if (vaultAmount >= TOKEN_1PCT.devBuyAmount)
     return { ...common, ...balances, stage: "power-on" as ProximaStage };

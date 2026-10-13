@@ -28,7 +28,8 @@ settings:
 - `JUPITER_API_KEY`: optional; absent selects the keyless request limit.
 - `PYTH_HERMES_URL`: optional; defaults to config and preserves a base path.
 - `PYTH_HERMES_API_KEY`: required for live Hermes calls. Without it the price
-  source skips the request and falls back to Jupiter wSOL.
+  source skips the request and falls back to Jupiter wSOL. Listing checks instead
+  read Pyth push accounts through the same Solana RPC as the other evidence.
 - `SOLANA_RPC_URL`: required for live slot/account reads.
 
 Never print keys or the RPC URL's path/query. Provider payloads are not included
@@ -176,19 +177,32 @@ implemented here.
 
 ## X2b: listing evidence
 
-`createListingEvidenceGatherer` accepts the clients above, a Hermes client and
-a `buildLadder` callback. `evaluateMajor` and `evaluateTrending` are pure and
+`createListingEvidenceGatherer` accepts the clients above, a latest-price client,
+an optional public history client and a `buildLadder` callback.
+`evaluateMajor` and `evaluateTrending` are pure and
 return a strict, JSON-safe `x2-listing-v1` report with every criterion. Missing
 fetched evidence is null and fails its criterion. The mint identity is the
 validated input, not fetched evidence. The provider depth field is used only
 for the explicitly labelled listing criterion.
 
+The CLI uses Hermes latest prices when its key is configured. Otherwise,
+`createPythPushClient({ rpc })` derives shard-0 accounts from
+`PROGRAM_IDS.pythPushOracle` and verifies the Pyth receiver owner,
+`PriceUpdateV2` discriminator, Full verification and expected feed id. Its layout
+matches the keeper's private SDK decoder, without adding an SDK dependency.
 The probe uses integer Pyth prices and exponent normalization before one final
-division. Both SOL and token feeds must satisfy the existing age/confidence
-bounds. Historical updates must be inside their requested UTC day; otherwise
-the seven-day statistic is unavailable. Eight positive closes yield seven log
-returns and sample standard deviation, rounded up to bps. Log differences
-avoid ratio overflow for extreme finite values.
+division. Both SOL and token feeds must satisfy the unchanged age/confidence
+bounds. A missing or stale push feed cannot pass listing.
+
+`createListingHistoryClient` tries unauthenticated Pyth Benchmarks first, then
+GeckoTerminal daily OHLCV in USD. The latter selects the SOL/USDC/USDT pool with
+the greatest USD reserves across the public token-pool pages and explicitly
+requests the major's token side. Eight consecutive completed UTC days are
+required; gaps, duplicate days and nonpositive closes fail closed. Eight positive
+closes yield seven log returns and sample standard deviation, rounded up to bps.
+The `source` fields identify the latest-price provider and the historical provider
+and pool. The configured sigma threshold is unchanged. Direct legacy callers
+without a history client can still use Hermes historical updates.
 
 The five-major report snapshot lives in the standard Vitest snapshot directory.
 It is test evidence from separately timed recordings, not a live listing

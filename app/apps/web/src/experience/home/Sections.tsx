@@ -85,7 +85,7 @@ function unlit(event: PointerEvent<HTMLElement>) {
     card.style.removeProperty(name);
 }
 
-function Packs() {
+function Packs({ flowsLocked }: { flowsLocked?: boolean }) {
   const ref = useInView<HTMLElement>();
   return (
     <section
@@ -124,11 +124,13 @@ function Packs() {
             <h3>{edition.name}</h3>
             <p className="pack-finish">{edition.finish}</p>
             <p className="pack-price">{edition.price}</p>
-            <a className="pack-cta" href={`/rip?edition=${edition.id}`}>
-              <Arrowed
-                text={copy("home.packs.rip", { edition: edition.name })}
-              />
-            </a>
+            {!flowsLocked && (
+              <a className="pack-cta" href={`/rip?edition=${edition.id}`}>
+                <Arrowed
+                  text={copy("home.packs.rip", { edition: edition.name })}
+                />
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -157,11 +159,17 @@ function Packs() {
 
 /** Below the hero: the app's packs (the boosters), then the landing's "Got dust?
  * Feed the machine." and "How dust pays." (onepercent.fun, D19). */
-export function Sections({ reducedMotion }: { reducedMotion: boolean }) {
+export function Sections({
+  reducedMotion,
+  flowsLocked,
+}: {
+  reducedMotion: boolean;
+  flowsLocked?: boolean;
+}) {
   return (
     <>
-      <Packs />
-      <Story />
+      <Packs flowsLocked={flowsLocked} />
+      <Story flowsLocked={flowsLocked} />
       <DustPays reducedMotion={reducedMotion} />
     </>
   );

@@ -109,7 +109,9 @@ describe("The 1% and Jackpot chain models", () => {
       3000n,
     );
     expect(data.mint).toBeNull();
-    expect(data.onePct[1]!.releaseTs).toBe(152200n);
+    expect(data.onePct[1]!.releaseTs).toBe(
+      1_000n + BigInt(TOKEN_1PCT.onePctReleaseOffsetsSeconds[1]),
+    );
     expect(data.jackpot).not.toHaveProperty("valueSol");
   });
 });
@@ -218,6 +220,12 @@ describe("broadcast season state", () => {
   it("stops announcing Last Call at the chain deadline before a phase-advance transaction", () => {
     const end = BigInt(SEASON.lastCallSeconds) * 2n;
     const machine = { phase: PHASE.onAir, on_air_ts: 1n, end_ts: end };
+    expect(
+      liveModel(totals, machine, end - 21_601n, { onAir: true }, []).tv.state,
+    ).toBe("onAir");
+    expect(
+      liveModel(totals, machine, end - 21_600n, { onAir: true }, []).tv.state,
+    ).toBe("lastCall");
     expect(
       liveModel(totals, machine, end - 1n, { onAir: true }, []).tv.state,
     ).toBe("lastCall");

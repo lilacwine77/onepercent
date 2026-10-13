@@ -66,9 +66,7 @@ export function phaseCrankState({
         ? { due: true, from, to: 4 }
         : wait(machine.end_ts, 4);
     case 4:
-      return none(
-        "the Final Pull opens with start_final_pull, which ships with the Final Pull upgrade (D18)",
-      );
+      return none("the Final Pull opens with start_final_pull");
     case 5: {
       if (machine.final_ts === 0n) return none("the Final Pull has no time");
       const at = machine.final_ts + BigInt(SEASON.sealDelaySeconds);

@@ -158,7 +158,7 @@ export const TOKEN_1PCT = {
   devBuyAmount: 40_000_000_000_000n, // 40M × 10^6, all to The 1% cards
   onePctCardAmount: 10_000_000_000_000n, // 10M × 10^6
   onePctCardCount: 4,
-  onePctReleaseOffsetsSeconds: [0, 151_200, 302_400, 453_600], // [C14] after on_air_ts: 0 / 42 / 84 / 126 h
+  onePctReleaseOffsetsSeconds: [0, 43_200, 86_400, 129_600], // [D37] after on_air_ts: 0 / 12 / 24 / 36 h
   teamAllocation: 0n, // [OFF]
   holderTier: {
     minBalance: 1_000_000_000_000n, // [OFF] attester: ≥ 1M $1PCT

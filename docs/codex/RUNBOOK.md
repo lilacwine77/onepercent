@@ -15,7 +15,7 @@ the current decisions.
 
 Issued 2026-10-20 (D9) by the architect, with `06-M6-BRIEF.md`; written on 2026-10-08 and 2026-10-09, so steps 0, 1 and 2.0, which fall before D9, run from this text. This is the operational checklist from the domain reviews to the seal. The founder and the architect execute it; Codex builds the commands it uses (M6 brief §10) and never edits it. Calendar: master §11.1, with **T0 = Thu 2026-10-29 16:00:00 UTC**. If the founder moves T0, every date below moves with it, except the steps already done.
 
-**Binding amendments:** D18 removes the calendar constraint and defers Final Pull claims and Burn-after-Done to the timelocked follow-up upgrade. D27 and `D29-METEORA-LAUNCH.md` replace the pump launch, Token-2022, creator reassignment and fee-chain procedures below with Meteora DBC, SPL Token and DAMM v2. Those older launch procedures are superseded. The architect updates the operational sequence with the M4.2 launch tooling; M4.1's validated scope and config-pinning order are in `app/README.md`.
+**Binding amendments:** D37 shortens On Air to 48 h, releases The 1% at 0 / 12 / 24 / 36 h and starts Last Call 6 h before `end_ts`; the 10 min Final Pull delay and 72 h seal delay stay unchanged. D18 removes the calendar constraint and defers Final Pull claims and Burn-after-Done to the timelocked follow-up upgrade. D27 and `D29-METEORA-LAUNCH.md` replace the pump launch, Token-2022, creator reassignment and fee-chain procedures below with Meteora DBC, SPL Token and DAMM v2. Those older launch procedures are superseded. The architect updates the operational sequence with the M4.2 launch tooling; M4.1's validated scope and config-pinning order are in `app/README.md`.
 
 ---
 
@@ -63,12 +63,12 @@ Issued 2026-10-20 (D9) by the architect, with `06-M6-BRIEF.md`; written on 2026-
 | Thu 10-29, 16:00 | **9. Power-On** (T0) | F |
 | Thu 10-29, 16:15 | **9. On Air** (`on_air_ts = power_on_ts + 900`) and SW-3 | keeper, F, A |
 | Thu 10-29 15:00 – Sun 11-01 23:59 | 10. L0–L3 support rota | F, G2, A |
-| Sat 10-31 10:15; Mon 11-02 04:15; Tue 11-03 22:15 | The 1% #2, #3, #4 eligible (on chain, from timestamps) | — |
-| Wed 11-04 16:15 | 11.1 Last Call (`end_ts − 24 h`) | — |
-| Thu 11-05 16:15 | 11.2 Buys closed (`end_ts`); landing service deleted (T0 + 7 d) | keeper, F |
-| Thu 11-05 from 16:25 | 11.3 The Final Pull | keeper, A |
-| Sat 11-07 ≈ 16:00 | 12.1 Seal proposal created and approved | F, M2, M3 |
-| Sun 11-08 from 16:25 | **12.2 Sealed** (`final_ts + 72 h`; upgrade authority → None) | F, M2, A |
+| Fri 10-30 04:15; Fri 10-30 16:15; Sat 10-31 04:15 | The 1% #2, #3, #4 eligible (on chain, from timestamps) | - |
+| Sat 10-31 10:15 | 11.1 Last Call (`end_ts − 6 h`) | - |
+| Sat 10-31 16:15 | 11.2 Buys closed (`end_ts`) | keeper, F |
+| Sat 10-31 from 16:25 | 11.3 The Final Pull | keeper, A |
+| Mon 11-02 ≈ 16:00 | 12.1 Seal proposal created and approved | F, M2, M3 |
+| Tue 11-03 from 16:25 | **12.2 Sealed** (`final_ts + 72 h`; upgrade authority → None) | F, M2, A |
 
 The times after T0 assume `power_on_ts` = 16:00:00 exactly. At step 9.3 the architect recomputes them from the chain (`on_air_ts`, `end_ts`, `final_ts`) and updates this table in the launch log.
 
@@ -420,7 +420,7 @@ From here until the seal, the program changes only through a Squads proposal exe
   - `onepct-ops launch report --cluster mainnet` → `reports/launch/mainnet-<UTC>.json`. Publish every address it lists, with `onepct-ops addresses --md`, on the watch channel, the site and X (master §6 rule 6). If M4's two-transaction fallback landed, the launch post says so (master §1: no hidden bundles). The Block-0 board on 1% TV.
   - Buy the DexScreener profile from the ops wallet.
   - Flags: `FLAG_HOLDER_BOOST=on` on `api` (no wallet can qualify before T0 + 24 h); `FLAG_KEEPER_STOCK_LIVE=on` on `keeper-a` and `keeper-b`. The executor and the fee chain run from Power-On (M4).
-  - A recomputes the calendar from chain: `on_air_ts`, `end_ts = on_air_ts + 604,800`, the Last Call and Final Pull times, The 1% release times, the seal time; updates §0.3's table in the launch log.
+  - A recomputes the calendar from chain: `on_air_ts`, `end_ts = on_air_ts + 172,800`, the Last Call and Final Pull times, The 1% release times, the seal time; updates §0.3's table in the launch log.
   Expected: the posts live; the flags set; the recomputed calendar in the launch log. Abort: a wrong post → correct it at once; a flag that misbehaves → off.
 - [ ] **9.4 16:05–16:10: SW-3 ready.** Owner: F (Railway), A checks. `FLAG_PACKS=on` and `FLAG_SELL_BACK=on` on `api`; `FLAG_BLINKS_RIP=on` on `api` and `FLAG_BOT_ALERTS=on` on `bot` only once M5 Appendix A.1 has passed (otherwise later, when it has). The web shows Rip only once the chain's phase is OnAir (M3 §7.2), so turning the flags on before 16:15 is safe.
   Expected: `/api/config` shows the flags; the Rip panel appears at On Air.
@@ -456,34 +456,34 @@ From here until the seal, the program changes only through a Squads proposal exe
 
 Times assume `on_air_ts` = 16:15:00 on 10-29; use the step 9.3 recomputation.
 
-- [ ] **11.1 Last Call — Wed 11-04, 16:15 (`end_ts − 24 h`).** Owner: F (announcement). No on-chain action: a countdown only (PARAMS §14). The keeper's Last Call policy starts by itself (PARAMS §8.3).
+- [ ] **11.1 Last Call - Sat 10-31, 10:15 (`end_ts − 6 h`).** Owner: F (announcement). No on-chain action: a countdown only (PARAMS §14). The keeper's Last Call policy starts by itself (PARAMS §8.3).
   Expected: the post. Abort: none (no on-chain action).
-- [ ] **11.2 Buys closed — Thu 11-05, 16:15 (`end_ts`).** Owner: the keeper; A watches; F sets the flags.
+- [ ] **11.2 Buys closed - Sat 10-31, 16:15 (`end_ts`).** Owner: the keeper; A watches; F sets the flags.
   - The keeper collects creator fees in the last minute before `end_ts`, then calls `advance_phase` → BuysClosed (OPS-12 after 16:17: F runs `onepct-rescue crank advance-phase` with the ops wallet).
   - Flags off on `api`: `FLAG_PACKS`, `FLAG_SELL_BACK`, `FLAG_FEED`, `FLAG_BLINKS_RIP`, `FLAG_BLINKS_FEED` (the program refuses them anyway; the UI says the season is over).
   - The keeper sells the buckets to SOL: MAJOR at the 20 s spacing without the gross cap (up to about 150 SOL in 10 min), TRENDING within its caps (PARAMS §8.1).
   - Pending Pulls resolve: their callbacks, or refunds at 300 s.
   - Expected: phase BuysClosed by 16:17; the flags off; MAJOR sells under way. Abort: as the first bullet (OPS-12, the crank).
-- [ ] **11.3 The Final Pull — from Thu 11-05, 16:25 (`end_ts + 600`).** Owner: the keeper; A watches.
+- [ ] **11.3 The Final Pull - from Sat 10-31, 16:25 (`end_ts + 600`).** Owner: the keeper; A watches.
   - The keeper calls `start_final_pull` once `pending_pulls == 0` → phase FinalPull, `final_ts` set; then pushes `claim_final_sol` for every buyer. Openers claim their tokens on the Final Pull screen or the rescue page.
   - Expected: the watch channel posts it; the Final Pull screen live; claims land.
   - Abort: not started by 16:27 (OPS-12; M4's `final_pull_not_started` follows at 30 min) → F runs `onepct-ops final start` (M4 §12.6; permissionless, the ops wallet signs); with no service running, `onepct-rescue refund --all-due`, then `onepct-rescue crank start-final-pull --fee-payer <ops wallet>`. SOL claims not pushed → `onepct-ops final push`.
-- [ ] **11.4 The landing service — T0 + 7 d (Thu 11-05, 16:00).** Owner: F. After checking that no domain is attached to it and that no rollback to it is needed: delete the Railway service `onepercent` (master §5.3). The repository's landing files stay untouched.
+- [ ] **11.4 The landing service - T0 + 7 d (Thu 11-05, 16:00).** This historical rollback-retention window is independent of the 2-day season (D37); D19 supersedes the retirement procedure. Owner: F. After checking that no domain is attached to it and that no rollback to it is needed: delete the Railway service `onepercent` (master §5.3). The repository's landing files stay untouched.
   Expected: the service deleted; `onepct-ops sw check --host www.onepercent.fun --expect web` still passes. Abort: any doubt about a rollback → keep the landing service longer.
 
 ---
 
-## Step 12. Sealed — from Sun 11-08, 16:25 (`final_ts + 72 h`)
+## Step 12. Sealed - from Tue 11-03, 16:25 (`final_ts + 72 h`)
 
-- [ ] **12.1 Propose the seal — Sat 11-07, between 12:00 and 16:00.** Owner: A builds, F proposes, F and M2 or M3 approve.
+- [ ] **12.1 Propose the seal - Mon 11-02, between 12:00 and 16:00.** Owner: A builds, F proposes, F and M2 or M3 approve.
   ```
   onepct-ops program propose-seal --cluster mainnet --rpc "$MAINNET_RPC"
   curl -s https://verify.osec.io/status/<PROGRAM_ID>
   ```
-  The command refuses unless the phase is FinalPull or Done, `pending_pulls == 0`, no other proposal is open, and the verification is in place; it prints the earliest execution time (`final_ts + 259,200`). Approving by Sunday 04:25 lets it run at the Done time.
+  The command refuses unless the phase is FinalPull or Done, `pending_pulls == 0`, no other proposal is open, and the verification is in place; it prints the earliest execution time (`final_ts + 259,200`). Approving by Tuesday 04:25 lets it run at the Done time.
   Expected: an approved proposal SetAuthority(ProgramData, vault 0 → None); the watch channel posts it with its release time.
   Abort: a finding before execution → members cancel it in the Squads app; fix through playbook P8; propose again (12 h more).
-- [ ] **12.2 Execute — Sun 11-08, from 16:25.** Owner: F (with A on the call).
+- [ ] **12.2 Execute - Tue 11-03, from 16:25.** Owner: F (with A on the call).
   Checks first: `Machine.phase` = Done (the keeper's `advance_phase` at `final_ts + 72 h`; OPS-12 → F runs `onepct-rescue crank advance-phase`); `pending_pulls == 0`; no other open proposal; the monitor has no open critical; the OtterSec status is verified with the published hash.
   Then execute the proposal in the Squads app.
   ```

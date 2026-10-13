@@ -47,6 +47,80 @@ describe("launch CLI input boundary", () => {
     expect(() => parseLaunchInput([...base, "extra"])).toThrow();
     expect(() => parseLaunchInput([...base, "--unknown"])).toThrow();
   });
+  it("parses a public pool creator only for the Proxima path", () => {
+    const creator = new PublicKey(Buffer.alloc(32, 12)).toBase58();
+    expect(parseLaunchInput(base).poolCreator).toBeUndefined();
+    expect(
+      parseLaunchInput([
+        ...base,
+        "--flow",
+        "proxima",
+        "--pool-creator",
+        creator,
+      ]).poolCreator,
+    ).toBe(creator);
+    expect(
+      parseLaunchInput([
+        ...base,
+        "--cluster",
+        "mainnet",
+        "--mainnet-program",
+        program,
+        "--pool-creator",
+        creator,
+      ]).poolCreator,
+    ).toBe(creator);
+    for (const value of ["", "not-an-address", "/outside/friend.json"])
+      expect(() =>
+        parseLaunchInput([
+          ...base,
+          "--flow",
+          "proxima",
+          "--pool-creator",
+          value,
+        ]),
+      ).toThrow("invalid_launch_arguments");
+    for (const args of [
+      base,
+      ["config", ...base.slice(1), "--flow", "proxima"],
+    ])
+      expect(() =>
+        parseLaunchInput([...args, "--pool-creator", creator]),
+      ).toThrow("pool_creator_requires_proxima_launch");
+  });
+  it("verifies a launched mint with explicit public identities and no signer flags", () => {
+    const args = [
+      "verify",
+      ...base.slice(1),
+      "--flow",
+      "proxima",
+      "--mint",
+      new PublicKey(Buffer.alloc(32, 13)).toBase58(),
+      "--pool-creator",
+      new PublicKey(Buffer.alloc(32, 12)).toBase58(),
+    ];
+    expect(parseLaunchInput([...args, "--simulate"])).toMatchObject({
+      command: "verify",
+      wallet: undefined,
+      mintKeypair: undefined,
+      dbcConfigKeypair: undefined,
+    });
+    for (const flag of [
+      "--wallet",
+      "--mint-keypair",
+      "--dbc-config-keypair",
+      "--confirm",
+    ])
+      expect(() =>
+        parseLaunchInput([...args, flag, "/outside/signer.json"]),
+      ).toThrow("proxima_verify_is_read_only");
+    expect(() => parseLaunchInput(args.slice(0, -4))).toThrow(
+      "proxima_mint_required",
+    );
+    expect(() => parseLaunchInput(args.slice(0, -2))).toThrow(
+      "proxima_pool_creator_required",
+    );
+  });
   it("uses an exact decimal SOL threshold and requires the DBC config identity", () => {
     expect(migrationQuoteThreshold(parseLaunchInput(base))).toBe(
       85_000_000_000n,

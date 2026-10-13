@@ -183,7 +183,17 @@ it("derives the Pool destinations and keeps its NFT read-only", () => {
 });
 
 it("refuses the PENDING mainnet launch pin", () => {
-  const mainnet = createDeploymentSelector({ mainnet: key(9) })("mainnet");
+  const mainnet = new Proxy(
+    createDeploymentSelector({ mainnet: key(9) })("mainnet"),
+    {
+      get(target, property) {
+        if (property === "meteoraConfigPin") return null;
+        if (property === "meteora")
+          throw new Error("METEORA_DBC_CONFIG is PENDING for mainnet");
+        return Reflect.get(target, property, target);
+      },
+    },
+  );
   expect(() =>
     claimLaunchFeesIx(mainnet, {
       kind: "curve",

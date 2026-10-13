@@ -1,5 +1,6 @@
 import "./setup.js";
 import { describe, expect, it, vi } from "vitest";
+import { SEASON } from "@onepercent/config";
 import { COPY, descriptionCopy, MACHINE_COPY } from "../copy.js";
 import { registerBotProfile } from "../bot.js";
 import { createGoClient } from "../clients/go.js";
@@ -31,6 +32,11 @@ const rows = (h: ReturnType<typeof harness>) =>
       | undefined
   )?.inline_keyboard ?? [];
 const markup = (h: ReturnType<typeof harness>) => rows(h).flat();
+const seasonFixture = {
+  stockUpTs: 600,
+  onAirTs: 900,
+  endTs: 900 + SEASON.durationSeconds,
+};
 const config = (
   phase: number | null,
   overrides: Record<string, unknown> = {},
@@ -42,7 +48,7 @@ const config = (
           phase,
           paused: 0,
           flags: { FEED: true, PACKS: true },
-          season: { stockUpTs: 600, onAirTs: 900, endTs: 604800 },
+          season: seasonFixture,
           ...overrides,
         },
   );
@@ -346,10 +352,7 @@ describe("machine state matrix", () => {
     ["missing phase", { phase: undefined }],
     ["deployed phase with null chain sections", { phase: 3 }],
     ["null phase with a deployed pause bitmask", { paused: 0 }],
-    [
-      "null phase with a deployed season",
-      { season: { stockUpTs: 600, onAirTs: 900, endTs: 604800 } },
-    ],
+    ["null phase with a deployed season", { season: seasonFixture }],
   ])("does not render malformed config as Setup: %s", async (_, overrides) => {
     const fetch = vi.fn(
       async () =>
@@ -514,13 +517,23 @@ describe("machine state matrix", () => {
       expect(h.texts()[0]!.split("\n").length).toBeLessThanOrEqual(6);
     }
   });
+  it("starts Last Call exactly six hours before the season ends", async () => {
+    const h = harness();
+    h.machine.config.mockResolvedValue(config(3));
+    h.clock.advance((seasonFixture.endTs - SEASON.lastCallSeconds - 1) * 1000);
+    await h.send("/machine");
+    expect(h.texts().at(-1)).not.toContain("Last Call");
+    h.clock.advance(1000);
+    await h.send("/machine");
+    expect(h.texts().at(-1)).toContain("Last Call ✳ buys close in 06:00:00");
+  });
   it("uses a canonical URL in groups, closes on the end boundary and maps failures", async () => {
     const h = harness({ sessions: true });
     h.machine.config.mockResolvedValue(config(3));
     await h.send("/machine", true);
     expect(markup(h)[0]?.url).toBe("https://onepercent.test/rip");
     expect(h.go.create).not.toHaveBeenCalled();
-    h.clock.advance(604800000);
+    h.clock.advance(seasonFixture.endTs * 1000);
     await h.send("/machine");
     expect(h.texts().at(-1)).toContain("Season over");
     const broken = harness();

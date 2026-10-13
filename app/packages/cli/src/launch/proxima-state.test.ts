@@ -58,8 +58,9 @@ function tokenAccount(amount: bigint, owner: PublicKey) {
   value[108] = 1;
   return snap(value, token);
 }
-function state(
+function fixtureState(
   stage: "setup" | "external" | "deposit" | "powered" = "external",
+  creator = identity.wallet,
 ): ProximaState {
   const config = account("Config", 872),
     machine = account("Machine", 3808);
@@ -79,7 +80,7 @@ function state(
   const pool = account("VirtualPool", 424);
   pool.owner = DBC_PROGRAM_ID;
   a.dbcConfig.toBuffer().copy(data(pool), 72);
-  identity.wallet.toBuffer().copy(data(pool), 104);
+  creator.toBuffer().copy(data(pool), 104);
   identity.mint.toBuffer().copy(data(pool), 136);
   const deposited = stage === "deposit" || stage === "powered";
   const launchAta = tokenAccount(
@@ -110,27 +111,30 @@ function state(
     now: 10n,
   };
 }
-describe("Proxima D32 state transitions", () => {
+describe.each([
+  { flow: "D32 same wallet", poolCreator: undefined },
+  { flow: "D36 friend transfer", poolCreator: key(12) },
+])("Proxima $flow state transitions", ({ poolCreator }) => {
+  const state = (stage?: Parameters<typeof fixtureState>[0]) =>
+    fixtureState(stage, poolCreator);
+  const check = (s: ProximaState) =>
+    checkProximaState(identity, s, undefined, poolCreator);
   it("registers a public mint during Setup before permissionless StockUp", () => {
     const s = state("setup");
     key(10).toBuffer().copy(data(s.config!), 552);
-    expect(checkProximaState(identity, s).stage).toBe("set-mint");
+    expect(check(s).stage).toBe("set-mint");
     identity.mint.toBuffer().copy(data(s.config!), 552);
-    expect(checkProximaState(identity, s)).toMatchObject({
+    expect(check(s)).toMatchObject({
       stage: "stock-up",
       seasonReady: true,
     });
     data(s.machine!)[10] = 1;
-    expect(checkProximaState(identity, s).stage).toBe("awaiting-proxima");
+    expect(check(s).stage).toBe("awaiting-proxima");
   });
   it("accepts an externally created canonical pool and separates deposit and Power-On", () => {
-    expect(checkProximaState(identity, state()).stage).toBe("deposit");
-    expect(checkProximaState(identity, state("deposit")).stage).toBe(
-      "power-on",
-    );
-    expect(checkProximaState(identity, state("powered")).stage).toBe(
-      "powered-on",
-    );
+    expect(check(state()).stage).toBe("deposit");
+    expect(check(state("deposit")).stage).toBe("power-on");
+    expect(check(state("powered")).stage).toBe("powered-on");
   });
   it.each([
     ["external", "deposit"],
@@ -139,7 +143,7 @@ describe("Proxima D32 state transitions", () => {
   ] as const)("accepts an external one-unit burn at %s", (stage, expected) => {
     const s = state(stage);
     data(s.mint!).writeBigUInt64LE(TOKEN_1PCT.totalSupply - 1n, 36);
-    expect(checkProximaState(identity, s).stage).toBe(expected);
+    expect(check(s).stage).toBe(expected);
   });
   it.each([
     ["external", "deposit"],
@@ -158,7 +162,7 @@ describe("Proxima D32 state transitions", () => {
             ...s.launchTokens,
             tokenAccount(1n, identity.wallet),
           ];
-        expect(checkProximaState(identity, s)).toMatchObject({
+        expect(check(s)).toMatchObject({
           stage: expected,
           walletAmount: (before + 1n).toString(),
         });
@@ -170,7 +174,7 @@ describe("Proxima D32 state transitions", () => {
     (stage) => {
       const s = state(stage);
       data(s.launchAta!).writeBigUInt64LE(TOKEN_1PCT.devBuyAmount + 1n, 64);
-      expect(checkProximaState(identity, s).stage).toBe(
+      expect(check(s).stage).toBe(
         stage === "deposit" ? "power-on" : "powered-on",
       );
     },
@@ -250,7 +254,7 @@ describe("Proxima D32 state transitions", () => {
     const s = state();
     data(s.mint!).writeBigUInt64LE(TOKEN_1PCT.totalSupply - 1n, 36);
     mutate(s);
-    expect(() => checkProximaState(identity, s)).toThrow();
+    expect(() => check(s)).toThrow();
   });
   it.each([
     [
@@ -286,39 +290,35 @@ describe("Proxima D32 state transitions", () => {
       data(s.mint!).writeBigUInt64LE(TOKEN_1PCT.totalSupply - 1n, 36);
       data(s.launchAta!).writeBigUInt64LE(1n, 64);
       mutate(s);
-      expect(() => checkProximaState(identity, s)).toThrow();
+      expect(() => check(s)).toThrow();
     },
   );
   it("refuses a partial deposit and an already-accounted ledger", () => {
     for (const amount of [TOKEN_1PCT.devBuyAmount - 1n]) {
       const s = state("deposit");
       data(s.vault!).writeBigUInt64LE(amount, 64);
-      expect(() => checkProximaState(identity, s)).toThrow(
-        "proxima_dev_buy_amount_or_account",
-      );
+      expect(() => check(s)).toThrow("proxima_dev_buy_amount_or_account");
     }
     const s = state("powered");
     data(s.machine!)[10] = 1;
-    expect(() => checkProximaState(identity, s)).toThrow(
-      "proxima_already_accounted",
-    );
+    expect(() => check(s)).toThrow("proxima_already_accounted");
   });
   it("keeps donated excess unaccounted before and after the exact deposit", () => {
     const before = state();
     before.vault = tokenAccount(3n, a.vaultAuth);
-    expect(checkProximaState(identity, before)).toMatchObject({
+    expect(check(before)).toMatchObject({
       stage: "deposit",
       unaccountedSurplus: "3",
     });
     const after = state("deposit");
     data(after.vault!).writeBigUInt64LE(TOKEN_1PCT.devBuyAmount + 3n, 64);
-    expect(checkProximaState(identity, after)).toMatchObject({
+    expect(check(after)).toMatchObject({
       stage: "power-on",
       unaccountedSurplus: "3",
     });
     const powered = state("powered");
     data(powered.vault!).writeBigUInt64LE(TOKEN_1PCT.devBuyAmount + 3n, 64);
-    expect(checkProximaState(identity, powered)).toMatchObject({
+    expect(check(powered)).toMatchObject({
       stage: "powered-on",
       accounted: TOKEN_1PCT.devBuyAmount.toString(),
       unaccountedSurplus: "3",
@@ -327,7 +327,7 @@ describe("Proxima D32 state transitions", () => {
   it("accepts an already-funded vault without relying on the wallet balance", () => {
     const s = state();
     s.vault = tokenAccount(TOKEN_1PCT.devBuyAmount + 3n, a.vaultAuth);
-    expect(checkProximaState(identity, s)).toMatchObject({
+    expect(check(s)).toMatchObject({
       stage: "power-on",
       accounted: "0",
       unaccountedSurplus: "3",
@@ -439,6 +439,7 @@ describe("Proxima D32 state transitions", () => {
       };
       const input = {
         command: "deposit" as const,
+        poolCreator: poolCreator?.toBase58(),
         cluster: "localnet" as const,
         rpc: "http://127.0.0.1:8899",
         program: a.programId.toBase58(),
@@ -524,5 +525,111 @@ describe("Proxima D32 state transitions", () => {
     } finally {
       await rm(directory, { recursive: true, force: true });
     }
+  });
+});
+
+describe("explicit Proxima pool creator", () => {
+  const friend = key(12);
+  it("accepts the declared creator and rejects another creator or an omitted declaration", () => {
+    const s = fixtureState("external", friend);
+    expect(checkProximaState(identity, s, undefined, friend).stage).toBe(
+      "deposit",
+    );
+    expect(() => checkProximaState(identity, s, undefined, key(13))).toThrow(
+      "proxima_pool_creator_mismatch",
+    );
+    expect(() => checkProximaState(identity, s)).toThrow(
+      "proxima_pool_creator_mismatch",
+    );
+  });
+  it.each(["setup", "external", "deposit", "powered"] as const)(
+    "rejects a declared creator equal to the launch wallet at %s",
+    (stage) => {
+      expect(() =>
+        checkProximaState(
+          identity,
+          fixtureState(stage),
+          undefined,
+          identity.wallet,
+        ),
+      ).toThrow("proxima_pool_creator_is_launch_wallet");
+    },
+  );
+});
+
+describe("external Proxima launch during Setup", () => {
+  const friend = key(12);
+  const setup = () => {
+    const s = fixtureState("external", friend);
+    data(s.machine!)[10] = 0;
+    a.programId.toBuffer().copy(data(s.config!), 552);
+    data(s.config!).writeBigInt64LE(20n, 728);
+    return s;
+  };
+  it("verifies the friend launch before registering its previously unknown mint", () => {
+    const s = setup();
+    data(s.mint!).writeBigUInt64LE(TOKEN_1PCT.totalSupply - 1n, 36);
+    expect(checkProximaState(identity, s, undefined, friend)).toMatchObject({
+      stage: "set-mint",
+      launchVerified: true,
+      seasonReady: false,
+      mint: identity.mint.toBase58(),
+      poolCreator: friend.toBase58(),
+    });
+    identity.mint.toBuffer().copy(data(s.config!), 552);
+    expect(checkProximaState(identity, s, undefined, friend)).toMatchObject({
+      stage: "stock-up",
+      launchVerified: true,
+    });
+  });
+  it("preserves the prohibition on pre-Stock-Up launches without pool-creator", () => {
+    const s = setup();
+    identity.wallet.toBuffer().copy(data(s.pool!), 104);
+    expect(() => checkProximaState(identity, s)).toThrow(
+      "proxima_mint_exists_before_stock_up",
+    );
+  });
+  it.each([
+    [
+      "third-party creator on our config",
+      (s: ProximaState) => key(13).toBuffer().copy(data(s.pool!), 104),
+    ],
+    [
+      "different config",
+      (s: ProximaState) => key(13).toBuffer().copy(data(s.pool!), 72),
+    ],
+    [
+      "different pool mint",
+      (s: ProximaState) => key(13).toBuffer().copy(data(s.pool!), 136),
+    ],
+    [
+      "different fee claimer",
+      (s: ProximaState) => key(13).toBuffer().copy(data(s.dbc!), 40),
+    ],
+    [
+      "inflated supply",
+      (s: ProximaState) =>
+        data(s.mint!).writeBigUInt64LE(TOKEN_1PCT.totalSupply + 1n, 36),
+    ],
+    [
+      "unproven initial supply",
+      (s: ProximaState) =>
+        data(s.dbc!).writeBigUInt64LE(TOKEN_1PCT.totalSupply - 1n, 344),
+    ],
+    ["mint authority", (s: ProximaState) => data(s.mint!).writeUInt32LE(1, 0)],
+    [
+      "freeze authority",
+      (s: ProximaState) => data(s.mint!).writeUInt32LE(1, 46),
+    ],
+    [
+      "mutable metadata",
+      (s: ProximaState) => {
+        data(s.dbc!)[246] = 0;
+      },
+    ],
+  ] as const)("rejects %s before set-mint", (_, mutate) => {
+    const s = setup();
+    mutate(s);
+    expect(() => checkProximaState(identity, s, undefined, friend)).toThrow();
   });
 });

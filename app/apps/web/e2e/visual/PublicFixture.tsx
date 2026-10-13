@@ -1,5 +1,6 @@
 /** Local visual fixtures only. No route imports this module in production. */
 import { useEffect, useState } from "react";
+import { TOKEN_1PCT } from "@onepercent/config/web";
 import { amount } from "@onepercent/copy";
 import { LIVE_FLAGS } from "@onepercent/sdk/constants";
 import { fairnessEdition, oddsTableHash } from "../../src/adapters/odds";
@@ -115,7 +116,9 @@ export default function PublicFixture({
             amount: 10000000000000n,
             state: index === 0 ? 2 : index === 1 ? 1 : 0,
             live: index === 1,
-            releaseTs: 1788912000n + BigInt(index * 151200),
+            releaseTs:
+              1788912000n +
+              BigInt(TOKEN_1PCT.onePctReleaseOffsetsSeconds[index]!),
           })),
         }}
       />

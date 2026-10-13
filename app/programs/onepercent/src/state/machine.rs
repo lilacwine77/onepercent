@@ -163,7 +163,7 @@ const _: () = assert!(core::mem::size_of::<OnePctSlot>() == 16);
 const _: () = assert!(core::mem::size_of::<SpotlightSlot>() == 96);
 const _: () = assert!(core::mem::size_of::<ExecRecord>() == 80);
 
-// M4 consumes 48 reserved bytes after M2 B6; final totals stay zero until M4.1b.
+// M4 consumes 48 reserved bytes after M2 B6; Final Pull uses the deployed totals.
 const _: () = {
     assert!(core::mem::offset_of!(Bucket, trend_sold_hour) == 120);
     assert!(core::mem::offset_of!(ExecRecord, aux) == 72);

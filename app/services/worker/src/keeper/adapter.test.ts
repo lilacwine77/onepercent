@@ -1,5 +1,6 @@
 import { JsonRpcClient } from "@onepercent/service-kit";
-import { PublicKey } from "@solana/web3.js";
+import { binderHeaderLayout, encodeBinder } from "@onepercent/sdk/layouts";
+import { PublicKey, SystemProgram } from "@solana/web3.js";
 import { describe, expect, it } from "vitest";
 import {
   KEEPER_LAYOUT,
@@ -10,6 +11,7 @@ import {
   decodeLedger,
   decodePull,
   decodeSnapshot,
+  decodeFinalClaim,
   discriminator,
   keeperPda,
   parsePullRevealedLogs,
@@ -345,6 +347,124 @@ describe("confirmed chain readers", () => {
     expect(await chain.ledger(key(2), "finalized")).toBeNull();
     expect(requests[1]?.params[1]).toMatchObject({ commitment: "finalized" });
     expect(requests[2]?.params[1]).toMatchObject({ commitment: "finalized" });
+  });
+  it("reads Final Pull timing from the unchanged Machine layout and builds a permissionless start", () => {
+    const machine = Buffer.from(accounts.machine, "base64");
+    machine.writeBigUInt64LE(2n, 24);
+    machine.writeBigInt64LE(1700001600n, 64);
+    machine[2496] = 3;
+    expect(
+      decodeSnapshot(Buffer.from(accounts.config, "base64"), machine, 92)
+        .machine,
+    ).toMatchObject({
+      pendingPulls: 2n,
+      finalTs: 1700001600n,
+      execKind: 3,
+    });
+    const { chain } = rpc(() => null);
+    const ix = chain.startFinalPull();
+    expect(ix.data).toEqual(discriminator("global", "start_final_pull"));
+    expect(ix.keys).toEqual([
+      {
+        pubkey: keeperPda(programId, "machine"),
+        isWritable: true,
+        isSigner: false,
+      },
+    ]);
+  });
+  it("scans only Binder headers and checks their canonical address before pushing SOL", async () => {
+    const owner = key(8);
+    const [address, bump] = PublicKey.findProgramAddressSync(
+      [Buffer.from("binder"), owner.toBuffer()],
+      programId,
+    );
+    const data = binderHeaderLayout.encode({
+      owner,
+      bump,
+      season_spend: 100n,
+      flags: 2,
+    });
+    const { chain, requests } = rpc((method) =>
+      method === "getProgramAccounts"
+        ? [{ pubkey: address.toBase58(), account: wireAccount(data) }]
+        : {
+            context: { slot: 42 },
+            value: [wireAccount(Buffer.alloc(0), key(30).toBase58(), true)],
+          },
+    );
+    expect(await chain.finalSolClaims()).toEqual([
+      { address, owner, seasonSpend: 100n, flags: 2 },
+    ]);
+    expect(requests[0]?.params[1]).toMatchObject({
+      dataSlice: { offset: 0, length: 112 },
+    });
+    const ix = await chain.claimFinalSol(owner);
+    expect(ix.data).toEqual(discriminator("global", "claim_final_sol"));
+    expect(ix.keys.map((meta) => meta.isSigner)).toEqual([false, false, false]);
+    expect(ix.keys.map((meta) => meta.isWritable)).toEqual([true, true, false]);
+    expect(ix.keys[2]?.pubkey).toEqual(owner);
+    expect(() => decodeFinalClaim(data, key(30), programId)).toThrow(
+      "keeper_invalid_binder",
+    );
+    expect(
+      decodeFinalClaim(
+        encodeBinder({
+          owner,
+          bump,
+          season_spend: 100n,
+          cards: [{ mint: key(9), amount: 1n }],
+        }),
+        address,
+        programId,
+      ).seasonSpend,
+    ).toBe(100n);
+    data[111] = 3;
+    expect(await chain.finalSolClaims()).toEqual([]);
+  });
+  it("accepts a closed Binder only as an empty non-executable System account", async () => {
+    const machine = Buffer.from(accounts.machine, "base64");
+    machine[10] = 5;
+    const response = {
+      owner: SystemProgram.programId.toBase58(),
+      executable: false,
+    };
+    const { chain } = rpc(() => ({
+      context: { slot: 42 },
+      value: [
+        wireAccount(Buffer.alloc(0), response.owner, response.executable),
+        wireAccount(machine),
+      ],
+    }));
+    expect(await chain.finalClaim(key(8), "finalized")).toBeNull();
+    response.owner = key(30).toBase58();
+    await expect(chain.finalClaim(key(8), "finalized")).rejects.toThrow(
+      "keeper_invalid_owner",
+    );
+    response.owner = SystemProgram.programId.toBase58();
+    response.executable = true;
+    await expect(chain.finalClaim(key(8), "finalized")).rejects.toThrow(
+      "keeper_invalid_owner",
+    );
+  });
+  it("never treats Binder absence before the Final Pull snapshot as completion", async () => {
+    const machine = Buffer.from(accounts.machine, "base64");
+    machine[10] = 4;
+    const { chain, requests } = rpc(() => ({
+      context: { slot: 42 },
+      value: [null, wireAccount(machine)],
+    }));
+    await expect(chain.finalClaim(key(8), "finalized")).rejects.toThrow(
+      "rpc_node_lag",
+    );
+    expect(requests[0]?.params).toEqual([
+      [
+        keeperPda(programId, "binder", key(8).toBuffer()).toBase58(),
+        keeperPda(programId, "machine").toBase58(),
+      ],
+      { commitment: "finalized", encoding: "base64" },
+    ]);
+    machine[10] = 5;
+    expect(await chain.finalClaim(key(8), "finalized")).toBeNull();
   });
   it("fails closed for account ownership or a misleading RPC filter", async () => {
     const wrongOwner = rpc(() => [

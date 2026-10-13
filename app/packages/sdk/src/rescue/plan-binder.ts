@@ -60,7 +60,7 @@ export function closeBinderBlocker(binder: RescueBinder): string | undefined {
   if (binder.reserved > 0)
     return "PullPending: a Pull is still open; refund it after its timeout or settle it after its reveal";
   if (binder.season_spend > 0n && (binder.flags & 3) !== 3)
-    return "FinalNotClaimed: Close My cards opens after this wallet's Final Pull claims, which ship with the Final Pull upgrade before the season ends (D18)";
+    return "FinalNotClaimed: complete both Final Pull claims before closing My cards";
   return undefined;
 }
 

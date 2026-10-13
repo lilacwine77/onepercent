@@ -105,7 +105,7 @@ function Copy({
 }
 
 /** "Got dust? Feed the machine.": the lilac machine beside the copy. */
-export function Story() {
+export function Story({ flowsLocked }: { flowsLocked?: boolean }) {
   const ref = useReveals<HTMLElement>();
   return (
     <section ref={ref} className="home-story" aria-labelledby="story-title">
@@ -122,9 +122,11 @@ export function Story() {
       <div className="story-copy">
         <Title text={copy("home.story.title")} id="story-title" />
         <Copy>{copy("home.story.body")}</Copy>
-        <a className="oval" href="/feed">
-          <Arrowed text={copy("home.story.cta")} />
-        </a>
+        {!flowsLocked && (
+          <a className="oval" href="/feed">
+            <Arrowed text={copy("home.story.cta")} />
+          </a>
+        )}
       </div>
     </section>
   );

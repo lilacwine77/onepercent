@@ -112,6 +112,22 @@ describe("stock policy", () => {
       );
     }
   });
+  it("starts surplus sales exactly six hours before closing", () => {
+    const f = fixture(true);
+    f.state.machine.buckets[0]!.cost = 80_000_000_000n;
+    for (const [remaining, expected] of [
+      [24 * 60 * 60, false],
+      [6 * 60 * 60 + 1, false],
+      [6 * 60 * 60, true],
+    ] as const) {
+      f.state.machine.end_ts = f.now + BigInt(remaining);
+      expect(
+        stockRequests(f.state, f.now).some(
+          (request) => request.reason === "last_call",
+        ),
+      ).toBe(expected);
+    }
+  });
   it("rolls gross caps and includes launch-hour output", () => {
     const f = fixture();
     f.state.machine.stock_bought_hour = STOCK.hourlyFloorLamports;

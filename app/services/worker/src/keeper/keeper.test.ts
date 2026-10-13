@@ -7,8 +7,10 @@ import {
   VersionedTransaction,
 } from "@solana/web3.js";
 import { describe, it, expect, vi } from "vitest";
+import { SEASON } from "@onepercent/config";
 import {
   RpcError,
+  RpcNodeLag,
   TxSenderError,
   TxSender,
   type SignedTxRecord,
@@ -23,6 +25,7 @@ import {
   jobId,
   settleIntents,
   nextPhase,
+  finalPullDue,
   type KeeperIntent,
 } from "./jobs.js";
 import { keeperParamsSchema } from "./params.js";
@@ -32,7 +35,12 @@ import {
   type KeeperJob,
   type KeeperStore,
 } from "./store.js";
-import type { KeeperPull, KeeperSnapshot, KeeperLedger } from "./adapter.js";
+import type {
+  KeeperPull,
+  KeeperSnapshot,
+  KeeperLedger,
+  KeeperFinalClaim,
+} from "./adapter.js";
 import { settleInstruction } from "./adapter.js";
 
 // Recorded PARAMS §26.1 / M1 CU report values, used only as test inputs.
@@ -188,11 +196,15 @@ function harness() {
       nextSeq: 3n,
       onAirTs: 2000n,
       endTs: 3000n,
+      finalTs: 0n,
+      pendingPulls: 0n,
+      execKind: 0,
       teamSol: 1n,
       buckets: [],
     },
   };
   const ledgerMap = new Map([[ledger.mint.toBase58(), ledger]]);
+  const finalClaims: KeeperFinalClaim[] = [];
   const instructions = (kind: string) =>
     new TransactionInstruction({
       programId: key(),
@@ -224,6 +236,17 @@ function harness() {
     settle: vi.fn(async () => [instructions("settle")]),
     refund: vi.fn(async () => instructions("refund")),
     advance: vi.fn(() => instructions("advance")),
+    startFinalPull: vi.fn(() => instructions("start-final-pull")),
+    finalSolClaims: vi.fn(async () =>
+      finalClaims.filter(
+        (claim) => claim.seasonSpend > 0n && (claim.flags & 1) === 0,
+      ),
+    ),
+    finalClaim: vi.fn(
+      async (owner) =>
+        finalClaims.find((claim) => claim.owner.equals(owner)) ?? null,
+    ),
+    claimFinalSol: vi.fn(async () => instructions("claim-final-sol")),
     closeVault: vi.fn(() => instructions("close")),
     teamWithdraw: vi.fn(() => instructions("team")),
   };
@@ -247,6 +270,15 @@ function harness() {
             break;
           case "advance":
             snapshot.machine.phase = intent.to;
+            break;
+          case "start-final-pull":
+            snapshot.machine.phase = 5;
+            snapshot.machine.finalTs = now;
+            break;
+          case "final-sol":
+            finalClaims.find(
+              (claim) => claim.owner.toBase58() === intent.owner,
+            )!.flags |= 1;
             break;
           case "close-vault":
             ledgerMap.delete(intent.mint);
@@ -289,6 +321,7 @@ function harness() {
     snapshot,
     ledger,
     ledgerMap,
+    finalClaims,
     sender,
     hooks,
     signal: new AbortController().signal,
@@ -524,7 +557,7 @@ describe("keeper v1 cranks", () => {
     ).toBe("old-plan");
     expect(h.chain.settle).toHaveBeenCalledTimes(1);
   });
-  it("advances only the S3 transitions at their exact timestamps", () => {
+  it("advances phases at their exact chain timestamps", () => {
     const h = harness();
     expect(nextPhase(h.snapshot, 499n)).toBeNull();
     expect(nextPhase(h.snapshot, 500n)).toBe(1);
@@ -542,6 +575,203 @@ describe("keeper v1 cranks", () => {
     expect(nextPhase(h.snapshot, 900000n)).toBeNull();
     h.snapshot.machine.phase = 5;
     expect(nextPhase(h.snapshot, 900000n)).toBeNull();
+    h.snapshot.machine.finalTs = 3600n;
+    const due = 3600n + BigInt(SEASON.sealDelaySeconds);
+    expect(nextPhase(h.snapshot, due - 1n)).toBeNull();
+    expect(nextPhase(h.snapshot, due)).toBe(6);
+  });
+  it("starts Final Pull at the exact delay and rejects pending draws or trades", () => {
+    const h = harness();
+    h.snapshot.machine.phase = 4;
+    const due = h.snapshot.machine.endTs + BigInt(SEASON.finalPullDelaySeconds);
+    expect(finalPullDue(h.snapshot, due - 1n)).toBe(false);
+    expect(finalPullDue(h.snapshot, due)).toBe(true);
+    h.snapshot.machine.pendingPulls = 1n;
+    expect(finalPullDue(h.snapshot, due)).toBe(false);
+    h.snapshot.machine.pendingPulls = 0n;
+    h.snapshot.machine.execKind = 2;
+    expect(finalPullDue(h.snapshot, due)).toBe(false);
+    h.snapshot.machine.execKind = 0;
+    for (const phase of [0, 1, 2, 5, 6]) {
+      h.snapshot.machine.phase = phase;
+      expect(finalPullDue(h.snapshot, due)).toBe(false);
+    }
+    h.snapshot.machine.phase = 3;
+    expect(finalPullDue(h.snapshot, due)).toBe(true);
+    h.snapshot.machine.endTs = 0n;
+    expect(finalPullDue(h.snapshot, due)).toBe(false);
+  });
+  it.each([3, 4])(
+    "cranks Final Pull from phase %s and then Done without fee services",
+    async (phase) => {
+      const h = harness();
+      h.pulls.length = 0;
+      h.ledgerMap.clear();
+      h.snapshot.machine.teamSol = 0n;
+      h.snapshot.machine.phase = phase;
+      const due =
+        h.snapshot.machine.endTs + BigInt(SEASON.finalPullDelaySeconds);
+      h.setNow(due);
+      await h.keeper.scan(h.signal);
+      expect(h.sender.send).toHaveBeenCalledOnce();
+      expect(
+        h.sender.send.mock.calls[0]![0].instructions.map((ix) =>
+          ix.data.toString(),
+        ),
+      ).toEqual(
+        phase === 3 ? ["advance", "start-final-pull"] : ["start-final-pull"],
+      );
+      expect(h.snapshot.machine.phase).toBe(5);
+      expect(h.snapshot.machine.finalTs).toBe(due);
+      await h.keeper.scan(h.signal);
+      expect(h.sender.send).toHaveBeenCalledOnce();
+      h.setNow(due + BigInt(SEASON.sealDelaySeconds));
+      await h.keeper.scan(h.signal);
+      expect(h.snapshot.machine.phase).toBe(6);
+      expect(h.sender.send).toHaveBeenCalledTimes(2);
+    },
+  );
+  it("rechecks pending Pulls before sending and retries the next scan window", async () => {
+    const h = harness();
+    h.pulls.length = 0;
+    h.ledgerMap.clear();
+    h.snapshot.machine.teamSol = 0n;
+    h.snapshot.machine.phase = 4;
+    const due = h.snapshot.machine.endTs + BigInt(SEASON.finalPullDelaySeconds);
+    h.setNow(due);
+    let reads = 0;
+    vi.mocked(h.chain.snapshot).mockImplementation(async () => {
+      reads++;
+      if (reads === 3) h.snapshot.machine.pendingPulls = 1n;
+      return h.snapshot;
+    });
+    await h.keeper.scan(h.signal);
+    expect(h.sender.send).not.toHaveBeenCalled();
+    expect([...h.store.jobs.values()][0]?.status).toBe("skipped");
+    h.snapshot.machine.pendingPulls = 0n;
+    h.setNow(due + BigInt(params.SERVICES.keeper.scanSeconds));
+    await h.keeper.scan(h.signal);
+    expect(h.snapshot.machine.phase).toBe(5);
+    expect(h.sender.send).toHaveBeenCalledOnce();
+  });
+  it.each([5, 6])(
+    "pushes only unclaimed SOL shares in phase %s with stable Binder jobs",
+    async (phase) => {
+      const h = harness();
+      h.pulls.length = 0;
+      h.ledgerMap.clear();
+      h.snapshot.machine.teamSol = 0n;
+      h.snapshot.machine.phase = phase;
+      h.finalClaims.push(
+        { address: key(), owner: key(), seasonSpend: 1n, flags: 0 },
+        { address: key(), owner: key(), seasonSpend: 2n, flags: 2 },
+        { address: key(), owner: key(), seasonSpend: 3n, flags: 1 },
+        { address: key(), owner: key(), seasonSpend: 0n, flags: 0 },
+      );
+      await h.keeper.scan(h.signal);
+      expect(h.sender.send.mock.calls.map(([request]) => request.job)).toEqual(
+        h.finalClaims.slice(0, 2).map((claim) => `final_sol:${claim.address}`),
+      );
+      expect(h.finalClaims.map((claim) => claim.flags)).toEqual([1, 3, 1, 0]);
+      await h.keeper.scan(h.signal);
+      expect(h.sender.send).toHaveBeenCalledTimes(2);
+      expect(h.chain.claimFinalSol).toHaveBeenCalledTimes(2);
+    },
+  );
+  it("a refused Binder scan cannot block the Done transition", async () => {
+    const h = harness();
+    h.pulls.length = 0;
+    h.ledgerMap.clear();
+    h.snapshot.machine.teamSol = 0n;
+    h.snapshot.machine.phase = 5;
+    h.snapshot.machine.finalTs = 3600n;
+    h.setNow(3600n + BigInt(SEASON.sealDelaySeconds));
+    vi.mocked(h.chain.finalSolClaims).mockRejectedValue(
+      new Error("scan_refused"),
+    );
+    await h.keeper.scan(h.signal);
+    expect(h.snapshot.machine.phase).toBe(6);
+    expect(h.hooks.log).toHaveBeenCalledWith(
+      expect.objectContaining({ reason: "final_claim_scan_failed" }),
+    );
+  });
+  it("a new reveal interrupts a large Final Pull claim enqueue pass", async () => {
+    const h = harness();
+    h.pulls.length = 0;
+    h.ledgerMap.clear();
+    h.snapshot.machine.teamSol = 0n;
+    h.snapshot.machine.phase = 5;
+    h.finalClaims.push(
+      ...Array.from({ length: 20 }, () => ({
+        address: key(),
+        owner: key(),
+        seasonSpend: 1n,
+        flags: 0,
+      })),
+    );
+    let interrupted = false;
+    h.options.shouldYield = () => interrupted;
+    const ensure = h.store.ensure.bind(h.store);
+    vi.spyOn(h.store, "ensure").mockImplementation(async (intent, now) => {
+      const job = await ensure(intent, now);
+      if (intent.kind === "final-sol") interrupted = true;
+      return job;
+    });
+    await h.keeper.scan(h.signal);
+    expect(h.store.jobs.size).toBe(1);
+    expect(h.sender.send).not.toHaveBeenCalled();
+  });
+  it("a claim appearing between reads remains retryable if that confirmed claim disappears", async () => {
+    const h = harness();
+    h.pulls.length = 0;
+    h.ledgerMap.clear();
+    h.snapshot.machine.teamSol = 0n;
+    h.snapshot.machine.phase = 5;
+    const claim = { address: key(), owner: key(), seasonSpend: 1n, flags: 0 };
+    h.finalClaims.push(claim);
+    let reads = 0;
+    vi.mocked(h.chain.finalClaim).mockImplementation(async () => {
+      if (++reads === 2) claim.flags = 1;
+      return claim;
+    });
+    await h.keeper.scan(h.signal);
+    const job = h.store.jobs.get(`final_sol:${claim.address}`)!;
+    expect(job.status).toBe("pending");
+    expect(h.sender.send).not.toHaveBeenCalled();
+    claim.flags = 0;
+    await h.keeper.scan(h.signal);
+    expect(job.status).toBe("confirmed");
+    expect(h.sender.send).toHaveBeenCalledOnce();
+  });
+  it("a finalized bank behind the snapshot cannot finalize a SOL claim job", async () => {
+    const h = harness();
+    h.pulls.length = 0;
+    h.ledgerMap.clear();
+    h.snapshot.machine.teamSol = 0n;
+    h.snapshot.machine.phase = 5;
+    const claim = { address: key(), owner: key(), seasonSpend: 1n, flags: 1 };
+    h.finalClaims.push(claim);
+    const intent: KeeperIntent = {
+      kind: "final-sol",
+      address: claim.address.toBase58(),
+      owner: claim.owner.toBase58(),
+    };
+    await h.store.ensure(intent, chainDate(1000n));
+    vi.mocked(h.chain.finalClaim).mockImplementation(
+      async (_owner, commitment) => {
+        if (commitment === "finalized") throw new RpcNodeLag();
+        return claim;
+      },
+    );
+    await h.keeper.scan(h.signal);
+    const job = h.store.jobs.get(jobId(intent))!;
+    expect(job.status).toBe("pending");
+    expect(job.payload.finalized).not.toBe(true);
+    expect(h.sender.send).not.toHaveBeenCalled();
+    claim.flags = 0;
+    await h.keeper.scan(h.signal);
+    expect(h.sender.send).toHaveBeenCalledOnce();
+    expect(job.status).toBe("confirmed");
   });
   it("fails closed until the M1/P0 parameters exist", () => {
     expect(() => keeperParamsSchema.parse({})).toThrow();
@@ -1138,9 +1368,12 @@ describe("launch phase fee integration", () => {
     await h.keeper.scan(h.signal);
     expect(
       [...h.store.jobs.values()].every(
-        (job) => job.kind === "advance" || job.kind === "fee-chain",
+        (job) =>
+          job.kind === "advance" ||
+          job.kind === "fee-chain" ||
+          job.kind === "start-final-pull",
       ),
     ).toBe(true);
-    expect(h.snapshot.machine.phase).toBe(4);
+    expect(h.snapshot.machine.phase).toBe(5);
   });
 });
