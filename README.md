@@ -1,6 +1,6 @@
 # Onepercent
 
-The interactive website for **Onepercent**, the 1% Machine on Solana. Feed your dust to the machine, or rip foil packs with real tokens inside: 4 Dust Cards + 1 hit. Go for **the 1%**: four cards of 10,000,000 $1PCT.
+The interactive website for **Onepercent**, the 1% Machine on Solana. Feed your dust to the machine, or rip foil packs with real tokens inside: 4 Dust Cards + 1 hit. Go for **the 1%**: four cards of 10,000,000 $1P.
 
 **Live site:** [onepercent.fun](https://onepercent.fun)
 
